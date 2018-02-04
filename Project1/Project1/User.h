@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include <list>
+#include <vector>
+#include <ctime>
 #ifndef USER_H
 #define USER_H
 
@@ -12,7 +13,7 @@ public:
 	void addAvailabilities();
 	bool operator==(User &other);
 	
-	std::list<System::DateTime> availabilities;
+	std::vector<std::time_t> availabilities;
 
 private:
 	bool admin;
