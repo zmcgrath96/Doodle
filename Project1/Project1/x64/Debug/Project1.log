@@ -1,4 +1,11 @@
 ﻿  MyForm.cpp
-  MyForm.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Project_1\Project1\x64\Debug\Project1.exe
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Project_1\Project1\x64\Debug\Project1.pdb (Partial PDB)
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1021): error C3699: '&&': cannot use this indirection on type 'System::DateTime'
+  c:\cygwin64\home\nick\doodle\project1\project1\User.h(15): note: see reference to class template instantiation 'std::list<System::DateTime,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=System::DateTime
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1026): error C3699: '&&': cannot use this indirection on type 'System::DateTime'
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\list(1031): error C3699: '&&': cannot use this indirection on type 'System::DateTime'
+c:\cygwin64\home\nick\doodle\project1\project1\Event.h(17): error C3265: cannot declare a managed 'date' in an unmanaged 'Event'
+  c:\cygwin64\home\nick\doodle\project1\project1\Event.h(17): note: only simple value types are allowed
