@@ -1,13 +1,15 @@
 #pragma once
-#include <string>
-#include <list>
+
 #ifndef USER_H
 #define USER_H
 
-public class User {
+#include <string>
+#include <list>
+
+class User {
 public:
-	User(std::string name, bool isAdmin);
-	void getName();
+	User(std::string name);
+	std::string getName();
 	bool isAdmin();
 	void addAvailabilities();
 	bool operator==(User &other);

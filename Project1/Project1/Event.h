@@ -1,20 +1,25 @@
 #pragma once
-#include <string>
-#include <list>
-#include "User.h"
+
 #ifndef EVENT_H
 #define EVENT_H
 
-public class Event {
+#include <string>
+#include <list>
+#include <ctime>
+#include "User.h"
+
+class Event {
 public:
-	Event(std::string eventName, System::DateTime eventDate);
+	Event(std::string eventName, std::time_t eventDate, std::string admin);
 	std::string getName();
-	System::DateTime getDate();
+	std::string getAdmin();
+	std::time_t getDate();
 	std::string getAvailableTimes();
-	void addUser(User u);
+	void addUser(User& u);
 private:
 	std::string name;
-	System::DateTime date;
+	std::string admin;
+	std::time_t date;
 	std::list<User> users;
 };
 #endif // !EXECUTIVE_H
