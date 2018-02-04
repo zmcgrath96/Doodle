@@ -6,8 +6,8 @@ User::User(string name, isAdmin)
 {
 	m_isAdmin = isAdmin;
 	m_name = name;
-	m_Times = new bool[64];
-	for(int i = 0; i<64;i++)
+	m_Times = new bool[54];
+	for(int i = 0; i<54;i++)
 	{
 		m_Times[i]=false;
 	}
