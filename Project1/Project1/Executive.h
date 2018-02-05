@@ -37,7 +37,8 @@ public:
 	void AddEvent(std::string eventName, std::time_t eventDate);
 
 	/*
-	*	Adds the currrent user to the current event
+	*	Checks if the current user is already attending the current event, if so then makes the user in the event the current user,
+	*	if not then adds the current user to the event
 	*/
 	void AddUser();
 
@@ -47,15 +48,14 @@ public:
 	void AddAvailabilities(std::list<std::string> availabilities);
 
 	/*
-	*	Takes in the name of a user and checks if they are a member of the current event
-	*	if so it makes that user the current one, if not it creates a user with the given name
+	*	Takes in the name of a user and makes them the current user
 	*/
 	void makeCurrentUser(std::string name);
 
 	/*
 	*	Takes in an event and makes it the current event
 	*/
-	void makeCurrentEvent(Event newEvent);
+	void makeCurrentEvent(int index);
 
 	/*
 	*	Returns the list of events
@@ -70,8 +70,13 @@ public:
 
 private:
 	User currentUser;
-	Event currentEvent;
+	int currentEventIndex;
 	std::list<Event> events;
+
+	/*
+	*	Goes through the event list and returns the current event
+	*/
+	Event getCurrentEvent();
 };
 #endif // !EXECUTIVE_H
 
