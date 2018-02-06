@@ -8,7 +8,7 @@
 public class User {
 public:
 	User(std::string name, bool isAdmin);
-	void getName();
+	std::string getName();
 	bool isAdmin();
 	void addAvailabilities();
 	bool operator==(User &other);
