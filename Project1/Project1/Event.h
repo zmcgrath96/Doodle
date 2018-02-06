@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
-#include <ctime>
 #include "User.h"
+#include <ctime>
 #ifndef EVENT_H
 #define EVENT_H
 
