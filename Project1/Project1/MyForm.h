@@ -524,16 +524,18 @@ namespace Project1 {
 			// 
 			// txtUser
 			// 
-			this->txtUser->Location = System::Drawing::Point(71, 104);
+			this->txtUser->Location = System::Drawing::Point(106, 160);
+			this->txtUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtUser->Name = L"txtUser";
-			this->txtUser->Size = System::Drawing::Size(100, 20);
+			this->txtUser->Size = System::Drawing::Size(148, 26);
 			this->txtUser->TabIndex = 1;
 			// 
 			// btnLogin
 			// 
-			this->btnLogin->Location = System::Drawing::Point(62, 208);
+			this->btnLogin->Location = System::Drawing::Point(93, 320);
+			this->btnLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnLogin->Name = L"btnLogin";
-			this->btnLogin->Size = System::Drawing::Size(75, 23);
+			this->btnLogin->Size = System::Drawing::Size(112, 35);
 			this->btnLogin->TabIndex = 0;
 			this->btnLogin->Text = L"Login";
 			this->btnLogin->UseVisualStyleBackColor = true;
@@ -542,9 +544,10 @@ namespace Project1 {
 			// lblLogin
 			// 
 			this->lblLogin->AutoSize = true;
-			this->lblLogin->Location = System::Drawing::Point(77, 48);
+			this->lblLogin->Location = System::Drawing::Point(116, 74);
+			this->lblLogin->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblLogin->Name = L"lblLogin";
-			this->lblLogin->Size = System::Drawing::Size(36, 13);
+			this->lblLogin->Size = System::Drawing::Size(52, 20);
 			this->lblLogin->TabIndex = 2;
 			this->lblLogin->Text = L"Login:";
 			// 
@@ -557,9 +560,11 @@ namespace Project1 {
 			this->grpLogin->Controls->Add(this->lblPassword);
 			this->grpLogin->Controls->Add(this->lblLogin);
 			this->grpLogin->Controls->Add(this->txtUser);
-			this->grpLogin->Location = System::Drawing::Point(341, 74);
+			this->grpLogin->Location = System::Drawing::Point(512, 114);
+			this->grpLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpLogin->Name = L"grpLogin";
-			this->grpLogin->Size = System::Drawing::Size(200, 277);
+			this->grpLogin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpLogin->Size = System::Drawing::Size(300, 426);
 			this->grpLogin->TabIndex = 3;
 			this->grpLogin->TabStop = false;
 			this->grpLogin->Visible = false;
@@ -567,36 +572,40 @@ namespace Project1 {
 			// lblSignedIn
 			// 
 			this->lblSignedIn->AutoSize = true;
-			this->lblSignedIn->Location = System::Drawing::Point(68, 16);
+			this->lblSignedIn->Location = System::Drawing::Point(102, 25);
+			this->lblSignedIn->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblSignedIn->Name = L"lblSignedIn";
-			this->lblSignedIn->Size = System::Drawing::Size(51, 13);
+			this->lblSignedIn->Size = System::Drawing::Size(75, 20);
 			this->lblSignedIn->TabIndex = 6;
 			this->lblSignedIn->Text = L"Signed in";
 			this->lblSignedIn->Visible = false;
 			// 
 			// txtPassword
 			// 
-			this->txtPassword->Location = System::Drawing::Point(71, 142);
+			this->txtPassword->Location = System::Drawing::Point(106, 218);
+			this->txtPassword->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtPassword->Name = L"txtPassword";
 			this->txtPassword->PasswordChar = '*';
-			this->txtPassword->Size = System::Drawing::Size(100, 20);
+			this->txtPassword->Size = System::Drawing::Size(148, 26);
 			this->txtPassword->TabIndex = 5;
 			// 
 			// lblUser
 			// 
 			this->lblUser->AutoSize = true;
-			this->lblUser->Location = System::Drawing::Point(21, 107);
+			this->lblUser->Location = System::Drawing::Point(32, 165);
+			this->lblUser->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblUser->Name = L"lblUser";
-			this->lblUser->Size = System::Drawing::Size(32, 13);
+			this->lblUser->Size = System::Drawing::Size(47, 20);
 			this->lblUser->TabIndex = 4;
 			this->lblUser->Text = L"User:";
 			// 
 			// lblPassword
 			// 
 			this->lblPassword->AutoSize = true;
-			this->lblPassword->Location = System::Drawing::Point(9, 145);
+			this->lblPassword->Location = System::Drawing::Point(14, 223);
+			this->lblPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblPassword->Name = L"lblPassword";
-			this->lblPassword->Size = System::Drawing::Size(56, 13);
+			this->lblPassword->Size = System::Drawing::Size(82, 20);
 			this->lblPassword->TabIndex = 3;
 			this->lblPassword->Text = L"Password:";
 			// 
@@ -613,24 +622,28 @@ namespace Project1 {
 			this->grpCreateEvent->Controls->Add(this->lblNote);
 			this->grpCreateEvent->Controls->Add(this->button6);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(206, 74);
+			this->grpCreateEvent->Location = System::Drawing::Point(309, 114);
+			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
-			this->grpCreateEvent->Size = System::Drawing::Size(472, 441);
+			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpCreateEvent->Size = System::Drawing::Size(708, 678);
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(85, 359);
+			this->textBox3->Location = System::Drawing::Point(128, 552);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(227, 20);
+			this->textBox3->Size = System::Drawing::Size(338, 26);
 			this->textBox3->TabIndex = 12;
 			// 
 			// monthCalendar1
 			// 
-			this->monthCalendar1->Location = System::Drawing::Point(85, 100);
-			this->monthCalendar1->MaximumSize = System::Drawing::Size(500, 500);
+			this->monthCalendar1->Location = System::Drawing::Point(128, 154);
+			this->monthCalendar1->Margin = System::Windows::Forms::Padding(14, 14, 14, 14);
+			this->monthCalendar1->MaximumSize = System::Drawing::Size(750, 769);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
@@ -638,67 +651,75 @@ namespace Project1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(85, 327);
+			this->textBox2->Location = System::Drawing::Point(128, 503);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(227, 20);
+			this->textBox2->Size = System::Drawing::Size(338, 26);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(85, 60);
+			this->textBox1->Location = System::Drawing::Point(128, 92);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(227, 20);
+			this->textBox1->Size = System::Drawing::Size(338, 26);
 			this->textBox1->TabIndex = 10;
 			// 
 			// lblName
 			// 
 			this->lblName->AutoSize = true;
-			this->lblName->Location = System::Drawing::Point(15, 63);
+			this->lblName->Location = System::Drawing::Point(22, 97);
+			this->lblName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblName->Name = L"lblName";
-			this->lblName->Size = System::Drawing::Size(38, 13);
+			this->lblName->Size = System::Drawing::Size(55, 20);
 			this->lblName->TabIndex = 9;
 			this->lblName->Text = L"Name:";
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(257, 28);
+			this->dateTimePicker1->Location = System::Drawing::Point(386, 43);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
+			this->dateTimePicker1->Size = System::Drawing::Size(298, 26);
 			this->dateTimePicker1->TabIndex = 7;
 			this->dateTimePicker1->Visible = false;
 			// 
 			// lblDate
 			// 
 			this->lblDate->AutoSize = true;
-			this->lblDate->Location = System::Drawing::Point(15, 100);
+			this->lblDate->Location = System::Drawing::Point(22, 154);
+			this->lblDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblDate->Name = L"lblDate";
-			this->lblDate->Size = System::Drawing::Size(33, 13);
+			this->lblDate->Size = System::Drawing::Size(48, 20);
 			this->lblDate->TabIndex = 6;
 			this->lblDate->Text = L"Date:";
 			// 
 			// lblLocation
 			// 
 			this->lblLocation->AutoSize = true;
-			this->lblLocation->Location = System::Drawing::Point(15, 330);
+			this->lblLocation->Location = System::Drawing::Point(22, 508);
+			this->lblLocation->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblLocation->Name = L"lblLocation";
-			this->lblLocation->Size = System::Drawing::Size(51, 13);
+			this->lblLocation->Size = System::Drawing::Size(74, 20);
 			this->lblLocation->TabIndex = 4;
 			this->lblLocation->Text = L"Location:";
 			// 
 			// lblNote
 			// 
 			this->lblNote->AutoSize = true;
-			this->lblNote->Location = System::Drawing::Point(15, 362);
+			this->lblNote->Location = System::Drawing::Point(22, 557);
+			this->lblNote->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNote->Name = L"lblNote";
-			this->lblNote->Size = System::Drawing::Size(33, 13);
+			this->lblNote->Size = System::Drawing::Size(47, 20);
 			this->lblNote->TabIndex = 3;
 			this->lblNote->Text = L"Note:";
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(116, 403);
+			this->button6->Location = System::Drawing::Point(174, 620);
+			this->button6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(103, 23);
+			this->button6->Size = System::Drawing::Size(154, 35);
 			this->button6->TabIndex = 0;
 			this->button6->Text = L"Submit";
 			this->button6->UseVisualStyleBackColor = true;
@@ -707,9 +728,10 @@ namespace Project1 {
 			// lblCreateEvent
 			// 
 			this->lblCreateEvent->AutoSize = true;
-			this->lblCreateEvent->Location = System::Drawing::Point(131, 26);
+			this->lblCreateEvent->Location = System::Drawing::Point(196, 40);
+			this->lblCreateEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblCreateEvent->Name = L"lblCreateEvent";
-			this->lblCreateEvent->Size = System::Drawing::Size(72, 13);
+			this->lblCreateEvent->Size = System::Drawing::Size(106, 20);
 			this->lblCreateEvent->TabIndex = 2;
 			this->lblCreateEvent->Text = L"Create Event:";
 			// 
@@ -717,10 +739,11 @@ namespace Project1 {
 			// 
 			this->dateTimePicker2->CustomFormat = L"hh:mm tt";
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(68, 150);
+			this->dateTimePicker2->Location = System::Drawing::Point(102, 231);
+			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
 			this->dateTimePicker2->ShowUpDown = true;
-			this->dateTimePicker2->Size = System::Drawing::Size(227, 20);
+			this->dateTimePicker2->Size = System::Drawing::Size(338, 26);
 			this->dateTimePicker2->TabIndex = 8;
 			this->dateTimePicker2->Value = System::DateTime(2018, 1, 30, 12, 0, 0, 0);
 			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker2_ValueChanged);
@@ -728,9 +751,10 @@ namespace Project1 {
 			// lblTime
 			// 
 			this->lblTime->AutoSize = true;
-			this->lblTime->Location = System::Drawing::Point(-2, 153);
+			this->lblTime->Location = System::Drawing::Point(-3, 235);
+			this->lblTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblTime->Name = L"lblTime";
-			this->lblTime->Size = System::Drawing::Size(33, 13);
+			this->lblTime->Size = System::Drawing::Size(47, 20);
 			this->lblTime->TabIndex = 5;
 			this->lblTime->Text = L"Time:";
 			// 
@@ -741,18 +765,21 @@ namespace Project1 {
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->btnEditAvailability);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(291, 74);
+			this->grpAdmin->Location = System::Drawing::Point(436, 114);
+			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
-			this->grpAdmin->Size = System::Drawing::Size(200, 277);
+			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAdmin->Size = System::Drawing::Size(300, 426);
 			this->grpAdmin->TabIndex = 7;
 			this->grpAdmin->TabStop = false;
 			this->grpAdmin->Visible = false;
 			// 
 			// btnCreateEvent
 			// 
-			this->btnCreateEvent->Location = System::Drawing::Point(50, 79);
+			this->btnCreateEvent->Location = System::Drawing::Point(75, 122);
+			this->btnCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnCreateEvent->Name = L"btnCreateEvent";
-			this->btnCreateEvent->Size = System::Drawing::Size(103, 23);
+			this->btnCreateEvent->Size = System::Drawing::Size(154, 35);
 			this->btnCreateEvent->TabIndex = 5;
 			this->btnCreateEvent->Text = L"Create Event";
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
@@ -760,9 +787,10 @@ namespace Project1 {
 			// 
 			// btnViewSchedule
 			// 
-			this->btnViewSchedule->Location = System::Drawing::Point(50, 137);
+			this->btnViewSchedule->Location = System::Drawing::Point(75, 211);
+			this->btnViewSchedule->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnViewSchedule->Name = L"btnViewSchedule";
-			this->btnViewSchedule->Size = System::Drawing::Size(103, 23);
+			this->btnViewSchedule->Size = System::Drawing::Size(154, 35);
 			this->btnViewSchedule->TabIndex = 4;
 			this->btnViewSchedule->Text = L"View Schedule";
 			this->btnViewSchedule->UseVisualStyleBackColor = true;
@@ -770,18 +798,20 @@ namespace Project1 {
 			// 
 			// btnEditEvents
 			// 
-			this->btnEditEvents->Location = System::Drawing::Point(50, 108);
+			this->btnEditEvents->Location = System::Drawing::Point(75, 166);
+			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditEvents->Name = L"btnEditEvents";
-			this->btnEditEvents->Size = System::Drawing::Size(103, 23);
+			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
 			this->btnEditEvents->TabIndex = 3;
 			this->btnEditEvents->Text = L"Edit Events";
 			this->btnEditEvents->UseVisualStyleBackColor = true;
 			// 
 			// btnEditAvailability
 			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(50, 166);
+			this->btnEditAvailability->Location = System::Drawing::Point(75, 255);
+			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
-			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
+			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
 			this->btnEditAvailability->TabIndex = 0;
 			this->btnEditAvailability->Text = L"Edit Availability";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
@@ -789,9 +819,10 @@ namespace Project1 {
 			// lblAdmin
 			// 
 			this->lblAdmin->AutoSize = true;
-			this->lblAdmin->Location = System::Drawing::Point(47, 34);
+			this->lblAdmin->Location = System::Drawing::Point(70, 52);
+			this->lblAdmin->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblAdmin->Name = L"lblAdmin";
-			this->lblAdmin->Size = System::Drawing::Size(93, 13);
+			this->lblAdmin->Size = System::Drawing::Size(135, 20);
 			this->lblAdmin->TabIndex = 2;
 			this->lblAdmin->Text = L"Make a Selection:";
 			// 
@@ -800,27 +831,31 @@ namespace Project1 {
 			this->grpUser->Controls->Add(this->button2);
 			this->grpUser->Controls->Add(this->button4);
 			this->grpUser->Controls->Add(this->label1);
-			this->grpUser->Location = System::Drawing::Point(291, 74);
+			this->grpUser->Location = System::Drawing::Point(436, 114);
+			this->grpUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpUser->Name = L"grpUser";
-			this->grpUser->Size = System::Drawing::Size(200, 277);
+			this->grpUser->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpUser->Size = System::Drawing::Size(300, 426);
 			this->grpUser->TabIndex = 8;
 			this->grpUser->TabStop = false;
 			this->grpUser->Visible = false;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(50, 105);
+			this->button2->Location = System::Drawing::Point(75, 162);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(103, 23);
+			this->button2->Size = System::Drawing::Size(154, 35);
 			this->button2->TabIndex = 4;
 			this->button2->Text = L"View Schedule";
 			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(50, 134);
+			this->button4->Location = System::Drawing::Point(75, 206);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(103, 23);
+			this->button4->Size = System::Drawing::Size(154, 35);
 			this->button4->TabIndex = 0;
 			this->button4->Text = L"Edit Availability";
 			this->button4->UseVisualStyleBackColor = true;
@@ -828,17 +863,19 @@ namespace Project1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(47, 34);
+			this->label1->Location = System::Drawing::Point(70, 52);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(93, 13);
+			this->label1->Size = System::Drawing::Size(135, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Make a Selection:";
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(705, 366);
+			this->textBox4->Location = System::Drawing::Point(1058, 563);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(192, 20);
+			this->textBox4->Size = System::Drawing::Size(286, 26);
 			this->textBox4->TabIndex = 10;
 			// 
 			// grpViewSchedule
@@ -847,27 +884,31 @@ namespace Project1 {
 			this->grpViewSchedule->Controls->Add(this->lblSchedule);
 			this->grpViewSchedule->Controls->Add(this->dateTimePicker2);
 			this->grpViewSchedule->Controls->Add(this->lblTime);
-			this->grpViewSchedule->Location = System::Drawing::Point(684, 12);
+			this->grpViewSchedule->Location = System::Drawing::Point(1026, 18);
+			this->grpViewSchedule->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewSchedule->Name = L"grpViewSchedule";
-			this->grpViewSchedule->Size = System::Drawing::Size(301, 339);
+			this->grpViewSchedule->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpViewSchedule->Size = System::Drawing::Size(452, 522);
 			this->grpViewSchedule->TabIndex = 11;
 			this->grpViewSchedule->TabStop = false;
 			this->grpViewSchedule->Visible = false;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(107, 290);
+			this->button1->Location = System::Drawing::Point(160, 446);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(112, 35);
 			this->button1->TabIndex = 0;
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// lblSchedule
 			// 
 			this->lblSchedule->AutoSize = true;
-			this->lblSchedule->Location = System::Drawing::Point(59, 31);
+			this->lblSchedule->Location = System::Drawing::Point(88, 48);
+			this->lblSchedule->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblSchedule->Name = L"lblSchedule";
-			this->lblSchedule->Size = System::Drawing::Size(55, 13);
+			this->lblSchedule->Size = System::Drawing::Size(80, 20);
 			this->lblSchedule->TabIndex = 4;
 			this->lblSchedule->Text = L"Schedule:";
 			// 
@@ -876,26 +917,30 @@ namespace Project1 {
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->Controls->Add(this->button3);
 			this->groupBox1->Controls->Add(this->textBox6);
-			this->groupBox1->Location = System::Drawing::Point(341, 74);
+			this->groupBox1->Location = System::Drawing::Point(512, 114);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(200, 148);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->groupBox1->Size = System::Drawing::Size(300, 228);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(59, 39);
+			this->label2->Location = System::Drawing::Point(88, 60);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(91, 13);
+			this->label2->Size = System::Drawing::Size(136, 20);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"Enter Your Name:";
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(59, 102);
+			this->button3->Location = System::Drawing::Point(88, 157);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 23);
+			this->button3->Size = System::Drawing::Size(112, 35);
 			this->button3->TabIndex = 0;
 			this->button3->Text = L"Login";
 			this->button3->UseVisualStyleBackColor = true;
@@ -903,17 +948,19 @@ namespace Project1 {
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(49, 70);
+			this->textBox6->Location = System::Drawing::Point(74, 108);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(100, 20);
+			this->textBox6->Size = System::Drawing::Size(148, 26);
 			this->textBox6->TabIndex = 1;
 			// 
 			// rbtn12Hr
 			// 
 			this->rbtn12Hr->AutoSize = true;
-			this->rbtn12Hr->Location = System::Drawing::Point(30, 67);
+			this->rbtn12Hr->Location = System::Drawing::Point(45, 103);
+			this->rbtn12Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn12Hr->Name = L"rbtn12Hr";
-			this->rbtn12Hr->Size = System::Drawing::Size(63, 17);
+			this->rbtn12Hr->Size = System::Drawing::Size(91, 24);
 			this->rbtn12Hr->TabIndex = 12;
 			this->rbtn12Hr->TabStop = true;
 			this->rbtn12Hr->Text = L"12 Hour";
@@ -923,9 +970,10 @@ namespace Project1 {
 			// rbtn24Hr
 			// 
 			this->rbtn24Hr->AutoSize = true;
-			this->rbtn24Hr->Location = System::Drawing::Point(30, 90);
+			this->rbtn24Hr->Location = System::Drawing::Point(45, 138);
+			this->rbtn24Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn24Hr->Name = L"rbtn24Hr";
-			this->rbtn24Hr->Size = System::Drawing::Size(63, 17);
+			this->rbtn24Hr->Size = System::Drawing::Size(91, 24);
 			this->rbtn24Hr->TabIndex = 13;
 			this->rbtn24Hr->TabStop = true;
 			this->rbtn24Hr->Text = L"24 Hour";
@@ -936,18 +984,21 @@ namespace Project1 {
 			// 
 			this->groupBox2->Controls->Add(this->button7);
 			this->groupBox2->Controls->Add(this->button5);
-			this->groupBox2->Location = System::Drawing::Point(341, 74);
+			this->groupBox2->Location = System::Drawing::Point(512, 114);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(200, 148);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->groupBox2->Size = System::Drawing::Size(300, 228);
 			this->groupBox2->TabIndex = 8;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Visible = false;
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(59, 45);
+			this->button7->Location = System::Drawing::Point(88, 69);
+			this->button7->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->Size = System::Drawing::Size(112, 35);
 			this->button7->TabIndex = 1;
 			this->button7->Text = L"Admin Mode";
 			this->button7->UseVisualStyleBackColor = true;
@@ -955,9 +1006,10 @@ namespace Project1 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(59, 89);
+			this->button5->Location = System::Drawing::Point(88, 137);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 23);
+			this->button5->Size = System::Drawing::Size(112, 35);
 			this->button5->TabIndex = 0;
 			this->button5->Text = L"User Mode";
 			this->button5->UseVisualStyleBackColor = true;
@@ -970,9 +1022,11 @@ namespace Project1 {
 			this->grpAvailability->Controls->Add(this->label7);
 			this->grpAvailability->Controls->Add(this->rbtn24Hr);
 			this->grpAvailability->Controls->Add(this->rbtn12Hr);
-			this->grpAvailability->Location = System::Drawing::Point(170, 21);
+			this->grpAvailability->Location = System::Drawing::Point(255, 32);
+			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
-			this->grpAvailability->Size = System::Drawing::Size(472, 441);
+			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAvailability->Size = System::Drawing::Size(708, 678);
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
@@ -980,7 +1034,8 @@ namespace Project1 {
 			// trv24Hr
 			// 
 			this->trv24Hr->CheckBoxes = true;
-			this->trv24Hr->Location = System::Drawing::Point(121, 53);
+			this->trv24Hr->Location = System::Drawing::Point(182, 82);
+			this->trv24Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->trv24Hr->Name = L"trv24Hr";
 			treeNode1->Name = L"00:00-00:20";
 			treeNode1->Text = L"00:00 - 00:20";
@@ -1179,13 +1234,14 @@ namespace Project1 {
 					treeNode16, treeNode20, treeNode24, treeNode28, treeNode32, treeNode36, treeNode40, treeNode44, treeNode48, treeNode52, treeNode56,
 					treeNode60, treeNode64, treeNode68, treeNode72, treeNode76, treeNode80, treeNode84, treeNode88, treeNode92, treeNode96
 			});
-			this->trv24Hr->Size = System::Drawing::Size(281, 343);
+			this->trv24Hr->Size = System::Drawing::Size(420, 526);
 			this->trv24Hr->TabIndex = 15;
 			// 
 			// trv12Hr
 			// 
 			this->trv12Hr->CheckBoxes = true;
-			this->trv12Hr->Location = System::Drawing::Point(121, 53);
+			this->trv12Hr->Location = System::Drawing::Point(182, 82);
+			this->trv12Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->trv12Hr->Name = L"trv12Hr";
 			treeNode97->Name = L"12-12:20AM";
 			treeNode97->Text = L"12:00 AM - 12:20 AM";
@@ -1385,14 +1441,15 @@ namespace Project1 {
 					treeNode152, treeNode156, treeNode160, treeNode164, treeNode168, treeNode172, treeNode176, treeNode180, treeNode184, treeNode188,
 					treeNode192
 			});
-			this->trv12Hr->Size = System::Drawing::Size(281, 343);
+			this->trv12Hr->Size = System::Drawing::Size(420, 526);
 			this->trv12Hr->TabIndex = 14;
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(116, 403);
+			this->button8->Location = System::Drawing::Point(174, 620);
+			this->button8->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(103, 23);
+			this->button8->Size = System::Drawing::Size(154, 35);
 			this->button8->TabIndex = 0;
 			this->button8->Text = L"Submit";
 			this->button8->UseVisualStyleBackColor = true;
@@ -1400,18 +1457,19 @@ namespace Project1 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(131, 26);
+			this->label7->Location = System::Drawing::Point(196, 40);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(72, 13);
+			this->label7->Size = System::Drawing::Size(106, 20);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Create Event:";
 			// 
 			// MyForm
 			// 
 			this->AcceptButton = this->btnLogin;
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1043, 572);
+			this->ClientSize = System::Drawing::Size(1564, 880);
 			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->grpViewSchedule);
@@ -1421,6 +1479,7 @@ namespace Project1 {
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->groupBox1);
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpLogin->ResumeLayout(false);
@@ -1548,5 +1607,7 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 	trv24Hr->Visible = true;
 	trv12Hr->Visible = false;
 }
+
+
 };
 }

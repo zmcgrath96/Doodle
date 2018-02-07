@@ -1,4 +1,5 @@
 ﻿  MyForm.cpp
-  MyForm.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Project_1\Project1\x64\Debug\Project1.exe
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Project_1\Project1\x64\Debug\Project1.pdb (Partial PDB)
+c:\cygwin64\home\nick\doodle\doodle\project1\project1\Event.h(17): error C3265: cannot declare a managed 'date' in an unmanaged 'Event'
+  c:\cygwin64\home\nick\doodle\doodle\project1\project1\Event.h(17): note: only simple value types are allowed
+  User.cpp
+  Generating Code...

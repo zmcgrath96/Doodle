@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Event.h" />
