@@ -16,19 +16,17 @@ void Executive::AddEvent(std::string eventName, std::time_t eventDate)
 
 void Executive::AddUser()
 {
-	if (/*Some kind of search through the current event for a user with the same name*/)
-	{
-	}
-	else //if the current user does not share a name with anyone attending the current event
-	{
-		getCurrentEvent().addUser(currentUser); //adds the current user to the current event
-	}
+	getCurrentEvent().addUser(currentUser); //adds the current user to the current event
 }
 
-void Executive::AddAvailabilities(std::list<std::string> availabilities)
+void Executive::AddAvailabilities(bool availabilities[])
 {
 	currentUser.addAvailabilities(availabilities); //passes the avaliabilities on to the user class for handling
 	AddUser(); //adds the user to the current event after their avaliabilites are added to them
+}
+
+void Executive::checkAvaliabilities()
+{
 }
 
 void Executive::makeCurrentUser(std::string name)

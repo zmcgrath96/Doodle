@@ -10,11 +10,10 @@ class User {
 public:
 	User(std::string name);
 	std::string getName();
-	bool isAdmin();
 	void addAvailabilities();
 	bool operator==(User &other);
 	
-	std::list<System::DateTime> availabilities;
+	std::list<std::time_t> availabilities;
 
 private:
 	bool admin;

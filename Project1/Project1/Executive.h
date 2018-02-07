@@ -44,9 +44,15 @@ public:
 	void AddUser();
 
 	/*
-	*	Takes in a list of times and adds it to the current user
+	*	Takes in a boolean array and adds it to the current user
 	*/
-	void AddAvailabilities(std::list<std::string> availabilities);
+	void AddAvailabilities(bool availabilities[]);
+
+	/*
+	*	Checks if the current user is already an attendee to the current event,
+	*	if so then replaces the current user with the stored user, if not then does nothing
+	*/
+	void checkAvaliabilities();
 
 	/*
 	*	Takes in the name of a user and makes them the current user
