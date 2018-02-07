@@ -17,7 +17,7 @@ public:
 
 private:
 	bool admin;
-	char* name;
+	std::string name;
 };
 #endif // !EXECUTIVE_H
 

@@ -14,7 +14,6 @@ public:
 	std::string getAvailableTimes();
 	void addUser(User u);
 	std::vector<User> users;
-	//std::vector<User> getUsers();
 private:
 	std::string name;
 	std::time_t date;

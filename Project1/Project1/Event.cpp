@@ -14,13 +14,13 @@ std::time_t Event::getDate() {
 }
 
 std::string Event::getAvailableTimes() {
-
+	return "";
 }
 
 void Event::addUser(User u) {
 	bool exists = false;
-	for (int i = 0; i < users.size; i++) {
-		if (users[i] == u)
+	for (int i = 0; i < users.size(); i++) {
+		//if (users[i] == u)
 		{
 			exists = true;
 			break;

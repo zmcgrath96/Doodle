@@ -17,8 +17,8 @@ void Executive::write() {
 		if (writeStream.is_open()) {
 			for (Event e : events) {
 				writeStream << "Event: " << e.getName();
-				//std::list<Event> eventUsers;
-				/*for (User u : e.getUsers()) {
+				writeStream << "Date: " << e.getDate();
+				for (User u : e.users) {
 					if (u.isAdmin()) {
 						writeStream << "Admin: " << u.getName();
 					}
@@ -29,7 +29,7 @@ void Executive::write() {
 					for (std::time_t t : u.availabilities) {
 						writeStream << "Times: " << t;
 					}
-				}*/
+				}
 			}
 			writeStream << "\n";
 			writeStream.close();
