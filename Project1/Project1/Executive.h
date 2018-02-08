@@ -1,12 +1,3 @@
-/*
-*	Changes to be made to the program:
-*	1. Instead of storing the isAdmin bool in the user class, make an Admin string in the event class that states the name of the admin. This way, we don't have to check the list of users to find out who the admin is
-*	2. Need to make addUser() take in a user by reference so that executive can change the avaliabilities of a user after adding them to an event
-*	3. Need to make addAvaliabilities() in the user class take a list of strings as a parameter
-*	4. Need to make the list of users within the event class accessable for searching
-*	5. Make a checkAvaliabilities() in Executive that checks if a user with the same name has already submitted their avaliabilities for the event, if so then return them so they can be displayed, if not then return null or something
-*/
-
 #pragma once
 #ifndef EXECUTIVE_H
 #define EXECUTIVE_H
