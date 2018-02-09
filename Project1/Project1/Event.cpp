@@ -17,15 +17,21 @@ std::string Event::getAvailableTimes() {
 
 }
 
+User Event::getAdmin() {
+	return admin;
+}
+
 void Event::addUser(User u) {
 	bool exists = false;
 	for (int i = 0; i < users.size; i++) {
-		if (users[i] == u)
-		{
+		if (users[i] == u) {
 			exists = true;
 			break;
 		}
 	}
-	if (!exists)
+	if (!exists) {
+		if (u.isAdmin)
+			admin = u;
 		users.push_back(u);
+	}
 }

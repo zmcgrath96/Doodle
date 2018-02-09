@@ -1,18 +1,19 @@
 #pragma once
-#include <string>
-#include <list>
+
 #ifndef USER_H
 #define USER_H
 
-public class User {
+#include <string>
+#include <list>
+
+class User {
 public:
-	User(std::string name, bool isAdmin);
-	void getName();
-	bool isAdmin();
+	User(std::string name);
+	std::string getName();
 	void addAvailabilities();
 	bool operator==(User &other);
-	
-	std::list<System::DateTime> availabilities;
+	bool isAdmin();
+	std::list<std::time_t> availabilities;
 
 private:
 	bool admin;
