@@ -36,3 +36,19 @@ void Executive::write() {
 		}
 	}
 }
+void Executive::read() {
+	using namespace std;
+	ifstream readStream("events.txt", ifstream::in);
+	if (!readStream.is_open()) {
+		//for()
+		//search events list for events
+		//search users vector for users
+		//search times will be stored in users as a boolean array
+
+	}
+	else
+	{
+		cout << "failed opening file" << endl;
+		return;
+	}
+}
