@@ -4,23 +4,24 @@
 #define EVENT_H
 
 #include <string>
-#include <list>
-#include <ctime>
+#include <vector>
 #include "User.h"
+#include <ctime>
 
 class Event {
 public:
-	Event(std::string eventName, std::time_t eventDate, std::string admin);
+	Event(std::string eventName, std::time_t eventDate);
 	std::string getName();
-	std::string getAdmin();
+	User getAdmin();
 	std::time_t getDate();
 	std::string getAvailableTimes();
-	void addUser(User& u);
+	std::vector<User> users;
+	void addUser(User u);
 private:
 	std::string name;
-	std::string admin;
 	std::time_t date;
-	std::list<User> users;
+	User admin;
+	std::vector<User> users;
 };
 #endif // !EXECUTIVE_H
 

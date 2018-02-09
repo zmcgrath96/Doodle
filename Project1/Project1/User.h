@@ -12,7 +12,7 @@ public:
 	std::string getName();
 	void addAvailabilities();
 	bool operator==(User &other);
-	
+	bool isAdmin();
 	std::list<std::time_t> availabilities;
 
 private:
