@@ -1,23 +1,25 @@
 #pragma once
-
+#include <string>
+#include <vector>
+#include <ctime>
 #ifndef USER_H
 #define USER_H
 
-#include <string>
 #include <list>
 
 class User {
 public:
-	User(std::string name);
+	User(std::string name, bool isAdmin);
 	std::string getName();
+	bool isAdmin();
 	void addAvailabilities();
 	bool operator==(User &other);
-	bool isAdmin();
-	std::list<std::time_t> availabilities;
+	
+	std::vector<std::time_t> availabilities;
 
 private:
 	bool admin;
-	char* name;
+	std::string name;
 };
 #endif // !EXECUTIVE_H
 
