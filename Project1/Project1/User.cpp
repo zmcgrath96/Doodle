@@ -44,7 +44,14 @@ void User::Run()
 }
 void User::AddTime(int T)
 {
-	m_Times[T] = true;
+	if(m_Times[T])
+	{
+		m_Times[T] = false;
+	}
+	else
+	{
+		m_Times[T] = true;
+	}
 }
 bool User::isAdmin()
 {
