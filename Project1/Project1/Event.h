@@ -12,11 +12,11 @@ public:
 	std::string getName();
 	std::time_t getDate();
 	std::string getAvailableTimes();
+	std::vector<User> users;
 	void addUser(User u);
 private:
 	std::string name;
 	std::time_t date;
-	std::vector<User> users;
 };
 #endif // !EXECUTIVE_H
 
