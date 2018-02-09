@@ -14,6 +14,7 @@ class User
 		bool isAdmin();
 	private:
 		std::string m_Name;
+		std::string * m_Strings;
 		bool * m_Times;
 		bool m_isAdmin;
 };
