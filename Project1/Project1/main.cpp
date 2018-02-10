@@ -1,7 +1,7 @@
 #include "User.h"
 int main(int argc, char * argv[])
 {
-	User U("Nick",true);
+	User U;
 	U.Run();
 	return 0;
 }

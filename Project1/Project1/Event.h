@@ -12,7 +12,7 @@ class Event {
 public:
 	Event(std::string eventName, std::time_t eventDate);
 	std::string getName();
-	User getAdmin();
+	//User getAdmin();
 	std::time_t getDate();
 	std::string getAvailableTimes();
 	std::vector<User> users;
@@ -21,7 +21,7 @@ public:
 private:
 	std::string name;
 	std::time_t date;
-	User admin;
+	//User admin;
 	std::vector<User> users;
 };
 #endif // !EXECUTIVE_H
