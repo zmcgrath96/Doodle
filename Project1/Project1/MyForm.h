@@ -328,6 +328,7 @@ private: System::Windows::Forms::RadioButton^  rbtn07_08;
 private: System::Windows::Forms::RadioButton^  rbtn06_07;
 
 private: System::Windows::Forms::RadioButton^  rbtn05_06;
+private: System::Windows::Forms::TextBox^  textBox4;
 
 
 
@@ -408,6 +409,26 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
+			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
+			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn10_11PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn9_10PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn8_9PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn7_8PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn6_7PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn5_6PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn4_5PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn3_4PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn2_3PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn1_2PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn11_12PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn10_11AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn9_10AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn8_9AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn7_8AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn6_7AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn5_6AM = (gcnew System::Windows::Forms::RadioButton());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button8 = (gcnew System::Windows::Forms::Button());
@@ -504,25 +525,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn07_08 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn06_07 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn05_06 = (gcnew System::Windows::Forms::RadioButton());
-			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
-			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn10_11PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn9_10PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn8_9PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn7_8PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn6_7PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn5_6PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn4_5PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn3_4PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn2_3PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn1_2PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn11_12PM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn10_11AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn9_10AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn8_9AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn7_8AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn6_7AM = (gcnew System::Windows::Forms::RadioButton());
-			this->rbtn5_6AM = (gcnew System::Windows::Forms::RadioButton());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
@@ -533,6 +535,7 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->grpLogin->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
+			this->pnl12Hr->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->pnl5_6AM->SuspendLayout();
 			this->pnl7_8AM->SuspendLayout();
@@ -553,7 +556,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->pnl8_9AM->SuspendLayout();
 			this->pnl6_7PM->SuspendLayout();
 			this->pnl24Hr->SuspendLayout();
-			this->pnl12Hr->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -854,21 +856,288 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			// 
 			// grpAvailability
 			// 
+			this->grpAvailability->Controls->Add(this->pnl12Hr);
+			this->grpAvailability->Controls->Add(this->textBox4);
 			this->grpAvailability->Controls->Add(this->label2);
 			this->grpAvailability->Controls->Add(this->label3);
 			this->grpAvailability->Controls->Add(this->button8);
 			this->grpAvailability->Controls->Add(this->label7);
 			this->grpAvailability->Controls->Add(this->panel5);
 			this->grpAvailability->Controls->Add(this->rbtn24Hr);
-			this->grpAvailability->Controls->Add(this->rbtn12Hr);
-			this->grpAvailability->Controls->Add(this->pnl12Hr);
 			this->grpAvailability->Controls->Add(this->pnl24Hr);
+			this->grpAvailability->Controls->Add(this->rbtn12Hr);
 			this->grpAvailability->Location = System::Drawing::Point(18, 29);
 			this->grpAvailability->Name = L"grpAvailability";
 			this->grpAvailability->Size = System::Drawing::Size(472, 441);
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
+			// 
+			// pnl12Hr
+			// 
+			this->pnl12Hr->Controls->Add(this->rbtn11_12AM);
+			this->pnl12Hr->Controls->Add(this->rbtn10_11PM);
+			this->pnl12Hr->Controls->Add(this->rbtn9_10PM);
+			this->pnl12Hr->Controls->Add(this->rbtn8_9PM);
+			this->pnl12Hr->Controls->Add(this->rbtn7_8PM);
+			this->pnl12Hr->Controls->Add(this->rbtn6_7PM);
+			this->pnl12Hr->Controls->Add(this->rbtn5_6PM);
+			this->pnl12Hr->Controls->Add(this->rbtn4_5PM);
+			this->pnl12Hr->Controls->Add(this->rbtn3_4PM);
+			this->pnl12Hr->Controls->Add(this->rbtn2_3PM);
+			this->pnl12Hr->Controls->Add(this->rbtn1_2PM);
+			this->pnl12Hr->Controls->Add(this->rbtn11_12PM);
+			this->pnl12Hr->Controls->Add(this->rbtn10_11AM);
+			this->pnl12Hr->Controls->Add(this->rbtn9_10AM);
+			this->pnl12Hr->Controls->Add(this->rbtn8_9AM);
+			this->pnl12Hr->Controls->Add(this->rbtn7_8AM);
+			this->pnl12Hr->Controls->Add(this->rbtn6_7AM);
+			this->pnl12Hr->Controls->Add(this->rbtn5_6AM);
+			this->pnl12Hr->Location = System::Drawing::Point(108, 56);
+			this->pnl12Hr->Name = L"pnl12Hr";
+			this->pnl12Hr->Size = System::Drawing::Size(136, 310);
+			this->pnl12Hr->TabIndex = 27;
+			// 
+			// rbtn11_12AM
+			// 
+			this->rbtn11_12AM->AutoSize = true;
+			this->rbtn11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn11_12AM->Location = System::Drawing::Point(0, 289);
+			this->rbtn11_12AM->Name = L"rbtn11_12AM";
+			this->rbtn11_12AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12AM->TabIndex = 43;
+			this->rbtn11_12AM->TabStop = true;
+			this->rbtn11_12AM->Text = L"11:00 PM - 12:00 AM";
+			this->rbtn11_12AM->UseVisualStyleBackColor = true;
+			this->rbtn11_12AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12AM_CheckedChanged);
+			// 
+			// rbtn10_11PM
+			// 
+			this->rbtn10_11PM->AutoSize = true;
+			this->rbtn10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn10_11PM->Location = System::Drawing::Point(0, 272);
+			this->rbtn10_11PM->Name = L"rbtn10_11PM";
+			this->rbtn10_11PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11PM->TabIndex = 42;
+			this->rbtn10_11PM->TabStop = true;
+			this->rbtn10_11PM->Text = L"10:00 PM - 11:00 PM";
+			this->rbtn10_11PM->UseVisualStyleBackColor = true;
+			this->rbtn10_11PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11PM_CheckedChanged);
+			// 
+			// rbtn9_10PM
+			// 
+			this->rbtn9_10PM->AutoSize = true;
+			this->rbtn9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn9_10PM->Location = System::Drawing::Point(0, 255);
+			this->rbtn9_10PM->Name = L"rbtn9_10PM";
+			this->rbtn9_10PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10PM->TabIndex = 41;
+			this->rbtn9_10PM->TabStop = true;
+			this->rbtn9_10PM->Text = L"9:00 PM - 10:00 PM";
+			this->rbtn9_10PM->UseVisualStyleBackColor = true;
+			this->rbtn9_10PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10PM_CheckedChanged);
+			// 
+			// rbtn8_9PM
+			// 
+			this->rbtn8_9PM->AutoSize = true;
+			this->rbtn8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn8_9PM->Location = System::Drawing::Point(0, 238);
+			this->rbtn8_9PM->Name = L"rbtn8_9PM";
+			this->rbtn8_9PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9PM->TabIndex = 40;
+			this->rbtn8_9PM->TabStop = true;
+			this->rbtn8_9PM->Text = L"8:00 PM - 9:00 PM";
+			this->rbtn8_9PM->UseVisualStyleBackColor = true;
+			this->rbtn8_9PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9PM_CheckedChanged);
+			// 
+			// rbtn7_8PM
+			// 
+			this->rbtn7_8PM->AutoSize = true;
+			this->rbtn7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn7_8PM->Location = System::Drawing::Point(0, 221);
+			this->rbtn7_8PM->Name = L"rbtn7_8PM";
+			this->rbtn7_8PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8PM->TabIndex = 39;
+			this->rbtn7_8PM->TabStop = true;
+			this->rbtn7_8PM->Text = L"7:00 PM - 8:00 PM";
+			this->rbtn7_8PM->UseVisualStyleBackColor = true;
+			this->rbtn7_8PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8PM_CheckedChanged);
+			// 
+			// rbtn6_7PM
+			// 
+			this->rbtn6_7PM->AutoSize = true;
+			this->rbtn6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn6_7PM->Location = System::Drawing::Point(0, 204);
+			this->rbtn6_7PM->Name = L"rbtn6_7PM";
+			this->rbtn6_7PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7PM->TabIndex = 38;
+			this->rbtn6_7PM->TabStop = true;
+			this->rbtn6_7PM->Text = L"6:00 PM - 7:00 PM";
+			this->rbtn6_7PM->UseVisualStyleBackColor = true;
+			this->rbtn6_7PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7PM_CheckedChanged);
+			// 
+			// rbtn5_6PM
+			// 
+			this->rbtn5_6PM->AutoSize = true;
+			this->rbtn5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn5_6PM->Location = System::Drawing::Point(0, 187);
+			this->rbtn5_6PM->Name = L"rbtn5_6PM";
+			this->rbtn5_6PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6PM->TabIndex = 37;
+			this->rbtn5_6PM->TabStop = true;
+			this->rbtn5_6PM->Text = L"5:00 PM - 6:00 PM";
+			this->rbtn5_6PM->UseVisualStyleBackColor = true;
+			this->rbtn5_6PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6PM_CheckedChanged);
+			// 
+			// rbtn4_5PM
+			// 
+			this->rbtn4_5PM->AutoSize = true;
+			this->rbtn4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn4_5PM->Location = System::Drawing::Point(0, 170);
+			this->rbtn4_5PM->Name = L"rbtn4_5PM";
+			this->rbtn4_5PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn4_5PM->TabIndex = 36;
+			this->rbtn4_5PM->TabStop = true;
+			this->rbtn4_5PM->Text = L"4:00 PM - 5:00 PM";
+			this->rbtn4_5PM->UseVisualStyleBackColor = true;
+			this->rbtn4_5PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn4_5PM_CheckedChanged);
+			// 
+			// rbtn3_4PM
+			// 
+			this->rbtn3_4PM->AutoSize = true;
+			this->rbtn3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn3_4PM->Location = System::Drawing::Point(0, 153);
+			this->rbtn3_4PM->Name = L"rbtn3_4PM";
+			this->rbtn3_4PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn3_4PM->TabIndex = 35;
+			this->rbtn3_4PM->TabStop = true;
+			this->rbtn3_4PM->Text = L"3:00 PM - 4:00 PM";
+			this->rbtn3_4PM->UseVisualStyleBackColor = true;
+			this->rbtn3_4PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn3_4PM_CheckedChanged);
+			// 
+			// rbtn2_3PM
+			// 
+			this->rbtn2_3PM->AutoSize = true;
+			this->rbtn2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn2_3PM->Location = System::Drawing::Point(0, 136);
+			this->rbtn2_3PM->Name = L"rbtn2_3PM";
+			this->rbtn2_3PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn2_3PM->TabIndex = 34;
+			this->rbtn2_3PM->TabStop = true;
+			this->rbtn2_3PM->Text = L"2:00 PM - 3:00 PM";
+			this->rbtn2_3PM->UseVisualStyleBackColor = true;
+			this->rbtn2_3PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn2_3PM_CheckedChanged);
+			// 
+			// rbtn1_2PM
+			// 
+			this->rbtn1_2PM->AutoSize = true;
+			this->rbtn1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn1_2PM->Location = System::Drawing::Point(0, 119);
+			this->rbtn1_2PM->Name = L"rbtn1_2PM";
+			this->rbtn1_2PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn1_2PM->TabIndex = 33;
+			this->rbtn1_2PM->TabStop = true;
+			this->rbtn1_2PM->Text = L"1:00 PM - 2:00 PM";
+			this->rbtn1_2PM->UseVisualStyleBackColor = true;
+			this->rbtn1_2PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn1_2PM_CheckedChanged);
+			// 
+			// rbtn11_12PM
+			// 
+			this->rbtn11_12PM->AutoSize = true;
+			this->rbtn11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn11_12PM->Location = System::Drawing::Point(0, 102);
+			this->rbtn11_12PM->Name = L"rbtn11_12PM";
+			this->rbtn11_12PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12PM->TabIndex = 32;
+			this->rbtn11_12PM->TabStop = true;
+			this->rbtn11_12PM->Text = L"11:00 AM - 12:00 PM";
+			this->rbtn11_12PM->UseVisualStyleBackColor = true;
+			this->rbtn11_12PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12PM_CheckedChanged);
+			// 
+			// rbtn10_11AM
+			// 
+			this->rbtn10_11AM->AutoSize = true;
+			this->rbtn10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn10_11AM->Location = System::Drawing::Point(0, 85);
+			this->rbtn10_11AM->Name = L"rbtn10_11AM";
+			this->rbtn10_11AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11AM->TabIndex = 31;
+			this->rbtn10_11AM->TabStop = true;
+			this->rbtn10_11AM->Text = L"10:00 AM - 11:00 AM";
+			this->rbtn10_11AM->UseVisualStyleBackColor = true;
+			this->rbtn10_11AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11AM_CheckedChanged);
+			// 
+			// rbtn9_10AM
+			// 
+			this->rbtn9_10AM->AutoSize = true;
+			this->rbtn9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn9_10AM->Location = System::Drawing::Point(0, 68);
+			this->rbtn9_10AM->Name = L"rbtn9_10AM";
+			this->rbtn9_10AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10AM->TabIndex = 30;
+			this->rbtn9_10AM->TabStop = true;
+			this->rbtn9_10AM->Text = L"9:00 AM - 10:00 AM";
+			this->rbtn9_10AM->UseVisualStyleBackColor = true;
+			this->rbtn9_10AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10AM_CheckedChanged);
+			// 
+			// rbtn8_9AM
+			// 
+			this->rbtn8_9AM->AutoSize = true;
+			this->rbtn8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn8_9AM->Location = System::Drawing::Point(0, 51);
+			this->rbtn8_9AM->Name = L"rbtn8_9AM";
+			this->rbtn8_9AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9AM->TabIndex = 29;
+			this->rbtn8_9AM->TabStop = true;
+			this->rbtn8_9AM->Text = L"8:00 AM - 9:00 AM";
+			this->rbtn8_9AM->UseVisualStyleBackColor = true;
+			this->rbtn8_9AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9AM_CheckedChanged);
+			// 
+			// rbtn7_8AM
+			// 
+			this->rbtn7_8AM->AutoSize = true;
+			this->rbtn7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn7_8AM->Location = System::Drawing::Point(0, 34);
+			this->rbtn7_8AM->Name = L"rbtn7_8AM";
+			this->rbtn7_8AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8AM->TabIndex = 28;
+			this->rbtn7_8AM->TabStop = true;
+			this->rbtn7_8AM->Text = L"7:00 AM - 8:00 AM";
+			this->rbtn7_8AM->UseVisualStyleBackColor = true;
+			this->rbtn7_8AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8AM_CheckedChanged);
+			// 
+			// rbtn6_7AM
+			// 
+			this->rbtn6_7AM->AutoSize = true;
+			this->rbtn6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn6_7AM->Location = System::Drawing::Point(0, 17);
+			this->rbtn6_7AM->Name = L"rbtn6_7AM";
+			this->rbtn6_7AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7AM->TabIndex = 27;
+			this->rbtn6_7AM->TabStop = true;
+			this->rbtn6_7AM->Text = L"6:00 AM - 7:00 AM";
+			this->rbtn6_7AM->UseVisualStyleBackColor = true;
+			this->rbtn6_7AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7AM_CheckedChanged);
+			// 
+			// rbtn5_6AM
+			// 
+			this->rbtn5_6AM->AutoSize = true;
+			this->rbtn5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn5_6AM->Location = System::Drawing::Point(0, 0);
+			this->rbtn5_6AM->Name = L"rbtn5_6AM";
+			this->rbtn5_6AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6AM->TabIndex = 26;
+			this->rbtn5_6AM->TabStop = true;
+			this->rbtn5_6AM->Text = L"5:00 AM - 6:00 AM";
+			this->rbtn5_6AM->UseVisualStyleBackColor = true;
+			this->rbtn5_6AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6AM_CheckedChanged);
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(2, 153);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->TabIndex = 45;
 			// 
 			// label2
 			// 
@@ -1622,7 +1891,7 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->pnl24Hr->Controls->Add(this->rbtn07_08);
 			this->pnl24Hr->Controls->Add(this->rbtn06_07);
 			this->pnl24Hr->Controls->Add(this->rbtn05_06);
-			this->pnl24Hr->Location = System::Drawing::Point(112, 53);
+			this->pnl24Hr->Location = System::Drawing::Point(108, 56);
 			this->pnl24Hr->Name = L"pnl24Hr";
 			this->pnl24Hr->Size = System::Drawing::Size(136, 310);
 			this->pnl24Hr->TabIndex = 44;
@@ -1861,265 +2130,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn05_06->UseVisualStyleBackColor = true;
 			this->rbtn05_06->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn05_06_CheckedChanged);
 			// 
-			// pnl12Hr
-			// 
-			this->pnl12Hr->Controls->Add(this->rbtn11_12AM);
-			this->pnl12Hr->Controls->Add(this->rbtn10_11PM);
-			this->pnl12Hr->Controls->Add(this->rbtn9_10PM);
-			this->pnl12Hr->Controls->Add(this->rbtn8_9PM);
-			this->pnl12Hr->Controls->Add(this->rbtn7_8PM);
-			this->pnl12Hr->Controls->Add(this->rbtn6_7PM);
-			this->pnl12Hr->Controls->Add(this->rbtn5_6PM);
-			this->pnl12Hr->Controls->Add(this->rbtn4_5PM);
-			this->pnl12Hr->Controls->Add(this->rbtn3_4PM);
-			this->pnl12Hr->Controls->Add(this->rbtn2_3PM);
-			this->pnl12Hr->Controls->Add(this->rbtn1_2PM);
-			this->pnl12Hr->Controls->Add(this->rbtn11_12PM);
-			this->pnl12Hr->Controls->Add(this->rbtn10_11AM);
-			this->pnl12Hr->Controls->Add(this->rbtn9_10AM);
-			this->pnl12Hr->Controls->Add(this->rbtn8_9AM);
-			this->pnl12Hr->Controls->Add(this->rbtn7_8AM);
-			this->pnl12Hr->Controls->Add(this->rbtn6_7AM);
-			this->pnl12Hr->Controls->Add(this->rbtn5_6AM);
-			this->pnl12Hr->Location = System::Drawing::Point(112, 53);
-			this->pnl12Hr->Name = L"pnl12Hr";
-			this->pnl12Hr->Size = System::Drawing::Size(136, 310);
-			this->pnl12Hr->TabIndex = 27;
-			// 
-			// rbtn11_12AM
-			// 
-			this->rbtn11_12AM->AutoSize = true;
-			this->rbtn11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn11_12AM->Location = System::Drawing::Point(0, 289);
-			this->rbtn11_12AM->Name = L"rbtn11_12AM";
-			this->rbtn11_12AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn11_12AM->TabIndex = 43;
-			this->rbtn11_12AM->TabStop = true;
-			this->rbtn11_12AM->Text = L"11:00 PM - 12:00 AM";
-			this->rbtn11_12AM->UseVisualStyleBackColor = true;
-			this->rbtn11_12AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12AM_CheckedChanged);
-			// 
-			// rbtn10_11PM
-			// 
-			this->rbtn10_11PM->AutoSize = true;
-			this->rbtn10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn10_11PM->Location = System::Drawing::Point(0, 272);
-			this->rbtn10_11PM->Name = L"rbtn10_11PM";
-			this->rbtn10_11PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn10_11PM->TabIndex = 42;
-			this->rbtn10_11PM->TabStop = true;
-			this->rbtn10_11PM->Text = L"10:00 PM - 11:00 PM";
-			this->rbtn10_11PM->UseVisualStyleBackColor = true;
-			this->rbtn10_11PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11PM_CheckedChanged);
-			// 
-			// rbtn9_10PM
-			// 
-			this->rbtn9_10PM->AutoSize = true;
-			this->rbtn9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn9_10PM->Location = System::Drawing::Point(0, 255);
-			this->rbtn9_10PM->Name = L"rbtn9_10PM";
-			this->rbtn9_10PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn9_10PM->TabIndex = 41;
-			this->rbtn9_10PM->TabStop = true;
-			this->rbtn9_10PM->Text = L"9:00 PM - 10:00 PM";
-			this->rbtn9_10PM->UseVisualStyleBackColor = true;
-			this->rbtn9_10PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10PM_CheckedChanged);
-			// 
-			// rbtn8_9PM
-			// 
-			this->rbtn8_9PM->AutoSize = true;
-			this->rbtn8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn8_9PM->Location = System::Drawing::Point(0, 238);
-			this->rbtn8_9PM->Name = L"rbtn8_9PM";
-			this->rbtn8_9PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn8_9PM->TabIndex = 40;
-			this->rbtn8_9PM->TabStop = true;
-			this->rbtn8_9PM->Text = L"8:00 PM - 9:00 PM";
-			this->rbtn8_9PM->UseVisualStyleBackColor = true;
-			this->rbtn8_9PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9PM_CheckedChanged);
-			// 
-			// rbtn7_8PM
-			// 
-			this->rbtn7_8PM->AutoSize = true;
-			this->rbtn7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn7_8PM->Location = System::Drawing::Point(0, 221);
-			this->rbtn7_8PM->Name = L"rbtn7_8PM";
-			this->rbtn7_8PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn7_8PM->TabIndex = 39;
-			this->rbtn7_8PM->TabStop = true;
-			this->rbtn7_8PM->Text = L"7:00 PM - 8:00 PM";
-			this->rbtn7_8PM->UseVisualStyleBackColor = true;
-			this->rbtn7_8PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8PM_CheckedChanged);
-			// 
-			// rbtn6_7PM
-			// 
-			this->rbtn6_7PM->AutoSize = true;
-			this->rbtn6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn6_7PM->Location = System::Drawing::Point(0, 204);
-			this->rbtn6_7PM->Name = L"rbtn6_7PM";
-			this->rbtn6_7PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn6_7PM->TabIndex = 38;
-			this->rbtn6_7PM->TabStop = true;
-			this->rbtn6_7PM->Text = L"6:00 PM - 7:00 PM";
-			this->rbtn6_7PM->UseVisualStyleBackColor = true;
-			this->rbtn6_7PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7PM_CheckedChanged);
-			// 
-			// rbtn5_6PM
-			// 
-			this->rbtn5_6PM->AutoSize = true;
-			this->rbtn5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn5_6PM->Location = System::Drawing::Point(0, 187);
-			this->rbtn5_6PM->Name = L"rbtn5_6PM";
-			this->rbtn5_6PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn5_6PM->TabIndex = 37;
-			this->rbtn5_6PM->TabStop = true;
-			this->rbtn5_6PM->Text = L"5:00 PM - 6:00 PM";
-			this->rbtn5_6PM->UseVisualStyleBackColor = true;
-			this->rbtn5_6PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6PM_CheckedChanged);
-			// 
-			// rbtn4_5PM
-			// 
-			this->rbtn4_5PM->AutoSize = true;
-			this->rbtn4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn4_5PM->Location = System::Drawing::Point(0, 170);
-			this->rbtn4_5PM->Name = L"rbtn4_5PM";
-			this->rbtn4_5PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn4_5PM->TabIndex = 36;
-			this->rbtn4_5PM->TabStop = true;
-			this->rbtn4_5PM->Text = L"4:00 PM - 5:00 PM";
-			this->rbtn4_5PM->UseVisualStyleBackColor = true;
-			this->rbtn4_5PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn4_5PM_CheckedChanged);
-			// 
-			// rbtn3_4PM
-			// 
-			this->rbtn3_4PM->AutoSize = true;
-			this->rbtn3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn3_4PM->Location = System::Drawing::Point(0, 153);
-			this->rbtn3_4PM->Name = L"rbtn3_4PM";
-			this->rbtn3_4PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn3_4PM->TabIndex = 35;
-			this->rbtn3_4PM->TabStop = true;
-			this->rbtn3_4PM->Text = L"3:00 PM - 4:00 PM";
-			this->rbtn3_4PM->UseVisualStyleBackColor = true;
-			this->rbtn3_4PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn3_4PM_CheckedChanged);
-			// 
-			// rbtn2_3PM
-			// 
-			this->rbtn2_3PM->AutoSize = true;
-			this->rbtn2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn2_3PM->Location = System::Drawing::Point(0, 136);
-			this->rbtn2_3PM->Name = L"rbtn2_3PM";
-			this->rbtn2_3PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn2_3PM->TabIndex = 34;
-			this->rbtn2_3PM->TabStop = true;
-			this->rbtn2_3PM->Text = L"2:00 PM - 3:00 PM";
-			this->rbtn2_3PM->UseVisualStyleBackColor = true;
-			this->rbtn2_3PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn2_3PM_CheckedChanged);
-			// 
-			// rbtn1_2PM
-			// 
-			this->rbtn1_2PM->AutoSize = true;
-			this->rbtn1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn1_2PM->Location = System::Drawing::Point(0, 119);
-			this->rbtn1_2PM->Name = L"rbtn1_2PM";
-			this->rbtn1_2PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn1_2PM->TabIndex = 33;
-			this->rbtn1_2PM->TabStop = true;
-			this->rbtn1_2PM->Text = L"1:00 PM - 2:00 PM";
-			this->rbtn1_2PM->UseVisualStyleBackColor = true;
-			this->rbtn1_2PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn1_2PM_CheckedChanged);
-			// 
-			// rbtn11_12PM
-			// 
-			this->rbtn11_12PM->AutoSize = true;
-			this->rbtn11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn11_12PM->Location = System::Drawing::Point(0, 102);
-			this->rbtn11_12PM->Name = L"rbtn11_12PM";
-			this->rbtn11_12PM->Size = System::Drawing::Size(136, 17);
-			this->rbtn11_12PM->TabIndex = 32;
-			this->rbtn11_12PM->TabStop = true;
-			this->rbtn11_12PM->Text = L"11:00 AM - 12:00 PM";
-			this->rbtn11_12PM->UseVisualStyleBackColor = true;
-			this->rbtn11_12PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12PM_CheckedChanged);
-			// 
-			// rbtn10_11AM
-			// 
-			this->rbtn10_11AM->AutoSize = true;
-			this->rbtn10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn10_11AM->Location = System::Drawing::Point(0, 85);
-			this->rbtn10_11AM->Name = L"rbtn10_11AM";
-			this->rbtn10_11AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn10_11AM->TabIndex = 31;
-			this->rbtn10_11AM->TabStop = true;
-			this->rbtn10_11AM->Text = L"10:00 AM - 11:00 AM";
-			this->rbtn10_11AM->UseVisualStyleBackColor = true;
-			this->rbtn10_11AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11AM_CheckedChanged);
-			// 
-			// rbtn9_10AM
-			// 
-			this->rbtn9_10AM->AutoSize = true;
-			this->rbtn9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn9_10AM->Location = System::Drawing::Point(0, 68);
-			this->rbtn9_10AM->Name = L"rbtn9_10AM";
-			this->rbtn9_10AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn9_10AM->TabIndex = 30;
-			this->rbtn9_10AM->TabStop = true;
-			this->rbtn9_10AM->Text = L"9:00 AM - 10:00 AM";
-			this->rbtn9_10AM->UseVisualStyleBackColor = true;
-			this->rbtn9_10AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10AM_CheckedChanged);
-			// 
-			// rbtn8_9AM
-			// 
-			this->rbtn8_9AM->AutoSize = true;
-			this->rbtn8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn8_9AM->Location = System::Drawing::Point(0, 51);
-			this->rbtn8_9AM->Name = L"rbtn8_9AM";
-			this->rbtn8_9AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn8_9AM->TabIndex = 29;
-			this->rbtn8_9AM->TabStop = true;
-			this->rbtn8_9AM->Text = L"8:00 AM - 9:00 AM";
-			this->rbtn8_9AM->UseVisualStyleBackColor = true;
-			this->rbtn8_9AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9AM_CheckedChanged);
-			// 
-			// rbtn7_8AM
-			// 
-			this->rbtn7_8AM->AutoSize = true;
-			this->rbtn7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn7_8AM->Location = System::Drawing::Point(0, 34);
-			this->rbtn7_8AM->Name = L"rbtn7_8AM";
-			this->rbtn7_8AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn7_8AM->TabIndex = 28;
-			this->rbtn7_8AM->TabStop = true;
-			this->rbtn7_8AM->Text = L"7:00 AM - 8:00 AM";
-			this->rbtn7_8AM->UseVisualStyleBackColor = true;
-			this->rbtn7_8AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8AM_CheckedChanged);
-			// 
-			// rbtn6_7AM
-			// 
-			this->rbtn6_7AM->AutoSize = true;
-			this->rbtn6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn6_7AM->Location = System::Drawing::Point(0, 17);
-			this->rbtn6_7AM->Name = L"rbtn6_7AM";
-			this->rbtn6_7AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn6_7AM->TabIndex = 27;
-			this->rbtn6_7AM->TabStop = true;
-			this->rbtn6_7AM->Text = L"6:00 AM - 7:00 AM";
-			this->rbtn6_7AM->UseVisualStyleBackColor = true;
-			this->rbtn6_7AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7AM_CheckedChanged);
-			// 
-			// rbtn5_6AM
-			// 
-			this->rbtn5_6AM->AutoSize = true;
-			this->rbtn5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn5_6AM->Location = System::Drawing::Point(0, 0);
-			this->rbtn5_6AM->Name = L"rbtn5_6AM";
-			this->rbtn5_6AM->Size = System::Drawing::Size(136, 17);
-			this->rbtn5_6AM->TabIndex = 26;
-			this->rbtn5_6AM->TabStop = true;
-			this->rbtn5_6AM->Text = L"5:00 AM - 6:00 AM";
-			this->rbtn5_6AM->UseVisualStyleBackColor = true;
-			this->rbtn5_6AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6AM_CheckedChanged);
-			// 
 			// panel2
 			// 
 			this->panel2->Controls->Add(this->checkBox8);
@@ -2180,6 +2190,8 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->groupBox2->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
+			this->pnl12Hr->ResumeLayout(false);
+			this->pnl12Hr->PerformLayout();
 			this->panel5->ResumeLayout(false);
 			this->pnl5_6AM->ResumeLayout(false);
 			this->pnl7_8AM->ResumeLayout(false);
@@ -2201,8 +2213,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->pnl6_7PM->ResumeLayout(false);
 			this->pnl24Hr->ResumeLayout(false);
 			this->pnl24Hr->PerformLayout();
-			this->pnl12Hr->ResumeLayout(false);
-			this->pnl12Hr->PerformLayout();
 			this->panel2->ResumeLayout(false);
 			this->ResumeLayout(false);
 
@@ -2281,184 +2291,177 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	groupBox2->Visible = true;
 }
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl12Hr->Visible = true;
-	pnl24Hr->Visible = false;
-	/*
-		if (rbtn5_6AM->Checked)
-		{
-			rbtn05_06->Checked = true;
-		}
-		else if (rbtn6_7AM->Checked)
-		{
-			rbtn06_07->Checked = true;
-		}
-		else if (rbtn7_8AM->Checked)
-		{
-			rbtn07_08->Checked = true;
-		}
-		else if (rbtn8_9AM->Checked)
-		{
-			rbtn08_09->Checked = true;
-		}
-		else if (rbtn9_10AM->Checked)
-		{
-			rbtn09_10->Checked = true;
-		}
-		else if (rbtn10_11AM->Checked)
-		{
-			rbtn10_11->Checked = true;
-		}
-		else if (rbtn11_12PM->Checked)
-		{
-			rbtn11_12->Checked = true;
-		}
-		else if (rbtn1_2PM->Checked)
-		{
-			rbtn13_14->Checked = true;
-		}
-		else if (rbtn2_3PM->Checked)
-		{
-			rbtn14_15->Checked = true;
-		}
-		else if (rbtn3_4PM->Checked)
-		{
-			rbtn15_16->Checked = true;
-		}
-		else if (rbtn4_5PM->Checked)
-		{
-			rbtn16_17->Checked = true;
-		}
-		else if (rbtn5_6PM->Checked)
-		{
-			rbtn17_18->Checked = true;
-		}
-		else if (rbtn6_7PM->Checked)
-		{
-			rbtn18_19->Checked = true;
-		}
-		else if (rbtn7_8PM->Checked)
-		{
-			rbtn19_20->Checked = true;
-		}
-		else if (rbtn8_9PM->Checked)
-		{
-			rbtn20_21->Checked = true;
-		}
-		else if (rbtn9_10PM->Checked)
-		{
-			rbtn21_22->Checked = true;
-		}
-		else if (rbtn10_11PM->Checked)
-		{
-			rbtn22_23->Checked = true;
-		}
-		else if (rbtn11_12AM->Checked)
-		{
-			rbtn23_00->Checked = true;
-		}
-	*/
+	if (rbtn5_6AM->Checked)
+	{
+		rbtn05_06->Checked = true;
+		textBox4->Text = "test";
+	}
+	else if (rbtn6_7AM->Checked)
+	{
+		rbtn06_07->Checked = true;
+	}
+	else if (rbtn7_8AM->Checked)
+	{
+		rbtn07_08->Checked = true;
+	}
+	else if (rbtn8_9AM->Checked)
+	{
+		rbtn08_09->Checked = true;
+	}
+	else if (rbtn9_10AM->Checked)
+	{
+		rbtn09_10->Checked = true;
+	}
+	else if (rbtn10_11AM->Checked)
+	{
+		rbtn10_11->Checked = true;
+	}
+	else if (rbtn11_12PM->Checked)
+	{
+		rbtn11_12->Checked = true;
+	}
+	else if (rbtn1_2PM->Checked)
+	{
+		rbtn13_14->Checked = true;
+	}
+	else if (rbtn2_3PM->Checked)
+	{
+		rbtn14_15->Checked = true;
+	}
+	else if (rbtn3_4PM->Checked)
+	{
+		rbtn15_16->Checked = true;
+	}
+	else if (rbtn4_5PM->Checked)
+	{
+		rbtn16_17->Checked = true;
+	}
+	else if (rbtn5_6PM->Checked)
+	{
+		rbtn17_18->Checked = true;
+	}
+	else if (rbtn6_7PM->Checked)
+	{
+		rbtn18_19->Checked = true;
+	}
+	else if (rbtn7_8PM->Checked)
+	{
+		rbtn19_20->Checked = true;
+	}
+	else if (rbtn8_9PM->Checked)
+	{
+		rbtn20_21->Checked = true;
+	}
+	else if (rbtn9_10PM->Checked)
+	{
+		rbtn21_22->Checked = true;
+	}
+	else if (rbtn10_11PM->Checked)
+	{
+		rbtn22_23->Checked = true;
+	}
+	else if (rbtn11_12AM->Checked)
+	{
+		rbtn23_00->Checked = true;
+	}
+	//
+	
+	
+	
+	//pnl12Hr->Visible = true;
+	//pnl24Hr->Visible = false;
+
+	pnl12Hr->BringToFront();
+	pnl24Hr->SendToBack();
+	
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl24Hr->Visible = true;
-	pnl12Hr->Visible = false;
-	/*
-		if (rbtn05_06->Checked)
-		{
-			rbtn5_6AM->Checked = true;
-		}
-		else if (rbtn06_07->Checked)
-		{
-			rbtn6_7AM->Checked = true;
-		}
-		else if (rbtn07_08->Checked)
-		{
-			rbtn7_8AM->Checked = true;
-		}
-		else if (rbtn08_09->Checked)
-		{
-			rbtn8_9AM->Checked = true;
-		}
-		else if (rbtn09_10->Checked)
-		{
-			rbtn9_10AM->Checked = true;
-		}
-		else if (rbtn10_11->Checked)
-		{
-			rbtn10_11AM->Checked = true;
-		}
-		else if (rbtn11_12->Checked)
-		{
-			rbtn11_12PM->Checked = true;
-		}
-		else if (rbtn13_14->Checked)
-		{
-			rbtn1_2PM->Checked = true;
-		}
-		else if (rbtn14_15->Checked)
-		{
-			rbtn2_3PM->Checked = true;
-		}
-		else if (rbtn15_16->Checked)
-		{
-			rbtn3_4PM->Checked = true;
-		}
-		else if (rbtn16_17->Checked)
-		{
-			rbtn4_5PM->Checked = true;
-		}
-		else if (rbtn17_18->Checked)
-		{
-			rbtn5_6PM->Checked = true;
-		}
-		else if (rbtn18_19->Checked)
-		{
-			rbtn6_7PM->Checked = true;
-		}
-		else if (rbtn19_20->Checked)
-		{
-			rbtn7_8PM->Checked = true;
-		}
-		else if (rbtn20_21->Checked)
-		{
-			rbtn8_9PM->Checked = true;
-		}
-		else if (rbtn21_22->Checked)
-		{
-			rbtn9_10PM->Checked = true;
-		}
-		else if (rbtn22_23->Checked)
-		{
-			rbtn10_11PM->Checked = true;
-		}
-		else if (rbtn23_00->Checked)
-		{
-			rbtn11_12AM->Checked = true;
-		}
-	*/
+	
+	if (rbtn05_06->Checked)
+	{
+		rbtn5_6AM->Checked = true;
+	}
+	else if (rbtn06_07->Checked)
+	{
+		rbtn6_7AM->Checked = true;
+	}
+	else if (rbtn07_08->Checked)
+	{
+		rbtn7_8AM->Checked = true;
+	}
+	else if (rbtn08_09->Checked)
+	{
+		rbtn8_9AM->Checked = true;
+	}
+	else if (rbtn09_10->Checked)
+	{
+		rbtn9_10AM->Checked = true;
+	}
+	else if (rbtn10_11->Checked)
+	{
+		rbtn10_11AM->Checked = true;
+	}
+	else if (rbtn11_12->Checked)
+	{
+		rbtn11_12PM->Checked = true;
+	}
+	else if (rbtn13_14->Checked)
+	{
+		rbtn1_2PM->Checked = true;
+	}
+	else if (rbtn14_15->Checked)
+	{
+		rbtn2_3PM->Checked = true;
+	}
+	else if (rbtn15_16->Checked)
+	{
+		rbtn3_4PM->Checked = true;
+	}
+	else if (rbtn16_17->Checked)
+	{
+		rbtn4_5PM->Checked = true;
+	}
+	else if (rbtn17_18->Checked)
+	{
+		rbtn5_6PM->Checked = true;
+	}
+	else if (rbtn18_19->Checked)
+	{
+		rbtn6_7PM->Checked = true;
+	}
+	else if (rbtn19_20->Checked)
+	{
+		rbtn7_8PM->Checked = true;
+	}
+	else if (rbtn20_21->Checked)
+	{
+		rbtn8_9PM->Checked = true;
+	}
+	else if (rbtn21_22->Checked)
+	{
+		rbtn9_10PM->Checked = true;
+	}
+	else if (rbtn22_23->Checked)
+	{
+		rbtn10_11PM->Checked = true;
+	}
+	else if (rbtn23_00->Checked)
+	{
+		rbtn11_12AM->Checked = true;
+	}
+	
+	//pnl24Hr->Visible = true;
+	//pnl12Hr->Visible = false;
+
+	pnl24Hr->BringToFront();
+	pnl12Hr->SendToBack();
+	
 }
 
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {	
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = true;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
 }
 private: System::Void chk520_540AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
@@ -2521,6 +2524,7 @@ private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
 }
 private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2542,7 +2546,6 @@ private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
 
-
 }
 private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2563,6 +2566,7 @@ private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
 }
 private: System::Void rbtn8_9AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2884,6 +2888,7 @@ private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
 }
 private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2904,6 +2909,7 @@ private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
 }
 private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2924,8 +2930,290 @@ private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
 }
 private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = true;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = true;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = true;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = true;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = true;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = true;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = true;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = true;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = true;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = true;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = true;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = true;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = true;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = true;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
@@ -2943,49 +3231,7 @@ private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
-}
-private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn9_10AM->Checked = true;
-}
-private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn10_11AM->Checked = true;
-}
-private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn11_12PM->Checked = true;
-}
-private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn1_2PM->Checked = true;
-}
-private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn2_3PM->Checked = true;
-}
-private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn3_4PM->Checked = true;
-}
-private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn4_5PM->Checked = true;
-}
-private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn5_6PM->Checked = true;
-}
-private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn6_7PM->Checked = true;
-}
-private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn7_8PM->Checked = true;
-}
-private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn8_9PM->Checked = true;
-}
-private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn9_10PM->Checked = true;
-}
-private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn10_11PM->Checked = true;
-}
-private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn11_12AM->Checked = true;
+	pnl11_12AM->Visible = true;
 }
 };
 
