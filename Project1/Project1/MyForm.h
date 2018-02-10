@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 namespace Project1 {
 
@@ -107,7 +108,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  button8;
 	private: System::Windows::Forms::Label^  label7;
 
-	private: System::Windows::Forms::TextBox^  textBox4;
+
 
 
 
@@ -407,6 +408,83 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->pnl5_6AM = (gcnew System::Windows::Forms::Panel());
+			this->chk540_600AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk520_540AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk500_520AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl7_8AM = (gcnew System::Windows::Forms::Panel());
+			this->chk740_800AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk720_740AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk700_720AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl2_3PM = (gcnew System::Windows::Forms::Panel());
+			this->chk240_300PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk220_240PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk200_220PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl1_2PM = (gcnew System::Windows::Forms::Panel());
+			this->chk140_200PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk120_140PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk100_120PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl9_10AM = (gcnew System::Windows::Forms::Panel());
+			this->chk940_10000AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk920_940AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk900_920AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl7_8PM = (gcnew System::Windows::Forms::Panel());
+			this->chk740_800PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk720_740PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk700_720PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl3_4PM = (gcnew System::Windows::Forms::Panel());
+			this->chk340_400PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk320_340PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk300_320PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl11_12PM = (gcnew System::Windows::Forms::Panel());
+			this->chk1140_1200PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1120_1140AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1100_1120AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl6_7AM = (gcnew System::Windows::Forms::Panel());
+			this->chk640_700AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk620_640AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk600_620AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl11_12AM = (gcnew System::Windows::Forms::Panel());
+			this->chk1140_1200AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1120_1140PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1100_1120PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl4_5PM = (gcnew System::Windows::Forms::Panel());
+			this->chk440_500PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk420_440PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk400_420PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl10_11PM = (gcnew System::Windows::Forms::Panel());
+			this->chk1040_1100PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1020_1040PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1000_1020PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl10_11AM = (gcnew System::Windows::Forms::Panel());
+			this->chk1040_1100AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1020_1040AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1000_1020AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl9_10PM = (gcnew System::Windows::Forms::Panel());
+			this->chk940_1000PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk920_940PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk900_920PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl5_6PM = (gcnew System::Windows::Forms::Panel());
+			this->chk540_600PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk520_540PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk500_520PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl8_9PM = (gcnew System::Windows::Forms::Panel());
+			this->chk840_900PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk820_840PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk800_820PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl8_9AM = (gcnew System::Windows::Forms::Panel());
+			this->chk840_900AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk820_840AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk800_820AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl6_7PM = (gcnew System::Windows::Forms::Panel());
+			this->chk640_700PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk620_640PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk600_620PM = (gcnew System::Windows::Forms::CheckBox());
 			this->pnl24Hr = (gcnew System::Windows::Forms::Panel());
 			this->rbtn23_00 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn22_23 = (gcnew System::Windows::Forms::RadioButton());
@@ -426,9 +504,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn07_08 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn06_07 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn05_06 = (gcnew System::Windows::Forms::RadioButton());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
 			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn10_11PM = (gcnew System::Windows::Forms::RadioButton());
@@ -448,112 +523,38 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn7_8AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn6_7AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn5_6AM = (gcnew System::Windows::Forms::RadioButton());
-			this->pnl5_6AM = (gcnew System::Windows::Forms::Panel());
-			this->chk540_600AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk520_540AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk500_520AM = (gcnew System::Windows::Forms::CheckBox());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->pnl7_8AM = (gcnew System::Windows::Forms::Panel());
-			this->chk740_800AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk720_740AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk700_720AM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl1_2PM = (gcnew System::Windows::Forms::Panel());
-			this->chk140_200PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk120_140PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk100_120PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl11_12PM = (gcnew System::Windows::Forms::Panel());
-			this->chk1140_1200PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1120_1140AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1100_1120AM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl7_8PM = (gcnew System::Windows::Forms::Panel());
-			this->chk740_800PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk720_740PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk700_720PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl6_7PM = (gcnew System::Windows::Forms::Panel());
-			this->chk640_700PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk620_640PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk600_620PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl5_6PM = (gcnew System::Windows::Forms::Panel());
-			this->chk540_600PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk520_540PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk500_520PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl4_5PM = (gcnew System::Windows::Forms::Panel());
-			this->chk440_500PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk420_440PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk400_420PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl3_4PM = (gcnew System::Windows::Forms::Panel());
-			this->chk340_400PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk320_340PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk300_320PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl8_9AM = (gcnew System::Windows::Forms::Panel());
-			this->chk840_900AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk820_840AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk800_820AM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl6_7AM = (gcnew System::Windows::Forms::Panel());
-			this->chk640_700AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk620_640AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk600_620AM = (gcnew System::Windows::Forms::CheckBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl10_11AM = (gcnew System::Windows::Forms::Panel());
-			this->chk1040_1100AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1020_1040AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1000_1020AM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl9_10AM = (gcnew System::Windows::Forms::Panel());
-			this->chk940_10000AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk920_940AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk900_920AM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl2_3PM = (gcnew System::Windows::Forms::Panel());
-			this->chk240_300PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk220_240PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk200_220PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl8_9PM = (gcnew System::Windows::Forms::Panel());
-			this->chk840_900PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk820_840PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk800_820PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl9_10PM = (gcnew System::Windows::Forms::Panel());
-			this->chk940_1000PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk920_940PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk900_920PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl10_11PM = (gcnew System::Windows::Forms::Panel());
-			this->chk1040_1100PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1020_1040PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1000_1020PM = (gcnew System::Windows::Forms::CheckBox());
-			this->pnl11_12AM = (gcnew System::Windows::Forms::Panel());
-			this->chk1140_1200AM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1120_1140PM = (gcnew System::Windows::Forms::CheckBox());
-			this->chk1100_1120PM = (gcnew System::Windows::Forms::CheckBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpUser->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
-			this->pnl24Hr->SuspendLayout();
-			this->pnl12Hr->SuspendLayout();
+			this->panel5->SuspendLayout();
 			this->pnl5_6AM->SuspendLayout();
 			this->pnl7_8AM->SuspendLayout();
-			this->pnl1_2PM->SuspendLayout();
-			this->pnl11_12PM->SuspendLayout();
-			this->pnl7_8PM->SuspendLayout();
-			this->pnl6_7PM->SuspendLayout();
-			this->pnl5_6PM->SuspendLayout();
-			this->pnl4_5PM->SuspendLayout();
-			this->pnl3_4PM->SuspendLayout();
-			this->pnl8_9AM->SuspendLayout();
-			this->pnl6_7AM->SuspendLayout();
-			this->panel2->SuspendLayout();
-			this->pnl10_11AM->SuspendLayout();
-			this->pnl9_10AM->SuspendLayout();
 			this->pnl2_3PM->SuspendLayout();
-			this->pnl8_9PM->SuspendLayout();
-			this->pnl9_10PM->SuspendLayout();
-			this->pnl10_11PM->SuspendLayout();
+			this->pnl1_2PM->SuspendLayout();
+			this->pnl9_10AM->SuspendLayout();
+			this->pnl7_8PM->SuspendLayout();
+			this->pnl3_4PM->SuspendLayout();
+			this->pnl11_12PM->SuspendLayout();
+			this->pnl6_7AM->SuspendLayout();
 			this->pnl11_12AM->SuspendLayout();
+			this->pnl4_5PM->SuspendLayout();
+			this->pnl10_11PM->SuspendLayout();
+			this->pnl10_11AM->SuspendLayout();
+			this->pnl9_10PM->SuspendLayout();
+			this->pnl5_6PM->SuspendLayout();
+			this->pnl8_9PM->SuspendLayout();
+			this->pnl8_9AM->SuspendLayout();
+			this->pnl6_7PM->SuspendLayout();
+			this->pnl24Hr->SuspendLayout();
+			this->pnl12Hr->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// grpCreateEvent
@@ -800,6 +801,7 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			// rbtn12Hr
 			// 
 			this->rbtn12Hr->AutoSize = true;
+			this->rbtn12Hr->Checked = true;
 			this->rbtn12Hr->Location = System::Drawing::Point(30, 67);
 			this->rbtn12Hr->Name = L"rbtn12Hr";
 			this->rbtn12Hr->Size = System::Drawing::Size(63, 17);
@@ -816,7 +818,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn24Hr->Name = L"rbtn24Hr";
 			this->rbtn24Hr->Size = System::Drawing::Size(63, 17);
 			this->rbtn24Hr->TabIndex = 13;
-			this->rbtn24Hr->TabStop = true;
 			this->rbtn24Hr->Text = L"24 Hour";
 			this->rbtn24Hr->UseVisualStyleBackColor = true;
 			this->rbtn24Hr->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn24Hr_CheckedChanged);
@@ -853,19 +854,753 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			// 
 			// grpAvailability
 			// 
-			this->grpAvailability->Controls->Add(this->pnl24Hr);
-			this->grpAvailability->Controls->Add(this->textBox4);
+			this->grpAvailability->Controls->Add(this->label2);
+			this->grpAvailability->Controls->Add(this->label3);
 			this->grpAvailability->Controls->Add(this->button8);
 			this->grpAvailability->Controls->Add(this->label7);
+			this->grpAvailability->Controls->Add(this->panel5);
 			this->grpAvailability->Controls->Add(this->rbtn24Hr);
-			this->grpAvailability->Controls->Add(this->pnl12Hr);
 			this->grpAvailability->Controls->Add(this->rbtn12Hr);
+			this->grpAvailability->Controls->Add(this->pnl12Hr);
+			this->grpAvailability->Controls->Add(this->pnl24Hr);
 			this->grpAvailability->Location = System::Drawing::Point(18, 29);
 			this->grpAvailability->Name = L"grpAvailability";
 			this->grpAvailability->Size = System::Drawing::Size(472, 441);
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(281, 123);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(117, 13);
+			this->label2->TabIndex = 30;
+			this->label2->Text = L"Select Available Times:";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(149, 40);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(38, 13);
+			this->label3->TabIndex = 31;
+			this->label3->Text = L"Hours:";
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(181, 402);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(103, 23);
+			this->button8->TabIndex = 0;
+			this->button8->Text = L"Submit";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(183, 22);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(72, 13);
+			this->label7->TabIndex = 2;
+			this->label7->Text = L"Create Event:";
+			// 
+			// panel5
+			// 
+			this->panel5->Controls->Add(this->pnl5_6AM);
+			this->panel5->Controls->Add(this->pnl7_8AM);
+			this->panel5->Controls->Add(this->pnl2_3PM);
+			this->panel5->Controls->Add(this->pnl1_2PM);
+			this->panel5->Controls->Add(this->pnl9_10AM);
+			this->panel5->Controls->Add(this->pnl7_8PM);
+			this->panel5->Controls->Add(this->pnl3_4PM);
+			this->panel5->Controls->Add(this->pnl11_12PM);
+			this->panel5->Controls->Add(this->pnl6_7AM);
+			this->panel5->Controls->Add(this->pnl11_12AM);
+			this->panel5->Controls->Add(this->pnl4_5PM);
+			this->panel5->Controls->Add(this->pnl10_11PM);
+			this->panel5->Controls->Add(this->pnl10_11AM);
+			this->panel5->Controls->Add(this->pnl9_10PM);
+			this->panel5->Controls->Add(this->pnl5_6PM);
+			this->panel5->Controls->Add(this->pnl8_9PM);
+			this->panel5->Controls->Add(this->pnl8_9AM);
+			this->panel5->Controls->Add(this->pnl6_7PM);
+			this->panel5->Location = System::Drawing::Point(273, 147);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(264, 852);
+			this->panel5->TabIndex = 28;
+			// 
+			// pnl5_6AM
+			// 
+			this->pnl5_6AM->Controls->Add(this->chk540_600AM);
+			this->pnl5_6AM->Controls->Add(this->chk520_540AM);
+			this->pnl5_6AM->Controls->Add(this->chk500_520AM);
+			this->pnl5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl5_6AM->Location = System::Drawing::Point(0, 1292);
+			this->pnl5_6AM->Name = L"pnl5_6AM";
+			this->pnl5_6AM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6AM->TabIndex = 25;
+			this->pnl5_6AM->Visible = false;
+			// 
+			// chk540_600AM
+			// 
+			this->chk540_600AM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600AM->Name = L"chk540_600AM";
+			this->chk540_600AM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600AM->TabIndex = 22;
+			this->chk540_600AM->Text = L"5:40 AM - 6:00 AM";
+			this->chk540_600AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk540_600AM_CheckedChanged);
+			// 
+			// chk520_540AM
+			// 
+			this->chk520_540AM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540AM->Name = L"chk520_540AM";
+			this->chk520_540AM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540AM->TabIndex = 19;
+			this->chk520_540AM->Text = L"5:20 AM - 5:40 AM";
+			this->chk520_540AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk520_540AM_CheckedChanged);
+			// 
+			// chk500_520AM
+			// 
+			this->chk500_520AM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520AM->Name = L"chk500_520AM";
+			this->chk500_520AM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520AM->TabIndex = 18;
+			this->chk500_520AM->Text = L"5:00 AM - 5:20 AM";
+			this->chk500_520AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk500_520AM_CheckedChanged);
+			// 
+			// pnl7_8AM
+			// 
+			this->pnl7_8AM->Controls->Add(this->chk740_800AM);
+			this->pnl7_8AM->Controls->Add(this->chk720_740AM);
+			this->pnl7_8AM->Controls->Add(this->chk700_720AM);
+			this->pnl7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl7_8AM->Location = System::Drawing::Point(0, 1216);
+			this->pnl7_8AM->Name = L"pnl7_8AM";
+			this->pnl7_8AM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8AM->TabIndex = 30;
+			this->pnl7_8AM->Visible = false;
+			// 
+			// chk740_800AM
+			// 
+			this->chk740_800AM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800AM->Name = L"chk740_800AM";
+			this->chk740_800AM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800AM->TabIndex = 22;
+			this->chk740_800AM->Text = L"7:40 AM - 8:00 AM";
+			this->chk740_800AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk740_800AM_CheckedChanged);
+			// 
+			// chk720_740AM
+			// 
+			this->chk720_740AM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740AM->Name = L"chk720_740AM";
+			this->chk720_740AM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740AM->TabIndex = 19;
+			this->chk720_740AM->Text = L"7:20 AM - 7:40 AM";
+			this->chk720_740AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk720_740AM_CheckedChanged);
+			// 
+			// chk700_720AM
+			// 
+			this->chk700_720AM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720AM->Name = L"chk700_720AM";
+			this->chk700_720AM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720AM->TabIndex = 18;
+			this->chk700_720AM->Text = L"7:00 AM - 7:20 AM";
+			this->chk700_720AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk700_720AM_CheckedChanged);
+			// 
+			// pnl2_3PM
+			// 
+			this->pnl2_3PM->Controls->Add(this->chk240_300PM);
+			this->pnl2_3PM->Controls->Add(this->chk220_240PM);
+			this->pnl2_3PM->Controls->Add(this->chk200_220PM);
+			this->pnl2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl2_3PM->Location = System::Drawing::Point(0, 1140);
+			this->pnl2_3PM->Name = L"pnl2_3PM";
+			this->pnl2_3PM->Size = System::Drawing::Size(264, 76);
+			this->pnl2_3PM->TabIndex = 34;
+			this->pnl2_3PM->Visible = false;
+			// 
+			// chk240_300PM
+			// 
+			this->chk240_300PM->Location = System::Drawing::Point(15, 57);
+			this->chk240_300PM->Name = L"chk240_300PM";
+			this->chk240_300PM->Size = System::Drawing::Size(118, 22);
+			this->chk240_300PM->TabIndex = 22;
+			this->chk240_300PM->Text = L"2:40 PM - 3:00 PM";
+			// 
+			// chk220_240PM
+			// 
+			this->chk220_240PM->Location = System::Drawing::Point(15, 34);
+			this->chk220_240PM->Name = L"chk220_240PM";
+			this->chk220_240PM->Size = System::Drawing::Size(118, 22);
+			this->chk220_240PM->TabIndex = 19;
+			this->chk220_240PM->Text = L"2:20 PM - 2:40 PM";
+			// 
+			// chk200_220PM
+			// 
+			this->chk200_220PM->Location = System::Drawing::Point(15, 12);
+			this->chk200_220PM->Name = L"chk200_220PM";
+			this->chk200_220PM->Size = System::Drawing::Size(118, 22);
+			this->chk200_220PM->TabIndex = 18;
+			this->chk200_220PM->Text = L"2:00 PM - 2:20 PM";
+			// 
+			// pnl1_2PM
+			// 
+			this->pnl1_2PM->Controls->Add(this->chk140_200PM);
+			this->pnl1_2PM->Controls->Add(this->chk120_140PM);
+			this->pnl1_2PM->Controls->Add(this->chk100_120PM);
+			this->pnl1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl1_2PM->Location = System::Drawing::Point(0, 1064);
+			this->pnl1_2PM->Name = L"pnl1_2PM";
+			this->pnl1_2PM->Size = System::Drawing::Size(264, 76);
+			this->pnl1_2PM->TabIndex = 34;
+			this->pnl1_2PM->Visible = false;
+			// 
+			// chk140_200PM
+			// 
+			this->chk140_200PM->Location = System::Drawing::Point(15, 57);
+			this->chk140_200PM->Name = L"chk140_200PM";
+			this->chk140_200PM->Size = System::Drawing::Size(118, 22);
+			this->chk140_200PM->TabIndex = 22;
+			this->chk140_200PM->Text = L"1:40 PM - 2:00 PM";
+			// 
+			// chk120_140PM
+			// 
+			this->chk120_140PM->Location = System::Drawing::Point(15, 34);
+			this->chk120_140PM->Name = L"chk120_140PM";
+			this->chk120_140PM->Size = System::Drawing::Size(118, 22);
+			this->chk120_140PM->TabIndex = 19;
+			this->chk120_140PM->Text = L"1:20 PM - 1:40 PM";
+			// 
+			// chk100_120PM
+			// 
+			this->chk100_120PM->Location = System::Drawing::Point(15, 12);
+			this->chk100_120PM->Name = L"chk100_120PM";
+			this->chk100_120PM->Size = System::Drawing::Size(118, 22);
+			this->chk100_120PM->TabIndex = 18;
+			this->chk100_120PM->Text = L"1:00 PM - 1:20 PM";
+			this->chk100_120PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk100_120PM_CheckedChanged);
+			// 
+			// pnl9_10AM
+			// 
+			this->pnl9_10AM->Controls->Add(this->chk940_10000AM);
+			this->pnl9_10AM->Controls->Add(this->chk920_940AM);
+			this->pnl9_10AM->Controls->Add(this->chk900_920AM);
+			this->pnl9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl9_10AM->Location = System::Drawing::Point(0, 988);
+			this->pnl9_10AM->Name = L"pnl9_10AM";
+			this->pnl9_10AM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10AM->TabIndex = 34;
+			this->pnl9_10AM->Visible = false;
+			// 
+			// chk940_10000AM
+			// 
+			this->chk940_10000AM->Location = System::Drawing::Point(15, 57);
+			this->chk940_10000AM->Name = L"chk940_10000AM";
+			this->chk940_10000AM->Size = System::Drawing::Size(123, 22);
+			this->chk940_10000AM->TabIndex = 22;
+			this->chk940_10000AM->Text = L"9:40 AM - 10:00 AM";
+			this->chk940_10000AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk940_10000AM_CheckedChanged);
+			// 
+			// chk920_940AM
+			// 
+			this->chk920_940AM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940AM->Name = L"chk920_940AM";
+			this->chk920_940AM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940AM->TabIndex = 19;
+			this->chk920_940AM->Text = L"9:20 AM - 9:40 AM";
+			this->chk920_940AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk920_940AM_CheckedChanged);
+			// 
+			// chk900_920AM
+			// 
+			this->chk900_920AM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920AM->Name = L"chk900_920AM";
+			this->chk900_920AM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920AM->TabIndex = 18;
+			this->chk900_920AM->Text = L"9:00 AM - 9:20 AM";
+			this->chk900_920AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk900_920AM_CheckedChanged);
+			// 
+			// pnl7_8PM
+			// 
+			this->pnl7_8PM->Controls->Add(this->chk740_800PM);
+			this->pnl7_8PM->Controls->Add(this->chk720_740PM);
+			this->pnl7_8PM->Controls->Add(this->chk700_720PM);
+			this->pnl7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl7_8PM->Location = System::Drawing::Point(0, 912);
+			this->pnl7_8PM->Name = L"pnl7_8PM";
+			this->pnl7_8PM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8PM->TabIndex = 39;
+			this->pnl7_8PM->Visible = false;
+			// 
+			// chk740_800PM
+			// 
+			this->chk740_800PM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800PM->Name = L"chk740_800PM";
+			this->chk740_800PM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800PM->TabIndex = 22;
+			this->chk740_800PM->Text = L"7:40 PM - 8:00 PM";
+			// 
+			// chk720_740PM
+			// 
+			this->chk720_740PM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740PM->Name = L"chk720_740PM";
+			this->chk720_740PM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740PM->TabIndex = 19;
+			this->chk720_740PM->Text = L"7:20 PM - 7:40 PM";
+			// 
+			// chk700_720PM
+			// 
+			this->chk700_720PM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720PM->Name = L"chk700_720PM";
+			this->chk700_720PM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720PM->TabIndex = 18;
+			this->chk700_720PM->Text = L"7:00 PM - 7:20 PM";
+			// 
+			// pnl3_4PM
+			// 
+			this->pnl3_4PM->Controls->Add(this->chk340_400PM);
+			this->pnl3_4PM->Controls->Add(this->chk320_340PM);
+			this->pnl3_4PM->Controls->Add(this->chk300_320PM);
+			this->pnl3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl3_4PM->Location = System::Drawing::Point(0, 836);
+			this->pnl3_4PM->Name = L"pnl3_4PM";
+			this->pnl3_4PM->Size = System::Drawing::Size(264, 76);
+			this->pnl3_4PM->TabIndex = 35;
+			this->pnl3_4PM->Visible = false;
+			// 
+			// chk340_400PM
+			// 
+			this->chk340_400PM->Location = System::Drawing::Point(15, 57);
+			this->chk340_400PM->Name = L"chk340_400PM";
+			this->chk340_400PM->Size = System::Drawing::Size(118, 22);
+			this->chk340_400PM->TabIndex = 22;
+			this->chk340_400PM->Text = L"3:40 PM - 4:00 PM";
+			// 
+			// chk320_340PM
+			// 
+			this->chk320_340PM->Location = System::Drawing::Point(15, 34);
+			this->chk320_340PM->Name = L"chk320_340PM";
+			this->chk320_340PM->Size = System::Drawing::Size(118, 22);
+			this->chk320_340PM->TabIndex = 19;
+			this->chk320_340PM->Text = L"3:20 PM - 3:40 PM";
+			// 
+			// chk300_320PM
+			// 
+			this->chk300_320PM->Location = System::Drawing::Point(15, 12);
+			this->chk300_320PM->Name = L"chk300_320PM";
+			this->chk300_320PM->Size = System::Drawing::Size(118, 22);
+			this->chk300_320PM->TabIndex = 18;
+			this->chk300_320PM->Text = L"3:00 PM - 3:20 PM";
+			// 
+			// pnl11_12PM
+			// 
+			this->pnl11_12PM->Controls->Add(this->chk1140_1200PM);
+			this->pnl11_12PM->Controls->Add(this->chk1120_1140AM);
+			this->pnl11_12PM->Controls->Add(this->chk1100_1120AM);
+			this->pnl11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl11_12PM->Location = System::Drawing::Point(0, 760);
+			this->pnl11_12PM->Name = L"pnl11_12PM";
+			this->pnl11_12PM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12PM->TabIndex = 34;
+			this->pnl11_12PM->Visible = false;
+			// 
+			// chk1140_1200PM
+			// 
+			this->chk1140_1200PM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200PM->Name = L"chk1140_1200PM";
+			this->chk1140_1200PM->Size = System::Drawing::Size(131, 22);
+			this->chk1140_1200PM->TabIndex = 22;
+			this->chk1140_1200PM->Text = L"11:40 AM - 12:00 PM";
+			this->chk1140_1200PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1140_1200PM_CheckedChanged);
+			// 
+			// chk1120_1140AM
+			// 
+			this->chk1120_1140AM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140AM->Name = L"chk1120_1140AM";
+			this->chk1120_1140AM->Size = System::Drawing::Size(131, 22);
+			this->chk1120_1140AM->TabIndex = 19;
+			this->chk1120_1140AM->Text = L"11:20 AM - 11:40 AM";
+			this->chk1120_1140AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1120_1140AM_CheckedChanged);
+			// 
+			// chk1100_1120AM
+			// 
+			this->chk1100_1120AM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120AM->Name = L"chk1100_1120AM";
+			this->chk1100_1120AM->Size = System::Drawing::Size(131, 22);
+			this->chk1100_1120AM->TabIndex = 18;
+			this->chk1100_1120AM->Text = L"11:00 AM - 11:20 AM";
+			this->chk1100_1120AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1100_1120AM_CheckedChanged);
+			// 
+			// pnl6_7AM
+			// 
+			this->pnl6_7AM->Controls->Add(this->chk640_700AM);
+			this->pnl6_7AM->Controls->Add(this->chk620_640AM);
+			this->pnl6_7AM->Controls->Add(this->chk600_620AM);
+			this->pnl6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl6_7AM->Location = System::Drawing::Point(0, 684);
+			this->pnl6_7AM->Name = L"pnl6_7AM";
+			this->pnl6_7AM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7AM->TabIndex = 30;
+			this->pnl6_7AM->Visible = false;
+			// 
+			// chk640_700AM
+			// 
+			this->chk640_700AM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700AM->Name = L"chk640_700AM";
+			this->chk640_700AM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700AM->TabIndex = 22;
+			this->chk640_700AM->Text = L"6:40 AM - 7:00 AM";
+			this->chk640_700AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk640_700AM_CheckedChanged);
+			// 
+			// chk620_640AM
+			// 
+			this->chk620_640AM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640AM->Name = L"chk620_640AM";
+			this->chk620_640AM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640AM->TabIndex = 19;
+			this->chk620_640AM->Text = L"6:20 AM - 6:40 AM";
+			this->chk620_640AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk620_640AM_CheckedChanged);
+			// 
+			// chk600_620AM
+			// 
+			this->chk600_620AM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620AM->Name = L"chk600_620AM";
+			this->chk600_620AM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620AM->TabIndex = 18;
+			this->chk600_620AM->Text = L"6:00 AM - 6:20 AM";
+			this->chk600_620AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk600_620AM_CheckedChanged);
+			// 
+			// pnl11_12AM
+			// 
+			this->pnl11_12AM->Controls->Add(this->chk1140_1200AM);
+			this->pnl11_12AM->Controls->Add(this->chk1120_1140PM);
+			this->pnl11_12AM->Controls->Add(this->chk1100_1120PM);
+			this->pnl11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl11_12AM->Location = System::Drawing::Point(0, 608);
+			this->pnl11_12AM->Name = L"pnl11_12AM";
+			this->pnl11_12AM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12AM->TabIndex = 33;
+			this->pnl11_12AM->Visible = false;
+			// 
+			// chk1140_1200AM
+			// 
+			this->chk1140_1200AM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200AM->Name = L"chk1140_1200AM";
+			this->chk1140_1200AM->Size = System::Drawing::Size(127, 22);
+			this->chk1140_1200AM->TabIndex = 22;
+			this->chk1140_1200AM->Text = L"11:40 PM - 12:00 AM";
+			// 
+			// chk1120_1140PM
+			// 
+			this->chk1120_1140PM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140PM->Name = L"chk1120_1140PM";
+			this->chk1120_1140PM->Size = System::Drawing::Size(127, 22);
+			this->chk1120_1140PM->TabIndex = 19;
+			this->chk1120_1140PM->Text = L"11:20 PM - 11:40 PM";
+			// 
+			// chk1100_1120PM
+			// 
+			this->chk1100_1120PM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120PM->Name = L"chk1100_1120PM";
+			this->chk1100_1120PM->Size = System::Drawing::Size(127, 22);
+			this->chk1100_1120PM->TabIndex = 18;
+			this->chk1100_1120PM->Text = L"11:00 PM - 11:20 PM";
+			// 
+			// pnl4_5PM
+			// 
+			this->pnl4_5PM->Controls->Add(this->chk440_500PM);
+			this->pnl4_5PM->Controls->Add(this->chk420_440PM);
+			this->pnl4_5PM->Controls->Add(this->chk400_420PM);
+			this->pnl4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl4_5PM->Location = System::Drawing::Point(0, 532);
+			this->pnl4_5PM->Name = L"pnl4_5PM";
+			this->pnl4_5PM->Size = System::Drawing::Size(264, 76);
+			this->pnl4_5PM->TabIndex = 36;
+			this->pnl4_5PM->Visible = false;
+			// 
+			// chk440_500PM
+			// 
+			this->chk440_500PM->Location = System::Drawing::Point(15, 57);
+			this->chk440_500PM->Name = L"chk440_500PM";
+			this->chk440_500PM->Size = System::Drawing::Size(118, 22);
+			this->chk440_500PM->TabIndex = 22;
+			this->chk440_500PM->Text = L"4:40 PM - 5:00 PM";
+			// 
+			// chk420_440PM
+			// 
+			this->chk420_440PM->Location = System::Drawing::Point(15, 34);
+			this->chk420_440PM->Name = L"chk420_440PM";
+			this->chk420_440PM->Size = System::Drawing::Size(118, 22);
+			this->chk420_440PM->TabIndex = 19;
+			this->chk420_440PM->Text = L"4:20 PM - 4:40 PM";
+			// 
+			// chk400_420PM
+			// 
+			this->chk400_420PM->Location = System::Drawing::Point(15, 12);
+			this->chk400_420PM->Name = L"chk400_420PM";
+			this->chk400_420PM->Size = System::Drawing::Size(118, 22);
+			this->chk400_420PM->TabIndex = 18;
+			this->chk400_420PM->Text = L"4:00 PM - 4:20 PM";
+			// 
+			// pnl10_11PM
+			// 
+			this->pnl10_11PM->Controls->Add(this->chk1040_1100PM);
+			this->pnl10_11PM->Controls->Add(this->chk1020_1040PM);
+			this->pnl10_11PM->Controls->Add(this->chk1000_1020PM);
+			this->pnl10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl10_11PM->Location = System::Drawing::Point(0, 456);
+			this->pnl10_11PM->Name = L"pnl10_11PM";
+			this->pnl10_11PM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11PM->TabIndex = 33;
+			this->pnl10_11PM->Visible = false;
+			// 
+			// chk1040_1100PM
+			// 
+			this->chk1040_1100PM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100PM->Name = L"chk1040_1100PM";
+			this->chk1040_1100PM->Size = System::Drawing::Size(127, 22);
+			this->chk1040_1100PM->TabIndex = 22;
+			this->chk1040_1100PM->Text = L"10:40 PM - 11:00 PM";
+			// 
+			// chk1020_1040PM
+			// 
+			this->chk1020_1040PM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040PM->Name = L"chk1020_1040PM";
+			this->chk1020_1040PM->Size = System::Drawing::Size(127, 22);
+			this->chk1020_1040PM->TabIndex = 19;
+			this->chk1020_1040PM->Text = L"10:20 PM - 10:40 PM";
+			// 
+			// chk1000_1020PM
+			// 
+			this->chk1000_1020PM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020PM->Name = L"chk1000_1020PM";
+			this->chk1000_1020PM->Size = System::Drawing::Size(127, 22);
+			this->chk1000_1020PM->TabIndex = 18;
+			this->chk1000_1020PM->Text = L"10:00 PM - 10:20 PM";
+			// 
+			// pnl10_11AM
+			// 
+			this->pnl10_11AM->Controls->Add(this->chk1040_1100AM);
+			this->pnl10_11AM->Controls->Add(this->chk1020_1040AM);
+			this->pnl10_11AM->Controls->Add(this->chk1000_1020AM);
+			this->pnl10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl10_11AM->Location = System::Drawing::Point(0, 380);
+			this->pnl10_11AM->Name = L"pnl10_11AM";
+			this->pnl10_11AM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11AM->TabIndex = 34;
+			this->pnl10_11AM->Visible = false;
+			// 
+			// chk1040_1100AM
+			// 
+			this->chk1040_1100AM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100AM->Name = L"chk1040_1100AM";
+			this->chk1040_1100AM->Size = System::Drawing::Size(131, 22);
+			this->chk1040_1100AM->TabIndex = 22;
+			this->chk1040_1100AM->Text = L"10:40 AM - 11:00 AM";
+			this->chk1040_1100AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1040_1100AM_CheckedChanged);
+			// 
+			// chk1020_1040AM
+			// 
+			this->chk1020_1040AM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040AM->Name = L"chk1020_1040AM";
+			this->chk1020_1040AM->Size = System::Drawing::Size(131, 22);
+			this->chk1020_1040AM->TabIndex = 19;
+			this->chk1020_1040AM->Text = L"10:20 AM - 10:40 AM";
+			this->chk1020_1040AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1020_1040AM_CheckedChanged);
+			// 
+			// chk1000_1020AM
+			// 
+			this->chk1000_1020AM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020AM->Name = L"chk1000_1020AM";
+			this->chk1000_1020AM->Size = System::Drawing::Size(131, 22);
+			this->chk1000_1020AM->TabIndex = 18;
+			this->chk1000_1020AM->Text = L"10:00 AM - 10:20 AM";
+			this->chk1000_1020AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1000_1020AM_CheckedChanged);
+			// 
+			// pnl9_10PM
+			// 
+			this->pnl9_10PM->Controls->Add(this->chk940_1000PM);
+			this->pnl9_10PM->Controls->Add(this->chk920_940PM);
+			this->pnl9_10PM->Controls->Add(this->chk900_920PM);
+			this->pnl9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl9_10PM->Location = System::Drawing::Point(0, 304);
+			this->pnl9_10PM->Name = L"pnl9_10PM";
+			this->pnl9_10PM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10PM->TabIndex = 33;
+			this->pnl9_10PM->Visible = false;
+			// 
+			// chk940_1000PM
+			// 
+			this->chk940_1000PM->Location = System::Drawing::Point(15, 57);
+			this->chk940_1000PM->Name = L"chk940_1000PM";
+			this->chk940_1000PM->Size = System::Drawing::Size(127, 22);
+			this->chk940_1000PM->TabIndex = 22;
+			this->chk940_1000PM->Text = L"9:40 PM - 10:00 PM";
+			// 
+			// chk920_940PM
+			// 
+			this->chk920_940PM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940PM->Name = L"chk920_940PM";
+			this->chk920_940PM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940PM->TabIndex = 19;
+			this->chk920_940PM->Text = L"9:20 PM - 9:40 PM";
+			// 
+			// chk900_920PM
+			// 
+			this->chk900_920PM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920PM->Name = L"chk900_920PM";
+			this->chk900_920PM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920PM->TabIndex = 18;
+			this->chk900_920PM->Text = L"9:00 PM - 9:20 PM";
+			// 
+			// pnl5_6PM
+			// 
+			this->pnl5_6PM->Controls->Add(this->chk540_600PM);
+			this->pnl5_6PM->Controls->Add(this->chk520_540PM);
+			this->pnl5_6PM->Controls->Add(this->chk500_520PM);
+			this->pnl5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl5_6PM->Location = System::Drawing::Point(0, 228);
+			this->pnl5_6PM->Name = L"pnl5_6PM";
+			this->pnl5_6PM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6PM->TabIndex = 37;
+			this->pnl5_6PM->Visible = false;
+			// 
+			// chk540_600PM
+			// 
+			this->chk540_600PM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600PM->Name = L"chk540_600PM";
+			this->chk540_600PM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600PM->TabIndex = 22;
+			this->chk540_600PM->Text = L"5:40 PM - 6:00 PM";
+			// 
+			// chk520_540PM
+			// 
+			this->chk520_540PM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540PM->Name = L"chk520_540PM";
+			this->chk520_540PM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540PM->TabIndex = 19;
+			this->chk520_540PM->Text = L"5:20 PM - 5:40 PM";
+			// 
+			// chk500_520PM
+			// 
+			this->chk500_520PM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520PM->Name = L"chk500_520PM";
+			this->chk500_520PM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520PM->TabIndex = 18;
+			this->chk500_520PM->Text = L"5:00 PM - 5:20 PM";
+			// 
+			// pnl8_9PM
+			// 
+			this->pnl8_9PM->Controls->Add(this->chk840_900PM);
+			this->pnl8_9PM->Controls->Add(this->chk820_840PM);
+			this->pnl8_9PM->Controls->Add(this->chk800_820PM);
+			this->pnl8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl8_9PM->Location = System::Drawing::Point(0, 152);
+			this->pnl8_9PM->Name = L"pnl8_9PM";
+			this->pnl8_9PM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9PM->TabIndex = 33;
+			this->pnl8_9PM->Visible = false;
+			// 
+			// chk840_900PM
+			// 
+			this->chk840_900PM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900PM->Name = L"chk840_900PM";
+			this->chk840_900PM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900PM->TabIndex = 22;
+			this->chk840_900PM->Text = L"8:40 PM - 9:00 PM";
+			// 
+			// chk820_840PM
+			// 
+			this->chk820_840PM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840PM->Name = L"chk820_840PM";
+			this->chk820_840PM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840PM->TabIndex = 19;
+			this->chk820_840PM->Text = L"8:20 PM - 8:40 PM";
+			// 
+			// chk800_820PM
+			// 
+			this->chk800_820PM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820PM->Name = L"chk800_820PM";
+			this->chk800_820PM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820PM->TabIndex = 18;
+			this->chk800_820PM->Text = L"8:00 PM - 8:20 PM";
+			// 
+			// pnl8_9AM
+			// 
+			this->pnl8_9AM->Controls->Add(this->chk840_900AM);
+			this->pnl8_9AM->Controls->Add(this->chk820_840AM);
+			this->pnl8_9AM->Controls->Add(this->chk800_820AM);
+			this->pnl8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl8_9AM->Location = System::Drawing::Point(0, 76);
+			this->pnl8_9AM->Name = L"pnl8_9AM";
+			this->pnl8_9AM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9AM->TabIndex = 32;
+			this->pnl8_9AM->Visible = false;
+			// 
+			// chk840_900AM
+			// 
+			this->chk840_900AM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900AM->Name = L"chk840_900AM";
+			this->chk840_900AM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900AM->TabIndex = 22;
+			this->chk840_900AM->Text = L"8:40 AM - 9:00 AM";
+			this->chk840_900AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk840_900AM_CheckedChanged);
+			// 
+			// chk820_840AM
+			// 
+			this->chk820_840AM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840AM->Name = L"chk820_840AM";
+			this->chk820_840AM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840AM->TabIndex = 19;
+			this->chk820_840AM->Text = L"8:20 AM - 8:40 AM";
+			this->chk820_840AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk820_840AM_CheckedChanged);
+			// 
+			// chk800_820AM
+			// 
+			this->chk800_820AM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820AM->Name = L"chk800_820AM";
+			this->chk800_820AM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820AM->TabIndex = 18;
+			this->chk800_820AM->Text = L"8:00 AM - 8:20 AM";
+			this->chk800_820AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk800_820AM_CheckedChanged);
+			// 
+			// pnl6_7PM
+			// 
+			this->pnl6_7PM->Controls->Add(this->chk640_700PM);
+			this->pnl6_7PM->Controls->Add(this->chk620_640PM);
+			this->pnl6_7PM->Controls->Add(this->chk600_620PM);
+			this->pnl6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl6_7PM->Location = System::Drawing::Point(0, 0);
+			this->pnl6_7PM->Name = L"pnl6_7PM";
+			this->pnl6_7PM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7PM->TabIndex = 38;
+			this->pnl6_7PM->Visible = false;
+			// 
+			// chk640_700PM
+			// 
+			this->chk640_700PM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700PM->Name = L"chk640_700PM";
+			this->chk640_700PM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700PM->TabIndex = 22;
+			this->chk640_700PM->Text = L"6:40 PM - 7:00 PM";
+			// 
+			// chk620_640PM
+			// 
+			this->chk620_640PM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640PM->Name = L"chk620_640PM";
+			this->chk620_640PM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640PM->TabIndex = 19;
+			this->chk620_640PM->Text = L"6:20 PM - 6:40 PM";
+			// 
+			// chk600_620PM
+			// 
+			this->chk600_620PM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620PM->Name = L"chk600_620PM";
+			this->chk600_620PM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620PM->TabIndex = 18;
+			this->chk600_620PM->Text = L"6:00 PM - 6:20 PM";
 			// 
 			// pnl24Hr
 			// 
@@ -887,11 +1622,10 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->pnl24Hr->Controls->Add(this->rbtn07_08);
 			this->pnl24Hr->Controls->Add(this->rbtn06_07);
 			this->pnl24Hr->Controls->Add(this->rbtn05_06);
-			this->pnl24Hr->Location = System::Drawing::Point(121, 53);
+			this->pnl24Hr->Location = System::Drawing::Point(112, 53);
 			this->pnl24Hr->Name = L"pnl24Hr";
 			this->pnl24Hr->Size = System::Drawing::Size(136, 310);
 			this->pnl24Hr->TabIndex = 44;
-			this->pnl24Hr->Visible = false;
 			// 
 			// rbtn23_00
 			// 
@@ -1127,32 +1861,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn05_06->UseVisualStyleBackColor = true;
 			this->rbtn05_06->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn05_06_CheckedChanged);
 			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(6, 208);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
-			this->textBox4->TabIndex = 16;
-			// 
-			// button8
-			// 
-			this->button8->Location = System::Drawing::Point(181, 402);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(103, 23);
-			this->button8->TabIndex = 0;
-			this->button8->Text = L"Submit";
-			this->button8->UseVisualStyleBackColor = true;
-			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(183, 22);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(72, 13);
-			this->label7->TabIndex = 2;
-			this->label7->Text = L"Create Event:";
-			// 
 			// pnl12Hr
 			// 
 			this->pnl12Hr->Controls->Add(this->rbtn11_12AM);
@@ -1173,11 +1881,10 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->pnl12Hr->Controls->Add(this->rbtn7_8AM);
 			this->pnl12Hr->Controls->Add(this->rbtn6_7AM);
 			this->pnl12Hr->Controls->Add(this->rbtn5_6AM);
-			this->pnl12Hr->Location = System::Drawing::Point(121, 53);
+			this->pnl12Hr->Location = System::Drawing::Point(112, 53);
 			this->pnl12Hr->Name = L"pnl12Hr";
 			this->pnl12Hr->Size = System::Drawing::Size(136, 310);
 			this->pnl12Hr->TabIndex = 27;
-			this->pnl12Hr->Visible = false;
 			// 
 			// rbtn11_12AM
 			// 
@@ -1413,432 +2120,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->rbtn5_6AM->UseVisualStyleBackColor = true;
 			this->rbtn5_6AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6AM_CheckedChanged);
 			// 
-			// pnl5_6AM
-			// 
-			this->pnl5_6AM->Controls->Add(this->chk540_600AM);
-			this->pnl5_6AM->Controls->Add(this->chk520_540AM);
-			this->pnl5_6AM->Controls->Add(this->chk500_520AM);
-			this->pnl5_6AM->Location = System::Drawing::Point(1021, 32);
-			this->pnl5_6AM->Name = L"pnl5_6AM";
-			this->pnl5_6AM->Size = System::Drawing::Size(264, 76);
-			this->pnl5_6AM->TabIndex = 25;
-			this->pnl5_6AM->Visible = false;
-			// 
-			// chk540_600AM
-			// 
-			this->chk540_600AM->Location = System::Drawing::Point(15, 57);
-			this->chk540_600AM->Name = L"chk540_600AM";
-			this->chk540_600AM->Size = System::Drawing::Size(118, 22);
-			this->chk540_600AM->TabIndex = 22;
-			this->chk540_600AM->Text = L"5:40 AM - 6:00 AM";
-			this->chk540_600AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk540_600AM_CheckedChanged);
-			// 
-			// chk520_540AM
-			// 
-			this->chk520_540AM->Location = System::Drawing::Point(15, 34);
-			this->chk520_540AM->Name = L"chk520_540AM";
-			this->chk520_540AM->Size = System::Drawing::Size(118, 22);
-			this->chk520_540AM->TabIndex = 19;
-			this->chk520_540AM->Text = L"5:20 AM - 5:40 AM";
-			this->chk520_540AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk520_540AM_CheckedChanged);
-			// 
-			// chk500_520AM
-			// 
-			this->chk500_520AM->Location = System::Drawing::Point(15, 12);
-			this->chk500_520AM->Name = L"chk500_520AM";
-			this->chk500_520AM->Size = System::Drawing::Size(118, 22);
-			this->chk500_520AM->TabIndex = 18;
-			this->chk500_520AM->Text = L"5:00 AM - 5:20 AM";
-			this->chk500_520AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk500_520AM_CheckedChanged);
-			// 
-			// panel5
-			// 
-			this->panel5->Location = System::Drawing::Point(751, 20);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(264, 852);
-			this->panel5->TabIndex = 28;
-			// 
-			// pnl7_8AM
-			// 
-			this->pnl7_8AM->Controls->Add(this->chk740_800AM);
-			this->pnl7_8AM->Controls->Add(this->chk720_740AM);
-			this->pnl7_8AM->Controls->Add(this->chk700_720AM);
-			this->pnl7_8AM->Location = System::Drawing::Point(1021, 197);
-			this->pnl7_8AM->Name = L"pnl7_8AM";
-			this->pnl7_8AM->Size = System::Drawing::Size(264, 76);
-			this->pnl7_8AM->TabIndex = 30;
-			this->pnl7_8AM->Visible = false;
-			// 
-			// chk740_800AM
-			// 
-			this->chk740_800AM->Location = System::Drawing::Point(15, 57);
-			this->chk740_800AM->Name = L"chk740_800AM";
-			this->chk740_800AM->Size = System::Drawing::Size(118, 22);
-			this->chk740_800AM->TabIndex = 22;
-			this->chk740_800AM->Text = L"7:40 AM - 8:00 AM";
-			this->chk740_800AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk740_800AM_CheckedChanged);
-			// 
-			// chk720_740AM
-			// 
-			this->chk720_740AM->Location = System::Drawing::Point(15, 34);
-			this->chk720_740AM->Name = L"chk720_740AM";
-			this->chk720_740AM->Size = System::Drawing::Size(118, 22);
-			this->chk720_740AM->TabIndex = 19;
-			this->chk720_740AM->Text = L"7:20 AM - 7:40 AM";
-			this->chk720_740AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk720_740AM_CheckedChanged);
-			// 
-			// chk700_720AM
-			// 
-			this->chk700_720AM->Location = System::Drawing::Point(15, 12);
-			this->chk700_720AM->Name = L"chk700_720AM";
-			this->chk700_720AM->Size = System::Drawing::Size(118, 22);
-			this->chk700_720AM->TabIndex = 18;
-			this->chk700_720AM->Text = L"7:00 AM - 7:20 AM";
-			this->chk700_720AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk700_720AM_CheckedChanged);
-			// 
-			// pnl1_2PM
-			// 
-			this->pnl1_2PM->Controls->Add(this->chk140_200PM);
-			this->pnl1_2PM->Controls->Add(this->chk120_140PM);
-			this->pnl1_2PM->Controls->Add(this->chk100_120PM);
-			this->pnl1_2PM->Location = System::Drawing::Point(1021, 621);
-			this->pnl1_2PM->Name = L"pnl1_2PM";
-			this->pnl1_2PM->Size = System::Drawing::Size(264, 76);
-			this->pnl1_2PM->TabIndex = 34;
-			this->pnl1_2PM->Visible = false;
-			// 
-			// chk140_200PM
-			// 
-			this->chk140_200PM->Location = System::Drawing::Point(15, 57);
-			this->chk140_200PM->Name = L"chk140_200PM";
-			this->chk140_200PM->Size = System::Drawing::Size(118, 22);
-			this->chk140_200PM->TabIndex = 22;
-			this->chk140_200PM->Text = L"1:40 PM - 2:00 PM";
-			// 
-			// chk120_140PM
-			// 
-			this->chk120_140PM->Location = System::Drawing::Point(15, 34);
-			this->chk120_140PM->Name = L"chk120_140PM";
-			this->chk120_140PM->Size = System::Drawing::Size(118, 22);
-			this->chk120_140PM->TabIndex = 19;
-			this->chk120_140PM->Text = L"1:20 PM - 1:40 PM";
-			// 
-			// chk100_120PM
-			// 
-			this->chk100_120PM->Location = System::Drawing::Point(15, 12);
-			this->chk100_120PM->Name = L"chk100_120PM";
-			this->chk100_120PM->Size = System::Drawing::Size(118, 22);
-			this->chk100_120PM->TabIndex = 18;
-			this->chk100_120PM->Text = L"1:00 PM - 1:20 PM";
-			this->chk100_120PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk100_120PM_CheckedChanged);
-			// 
-			// pnl11_12PM
-			// 
-			this->pnl11_12PM->Controls->Add(this->chk1140_1200PM);
-			this->pnl11_12PM->Controls->Add(this->chk1120_1140AM);
-			this->pnl11_12PM->Controls->Add(this->chk1100_1120AM);
-			this->pnl11_12PM->Location = System::Drawing::Point(1021, 536);
-			this->pnl11_12PM->Name = L"pnl11_12PM";
-			this->pnl11_12PM->Size = System::Drawing::Size(264, 76);
-			this->pnl11_12PM->TabIndex = 34;
-			this->pnl11_12PM->Visible = false;
-			// 
-			// chk1140_1200PM
-			// 
-			this->chk1140_1200PM->Location = System::Drawing::Point(15, 57);
-			this->chk1140_1200PM->Name = L"chk1140_1200PM";
-			this->chk1140_1200PM->Size = System::Drawing::Size(131, 22);
-			this->chk1140_1200PM->TabIndex = 22;
-			this->chk1140_1200PM->Text = L"11:40 AM - 12:00 PM";
-			this->chk1140_1200PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1140_1200PM_CheckedChanged);
-			// 
-			// chk1120_1140AM
-			// 
-			this->chk1120_1140AM->Location = System::Drawing::Point(15, 34);
-			this->chk1120_1140AM->Name = L"chk1120_1140AM";
-			this->chk1120_1140AM->Size = System::Drawing::Size(131, 22);
-			this->chk1120_1140AM->TabIndex = 19;
-			this->chk1120_1140AM->Text = L"11:20 AM - 11:40 AM";
-			this->chk1120_1140AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1120_1140AM_CheckedChanged);
-			// 
-			// chk1100_1120AM
-			// 
-			this->chk1100_1120AM->Location = System::Drawing::Point(15, 12);
-			this->chk1100_1120AM->Name = L"chk1100_1120AM";
-			this->chk1100_1120AM->Size = System::Drawing::Size(131, 22);
-			this->chk1100_1120AM->TabIndex = 18;
-			this->chk1100_1120AM->Text = L"11:00 AM - 11:20 AM";
-			this->chk1100_1120AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1100_1120AM_CheckedChanged);
-			// 
-			// pnl7_8PM
-			// 
-			this->pnl7_8PM->Controls->Add(this->chk740_800PM);
-			this->pnl7_8PM->Controls->Add(this->chk720_740PM);
-			this->pnl7_8PM->Controls->Add(this->chk700_720PM);
-			this->pnl7_8PM->Location = System::Drawing::Point(1314, 432);
-			this->pnl7_8PM->Name = L"pnl7_8PM";
-			this->pnl7_8PM->Size = System::Drawing::Size(264, 76);
-			this->pnl7_8PM->TabIndex = 39;
-			this->pnl7_8PM->Visible = false;
-			// 
-			// chk740_800PM
-			// 
-			this->chk740_800PM->Location = System::Drawing::Point(15, 57);
-			this->chk740_800PM->Name = L"chk740_800PM";
-			this->chk740_800PM->Size = System::Drawing::Size(118, 22);
-			this->chk740_800PM->TabIndex = 22;
-			this->chk740_800PM->Text = L"7:40 PM - 8:00 PM";
-			// 
-			// chk720_740PM
-			// 
-			this->chk720_740PM->Location = System::Drawing::Point(15, 34);
-			this->chk720_740PM->Name = L"chk720_740PM";
-			this->chk720_740PM->Size = System::Drawing::Size(118, 22);
-			this->chk720_740PM->TabIndex = 19;
-			this->chk720_740PM->Text = L"7:20 PM - 7:40 PM";
-			// 
-			// chk700_720PM
-			// 
-			this->chk700_720PM->Location = System::Drawing::Point(15, 12);
-			this->chk700_720PM->Name = L"chk700_720PM";
-			this->chk700_720PM->Size = System::Drawing::Size(118, 22);
-			this->chk700_720PM->TabIndex = 18;
-			this->chk700_720PM->Text = L"7:00 PM - 7:20 PM";
-			// 
-			// pnl6_7PM
-			// 
-			this->pnl6_7PM->Controls->Add(this->chk640_700PM);
-			this->pnl6_7PM->Controls->Add(this->chk620_640PM);
-			this->pnl6_7PM->Controls->Add(this->chk600_620PM);
-			this->pnl6_7PM->Location = System::Drawing::Point(1314, 349);
-			this->pnl6_7PM->Name = L"pnl6_7PM";
-			this->pnl6_7PM->Size = System::Drawing::Size(264, 76);
-			this->pnl6_7PM->TabIndex = 38;
-			this->pnl6_7PM->Visible = false;
-			// 
-			// chk640_700PM
-			// 
-			this->chk640_700PM->Location = System::Drawing::Point(15, 57);
-			this->chk640_700PM->Name = L"chk640_700PM";
-			this->chk640_700PM->Size = System::Drawing::Size(118, 22);
-			this->chk640_700PM->TabIndex = 22;
-			this->chk640_700PM->Text = L"6:40 PM - 7:00 PM";
-			// 
-			// chk620_640PM
-			// 
-			this->chk620_640PM->Location = System::Drawing::Point(15, 34);
-			this->chk620_640PM->Name = L"chk620_640PM";
-			this->chk620_640PM->Size = System::Drawing::Size(118, 22);
-			this->chk620_640PM->TabIndex = 19;
-			this->chk620_640PM->Text = L"6:20 PM - 6:40 PM";
-			// 
-			// chk600_620PM
-			// 
-			this->chk600_620PM->Location = System::Drawing::Point(15, 12);
-			this->chk600_620PM->Name = L"chk600_620PM";
-			this->chk600_620PM->Size = System::Drawing::Size(118, 22);
-			this->chk600_620PM->TabIndex = 18;
-			this->chk600_620PM->Text = L"6:00 PM - 6:20 PM";
-			// 
-			// pnl5_6PM
-			// 
-			this->pnl5_6PM->Controls->Add(this->chk540_600PM);
-			this->pnl5_6PM->Controls->Add(this->chk520_540PM);
-			this->pnl5_6PM->Controls->Add(this->chk500_520PM);
-			this->pnl5_6PM->Location = System::Drawing::Point(1314, 264);
-			this->pnl5_6PM->Name = L"pnl5_6PM";
-			this->pnl5_6PM->Size = System::Drawing::Size(264, 76);
-			this->pnl5_6PM->TabIndex = 37;
-			this->pnl5_6PM->Visible = false;
-			// 
-			// chk540_600PM
-			// 
-			this->chk540_600PM->Location = System::Drawing::Point(15, 57);
-			this->chk540_600PM->Name = L"chk540_600PM";
-			this->chk540_600PM->Size = System::Drawing::Size(118, 22);
-			this->chk540_600PM->TabIndex = 22;
-			this->chk540_600PM->Text = L"5:40 PM - 6:00 PM";
-			// 
-			// chk520_540PM
-			// 
-			this->chk520_540PM->Location = System::Drawing::Point(15, 34);
-			this->chk520_540PM->Name = L"chk520_540PM";
-			this->chk520_540PM->Size = System::Drawing::Size(118, 22);
-			this->chk520_540PM->TabIndex = 19;
-			this->chk520_540PM->Text = L"5:20 PM - 5:40 PM";
-			// 
-			// chk500_520PM
-			// 
-			this->chk500_520PM->Location = System::Drawing::Point(15, 12);
-			this->chk500_520PM->Name = L"chk500_520PM";
-			this->chk500_520PM->Size = System::Drawing::Size(118, 22);
-			this->chk500_520PM->TabIndex = 18;
-			this->chk500_520PM->Text = L"5:00 PM - 5:20 PM";
-			// 
-			// pnl4_5PM
-			// 
-			this->pnl4_5PM->Controls->Add(this->chk440_500PM);
-			this->pnl4_5PM->Controls->Add(this->chk420_440PM);
-			this->pnl4_5PM->Controls->Add(this->chk400_420PM);
-			this->pnl4_5PM->Location = System::Drawing::Point(1314, 179);
-			this->pnl4_5PM->Name = L"pnl4_5PM";
-			this->pnl4_5PM->Size = System::Drawing::Size(264, 76);
-			this->pnl4_5PM->TabIndex = 36;
-			this->pnl4_5PM->Visible = false;
-			// 
-			// chk440_500PM
-			// 
-			this->chk440_500PM->Location = System::Drawing::Point(15, 57);
-			this->chk440_500PM->Name = L"chk440_500PM";
-			this->chk440_500PM->Size = System::Drawing::Size(118, 22);
-			this->chk440_500PM->TabIndex = 22;
-			this->chk440_500PM->Text = L"4:40 PM - 5:00 PM";
-			// 
-			// chk420_440PM
-			// 
-			this->chk420_440PM->Location = System::Drawing::Point(15, 34);
-			this->chk420_440PM->Name = L"chk420_440PM";
-			this->chk420_440PM->Size = System::Drawing::Size(118, 22);
-			this->chk420_440PM->TabIndex = 19;
-			this->chk420_440PM->Text = L"4:20 PM - 4:40 PM";
-			// 
-			// chk400_420PM
-			// 
-			this->chk400_420PM->Location = System::Drawing::Point(15, 12);
-			this->chk400_420PM->Name = L"chk400_420PM";
-			this->chk400_420PM->Size = System::Drawing::Size(118, 22);
-			this->chk400_420PM->TabIndex = 18;
-			this->chk400_420PM->Text = L"4:00 PM - 4:20 PM";
-			// 
-			// pnl3_4PM
-			// 
-			this->pnl3_4PM->Controls->Add(this->chk340_400PM);
-			this->pnl3_4PM->Controls->Add(this->chk320_340PM);
-			this->pnl3_4PM->Controls->Add(this->chk300_320PM);
-			this->pnl3_4PM->Location = System::Drawing::Point(1314, 94);
-			this->pnl3_4PM->Name = L"pnl3_4PM";
-			this->pnl3_4PM->Size = System::Drawing::Size(264, 76);
-			this->pnl3_4PM->TabIndex = 35;
-			this->pnl3_4PM->Visible = false;
-			// 
-			// chk340_400PM
-			// 
-			this->chk340_400PM->Location = System::Drawing::Point(15, 57);
-			this->chk340_400PM->Name = L"chk340_400PM";
-			this->chk340_400PM->Size = System::Drawing::Size(118, 22);
-			this->chk340_400PM->TabIndex = 22;
-			this->chk340_400PM->Text = L"3:40 PM - 4:00 PM";
-			// 
-			// chk320_340PM
-			// 
-			this->chk320_340PM->Location = System::Drawing::Point(15, 34);
-			this->chk320_340PM->Name = L"chk320_340PM";
-			this->chk320_340PM->Size = System::Drawing::Size(118, 22);
-			this->chk320_340PM->TabIndex = 19;
-			this->chk320_340PM->Text = L"3:20 PM - 3:40 PM";
-			// 
-			// chk300_320PM
-			// 
-			this->chk300_320PM->Location = System::Drawing::Point(15, 12);
-			this->chk300_320PM->Name = L"chk300_320PM";
-			this->chk300_320PM->Size = System::Drawing::Size(118, 22);
-			this->chk300_320PM->TabIndex = 18;
-			this->chk300_320PM->Text = L"3:00 PM - 3:20 PM";
-			// 
-			// pnl8_9AM
-			// 
-			this->pnl8_9AM->Controls->Add(this->chk840_900AM);
-			this->pnl8_9AM->Controls->Add(this->chk820_840AM);
-			this->pnl8_9AM->Controls->Add(this->chk800_820AM);
-			this->pnl8_9AM->Location = System::Drawing::Point(1021, 282);
-			this->pnl8_9AM->Name = L"pnl8_9AM";
-			this->pnl8_9AM->Size = System::Drawing::Size(264, 76);
-			this->pnl8_9AM->TabIndex = 32;
-			this->pnl8_9AM->Visible = false;
-			// 
-			// chk840_900AM
-			// 
-			this->chk840_900AM->Location = System::Drawing::Point(15, 57);
-			this->chk840_900AM->Name = L"chk840_900AM";
-			this->chk840_900AM->Size = System::Drawing::Size(118, 22);
-			this->chk840_900AM->TabIndex = 22;
-			this->chk840_900AM->Text = L"8:40 AM - 9:00 AM";
-			this->chk840_900AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk840_900AM_CheckedChanged);
-			// 
-			// chk820_840AM
-			// 
-			this->chk820_840AM->Location = System::Drawing::Point(15, 34);
-			this->chk820_840AM->Name = L"chk820_840AM";
-			this->chk820_840AM->Size = System::Drawing::Size(118, 22);
-			this->chk820_840AM->TabIndex = 19;
-			this->chk820_840AM->Text = L"8:20 AM - 8:40 AM";
-			this->chk820_840AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk820_840AM_CheckedChanged);
-			// 
-			// chk800_820AM
-			// 
-			this->chk800_820AM->Location = System::Drawing::Point(15, 12);
-			this->chk800_820AM->Name = L"chk800_820AM";
-			this->chk800_820AM->Size = System::Drawing::Size(118, 22);
-			this->chk800_820AM->TabIndex = 18;
-			this->chk800_820AM->Text = L"8:00 AM - 8:20 AM";
-			this->chk800_820AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk800_820AM_CheckedChanged);
-			// 
-			// pnl6_7AM
-			// 
-			this->pnl6_7AM->Controls->Add(this->chk640_700AM);
-			this->pnl6_7AM->Controls->Add(this->chk620_640AM);
-			this->pnl6_7AM->Controls->Add(this->chk600_620AM);
-			this->pnl6_7AM->Location = System::Drawing::Point(1021, 112);
-			this->pnl6_7AM->Name = L"pnl6_7AM";
-			this->pnl6_7AM->Size = System::Drawing::Size(264, 76);
-			this->pnl6_7AM->TabIndex = 30;
-			this->pnl6_7AM->Visible = false;
-			// 
-			// chk640_700AM
-			// 
-			this->chk640_700AM->Location = System::Drawing::Point(15, 57);
-			this->chk640_700AM->Name = L"chk640_700AM";
-			this->chk640_700AM->Size = System::Drawing::Size(118, 22);
-			this->chk640_700AM->TabIndex = 22;
-			this->chk640_700AM->Text = L"6:40 AM - 7:00 AM";
-			this->chk640_700AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk640_700AM_CheckedChanged);
-			// 
-			// chk620_640AM
-			// 
-			this->chk620_640AM->Location = System::Drawing::Point(15, 34);
-			this->chk620_640AM->Name = L"chk620_640AM";
-			this->chk620_640AM->Size = System::Drawing::Size(118, 22);
-			this->chk620_640AM->TabIndex = 19;
-			this->chk620_640AM->Text = L"6:20 AM - 6:40 AM";
-			this->chk620_640AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk620_640AM_CheckedChanged);
-			// 
-			// chk600_620AM
-			// 
-			this->chk600_620AM->Location = System::Drawing::Point(15, 12);
-			this->chk600_620AM->Name = L"chk600_620AM";
-			this->chk600_620AM->Size = System::Drawing::Size(118, 22);
-			this->chk600_620AM->TabIndex = 18;
-			this->chk600_620AM->Text = L"6:00 AM - 6:20 AM";
-			this->chk600_620AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk600_620AM_CheckedChanged);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(820, 4);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(114, 13);
-			this->label2->TabIndex = 30;
-			this->label2->Text = L"Select Available Times";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(591, 9);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(38, 13);
-			this->label3->TabIndex = 31;
-			this->label3->Text = L"Hours:";
-			// 
 			// panel2
 			// 
 			this->panel2->Controls->Add(this->checkBox8);
@@ -1874,284 +2155,12 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->checkBox10->TabIndex = 18;
 			this->checkBox10->Text = L"7:00 PM - 7:20 PM";
 			// 
-			// pnl10_11AM
-			// 
-			this->pnl10_11AM->Controls->Add(this->chk1040_1100AM);
-			this->pnl10_11AM->Controls->Add(this->chk1020_1040AM);
-			this->pnl10_11AM->Controls->Add(this->chk1000_1020AM);
-			this->pnl10_11AM->Location = System::Drawing::Point(1021, 449);
-			this->pnl10_11AM->Name = L"pnl10_11AM";
-			this->pnl10_11AM->Size = System::Drawing::Size(264, 76);
-			this->pnl10_11AM->TabIndex = 34;
-			this->pnl10_11AM->Visible = false;
-			// 
-			// chk1040_1100AM
-			// 
-			this->chk1040_1100AM->Location = System::Drawing::Point(15, 57);
-			this->chk1040_1100AM->Name = L"chk1040_1100AM";
-			this->chk1040_1100AM->Size = System::Drawing::Size(131, 22);
-			this->chk1040_1100AM->TabIndex = 22;
-			this->chk1040_1100AM->Text = L"10:40 AM - 11:00 AM";
-			this->chk1040_1100AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1040_1100AM_CheckedChanged);
-			// 
-			// chk1020_1040AM
-			// 
-			this->chk1020_1040AM->Location = System::Drawing::Point(15, 34);
-			this->chk1020_1040AM->Name = L"chk1020_1040AM";
-			this->chk1020_1040AM->Size = System::Drawing::Size(131, 22);
-			this->chk1020_1040AM->TabIndex = 19;
-			this->chk1020_1040AM->Text = L"10:20 AM - 10:40 AM";
-			this->chk1020_1040AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1020_1040AM_CheckedChanged);
-			// 
-			// chk1000_1020AM
-			// 
-			this->chk1000_1020AM->Location = System::Drawing::Point(15, 12);
-			this->chk1000_1020AM->Name = L"chk1000_1020AM";
-			this->chk1000_1020AM->Size = System::Drawing::Size(131, 22);
-			this->chk1000_1020AM->TabIndex = 18;
-			this->chk1000_1020AM->Text = L"10:00 AM - 10:20 AM";
-			this->chk1000_1020AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1000_1020AM_CheckedChanged);
-			// 
-			// pnl9_10AM
-			// 
-			this->pnl9_10AM->Controls->Add(this->chk940_10000AM);
-			this->pnl9_10AM->Controls->Add(this->chk920_940AM);
-			this->pnl9_10AM->Controls->Add(this->chk900_920AM);
-			this->pnl9_10AM->Location = System::Drawing::Point(1021, 367);
-			this->pnl9_10AM->Name = L"pnl9_10AM";
-			this->pnl9_10AM->Size = System::Drawing::Size(264, 76);
-			this->pnl9_10AM->TabIndex = 34;
-			this->pnl9_10AM->Visible = false;
-			// 
-			// chk940_10000AM
-			// 
-			this->chk940_10000AM->Location = System::Drawing::Point(15, 57);
-			this->chk940_10000AM->Name = L"chk940_10000AM";
-			this->chk940_10000AM->Size = System::Drawing::Size(123, 22);
-			this->chk940_10000AM->TabIndex = 22;
-			this->chk940_10000AM->Text = L"9:40 AM - 10:00 AM";
-			this->chk940_10000AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk940_10000AM_CheckedChanged);
-			// 
-			// chk920_940AM
-			// 
-			this->chk920_940AM->Location = System::Drawing::Point(15, 34);
-			this->chk920_940AM->Name = L"chk920_940AM";
-			this->chk920_940AM->Size = System::Drawing::Size(118, 22);
-			this->chk920_940AM->TabIndex = 19;
-			this->chk920_940AM->Text = L"9:20 AM - 9:40 AM";
-			this->chk920_940AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk920_940AM_CheckedChanged);
-			// 
-			// chk900_920AM
-			// 
-			this->chk900_920AM->Location = System::Drawing::Point(15, 12);
-			this->chk900_920AM->Name = L"chk900_920AM";
-			this->chk900_920AM->Size = System::Drawing::Size(118, 22);
-			this->chk900_920AM->TabIndex = 18;
-			this->chk900_920AM->Text = L"9:00 AM - 9:20 AM";
-			this->chk900_920AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk900_920AM_CheckedChanged);
-			// 
-			// pnl2_3PM
-			// 
-			this->pnl2_3PM->Controls->Add(this->chk240_300PM);
-			this->pnl2_3PM->Controls->Add(this->chk220_240PM);
-			this->pnl2_3PM->Controls->Add(this->chk200_220PM);
-			this->pnl2_3PM->Location = System::Drawing::Point(1314, 12);
-			this->pnl2_3PM->Name = L"pnl2_3PM";
-			this->pnl2_3PM->Size = System::Drawing::Size(264, 76);
-			this->pnl2_3PM->TabIndex = 34;
-			this->pnl2_3PM->Visible = false;
-			// 
-			// chk240_300PM
-			// 
-			this->chk240_300PM->Location = System::Drawing::Point(15, 57);
-			this->chk240_300PM->Name = L"chk240_300PM";
-			this->chk240_300PM->Size = System::Drawing::Size(118, 22);
-			this->chk240_300PM->TabIndex = 22;
-			this->chk240_300PM->Text = L"2:40 PM - 3:00 PM";
-			// 
-			// chk220_240PM
-			// 
-			this->chk220_240PM->Location = System::Drawing::Point(15, 34);
-			this->chk220_240PM->Name = L"chk220_240PM";
-			this->chk220_240PM->Size = System::Drawing::Size(118, 22);
-			this->chk220_240PM->TabIndex = 19;
-			this->chk220_240PM->Text = L"2:20 PM - 2:40 PM";
-			// 
-			// chk200_220PM
-			// 
-			this->chk200_220PM->Location = System::Drawing::Point(15, 12);
-			this->chk200_220PM->Name = L"chk200_220PM";
-			this->chk200_220PM->Size = System::Drawing::Size(118, 22);
-			this->chk200_220PM->TabIndex = 18;
-			this->chk200_220PM->Text = L"2:00 PM - 2:20 PM";
-			// 
-			// pnl8_9PM
-			// 
-			this->pnl8_9PM->Controls->Add(this->chk840_900PM);
-			this->pnl8_9PM->Controls->Add(this->chk820_840PM);
-			this->pnl8_9PM->Controls->Add(this->chk800_820PM);
-			this->pnl8_9PM->Location = System::Drawing::Point(1314, 517);
-			this->pnl8_9PM->Name = L"pnl8_9PM";
-			this->pnl8_9PM->Size = System::Drawing::Size(264, 76);
-			this->pnl8_9PM->TabIndex = 33;
-			this->pnl8_9PM->Visible = false;
-			// 
-			// chk840_900PM
-			// 
-			this->chk840_900PM->Location = System::Drawing::Point(15, 57);
-			this->chk840_900PM->Name = L"chk840_900PM";
-			this->chk840_900PM->Size = System::Drawing::Size(118, 22);
-			this->chk840_900PM->TabIndex = 22;
-			this->chk840_900PM->Text = L"8:40 PM - 9:00 PM";
-			// 
-			// chk820_840PM
-			// 
-			this->chk820_840PM->Location = System::Drawing::Point(15, 34);
-			this->chk820_840PM->Name = L"chk820_840PM";
-			this->chk820_840PM->Size = System::Drawing::Size(118, 22);
-			this->chk820_840PM->TabIndex = 19;
-			this->chk820_840PM->Text = L"8:20 PM - 8:40 PM";
-			// 
-			// chk800_820PM
-			// 
-			this->chk800_820PM->Location = System::Drawing::Point(15, 12);
-			this->chk800_820PM->Name = L"chk800_820PM";
-			this->chk800_820PM->Size = System::Drawing::Size(118, 22);
-			this->chk800_820PM->TabIndex = 18;
-			this->chk800_820PM->Text = L"8:00 PM - 8:20 PM";
-			// 
-			// pnl9_10PM
-			// 
-			this->pnl9_10PM->Controls->Add(this->chk940_1000PM);
-			this->pnl9_10PM->Controls->Add(this->chk920_940PM);
-			this->pnl9_10PM->Controls->Add(this->chk900_920PM);
-			this->pnl9_10PM->Location = System::Drawing::Point(1314, 602);
-			this->pnl9_10PM->Name = L"pnl9_10PM";
-			this->pnl9_10PM->Size = System::Drawing::Size(264, 76);
-			this->pnl9_10PM->TabIndex = 33;
-			this->pnl9_10PM->Visible = false;
-			// 
-			// chk940_1000PM
-			// 
-			this->chk940_1000PM->Location = System::Drawing::Point(15, 57);
-			this->chk940_1000PM->Name = L"chk940_1000PM";
-			this->chk940_1000PM->Size = System::Drawing::Size(127, 22);
-			this->chk940_1000PM->TabIndex = 22;
-			this->chk940_1000PM->Text = L"9:40 PM - 10:00 PM";
-			// 
-			// chk920_940PM
-			// 
-			this->chk920_940PM->Location = System::Drawing::Point(15, 34);
-			this->chk920_940PM->Name = L"chk920_940PM";
-			this->chk920_940PM->Size = System::Drawing::Size(118, 22);
-			this->chk920_940PM->TabIndex = 19;
-			this->chk920_940PM->Text = L"9:20 PM - 9:40 PM";
-			// 
-			// chk900_920PM
-			// 
-			this->chk900_920PM->Location = System::Drawing::Point(15, 12);
-			this->chk900_920PM->Name = L"chk900_920PM";
-			this->chk900_920PM->Size = System::Drawing::Size(118, 22);
-			this->chk900_920PM->TabIndex = 18;
-			this->chk900_920PM->Text = L"9:00 PM - 9:20 PM";
-			// 
-			// pnl10_11PM
-			// 
-			this->pnl10_11PM->Controls->Add(this->chk1040_1100PM);
-			this->pnl10_11PM->Controls->Add(this->chk1020_1040PM);
-			this->pnl10_11PM->Controls->Add(this->chk1000_1020PM);
-			this->pnl10_11PM->Location = System::Drawing::Point(1314, 687);
-			this->pnl10_11PM->Name = L"pnl10_11PM";
-			this->pnl10_11PM->Size = System::Drawing::Size(264, 76);
-			this->pnl10_11PM->TabIndex = 33;
-			this->pnl10_11PM->Visible = false;
-			// 
-			// chk1040_1100PM
-			// 
-			this->chk1040_1100PM->Location = System::Drawing::Point(15, 57);
-			this->chk1040_1100PM->Name = L"chk1040_1100PM";
-			this->chk1040_1100PM->Size = System::Drawing::Size(127, 22);
-			this->chk1040_1100PM->TabIndex = 22;
-			this->chk1040_1100PM->Text = L"10:40 PM - 11:00 PM";
-			// 
-			// chk1020_1040PM
-			// 
-			this->chk1020_1040PM->Location = System::Drawing::Point(15, 34);
-			this->chk1020_1040PM->Name = L"chk1020_1040PM";
-			this->chk1020_1040PM->Size = System::Drawing::Size(127, 22);
-			this->chk1020_1040PM->TabIndex = 19;
-			this->chk1020_1040PM->Text = L"10:20 PM - 10:40 PM";
-			// 
-			// chk1000_1020PM
-			// 
-			this->chk1000_1020PM->Location = System::Drawing::Point(15, 12);
-			this->chk1000_1020PM->Name = L"chk1000_1020PM";
-			this->chk1000_1020PM->Size = System::Drawing::Size(127, 22);
-			this->chk1000_1020PM->TabIndex = 18;
-			this->chk1000_1020PM->Text = L"10:00 PM - 10:20 PM";
-			// 
-			// pnl11_12AM
-			// 
-			this->pnl11_12AM->Controls->Add(this->chk1140_1200AM);
-			this->pnl11_12AM->Controls->Add(this->chk1120_1140PM);
-			this->pnl11_12AM->Controls->Add(this->chk1100_1120PM);
-			this->pnl11_12AM->Location = System::Drawing::Point(1314, 769);
-			this->pnl11_12AM->Name = L"pnl11_12AM";
-			this->pnl11_12AM->Size = System::Drawing::Size(264, 76);
-			this->pnl11_12AM->TabIndex = 33;
-			this->pnl11_12AM->Visible = false;
-			// 
-			// chk1140_1200AM
-			// 
-			this->chk1140_1200AM->Location = System::Drawing::Point(15, 57);
-			this->chk1140_1200AM->Name = L"chk1140_1200AM";
-			this->chk1140_1200AM->Size = System::Drawing::Size(127, 22);
-			this->chk1140_1200AM->TabIndex = 22;
-			this->chk1140_1200AM->Text = L"11:40 PM - 12:00 AM";
-			// 
-			// chk1120_1140PM
-			// 
-			this->chk1120_1140PM->Location = System::Drawing::Point(15, 34);
-			this->chk1120_1140PM->Name = L"chk1120_1140PM";
-			this->chk1120_1140PM->Size = System::Drawing::Size(127, 22);
-			this->chk1120_1140PM->TabIndex = 19;
-			this->chk1120_1140PM->Text = L"11:20 PM - 11:40 PM";
-			// 
-			// chk1100_1120PM
-			// 
-			this->chk1100_1120PM->Location = System::Drawing::Point(15, 12);
-			this->chk1100_1120PM->Name = L"chk1100_1120PM";
-			this->chk1100_1120PM->Size = System::Drawing::Size(127, 22);
-			this->chk1100_1120PM->TabIndex = 18;
-			this->chk1100_1120PM->Text = L"11:00 PM - 11:20 PM";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1604, 881);
-			this->Controls->Add(this->pnl7_8AM);
-			this->Controls->Add(this->pnl1_2PM);
-			this->Controls->Add(this->pnl7_8PM);
-			this->Controls->Add(this->pnl11_12PM);
-			this->Controls->Add(this->pnl11_12AM);
-			this->Controls->Add(this->pnl10_11PM);
-			this->Controls->Add(this->pnl9_10PM);
-			this->Controls->Add(this->pnl8_9PM);
 			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->pnl6_7PM);
-			this->Controls->Add(this->pnl8_9AM);
-			this->Controls->Add(this->pnl5_6PM);
-			this->Controls->Add(this->pnl10_11AM);
-			this->Controls->Add(this->pnl4_5PM);
-			this->Controls->Add(this->pnl6_7AM);
-			this->Controls->Add(this->pnl3_4PM);
-			this->Controls->Add(this->pnl9_10AM);
-			this->Controls->Add(this->pnl2_3PM);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->pnl5_6AM);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->grpUser);
@@ -2171,31 +2180,31 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 			this->groupBox2->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
+			this->panel5->ResumeLayout(false);
+			this->pnl5_6AM->ResumeLayout(false);
+			this->pnl7_8AM->ResumeLayout(false);
+			this->pnl2_3PM->ResumeLayout(false);
+			this->pnl1_2PM->ResumeLayout(false);
+			this->pnl9_10AM->ResumeLayout(false);
+			this->pnl7_8PM->ResumeLayout(false);
+			this->pnl3_4PM->ResumeLayout(false);
+			this->pnl11_12PM->ResumeLayout(false);
+			this->pnl6_7AM->ResumeLayout(false);
+			this->pnl11_12AM->ResumeLayout(false);
+			this->pnl4_5PM->ResumeLayout(false);
+			this->pnl10_11PM->ResumeLayout(false);
+			this->pnl10_11AM->ResumeLayout(false);
+			this->pnl9_10PM->ResumeLayout(false);
+			this->pnl5_6PM->ResumeLayout(false);
+			this->pnl8_9PM->ResumeLayout(false);
+			this->pnl8_9AM->ResumeLayout(false);
+			this->pnl6_7PM->ResumeLayout(false);
 			this->pnl24Hr->ResumeLayout(false);
 			this->pnl24Hr->PerformLayout();
 			this->pnl12Hr->ResumeLayout(false);
 			this->pnl12Hr->PerformLayout();
-			this->pnl5_6AM->ResumeLayout(false);
-			this->pnl7_8AM->ResumeLayout(false);
-			this->pnl1_2PM->ResumeLayout(false);
-			this->pnl11_12PM->ResumeLayout(false);
-			this->pnl7_8PM->ResumeLayout(false);
-			this->pnl6_7PM->ResumeLayout(false);
-			this->pnl5_6PM->ResumeLayout(false);
-			this->pnl4_5PM->ResumeLayout(false);
-			this->pnl3_4PM->ResumeLayout(false);
-			this->pnl8_9AM->ResumeLayout(false);
-			this->pnl6_7AM->ResumeLayout(false);
 			this->panel2->ResumeLayout(false);
-			this->pnl10_11AM->ResumeLayout(false);
-			this->pnl9_10AM->ResumeLayout(false);
-			this->pnl2_3PM->ResumeLayout(false);
-			this->pnl8_9PM->ResumeLayout(false);
-			this->pnl9_10PM->ResumeLayout(false);
-			this->pnl10_11PM->ResumeLayout(false);
-			this->pnl11_12AM->ResumeLayout(false);
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -2229,33 +2238,6 @@ private: System::Windows::Forms::RadioButton^  rbtn05_06;
 		e->SuppressKeyPress = true;
 	}
 
-	/*private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		if (txtUser->Text == "admin")
-		{
-			if (txtPassword->Text == "password")
-			{
-				grpLogin->Visible = false;
-				grpAdmin->Visible = true;
-			}
-			else
-			{
-				//lblSignedIn->Text = "Incorrect login information";
-			}
-		}
-		else if (txtUser->Text == "user")
-		{
-			if (txtPassword->Text == "password")
-			{
-				grpLogin->Visible = false;
-				grpUser->Visible = true;
-			}
-			else
-			{
-				//lblSignedIn->Text = "Incorrect login information";
-			}
-		}
-	}*/
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		grpCreateEvent->Visible = true;
 		grpAdmin->Visible = false;
@@ -2301,15 +2283,161 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl12Hr->Visible = true;
 	pnl24Hr->Visible = false;
+	/*
+		if (rbtn5_6AM->Checked)
+		{
+			rbtn05_06->Checked = true;
+		}
+		else if (rbtn6_7AM->Checked)
+		{
+			rbtn06_07->Checked = true;
+		}
+		else if (rbtn7_8AM->Checked)
+		{
+			rbtn07_08->Checked = true;
+		}
+		else if (rbtn8_9AM->Checked)
+		{
+			rbtn08_09->Checked = true;
+		}
+		else if (rbtn9_10AM->Checked)
+		{
+			rbtn09_10->Checked = true;
+		}
+		else if (rbtn10_11AM->Checked)
+		{
+			rbtn10_11->Checked = true;
+		}
+		else if (rbtn11_12PM->Checked)
+		{
+			rbtn11_12->Checked = true;
+		}
+		else if (rbtn1_2PM->Checked)
+		{
+			rbtn13_14->Checked = true;
+		}
+		else if (rbtn2_3PM->Checked)
+		{
+			rbtn14_15->Checked = true;
+		}
+		else if (rbtn3_4PM->Checked)
+		{
+			rbtn15_16->Checked = true;
+		}
+		else if (rbtn4_5PM->Checked)
+		{
+			rbtn16_17->Checked = true;
+		}
+		else if (rbtn5_6PM->Checked)
+		{
+			rbtn17_18->Checked = true;
+		}
+		else if (rbtn6_7PM->Checked)
+		{
+			rbtn18_19->Checked = true;
+		}
+		else if (rbtn7_8PM->Checked)
+		{
+			rbtn19_20->Checked = true;
+		}
+		else if (rbtn8_9PM->Checked)
+		{
+			rbtn20_21->Checked = true;
+		}
+		else if (rbtn9_10PM->Checked)
+		{
+			rbtn21_22->Checked = true;
+		}
+		else if (rbtn10_11PM->Checked)
+		{
+			rbtn22_23->Checked = true;
+		}
+		else if (rbtn11_12AM->Checked)
+		{
+			rbtn23_00->Checked = true;
+		}
+	*/
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl24Hr->Visible = true;
 	pnl12Hr->Visible = false;
+	/*
+		if (rbtn05_06->Checked)
+		{
+			rbtn5_6AM->Checked = true;
+		}
+		else if (rbtn06_07->Checked)
+		{
+			rbtn6_7AM->Checked = true;
+		}
+		else if (rbtn07_08->Checked)
+		{
+			rbtn7_8AM->Checked = true;
+		}
+		else if (rbtn08_09->Checked)
+		{
+			rbtn8_9AM->Checked = true;
+		}
+		else if (rbtn09_10->Checked)
+		{
+			rbtn9_10AM->Checked = true;
+		}
+		else if (rbtn10_11->Checked)
+		{
+			rbtn10_11AM->Checked = true;
+		}
+		else if (rbtn11_12->Checked)
+		{
+			rbtn11_12PM->Checked = true;
+		}
+		else if (rbtn13_14->Checked)
+		{
+			rbtn1_2PM->Checked = true;
+		}
+		else if (rbtn14_15->Checked)
+		{
+			rbtn2_3PM->Checked = true;
+		}
+		else if (rbtn15_16->Checked)
+		{
+			rbtn3_4PM->Checked = true;
+		}
+		else if (rbtn16_17->Checked)
+		{
+			rbtn4_5PM->Checked = true;
+		}
+		else if (rbtn17_18->Checked)
+		{
+			rbtn5_6PM->Checked = true;
+		}
+		else if (rbtn18_19->Checked)
+		{
+			rbtn6_7PM->Checked = true;
+		}
+		else if (rbtn19_20->Checked)
+		{
+			rbtn7_8PM->Checked = true;
+		}
+		else if (rbtn20_21->Checked)
+		{
+			rbtn8_9PM->Checked = true;
+		}
+		else if (rbtn21_22->Checked)
+		{
+			rbtn9_10PM->Checked = true;
+		}
+		else if (rbtn22_23->Checked)
+		{
+			rbtn10_11PM->Checked = true;
+		}
+		else if (rbtn23_00->Checked)
+		{
+			rbtn11_12AM->Checked = true;
+		}
+	*/
 }
 
-private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	
+private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {	
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -2393,10 +2521,6 @@ private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
-	if (!rbtn05_06->Checked)
-	{
-		//rbtn05_06->Checked = true;
-	}
 }
 private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2417,6 +2541,8 @@ private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
+
+
 }
 private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	pnl5_6AM->Visible = false;
@@ -2740,19 +2866,84 @@ private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System
 }
 
 private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (!rbtn5_6AM->Checked)
-	{
-		rbtn5_6AM->Checked = true;
-	}
+	pnl5_6AM->Visible = true;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
 }
 private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn6_7AM->Checked = true;
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = true;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
 }
 private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn7_8AM->Checked = true;
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = true;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
 }
 private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	rbtn8_9AM->Checked = true;
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
 }
 private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	rbtn9_10AM->Checked = true;
