@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string.h>
 
 namespace Project1 {
 
@@ -54,14 +55,14 @@ namespace Project1 {
 	private: System::Windows::Forms::GroupBox^  grpAdmin;
 
 	private: System::Windows::Forms::Button^  btnCreateEvent;
-	private: System::Windows::Forms::Button^  btnViewSchedule;
+
 	private: System::Windows::Forms::Button^  btnEditEvents;
-	private: System::Windows::Forms::Button^  btnEditAvailability;
+
 	private: System::Windows::Forms::Label^  lblAdmin;
 	private: System::Windows::Forms::GroupBox^  grpUser;
 
-	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::Button^  button4;
+
+
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::GroupBox^  grpCreateEvent;
 
@@ -98,8 +99,9 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  btnLogin;
 
 	private: System::Windows::Forms::TextBox^  txtUser;
+	private: System::Windows::Forms::GroupBox^  grpMode;
 
-	private: System::Windows::Forms::GroupBox^  groupBox2;
+
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button5;
 	private: System::Windows::Forms::GroupBox^  grpAvailability;
@@ -328,7 +330,17 @@ private: System::Windows::Forms::RadioButton^  rbtn07_08;
 private: System::Windows::Forms::RadioButton^  rbtn06_07;
 
 private: System::Windows::Forms::RadioButton^  rbtn05_06;
+private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
+private: System::Windows::Forms::ListBox^  lstYourEvents;
+private: System::Windows::Forms::Label^  lblViewEvent;
+private: System::Windows::Forms::Button^  button1;
 private: System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::GroupBox^  grpEventInfo;
+private: System::Windows::Forms::Label^  lblEventDate;
+private: System::Windows::Forms::Label^  lblEventLocation;
+private: System::Windows::Forms::Button^  btnEditAvailability;
+private: System::Windows::Forms::Label^  lblEventName;
+
 
 
 
@@ -391,13 +403,9 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->lblCreateEvent = (gcnew System::Windows::Forms::Label());
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
 			this->btnCreateEvent = (gcnew System::Windows::Forms::Button());
-			this->btnViewSchedule = (gcnew System::Windows::Forms::Button());
 			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
-			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
 			this->grpUser = (gcnew System::Windows::Forms::GroupBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
 			this->lblUser = (gcnew System::Windows::Forms::Label());
@@ -405,7 +413,7 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->txtUser = (gcnew System::Windows::Forms::TextBox());
 			this->rbtn12Hr = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn24Hr = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->grpMode = (gcnew System::Windows::Forms::GroupBox());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
@@ -428,7 +436,6 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->rbtn7_8AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn6_7AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn5_6AM = (gcnew System::Windows::Forms::RadioButton());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->button8 = (gcnew System::Windows::Forms::Button());
@@ -529,11 +536,21 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
+			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
+			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
+			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->lblEventDate = (gcnew System::Windows::Forms::Label());
+			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
+			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
+			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpUser->SuspendLayout();
 			this->grpLogin->SuspendLayout();
-			this->groupBox2->SuspendLayout();
+			this->grpMode->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
 			this->pnl12Hr->SuspendLayout();
 			this->panel5->SuspendLayout();
@@ -557,6 +574,8 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->pnl6_7PM->SuspendLayout();
 			this->pnl24Hr->SuspendLayout();
 			this->panel2->SuspendLayout();
+			this->grpViewYourEvents->SuspendLayout();
+			this->grpEventInfo->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// grpCreateEvent
@@ -666,11 +685,9 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			// grpAdmin
 			// 
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
-			this->grpAdmin->Controls->Add(this->btnViewSchedule);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
-			this->grpAdmin->Controls->Add(this->btnEditAvailability);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(291, 74);
+			this->grpAdmin->Location = System::Drawing::Point(762, 85);
 			this->grpAdmin->Name = L"grpAdmin";
 			this->grpAdmin->Size = System::Drawing::Size(200, 277);
 			this->grpAdmin->TabIndex = 7;
@@ -687,33 +704,15 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
 			this->btnCreateEvent->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEvent_Click);
 			// 
-			// btnViewSchedule
-			// 
-			this->btnViewSchedule->Location = System::Drawing::Point(50, 137);
-			this->btnViewSchedule->Name = L"btnViewSchedule";
-			this->btnViewSchedule->Size = System::Drawing::Size(103, 23);
-			this->btnViewSchedule->TabIndex = 4;
-			this->btnViewSchedule->Text = L"View Schedule";
-			this->btnViewSchedule->UseVisualStyleBackColor = true;
-			this->btnViewSchedule->Click += gcnew System::EventHandler(this, &MyForm::btnViewSchedule_Click);
-			// 
 			// btnEditEvents
 			// 
 			this->btnEditEvents->Location = System::Drawing::Point(50, 108);
 			this->btnEditEvents->Name = L"btnEditEvents";
 			this->btnEditEvents->Size = System::Drawing::Size(103, 23);
 			this->btnEditEvents->TabIndex = 3;
-			this->btnEditEvents->Text = L"Edit Events";
+			this->btnEditEvents->Text = L"View Your Events";
 			this->btnEditEvents->UseVisualStyleBackColor = true;
-			// 
-			// btnEditAvailability
-			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(50, 166);
-			this->btnEditAvailability->Name = L"btnEditAvailability";
-			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
-			this->btnEditAvailability->TabIndex = 0;
-			this->btnEditAvailability->Text = L"Edit Availability";
-			this->btnEditAvailability->UseVisualStyleBackColor = true;
+			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
 			// 
 			// lblAdmin
 			// 
@@ -726,42 +725,22 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			// 
 			// grpUser
 			// 
-			this->grpUser->Controls->Add(this->button2);
-			this->grpUser->Controls->Add(this->button4);
 			this->grpUser->Controls->Add(this->label1);
-			this->grpUser->Location = System::Drawing::Point(291, 74);
+			this->grpUser->Location = System::Drawing::Point(556, 102);
 			this->grpUser->Name = L"grpUser";
 			this->grpUser->Size = System::Drawing::Size(200, 277);
 			this->grpUser->TabIndex = 8;
 			this->grpUser->TabStop = false;
 			this->grpUser->Visible = false;
 			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(50, 105);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(103, 23);
-			this->button2->TabIndex = 4;
-			this->button2->Text = L"View Schedule";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
-			// button4
-			// 
-			this->button4->Location = System::Drawing::Point(50, 134);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(103, 23);
-			this->button4->TabIndex = 0;
-			this->button4->Text = L"Edit Availability";
-			this->button4->UseVisualStyleBackColor = true;
-			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(47, 34);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(93, 13);
+			this->label1->Size = System::Drawing::Size(73, 13);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Make a Selection:";
+			this->label1->Text = L"Select Events";
 			// 
 			// grpLogin
 			// 
@@ -824,16 +803,16 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->rbtn24Hr->UseVisualStyleBackColor = true;
 			this->rbtn24Hr->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn24Hr_CheckedChanged);
 			// 
-			// groupBox2
+			// grpMode
 			// 
-			this->groupBox2->Controls->Add(this->button7);
-			this->groupBox2->Controls->Add(this->button5);
-			this->groupBox2->Location = System::Drawing::Point(341, 74);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(200, 148);
-			this->groupBox2->TabIndex = 8;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Visible = false;
+			this->grpMode->Controls->Add(this->button7);
+			this->grpMode->Controls->Add(this->button5);
+			this->grpMode->Location = System::Drawing::Point(341, 74);
+			this->grpMode->Name = L"grpMode";
+			this->grpMode->Size = System::Drawing::Size(200, 148);
+			this->grpMode->TabIndex = 8;
+			this->grpMode->TabStop = false;
+			this->grpMode->Visible = false;
 			// 
 			// button7
 			// 
@@ -853,11 +832,11 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->button5->TabIndex = 0;
 			this->button5->Text = L"User Mode";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// grpAvailability
 			// 
 			this->grpAvailability->Controls->Add(this->pnl12Hr);
-			this->grpAvailability->Controls->Add(this->textBox4);
 			this->grpAvailability->Controls->Add(this->label2);
 			this->grpAvailability->Controls->Add(this->label3);
 			this->grpAvailability->Controls->Add(this->button8);
@@ -1131,13 +1110,6 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->rbtn5_6AM->Text = L"5:00 AM - 6:00 AM";
 			this->rbtn5_6AM->UseVisualStyleBackColor = true;
 			this->rbtn5_6AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6AM_CheckedChanged);
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(2, 153);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
-			this->textBox4->TabIndex = 45;
 			// 
 			// label2
 			// 
@@ -2165,18 +2137,117 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->checkBox10->TabIndex = 18;
 			this->checkBox10->Text = L"7:00 PM - 7:20 PM";
 			// 
+			// grpViewYourEvents
+			// 
+			this->grpViewYourEvents->Controls->Add(this->textBox4);
+			this->grpViewYourEvents->Controls->Add(this->button1);
+			this->grpViewYourEvents->Controls->Add(this->lstYourEvents);
+			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
+			this->grpViewYourEvents->Location = System::Drawing::Point(968, 96);
+			this->grpViewYourEvents->Name = L"grpViewYourEvents";
+			this->grpViewYourEvents->Size = System::Drawing::Size(200, 329);
+			this->grpViewYourEvents->TabIndex = 9;
+			this->grpViewYourEvents->TabStop = false;
+			this->grpViewYourEvents->Visible = false;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(26, 10);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->TabIndex = 5;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(44, 289);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(103, 23);
+			this->button1->TabIndex = 4;
+			this->button1->Text = L"View Event";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// lstYourEvents
+			// 
+			this->lstYourEvents->FormattingEnabled = true;
+			this->lstYourEvents->Location = System::Drawing::Point(6, 46);
+			this->lstYourEvents->Name = L"lstYourEvents";
+			this->lstYourEvents->Size = System::Drawing::Size(188, 225);
+			this->lstYourEvents->TabIndex = 3;
+			// 
+			// lblViewEvent
+			// 
+			this->lblViewEvent->AutoSize = true;
+			this->lblViewEvent->Location = System::Drawing::Point(55, 25);
+			this->lblViewEvent->Name = L"lblViewEvent";
+			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
+			this->lblViewEvent->TabIndex = 2;
+			this->lblViewEvent->Text = L"Select Event:";
+			// 
+			// grpEventInfo
+			// 
+			this->grpEventInfo->Controls->Add(this->lblEventDate);
+			this->grpEventInfo->Controls->Add(this->lblEventLocation);
+			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
+			this->grpEventInfo->Controls->Add(this->lblEventName);
+			this->grpEventInfo->Location = System::Drawing::Point(578, 12);
+			this->grpEventInfo->Name = L"grpEventInfo";
+			this->grpEventInfo->Size = System::Drawing::Size(200, 204);
+			this->grpEventInfo->TabIndex = 9;
+			this->grpEventInfo->TabStop = false;
+			this->grpEventInfo->Visible = false;
+			// 
+			// lblEventDate
+			// 
+			this->lblEventDate->AutoSize = true;
+			this->lblEventDate->Location = System::Drawing::Point(61, 57);
+			this->lblEventDate->Name = L"lblEventDate";
+			this->lblEventDate->Size = System::Drawing::Size(72, 13);
+			this->lblEventDate->TabIndex = 8;
+			this->lblEventDate->Text = L"EVENTDATE";
+			// 
+			// lblEventLocation
+			// 
+			this->lblEventLocation->AutoSize = true;
+			this->lblEventLocation->Location = System::Drawing::Point(49, 96);
+			this->lblEventLocation->Name = L"lblEventLocation";
+			this->lblEventLocation->Size = System::Drawing::Size(97, 13);
+			this->lblEventLocation->TabIndex = 7;
+			this->lblEventLocation->Text = L"EVENTLOCATION";
+			// 
+			// btnEditAvailability
+			// 
+			this->btnEditAvailability->Location = System::Drawing::Point(43, 152);
+			this->btnEditAvailability->Name = L"btnEditAvailability";
+			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
+			this->btnEditAvailability->TabIndex = 6;
+			this->btnEditAvailability->Text = L"Edit Availability";
+			this->btnEditAvailability->UseVisualStyleBackColor = true;
+			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
+			// 
+			// lblEventName
+			// 
+			this->lblEventName->AutoSize = true;
+			this->lblEventName->Location = System::Drawing::Point(61, 17);
+			this->lblEventName->Name = L"lblEventName";
+			this->lblEventName->Size = System::Drawing::Size(74, 13);
+			this->lblEventName->TabIndex = 2;
+			this->lblEventName->Text = L"EVENTNAME";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1604, 881);
+			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->grpAvailability);
-			this->Controls->Add(this->groupBox2);
-			this->Controls->Add(this->grpUser);
 			this->Controls->Add(this->grpAdmin);
-			this->Controls->Add(this->grpCreateEvent);
+			this->Controls->Add(this->grpUser);
+			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpLogin);
+			this->Controls->Add(this->grpCreateEvent);
+			this->Controls->Add(this->grpAvailability);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -2187,7 +2258,7 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->grpUser->PerformLayout();
 			this->grpLogin->ResumeLayout(false);
 			this->grpLogin->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
+			this->grpMode->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
 			this->pnl12Hr->ResumeLayout(false);
@@ -2214,6 +2285,10 @@ private: System::Windows::Forms::TextBox^  textBox4;
 			this->pnl24Hr->ResumeLayout(false);
 			this->pnl24Hr->PerformLayout();
 			this->panel2->ResumeLayout(false);
+			this->grpViewYourEvents->ResumeLayout(false);
+			this->grpViewYourEvents->PerformLayout();
+			this->grpEventInfo->ResumeLayout(false);
+			this->grpEventInfo->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2283,18 +2358,90 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = true;
-	groupBox2->Visible = false;
+	grpMode->Visible = false;
 	
 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpLogin->Visible = false;
-	groupBox2->Visible = true;
+	grpMode->Visible = true;
 }
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+
+	chk500_520AM->Text = "5:00 AM - 5:20 AM";
+	chk520_540AM->Text = "5:20 AM - 5:40 AM";
+	chk540_600AM->Text = "5:40 AM - 6:00 AM";
+
+	chk600_620AM->Text = "6:00 AM - 6:20 AM";
+	chk620_640AM->Text = "6:20 AM - 6:40 AM";
+	chk640_700AM->Text = "6:40 AM - 7:00 AM";
+
+	chk700_720AM->Text = "7:00 AM - 7:20 AM";
+	chk720_740AM->Text = "7:20 AM - 7:40 AM";
+	chk740_800AM->Text = "7:40 AM - 8:00 AM";
+
+	chk800_820AM->Text = "8:00 AM - 8:20 AM";
+	chk820_840AM->Text = "8:20 AM - 8:40 AM";
+	chk840_900AM->Text = "8:40 AM - 9:00 AM";
+
+	chk900_920AM->Text = "9:00 AM - 9:20 AM";
+	chk920_940AM->Text = "9:20 AM - 9:40 AM";
+	chk940_10000AM->Text = "9:40 AM - 10:00 AM";
+
+	chk1000_1020AM->Text = "10:00 AM - 10:20 AM";
+	chk1020_1040AM->Text = "10:20 AM - 10:40 AM";
+	chk1040_1100AM->Text = "10:40 AM - 11:00 AM";
+
+	chk1100_1120AM->Text = "11:00 AM - 11:20 AM";
+	chk1120_1140AM->Text = "11:20 AM - 11:40 AM";
+	chk1140_1200PM->Text = "11:40 AM - 12:00 PM";
+
+	chk100_120PM->Text = "1:00 PM - 1:20 PM";
+	chk120_140PM->Text = "1:20 PM - 1:40 PM";
+	chk140_200PM->Text = "1:40 PM - 2:00 PM";
+
+	chk200_220PM->Text = "2:00 PM - 2:20 PM";
+	chk220_240PM->Text = "2:20 PM - 2:40 PM";
+	chk240_300PM->Text = "2:40 PM - 3:00 PM";
+
+	chk300_320PM->Text = "3:00 PM - 3:20 PM";
+	chk320_340PM->Text = "3:20 PM - 3:40 PM";
+	chk340_400PM->Text = "3:40 PM - 4:00 PM";
+
+	chk400_420PM->Text = "4:00 PM - 4:20 PM";
+	chk420_440PM->Text = "4:20 PM - 4:40 PM";
+	chk440_500PM->Text = "4:40 PM - 5:00 PM";
+
+	chk500_520PM->Text = "5:00 PM - 5:20 PM";
+	chk520_540PM->Text = "5:20 PM - 5:40 PM";
+	chk540_600PM->Text = "5:40 PM - 6:00 PM";
+
+	chk600_620PM->Text = "6:00 PM - 6:20 PM";
+	chk620_640PM->Text = "6:20 PM - 6:40 PM";
+	chk640_700PM->Text = "6:40 PM - 7:00 PM";
+
+	chk700_720PM->Text = "7:00 PM - 7:20 PM";
+	chk720_740PM->Text = "7:20 PM - 7:40 PM";
+	chk740_800PM->Text = "7:40 PM - 8:00 PM";
+
+	chk800_820PM->Text = "8:00 PM - 8:20 PM";
+	chk820_840PM->Text = "8:20 PM - 8:40 PM";
+	chk840_900PM->Text = "8:40 PM - 9:00 PM";
+
+	chk900_920PM->Text = "9:00 PM - 9:20 PM";
+	chk920_940PM->Text = "9:20 PM - 9:40 PM";
+	chk940_1000PM->Text = "9:40 PM - 10:00 PM";
+
+	chk1000_1020PM->Text = "10:00 PM - 10:20 PM";
+	chk1020_1040PM->Text = "10:20 PM - 10:40 PM";
+	chk1040_1100PM->Text = "10:40 PM - 11:00 PM";
+
+	chk1100_1120PM->Text = "11:00 PM - 11:20 PM";
+	chk1120_1140PM->Text = "11:20 PM - 11:40 PM";
+	chk1140_1200AM->Text = "11:40 PM - 12:00 AM";
+
 	if (rbtn5_6AM->Checked)
 	{
 		rbtn05_06->Checked = true;
-		textBox4->Text = "test";
 	}
 	else if (rbtn6_7AM->Checked)
 	{
@@ -2376,7 +2523,78 @@ private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::E
 	
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
+	chk500_520AM->Text = "05:00 - 05:20";
+	chk520_540AM->Text = "05:20 - 05:40";
+	chk540_600AM->Text = "05:40 - 06:00";
+
+	chk600_620AM->Text = "06:00 - 06:20";
+	chk620_640AM->Text = "06:20 - 06:40";
+	chk640_700AM->Text = "06:40 - 07:00";
+
+	chk700_720AM->Text = "07:00 - 07:20";
+	chk720_740AM->Text = "07:20 - 07:40";
+	chk740_800AM->Text = "07:40 - 08:00";
+
+	chk800_820AM->Text = "08:00 - 08:20";
+	chk820_840AM->Text = "08:20 - 08:40";
+	chk840_900AM->Text = "08:40 - 09:00";
+
+	chk900_920AM->Text = "09:00 - 09:20";
+	chk920_940AM->Text = "09:20 - 09:40";
+	chk940_10000AM->Text = "09:40 - 10:00";
+
+	chk1000_1020AM->Text = "10:00 - 10:20";
+	chk1020_1040AM->Text = "10:20 - 10:40";
+	chk1040_1100AM->Text = "10:40 - 11:00";
+
+	chk1100_1120AM->Text = "11:00 - 11:20";
+	chk1120_1140AM->Text = "11:20 - 11:40";
+	chk1140_1200PM->Text = "11:40 - 12:00";
+
+	chk100_120PM->Text = "13:00 - 13:20";
+	chk120_140PM->Text = "13:20 - 13:40";
+	chk140_200PM->Text = "13:40 - 14:00";
+
+	chk200_220PM->Text = "14:00 - 14:20";
+	chk220_240PM->Text = "14:20 - 14:40";
+	chk240_300PM->Text = "14:40 - 15:00";
+
+	chk300_320PM->Text = "15:00 - 15:20";
+	chk320_340PM->Text = "15:20 - 15:40";
+	chk340_400PM->Text = "15:40 - 16:00";
+
+	chk400_420PM->Text = "16:00 - 16:20";
+	chk420_440PM->Text = "16:20 - 16:40";
+	chk440_500PM->Text = "16:40 - 17:00";
+
+	chk500_520PM->Text = "17:00 - 17:20";
+	chk520_540PM->Text = "17:20 - 17:40";
+	chk540_600PM->Text = "17:40 - 18:00";
+
+	chk600_620PM->Text = "18:00 - 18:20";
+	chk620_640PM->Text = "18:20 - 18:40";
+	chk640_700PM->Text = "18:40 - 19:00";
+
+	chk700_720PM->Text = "19:00 - 19:20";
+	chk720_740PM->Text = "19:20 - 19:40";
+	chk740_800PM->Text = "19:40 - 20:00";
+
+	chk800_820PM->Text = "20:00 - 20:20";
+	chk820_840PM->Text = "20:20 - 20:40";
+	chk840_900PM->Text = "20:40 - 21:00";
+
+	chk900_920PM->Text = "21:00 - 21:20";
+	chk920_940PM->Text = "21:20 - 21:40";
+	chk940_1000PM->Text = "21:40 - 22:00";
+
+	chk1000_1020PM->Text = "22:00 - 22:20";
+	chk1020_1040PM->Text = "22:20 - 22:40";
+	chk1040_1100PM->Text = "22:40 - 23:00";
+
+	chk1100_1120PM->Text = "23:00 - 23:20";
+	chk1120_1140PM->Text = "23:20 - 23:40";
+	chk1140_1200AM->Text = "23:40 - 00:00";
+
 	if (rbtn05_06->Checked)
 	{
 		rbtn5_6AM->Checked = true;
@@ -3232,6 +3450,56 @@ private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = true;
+}
+private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = true;
+	lstYourEvents->Items->Add("test");
+	grpAdmin->Visible = false;
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	/*
+	* TODO: Add admins events to listbox
+	*/
+
+	System::String^ eventName = "";
+
+	if (lstYourEvents->SelectedItems->Count > 0)
+	{
+		eventName = lstYourEvents->SelectedItem->ToString();
+
+		textBox4->Text = eventName;
+		bool isFound;
+		
+		/*
+		* TODO: Use eventName to search for a specific event - isFound = true if event is found
+		* Event information and option to modify availability will be displayed on the next page
+		*/
+
+		if (!isFound)
+		{
+			MessageBox::Show("Event Not Found");
+		}
+		else
+		{
+			grpViewYourEvents->Visible = false;
+			grpEventInfo->Visible = true;
+		}
+	}
+	else
+	{
+		MessageBox::Show("Please select an event","Error");
+	}
+}
+private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpEventInfo->Visible = false;
+	grpAvailability->Visible = true;
+}
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpMode->Visible = false;
+	grpViewYourEvents->Visible = true;
+	/*
+	* Add all events to listbox
+	*/
 }
 };
 
