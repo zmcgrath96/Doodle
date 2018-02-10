@@ -1,8 +1,6 @@
 #ifndef User_h
 #define User_h
-
 #include <string>
-
 class User
 {
 	public:
