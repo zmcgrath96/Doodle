@@ -2,9 +2,6 @@
 #include <string>
 #include <vector>
 #include <ctime>
-#ifndef USER_H
-#define USER_H
-
 #include <list>
 
 class User {
@@ -20,6 +17,21 @@ public:
 private:
 	bool admin;
 	std::string name;
+=======
+class User
+{
+	public:
+		User(std::string name, bool isAdmin);
+		~User();
+		std::string getName();
+		void Run();
+		void AddTime(int T);
+		bool isAdmin();
+	private:
+		std::string m_Name;
+		std::string * m_Strings;
+		bool * m_Times;
+		bool m_isAdmin;
+>>>>>>> User
 };
-#endif // !EXECUTIVE_H
-
+#endif

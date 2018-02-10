@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 #TargetFrameworkVersion=v4.5.2:PlatformToolSet=v141:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
 Debug|x64|C:\Users\Anna\Documents\448\Doodle\Project1\|
+=======
+#TargetFrameworkVersion=v4.5.2:PlatformToolSet=v140:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug|x64|C:\cygwin64\home\Nick\Doodle\Doodle\Project1\|
+>>>>>>> User
