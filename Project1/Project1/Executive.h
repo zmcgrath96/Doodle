@@ -13,18 +13,11 @@ class Executive
 		Executive();
 		~Executive();
 		void AddEvent(Event E);
-		//void AddUser();
-		//void AddAvailabilities(bool availabilities[]);
 		void checkAval();
-		void makeCurrentUser(std::string name);
 		void getAllEvents();
-		void getUserEvents();
 	
 	private:
-		//User currentUser;
-		int currentEventIndex;
 		std::vector<Event> events;
-		//Event getCurrentEvent();
 };
 #endif
 

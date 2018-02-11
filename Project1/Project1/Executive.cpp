@@ -7,7 +7,6 @@ Executive::Executive()
 Executive::~Executive()
 {
 }
-
 void Executive::AddEvent(Event E)
 {
 	events.push_back(E); 
@@ -22,11 +21,6 @@ void Executive::checkAval()
 	}
 }
 
-void Executive::makeCurrentUser(string name)
-{
-//	currentUser = User(name);
-}
-
 void Executive::getAllEvents()
 {
 	cout<<"All events"<<endl;
@@ -34,16 +28,4 @@ void Executive::getAllEvents()
 	{
 		cout<<events[i].getName()<<endl;
 	}
-}
-void Executive::getUserEvents()
-{
-	vector<Event> userEvents;
-	for(vector<Event>::iterator i = events.begin(); i != events.end(); ++i)
-	{
-//		if (currentUser.getName() == i->getAdmin())
-//		{
-//			userEvents.push_front(*i);
-//		}
-	}
-//	userEvents.sort();
 }
