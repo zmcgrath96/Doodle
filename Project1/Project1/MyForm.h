@@ -1,4 +1,7 @@
 #pragma once
+#include "Executive.h"
+#include "Event.h"
+#include "User.h"
 #include <iostream>
 #include <string.h>
 #include "Executive.h"
