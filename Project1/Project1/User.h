@@ -5,7 +5,7 @@
 class User
 {
 	public:
-		User();
+		User(std::string UserName, bool isAdmin);
 		~User();
 		void setName(std::string name);
 		void setisAdmin(bool isAdmin);
@@ -14,6 +14,7 @@ class User
 		void Run();
 		void AddTime(int T);
 		bool isAdmin();
+		void getTimes();
 	private:
 		std::string m_Name;
 		std::string * m_Strings;
