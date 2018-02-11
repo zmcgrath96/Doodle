@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+#include <string.h>
 
 #include "Executive.h"
 
@@ -36,80 +38,173 @@ namespace Project1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  btnLogin;
+
 	protected:
 
-
-
-	private: System::Windows::Forms::TextBox^  txtUser;
-	private: System::Windows::Forms::Label^  lblLogin;
-	private: System::Windows::Forms::GroupBox^  grpLogin;
-	private: System::Windows::Forms::TextBox^  txtPassword;
-	private: System::Windows::Forms::Label^  lblUser;
-	private: System::Windows::Forms::Label^  lblPassword;
-	private: System::Windows::Forms::Label^  lblSignedIn;
 	private: System::Windows::Forms::GroupBox^  grpAdmin;
-
 	private: System::Windows::Forms::Button^  btnCreateEvent;
-	private: System::Windows::Forms::Button^  btnViewSchedule;
 	private: System::Windows::Forms::Button^  btnEditEvents;
-	private: System::Windows::Forms::Button^  btnEditAvailability;
 	private: System::Windows::Forms::Label^  lblAdmin;
-	private: System::Windows::Forms::GroupBox^  grpUser;
-
-	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::Button^  button4;
-	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::GroupBox^  grpCreateEvent;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 	private: System::Windows::Forms::Label^  lblDate;
-	private: System::Windows::Forms::Label^  lblTime;
 	private: System::Windows::Forms::Label^  lblLocation;
 	private: System::Windows::Forms::Label^  lblNote;
+	private: System::Windows::Forms::Button^  btnSubmitEvent;
 
-
-
-
-	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Label^  lblCreateEvent;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 	private: System::Windows::Forms::TextBox^  textBox3;
 	private: System::Windows::Forms::TextBox^  textBox2;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  lblName;
-
-	private: System::Windows::Forms::TextBox^  textBox4;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar1;
-	private: System::Windows::Forms::GroupBox^  grpViewSchedule;
-
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Label^  lblSchedule;
 	private: System::Windows::Forms::RadioButton^  rbtn12Hr;
 	private: System::Windows::Forms::RadioButton^  rbtn24Hr;
+	private: System::Windows::Forms::GroupBox^  grpLogin;
+	private: System::Windows::Forms::Label^  lblUser;
+	private: System::Windows::Forms::Button^  btnLogin;
+	private: System::Windows::Forms::TextBox^  txtUser;
+	private: System::Windows::Forms::GroupBox^  grpMode;
+	private: System::Windows::Forms::Button^  btnAdmin;
+	private: System::Windows::Forms::Button^  btnUser;
 
 
-	private: System::Windows::Forms::GroupBox^  groupBox1;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Button^  button3;
-	private: System::Windows::Forms::TextBox^  textBox6;
-	private: System::Windows::Forms::GroupBox^  groupBox2;
-	private: System::Windows::Forms::Button^  button7;
-	private: System::Windows::Forms::Button^  button5;
 	private: System::Windows::Forms::GroupBox^  grpAvailability;
-	private: System::Windows::Forms::TreeView^  trv12Hr;
-
-	private: System::Windows::Forms::Button^  button8;
+	private: System::Windows::Forms::Button^  btnSubmitTimes;
 	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::TreeView^  trv24Hr;
+	private: System::Windows::Forms::Panel^  pnl5_6AM;
+	private: System::Windows::Forms::CheckBox^  chk540_600AM;
+	private: System::Windows::Forms::CheckBox^  chk520_540AM;
+	private: System::Windows::Forms::CheckBox^  chk500_520AM;
+	private: System::Windows::Forms::Panel^  pnl12Hr;
+	private: System::Windows::Forms::Panel^  panel5;
+	private: System::Windows::Forms::RadioButton^  rbtn6_7AM;
+	private: System::Windows::Forms::RadioButton^  rbtn5_6AM;
+	private: System::Windows::Forms::Panel^  pnl6_7AM;
+	private: System::Windows::Forms::CheckBox^  chk640_700AM;
+	private: System::Windows::Forms::CheckBox^  chk620_640AM;
+	private: System::Windows::Forms::CheckBox^  chk600_620AM;
+	private: System::Windows::Forms::RadioButton^  rbtn7_8AM;
+	private: System::Windows::Forms::Panel^  pnl7_8AM;
+	private: System::Windows::Forms::CheckBox^  chk740_800AM;
+	private: System::Windows::Forms::CheckBox^  chk720_740AM;
+	private: System::Windows::Forms::CheckBox^  chk700_720AM;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12AM;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11PM;
+	private: System::Windows::Forms::RadioButton^  rbtn9_10PM;
+	private: System::Windows::Forms::RadioButton^  rbtn8_9PM;
+	private: System::Windows::Forms::RadioButton^  rbtn7_8PM;
+	private: System::Windows::Forms::RadioButton^  rbtn6_7PM;
+	private: System::Windows::Forms::RadioButton^  rbtn5_6PM;
+	private: System::Windows::Forms::RadioButton^  rbtn4_5PM;
+	private: System::Windows::Forms::RadioButton^  rbtn3_4PM;
+	private: System::Windows::Forms::RadioButton^  rbtn2_3PM;
+	private: System::Windows::Forms::RadioButton^  rbtn1_2PM;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12PM;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11AM;
+	private: System::Windows::Forms::RadioButton^  rbtn9_10AM;
+	private: System::Windows::Forms::RadioButton^  rbtn8_9AM;
+	private: System::Windows::Forms::Panel^  pnl8_9AM;
+	private: System::Windows::Forms::CheckBox^  chk840_900AM;
+	private: System::Windows::Forms::CheckBox^  chk820_840AM;
+	private: System::Windows::Forms::CheckBox^  chk800_820AM;
+	private: System::Windows::Forms::Panel^  pnl9_10AM;
+	private: System::Windows::Forms::CheckBox^  chk940_10000AM;
+	private: System::Windows::Forms::CheckBox^  chk920_940AM;
+	private: System::Windows::Forms::CheckBox^  chk900_920AM;
+	private: System::Windows::Forms::Panel^  pnl1_2PM;
+	private: System::Windows::Forms::Panel^  pnl11_12PM;
+	private: System::Windows::Forms::Panel^  pnl10_11AM;
+	private: System::Windows::Forms::CheckBox^  chk1040_1100AM;
+	private: System::Windows::Forms::CheckBox^  chk1020_1040AM;
+	private: System::Windows::Forms::CheckBox^  chk1000_1020AM;
+	private: System::Windows::Forms::CheckBox^  chk1140_1200PM;
+	private: System::Windows::Forms::CheckBox^  chk1120_1140AM;
+	private: System::Windows::Forms::CheckBox^  chk1100_1120AM;
+	private: System::Windows::Forms::CheckBox^  chk140_200PM;
+	private: System::Windows::Forms::CheckBox^  chk120_140PM;
+	private: System::Windows::Forms::CheckBox^  chk100_120PM;
+	private: System::Windows::Forms::Panel^  pnl6_7PM;
+	private: System::Windows::Forms::CheckBox^  chk640_700PM;
+	private: System::Windows::Forms::CheckBox^  chk620_640PM;
+	private: System::Windows::Forms::CheckBox^  chk600_620PM;
+	private: System::Windows::Forms::Panel^  pnl5_6PM;
+	private: System::Windows::Forms::CheckBox^  chk540_600PM;
+	private: System::Windows::Forms::CheckBox^  chk520_540PM;
+	private: System::Windows::Forms::CheckBox^  chk500_520PM;
+	private: System::Windows::Forms::Panel^  pnl4_5PM;
+	private: System::Windows::Forms::CheckBox^  chk440_500PM;
+	private: System::Windows::Forms::CheckBox^  chk420_440PM;
+	private: System::Windows::Forms::CheckBox^  chk400_420PM;
+	private: System::Windows::Forms::Panel^  pnl3_4PM;
+	private: System::Windows::Forms::CheckBox^  chk340_400PM;
+	private: System::Windows::Forms::CheckBox^  chk320_340PM;
+	private: System::Windows::Forms::CheckBox^  chk300_320PM;
+	private: System::Windows::Forms::Panel^  pnl2_3PM;
+	private: System::Windows::Forms::CheckBox^  chk240_300PM;
+	private: System::Windows::Forms::CheckBox^  chk220_240PM;
+	private: System::Windows::Forms::CheckBox^  chk200_220PM;
+	private: System::Windows::Forms::Panel^  pnl7_8PM;
+	private: System::Windows::Forms::CheckBox^  chk740_800PM;
+	private: System::Windows::Forms::CheckBox^  chk720_740PM;
+	private: System::Windows::Forms::CheckBox^  chk700_720PM;
+	private: System::Windows::Forms::Panel^  pnl8_9PM;
+	private: System::Windows::Forms::CheckBox^  chk840_900PM;
+	private: System::Windows::Forms::CheckBox^  chk820_840PM;
+	private: System::Windows::Forms::CheckBox^  chk800_820PM;
+	private: System::Windows::Forms::Panel^  pnl9_10PM;
+	private: System::Windows::Forms::CheckBox^  chk940_1000PM;
+	private: System::Windows::Forms::CheckBox^  chk920_940PM;
+	private: System::Windows::Forms::CheckBox^  chk900_920PM;
+	private: System::Windows::Forms::Panel^  pnl10_11PM;
+	private: System::Windows::Forms::CheckBox^  chk1040_1100PM;
+	private: System::Windows::Forms::CheckBox^  chk1020_1040PM;
+	private: System::Windows::Forms::CheckBox^  chk1000_1020PM;
+	private: System::Windows::Forms::Panel^  pnl11_12AM;
+	private: System::Windows::Forms::CheckBox^  chk1140_1200AM;
+	private: System::Windows::Forms::CheckBox^  chk1120_1140PM;
+	private: System::Windows::Forms::CheckBox^  chk1100_1120PM;
+	private: System::Windows::Forms::Panel^  pnl24Hr;
+	private: System::Windows::Forms::RadioButton^  rbtn23_00;	
+	private: System::Windows::Forms::RadioButton^  rbtn22_23;
+	private: System::Windows::Forms::RadioButton^  rbtn21_22;
+	private: System::Windows::Forms::RadioButton^  rbtn20_21;
+	private: System::Windows::Forms::RadioButton^  rbtn19_20;
+	private: System::Windows::Forms::RadioButton^  rbtn18_19;
+	private: System::Windows::Forms::RadioButton^  rbtn17_18;
+	private: System::Windows::Forms::RadioButton^  rbtn16_17;
+	private: System::Windows::Forms::RadioButton^  rbtn15_16;
+	private: System::Windows::Forms::RadioButton^  rbtn14_15;
+	private: System::Windows::Forms::RadioButton^  rbtn13_14;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11;
+	private: System::Windows::Forms::RadioButton^  rbtn09_10;
+	private: System::Windows::Forms::RadioButton^  rbtn08_09;
+	private: System::Windows::Forms::RadioButton^  rbtn07_08;
+	private: System::Windows::Forms::RadioButton^  rbtn06_07;
+	private: System::Windows::Forms::RadioButton^  rbtn05_06;
+	private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
+	private: System::Windows::Forms::ListBox^  lstYourEvents;
+	private: System::Windows::Forms::Label^  lblViewEvent;
+private: System::Windows::Forms::Button^  btnViewEvent;
 
 
+	private: System::Windows::Forms::GroupBox^  grpEventInfo;
+	private: System::Windows::Forms::Label^  lblEventDate;
+	private: System::Windows::Forms::Label^  lblEventLocation;
+	private: System::Windows::Forms::Button^  btnEditAvailability;
+	private: System::Windows::Forms::Label^  lblEventName;
+private: System::Windows::Forms::Button^  btnEventInfoBack;
+private: System::Windows::Forms::Button^  btnModeBack;
+private: System::Windows::Forms::Button^  btnAdminBack;
+private: System::Windows::Forms::Button^  btnUserBack;
+private: System::Windows::Forms::Button^  btnViewEventsBack;
+private: System::Windows::Forms::Button^  btnCreateEventBack;
+private: System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
+private: System::Windows::Forms::TextBox^  textBox5;
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
-
 
 	protected:
 
@@ -118,7 +213,6 @@ namespace Project1 {
 		/// Required designer variable.
 		/// </summary>
 
-
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
@@ -126,403 +220,196 @@ namespace Project1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-<<<<<<< HEAD
-			System::Windows::Forms::TreeNode^  treeNode1 = (gcnew System::Windows::Forms::TreeNode(L"00:00 - 00:20"));
-			System::Windows::Forms::TreeNode^  treeNode2 = (gcnew System::Windows::Forms::TreeNode(L"00:20 - 00:40"));
-			System::Windows::Forms::TreeNode^  treeNode3 = (gcnew System::Windows::Forms::TreeNode(L"00:40 - 01:00"));
-			System::Windows::Forms::TreeNode^  treeNode4 = (gcnew System::Windows::Forms::TreeNode(L"00:00 - 01:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode1,
-					treeNode2, treeNode3
-			}));
-			System::Windows::Forms::TreeNode^  treeNode5 = (gcnew System::Windows::Forms::TreeNode(L"01:00 - 01:20"));
-			System::Windows::Forms::TreeNode^  treeNode6 = (gcnew System::Windows::Forms::TreeNode(L"01:20 - 01:40"));
-			System::Windows::Forms::TreeNode^  treeNode7 = (gcnew System::Windows::Forms::TreeNode(L"01:40 - 02:00"));
-			System::Windows::Forms::TreeNode^  treeNode8 = (gcnew System::Windows::Forms::TreeNode(L"01:00 - 02:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode5,
-					treeNode6, treeNode7
-			}));
-			System::Windows::Forms::TreeNode^  treeNode9 = (gcnew System::Windows::Forms::TreeNode(L"02:00 - 02:20"));
-			System::Windows::Forms::TreeNode^  treeNode10 = (gcnew System::Windows::Forms::TreeNode(L"02:20 - 02:40"));
-			System::Windows::Forms::TreeNode^  treeNode11 = (gcnew System::Windows::Forms::TreeNode(L"02:40 - 03:00"));
-			System::Windows::Forms::TreeNode^  treeNode12 = (gcnew System::Windows::Forms::TreeNode(L"02:00 - 03:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode9,
-					treeNode10, treeNode11
-			}));
-			System::Windows::Forms::TreeNode^  treeNode13 = (gcnew System::Windows::Forms::TreeNode(L"03:00 - 03:20"));
-			System::Windows::Forms::TreeNode^  treeNode14 = (gcnew System::Windows::Forms::TreeNode(L"03:20 - 03:40"));
-			System::Windows::Forms::TreeNode^  treeNode15 = (gcnew System::Windows::Forms::TreeNode(L"03:40 - 04:00"));
-			System::Windows::Forms::TreeNode^  treeNode16 = (gcnew System::Windows::Forms::TreeNode(L"03:00 - 04:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode13,
-					treeNode14, treeNode15
-			}));
-			System::Windows::Forms::TreeNode^  treeNode17 = (gcnew System::Windows::Forms::TreeNode(L"04:00 - 04:20"));
-			System::Windows::Forms::TreeNode^  treeNode18 = (gcnew System::Windows::Forms::TreeNode(L"04:20 - 04:40"));
-			System::Windows::Forms::TreeNode^  treeNode19 = (gcnew System::Windows::Forms::TreeNode(L"04:40 - 05:00"));
-			System::Windows::Forms::TreeNode^  treeNode20 = (gcnew System::Windows::Forms::TreeNode(L"04:00 - 05:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode17,
-					treeNode18, treeNode19
-			}));
-			System::Windows::Forms::TreeNode^  treeNode21 = (gcnew System::Windows::Forms::TreeNode(L"05:00 - 05:20"));
-			System::Windows::Forms::TreeNode^  treeNode22 = (gcnew System::Windows::Forms::TreeNode(L"05:20 - 05:40"));
-			System::Windows::Forms::TreeNode^  treeNode23 = (gcnew System::Windows::Forms::TreeNode(L"05:40 - 06:00"));
-			System::Windows::Forms::TreeNode^  treeNode24 = (gcnew System::Windows::Forms::TreeNode(L"05:00 - 06:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode21,
-					treeNode22, treeNode23
-			}));
-			System::Windows::Forms::TreeNode^  treeNode25 = (gcnew System::Windows::Forms::TreeNode(L"06:00 - 06:20"));
-			System::Windows::Forms::TreeNode^  treeNode26 = (gcnew System::Windows::Forms::TreeNode(L"06:20 - 06:40"));
-			System::Windows::Forms::TreeNode^  treeNode27 = (gcnew System::Windows::Forms::TreeNode(L"06:40 - 07:00"));
-			System::Windows::Forms::TreeNode^  treeNode28 = (gcnew System::Windows::Forms::TreeNode(L"06:00 - 07:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode25,
-					treeNode26, treeNode27
-			}));
-			System::Windows::Forms::TreeNode^  treeNode29 = (gcnew System::Windows::Forms::TreeNode(L"07:00 - 07:20"));
-			System::Windows::Forms::TreeNode^  treeNode30 = (gcnew System::Windows::Forms::TreeNode(L"07:20 - 07:40"));
-			System::Windows::Forms::TreeNode^  treeNode31 = (gcnew System::Windows::Forms::TreeNode(L"07:40 - 08:00"));
-			System::Windows::Forms::TreeNode^  treeNode32 = (gcnew System::Windows::Forms::TreeNode(L"07:00 - 08:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode29,
-					treeNode30, treeNode31
-			}));
-			System::Windows::Forms::TreeNode^  treeNode33 = (gcnew System::Windows::Forms::TreeNode(L"08:00 - 08:20"));
-			System::Windows::Forms::TreeNode^  treeNode34 = (gcnew System::Windows::Forms::TreeNode(L"08:20 - 08:40"));
-			System::Windows::Forms::TreeNode^  treeNode35 = (gcnew System::Windows::Forms::TreeNode(L"08:40 - 09:00"));
-			System::Windows::Forms::TreeNode^  treeNode36 = (gcnew System::Windows::Forms::TreeNode(L"08:00 - 09:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode33,
-					treeNode34, treeNode35
-			}));
-			System::Windows::Forms::TreeNode^  treeNode37 = (gcnew System::Windows::Forms::TreeNode(L"09:00 - 09:20"));
-			System::Windows::Forms::TreeNode^  treeNode38 = (gcnew System::Windows::Forms::TreeNode(L"09:20 - 09:40"));
-			System::Windows::Forms::TreeNode^  treeNode39 = (gcnew System::Windows::Forms::TreeNode(L"09:40 - 10:00"));
-			System::Windows::Forms::TreeNode^  treeNode40 = (gcnew System::Windows::Forms::TreeNode(L"09:00 - 10:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode37,
-					treeNode38, treeNode39
-			}));
-			System::Windows::Forms::TreeNode^  treeNode41 = (gcnew System::Windows::Forms::TreeNode(L"10:00 - 10:20"));
-			System::Windows::Forms::TreeNode^  treeNode42 = (gcnew System::Windows::Forms::TreeNode(L"10:20 - 10:40"));
-			System::Windows::Forms::TreeNode^  treeNode43 = (gcnew System::Windows::Forms::TreeNode(L"10:40 - 11:00"));
-			System::Windows::Forms::TreeNode^  treeNode44 = (gcnew System::Windows::Forms::TreeNode(L"10:00 - 11:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode41,
-					treeNode42, treeNode43
-			}));
-			System::Windows::Forms::TreeNode^  treeNode45 = (gcnew System::Windows::Forms::TreeNode(L"11:00 - 11:20"));
-			System::Windows::Forms::TreeNode^  treeNode46 = (gcnew System::Windows::Forms::TreeNode(L"11:20 - 11:40"));
-			System::Windows::Forms::TreeNode^  treeNode47 = (gcnew System::Windows::Forms::TreeNode(L"11:40 - 12:00"));
-			System::Windows::Forms::TreeNode^  treeNode48 = (gcnew System::Windows::Forms::TreeNode(L"11:00 - 12:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode45,
-					treeNode46, treeNode47
-			}));
-			System::Windows::Forms::TreeNode^  treeNode49 = (gcnew System::Windows::Forms::TreeNode(L"12:00-12:20"));
-			System::Windows::Forms::TreeNode^  treeNode50 = (gcnew System::Windows::Forms::TreeNode(L"12:20 - 12:40"));
-			System::Windows::Forms::TreeNode^  treeNode51 = (gcnew System::Windows::Forms::TreeNode(L"12:40 - 13:00"));
-			System::Windows::Forms::TreeNode^  treeNode52 = (gcnew System::Windows::Forms::TreeNode(L"12:00 - 13:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode49,
-					treeNode50, treeNode51
-			}));
-			System::Windows::Forms::TreeNode^  treeNode53 = (gcnew System::Windows::Forms::TreeNode(L"13:00 - 13:20"));
-			System::Windows::Forms::TreeNode^  treeNode54 = (gcnew System::Windows::Forms::TreeNode(L"13:20 - 13:40"));
-			System::Windows::Forms::TreeNode^  treeNode55 = (gcnew System::Windows::Forms::TreeNode(L"13:40 - 14:00"));
-			System::Windows::Forms::TreeNode^  treeNode56 = (gcnew System::Windows::Forms::TreeNode(L"13:00 - 14:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode53,
-					treeNode54, treeNode55
-			}));
-			System::Windows::Forms::TreeNode^  treeNode57 = (gcnew System::Windows::Forms::TreeNode(L"14:00 - 14:20"));
-			System::Windows::Forms::TreeNode^  treeNode58 = (gcnew System::Windows::Forms::TreeNode(L"14:20 - 14:40"));
-			System::Windows::Forms::TreeNode^  treeNode59 = (gcnew System::Windows::Forms::TreeNode(L"14:40 - 15:00"));
-			System::Windows::Forms::TreeNode^  treeNode60 = (gcnew System::Windows::Forms::TreeNode(L"14:00 - 15:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode57,
-					treeNode58, treeNode59
-			}));
-			System::Windows::Forms::TreeNode^  treeNode61 = (gcnew System::Windows::Forms::TreeNode(L"15:00 - 15:20"));
-			System::Windows::Forms::TreeNode^  treeNode62 = (gcnew System::Windows::Forms::TreeNode(L"15:20 - 15:40"));
-			System::Windows::Forms::TreeNode^  treeNode63 = (gcnew System::Windows::Forms::TreeNode(L"15:40 - 16:00"));
-			System::Windows::Forms::TreeNode^  treeNode64 = (gcnew System::Windows::Forms::TreeNode(L"15:00 - 16:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode61,
-					treeNode62, treeNode63
-			}));
-			System::Windows::Forms::TreeNode^  treeNode65 = (gcnew System::Windows::Forms::TreeNode(L"16:00 - 16:20"));
-			System::Windows::Forms::TreeNode^  treeNode66 = (gcnew System::Windows::Forms::TreeNode(L"16:20 - 16:40"));
-			System::Windows::Forms::TreeNode^  treeNode67 = (gcnew System::Windows::Forms::TreeNode(L"16:40 - 17:00"));
-			System::Windows::Forms::TreeNode^  treeNode68 = (gcnew System::Windows::Forms::TreeNode(L"16:00 - 17:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode65,
-					treeNode66, treeNode67
-			}));
-			System::Windows::Forms::TreeNode^  treeNode69 = (gcnew System::Windows::Forms::TreeNode(L"17:00 - 17:20"));
-			System::Windows::Forms::TreeNode^  treeNode70 = (gcnew System::Windows::Forms::TreeNode(L"17:20 - 17:40"));
-			System::Windows::Forms::TreeNode^  treeNode71 = (gcnew System::Windows::Forms::TreeNode(L"17:40 - 18:00"));
-			System::Windows::Forms::TreeNode^  treeNode72 = (gcnew System::Windows::Forms::TreeNode(L"17:00 - 18:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode69,
-					treeNode70, treeNode71
-			}));
-			System::Windows::Forms::TreeNode^  treeNode73 = (gcnew System::Windows::Forms::TreeNode(L"18:00 - 18:20"));
-			System::Windows::Forms::TreeNode^  treeNode74 = (gcnew System::Windows::Forms::TreeNode(L"18:20 - 18:40"));
-			System::Windows::Forms::TreeNode^  treeNode75 = (gcnew System::Windows::Forms::TreeNode(L"18:40 - 19:00"));
-			System::Windows::Forms::TreeNode^  treeNode76 = (gcnew System::Windows::Forms::TreeNode(L"18:00 - 19:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode73,
-					treeNode74, treeNode75
-			}));
-			System::Windows::Forms::TreeNode^  treeNode77 = (gcnew System::Windows::Forms::TreeNode(L"19:00 - 19:20"));
-			System::Windows::Forms::TreeNode^  treeNode78 = (gcnew System::Windows::Forms::TreeNode(L"19:20 - 19:40"));
-			System::Windows::Forms::TreeNode^  treeNode79 = (gcnew System::Windows::Forms::TreeNode(L"19:40 - 20:00"));
-			System::Windows::Forms::TreeNode^  treeNode80 = (gcnew System::Windows::Forms::TreeNode(L"19:00 - 20:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode77,
-					treeNode78, treeNode79
-			}));
-			System::Windows::Forms::TreeNode^  treeNode81 = (gcnew System::Windows::Forms::TreeNode(L"20:00 - 20:20"));
-			System::Windows::Forms::TreeNode^  treeNode82 = (gcnew System::Windows::Forms::TreeNode(L"20:20 - 20:40"));
-			System::Windows::Forms::TreeNode^  treeNode83 = (gcnew System::Windows::Forms::TreeNode(L"20:40 - 21:00"));
-			System::Windows::Forms::TreeNode^  treeNode84 = (gcnew System::Windows::Forms::TreeNode(L"20:00 - 21:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode81,
-					treeNode82, treeNode83
-			}));
-			System::Windows::Forms::TreeNode^  treeNode85 = (gcnew System::Windows::Forms::TreeNode(L"21:00 - 21:20"));
-			System::Windows::Forms::TreeNode^  treeNode86 = (gcnew System::Windows::Forms::TreeNode(L"21:20 - 21:40"));
-			System::Windows::Forms::TreeNode^  treeNode87 = (gcnew System::Windows::Forms::TreeNode(L"21:40 - 22:00"));
-			System::Windows::Forms::TreeNode^  treeNode88 = (gcnew System::Windows::Forms::TreeNode(L"21:00 - 22:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode85,
-					treeNode86, treeNode87
-			}));
-			System::Windows::Forms::TreeNode^  treeNode89 = (gcnew System::Windows::Forms::TreeNode(L"22:00 - 22:20"));
-			System::Windows::Forms::TreeNode^  treeNode90 = (gcnew System::Windows::Forms::TreeNode(L"22:20 - 22:40"));
-			System::Windows::Forms::TreeNode^  treeNode91 = (gcnew System::Windows::Forms::TreeNode(L"22:40 - 23:00"));
-			System::Windows::Forms::TreeNode^  treeNode92 = (gcnew System::Windows::Forms::TreeNode(L"22:00 - 23:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode89,
-					treeNode90, treeNode91
-			}));
-			System::Windows::Forms::TreeNode^  treeNode93 = (gcnew System::Windows::Forms::TreeNode(L"23:00 - 23:20"));
-			System::Windows::Forms::TreeNode^  treeNode94 = (gcnew System::Windows::Forms::TreeNode(L"23:20 - 23:40"));
-			System::Windows::Forms::TreeNode^  treeNode95 = (gcnew System::Windows::Forms::TreeNode(L"23:40 - 00:00"));
-			System::Windows::Forms::TreeNode^  treeNode96 = (gcnew System::Windows::Forms::TreeNode(L"23:00 - 00:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode93,
-					treeNode94, treeNode95
-			}));
-			System::Windows::Forms::TreeNode^  treeNode97 = (gcnew System::Windows::Forms::TreeNode(L"12:00 AM - 12:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode98 = (gcnew System::Windows::Forms::TreeNode(L"12:20 AM - 12:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode99 = (gcnew System::Windows::Forms::TreeNode(L"12:40 AM - 1:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode100 = (gcnew System::Windows::Forms::TreeNode(L"12 AM - 1AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode97,
-					treeNode98, treeNode99
-			}));
-			System::Windows::Forms::TreeNode^  treeNode101 = (gcnew System::Windows::Forms::TreeNode(L"1:00 AM - 1:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode102 = (gcnew System::Windows::Forms::TreeNode(L"1:20 AM - 1:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode103 = (gcnew System::Windows::Forms::TreeNode(L"1:40 AM - 2:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode104 = (gcnew System::Windows::Forms::TreeNode(L"1 AM - 2 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode101,
-					treeNode102, treeNode103
-			}));
-			System::Windows::Forms::TreeNode^  treeNode105 = (gcnew System::Windows::Forms::TreeNode(L"2:00 AM - 2:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode106 = (gcnew System::Windows::Forms::TreeNode(L"2:20 AM - 2:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode107 = (gcnew System::Windows::Forms::TreeNode(L"2:40 AM - 3:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode108 = (gcnew System::Windows::Forms::TreeNode(L"2 AM - 3 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode105,
-					treeNode106, treeNode107
-			}));
-			System::Windows::Forms::TreeNode^  treeNode109 = (gcnew System::Windows::Forms::TreeNode(L"3:00 AM - 3:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode110 = (gcnew System::Windows::Forms::TreeNode(L"3:20 AM - 3:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode111 = (gcnew System::Windows::Forms::TreeNode(L"3:40 AM - 4:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode112 = (gcnew System::Windows::Forms::TreeNode(L"3 AM - 4 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode109,
-					treeNode110, treeNode111
-			}));
-			System::Windows::Forms::TreeNode^  treeNode113 = (gcnew System::Windows::Forms::TreeNode(L"4:00 AM - 4:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode114 = (gcnew System::Windows::Forms::TreeNode(L"4:20 AM - 4:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode115 = (gcnew System::Windows::Forms::TreeNode(L"4:40 AM - 5:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode116 = (gcnew System::Windows::Forms::TreeNode(L"4 AM - 5 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode113,
-					treeNode114, treeNode115
-			}));
-			System::Windows::Forms::TreeNode^  treeNode117 = (gcnew System::Windows::Forms::TreeNode(L"5:00 AM - 5:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode118 = (gcnew System::Windows::Forms::TreeNode(L"5:20 AM - 5:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode119 = (gcnew System::Windows::Forms::TreeNode(L"5:40 AM - 6:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode120 = (gcnew System::Windows::Forms::TreeNode(L"5AM - 6 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode117,
-					treeNode118, treeNode119
-			}));
-			System::Windows::Forms::TreeNode^  treeNode121 = (gcnew System::Windows::Forms::TreeNode(L"6:00 AM - 6:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode122 = (gcnew System::Windows::Forms::TreeNode(L"6:20 AM - 6:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode123 = (gcnew System::Windows::Forms::TreeNode(L"6:40 AM - 7:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode124 = (gcnew System::Windows::Forms::TreeNode(L"6 AM - 7 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode121,
-					treeNode122, treeNode123
-			}));
-			System::Windows::Forms::TreeNode^  treeNode125 = (gcnew System::Windows::Forms::TreeNode(L"7:00 AM - 7:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode126 = (gcnew System::Windows::Forms::TreeNode(L"7:20 AM - 7:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode127 = (gcnew System::Windows::Forms::TreeNode(L"7:40 AM - 8:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode128 = (gcnew System::Windows::Forms::TreeNode(L"7 AM - 8 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode125,
-					treeNode126, treeNode127
-			}));
-			System::Windows::Forms::TreeNode^  treeNode129 = (gcnew System::Windows::Forms::TreeNode(L"8:00 AM - 8:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode130 = (gcnew System::Windows::Forms::TreeNode(L"8:20 AM - 8:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode131 = (gcnew System::Windows::Forms::TreeNode(L"8:40 AM - 9:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode132 = (gcnew System::Windows::Forms::TreeNode(L"8 AM - 9 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode129,
-					treeNode130, treeNode131
-			}));
-			System::Windows::Forms::TreeNode^  treeNode133 = (gcnew System::Windows::Forms::TreeNode(L"9:00 AM - 9:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode134 = (gcnew System::Windows::Forms::TreeNode(L"9:20 AM - 9:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode135 = (gcnew System::Windows::Forms::TreeNode(L"9:40 AM - 10:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode136 = (gcnew System::Windows::Forms::TreeNode(L"9 AM - 10 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode133,
-					treeNode134, treeNode135
-			}));
-			System::Windows::Forms::TreeNode^  treeNode137 = (gcnew System::Windows::Forms::TreeNode(L"10:00 AM - 10:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode138 = (gcnew System::Windows::Forms::TreeNode(L"10:20 AM - 10:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode139 = (gcnew System::Windows::Forms::TreeNode(L"10:40 AM - 11:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode140 = (gcnew System::Windows::Forms::TreeNode(L"10 AM - 11 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode137,
-					treeNode138, treeNode139
-			}));
-			System::Windows::Forms::TreeNode^  treeNode141 = (gcnew System::Windows::Forms::TreeNode(L"11:00 AM - 11:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode142 = (gcnew System::Windows::Forms::TreeNode(L"11:20 AM - 11:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode143 = (gcnew System::Windows::Forms::TreeNode(L"11:40 AM - 12:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode144 = (gcnew System::Windows::Forms::TreeNode(L"11 PM - 12 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode141,
-					treeNode142, treeNode143
-			}));
-			System::Windows::Forms::TreeNode^  treeNode145 = (gcnew System::Windows::Forms::TreeNode(L"12:00 PM - 12:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode146 = (gcnew System::Windows::Forms::TreeNode(L"12:20 PM - 12:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode147 = (gcnew System::Windows::Forms::TreeNode(L"12:40 PM - 1:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode148 = (gcnew System::Windows::Forms::TreeNode(L"12 PM - 1 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode145,
-					treeNode146, treeNode147
-			}));
-			System::Windows::Forms::TreeNode^  treeNode149 = (gcnew System::Windows::Forms::TreeNode(L"1:00 PM - 1:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode150 = (gcnew System::Windows::Forms::TreeNode(L"1:20 PM - 1:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode151 = (gcnew System::Windows::Forms::TreeNode(L"1:40 PM - 2:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode152 = (gcnew System::Windows::Forms::TreeNode(L"1 PM - 2 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode149,
-					treeNode150, treeNode151
-			}));
-			System::Windows::Forms::TreeNode^  treeNode153 = (gcnew System::Windows::Forms::TreeNode(L"2:00 PM - 2:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode154 = (gcnew System::Windows::Forms::TreeNode(L"2:20 PM - 2:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode155 = (gcnew System::Windows::Forms::TreeNode(L"2:40 PM - 3:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode156 = (gcnew System::Windows::Forms::TreeNode(L"2 PM - 3 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode153,
-					treeNode154, treeNode155
-			}));
-			System::Windows::Forms::TreeNode^  treeNode157 = (gcnew System::Windows::Forms::TreeNode(L"3:00 PM - 3:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode158 = (gcnew System::Windows::Forms::TreeNode(L"3:20 PM - 3:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode159 = (gcnew System::Windows::Forms::TreeNode(L"3:40 PM - 4:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode160 = (gcnew System::Windows::Forms::TreeNode(L"3 PM - 4 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode157,
-					treeNode158, treeNode159
-			}));
-			System::Windows::Forms::TreeNode^  treeNode161 = (gcnew System::Windows::Forms::TreeNode(L"4:00 PM - 4:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode162 = (gcnew System::Windows::Forms::TreeNode(L"4:20 PM - 4:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode163 = (gcnew System::Windows::Forms::TreeNode(L"4:40 PM - 5:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode164 = (gcnew System::Windows::Forms::TreeNode(L"4 PM - 5 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode161,
-					treeNode162, treeNode163
-			}));
-			System::Windows::Forms::TreeNode^  treeNode165 = (gcnew System::Windows::Forms::TreeNode(L"5:00 PM - 5:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode166 = (gcnew System::Windows::Forms::TreeNode(L"5:20 PM - 5:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode167 = (gcnew System::Windows::Forms::TreeNode(L"5:40 PM - 6:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode168 = (gcnew System::Windows::Forms::TreeNode(L"5 PM - 6 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode165,
-					treeNode166, treeNode167
-			}));
-			System::Windows::Forms::TreeNode^  treeNode169 = (gcnew System::Windows::Forms::TreeNode(L"6:00 PM - 6:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode170 = (gcnew System::Windows::Forms::TreeNode(L"6:20 PM - 6:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode171 = (gcnew System::Windows::Forms::TreeNode(L"6:40 PM - 7:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode172 = (gcnew System::Windows::Forms::TreeNode(L"6 PM - 7 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode169,
-					treeNode170, treeNode171
-			}));
-			System::Windows::Forms::TreeNode^  treeNode173 = (gcnew System::Windows::Forms::TreeNode(L"7:00 PM - 7:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode174 = (gcnew System::Windows::Forms::TreeNode(L"7:20 PM - 7:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode175 = (gcnew System::Windows::Forms::TreeNode(L"7:40 PM - 8:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode176 = (gcnew System::Windows::Forms::TreeNode(L"7 PM - 8 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode173,
-					treeNode174, treeNode175
-			}));
-			System::Windows::Forms::TreeNode^  treeNode177 = (gcnew System::Windows::Forms::TreeNode(L"8:00 PM - 8:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode178 = (gcnew System::Windows::Forms::TreeNode(L"8:20 PM - 8:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode179 = (gcnew System::Windows::Forms::TreeNode(L"8:40 PM - 9:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode180 = (gcnew System::Windows::Forms::TreeNode(L"8 PM - 9 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode177,
-					treeNode178, treeNode179
-			}));
-			System::Windows::Forms::TreeNode^  treeNode181 = (gcnew System::Windows::Forms::TreeNode(L"9:00 PM - 9:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode182 = (gcnew System::Windows::Forms::TreeNode(L"9:20 PM - 9:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode183 = (gcnew System::Windows::Forms::TreeNode(L"9:40 PM - 10:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode184 = (gcnew System::Windows::Forms::TreeNode(L"9 PM - 10 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode181,
-					treeNode182, treeNode183
-			}));
-			System::Windows::Forms::TreeNode^  treeNode185 = (gcnew System::Windows::Forms::TreeNode(L"10:00 PM - 10:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode186 = (gcnew System::Windows::Forms::TreeNode(L"10:20 PM - 10:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode187 = (gcnew System::Windows::Forms::TreeNode(L"10:40 PM - 11:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode188 = (gcnew System::Windows::Forms::TreeNode(L"10 PM - 11 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode185,
-					treeNode186, treeNode187
-			}));
-			System::Windows::Forms::TreeNode^  treeNode189 = (gcnew System::Windows::Forms::TreeNode(L"11:00 PM - 11:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode190 = (gcnew System::Windows::Forms::TreeNode(L"11:20 PM - 11:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode191 = (gcnew System::Windows::Forms::TreeNode(L"11:40 PM - 12:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode192 = (gcnew System::Windows::Forms::TreeNode(L"11 PM - 12 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode189,
-					treeNode190, treeNode191
-			}));
-			this->txtUser = (gcnew System::Windows::Forms::TextBox());
-			this->btnLogin = (gcnew System::Windows::Forms::Button());
-			this->lblLogin = (gcnew System::Windows::Forms::Label());
-			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
-			this->lblSignedIn = (gcnew System::Windows::Forms::Label());
-			this->txtPassword = (gcnew System::Windows::Forms::TextBox());
-			this->lblUser = (gcnew System::Windows::Forms::Label());
-			this->lblPassword = (gcnew System::Windows::Forms::Label());
+			this->components = (gcnew System::ComponentModel::Container());
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblName = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->lblDate = (gcnew System::Windows::Forms::Label());
 			this->lblLocation = (gcnew System::Windows::Forms::Label());
 			this->lblNote = (gcnew System::Windows::Forms::Label());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->btnSubmitEvent = (gcnew System::Windows::Forms::Button());
 			this->lblCreateEvent = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->lblTime = (gcnew System::Windows::Forms::Label());
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
+			this->btnAdminBack = (gcnew System::Windows::Forms::Button());
 			this->btnCreateEvent = (gcnew System::Windows::Forms::Button());
-			this->btnViewSchedule = (gcnew System::Windows::Forms::Button());
 			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
-			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
-			this->grpUser = (gcnew System::Windows::Forms::GroupBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->grpViewSchedule = (gcnew System::Windows::Forms::GroupBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->lblSchedule = (gcnew System::Windows::Forms::Label());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
+			this->lblUser = (gcnew System::Windows::Forms::Label());
+			this->btnLogin = (gcnew System::Windows::Forms::Button());
+			this->txtUser = (gcnew System::Windows::Forms::TextBox());
 			this->rbtn12Hr = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn24Hr = (gcnew System::Windows::Forms::RadioButton());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->grpMode = (gcnew System::Windows::Forms::GroupBox());
+			this->btnModeBack = (gcnew System::Windows::Forms::Button());
+			this->btnAdmin = (gcnew System::Windows::Forms::Button());
+			this->btnUser = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
-			this->trv24Hr = (gcnew System::Windows::Forms::TreeView());
-			this->trv12Hr = (gcnew System::Windows::Forms::TreeView());
-			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
+			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn10_11PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn9_10PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn8_9PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn7_8PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn6_7PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn5_6PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn4_5PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn3_4PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn2_3PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn1_2PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn11_12PM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn10_11AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn9_10AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn8_9AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn7_8AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn6_7AM = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn5_6AM = (gcnew System::Windows::Forms::RadioButton());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->grpLogin->SuspendLayout();
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->pnl5_6AM = (gcnew System::Windows::Forms::Panel());
+			this->chk540_600AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk520_540AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk500_520AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl7_8AM = (gcnew System::Windows::Forms::Panel());
+			this->chk740_800AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk720_740AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk700_720AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl2_3PM = (gcnew System::Windows::Forms::Panel());
+			this->chk240_300PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk220_240PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk200_220PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl1_2PM = (gcnew System::Windows::Forms::Panel());
+			this->chk140_200PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk120_140PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk100_120PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl9_10AM = (gcnew System::Windows::Forms::Panel());
+			this->chk940_10000AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk920_940AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk900_920AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl7_8PM = (gcnew System::Windows::Forms::Panel());
+			this->chk740_800PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk720_740PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk700_720PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl3_4PM = (gcnew System::Windows::Forms::Panel());
+			this->chk340_400PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk320_340PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk300_320PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl11_12PM = (gcnew System::Windows::Forms::Panel());
+			this->chk1140_1200PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1120_1140AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1100_1120AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl6_7AM = (gcnew System::Windows::Forms::Panel());
+			this->chk640_700AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk620_640AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk600_620AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl11_12AM = (gcnew System::Windows::Forms::Panel());
+			this->chk1140_1200AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1120_1140PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1100_1120PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl4_5PM = (gcnew System::Windows::Forms::Panel());
+			this->chk440_500PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk420_440PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk400_420PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl10_11PM = (gcnew System::Windows::Forms::Panel());
+			this->chk1040_1100PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1020_1040PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1000_1020PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl10_11AM = (gcnew System::Windows::Forms::Panel());
+			this->chk1040_1100AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1020_1040AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk1000_1020AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl9_10PM = (gcnew System::Windows::Forms::Panel());
+			this->chk940_1000PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk920_940PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk900_920PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl5_6PM = (gcnew System::Windows::Forms::Panel());
+			this->chk540_600PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk520_540PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk500_520PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl8_9PM = (gcnew System::Windows::Forms::Panel());
+			this->chk840_900PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk820_840PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk800_820PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl8_9AM = (gcnew System::Windows::Forms::Panel());
+			this->chk840_900AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk820_840AM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk800_820AM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl6_7PM = (gcnew System::Windows::Forms::Panel());
+			this->chk640_700PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk620_640PM = (gcnew System::Windows::Forms::CheckBox());
+			this->chk600_620PM = (gcnew System::Windows::Forms::CheckBox());
+			this->pnl24Hr = (gcnew System::Windows::Forms::Panel());
+			this->rbtn23_00 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn22_23 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn21_22 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn20_21 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn19_20 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn18_19 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn17_18 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn16_17 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn15_16 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn14_15 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn13_14 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn11_12 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn10_11 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn09_10 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn08_09 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn07_08 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn06_07 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbtn05_06 = (gcnew System::Windows::Forms::RadioButton());
+			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
+			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
+			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
+			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
+			this->btnUserBack = (gcnew System::Windows::Forms::Button());
+			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
+			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
+			this->lblEventDate = (gcnew System::Windows::Forms::Label());
+			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
+			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
+			this->lblEventName = (gcnew System::Windows::Forms::Label());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
-			this->grpUser->SuspendLayout();
-			this->grpViewSchedule->SuspendLayout();
-			this->groupBox1->SuspendLayout();
-			this->groupBox2->SuspendLayout();
+			this->grpLogin->SuspendLayout();
+			this->grpMode->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
+			this->pnl12Hr->SuspendLayout();
+			this->panel5->SuspendLayout();
+			this->pnl5_6AM->SuspendLayout();
+			this->pnl7_8AM->SuspendLayout();
+			this->pnl2_3PM->SuspendLayout();
+			this->pnl1_2PM->SuspendLayout();
+			this->pnl9_10AM->SuspendLayout();
+			this->pnl7_8PM->SuspendLayout();
+			this->pnl3_4PM->SuspendLayout();
+			this->pnl11_12PM->SuspendLayout();
+			this->pnl6_7AM->SuspendLayout();
+			this->pnl11_12AM->SuspendLayout();
+			this->pnl4_5PM->SuspendLayout();
+			this->pnl10_11PM->SuspendLayout();
+			this->pnl10_11AM->SuspendLayout();
+			this->pnl9_10PM->SuspendLayout();
+			this->pnl5_6PM->SuspendLayout();
+			this->pnl8_9PM->SuspendLayout();
+			this->pnl8_9AM->SuspendLayout();
+			this->pnl6_7PM->SuspendLayout();
+			this->pnl24Hr->SuspendLayout();
+			this->grpViewYourEvents->SuspendLayout();
+			this->grpEventInfo->SuspendLayout();
 			this->SuspendLayout();
 			// 
+<<<<<<< HEAD
 			// txtUser
 			// 
 			this->txtUser->Location = System::Drawing::Point(95, 128);
@@ -610,41 +497,58 @@ namespace Project1 {
 			this->lblPassword->TabIndex = 3;
 			this->lblPassword->Text = L"Password:";
 			// 
+=======
+>>>>>>> origin/UI
 			// grpCreateEvent
 			// 
+			this->grpCreateEvent->Controls->Add(this->textBox4);
+			this->grpCreateEvent->Controls->Add(this->btnCreateEventBack);
 			this->grpCreateEvent->Controls->Add(this->textBox3);
 			this->grpCreateEvent->Controls->Add(this->monthCalendar1);
 			this->grpCreateEvent->Controls->Add(this->textBox2);
 			this->grpCreateEvent->Controls->Add(this->textBox1);
 			this->grpCreateEvent->Controls->Add(this->lblName);
-			this->grpCreateEvent->Controls->Add(this->dateTimePicker1);
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->lblLocation);
 			this->grpCreateEvent->Controls->Add(this->lblNote);
-			this->grpCreateEvent->Controls->Add(this->button6);
+			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(275, 91);
-			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->grpCreateEvent->Location = System::Drawing::Point(54, 82);
+>>>>>>> origin/UI
 			this->grpCreateEvent->Name = L"grpCreateEvent";
-			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->grpCreateEvent->Size = System::Drawing::Size(629, 543);
+			this->grpCreateEvent->Size = System::Drawing::Size(472, 441);
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
 			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(63, 275);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->TabIndex = 13;
+			// 
+			// btnCreateEventBack
+			// 
+			this->btnCreateEventBack->Location = System::Drawing::Point(191, 414);
+			this->btnCreateEventBack->Name = L"btnCreateEventBack";
+			this->btnCreateEventBack->Size = System::Drawing::Size(103, 23);
+			this->btnCreateEventBack->TabIndex = 10;
+			this->btnCreateEventBack->Text = L"Back";
+			this->btnCreateEventBack->UseVisualStyleBackColor = true;
+			this->btnCreateEventBack->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEventBack_Click);
+			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(113, 442);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox3->Location = System::Drawing::Point(85, 359);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(301, 22);
+			this->textBox3->Size = System::Drawing::Size(227, 20);
 			this->textBox3->TabIndex = 12;
 			// 
 			// monthCalendar1
 			// 
-			this->monthCalendar1->Location = System::Drawing::Point(113, 123);
-			this->monthCalendar1->Margin = System::Windows::Forms::Padding(12, 11, 12, 11);
-			this->monthCalendar1->MaximumSize = System::Drawing::Size(667, 615);
+			this->monthCalendar1->Location = System::Drawing::Point(85, 100);
+			this->monthCalendar1->MaximumSize = System::Drawing::Size(500, 500);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
@@ -652,10 +556,9 @@ namespace Project1 {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(113, 402);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Location = System::Drawing::Point(85, 327);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(301, 22);
+			this->textBox2->Size = System::Drawing::Size(227, 20);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox1
@@ -675,15 +578,6 @@ namespace Project1 {
 			this->lblName->Size = System::Drawing::Size(49, 17);
 			this->lblName->TabIndex = 9;
 			this->lblName->Text = L"Name:";
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(343, 34);
-			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(265, 22);
-			this->dateTimePicker1->TabIndex = 7;
-			this->dateTimePicker1->Visible = false;
 			// 
 			// lblDate
 			// 
@@ -715,16 +609,18 @@ namespace Project1 {
 			this->lblNote->TabIndex = 3;
 			this->lblNote->Text = L"Note:";
 			// 
-			// button6
+			// btnSubmitEvent
 			// 
-			this->button6->Location = System::Drawing::Point(155, 496);
-			this->button6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(137, 28);
-			this->button6->TabIndex = 0;
-			this->button6->Text = L"Submit";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+<<<<<<< HEAD
+=======
+			this->btnSubmitEvent->Location = System::Drawing::Point(191, 385);
+			this->btnSubmitEvent->Name = L"btnSubmitEvent";
+			this->btnSubmitEvent->Size = System::Drawing::Size(103, 23);
+			this->btnSubmitEvent->TabIndex = 0;
+			this->btnSubmitEvent->Text = L"Submit";
+			this->btnSubmitEvent->UseVisualStyleBackColor = true;
+			this->btnSubmitEvent->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitEvent_Click);
+>>>>>>> origin/UI
 			// 
 			// lblCreateEvent
 			// 
@@ -736,44 +632,35 @@ namespace Project1 {
 			this->lblCreateEvent->TabIndex = 2;
 			this->lblCreateEvent->Text = L"Create Event:";
 			// 
-			// dateTimePicker2
-			// 
-			this->dateTimePicker2->CustomFormat = L"hh:mm tt";
-			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(91, 185);
-			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->ShowUpDown = true;
-			this->dateTimePicker2->Size = System::Drawing::Size(301, 22);
-			this->dateTimePicker2->TabIndex = 8;
-			this->dateTimePicker2->Value = System::DateTime(2018, 1, 30, 12, 0, 0, 0);
-			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker2_ValueChanged);
-			// 
-			// lblTime
-			// 
-			this->lblTime->AutoSize = true;
-			this->lblTime->Location = System::Drawing::Point(-3, 188);
-			this->lblTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblTime->Name = L"lblTime";
-			this->lblTime->Size = System::Drawing::Size(43, 17);
-			this->lblTime->TabIndex = 5;
-			this->lblTime->Text = L"Time:";
-			// 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/UI
 			// grpAdmin
 			// 
+			this->grpAdmin->Controls->Add(this->btnAdminBack);
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
-			this->grpAdmin->Controls->Add(this->btnViewSchedule);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
-			this->grpAdmin->Controls->Add(this->btnEditAvailability);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(388, 91);
-			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+<<<<<<< HEAD
+=======
+			this->grpAdmin->Location = System::Drawing::Point(762, 85);
+>>>>>>> origin/UI
 			this->grpAdmin->Name = L"grpAdmin";
 			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->grpAdmin->Size = System::Drawing::Size(267, 341);
 			this->grpAdmin->TabIndex = 7;
 			this->grpAdmin->TabStop = false;
 			this->grpAdmin->Visible = false;
+			// 
+			// btnAdminBack
+			// 
+			this->btnAdminBack->Location = System::Drawing::Point(50, 137);
+			this->btnAdminBack->Name = L"btnAdminBack";
+			this->btnAdminBack->Size = System::Drawing::Size(103, 23);
+			this->btnAdminBack->TabIndex = 10;
+			this->btnAdminBack->Text = L"Back";
+			this->btnAdminBack->UseVisualStyleBackColor = true;
+			this->btnAdminBack->Click += gcnew System::EventHandler(this, &MyForm::btnAdminBack_Click);
 			// 
 			// btnCreateEvent
 			// 
@@ -786,17 +673,9 @@ namespace Project1 {
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
 			this->btnCreateEvent->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEvent_Click);
 			// 
-			// btnViewSchedule
-			// 
-			this->btnViewSchedule->Location = System::Drawing::Point(67, 169);
-			this->btnViewSchedule->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->btnViewSchedule->Name = L"btnViewSchedule";
-			this->btnViewSchedule->Size = System::Drawing::Size(137, 28);
-			this->btnViewSchedule->TabIndex = 4;
-			this->btnViewSchedule->Text = L"View Schedule";
-			this->btnViewSchedule->UseVisualStyleBackColor = true;
-			this->btnViewSchedule->Click += gcnew System::EventHandler(this, &MyForm::btnViewSchedule_Click);
-			// 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/UI
 			// btnEditEvents
 			// 
 			this->btnEditEvents->Location = System::Drawing::Point(67, 133);
@@ -804,18 +683,20 @@ namespace Project1 {
 			this->btnEditEvents->Name = L"btnEditEvents";
 			this->btnEditEvents->Size = System::Drawing::Size(137, 28);
 			this->btnEditEvents->TabIndex = 3;
-			this->btnEditEvents->Text = L"Edit Events";
+			this->btnEditEvents->Text = L"View Your Events";
 			this->btnEditEvents->UseVisualStyleBackColor = true;
+<<<<<<< HEAD
 			// 
 			// btnEditAvailability
 			// 
 			this->btnEditAvailability->Location = System::Drawing::Point(67, 204);
-			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
 			this->btnEditAvailability->Size = System::Drawing::Size(137, 28);
 			this->btnEditAvailability->TabIndex = 0;
 			this->btnEditAvailability->Text = L"Edit Availability";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
+			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
+>>>>>>> origin/UI
 			// 
 			// lblAdmin
 			// 
@@ -827,139 +708,63 @@ namespace Project1 {
 			this->lblAdmin->TabIndex = 2;
 			this->lblAdmin->Text = L"Make a Selection:";
 			// 
-			// grpUser
+<<<<<<< HEAD
+=======
+			// grpLogin
 			// 
-			this->grpUser->Controls->Add(this->button2);
-			this->grpUser->Controls->Add(this->button4);
-			this->grpUser->Controls->Add(this->label1);
-			this->grpUser->Location = System::Drawing::Point(388, 91);
-			this->grpUser->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->grpUser->Name = L"grpUser";
-			this->grpUser->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->grpUser->Size = System::Drawing::Size(267, 341);
-			this->grpUser->TabIndex = 8;
-			this->grpUser->TabStop = false;
-			this->grpUser->Visible = false;
+			this->grpLogin->Controls->Add(this->lblUser);
+			this->grpLogin->Controls->Add(this->btnLogin);
+			this->grpLogin->Controls->Add(this->txtUser);
+			this->grpLogin->Location = System::Drawing::Point(341, 74);
+			this->grpLogin->Name = L"grpLogin";
+			this->grpLogin->Size = System::Drawing::Size(200, 148);
+			this->grpLogin->TabIndex = 7;
+			this->grpLogin->TabStop = false;
+>>>>>>> origin/UI
 			// 
-			// button2
+			// lblUser
 			// 
-			this->button2->Location = System::Drawing::Point(67, 129);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(137, 28);
-			this->button2->TabIndex = 4;
-			this->button2->Text = L"View Schedule";
-			this->button2->UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+			this->lblUser->AutoSize = true;
+			this->lblUser->Location = System::Drawing::Point(59, 39);
+			this->lblUser->Name = L"lblUser";
+			this->lblUser->Size = System::Drawing::Size(91, 13);
+			this->lblUser->TabIndex = 6;
+			this->lblUser->Text = L"Enter Your Name:";
+>>>>>>> origin/UI
 			// 
-			// button4
+			// btnLogin
 			// 
-			this->button4->Location = System::Drawing::Point(67, 165);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(137, 28);
-			this->button4->TabIndex = 0;
-			this->button4->Text = L"Edit Availability";
-			this->button4->UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+			this->btnLogin->Location = System::Drawing::Point(59, 102);
+			this->btnLogin->Name = L"btnLogin";
+			this->btnLogin->Size = System::Drawing::Size(75, 23);
+			this->btnLogin->TabIndex = 0;
+			this->btnLogin->Text = L"Login";
+			this->btnLogin->UseVisualStyleBackColor = true;
+			this->btnLogin->Click += gcnew System::EventHandler(this, &MyForm::btnLogin_Click);
+>>>>>>> origin/UI
 			// 
-			// label1
+			// txtUser
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(63, 42);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(120, 17);
-			this->label1->TabIndex = 2;
-			this->label1->Text = L"Make a Selection:";
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(940, 450);
-			this->textBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(255, 22);
-			this->textBox4->TabIndex = 10;
-			// 
-			// grpViewSchedule
-			// 
-			this->grpViewSchedule->Controls->Add(this->button1);
-			this->grpViewSchedule->Controls->Add(this->lblSchedule);
-			this->grpViewSchedule->Controls->Add(this->dateTimePicker2);
-			this->grpViewSchedule->Controls->Add(this->lblTime);
-			this->grpViewSchedule->Location = System::Drawing::Point(912, 15);
-			this->grpViewSchedule->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->grpViewSchedule->Name = L"grpViewSchedule";
-			this->grpViewSchedule->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->grpViewSchedule->Size = System::Drawing::Size(401, 417);
-			this->grpViewSchedule->TabIndex = 11;
-			this->grpViewSchedule->TabStop = false;
-			this->grpViewSchedule->Visible = false;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(143, 357);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 28);
-			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// lblSchedule
-			// 
-			this->lblSchedule->AutoSize = true;
-			this->lblSchedule->Location = System::Drawing::Point(79, 38);
-			this->lblSchedule->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblSchedule->Name = L"lblSchedule";
-			this->lblSchedule->Size = System::Drawing::Size(71, 17);
-			this->lblSchedule->TabIndex = 4;
-			this->lblSchedule->Text = L"Schedule:";
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->button3);
-			this->groupBox1->Controls->Add(this->textBox6);
-			this->groupBox1->Location = System::Drawing::Point(455, 91);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(267, 182);
-			this->groupBox1->TabIndex = 7;
-			this->groupBox1->TabStop = false;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(79, 48);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(121, 17);
-			this->label2->TabIndex = 6;
-			this->label2->Text = L"Enter Your Name:";
-			// 
-			// button3
-			// 
-			this->button3->Location = System::Drawing::Point(79, 126);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 28);
-			this->button3->TabIndex = 0;
-			this->button3->Text = L"Login";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(65, 86);
-			this->textBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(132, 22);
-			this->textBox6->TabIndex = 1;
+<<<<<<< HEAD
+=======
+			this->txtUser->Location = System::Drawing::Point(49, 70);
+			this->txtUser->Name = L"txtUser";
+			this->txtUser->Size = System::Drawing::Size(100, 20);
+			this->txtUser->TabIndex = 1;
+>>>>>>> origin/UI
 			// 
 			// rbtn12Hr
 			// 
 			this->rbtn12Hr->AutoSize = true;
-			this->rbtn12Hr->Location = System::Drawing::Point(40, 82);
-			this->rbtn12Hr->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+<<<<<<< HEAD
+=======
+			this->rbtn12Hr->Checked = true;
+			this->rbtn12Hr->Location = System::Drawing::Point(30, 67);
+>>>>>>> origin/UI
 			this->rbtn12Hr->Name = L"rbtn12Hr";
 			this->rbtn12Hr->Size = System::Drawing::Size(80, 21);
 			this->rbtn12Hr->TabIndex = 12;
@@ -976,55 +781,70 @@ namespace Project1 {
 			this->rbtn24Hr->Name = L"rbtn24Hr";
 			this->rbtn24Hr->Size = System::Drawing::Size(80, 21);
 			this->rbtn24Hr->TabIndex = 13;
-			this->rbtn24Hr->TabStop = true;
 			this->rbtn24Hr->Text = L"24 Hour";
 			this->rbtn24Hr->UseVisualStyleBackColor = true;
 			this->rbtn24Hr->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn24Hr_CheckedChanged);
 			// 
-			// groupBox2
+<<<<<<< HEAD
+=======
+			// grpMode
 			// 
-			this->groupBox2->Controls->Add(this->button7);
-			this->groupBox2->Controls->Add(this->button5);
-			this->groupBox2->Location = System::Drawing::Point(455, 91);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox2->Size = System::Drawing::Size(267, 182);
-			this->groupBox2->TabIndex = 8;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Visible = false;
+			this->grpMode->Controls->Add(this->btnModeBack);
+			this->grpMode->Controls->Add(this->btnAdmin);
+			this->grpMode->Controls->Add(this->btnUser);
+			this->grpMode->Location = System::Drawing::Point(341, 74);
+			this->grpMode->Name = L"grpMode";
+			this->grpMode->Size = System::Drawing::Size(200, 148);
+			this->grpMode->TabIndex = 8;
+			this->grpMode->TabStop = false;
+			this->grpMode->Visible = false;
 			// 
-			// button7
+			// btnModeBack
 			// 
-			this->button7->Location = System::Drawing::Point(79, 55);
-			this->button7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(100, 28);
-			this->button7->TabIndex = 1;
-			this->button7->Text = L"Admin Mode";
-			this->button7->UseVisualStyleBackColor = true;
-			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			this->btnModeBack->Location = System::Drawing::Point(59, 97);
+			this->btnModeBack->Name = L"btnModeBack";
+			this->btnModeBack->Size = System::Drawing::Size(75, 23);
+			this->btnModeBack->TabIndex = 2;
+			this->btnModeBack->Text = L"Back";
+			this->btnModeBack->UseVisualStyleBackColor = true;
+			this->btnModeBack->Click += gcnew System::EventHandler(this, &MyForm::btnModeBack_Click);
 			// 
-			// button5
+			// btnAdmin
 			// 
-			this->button5->Location = System::Drawing::Point(79, 110);
-			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(100, 28);
-			this->button5->TabIndex = 0;
-			this->button5->Text = L"User Mode";
-			this->button5->UseVisualStyleBackColor = true;
+			this->btnAdmin->Location = System::Drawing::Point(59, 35);
+			this->btnAdmin->Name = L"btnAdmin";
+			this->btnAdmin->Size = System::Drawing::Size(75, 23);
+			this->btnAdmin->TabIndex = 1;
+			this->btnAdmin->Text = L"Admin Mode";
+			this->btnAdmin->UseVisualStyleBackColor = true;
+			this->btnAdmin->Click += gcnew System::EventHandler(this, &MyForm::btnAdmin_Click);
+			// 
+			// btnUser
+			// 
+			this->btnUser->Location = System::Drawing::Point(59, 66);
+			this->btnUser->Name = L"btnUser";
+			this->btnUser->Size = System::Drawing::Size(75, 23);
+			this->btnUser->TabIndex = 0;
+			this->btnUser->Text = L"User Mode";
+			this->btnUser->UseVisualStyleBackColor = true;
+			this->btnUser->Click += gcnew System::EventHandler(this, &MyForm::btnUser_Click);
+>>>>>>> origin/UI
 			// 
 			// grpAvailability
 			// 
-			this->grpAvailability->Controls->Add(this->trv24Hr);
-			this->grpAvailability->Controls->Add(this->trv12Hr);
-			this->grpAvailability->Controls->Add(this->button8);
+			this->grpAvailability->Controls->Add(this->pnl12Hr);
+			this->grpAvailability->Controls->Add(this->label2);
+			this->grpAvailability->Controls->Add(this->label3);
+			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
 			this->grpAvailability->Controls->Add(this->label7);
+			this->grpAvailability->Controls->Add(this->panel5);
 			this->grpAvailability->Controls->Add(this->rbtn24Hr);
+			this->grpAvailability->Controls->Add(this->pnl24Hr);
 			this->grpAvailability->Controls->Add(this->rbtn12Hr);
-			this->grpAvailability->Location = System::Drawing::Point(227, 26);
-			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+<<<<<<< HEAD
+=======
+			this->grpAvailability->Location = System::Drawing::Point(18, 29);
+>>>>>>> origin/UI
 			this->grpAvailability->Name = L"grpAvailability";
 			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->grpAvailability->Size = System::Drawing::Size(629, 543);
@@ -1032,812 +852,1457 @@ namespace Project1 {
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
 			// 
-			// trv24Hr
+<<<<<<< HEAD
+=======
+			// pnl12Hr
 			// 
-			this->trv24Hr->CheckBoxes = true;
-			this->trv24Hr->Location = System::Drawing::Point(161, 65);
-			this->trv24Hr->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->trv24Hr->Name = L"trv24Hr";
-			treeNode1->Name = L"00:00-00:20";
-			treeNode1->Text = L"00:00 - 00:20";
-			treeNode2->Name = L"00:20-00:40";
-			treeNode2->Text = L"00:20 - 00:40";
-			treeNode3->Name = L"00:40-01:00";
-			treeNode3->Text = L"00:40 - 01:00";
-			treeNode4->Name = L"00:00-01:00";
-			treeNode4->Text = L"00:00 - 01:00";
-			treeNode5->Name = L"01:00-01:20";
-			treeNode5->Text = L"01:00 - 01:20";
-			treeNode6->Name = L"01:20-01:40";
-			treeNode6->Text = L"01:20 - 01:40";
-			treeNode7->Name = L"01:40-02:00";
-			treeNode7->Text = L"01:40 - 02:00";
-			treeNode8->Name = L"01:00-02:00";
-			treeNode8->Text = L"01:00 - 02:00";
-			treeNode9->Name = L"02:00-02:20";
-			treeNode9->Text = L"02:00 - 02:20";
-			treeNode10->Name = L"02:20-02:40";
-			treeNode10->Text = L"02:20 - 02:40";
-			treeNode11->Name = L"02:40-03:00";
-			treeNode11->Text = L"02:40 - 03:00";
-			treeNode12->Name = L"02:00-03:00";
-			treeNode12->Text = L"02:00 - 03:00";
-			treeNode13->Name = L"03:00-03:20";
-			treeNode13->Text = L"03:00 - 03:20";
-			treeNode14->Name = L"03:20-03:40";
-			treeNode14->Text = L"03:20 - 03:40";
-			treeNode15->Name = L"03:40-04:00";
-			treeNode15->Text = L"03:40 - 04:00";
-			treeNode16->Name = L"03:00-04:00";
-			treeNode16->Text = L"03:00 - 04:00";
-			treeNode17->Name = L"04:00-04:20";
-			treeNode17->Text = L"04:00 - 04:20";
-			treeNode18->Name = L"04:20-04:40";
-			treeNode18->Text = L"04:20 - 04:40";
-			treeNode19->Name = L"04:40-05:00";
-			treeNode19->Text = L"04:40 - 05:00";
-			treeNode20->Name = L"04:00-05:00";
-			treeNode20->Text = L"04:00 - 05:00";
-			treeNode21->Name = L"05:00-05:20";
-			treeNode21->Text = L"05:00 - 05:20";
-			treeNode22->Name = L"05:20-05:40";
-			treeNode22->Text = L"05:20 - 05:40";
-			treeNode23->Name = L"05:40-06:00";
-			treeNode23->Text = L"05:40 - 06:00";
-			treeNode24->Name = L"05:00-06:00";
-			treeNode24->Text = L"05:00 - 06:00";
-			treeNode25->Name = L"06:00-06:20";
-			treeNode25->Text = L"06:00 - 06:20";
-			treeNode26->Name = L"06:20-06:40";
-			treeNode26->Text = L"06:20 - 06:40";
-			treeNode27->Name = L"06:40-07:00";
-			treeNode27->Text = L"06:40 - 07:00";
-			treeNode28->Name = L"06:00-07:00";
-			treeNode28->Text = L"06:00 - 07:00";
-			treeNode29->Name = L"07:00-07:20";
-			treeNode29->Text = L"07:00 - 07:20";
-			treeNode30->Name = L"07:20-07:40";
-			treeNode30->Text = L"07:20 - 07:40";
-			treeNode31->Name = L"07:40-08:00";
-			treeNode31->Text = L"07:40 - 08:00";
-			treeNode32->Name = L"07:00-08:00";
-			treeNode32->Text = L"07:00 - 08:00";
-			treeNode33->Name = L"08:00-08:20";
-			treeNode33->Text = L"08:00 - 08:20";
-			treeNode34->Name = L"08:20-08:40";
-			treeNode34->Text = L"08:20 - 08:40";
-			treeNode35->Name = L"08:40-09:00";
-			treeNode35->Text = L"08:40 - 09:00";
-			treeNode36->Name = L"08:00-09:00";
-			treeNode36->Text = L"08:00 - 09:00";
-			treeNode37->Name = L"09:00-09:20";
-			treeNode37->Text = L"09:00 - 09:20";
-			treeNode38->Name = L"09:20-09:40";
-			treeNode38->Text = L"09:20 - 09:40";
-			treeNode39->Name = L"09:40-10:00";
-			treeNode39->Text = L"09:40 - 10:00";
-			treeNode40->Name = L"09:00-10:00";
-			treeNode40->Text = L"09:00 - 10:00";
-			treeNode41->Name = L"10:00-10:20";
-			treeNode41->Text = L"10:00 - 10:20";
-			treeNode42->Name = L"10:20-10:40";
-			treeNode42->Text = L"10:20 - 10:40";
-			treeNode43->Name = L"10:40-11:00";
-			treeNode43->Text = L"10:40 - 11:00";
-			treeNode44->Name = L"10:00-11:00";
-			treeNode44->Text = L"10:00 - 11:00";
-			treeNode45->Name = L"11:00-11:20";
-			treeNode45->Text = L"11:00 - 11:20";
-			treeNode46->Name = L"11:20-11:40";
-			treeNode46->Text = L"11:20 - 11:40";
-			treeNode47->Name = L"11:40-12:00";
-			treeNode47->Text = L"11:40 - 12:00";
-			treeNode48->Name = L"11:00-12:00";
-			treeNode48->Text = L"11:00 - 12:00";
-			treeNode49->Name = L"12:00-12:20";
-			treeNode49->Text = L"12:00-12:20";
-			treeNode50->Name = L"12:20-12:40";
-			treeNode50->Text = L"12:20 - 12:40";
-			treeNode51->Name = L"12:40-13:00";
-			treeNode51->Text = L"12:40 - 13:00";
-			treeNode52->Name = L"12:00-13:00";
-			treeNode52->Text = L"12:00 - 13:00";
-			treeNode53->Name = L"13:00-13:20";
-			treeNode53->Text = L"13:00 - 13:20";
-			treeNode54->Name = L"13:20-13:40";
-			treeNode54->Text = L"13:20 - 13:40";
-			treeNode55->Name = L"13:40-14:00";
-			treeNode55->Text = L"13:40 - 14:00";
-			treeNode56->Name = L"13:00-14:00";
-			treeNode56->Text = L"13:00 - 14:00";
-			treeNode57->Name = L"14:00-14:20";
-			treeNode57->Text = L"14:00 - 14:20";
-			treeNode58->Name = L"14:20-14:40";
-			treeNode58->Text = L"14:20 - 14:40";
-			treeNode59->Name = L"14:40-15:00";
-			treeNode59->Text = L"14:40 - 15:00";
-			treeNode60->Name = L"14:00-15:00";
-			treeNode60->Text = L"14:00 - 15:00";
-			treeNode61->Name = L"15:00-15:20";
-			treeNode61->Text = L"15:00 - 15:20";
-			treeNode62->Name = L"15:20-15:40";
-			treeNode62->Text = L"15:20 - 15:40";
-			treeNode63->Name = L"15:40-16:00";
-			treeNode63->Text = L"15:40 - 16:00";
-			treeNode64->Name = L"15:00-16:00";
-			treeNode64->Text = L"15:00 - 16:00";
-			treeNode65->Name = L"16:00-16:20";
-			treeNode65->Text = L"16:00 - 16:20";
-			treeNode66->Name = L"16:20-16:40";
-			treeNode66->Text = L"16:20 - 16:40";
-			treeNode67->Name = L"16:40-17:00";
-			treeNode67->Text = L"16:40 - 17:00";
-			treeNode68->Name = L"16:00-17:00";
-			treeNode68->Text = L"16:00 - 17:00";
-			treeNode69->Name = L"17:00-17:20";
-			treeNode69->Text = L"17:00 - 17:20";
-			treeNode70->Name = L"17:20-17:40";
-			treeNode70->Text = L"17:20 - 17:40";
-			treeNode71->Name = L"17:40-18:00";
-			treeNode71->Text = L"17:40 - 18:00";
-			treeNode72->Name = L"17:00-18:00";
-			treeNode72->Text = L"17:00 - 18:00";
-			treeNode73->Name = L"18:00-18:20";
-			treeNode73->Text = L"18:00 - 18:20";
-			treeNode74->Name = L"18:20-18:40";
-			treeNode74->Text = L"18:20 - 18:40";
-			treeNode75->Name = L"18:40-19:00";
-			treeNode75->Text = L"18:40 - 19:00";
-			treeNode76->Name = L"18:00-19:00";
-			treeNode76->Text = L"18:00 - 19:00";
-			treeNode77->Name = L"19:00-19:20";
-			treeNode77->Text = L"19:00 - 19:20";
-			treeNode78->Name = L"19:20-19:40";
-			treeNode78->Text = L"19:20 - 19:40";
-			treeNode79->Name = L"19:40-20:00";
-			treeNode79->Text = L"19:40 - 20:00";
-			treeNode80->Name = L"19:00-20:00";
-			treeNode80->Text = L"19:00 - 20:00";
-			treeNode81->Name = L"20:00-20:20";
-			treeNode81->Text = L"20:00 - 20:20";
-			treeNode82->Name = L"20:20-20:40";
-			treeNode82->Text = L"20:20 - 20:40";
-			treeNode83->Name = L"20:40-21:00";
-			treeNode83->Text = L"20:40 - 21:00";
-			treeNode84->Name = L"20:00-21:00";
-			treeNode84->Text = L"20:00 - 21:00";
-			treeNode85->Name = L"21:00-21:20";
-			treeNode85->Text = L"21:00 - 21:20";
-			treeNode86->Name = L"21:20-21:40";
-			treeNode86->Text = L"21:20 - 21:40";
-			treeNode87->Name = L"21:40-22:00";
-			treeNode87->Text = L"21:40 - 22:00";
-			treeNode88->Name = L"21:00-22:00";
-			treeNode88->Text = L"21:00 - 22:00";
-			treeNode89->Name = L"22:00-22:20";
-			treeNode89->Text = L"22:00 - 22:20";
-			treeNode90->Name = L"22:20-22:40";
-			treeNode90->Text = L"22:20 - 22:40";
-			treeNode91->Name = L"22:40-23:00";
-			treeNode91->Text = L"22:40 - 23:00";
-			treeNode92->Name = L"22:00-23:00";
-			treeNode92->Text = L"22:00 - 23:00";
-			treeNode93->Name = L"23:00-23:20";
-			treeNode93->Text = L"23:00 - 23:20";
-			treeNode94->Name = L"23:20-23:40";
-			treeNode94->Text = L"23:20 - 23:40";
-			treeNode95->Name = L"23:40-00:00";
-			treeNode95->Text = L"23:40 - 00:00";
-			treeNode96->Name = L"23:00-24:00";
-			treeNode96->Text = L"23:00 - 00:00";
-			this->trv24Hr->Nodes->AddRange(gcnew cli::array< System::Windows::Forms::TreeNode^  >(24) {
-				treeNode4, treeNode8, treeNode12,
-					treeNode16, treeNode20, treeNode24, treeNode28, treeNode32, treeNode36, treeNode40, treeNode44, treeNode48, treeNode52, treeNode56,
-					treeNode60, treeNode64, treeNode68, treeNode72, treeNode76, treeNode80, treeNode84, treeNode88, treeNode92, treeNode96
-			});
-			this->trv24Hr->Size = System::Drawing::Size(373, 421);
-			this->trv24Hr->TabIndex = 15;
+			this->pnl12Hr->Controls->Add(this->rbtn11_12AM);
+			this->pnl12Hr->Controls->Add(this->rbtn10_11PM);
+			this->pnl12Hr->Controls->Add(this->rbtn9_10PM);
+			this->pnl12Hr->Controls->Add(this->rbtn8_9PM);
+			this->pnl12Hr->Controls->Add(this->rbtn7_8PM);
+			this->pnl12Hr->Controls->Add(this->rbtn6_7PM);
+			this->pnl12Hr->Controls->Add(this->rbtn5_6PM);
+			this->pnl12Hr->Controls->Add(this->rbtn4_5PM);
+			this->pnl12Hr->Controls->Add(this->rbtn3_4PM);
+			this->pnl12Hr->Controls->Add(this->rbtn2_3PM);
+			this->pnl12Hr->Controls->Add(this->rbtn1_2PM);
+			this->pnl12Hr->Controls->Add(this->rbtn11_12PM);
+			this->pnl12Hr->Controls->Add(this->rbtn10_11AM);
+			this->pnl12Hr->Controls->Add(this->rbtn9_10AM);
+			this->pnl12Hr->Controls->Add(this->rbtn8_9AM);
+			this->pnl12Hr->Controls->Add(this->rbtn7_8AM);
+			this->pnl12Hr->Controls->Add(this->rbtn6_7AM);
+			this->pnl12Hr->Controls->Add(this->rbtn5_6AM);
+			this->pnl12Hr->Location = System::Drawing::Point(108, 56);
+			this->pnl12Hr->Name = L"pnl12Hr";
+			this->pnl12Hr->Size = System::Drawing::Size(136, 310);
+			this->pnl12Hr->TabIndex = 27;
 			// 
-			// trv12Hr
+			// rbtn11_12AM
 			// 
-			this->trv12Hr->CheckBoxes = true;
-			this->trv12Hr->Location = System::Drawing::Point(161, 65);
-			this->trv12Hr->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->trv12Hr->Name = L"trv12Hr";
-			treeNode97->Name = L"12-12:20AM";
-			treeNode97->Text = L"12:00 AM - 12:20 AM";
-			treeNode98->Name = L"12:20-12:40AM";
-			treeNode98->Text = L"12:20 AM - 12:40 AM";
-			treeNode99->Name = L"12:40-1AM";
-			treeNode99->Text = L"12:40 AM - 1:00 AM";
-			treeNode100->Name = L"12-1AM";
-			treeNode100->Text = L"12 AM - 1AM";
-			treeNode101->Name = L"1-1:20AM";
-			treeNode101->Text = L"1:00 AM - 1:20 AM";
-			treeNode102->Name = L"1:20-1:40AM";
-			treeNode102->Text = L"1:20 AM - 1:40 AM";
-			treeNode103->Name = L"1:40-2AM";
-			treeNode103->Text = L"1:40 AM - 2:00 AM";
-			treeNode104->Name = L"1-2AM";
-			treeNode104->Text = L"1 AM - 2 AM";
-			treeNode105->Name = L"2:00-2:20AM";
-			treeNode105->Text = L"2:00 AM - 2:20 AM";
-			treeNode106->Name = L"2:20AM-2:40AM";
-			treeNode106->Text = L"2:20 AM - 2:40 AM";
-			treeNode107->Name = L"2:40AM-3:00AM";
-			treeNode107->Text = L"2:40 AM - 3:00 AM";
-			treeNode108->Name = L"2-3AM";
-			treeNode108->Text = L"2 AM - 3 AM";
-			treeNode109->Name = L"3:00AM-3:20AM";
-			treeNode109->Text = L"3:00 AM - 3:20 AM";
-			treeNode110->Name = L"3:20AM-3:40AM";
-			treeNode110->Text = L"3:20 AM - 3:40 AM";
-			treeNode111->Name = L"3:40AM-4:00AM";
-			treeNode111->Text = L"3:40 AM - 4:00 AM";
-			treeNode112->Name = L"3-4AM";
-			treeNode112->Text = L"3 AM - 4 AM";
-			treeNode113->Name = L"4:00AM-4:20AM";
-			treeNode113->Text = L"4:00 AM - 4:20 AM";
-			treeNode114->Name = L"4:20AM-4:40AM";
-			treeNode114->Text = L"4:20 AM - 4:40 AM";
-			treeNode115->Name = L"4:40AM-5:00AM";
-			treeNode115->Text = L"4:40 AM - 5:00 AM";
-			treeNode116->Name = L"4-5AM";
-			treeNode116->Text = L"4 AM - 5 AM";
-			treeNode117->Name = L"5:00AM-5:20AM";
-			treeNode117->Text = L"5:00 AM - 5:20 AM";
-			treeNode118->Name = L"5:20AM-5:40AM";
-			treeNode118->Text = L"5:20 AM - 5:40 AM";
-			treeNode119->Name = L"5:40AM-6:00AM";
-			treeNode119->Text = L"5:40 AM - 6:00 AM";
-			treeNode120->Name = L"5AM-6AM";
-			treeNode120->Text = L"5AM - 6 AM";
-			treeNode121->Name = L"6:00AM-6:20AM";
-			treeNode121->Text = L"6:00 AM - 6:20 AM";
-			treeNode122->Name = L"6:20AM-6:40AM";
-			treeNode122->Text = L"6:20 AM - 6:40 AM";
-			treeNode123->Name = L"6:40AM-7:00AM";
-			treeNode123->Text = L"6:40 AM - 7:00 AM";
-			treeNode124->Name = L"6AM-7AM";
-			treeNode124->Text = L"6 AM - 7 AM";
-			treeNode125->Name = L"7:00AM-7:20AM";
-			treeNode125->Text = L"7:00 AM - 7:20 AM";
-			treeNode126->Name = L"7:20AM-7:40AM";
-			treeNode126->Text = L"7:20 AM - 7:40 AM";
-			treeNode127->Name = L"7:40AM-8:00AM";
-			treeNode127->Text = L"7:40 AM - 8:00 AM";
-			treeNode128->Name = L"7-8AM";
-			treeNode128->Text = L"7 AM - 8 AM";
-			treeNode129->Name = L"8:00AM-8:20AM";
-			treeNode129->Text = L"8:00 AM - 8:20 AM";
-			treeNode130->Name = L"8:20AM-8:40AM";
-			treeNode130->Text = L"8:20 AM - 8:40 AM";
-			treeNode131->Name = L"8:40AM-9:00AM";
-			treeNode131->Text = L"8:40 AM - 9:00 AM";
-			treeNode132->Name = L"8-9AM";
-			treeNode132->Text = L"8 AM - 9 AM";
-			treeNode133->Name = L"9:00AM-9:20AM";
-			treeNode133->Text = L"9:00 AM - 9:20 AM";
-			treeNode134->Name = L"9:20AM-9:40AM";
-			treeNode134->Text = L"9:20 AM - 9:40 AM";
-			treeNode135->Name = L"9:40AM-10:00AM";
-			treeNode135->Text = L"9:40 AM - 10:00 AM";
-			treeNode136->Name = L"9-10AM";
-			treeNode136->Text = L"9 AM - 10 AM";
-			treeNode137->Name = L"10:00AM-10:20AM";
-			treeNode137->Text = L"10:00 AM - 10:20 AM";
-			treeNode138->Name = L"10:20AM-10:40AM";
-			treeNode138->Text = L"10:20 AM - 10:40 AM";
-			treeNode139->Name = L"10:40AM-11:00AM";
-			treeNode139->Text = L"10:40 AM - 11:00 AM";
-			treeNode140->Name = L"10-11AM";
-			treeNode140->Text = L"10 AM - 11 AM";
-			treeNode141->Name = L"11:00AM-11:20AM";
-			treeNode141->Text = L"11:00 AM - 11:20 AM";
-			treeNode142->Name = L"11:20AM-11:40AM";
-			treeNode142->Text = L"11:20 AM - 11:40 AM";
-			treeNode143->Name = L"11:40AM-12:00PM";
-			treeNode143->Text = L"11:40 AM - 12:00 PM";
-			treeNode144->Name = L"11-12PM";
-			treeNode144->Text = L"11 PM - 12 PM";
-			treeNode145->Name = L"12:00PM-12:20PM";
-			treeNode145->Text = L"12:00 PM - 12:20 PM";
-			treeNode146->Name = L"12:20PM-12:40PM";
-			treeNode146->Text = L"12:20 PM - 12:40 PM";
-			treeNode147->Name = L"12:40PM-1:00PM";
-			treeNode147->Text = L"12:40 PM - 1:00 PM";
-			treeNode148->Name = L"12-1PM";
-			treeNode148->Text = L"12 PM - 1 PM";
-			treeNode149->Name = L"1:00PM-1:20PM";
-			treeNode149->Text = L"1:00 PM - 1:20 PM";
-			treeNode150->Name = L"1:20PM-1:40PM";
-			treeNode150->Text = L"1:20 PM - 1:40 PM";
-			treeNode151->Name = L"1:40PM-2:00PM";
-			treeNode151->Text = L"1:40 PM - 2:00 PM";
-			treeNode152->Name = L"1-2PM";
-			treeNode152->Text = L"1 PM - 2 PM";
-			treeNode153->Name = L"2:00PM-2:20PM";
-			treeNode153->Text = L"2:00 PM - 2:20 PM";
-			treeNode154->Name = L"2:20PM-2:40PM";
-			treeNode154->Text = L"2:20 PM - 2:40 PM";
-			treeNode155->Name = L"2:40PM-3:00PM";
-			treeNode155->Text = L"2:40 PM - 3:00 PM";
-			treeNode156->Name = L"3PM";
-			treeNode156->Text = L"2 PM - 3 PM";
-			treeNode157->Name = L"3:00PM-3:20PM";
-			treeNode157->Text = L"3:00 PM - 3:20 PM";
-			treeNode158->Name = L"3:20PM-3:40PM";
-			treeNode158->Text = L"3:20 PM - 3:40 PM";
-			treeNode159->Name = L"3:40PM-4:00PM";
-			treeNode159->Text = L"3:40 PM - 4:00 PM";
-			treeNode160->Name = L"4PM";
-			treeNode160->Text = L"3 PM - 4 PM";
-			treeNode161->Name = L"4:00PM-4:20PM";
-			treeNode161->Text = L"4:00 PM - 4:20 PM";
-			treeNode162->Name = L"4:20PM-4:40PM";
-			treeNode162->Text = L"4:20 PM - 4:40 PM";
-			treeNode163->Name = L"4:40PM-5:00PM";
-			treeNode163->Text = L"4:40 PM - 5:00 PM";
-			treeNode164->Name = L"5PM";
-			treeNode164->Text = L"4 PM - 5 PM";
-			treeNode165->Name = L"5:00PM-5:20PM";
-			treeNode165->Text = L"5:00 PM - 5:20 PM";
-			treeNode166->Name = L"5:20PM-5:40PM";
-			treeNode166->Text = L"5:20 PM - 5:40 PM";
-			treeNode167->Name = L"5:40PM-6:00PM";
-			treeNode167->Text = L"5:40 PM - 6:00 PM";
-			treeNode168->Name = L"6PM";
-			treeNode168->Text = L"5 PM - 6 PM";
-			treeNode169->Name = L"6:00PM-6:20PM";
-			treeNode169->Text = L"6:00 PM - 6:20 PM";
-			treeNode170->Name = L"6:20PM-6:40PM";
-			treeNode170->Text = L"6:20 PM - 6:40 PM";
-			treeNode171->Name = L"6:40PM-7:00PM";
-			treeNode171->Text = L"6:40 PM - 7:00 PM";
-			treeNode172->Name = L"7PM";
-			treeNode172->Text = L"6 PM - 7 PM";
-			treeNode173->Name = L"7:00PM-7:20PM";
-			treeNode173->Text = L"7:00 PM - 7:20 PM";
-			treeNode174->Name = L"7:20PM-7:40PM";
-			treeNode174->Text = L"7:20 PM - 7:40 PM";
-			treeNode175->Name = L"7:40PM-8:00PM";
-			treeNode175->Text = L"7:40 PM - 8:00 PM";
-			treeNode176->Name = L"8PM";
-			treeNode176->Text = L"7 PM - 8 PM";
-			treeNode177->Name = L"8:00PM-8:20PM";
-			treeNode177->Text = L"8:00 PM - 8:20 PM";
-			treeNode178->Name = L"8:20PM-8:40PM";
-			treeNode178->Text = L"8:20 PM - 8:40 PM";
-			treeNode179->Name = L"8:40PM-9:00PM";
-			treeNode179->Text = L"8:40 PM - 9:00 PM";
-			treeNode180->Name = L"9PM";
-			treeNode180->Text = L"8 PM - 9 PM";
-			treeNode181->Name = L"9:00PM-9:20PM";
-			treeNode181->Text = L"9:00 PM - 9:20 PM";
-			treeNode182->Name = L"9:20PM-9:40PM";
-			treeNode182->Text = L"9:20 PM - 9:40 PM";
-			treeNode183->Name = L"9:40PM-10:00PM";
-			treeNode183->Text = L"9:40 PM - 10:00 PM";
-			treeNode184->Name = L"10PM";
-			treeNode184->Text = L"9 PM - 10 PM";
-			treeNode185->Name = L"10:00PM-10:20PM";
-			treeNode185->Text = L"10:00 PM - 10:20 PM";
-			treeNode186->Name = L"10:20PM-10:40PM";
-			treeNode186->Text = L"10:20 PM - 10:40 PM";
-			treeNode187->Name = L"10:40PM-11:00PM";
-			treeNode187->Text = L"10:40 PM - 11:00 PM";
-			treeNode188->Name = L"11PM";
-			treeNode188->Text = L"10 PM - 11 PM";
-			treeNode189->Name = L"11:00PM-11:20PM";
-			treeNode189->Text = L"11:00 PM - 11:20 PM";
-			treeNode190->Name = L"11:20PM-11:40PM";
-			treeNode190->Text = L"11:20 PM - 11:40 PM";
-			treeNode191->Name = L"11:40PM-12:00AM";
-			treeNode191->Text = L"11:40 PM - 12:00 AM";
-			treeNode192->Name = L"11PM-12AM";
-			treeNode192->Text = L"11 PM - 12 AM";
-			this->trv12Hr->Nodes->AddRange(gcnew cli::array< System::Windows::Forms::TreeNode^  >(24) {
-				treeNode100, treeNode104, treeNode108,
-					treeNode112, treeNode116, treeNode120, treeNode124, treeNode128, treeNode132, treeNode136, treeNode140, treeNode144, treeNode148,
-					treeNode152, treeNode156, treeNode160, treeNode164, treeNode168, treeNode172, treeNode176, treeNode180, treeNode184, treeNode188,
-					treeNode192
-			});
-			this->trv12Hr->Size = System::Drawing::Size(373, 421);
-			this->trv12Hr->TabIndex = 14;
+			this->rbtn11_12AM->AutoSize = true;
+			this->rbtn11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn11_12AM->Location = System::Drawing::Point(0, 289);
+			this->rbtn11_12AM->Name = L"rbtn11_12AM";
+			this->rbtn11_12AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12AM->TabIndex = 43;
+			this->rbtn11_12AM->TabStop = true;
+			this->rbtn11_12AM->Text = L"11:00 PM - 12:00 AM";
+			this->rbtn11_12AM->UseVisualStyleBackColor = true;
+			this->rbtn11_12AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12AM_CheckedChanged);
 			// 
-			// button8
+			// rbtn10_11PM
 			// 
-			this->button8->Location = System::Drawing::Point(155, 496);
-			this->button8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(137, 28);
-			this->button8->TabIndex = 0;
-			this->button8->Text = L"Submit";
-			this->button8->UseVisualStyleBackColor = true;
+			this->rbtn10_11PM->AutoSize = true;
+			this->rbtn10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn10_11PM->Location = System::Drawing::Point(0, 272);
+			this->rbtn10_11PM->Name = L"rbtn10_11PM";
+			this->rbtn10_11PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11PM->TabIndex = 42;
+			this->rbtn10_11PM->TabStop = true;
+			this->rbtn10_11PM->Text = L"10:00 PM - 11:00 PM";
+			this->rbtn10_11PM->UseVisualStyleBackColor = true;
+			this->rbtn10_11PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11PM_CheckedChanged);
+			// 
+			// rbtn9_10PM
+			// 
+			this->rbtn9_10PM->AutoSize = true;
+			this->rbtn9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn9_10PM->Location = System::Drawing::Point(0, 255);
+			this->rbtn9_10PM->Name = L"rbtn9_10PM";
+			this->rbtn9_10PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10PM->TabIndex = 41;
+			this->rbtn9_10PM->TabStop = true;
+			this->rbtn9_10PM->Text = L"9:00 PM - 10:00 PM";
+			this->rbtn9_10PM->UseVisualStyleBackColor = true;
+			this->rbtn9_10PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10PM_CheckedChanged);
+			// 
+			// rbtn8_9PM
+			// 
+			this->rbtn8_9PM->AutoSize = true;
+			this->rbtn8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn8_9PM->Location = System::Drawing::Point(0, 238);
+			this->rbtn8_9PM->Name = L"rbtn8_9PM";
+			this->rbtn8_9PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9PM->TabIndex = 40;
+			this->rbtn8_9PM->TabStop = true;
+			this->rbtn8_9PM->Text = L"8:00 PM - 9:00 PM";
+			this->rbtn8_9PM->UseVisualStyleBackColor = true;
+			this->rbtn8_9PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9PM_CheckedChanged);
+			// 
+			// rbtn7_8PM
+			// 
+			this->rbtn7_8PM->AutoSize = true;
+			this->rbtn7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn7_8PM->Location = System::Drawing::Point(0, 221);
+			this->rbtn7_8PM->Name = L"rbtn7_8PM";
+			this->rbtn7_8PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8PM->TabIndex = 39;
+			this->rbtn7_8PM->TabStop = true;
+			this->rbtn7_8PM->Text = L"7:00 PM - 8:00 PM";
+			this->rbtn7_8PM->UseVisualStyleBackColor = true;
+			this->rbtn7_8PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8PM_CheckedChanged);
+			// 
+			// rbtn6_7PM
+			// 
+			this->rbtn6_7PM->AutoSize = true;
+			this->rbtn6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn6_7PM->Location = System::Drawing::Point(0, 204);
+			this->rbtn6_7PM->Name = L"rbtn6_7PM";
+			this->rbtn6_7PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7PM->TabIndex = 38;
+			this->rbtn6_7PM->TabStop = true;
+			this->rbtn6_7PM->Text = L"6:00 PM - 7:00 PM";
+			this->rbtn6_7PM->UseVisualStyleBackColor = true;
+			this->rbtn6_7PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7PM_CheckedChanged);
+			// 
+			// rbtn5_6PM
+			// 
+			this->rbtn5_6PM->AutoSize = true;
+			this->rbtn5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn5_6PM->Location = System::Drawing::Point(0, 187);
+			this->rbtn5_6PM->Name = L"rbtn5_6PM";
+			this->rbtn5_6PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6PM->TabIndex = 37;
+			this->rbtn5_6PM->TabStop = true;
+			this->rbtn5_6PM->Text = L"5:00 PM - 6:00 PM";
+			this->rbtn5_6PM->UseVisualStyleBackColor = true;
+			this->rbtn5_6PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6PM_CheckedChanged);
+			// 
+			// rbtn4_5PM
+			// 
+			this->rbtn4_5PM->AutoSize = true;
+			this->rbtn4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn4_5PM->Location = System::Drawing::Point(0, 170);
+			this->rbtn4_5PM->Name = L"rbtn4_5PM";
+			this->rbtn4_5PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn4_5PM->TabIndex = 36;
+			this->rbtn4_5PM->TabStop = true;
+			this->rbtn4_5PM->Text = L"4:00 PM - 5:00 PM";
+			this->rbtn4_5PM->UseVisualStyleBackColor = true;
+			this->rbtn4_5PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn4_5PM_CheckedChanged);
+			// 
+			// rbtn3_4PM
+			// 
+			this->rbtn3_4PM->AutoSize = true;
+			this->rbtn3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn3_4PM->Location = System::Drawing::Point(0, 153);
+			this->rbtn3_4PM->Name = L"rbtn3_4PM";
+			this->rbtn3_4PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn3_4PM->TabIndex = 35;
+			this->rbtn3_4PM->TabStop = true;
+			this->rbtn3_4PM->Text = L"3:00 PM - 4:00 PM";
+			this->rbtn3_4PM->UseVisualStyleBackColor = true;
+			this->rbtn3_4PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn3_4PM_CheckedChanged);
+			// 
+			// rbtn2_3PM
+			// 
+			this->rbtn2_3PM->AutoSize = true;
+			this->rbtn2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn2_3PM->Location = System::Drawing::Point(0, 136);
+			this->rbtn2_3PM->Name = L"rbtn2_3PM";
+			this->rbtn2_3PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn2_3PM->TabIndex = 34;
+			this->rbtn2_3PM->TabStop = true;
+			this->rbtn2_3PM->Text = L"2:00 PM - 3:00 PM";
+			this->rbtn2_3PM->UseVisualStyleBackColor = true;
+			this->rbtn2_3PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn2_3PM_CheckedChanged);
+			// 
+			// rbtn1_2PM
+			// 
+			this->rbtn1_2PM->AutoSize = true;
+			this->rbtn1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn1_2PM->Location = System::Drawing::Point(0, 119);
+			this->rbtn1_2PM->Name = L"rbtn1_2PM";
+			this->rbtn1_2PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn1_2PM->TabIndex = 33;
+			this->rbtn1_2PM->TabStop = true;
+			this->rbtn1_2PM->Text = L"1:00 PM - 2:00 PM";
+			this->rbtn1_2PM->UseVisualStyleBackColor = true;
+			this->rbtn1_2PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn1_2PM_CheckedChanged);
+			// 
+			// rbtn11_12PM
+			// 
+			this->rbtn11_12PM->AutoSize = true;
+			this->rbtn11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn11_12PM->Location = System::Drawing::Point(0, 102);
+			this->rbtn11_12PM->Name = L"rbtn11_12PM";
+			this->rbtn11_12PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12PM->TabIndex = 32;
+			this->rbtn11_12PM->TabStop = true;
+			this->rbtn11_12PM->Text = L"11:00 AM - 12:00 PM";
+			this->rbtn11_12PM->UseVisualStyleBackColor = true;
+			this->rbtn11_12PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12PM_CheckedChanged);
+			// 
+			// rbtn10_11AM
+			// 
+			this->rbtn10_11AM->AutoSize = true;
+			this->rbtn10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn10_11AM->Location = System::Drawing::Point(0, 85);
+			this->rbtn10_11AM->Name = L"rbtn10_11AM";
+			this->rbtn10_11AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11AM->TabIndex = 31;
+			this->rbtn10_11AM->TabStop = true;
+			this->rbtn10_11AM->Text = L"10:00 AM - 11:00 AM";
+			this->rbtn10_11AM->UseVisualStyleBackColor = true;
+			this->rbtn10_11AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11AM_CheckedChanged);
+			// 
+			// rbtn9_10AM
+			// 
+			this->rbtn9_10AM->AutoSize = true;
+			this->rbtn9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn9_10AM->Location = System::Drawing::Point(0, 68);
+			this->rbtn9_10AM->Name = L"rbtn9_10AM";
+			this->rbtn9_10AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10AM->TabIndex = 30;
+			this->rbtn9_10AM->TabStop = true;
+			this->rbtn9_10AM->Text = L"9:00 AM - 10:00 AM";
+			this->rbtn9_10AM->UseVisualStyleBackColor = true;
+			this->rbtn9_10AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn9_10AM_CheckedChanged);
+			// 
+			// rbtn8_9AM
+			// 
+			this->rbtn8_9AM->AutoSize = true;
+			this->rbtn8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn8_9AM->Location = System::Drawing::Point(0, 51);
+			this->rbtn8_9AM->Name = L"rbtn8_9AM";
+			this->rbtn8_9AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9AM->TabIndex = 29;
+			this->rbtn8_9AM->TabStop = true;
+			this->rbtn8_9AM->Text = L"8:00 AM - 9:00 AM";
+			this->rbtn8_9AM->UseVisualStyleBackColor = true;
+			this->rbtn8_9AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn8_9AM_CheckedChanged);
+			// 
+			// rbtn7_8AM
+			// 
+			this->rbtn7_8AM->AutoSize = true;
+			this->rbtn7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn7_8AM->Location = System::Drawing::Point(0, 34);
+			this->rbtn7_8AM->Name = L"rbtn7_8AM";
+			this->rbtn7_8AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8AM->TabIndex = 28;
+			this->rbtn7_8AM->TabStop = true;
+			this->rbtn7_8AM->Text = L"7:00 AM - 8:00 AM";
+			this->rbtn7_8AM->UseVisualStyleBackColor = true;
+			this->rbtn7_8AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn7_8AM_CheckedChanged);
+			// 
+			// rbtn6_7AM
+			// 
+			this->rbtn6_7AM->AutoSize = true;
+			this->rbtn6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn6_7AM->Location = System::Drawing::Point(0, 17);
+			this->rbtn6_7AM->Name = L"rbtn6_7AM";
+			this->rbtn6_7AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7AM->TabIndex = 27;
+			this->rbtn6_7AM->TabStop = true;
+			this->rbtn6_7AM->Text = L"6:00 AM - 7:00 AM";
+			this->rbtn6_7AM->UseVisualStyleBackColor = true;
+			this->rbtn6_7AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn6_7AM_CheckedChanged);
+			// 
+			// rbtn5_6AM
+			// 
+			this->rbtn5_6AM->AutoSize = true;
+			this->rbtn5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn5_6AM->Location = System::Drawing::Point(0, 0);
+			this->rbtn5_6AM->Name = L"rbtn5_6AM";
+			this->rbtn5_6AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6AM->TabIndex = 26;
+			this->rbtn5_6AM->TabStop = true;
+			this->rbtn5_6AM->Text = L"5:00 AM - 6:00 AM";
+			this->rbtn5_6AM->UseVisualStyleBackColor = true;
+			this->rbtn5_6AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn5_6AM_CheckedChanged);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(281, 123);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(117, 13);
+			this->label2->TabIndex = 30;
+			this->label2->Text = L"Select Available Times:";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(149, 40);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(38, 13);
+			this->label3->TabIndex = 31;
+			this->label3->Text = L"Hours:";
+			// 
+			// btnSubmitTimes
+			// 
+			this->btnSubmitTimes->Location = System::Drawing::Point(181, 402);
+			this->btnSubmitTimes->Name = L"btnSubmitTimes";
+			this->btnSubmitTimes->Size = System::Drawing::Size(103, 23);
+			this->btnSubmitTimes->TabIndex = 0;
+			this->btnSubmitTimes->Text = L"Submit";
+			this->btnSubmitTimes->UseVisualStyleBackColor = true;
+			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
+>>>>>>> origin/UI
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(175, 32);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+<<<<<<< HEAD
+=======
+			this->label7->Location = System::Drawing::Point(183, 22);
+>>>>>>> origin/UI
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(94, 17);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Create Event:";
 			// 
+			// panel5
+			// 
+			this->panel5->Controls->Add(this->pnl5_6AM);
+			this->panel5->Controls->Add(this->pnl7_8AM);
+			this->panel5->Controls->Add(this->pnl2_3PM);
+			this->panel5->Controls->Add(this->pnl1_2PM);
+			this->panel5->Controls->Add(this->pnl9_10AM);
+			this->panel5->Controls->Add(this->pnl7_8PM);
+			this->panel5->Controls->Add(this->pnl3_4PM);
+			this->panel5->Controls->Add(this->pnl11_12PM);
+			this->panel5->Controls->Add(this->pnl6_7AM);
+			this->panel5->Controls->Add(this->pnl11_12AM);
+			this->panel5->Controls->Add(this->pnl4_5PM);
+			this->panel5->Controls->Add(this->pnl10_11PM);
+			this->panel5->Controls->Add(this->pnl10_11AM);
+			this->panel5->Controls->Add(this->pnl9_10PM);
+			this->panel5->Controls->Add(this->pnl5_6PM);
+			this->panel5->Controls->Add(this->pnl8_9PM);
+			this->panel5->Controls->Add(this->pnl8_9AM);
+			this->panel5->Controls->Add(this->pnl6_7PM);
+			this->panel5->Location = System::Drawing::Point(273, 147);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(264, 852);
+			this->panel5->TabIndex = 28;
+			// 
+			// pnl5_6AM
+			// 
+			this->pnl5_6AM->Controls->Add(this->chk540_600AM);
+			this->pnl5_6AM->Controls->Add(this->chk520_540AM);
+			this->pnl5_6AM->Controls->Add(this->chk500_520AM);
+			this->pnl5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl5_6AM->Location = System::Drawing::Point(0, 1292);
+			this->pnl5_6AM->Name = L"pnl5_6AM";
+			this->pnl5_6AM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6AM->TabIndex = 25;
+			this->pnl5_6AM->Visible = false;
+			// 
+			// chk540_600AM
+			// 
+			this->chk540_600AM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600AM->Name = L"chk540_600AM";
+			this->chk540_600AM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600AM->TabIndex = 22;
+			this->chk540_600AM->Text = L"5:40 AM - 6:00 AM";
+			this->chk540_600AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk540_600AM_CheckedChanged);
+			// 
+			// chk520_540AM
+			// 
+			this->chk520_540AM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540AM->Name = L"chk520_540AM";
+			this->chk520_540AM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540AM->TabIndex = 19;
+			this->chk520_540AM->Text = L"5:20 AM - 5:40 AM";
+			this->chk520_540AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk520_540AM_CheckedChanged);
+			// 
+			// chk500_520AM
+			// 
+			this->chk500_520AM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520AM->Name = L"chk500_520AM";
+			this->chk500_520AM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520AM->TabIndex = 18;
+			this->chk500_520AM->Text = L"5:00 AM - 5:20 AM";
+			this->chk500_520AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk500_520AM_CheckedChanged);
+			// 
+			// pnl7_8AM
+			// 
+			this->pnl7_8AM->Controls->Add(this->chk740_800AM);
+			this->pnl7_8AM->Controls->Add(this->chk720_740AM);
+			this->pnl7_8AM->Controls->Add(this->chk700_720AM);
+			this->pnl7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl7_8AM->Location = System::Drawing::Point(0, 1216);
+			this->pnl7_8AM->Name = L"pnl7_8AM";
+			this->pnl7_8AM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8AM->TabIndex = 30;
+			this->pnl7_8AM->Visible = false;
+			// 
+			// chk740_800AM
+			// 
+			this->chk740_800AM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800AM->Name = L"chk740_800AM";
+			this->chk740_800AM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800AM->TabIndex = 22;
+			this->chk740_800AM->Text = L"7:40 AM - 8:00 AM";
+			this->chk740_800AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk740_800AM_CheckedChanged);
+			// 
+			// chk720_740AM
+			// 
+			this->chk720_740AM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740AM->Name = L"chk720_740AM";
+			this->chk720_740AM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740AM->TabIndex = 19;
+			this->chk720_740AM->Text = L"7:20 AM - 7:40 AM";
+			this->chk720_740AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk720_740AM_CheckedChanged);
+			// 
+			// chk700_720AM
+			// 
+			this->chk700_720AM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720AM->Name = L"chk700_720AM";
+			this->chk700_720AM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720AM->TabIndex = 18;
+			this->chk700_720AM->Text = L"7:00 AM - 7:20 AM";
+			this->chk700_720AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk700_720AM_CheckedChanged);
+			// 
+			// pnl2_3PM
+			// 
+			this->pnl2_3PM->Controls->Add(this->chk240_300PM);
+			this->pnl2_3PM->Controls->Add(this->chk220_240PM);
+			this->pnl2_3PM->Controls->Add(this->chk200_220PM);
+			this->pnl2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl2_3PM->Location = System::Drawing::Point(0, 1140);
+			this->pnl2_3PM->Name = L"pnl2_3PM";
+			this->pnl2_3PM->Size = System::Drawing::Size(264, 76);
+			this->pnl2_3PM->TabIndex = 34;
+			this->pnl2_3PM->Visible = false;
+			// 
+			// chk240_300PM
+			// 
+			this->chk240_300PM->Location = System::Drawing::Point(15, 57);
+			this->chk240_300PM->Name = L"chk240_300PM";
+			this->chk240_300PM->Size = System::Drawing::Size(118, 22);
+			this->chk240_300PM->TabIndex = 22;
+			this->chk240_300PM->Text = L"2:40 PM - 3:00 PM";
+			// 
+			// chk220_240PM
+			// 
+			this->chk220_240PM->Location = System::Drawing::Point(15, 34);
+			this->chk220_240PM->Name = L"chk220_240PM";
+			this->chk220_240PM->Size = System::Drawing::Size(118, 22);
+			this->chk220_240PM->TabIndex = 19;
+			this->chk220_240PM->Text = L"2:20 PM - 2:40 PM";
+			// 
+			// chk200_220PM
+			// 
+			this->chk200_220PM->Location = System::Drawing::Point(15, 12);
+			this->chk200_220PM->Name = L"chk200_220PM";
+			this->chk200_220PM->Size = System::Drawing::Size(118, 22);
+			this->chk200_220PM->TabIndex = 18;
+			this->chk200_220PM->Text = L"2:00 PM - 2:20 PM";
+			// 
+			// pnl1_2PM
+			// 
+			this->pnl1_2PM->Controls->Add(this->chk140_200PM);
+			this->pnl1_2PM->Controls->Add(this->chk120_140PM);
+			this->pnl1_2PM->Controls->Add(this->chk100_120PM);
+			this->pnl1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl1_2PM->Location = System::Drawing::Point(0, 1064);
+			this->pnl1_2PM->Name = L"pnl1_2PM";
+			this->pnl1_2PM->Size = System::Drawing::Size(264, 76);
+			this->pnl1_2PM->TabIndex = 34;
+			this->pnl1_2PM->Visible = false;
+			// 
+			// chk140_200PM
+			// 
+			this->chk140_200PM->Location = System::Drawing::Point(15, 57);
+			this->chk140_200PM->Name = L"chk140_200PM";
+			this->chk140_200PM->Size = System::Drawing::Size(118, 22);
+			this->chk140_200PM->TabIndex = 22;
+			this->chk140_200PM->Text = L"1:40 PM - 2:00 PM";
+			// 
+			// chk120_140PM
+			// 
+			this->chk120_140PM->Location = System::Drawing::Point(15, 34);
+			this->chk120_140PM->Name = L"chk120_140PM";
+			this->chk120_140PM->Size = System::Drawing::Size(118, 22);
+			this->chk120_140PM->TabIndex = 19;
+			this->chk120_140PM->Text = L"1:20 PM - 1:40 PM";
+			// 
+			// chk100_120PM
+			// 
+			this->chk100_120PM->Location = System::Drawing::Point(15, 12);
+			this->chk100_120PM->Name = L"chk100_120PM";
+			this->chk100_120PM->Size = System::Drawing::Size(118, 22);
+			this->chk100_120PM->TabIndex = 18;
+			this->chk100_120PM->Text = L"1:00 PM - 1:20 PM";
+			this->chk100_120PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk100_120PM_CheckedChanged);
+			// 
+			// pnl9_10AM
+			// 
+			this->pnl9_10AM->Controls->Add(this->chk940_10000AM);
+			this->pnl9_10AM->Controls->Add(this->chk920_940AM);
+			this->pnl9_10AM->Controls->Add(this->chk900_920AM);
+			this->pnl9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl9_10AM->Location = System::Drawing::Point(0, 988);
+			this->pnl9_10AM->Name = L"pnl9_10AM";
+			this->pnl9_10AM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10AM->TabIndex = 34;
+			this->pnl9_10AM->Visible = false;
+			// 
+			// chk940_10000AM
+			// 
+			this->chk940_10000AM->Location = System::Drawing::Point(15, 57);
+			this->chk940_10000AM->Name = L"chk940_10000AM";
+			this->chk940_10000AM->Size = System::Drawing::Size(123, 22);
+			this->chk940_10000AM->TabIndex = 22;
+			this->chk940_10000AM->Text = L"9:40 AM - 10:00 AM";
+			this->chk940_10000AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk940_10000AM_CheckedChanged);
+			// 
+			// chk920_940AM
+			// 
+			this->chk920_940AM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940AM->Name = L"chk920_940AM";
+			this->chk920_940AM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940AM->TabIndex = 19;
+			this->chk920_940AM->Text = L"9:20 AM - 9:40 AM";
+			this->chk920_940AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk920_940AM_CheckedChanged);
+			// 
+			// chk900_920AM
+			// 
+			this->chk900_920AM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920AM->Name = L"chk900_920AM";
+			this->chk900_920AM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920AM->TabIndex = 18;
+			this->chk900_920AM->Text = L"9:00 AM - 9:20 AM";
+			this->chk900_920AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk900_920AM_CheckedChanged);
+			// 
+			// pnl7_8PM
+			// 
+			this->pnl7_8PM->Controls->Add(this->chk740_800PM);
+			this->pnl7_8PM->Controls->Add(this->chk720_740PM);
+			this->pnl7_8PM->Controls->Add(this->chk700_720PM);
+			this->pnl7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl7_8PM->Location = System::Drawing::Point(0, 912);
+			this->pnl7_8PM->Name = L"pnl7_8PM";
+			this->pnl7_8PM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8PM->TabIndex = 39;
+			this->pnl7_8PM->Visible = false;
+			// 
+			// chk740_800PM
+			// 
+			this->chk740_800PM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800PM->Name = L"chk740_800PM";
+			this->chk740_800PM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800PM->TabIndex = 22;
+			this->chk740_800PM->Text = L"7:40 PM - 8:00 PM";
+			// 
+			// chk720_740PM
+			// 
+			this->chk720_740PM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740PM->Name = L"chk720_740PM";
+			this->chk720_740PM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740PM->TabIndex = 19;
+			this->chk720_740PM->Text = L"7:20 PM - 7:40 PM";
+			// 
+			// chk700_720PM
+			// 
+			this->chk700_720PM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720PM->Name = L"chk700_720PM";
+			this->chk700_720PM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720PM->TabIndex = 18;
+			this->chk700_720PM->Text = L"7:00 PM - 7:20 PM";
+			// 
+			// pnl3_4PM
+			// 
+			this->pnl3_4PM->Controls->Add(this->chk340_400PM);
+			this->pnl3_4PM->Controls->Add(this->chk320_340PM);
+			this->pnl3_4PM->Controls->Add(this->chk300_320PM);
+			this->pnl3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl3_4PM->Location = System::Drawing::Point(0, 836);
+			this->pnl3_4PM->Name = L"pnl3_4PM";
+			this->pnl3_4PM->Size = System::Drawing::Size(264, 76);
+			this->pnl3_4PM->TabIndex = 35;
+			this->pnl3_4PM->Visible = false;
+			// 
+			// chk340_400PM
+			// 
+			this->chk340_400PM->Location = System::Drawing::Point(15, 57);
+			this->chk340_400PM->Name = L"chk340_400PM";
+			this->chk340_400PM->Size = System::Drawing::Size(118, 22);
+			this->chk340_400PM->TabIndex = 22;
+			this->chk340_400PM->Text = L"3:40 PM - 4:00 PM";
+			// 
+			// chk320_340PM
+			// 
+			this->chk320_340PM->Location = System::Drawing::Point(15, 34);
+			this->chk320_340PM->Name = L"chk320_340PM";
+			this->chk320_340PM->Size = System::Drawing::Size(118, 22);
+			this->chk320_340PM->TabIndex = 19;
+			this->chk320_340PM->Text = L"3:20 PM - 3:40 PM";
+			// 
+			// chk300_320PM
+			// 
+			this->chk300_320PM->Location = System::Drawing::Point(15, 12);
+			this->chk300_320PM->Name = L"chk300_320PM";
+			this->chk300_320PM->Size = System::Drawing::Size(118, 22);
+			this->chk300_320PM->TabIndex = 18;
+			this->chk300_320PM->Text = L"3:00 PM - 3:20 PM";
+			// 
+			// pnl11_12PM
+			// 
+			this->pnl11_12PM->Controls->Add(this->chk1140_1200PM);
+			this->pnl11_12PM->Controls->Add(this->chk1120_1140AM);
+			this->pnl11_12PM->Controls->Add(this->chk1100_1120AM);
+			this->pnl11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl11_12PM->Location = System::Drawing::Point(0, 760);
+			this->pnl11_12PM->Name = L"pnl11_12PM";
+			this->pnl11_12PM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12PM->TabIndex = 34;
+			this->pnl11_12PM->Visible = false;
+			// 
+			// chk1140_1200PM
+			// 
+			this->chk1140_1200PM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200PM->Name = L"chk1140_1200PM";
+			this->chk1140_1200PM->Size = System::Drawing::Size(131, 22);
+			this->chk1140_1200PM->TabIndex = 22;
+			this->chk1140_1200PM->Text = L"11:40 AM - 12:00 PM";
+			this->chk1140_1200PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1140_1200PM_CheckedChanged);
+			// 
+			// chk1120_1140AM
+			// 
+			this->chk1120_1140AM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140AM->Name = L"chk1120_1140AM";
+			this->chk1120_1140AM->Size = System::Drawing::Size(131, 22);
+			this->chk1120_1140AM->TabIndex = 19;
+			this->chk1120_1140AM->Text = L"11:20 AM - 11:40 AM";
+			this->chk1120_1140AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1120_1140AM_CheckedChanged);
+			// 
+			// chk1100_1120AM
+			// 
+			this->chk1100_1120AM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120AM->Name = L"chk1100_1120AM";
+			this->chk1100_1120AM->Size = System::Drawing::Size(131, 22);
+			this->chk1100_1120AM->TabIndex = 18;
+			this->chk1100_1120AM->Text = L"11:00 AM - 11:20 AM";
+			this->chk1100_1120AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1100_1120AM_CheckedChanged);
+			// 
+			// pnl6_7AM
+			// 
+			this->pnl6_7AM->Controls->Add(this->chk640_700AM);
+			this->pnl6_7AM->Controls->Add(this->chk620_640AM);
+			this->pnl6_7AM->Controls->Add(this->chk600_620AM);
+			this->pnl6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl6_7AM->Location = System::Drawing::Point(0, 684);
+			this->pnl6_7AM->Name = L"pnl6_7AM";
+			this->pnl6_7AM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7AM->TabIndex = 30;
+			this->pnl6_7AM->Visible = false;
+			// 
+			// chk640_700AM
+			// 
+			this->chk640_700AM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700AM->Name = L"chk640_700AM";
+			this->chk640_700AM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700AM->TabIndex = 22;
+			this->chk640_700AM->Text = L"6:40 AM - 7:00 AM";
+			this->chk640_700AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk640_700AM_CheckedChanged);
+			// 
+			// chk620_640AM
+			// 
+			this->chk620_640AM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640AM->Name = L"chk620_640AM";
+			this->chk620_640AM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640AM->TabIndex = 19;
+			this->chk620_640AM->Text = L"6:20 AM - 6:40 AM";
+			this->chk620_640AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk620_640AM_CheckedChanged);
+			// 
+			// chk600_620AM
+			// 
+			this->chk600_620AM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620AM->Name = L"chk600_620AM";
+			this->chk600_620AM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620AM->TabIndex = 18;
+			this->chk600_620AM->Text = L"6:00 AM - 6:20 AM";
+			this->chk600_620AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk600_620AM_CheckedChanged);
+			// 
+			// pnl11_12AM
+			// 
+			this->pnl11_12AM->Controls->Add(this->chk1140_1200AM);
+			this->pnl11_12AM->Controls->Add(this->chk1120_1140PM);
+			this->pnl11_12AM->Controls->Add(this->chk1100_1120PM);
+			this->pnl11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl11_12AM->Location = System::Drawing::Point(0, 608);
+			this->pnl11_12AM->Name = L"pnl11_12AM";
+			this->pnl11_12AM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12AM->TabIndex = 33;
+			this->pnl11_12AM->Visible = false;
+			// 
+			// chk1140_1200AM
+			// 
+			this->chk1140_1200AM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200AM->Name = L"chk1140_1200AM";
+			this->chk1140_1200AM->Size = System::Drawing::Size(127, 22);
+			this->chk1140_1200AM->TabIndex = 22;
+			this->chk1140_1200AM->Text = L"11:40 PM - 12:00 AM";
+			// 
+			// chk1120_1140PM
+			// 
+			this->chk1120_1140PM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140PM->Name = L"chk1120_1140PM";
+			this->chk1120_1140PM->Size = System::Drawing::Size(127, 22);
+			this->chk1120_1140PM->TabIndex = 19;
+			this->chk1120_1140PM->Text = L"11:20 PM - 11:40 PM";
+			// 
+			// chk1100_1120PM
+			// 
+			this->chk1100_1120PM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120PM->Name = L"chk1100_1120PM";
+			this->chk1100_1120PM->Size = System::Drawing::Size(127, 22);
+			this->chk1100_1120PM->TabIndex = 18;
+			this->chk1100_1120PM->Text = L"11:00 PM - 11:20 PM";
+			// 
+			// pnl4_5PM
+			// 
+			this->pnl4_5PM->Controls->Add(this->chk440_500PM);
+			this->pnl4_5PM->Controls->Add(this->chk420_440PM);
+			this->pnl4_5PM->Controls->Add(this->chk400_420PM);
+			this->pnl4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl4_5PM->Location = System::Drawing::Point(0, 532);
+			this->pnl4_5PM->Name = L"pnl4_5PM";
+			this->pnl4_5PM->Size = System::Drawing::Size(264, 76);
+			this->pnl4_5PM->TabIndex = 36;
+			this->pnl4_5PM->Visible = false;
+			// 
+			// chk440_500PM
+			// 
+			this->chk440_500PM->Location = System::Drawing::Point(15, 57);
+			this->chk440_500PM->Name = L"chk440_500PM";
+			this->chk440_500PM->Size = System::Drawing::Size(118, 22);
+			this->chk440_500PM->TabIndex = 22;
+			this->chk440_500PM->Text = L"4:40 PM - 5:00 PM";
+			// 
+			// chk420_440PM
+			// 
+			this->chk420_440PM->Location = System::Drawing::Point(15, 34);
+			this->chk420_440PM->Name = L"chk420_440PM";
+			this->chk420_440PM->Size = System::Drawing::Size(118, 22);
+			this->chk420_440PM->TabIndex = 19;
+			this->chk420_440PM->Text = L"4:20 PM - 4:40 PM";
+			// 
+			// chk400_420PM
+			// 
+			this->chk400_420PM->Location = System::Drawing::Point(15, 12);
+			this->chk400_420PM->Name = L"chk400_420PM";
+			this->chk400_420PM->Size = System::Drawing::Size(118, 22);
+			this->chk400_420PM->TabIndex = 18;
+			this->chk400_420PM->Text = L"4:00 PM - 4:20 PM";
+			// 
+			// pnl10_11PM
+			// 
+			this->pnl10_11PM->Controls->Add(this->chk1040_1100PM);
+			this->pnl10_11PM->Controls->Add(this->chk1020_1040PM);
+			this->pnl10_11PM->Controls->Add(this->chk1000_1020PM);
+			this->pnl10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl10_11PM->Location = System::Drawing::Point(0, 456);
+			this->pnl10_11PM->Name = L"pnl10_11PM";
+			this->pnl10_11PM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11PM->TabIndex = 33;
+			this->pnl10_11PM->Visible = false;
+			// 
+			// chk1040_1100PM
+			// 
+			this->chk1040_1100PM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100PM->Name = L"chk1040_1100PM";
+			this->chk1040_1100PM->Size = System::Drawing::Size(127, 22);
+			this->chk1040_1100PM->TabIndex = 22;
+			this->chk1040_1100PM->Text = L"10:40 PM - 11:00 PM";
+			// 
+			// chk1020_1040PM
+			// 
+			this->chk1020_1040PM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040PM->Name = L"chk1020_1040PM";
+			this->chk1020_1040PM->Size = System::Drawing::Size(127, 22);
+			this->chk1020_1040PM->TabIndex = 19;
+			this->chk1020_1040PM->Text = L"10:20 PM - 10:40 PM";
+			// 
+			// chk1000_1020PM
+			// 
+			this->chk1000_1020PM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020PM->Name = L"chk1000_1020PM";
+			this->chk1000_1020PM->Size = System::Drawing::Size(127, 22);
+			this->chk1000_1020PM->TabIndex = 18;
+			this->chk1000_1020PM->Text = L"10:00 PM - 10:20 PM";
+			// 
+			// pnl10_11AM
+			// 
+			this->pnl10_11AM->Controls->Add(this->chk1040_1100AM);
+			this->pnl10_11AM->Controls->Add(this->chk1020_1040AM);
+			this->pnl10_11AM->Controls->Add(this->chk1000_1020AM);
+			this->pnl10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl10_11AM->Location = System::Drawing::Point(0, 380);
+			this->pnl10_11AM->Name = L"pnl10_11AM";
+			this->pnl10_11AM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11AM->TabIndex = 34;
+			this->pnl10_11AM->Visible = false;
+			// 
+			// chk1040_1100AM
+			// 
+			this->chk1040_1100AM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100AM->Name = L"chk1040_1100AM";
+			this->chk1040_1100AM->Size = System::Drawing::Size(131, 22);
+			this->chk1040_1100AM->TabIndex = 22;
+			this->chk1040_1100AM->Text = L"10:40 AM - 11:00 AM";
+			this->chk1040_1100AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1040_1100AM_CheckedChanged);
+			// 
+			// chk1020_1040AM
+			// 
+			this->chk1020_1040AM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040AM->Name = L"chk1020_1040AM";
+			this->chk1020_1040AM->Size = System::Drawing::Size(131, 22);
+			this->chk1020_1040AM->TabIndex = 19;
+			this->chk1020_1040AM->Text = L"10:20 AM - 10:40 AM";
+			this->chk1020_1040AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1020_1040AM_CheckedChanged);
+			// 
+			// chk1000_1020AM
+			// 
+			this->chk1000_1020AM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020AM->Name = L"chk1000_1020AM";
+			this->chk1000_1020AM->Size = System::Drawing::Size(131, 22);
+			this->chk1000_1020AM->TabIndex = 18;
+			this->chk1000_1020AM->Text = L"10:00 AM - 10:20 AM";
+			this->chk1000_1020AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1000_1020AM_CheckedChanged);
+			// 
+			// pnl9_10PM
+			// 
+			this->pnl9_10PM->Controls->Add(this->chk940_1000PM);
+			this->pnl9_10PM->Controls->Add(this->chk920_940PM);
+			this->pnl9_10PM->Controls->Add(this->chk900_920PM);
+			this->pnl9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl9_10PM->Location = System::Drawing::Point(0, 304);
+			this->pnl9_10PM->Name = L"pnl9_10PM";
+			this->pnl9_10PM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10PM->TabIndex = 33;
+			this->pnl9_10PM->Visible = false;
+			// 
+			// chk940_1000PM
+			// 
+			this->chk940_1000PM->Location = System::Drawing::Point(15, 57);
+			this->chk940_1000PM->Name = L"chk940_1000PM";
+			this->chk940_1000PM->Size = System::Drawing::Size(127, 22);
+			this->chk940_1000PM->TabIndex = 22;
+			this->chk940_1000PM->Text = L"9:40 PM - 10:00 PM";
+			// 
+			// chk920_940PM
+			// 
+			this->chk920_940PM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940PM->Name = L"chk920_940PM";
+			this->chk920_940PM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940PM->TabIndex = 19;
+			this->chk920_940PM->Text = L"9:20 PM - 9:40 PM";
+			// 
+			// chk900_920PM
+			// 
+			this->chk900_920PM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920PM->Name = L"chk900_920PM";
+			this->chk900_920PM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920PM->TabIndex = 18;
+			this->chk900_920PM->Text = L"9:00 PM - 9:20 PM";
+			// 
+			// pnl5_6PM
+			// 
+			this->pnl5_6PM->Controls->Add(this->chk540_600PM);
+			this->pnl5_6PM->Controls->Add(this->chk520_540PM);
+			this->pnl5_6PM->Controls->Add(this->chk500_520PM);
+			this->pnl5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl5_6PM->Location = System::Drawing::Point(0, 228);
+			this->pnl5_6PM->Name = L"pnl5_6PM";
+			this->pnl5_6PM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6PM->TabIndex = 37;
+			this->pnl5_6PM->Visible = false;
+			// 
+			// chk540_600PM
+			// 
+			this->chk540_600PM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600PM->Name = L"chk540_600PM";
+			this->chk540_600PM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600PM->TabIndex = 22;
+			this->chk540_600PM->Text = L"5:40 PM - 6:00 PM";
+			// 
+			// chk520_540PM
+			// 
+			this->chk520_540PM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540PM->Name = L"chk520_540PM";
+			this->chk520_540PM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540PM->TabIndex = 19;
+			this->chk520_540PM->Text = L"5:20 PM - 5:40 PM";
+			// 
+			// chk500_520PM
+			// 
+			this->chk500_520PM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520PM->Name = L"chk500_520PM";
+			this->chk500_520PM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520PM->TabIndex = 18;
+			this->chk500_520PM->Text = L"5:00 PM - 5:20 PM";
+			// 
+			// pnl8_9PM
+			// 
+			this->pnl8_9PM->Controls->Add(this->chk840_900PM);
+			this->pnl8_9PM->Controls->Add(this->chk820_840PM);
+			this->pnl8_9PM->Controls->Add(this->chk800_820PM);
+			this->pnl8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl8_9PM->Location = System::Drawing::Point(0, 152);
+			this->pnl8_9PM->Name = L"pnl8_9PM";
+			this->pnl8_9PM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9PM->TabIndex = 33;
+			this->pnl8_9PM->Visible = false;
+			// 
+			// chk840_900PM
+			// 
+			this->chk840_900PM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900PM->Name = L"chk840_900PM";
+			this->chk840_900PM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900PM->TabIndex = 22;
+			this->chk840_900PM->Text = L"8:40 PM - 9:00 PM";
+			// 
+			// chk820_840PM
+			// 
+			this->chk820_840PM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840PM->Name = L"chk820_840PM";
+			this->chk820_840PM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840PM->TabIndex = 19;
+			this->chk820_840PM->Text = L"8:20 PM - 8:40 PM";
+			// 
+			// chk800_820PM
+			// 
+			this->chk800_820PM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820PM->Name = L"chk800_820PM";
+			this->chk800_820PM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820PM->TabIndex = 18;
+			this->chk800_820PM->Text = L"8:00 PM - 8:20 PM";
+			// 
+			// pnl8_9AM
+			// 
+			this->pnl8_9AM->Controls->Add(this->chk840_900AM);
+			this->pnl8_9AM->Controls->Add(this->chk820_840AM);
+			this->pnl8_9AM->Controls->Add(this->chk800_820AM);
+			this->pnl8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl8_9AM->Location = System::Drawing::Point(0, 76);
+			this->pnl8_9AM->Name = L"pnl8_9AM";
+			this->pnl8_9AM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9AM->TabIndex = 32;
+			this->pnl8_9AM->Visible = false;
+			// 
+			// chk840_900AM
+			// 
+			this->chk840_900AM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900AM->Name = L"chk840_900AM";
+			this->chk840_900AM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900AM->TabIndex = 22;
+			this->chk840_900AM->Text = L"8:40 AM - 9:00 AM";
+			this->chk840_900AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk840_900AM_CheckedChanged);
+			// 
+			// chk820_840AM
+			// 
+			this->chk820_840AM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840AM->Name = L"chk820_840AM";
+			this->chk820_840AM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840AM->TabIndex = 19;
+			this->chk820_840AM->Text = L"8:20 AM - 8:40 AM";
+			this->chk820_840AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk820_840AM_CheckedChanged);
+			// 
+			// chk800_820AM
+			// 
+			this->chk800_820AM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820AM->Name = L"chk800_820AM";
+			this->chk800_820AM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820AM->TabIndex = 18;
+			this->chk800_820AM->Text = L"8:00 AM - 8:20 AM";
+			this->chk800_820AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk800_820AM_CheckedChanged);
+			// 
+			// pnl6_7PM
+			// 
+			this->pnl6_7PM->Controls->Add(this->chk640_700PM);
+			this->pnl6_7PM->Controls->Add(this->chk620_640PM);
+			this->pnl6_7PM->Controls->Add(this->chk600_620PM);
+			this->pnl6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
+			this->pnl6_7PM->Location = System::Drawing::Point(0, 0);
+			this->pnl6_7PM->Name = L"pnl6_7PM";
+			this->pnl6_7PM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7PM->TabIndex = 38;
+			this->pnl6_7PM->Visible = false;
+			// 
+			// chk640_700PM
+			// 
+			this->chk640_700PM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700PM->Name = L"chk640_700PM";
+			this->chk640_700PM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700PM->TabIndex = 22;
+			this->chk640_700PM->Text = L"6:40 PM - 7:00 PM";
+			// 
+			// chk620_640PM
+			// 
+			this->chk620_640PM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640PM->Name = L"chk620_640PM";
+			this->chk620_640PM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640PM->TabIndex = 19;
+			this->chk620_640PM->Text = L"6:20 PM - 6:40 PM";
+			// 
+			// chk600_620PM
+			// 
+			this->chk600_620PM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620PM->Name = L"chk600_620PM";
+			this->chk600_620PM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620PM->TabIndex = 18;
+			this->chk600_620PM->Text = L"6:00 PM - 6:20 PM";
+			// 
+			// pnl24Hr
+			// 
+			this->pnl24Hr->Controls->Add(this->rbtn23_00);
+			this->pnl24Hr->Controls->Add(this->rbtn22_23);
+			this->pnl24Hr->Controls->Add(this->rbtn21_22);
+			this->pnl24Hr->Controls->Add(this->rbtn20_21);
+			this->pnl24Hr->Controls->Add(this->rbtn19_20);
+			this->pnl24Hr->Controls->Add(this->rbtn18_19);
+			this->pnl24Hr->Controls->Add(this->rbtn17_18);
+			this->pnl24Hr->Controls->Add(this->rbtn16_17);
+			this->pnl24Hr->Controls->Add(this->rbtn15_16);
+			this->pnl24Hr->Controls->Add(this->rbtn14_15);
+			this->pnl24Hr->Controls->Add(this->rbtn13_14);
+			this->pnl24Hr->Controls->Add(this->rbtn11_12);
+			this->pnl24Hr->Controls->Add(this->rbtn10_11);
+			this->pnl24Hr->Controls->Add(this->rbtn09_10);
+			this->pnl24Hr->Controls->Add(this->rbtn08_09);
+			this->pnl24Hr->Controls->Add(this->rbtn07_08);
+			this->pnl24Hr->Controls->Add(this->rbtn06_07);
+			this->pnl24Hr->Controls->Add(this->rbtn05_06);
+			this->pnl24Hr->Location = System::Drawing::Point(108, 56);
+			this->pnl24Hr->Name = L"pnl24Hr";
+			this->pnl24Hr->Size = System::Drawing::Size(136, 310);
+			this->pnl24Hr->TabIndex = 44;
+			// 
+			// rbtn23_00
+			// 
+			this->rbtn23_00->AutoSize = true;
+			this->rbtn23_00->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn23_00->Location = System::Drawing::Point(0, 289);
+			this->rbtn23_00->Name = L"rbtn23_00";
+			this->rbtn23_00->Size = System::Drawing::Size(136, 17);
+			this->rbtn23_00->TabIndex = 43;
+			this->rbtn23_00->TabStop = true;
+			this->rbtn23_00->Text = L"23:00 - 00:00";
+			this->rbtn23_00->UseVisualStyleBackColor = true;
+			this->rbtn23_00->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn23_00_CheckedChanged);
+			// 
+			// rbtn22_23
+			// 
+			this->rbtn22_23->AutoSize = true;
+			this->rbtn22_23->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn22_23->Location = System::Drawing::Point(0, 272);
+			this->rbtn22_23->Name = L"rbtn22_23";
+			this->rbtn22_23->Size = System::Drawing::Size(136, 17);
+			this->rbtn22_23->TabIndex = 42;
+			this->rbtn22_23->TabStop = true;
+			this->rbtn22_23->Text = L"22:00 - 23:00";
+			this->rbtn22_23->UseVisualStyleBackColor = true;
+			this->rbtn22_23->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn22_23_CheckedChanged);
+			// 
+			// rbtn21_22
+			// 
+			this->rbtn21_22->AutoSize = true;
+			this->rbtn21_22->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn21_22->Location = System::Drawing::Point(0, 255);
+			this->rbtn21_22->Name = L"rbtn21_22";
+			this->rbtn21_22->Size = System::Drawing::Size(136, 17);
+			this->rbtn21_22->TabIndex = 41;
+			this->rbtn21_22->TabStop = true;
+			this->rbtn21_22->Text = L"21:00 - 22:00";
+			this->rbtn21_22->UseVisualStyleBackColor = true;
+			this->rbtn21_22->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn21_22_CheckedChanged);
+			// 
+			// rbtn20_21
+			// 
+			this->rbtn20_21->AutoSize = true;
+			this->rbtn20_21->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn20_21->Location = System::Drawing::Point(0, 238);
+			this->rbtn20_21->Name = L"rbtn20_21";
+			this->rbtn20_21->Size = System::Drawing::Size(136, 17);
+			this->rbtn20_21->TabIndex = 40;
+			this->rbtn20_21->TabStop = true;
+			this->rbtn20_21->Text = L"20:00 - 21:00";
+			this->rbtn20_21->UseVisualStyleBackColor = true;
+			this->rbtn20_21->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn20_21_CheckedChanged);
+			// 
+			// rbtn19_20
+			// 
+			this->rbtn19_20->AutoSize = true;
+			this->rbtn19_20->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn19_20->Location = System::Drawing::Point(0, 221);
+			this->rbtn19_20->Name = L"rbtn19_20";
+			this->rbtn19_20->Size = System::Drawing::Size(136, 17);
+			this->rbtn19_20->TabIndex = 39;
+			this->rbtn19_20->TabStop = true;
+			this->rbtn19_20->Text = L"19:00 - 20:00";
+			this->rbtn19_20->UseVisualStyleBackColor = true;
+			this->rbtn19_20->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn19_20_CheckedChanged);
+			// 
+			// rbtn18_19
+			// 
+			this->rbtn18_19->AutoSize = true;
+			this->rbtn18_19->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn18_19->Location = System::Drawing::Point(0, 204);
+			this->rbtn18_19->Name = L"rbtn18_19";
+			this->rbtn18_19->Size = System::Drawing::Size(136, 17);
+			this->rbtn18_19->TabIndex = 38;
+			this->rbtn18_19->TabStop = true;
+			this->rbtn18_19->Text = L"18:00 - 19:00";
+			this->rbtn18_19->UseVisualStyleBackColor = true;
+			this->rbtn18_19->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn18_19_CheckedChanged);
+			// 
+			// rbtn17_18
+			// 
+			this->rbtn17_18->AutoSize = true;
+			this->rbtn17_18->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn17_18->Location = System::Drawing::Point(0, 187);
+			this->rbtn17_18->Name = L"rbtn17_18";
+			this->rbtn17_18->Size = System::Drawing::Size(136, 17);
+			this->rbtn17_18->TabIndex = 37;
+			this->rbtn17_18->TabStop = true;
+			this->rbtn17_18->Text = L"17:00 - 18:00";
+			this->rbtn17_18->UseVisualStyleBackColor = true;
+			this->rbtn17_18->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn17_18_CheckedChanged);
+			// 
+			// rbtn16_17
+			// 
+			this->rbtn16_17->AutoSize = true;
+			this->rbtn16_17->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn16_17->Location = System::Drawing::Point(0, 170);
+			this->rbtn16_17->Name = L"rbtn16_17";
+			this->rbtn16_17->Size = System::Drawing::Size(136, 17);
+			this->rbtn16_17->TabIndex = 36;
+			this->rbtn16_17->TabStop = true;
+			this->rbtn16_17->Text = L"16:00 - 17:00";
+			this->rbtn16_17->UseVisualStyleBackColor = true;
+			this->rbtn16_17->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn16_17_CheckedChanged);
+			// 
+			// rbtn15_16
+			// 
+			this->rbtn15_16->AutoSize = true;
+			this->rbtn15_16->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn15_16->Location = System::Drawing::Point(0, 153);
+			this->rbtn15_16->Name = L"rbtn15_16";
+			this->rbtn15_16->Size = System::Drawing::Size(136, 17);
+			this->rbtn15_16->TabIndex = 35;
+			this->rbtn15_16->TabStop = true;
+			this->rbtn15_16->Text = L"15:00 - 16:00";
+			this->rbtn15_16->UseVisualStyleBackColor = true;
+			this->rbtn15_16->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn15_16_CheckedChanged);
+			// 
+			// rbtn14_15
+			// 
+			this->rbtn14_15->AutoSize = true;
+			this->rbtn14_15->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn14_15->Location = System::Drawing::Point(0, 136);
+			this->rbtn14_15->Name = L"rbtn14_15";
+			this->rbtn14_15->Size = System::Drawing::Size(136, 17);
+			this->rbtn14_15->TabIndex = 34;
+			this->rbtn14_15->TabStop = true;
+			this->rbtn14_15->Text = L"14:00 - 15:00";
+			this->rbtn14_15->UseVisualStyleBackColor = true;
+			this->rbtn14_15->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn14_15_CheckedChanged);
+			// 
+			// rbtn13_14
+			// 
+			this->rbtn13_14->AutoSize = true;
+			this->rbtn13_14->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn13_14->Location = System::Drawing::Point(0, 119);
+			this->rbtn13_14->Name = L"rbtn13_14";
+			this->rbtn13_14->Size = System::Drawing::Size(136, 17);
+			this->rbtn13_14->TabIndex = 33;
+			this->rbtn13_14->TabStop = true;
+			this->rbtn13_14->Text = L"13:00 - 14:00";
+			this->rbtn13_14->UseVisualStyleBackColor = true;
+			this->rbtn13_14->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn13_14_CheckedChanged);
+			// 
+			// rbtn11_12
+			// 
+			this->rbtn11_12->AutoSize = true;
+			this->rbtn11_12->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn11_12->Location = System::Drawing::Point(0, 102);
+			this->rbtn11_12->Name = L"rbtn11_12";
+			this->rbtn11_12->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12->TabIndex = 32;
+			this->rbtn11_12->TabStop = true;
+			this->rbtn11_12->Text = L"11:00 - 12:00";
+			this->rbtn11_12->UseVisualStyleBackColor = true;
+			this->rbtn11_12->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn11_12_CheckedChanged);
+			// 
+			// rbtn10_11
+			// 
+			this->rbtn10_11->AutoSize = true;
+			this->rbtn10_11->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn10_11->Location = System::Drawing::Point(0, 85);
+			this->rbtn10_11->Name = L"rbtn10_11";
+			this->rbtn10_11->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11->TabIndex = 31;
+			this->rbtn10_11->TabStop = true;
+			this->rbtn10_11->Text = L"10:00 - 11:00";
+			this->rbtn10_11->UseVisualStyleBackColor = true;
+			this->rbtn10_11->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn10_11_CheckedChanged);
+			// 
+			// rbtn09_10
+			// 
+			this->rbtn09_10->AutoSize = true;
+			this->rbtn09_10->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn09_10->Location = System::Drawing::Point(0, 68);
+			this->rbtn09_10->Name = L"rbtn09_10";
+			this->rbtn09_10->Size = System::Drawing::Size(136, 17);
+			this->rbtn09_10->TabIndex = 30;
+			this->rbtn09_10->TabStop = true;
+			this->rbtn09_10->Text = L"09:00 - 10:00";
+			this->rbtn09_10->UseVisualStyleBackColor = true;
+			this->rbtn09_10->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn09_10_CheckedChanged);
+			// 
+			// rbtn08_09
+			// 
+			this->rbtn08_09->AutoSize = true;
+			this->rbtn08_09->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn08_09->Location = System::Drawing::Point(0, 51);
+			this->rbtn08_09->Name = L"rbtn08_09";
+			this->rbtn08_09->Size = System::Drawing::Size(136, 17);
+			this->rbtn08_09->TabIndex = 29;
+			this->rbtn08_09->TabStop = true;
+			this->rbtn08_09->Text = L"08:00 - 09:00";
+			this->rbtn08_09->UseVisualStyleBackColor = true;
+			this->rbtn08_09->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn08_09_CheckedChanged);
+			// 
+			// rbtn07_08
+			// 
+			this->rbtn07_08->AutoSize = true;
+			this->rbtn07_08->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn07_08->Location = System::Drawing::Point(0, 34);
+			this->rbtn07_08->Name = L"rbtn07_08";
+			this->rbtn07_08->Size = System::Drawing::Size(136, 17);
+			this->rbtn07_08->TabIndex = 28;
+			this->rbtn07_08->TabStop = true;
+			this->rbtn07_08->Text = L"07:00 - 08:00";
+			this->rbtn07_08->UseVisualStyleBackColor = true;
+			this->rbtn07_08->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn07_08_CheckedChanged);
+			// 
+			// rbtn06_07
+			// 
+			this->rbtn06_07->AutoSize = true;
+			this->rbtn06_07->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn06_07->Location = System::Drawing::Point(0, 17);
+			this->rbtn06_07->Name = L"rbtn06_07";
+			this->rbtn06_07->Size = System::Drawing::Size(136, 17);
+			this->rbtn06_07->TabIndex = 27;
+			this->rbtn06_07->TabStop = true;
+			this->rbtn06_07->Text = L"06:00 - 07:00";
+			this->rbtn06_07->UseVisualStyleBackColor = true;
+			this->rbtn06_07->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn06_07_CheckedChanged);
+			// 
+			// rbtn05_06
+			// 
+			this->rbtn05_06->AutoSize = true;
+			this->rbtn05_06->Dock = System::Windows::Forms::DockStyle::Top;
+			this->rbtn05_06->Location = System::Drawing::Point(0, 0);
+			this->rbtn05_06->Name = L"rbtn05_06";
+			this->rbtn05_06->Size = System::Drawing::Size(136, 17);
+			this->rbtn05_06->TabIndex = 26;
+			this->rbtn05_06->TabStop = true;
+			this->rbtn05_06->Text = L"05:00 - 06:00";
+			this->rbtn05_06->UseVisualStyleBackColor = true;
+			this->rbtn05_06->CheckedChanged += gcnew System::EventHandler(this, &MyForm::rbtn05_06_CheckedChanged);
+			// 
+			// grpViewYourEvents
+			// 
+			this->grpViewYourEvents->Controls->Add(this->btnViewEvent);
+			this->grpViewYourEvents->Controls->Add(this->lstYourEvents);
+			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
+			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
+			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
+			this->grpViewYourEvents->Location = System::Drawing::Point(968, 96);
+			this->grpViewYourEvents->Name = L"grpViewYourEvents";
+			this->grpViewYourEvents->Size = System::Drawing::Size(200, 361);
+			this->grpViewYourEvents->TabIndex = 9;
+			this->grpViewYourEvents->TabStop = false;
+			this->grpViewYourEvents->Visible = false;
+			// 
+			// btnViewEvent
+			// 
+			this->btnViewEvent->Location = System::Drawing::Point(44, 289);
+			this->btnViewEvent->Name = L"btnViewEvent";
+			this->btnViewEvent->Size = System::Drawing::Size(103, 23);
+			this->btnViewEvent->TabIndex = 4;
+			this->btnViewEvent->Text = L"View Event";
+			this->btnViewEvent->UseVisualStyleBackColor = true;
+			this->btnViewEvent->Click += gcnew System::EventHandler(this, &MyForm::btnViewEvent_Click);
+			// 
+			// lstYourEvents
+			// 
+			this->lstYourEvents->FormattingEnabled = true;
+			this->lstYourEvents->Location = System::Drawing::Point(6, 46);
+			this->lstYourEvents->Name = L"lstYourEvents";
+			this->lstYourEvents->Size = System::Drawing::Size(188, 225);
+			this->lstYourEvents->TabIndex = 3;
+			// 
+			// lblViewEvent
+			// 
+			this->lblViewEvent->AutoSize = true;
+			this->lblViewEvent->Location = System::Drawing::Point(55, 25);
+			this->lblViewEvent->Name = L"lblViewEvent";
+			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
+			this->lblViewEvent->TabIndex = 2;
+			this->lblViewEvent->Text = L"Select Event:";
+			// 
+			// btnUserBack
+			// 
+			this->btnUserBack->Location = System::Drawing::Point(44, 318);
+			this->btnUserBack->Name = L"btnUserBack";
+			this->btnUserBack->Size = System::Drawing::Size(103, 23);
+			this->btnUserBack->TabIndex = 12;
+			this->btnUserBack->Text = L"Back";
+			this->btnUserBack->UseVisualStyleBackColor = true;
+			this->btnUserBack->Click += gcnew System::EventHandler(this, &MyForm::btnUserBack_Click);
+			// 
+			// btnViewEventsBack
+			// 
+			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
+			this->btnViewEventsBack->Name = L"btnViewEventsBack";
+			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->TabIndex = 11;
+			this->btnViewEventsBack->Text = L"Back";
+			this->btnViewEventsBack->UseVisualStyleBackColor = true;
+			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
+			// 
+			// grpEventInfo
+			// 
+			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
+			this->grpEventInfo->Controls->Add(this->lblEventDate);
+			this->grpEventInfo->Controls->Add(this->lblEventLocation);
+			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
+			this->grpEventInfo->Controls->Add(this->lblEventName);
+			this->grpEventInfo->Location = System::Drawing::Point(578, 12);
+			this->grpEventInfo->Name = L"grpEventInfo";
+			this->grpEventInfo->Size = System::Drawing::Size(200, 204);
+			this->grpEventInfo->TabIndex = 9;
+			this->grpEventInfo->TabStop = false;
+			this->grpEventInfo->Visible = false;
+			// 
+			// btnEventInfoBack
+			// 
+			this->btnEventInfoBack->Location = System::Drawing::Point(44, 169);
+			this->btnEventInfoBack->Name = L"btnEventInfoBack";
+			this->btnEventInfoBack->Size = System::Drawing::Size(103, 23);
+			this->btnEventInfoBack->TabIndex = 9;
+			this->btnEventInfoBack->Text = L"Back";
+			this->btnEventInfoBack->UseVisualStyleBackColor = true;
+			this->btnEventInfoBack->Click += gcnew System::EventHandler(this, &MyForm::btnEventInfoBack_Click);
+			// 
+			// lblEventDate
+			// 
+			this->lblEventDate->Location = System::Drawing::Point(0, 57);
+			this->lblEventDate->Name = L"lblEventDate";
+			this->lblEventDate->Size = System::Drawing::Size(200, 13);
+			this->lblEventDate->TabIndex = 8;
+			this->lblEventDate->Text = L"EVENTDATE";
+			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// lblEventLocation
+			// 
+			this->lblEventLocation->Location = System::Drawing::Point(0, 96);
+			this->lblEventLocation->Name = L"lblEventLocation";
+			this->lblEventLocation->Size = System::Drawing::Size(200, 13);
+			this->lblEventLocation->TabIndex = 7;
+			this->lblEventLocation->Text = L"EVENTLOCATION";
+			this->lblEventLocation->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// btnEditAvailability
+			// 
+			this->btnEditAvailability->Location = System::Drawing::Point(44, 135);
+			this->btnEditAvailability->Name = L"btnEditAvailability";
+			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
+			this->btnEditAvailability->TabIndex = 6;
+			this->btnEditAvailability->Text = L"Edit Availability";
+			this->btnEditAvailability->UseVisualStyleBackColor = true;
+			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
+			// 
+			// lblEventName
+			// 
+			this->lblEventName->Location = System::Drawing::Point(1, 17);
+			this->lblEventName->Name = L"lblEventName";
+			this->lblEventName->Size = System::Drawing::Size(199, 17);
+			this->lblEventName->TabIndex = 2;
+			this->lblEventName->Text = L"EVENTNAME";
+			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(441, 3);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->TabIndex = 14;
+			// 
 			// MyForm
 			// 
-			this->AcceptButton = this->btnLogin;
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+<<<<<<< HEAD
+=======
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1391, 704);
-			this->Controls->Add(this->groupBox2);
-			this->Controls->Add(this->grpViewSchedule);
-			this->Controls->Add(this->textBox4);
+			this->ClientSize = System::Drawing::Size(1604, 881);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->grpViewYourEvents);
+			this->Controls->Add(this->grpMode);
+>>>>>>> origin/UI
 			this->Controls->Add(this->grpLogin);
-			this->Controls->Add(this->grpUser);
-			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpCreateEvent);
-			this->Controls->Add(this->groupBox1);
+<<<<<<< HEAD
+=======
 			this->Controls->Add(this->grpAvailability);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpAdmin);
+>>>>>>> origin/UI
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
-			this->grpLogin->ResumeLayout(false);
-			this->grpLogin->PerformLayout();
 			this->grpCreateEvent->ResumeLayout(false);
 			this->grpCreateEvent->PerformLayout();
 			this->grpAdmin->ResumeLayout(false);
 			this->grpAdmin->PerformLayout();
-			this->grpUser->ResumeLayout(false);
-			this->grpUser->PerformLayout();
-			this->grpViewSchedule->ResumeLayout(false);
-			this->grpViewSchedule->PerformLayout();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
+			this->grpLogin->ResumeLayout(false);
+			this->grpLogin->PerformLayout();
+			this->grpMode->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
+			this->pnl12Hr->ResumeLayout(false);
+			this->pnl12Hr->PerformLayout();
+			this->panel5->ResumeLayout(false);
+			this->pnl5_6AM->ResumeLayout(false);
+			this->pnl7_8AM->ResumeLayout(false);
+			this->pnl2_3PM->ResumeLayout(false);
+			this->pnl1_2PM->ResumeLayout(false);
+			this->pnl9_10AM->ResumeLayout(false);
+			this->pnl7_8PM->ResumeLayout(false);
+			this->pnl3_4PM->ResumeLayout(false);
+			this->pnl11_12PM->ResumeLayout(false);
+			this->pnl6_7AM->ResumeLayout(false);
+			this->pnl11_12AM->ResumeLayout(false);
+			this->pnl4_5PM->ResumeLayout(false);
+			this->pnl10_11PM->ResumeLayout(false);
+			this->pnl10_11AM->ResumeLayout(false);
+			this->pnl9_10PM->ResumeLayout(false);
+			this->pnl5_6PM->ResumeLayout(false);
+			this->pnl8_9PM->ResumeLayout(false);
+			this->pnl8_9AM->ResumeLayout(false);
+			this->pnl6_7PM->ResumeLayout(false);
+			this->pnl24Hr->ResumeLayout(false);
+			this->pnl24Hr->PerformLayout();
+			this->grpViewYourEvents->ResumeLayout(false);
+			this->grpViewYourEvents->PerformLayout();
+			this->grpEventInfo->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
+<<<<<<< HEAD
 =======
-			System::Windows::Forms::TreeNode^  treeNode1 = (gcnew System::Windows::Forms::TreeNode(L"00:00 - 00:20"));
-			System::Windows::Forms::TreeNode^  treeNode2 = (gcnew System::Windows::Forms::TreeNode(L"00:20 - 00:40"));
-			System::Windows::Forms::TreeNode^  treeNode3 = (gcnew System::Windows::Forms::TreeNode(L"00:40 - 01:00"));
-			System::Windows::Forms::TreeNode^  treeNode4 = (gcnew System::Windows::Forms::TreeNode(L"00:00 - 01:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode1,
-					treeNode2, treeNode3
-			}));
-			System::Windows::Forms::TreeNode^  treeNode5 = (gcnew System::Windows::Forms::TreeNode(L"01:00 - 01:20"));
-			System::Windows::Forms::TreeNode^  treeNode6 = (gcnew System::Windows::Forms::TreeNode(L"01:20 - 01:40"));
-			System::Windows::Forms::TreeNode^  treeNode7 = (gcnew System::Windows::Forms::TreeNode(L"01:40 - 02:00"));
-			System::Windows::Forms::TreeNode^  treeNode8 = (gcnew System::Windows::Forms::TreeNode(L"01:00 - 02:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode5,
-					treeNode6, treeNode7
-			}));
-			System::Windows::Forms::TreeNode^  treeNode9 = (gcnew System::Windows::Forms::TreeNode(L"02:00 - 02:20"));
-			System::Windows::Forms::TreeNode^  treeNode10 = (gcnew System::Windows::Forms::TreeNode(L"02:20 - 02:40"));
-			System::Windows::Forms::TreeNode^  treeNode11 = (gcnew System::Windows::Forms::TreeNode(L"02:40 - 03:00"));
-			System::Windows::Forms::TreeNode^  treeNode12 = (gcnew System::Windows::Forms::TreeNode(L"02:00 - 03:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode9,
-					treeNode10, treeNode11
-			}));
-			System::Windows::Forms::TreeNode^  treeNode13 = (gcnew System::Windows::Forms::TreeNode(L"03:00 - 03:20"));
-			System::Windows::Forms::TreeNode^  treeNode14 = (gcnew System::Windows::Forms::TreeNode(L"03:20 - 03:40"));
-			System::Windows::Forms::TreeNode^  treeNode15 = (gcnew System::Windows::Forms::TreeNode(L"03:40 - 04:00"));
-			System::Windows::Forms::TreeNode^  treeNode16 = (gcnew System::Windows::Forms::TreeNode(L"03:00 - 04:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode13,
-					treeNode14, treeNode15
-			}));
-			System::Windows::Forms::TreeNode^  treeNode17 = (gcnew System::Windows::Forms::TreeNode(L"04:00 - 04:20"));
-			System::Windows::Forms::TreeNode^  treeNode18 = (gcnew System::Windows::Forms::TreeNode(L"04:20 - 04:40"));
-			System::Windows::Forms::TreeNode^  treeNode19 = (gcnew System::Windows::Forms::TreeNode(L"04:40 - 05:00"));
-			System::Windows::Forms::TreeNode^  treeNode20 = (gcnew System::Windows::Forms::TreeNode(L"04:00 - 05:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode17,
-					treeNode18, treeNode19
-			}));
-			System::Windows::Forms::TreeNode^  treeNode21 = (gcnew System::Windows::Forms::TreeNode(L"05:00 - 05:20"));
-			System::Windows::Forms::TreeNode^  treeNode22 = (gcnew System::Windows::Forms::TreeNode(L"05:20 - 05:40"));
-			System::Windows::Forms::TreeNode^  treeNode23 = (gcnew System::Windows::Forms::TreeNode(L"05:40 - 06:00"));
-			System::Windows::Forms::TreeNode^  treeNode24 = (gcnew System::Windows::Forms::TreeNode(L"05:00 - 06:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode21,
-					treeNode22, treeNode23
-			}));
-			System::Windows::Forms::TreeNode^  treeNode25 = (gcnew System::Windows::Forms::TreeNode(L"06:00 - 06:20"));
-			System::Windows::Forms::TreeNode^  treeNode26 = (gcnew System::Windows::Forms::TreeNode(L"06:20 - 06:40"));
-			System::Windows::Forms::TreeNode^  treeNode27 = (gcnew System::Windows::Forms::TreeNode(L"06:40 - 07:00"));
-			System::Windows::Forms::TreeNode^  treeNode28 = (gcnew System::Windows::Forms::TreeNode(L"06:00 - 07:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode25,
-					treeNode26, treeNode27
-			}));
-			System::Windows::Forms::TreeNode^  treeNode29 = (gcnew System::Windows::Forms::TreeNode(L"07:00 - 07:20"));
-			System::Windows::Forms::TreeNode^  treeNode30 = (gcnew System::Windows::Forms::TreeNode(L"07:20 - 07:40"));
-			System::Windows::Forms::TreeNode^  treeNode31 = (gcnew System::Windows::Forms::TreeNode(L"07:40 - 08:00"));
-			System::Windows::Forms::TreeNode^  treeNode32 = (gcnew System::Windows::Forms::TreeNode(L"07:00 - 08:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode29,
-					treeNode30, treeNode31
-			}));
-			System::Windows::Forms::TreeNode^  treeNode33 = (gcnew System::Windows::Forms::TreeNode(L"08:00 - 08:20"));
-			System::Windows::Forms::TreeNode^  treeNode34 = (gcnew System::Windows::Forms::TreeNode(L"08:20 - 08:40"));
-			System::Windows::Forms::TreeNode^  treeNode35 = (gcnew System::Windows::Forms::TreeNode(L"08:40 - 09:00"));
-			System::Windows::Forms::TreeNode^  treeNode36 = (gcnew System::Windows::Forms::TreeNode(L"08:00 - 09:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode33,
-					treeNode34, treeNode35
-			}));
-			System::Windows::Forms::TreeNode^  treeNode37 = (gcnew System::Windows::Forms::TreeNode(L"09:00 - 09:20"));
-			System::Windows::Forms::TreeNode^  treeNode38 = (gcnew System::Windows::Forms::TreeNode(L"09:20 - 09:40"));
-			System::Windows::Forms::TreeNode^  treeNode39 = (gcnew System::Windows::Forms::TreeNode(L"09:40 - 10:00"));
-			System::Windows::Forms::TreeNode^  treeNode40 = (gcnew System::Windows::Forms::TreeNode(L"09:00 - 10:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode37,
-					treeNode38, treeNode39
-			}));
-			System::Windows::Forms::TreeNode^  treeNode41 = (gcnew System::Windows::Forms::TreeNode(L"10:00 - 10:20"));
-			System::Windows::Forms::TreeNode^  treeNode42 = (gcnew System::Windows::Forms::TreeNode(L"10:20 - 10:40"));
-			System::Windows::Forms::TreeNode^  treeNode43 = (gcnew System::Windows::Forms::TreeNode(L"10:40 - 11:00"));
-			System::Windows::Forms::TreeNode^  treeNode44 = (gcnew System::Windows::Forms::TreeNode(L"10:00 - 11:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode41,
-					treeNode42, treeNode43
-			}));
-			System::Windows::Forms::TreeNode^  treeNode45 = (gcnew System::Windows::Forms::TreeNode(L"11:00 - 11:20"));
-			System::Windows::Forms::TreeNode^  treeNode46 = (gcnew System::Windows::Forms::TreeNode(L"11:20 - 11:40"));
-			System::Windows::Forms::TreeNode^  treeNode47 = (gcnew System::Windows::Forms::TreeNode(L"11:40 - 12:00"));
-			System::Windows::Forms::TreeNode^  treeNode48 = (gcnew System::Windows::Forms::TreeNode(L"11:00 - 12:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode45,
-					treeNode46, treeNode47
-			}));
-			System::Windows::Forms::TreeNode^  treeNode49 = (gcnew System::Windows::Forms::TreeNode(L"12:00-12:20"));
-			System::Windows::Forms::TreeNode^  treeNode50 = (gcnew System::Windows::Forms::TreeNode(L"12:20 - 12:40"));
-			System::Windows::Forms::TreeNode^  treeNode51 = (gcnew System::Windows::Forms::TreeNode(L"12:40 - 13:00"));
-			System::Windows::Forms::TreeNode^  treeNode52 = (gcnew System::Windows::Forms::TreeNode(L"12:00 - 13:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode49,
-					treeNode50, treeNode51
-			}));
-			System::Windows::Forms::TreeNode^  treeNode53 = (gcnew System::Windows::Forms::TreeNode(L"13:00 - 13:20"));
-			System::Windows::Forms::TreeNode^  treeNode54 = (gcnew System::Windows::Forms::TreeNode(L"13:20 - 13:40"));
-			System::Windows::Forms::TreeNode^  treeNode55 = (gcnew System::Windows::Forms::TreeNode(L"13:40 - 14:00"));
-			System::Windows::Forms::TreeNode^  treeNode56 = (gcnew System::Windows::Forms::TreeNode(L"13:00 - 14:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode53,
-					treeNode54, treeNode55
-			}));
-			System::Windows::Forms::TreeNode^  treeNode57 = (gcnew System::Windows::Forms::TreeNode(L"14:00 - 14:20"));
-			System::Windows::Forms::TreeNode^  treeNode58 = (gcnew System::Windows::Forms::TreeNode(L"14:20 - 14:40"));
-			System::Windows::Forms::TreeNode^  treeNode59 = (gcnew System::Windows::Forms::TreeNode(L"14:40 - 15:00"));
-			System::Windows::Forms::TreeNode^  treeNode60 = (gcnew System::Windows::Forms::TreeNode(L"14:00 - 15:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode57,
-					treeNode58, treeNode59
-			}));
-			System::Windows::Forms::TreeNode^  treeNode61 = (gcnew System::Windows::Forms::TreeNode(L"15:00 - 15:20"));
-			System::Windows::Forms::TreeNode^  treeNode62 = (gcnew System::Windows::Forms::TreeNode(L"15:20 - 15:40"));
-			System::Windows::Forms::TreeNode^  treeNode63 = (gcnew System::Windows::Forms::TreeNode(L"15:40 - 16:00"));
-			System::Windows::Forms::TreeNode^  treeNode64 = (gcnew System::Windows::Forms::TreeNode(L"15:00 - 16:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode61,
-					treeNode62, treeNode63
-			}));
-			System::Windows::Forms::TreeNode^  treeNode65 = (gcnew System::Windows::Forms::TreeNode(L"16:00 - 16:20"));
-			System::Windows::Forms::TreeNode^  treeNode66 = (gcnew System::Windows::Forms::TreeNode(L"16:20 - 16:40"));
-			System::Windows::Forms::TreeNode^  treeNode67 = (gcnew System::Windows::Forms::TreeNode(L"16:40 - 17:00"));
-			System::Windows::Forms::TreeNode^  treeNode68 = (gcnew System::Windows::Forms::TreeNode(L"16:00 - 17:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode65,
-					treeNode66, treeNode67
-			}));
-			System::Windows::Forms::TreeNode^  treeNode69 = (gcnew System::Windows::Forms::TreeNode(L"17:00 - 17:20"));
-			System::Windows::Forms::TreeNode^  treeNode70 = (gcnew System::Windows::Forms::TreeNode(L"17:20 - 17:40"));
-			System::Windows::Forms::TreeNode^  treeNode71 = (gcnew System::Windows::Forms::TreeNode(L"17:40 - 18:00"));
-			System::Windows::Forms::TreeNode^  treeNode72 = (gcnew System::Windows::Forms::TreeNode(L"17:00 - 18:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode69,
-					treeNode70, treeNode71
-			}));
-			System::Windows::Forms::TreeNode^  treeNode73 = (gcnew System::Windows::Forms::TreeNode(L"18:00 - 18:20"));
-			System::Windows::Forms::TreeNode^  treeNode74 = (gcnew System::Windows::Forms::TreeNode(L"18:20 - 18:40"));
-			System::Windows::Forms::TreeNode^  treeNode75 = (gcnew System::Windows::Forms::TreeNode(L"18:40 - 19:00"));
-			System::Windows::Forms::TreeNode^  treeNode76 = (gcnew System::Windows::Forms::TreeNode(L"18:00 - 19:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode73,
-					treeNode74, treeNode75
-			}));
-			System::Windows::Forms::TreeNode^  treeNode77 = (gcnew System::Windows::Forms::TreeNode(L"19:00 - 19:20"));
-			System::Windows::Forms::TreeNode^  treeNode78 = (gcnew System::Windows::Forms::TreeNode(L"19:20 - 19:40"));
-			System::Windows::Forms::TreeNode^  treeNode79 = (gcnew System::Windows::Forms::TreeNode(L"19:40 - 20:00"));
-			System::Windows::Forms::TreeNode^  treeNode80 = (gcnew System::Windows::Forms::TreeNode(L"19:00 - 20:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode77,
-					treeNode78, treeNode79
-			}));
-			System::Windows::Forms::TreeNode^  treeNode81 = (gcnew System::Windows::Forms::TreeNode(L"20:00 - 20:20"));
-			System::Windows::Forms::TreeNode^  treeNode82 = (gcnew System::Windows::Forms::TreeNode(L"20:20 - 20:40"));
-			System::Windows::Forms::TreeNode^  treeNode83 = (gcnew System::Windows::Forms::TreeNode(L"20:40 - 21:00"));
-			System::Windows::Forms::TreeNode^  treeNode84 = (gcnew System::Windows::Forms::TreeNode(L"20:00 - 21:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode81,
-					treeNode82, treeNode83
-			}));
-			System::Windows::Forms::TreeNode^  treeNode85 = (gcnew System::Windows::Forms::TreeNode(L"21:00 - 21:20"));
-			System::Windows::Forms::TreeNode^  treeNode86 = (gcnew System::Windows::Forms::TreeNode(L"21:20 - 21:40"));
-			System::Windows::Forms::TreeNode^  treeNode87 = (gcnew System::Windows::Forms::TreeNode(L"21:40 - 22:00"));
-			System::Windows::Forms::TreeNode^  treeNode88 = (gcnew System::Windows::Forms::TreeNode(L"21:00 - 22:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode85,
-					treeNode86, treeNode87
-			}));
-			System::Windows::Forms::TreeNode^  treeNode89 = (gcnew System::Windows::Forms::TreeNode(L"22:00 - 22:20"));
-			System::Windows::Forms::TreeNode^  treeNode90 = (gcnew System::Windows::Forms::TreeNode(L"22:20 - 22:40"));
-			System::Windows::Forms::TreeNode^  treeNode91 = (gcnew System::Windows::Forms::TreeNode(L"22:40 - 23:00"));
-			System::Windows::Forms::TreeNode^  treeNode92 = (gcnew System::Windows::Forms::TreeNode(L"22:00 - 23:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode89,
-					treeNode90, treeNode91
-			}));
-			System::Windows::Forms::TreeNode^  treeNode93 = (gcnew System::Windows::Forms::TreeNode(L"23:00 - 23:20"));
-			System::Windows::Forms::TreeNode^  treeNode94 = (gcnew System::Windows::Forms::TreeNode(L"23:20 - 23:40"));
-			System::Windows::Forms::TreeNode^  treeNode95 = (gcnew System::Windows::Forms::TreeNode(L"23:40 - 00:00"));
-			System::Windows::Forms::TreeNode^  treeNode96 = (gcnew System::Windows::Forms::TreeNode(L"23:00 - 00:00", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode93,
-					treeNode94, treeNode95
-			}));
-			System::Windows::Forms::TreeNode^  treeNode97 = (gcnew System::Windows::Forms::TreeNode(L"12:00 AM - 12:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode98 = (gcnew System::Windows::Forms::TreeNode(L"12:20 AM - 12:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode99 = (gcnew System::Windows::Forms::TreeNode(L"12:40 AM - 1:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode100 = (gcnew System::Windows::Forms::TreeNode(L"12 AM - 1AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode97,
-					treeNode98, treeNode99
-			}));
-			System::Windows::Forms::TreeNode^  treeNode101 = (gcnew System::Windows::Forms::TreeNode(L"1:00 AM - 1:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode102 = (gcnew System::Windows::Forms::TreeNode(L"1:20 AM - 1:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode103 = (gcnew System::Windows::Forms::TreeNode(L"1:40 AM - 2:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode104 = (gcnew System::Windows::Forms::TreeNode(L"1 AM - 2 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode101,
-					treeNode102, treeNode103
-			}));
-			System::Windows::Forms::TreeNode^  treeNode105 = (gcnew System::Windows::Forms::TreeNode(L"2:00 AM - 2:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode106 = (gcnew System::Windows::Forms::TreeNode(L"2:20 AM - 2:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode107 = (gcnew System::Windows::Forms::TreeNode(L"2:40 AM - 3:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode108 = (gcnew System::Windows::Forms::TreeNode(L"2 AM - 3 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode105,
-					treeNode106, treeNode107
-			}));
-			System::Windows::Forms::TreeNode^  treeNode109 = (gcnew System::Windows::Forms::TreeNode(L"3:00 AM - 3:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode110 = (gcnew System::Windows::Forms::TreeNode(L"3:20 AM - 3:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode111 = (gcnew System::Windows::Forms::TreeNode(L"3:40 AM - 4:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode112 = (gcnew System::Windows::Forms::TreeNode(L"3 AM - 4 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode109,
-					treeNode110, treeNode111
-			}));
-			System::Windows::Forms::TreeNode^  treeNode113 = (gcnew System::Windows::Forms::TreeNode(L"4:00 AM - 4:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode114 = (gcnew System::Windows::Forms::TreeNode(L"4:20 AM - 4:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode115 = (gcnew System::Windows::Forms::TreeNode(L"4:40 AM - 5:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode116 = (gcnew System::Windows::Forms::TreeNode(L"4 AM - 5 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode113,
-					treeNode114, treeNode115
-			}));
-			System::Windows::Forms::TreeNode^  treeNode117 = (gcnew System::Windows::Forms::TreeNode(L"5:00 AM - 5:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode118 = (gcnew System::Windows::Forms::TreeNode(L"5:20 AM - 5:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode119 = (gcnew System::Windows::Forms::TreeNode(L"5:40 AM - 6:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode120 = (gcnew System::Windows::Forms::TreeNode(L"5AM - 6 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode117,
-					treeNode118, treeNode119
-			}));
-			System::Windows::Forms::TreeNode^  treeNode121 = (gcnew System::Windows::Forms::TreeNode(L"6:00 AM - 6:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode122 = (gcnew System::Windows::Forms::TreeNode(L"6:20 AM - 6:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode123 = (gcnew System::Windows::Forms::TreeNode(L"6:40 AM - 7:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode124 = (gcnew System::Windows::Forms::TreeNode(L"6 AM - 7 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode121,
-					treeNode122, treeNode123
-			}));
-			System::Windows::Forms::TreeNode^  treeNode125 = (gcnew System::Windows::Forms::TreeNode(L"7:00 AM - 7:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode126 = (gcnew System::Windows::Forms::TreeNode(L"7:20 AM - 7:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode127 = (gcnew System::Windows::Forms::TreeNode(L"7:40 AM - 8:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode128 = (gcnew System::Windows::Forms::TreeNode(L"7 AM - 8 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode125,
-					treeNode126, treeNode127
-			}));
-			System::Windows::Forms::TreeNode^  treeNode129 = (gcnew System::Windows::Forms::TreeNode(L"8:00 AM - 8:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode130 = (gcnew System::Windows::Forms::TreeNode(L"8:20 AM - 8:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode131 = (gcnew System::Windows::Forms::TreeNode(L"8:40 AM - 9:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode132 = (gcnew System::Windows::Forms::TreeNode(L"8 AM - 9 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode129,
-					treeNode130, treeNode131
-			}));
-			System::Windows::Forms::TreeNode^  treeNode133 = (gcnew System::Windows::Forms::TreeNode(L"9:00 AM - 9:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode134 = (gcnew System::Windows::Forms::TreeNode(L"9:20 AM - 9:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode135 = (gcnew System::Windows::Forms::TreeNode(L"9:40 AM - 10:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode136 = (gcnew System::Windows::Forms::TreeNode(L"9 AM - 10 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode133,
-					treeNode134, treeNode135
-			}));
-			System::Windows::Forms::TreeNode^  treeNode137 = (gcnew System::Windows::Forms::TreeNode(L"10:00 AM - 10:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode138 = (gcnew System::Windows::Forms::TreeNode(L"10:20 AM - 10:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode139 = (gcnew System::Windows::Forms::TreeNode(L"10:40 AM - 11:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode140 = (gcnew System::Windows::Forms::TreeNode(L"10 AM - 11 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode137,
-					treeNode138, treeNode139
-			}));
-			System::Windows::Forms::TreeNode^  treeNode141 = (gcnew System::Windows::Forms::TreeNode(L"11:00 AM - 11:20 AM"));
-			System::Windows::Forms::TreeNode^  treeNode142 = (gcnew System::Windows::Forms::TreeNode(L"11:20 AM - 11:40 AM"));
-			System::Windows::Forms::TreeNode^  treeNode143 = (gcnew System::Windows::Forms::TreeNode(L"11:40 AM - 12:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode144 = (gcnew System::Windows::Forms::TreeNode(L"11 PM - 12 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode141,
-					treeNode142, treeNode143
-			}));
-			System::Windows::Forms::TreeNode^  treeNode145 = (gcnew System::Windows::Forms::TreeNode(L"12:00 PM - 12:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode146 = (gcnew System::Windows::Forms::TreeNode(L"12:20 PM - 12:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode147 = (gcnew System::Windows::Forms::TreeNode(L"12:40 PM - 1:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode148 = (gcnew System::Windows::Forms::TreeNode(L"12 PM - 1 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode145,
-					treeNode146, treeNode147
-			}));
-			System::Windows::Forms::TreeNode^  treeNode149 = (gcnew System::Windows::Forms::TreeNode(L"1:00 PM - 1:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode150 = (gcnew System::Windows::Forms::TreeNode(L"1:20 PM - 1:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode151 = (gcnew System::Windows::Forms::TreeNode(L"1:40 PM - 2:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode152 = (gcnew System::Windows::Forms::TreeNode(L"1 PM - 2 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode149,
-					treeNode150, treeNode151
-			}));
-			System::Windows::Forms::TreeNode^  treeNode153 = (gcnew System::Windows::Forms::TreeNode(L"2:00 PM - 2:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode154 = (gcnew System::Windows::Forms::TreeNode(L"2:20 PM - 2:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode155 = (gcnew System::Windows::Forms::TreeNode(L"2:40 PM - 3:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode156 = (gcnew System::Windows::Forms::TreeNode(L"2 PM - 3 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode153,
-					treeNode154, treeNode155
-			}));
-			System::Windows::Forms::TreeNode^  treeNode157 = (gcnew System::Windows::Forms::TreeNode(L"3:00 PM - 3:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode158 = (gcnew System::Windows::Forms::TreeNode(L"3:20 PM - 3:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode159 = (gcnew System::Windows::Forms::TreeNode(L"3:40 PM - 4:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode160 = (gcnew System::Windows::Forms::TreeNode(L"3 PM - 4 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode157,
-					treeNode158, treeNode159
-			}));
-			System::Windows::Forms::TreeNode^  treeNode161 = (gcnew System::Windows::Forms::TreeNode(L"4:00 PM - 4:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode162 = (gcnew System::Windows::Forms::TreeNode(L"4:20 PM - 4:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode163 = (gcnew System::Windows::Forms::TreeNode(L"4:40 PM - 5:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode164 = (gcnew System::Windows::Forms::TreeNode(L"4 PM - 5 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode161,
-					treeNode162, treeNode163
-			}));
-			System::Windows::Forms::TreeNode^  treeNode165 = (gcnew System::Windows::Forms::TreeNode(L"5:00 PM - 5:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode166 = (gcnew System::Windows::Forms::TreeNode(L"5:20 PM - 5:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode167 = (gcnew System::Windows::Forms::TreeNode(L"5:40 PM - 6:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode168 = (gcnew System::Windows::Forms::TreeNode(L"5 PM - 6 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode165,
-					treeNode166, treeNode167
-			}));
-			System::Windows::Forms::TreeNode^  treeNode169 = (gcnew System::Windows::Forms::TreeNode(L"6:00 PM - 6:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode170 = (gcnew System::Windows::Forms::TreeNode(L"6:20 PM - 6:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode171 = (gcnew System::Windows::Forms::TreeNode(L"6:40 PM - 7:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode172 = (gcnew System::Windows::Forms::TreeNode(L"6 PM - 7 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode169,
-					treeNode170, treeNode171
-			}));
-			System::Windows::Forms::TreeNode^  treeNode173 = (gcnew System::Windows::Forms::TreeNode(L"7:00 PM - 7:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode174 = (gcnew System::Windows::Forms::TreeNode(L"7:20 PM - 7:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode175 = (gcnew System::Windows::Forms::TreeNode(L"7:40 PM - 8:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode176 = (gcnew System::Windows::Forms::TreeNode(L"7 PM - 8 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode173,
-					treeNode174, treeNode175
-			}));
-			System::Windows::Forms::TreeNode^  treeNode177 = (gcnew System::Windows::Forms::TreeNode(L"8:00 PM - 8:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode178 = (gcnew System::Windows::Forms::TreeNode(L"8:20 PM - 8:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode179 = (gcnew System::Windows::Forms::TreeNode(L"8:40 PM - 9:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode180 = (gcnew System::Windows::Forms::TreeNode(L"8 PM - 9 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode177,
-					treeNode178, treeNode179
-			}));
-			System::Windows::Forms::TreeNode^  treeNode181 = (gcnew System::Windows::Forms::TreeNode(L"9:00 PM - 9:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode182 = (gcnew System::Windows::Forms::TreeNode(L"9:20 PM - 9:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode183 = (gcnew System::Windows::Forms::TreeNode(L"9:40 PM - 10:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode184 = (gcnew System::Windows::Forms::TreeNode(L"9 PM - 10 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode181,
-					treeNode182, treeNode183
-			}));
-			System::Windows::Forms::TreeNode^  treeNode185 = (gcnew System::Windows::Forms::TreeNode(L"10:00 PM - 10:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode186 = (gcnew System::Windows::Forms::TreeNode(L"10:20 PM - 10:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode187 = (gcnew System::Windows::Forms::TreeNode(L"10:40 PM - 11:00 PM"));
-			System::Windows::Forms::TreeNode^  treeNode188 = (gcnew System::Windows::Forms::TreeNode(L"10 PM - 11 PM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode185,
-					treeNode186, treeNode187
-			}));
-			System::Windows::Forms::TreeNode^  treeNode189 = (gcnew System::Windows::Forms::TreeNode(L"11:00 PM - 11:20 PM"));
-			System::Windows::Forms::TreeNode^  treeNode190 = (gcnew System::Windows::Forms::TreeNode(L"11:20 PM - 11:40 PM"));
-			System::Windows::Forms::TreeNode^  treeNode191 = (gcnew System::Windows::Forms::TreeNode(L"11:40 PM - 12:00 AM"));
-			System::Windows::Forms::TreeNode^  treeNode192 = (gcnew System::Windows::Forms::TreeNode(L"11 PM - 12 AM", gcnew cli::array< System::Windows::Forms::TreeNode^  >(3) {
-				treeNode189,
-					treeNode190, treeNode191
-			}));
 			this->txtUser = (gcnew System::Windows::Forms::TextBox());
 			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->lblLogin = (gcnew System::Windows::Forms::Label());
@@ -2407,419 +2872,6 @@ namespace Project1 {
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
 			// 
-			// trv24Hr
-			// 
-			this->trv24Hr->CheckBoxes = true;
-			this->trv24Hr->Location = System::Drawing::Point(182, 82);
-			this->trv24Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->trv24Hr->Name = L"trv24Hr";
-			treeNode1->Name = L"00:00-00:20";
-			treeNode1->Text = L"00:00 - 00:20";
-			treeNode2->Name = L"00:20-00:40";
-			treeNode2->Text = L"00:20 - 00:40";
-			treeNode3->Name = L"00:40-01:00";
-			treeNode3->Text = L"00:40 - 01:00";
-			treeNode4->Name = L"00:00-01:00";
-			treeNode4->Text = L"00:00 - 01:00";
-			treeNode5->Name = L"01:00-01:20";
-			treeNode5->Text = L"01:00 - 01:20";
-			treeNode6->Name = L"01:20-01:40";
-			treeNode6->Text = L"01:20 - 01:40";
-			treeNode7->Name = L"01:40-02:00";
-			treeNode7->Text = L"01:40 - 02:00";
-			treeNode8->Name = L"01:00-02:00";
-			treeNode8->Text = L"01:00 - 02:00";
-			treeNode9->Name = L"02:00-02:20";
-			treeNode9->Text = L"02:00 - 02:20";
-			treeNode10->Name = L"02:20-02:40";
-			treeNode10->Text = L"02:20 - 02:40";
-			treeNode11->Name = L"02:40-03:00";
-			treeNode11->Text = L"02:40 - 03:00";
-			treeNode12->Name = L"02:00-03:00";
-			treeNode12->Text = L"02:00 - 03:00";
-			treeNode13->Name = L"03:00-03:20";
-			treeNode13->Text = L"03:00 - 03:20";
-			treeNode14->Name = L"03:20-03:40";
-			treeNode14->Text = L"03:20 - 03:40";
-			treeNode15->Name = L"03:40-04:00";
-			treeNode15->Text = L"03:40 - 04:00";
-			treeNode16->Name = L"03:00-04:00";
-			treeNode16->Text = L"03:00 - 04:00";
-			treeNode17->Name = L"04:00-04:20";
-			treeNode17->Text = L"04:00 - 04:20";
-			treeNode18->Name = L"04:20-04:40";
-			treeNode18->Text = L"04:20 - 04:40";
-			treeNode19->Name = L"04:40-05:00";
-			treeNode19->Text = L"04:40 - 05:00";
-			treeNode20->Name = L"04:00-05:00";
-			treeNode20->Text = L"04:00 - 05:00";
-			treeNode21->Name = L"05:00-05:20";
-			treeNode21->Text = L"05:00 - 05:20";
-			treeNode22->Name = L"05:20-05:40";
-			treeNode22->Text = L"05:20 - 05:40";
-			treeNode23->Name = L"05:40-06:00";
-			treeNode23->Text = L"05:40 - 06:00";
-			treeNode24->Name = L"05:00-06:00";
-			treeNode24->Text = L"05:00 - 06:00";
-			treeNode25->Name = L"06:00-06:20";
-			treeNode25->Text = L"06:00 - 06:20";
-			treeNode26->Name = L"06:20-06:40";
-			treeNode26->Text = L"06:20 - 06:40";
-			treeNode27->Name = L"06:40-07:00";
-			treeNode27->Text = L"06:40 - 07:00";
-			treeNode28->Name = L"06:00-07:00";
-			treeNode28->Text = L"06:00 - 07:00";
-			treeNode29->Name = L"07:00-07:20";
-			treeNode29->Text = L"07:00 - 07:20";
-			treeNode30->Name = L"07:20-07:40";
-			treeNode30->Text = L"07:20 - 07:40";
-			treeNode31->Name = L"07:40-08:00";
-			treeNode31->Text = L"07:40 - 08:00";
-			treeNode32->Name = L"07:00-08:00";
-			treeNode32->Text = L"07:00 - 08:00";
-			treeNode33->Name = L"08:00-08:20";
-			treeNode33->Text = L"08:00 - 08:20";
-			treeNode34->Name = L"08:20-08:40";
-			treeNode34->Text = L"08:20 - 08:40";
-			treeNode35->Name = L"08:40-09:00";
-			treeNode35->Text = L"08:40 - 09:00";
-			treeNode36->Name = L"08:00-09:00";
-			treeNode36->Text = L"08:00 - 09:00";
-			treeNode37->Name = L"09:00-09:20";
-			treeNode37->Text = L"09:00 - 09:20";
-			treeNode38->Name = L"09:20-09:40";
-			treeNode38->Text = L"09:20 - 09:40";
-			treeNode39->Name = L"09:40-10:00";
-			treeNode39->Text = L"09:40 - 10:00";
-			treeNode40->Name = L"09:00-10:00";
-			treeNode40->Text = L"09:00 - 10:00";
-			treeNode41->Name = L"10:00-10:20";
-			treeNode41->Text = L"10:00 - 10:20";
-			treeNode42->Name = L"10:20-10:40";
-			treeNode42->Text = L"10:20 - 10:40";
-			treeNode43->Name = L"10:40-11:00";
-			treeNode43->Text = L"10:40 - 11:00";
-			treeNode44->Name = L"10:00-11:00";
-			treeNode44->Text = L"10:00 - 11:00";
-			treeNode45->Name = L"11:00-11:20";
-			treeNode45->Text = L"11:00 - 11:20";
-			treeNode46->Name = L"11:20-11:40";
-			treeNode46->Text = L"11:20 - 11:40";
-			treeNode47->Name = L"11:40-12:00";
-			treeNode47->Text = L"11:40 - 12:00";
-			treeNode48->Name = L"11:00-12:00";
-			treeNode48->Text = L"11:00 - 12:00";
-			treeNode49->Name = L"12:00-12:20";
-			treeNode49->Text = L"12:00-12:20";
-			treeNode50->Name = L"12:20-12:40";
-			treeNode50->Text = L"12:20 - 12:40";
-			treeNode51->Name = L"12:40-13:00";
-			treeNode51->Text = L"12:40 - 13:00";
-			treeNode52->Name = L"12:00-13:00";
-			treeNode52->Text = L"12:00 - 13:00";
-			treeNode53->Name = L"13:00-13:20";
-			treeNode53->Text = L"13:00 - 13:20";
-			treeNode54->Name = L"13:20-13:40";
-			treeNode54->Text = L"13:20 - 13:40";
-			treeNode55->Name = L"13:40-14:00";
-			treeNode55->Text = L"13:40 - 14:00";
-			treeNode56->Name = L"13:00-14:00";
-			treeNode56->Text = L"13:00 - 14:00";
-			treeNode57->Name = L"14:00-14:20";
-			treeNode57->Text = L"14:00 - 14:20";
-			treeNode58->Name = L"14:20-14:40";
-			treeNode58->Text = L"14:20 - 14:40";
-			treeNode59->Name = L"14:40-15:00";
-			treeNode59->Text = L"14:40 - 15:00";
-			treeNode60->Name = L"14:00-15:00";
-			treeNode60->Text = L"14:00 - 15:00";
-			treeNode61->Name = L"15:00-15:20";
-			treeNode61->Text = L"15:00 - 15:20";
-			treeNode62->Name = L"15:20-15:40";
-			treeNode62->Text = L"15:20 - 15:40";
-			treeNode63->Name = L"15:40-16:00";
-			treeNode63->Text = L"15:40 - 16:00";
-			treeNode64->Name = L"15:00-16:00";
-			treeNode64->Text = L"15:00 - 16:00";
-			treeNode65->Name = L"16:00-16:20";
-			treeNode65->Text = L"16:00 - 16:20";
-			treeNode66->Name = L"16:20-16:40";
-			treeNode66->Text = L"16:20 - 16:40";
-			treeNode67->Name = L"16:40-17:00";
-			treeNode67->Text = L"16:40 - 17:00";
-			treeNode68->Name = L"16:00-17:00";
-			treeNode68->Text = L"16:00 - 17:00";
-			treeNode69->Name = L"17:00-17:20";
-			treeNode69->Text = L"17:00 - 17:20";
-			treeNode70->Name = L"17:20-17:40";
-			treeNode70->Text = L"17:20 - 17:40";
-			treeNode71->Name = L"17:40-18:00";
-			treeNode71->Text = L"17:40 - 18:00";
-			treeNode72->Name = L"17:00-18:00";
-			treeNode72->Text = L"17:00 - 18:00";
-			treeNode73->Name = L"18:00-18:20";
-			treeNode73->Text = L"18:00 - 18:20";
-			treeNode74->Name = L"18:20-18:40";
-			treeNode74->Text = L"18:20 - 18:40";
-			treeNode75->Name = L"18:40-19:00";
-			treeNode75->Text = L"18:40 - 19:00";
-			treeNode76->Name = L"18:00-19:00";
-			treeNode76->Text = L"18:00 - 19:00";
-			treeNode77->Name = L"19:00-19:20";
-			treeNode77->Text = L"19:00 - 19:20";
-			treeNode78->Name = L"19:20-19:40";
-			treeNode78->Text = L"19:20 - 19:40";
-			treeNode79->Name = L"19:40-20:00";
-			treeNode79->Text = L"19:40 - 20:00";
-			treeNode80->Name = L"19:00-20:00";
-			treeNode80->Text = L"19:00 - 20:00";
-			treeNode81->Name = L"20:00-20:20";
-			treeNode81->Text = L"20:00 - 20:20";
-			treeNode82->Name = L"20:20-20:40";
-			treeNode82->Text = L"20:20 - 20:40";
-			treeNode83->Name = L"20:40-21:00";
-			treeNode83->Text = L"20:40 - 21:00";
-			treeNode84->Name = L"20:00-21:00";
-			treeNode84->Text = L"20:00 - 21:00";
-			treeNode85->Name = L"21:00-21:20";
-			treeNode85->Text = L"21:00 - 21:20";
-			treeNode86->Name = L"21:20-21:40";
-			treeNode86->Text = L"21:20 - 21:40";
-			treeNode87->Name = L"21:40-22:00";
-			treeNode87->Text = L"21:40 - 22:00";
-			treeNode88->Name = L"21:00-22:00";
-			treeNode88->Text = L"21:00 - 22:00";
-			treeNode89->Name = L"22:00-22:20";
-			treeNode89->Text = L"22:00 - 22:20";
-			treeNode90->Name = L"22:20-22:40";
-			treeNode90->Text = L"22:20 - 22:40";
-			treeNode91->Name = L"22:40-23:00";
-			treeNode91->Text = L"22:40 - 23:00";
-			treeNode92->Name = L"22:00-23:00";
-			treeNode92->Text = L"22:00 - 23:00";
-			treeNode93->Name = L"23:00-23:20";
-			treeNode93->Text = L"23:00 - 23:20";
-			treeNode94->Name = L"23:20-23:40";
-			treeNode94->Text = L"23:20 - 23:40";
-			treeNode95->Name = L"23:40-00:00";
-			treeNode95->Text = L"23:40 - 00:00";
-			treeNode96->Name = L"23:00-24:00";
-			treeNode96->Text = L"23:00 - 00:00";
-			this->trv24Hr->Nodes->AddRange(gcnew cli::array< System::Windows::Forms::TreeNode^  >(24) {
-				treeNode4, treeNode8, treeNode12,
-					treeNode16, treeNode20, treeNode24, treeNode28, treeNode32, treeNode36, treeNode40, treeNode44, treeNode48, treeNode52, treeNode56,
-					treeNode60, treeNode64, treeNode68, treeNode72, treeNode76, treeNode80, treeNode84, treeNode88, treeNode92, treeNode96
-			});
-			this->trv24Hr->Size = System::Drawing::Size(420, 526);
-			this->trv24Hr->TabIndex = 15;
-			// 
-			// trv12Hr
-			// 
-			this->trv12Hr->CheckBoxes = true;
-			this->trv12Hr->Location = System::Drawing::Point(182, 82);
-			this->trv12Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->trv12Hr->Name = L"trv12Hr";
-			treeNode97->Name = L"12-12:20AM";
-			treeNode97->Text = L"12:00 AM - 12:20 AM";
-			treeNode98->Name = L"12:20-12:40AM";
-			treeNode98->Text = L"12:20 AM - 12:40 AM";
-			treeNode99->Name = L"12:40-1AM";
-			treeNode99->Text = L"12:40 AM - 1:00 AM";
-			treeNode100->Name = L"12-1AM";
-			treeNode100->Text = L"12 AM - 1AM";
-			treeNode101->Name = L"1-1:20AM";
-			treeNode101->Text = L"1:00 AM - 1:20 AM";
-			treeNode102->Name = L"1:20-1:40AM";
-			treeNode102->Text = L"1:20 AM - 1:40 AM";
-			treeNode103->Name = L"1:40-2AM";
-			treeNode103->Text = L"1:40 AM - 2:00 AM";
-			treeNode104->Name = L"1-2AM";
-			treeNode104->Text = L"1 AM - 2 AM";
-			treeNode105->Name = L"2:00-2:20AM";
-			treeNode105->Text = L"2:00 AM - 2:20 AM";
-			treeNode106->Name = L"2:20AM-2:40AM";
-			treeNode106->Text = L"2:20 AM - 2:40 AM";
-			treeNode107->Name = L"2:40AM-3:00AM";
-			treeNode107->Text = L"2:40 AM - 3:00 AM";
-			treeNode108->Name = L"2-3AM";
-			treeNode108->Text = L"2 AM - 3 AM";
-			treeNode109->Name = L"3:00AM-3:20AM";
-			treeNode109->Text = L"3:00 AM - 3:20 AM";
-			treeNode110->Name = L"3:20AM-3:40AM";
-			treeNode110->Text = L"3:20 AM - 3:40 AM";
-			treeNode111->Name = L"3:40AM-4:00AM";
-			treeNode111->Text = L"3:40 AM - 4:00 AM";
-			treeNode112->Name = L"3-4AM";
-			treeNode112->Text = L"3 AM - 4 AM";
-			treeNode113->Name = L"4:00AM-4:20AM";
-			treeNode113->Text = L"4:00 AM - 4:20 AM";
-			treeNode114->Name = L"4:20AM-4:40AM";
-			treeNode114->Text = L"4:20 AM - 4:40 AM";
-			treeNode115->Name = L"4:40AM-5:00AM";
-			treeNode115->Text = L"4:40 AM - 5:00 AM";
-			treeNode116->Name = L"4-5AM";
-			treeNode116->Text = L"4 AM - 5 AM";
-			treeNode117->Name = L"5:00AM-5:20AM";
-			treeNode117->Text = L"5:00 AM - 5:20 AM";
-			treeNode118->Name = L"5:20AM-5:40AM";
-			treeNode118->Text = L"5:20 AM - 5:40 AM";
-			treeNode119->Name = L"5:40AM-6:00AM";
-			treeNode119->Text = L"5:40 AM - 6:00 AM";
-			treeNode120->Name = L"5AM-6AM";
-			treeNode120->Text = L"5AM - 6 AM";
-			treeNode121->Name = L"6:00AM-6:20AM";
-			treeNode121->Text = L"6:00 AM - 6:20 AM";
-			treeNode122->Name = L"6:20AM-6:40AM";
-			treeNode122->Text = L"6:20 AM - 6:40 AM";
-			treeNode123->Name = L"6:40AM-7:00AM";
-			treeNode123->Text = L"6:40 AM - 7:00 AM";
-			treeNode124->Name = L"6AM-7AM";
-			treeNode124->Text = L"6 AM - 7 AM";
-			treeNode125->Name = L"7:00AM-7:20AM";
-			treeNode125->Text = L"7:00 AM - 7:20 AM";
-			treeNode126->Name = L"7:20AM-7:40AM";
-			treeNode126->Text = L"7:20 AM - 7:40 AM";
-			treeNode127->Name = L"7:40AM-8:00AM";
-			treeNode127->Text = L"7:40 AM - 8:00 AM";
-			treeNode128->Name = L"7-8AM";
-			treeNode128->Text = L"7 AM - 8 AM";
-			treeNode129->Name = L"8:00AM-8:20AM";
-			treeNode129->Text = L"8:00 AM - 8:20 AM";
-			treeNode130->Name = L"8:20AM-8:40AM";
-			treeNode130->Text = L"8:20 AM - 8:40 AM";
-			treeNode131->Name = L"8:40AM-9:00AM";
-			treeNode131->Text = L"8:40 AM - 9:00 AM";
-			treeNode132->Name = L"8-9AM";
-			treeNode132->Text = L"8 AM - 9 AM";
-			treeNode133->Name = L"9:00AM-9:20AM";
-			treeNode133->Text = L"9:00 AM - 9:20 AM";
-			treeNode134->Name = L"9:20AM-9:40AM";
-			treeNode134->Text = L"9:20 AM - 9:40 AM";
-			treeNode135->Name = L"9:40AM-10:00AM";
-			treeNode135->Text = L"9:40 AM - 10:00 AM";
-			treeNode136->Name = L"9-10AM";
-			treeNode136->Text = L"9 AM - 10 AM";
-			treeNode137->Name = L"10:00AM-10:20AM";
-			treeNode137->Text = L"10:00 AM - 10:20 AM";
-			treeNode138->Name = L"10:20AM-10:40AM";
-			treeNode138->Text = L"10:20 AM - 10:40 AM";
-			treeNode139->Name = L"10:40AM-11:00AM";
-			treeNode139->Text = L"10:40 AM - 11:00 AM";
-			treeNode140->Name = L"10-11AM";
-			treeNode140->Text = L"10 AM - 11 AM";
-			treeNode141->Name = L"11:00AM-11:20AM";
-			treeNode141->Text = L"11:00 AM - 11:20 AM";
-			treeNode142->Name = L"11:20AM-11:40AM";
-			treeNode142->Text = L"11:20 AM - 11:40 AM";
-			treeNode143->Name = L"11:40AM-12:00PM";
-			treeNode143->Text = L"11:40 AM - 12:00 PM";
-			treeNode144->Name = L"11-12PM";
-			treeNode144->Text = L"11 PM - 12 PM";
-			treeNode145->Name = L"12:00PM-12:20PM";
-			treeNode145->Text = L"12:00 PM - 12:20 PM";
-			treeNode146->Name = L"12:20PM-12:40PM";
-			treeNode146->Text = L"12:20 PM - 12:40 PM";
-			treeNode147->Name = L"12:40PM-1:00PM";
-			treeNode147->Text = L"12:40 PM - 1:00 PM";
-			treeNode148->Name = L"12-1PM";
-			treeNode148->Text = L"12 PM - 1 PM";
-			treeNode149->Name = L"1:00PM-1:20PM";
-			treeNode149->Text = L"1:00 PM - 1:20 PM";
-			treeNode150->Name = L"1:20PM-1:40PM";
-			treeNode150->Text = L"1:20 PM - 1:40 PM";
-			treeNode151->Name = L"1:40PM-2:00PM";
-			treeNode151->Text = L"1:40 PM - 2:00 PM";
-			treeNode152->Name = L"1-2PM";
-			treeNode152->Text = L"1 PM - 2 PM";
-			treeNode153->Name = L"2:00PM-2:20PM";
-			treeNode153->Text = L"2:00 PM - 2:20 PM";
-			treeNode154->Name = L"2:20PM-2:40PM";
-			treeNode154->Text = L"2:20 PM - 2:40 PM";
-			treeNode155->Name = L"2:40PM-3:00PM";
-			treeNode155->Text = L"2:40 PM - 3:00 PM";
-			treeNode156->Name = L"3PM";
-			treeNode156->Text = L"2 PM - 3 PM";
-			treeNode157->Name = L"3:00PM-3:20PM";
-			treeNode157->Text = L"3:00 PM - 3:20 PM";
-			treeNode158->Name = L"3:20PM-3:40PM";
-			treeNode158->Text = L"3:20 PM - 3:40 PM";
-			treeNode159->Name = L"3:40PM-4:00PM";
-			treeNode159->Text = L"3:40 PM - 4:00 PM";
-			treeNode160->Name = L"4PM";
-			treeNode160->Text = L"3 PM - 4 PM";
-			treeNode161->Name = L"4:00PM-4:20PM";
-			treeNode161->Text = L"4:00 PM - 4:20 PM";
-			treeNode162->Name = L"4:20PM-4:40PM";
-			treeNode162->Text = L"4:20 PM - 4:40 PM";
-			treeNode163->Name = L"4:40PM-5:00PM";
-			treeNode163->Text = L"4:40 PM - 5:00 PM";
-			treeNode164->Name = L"5PM";
-			treeNode164->Text = L"4 PM - 5 PM";
-			treeNode165->Name = L"5:00PM-5:20PM";
-			treeNode165->Text = L"5:00 PM - 5:20 PM";
-			treeNode166->Name = L"5:20PM-5:40PM";
-			treeNode166->Text = L"5:20 PM - 5:40 PM";
-			treeNode167->Name = L"5:40PM-6:00PM";
-			treeNode167->Text = L"5:40 PM - 6:00 PM";
-			treeNode168->Name = L"6PM";
-			treeNode168->Text = L"5 PM - 6 PM";
-			treeNode169->Name = L"6:00PM-6:20PM";
-			treeNode169->Text = L"6:00 PM - 6:20 PM";
-			treeNode170->Name = L"6:20PM-6:40PM";
-			treeNode170->Text = L"6:20 PM - 6:40 PM";
-			treeNode171->Name = L"6:40PM-7:00PM";
-			treeNode171->Text = L"6:40 PM - 7:00 PM";
-			treeNode172->Name = L"7PM";
-			treeNode172->Text = L"6 PM - 7 PM";
-			treeNode173->Name = L"7:00PM-7:20PM";
-			treeNode173->Text = L"7:00 PM - 7:20 PM";
-			treeNode174->Name = L"7:20PM-7:40PM";
-			treeNode174->Text = L"7:20 PM - 7:40 PM";
-			treeNode175->Name = L"7:40PM-8:00PM";
-			treeNode175->Text = L"7:40 PM - 8:00 PM";
-			treeNode176->Name = L"8PM";
-			treeNode176->Text = L"7 PM - 8 PM";
-			treeNode177->Name = L"8:00PM-8:20PM";
-			treeNode177->Text = L"8:00 PM - 8:20 PM";
-			treeNode178->Name = L"8:20PM-8:40PM";
-			treeNode178->Text = L"8:20 PM - 8:40 PM";
-			treeNode179->Name = L"8:40PM-9:00PM";
-			treeNode179->Text = L"8:40 PM - 9:00 PM";
-			treeNode180->Name = L"9PM";
-			treeNode180->Text = L"8 PM - 9 PM";
-			treeNode181->Name = L"9:00PM-9:20PM";
-			treeNode181->Text = L"9:00 PM - 9:20 PM";
-			treeNode182->Name = L"9:20PM-9:40PM";
-			treeNode182->Text = L"9:20 PM - 9:40 PM";
-			treeNode183->Name = L"9:40PM-10:00PM";
-			treeNode183->Text = L"9:40 PM - 10:00 PM";
-			treeNode184->Name = L"10PM";
-			treeNode184->Text = L"9 PM - 10 PM";
-			treeNode185->Name = L"10:00PM-10:20PM";
-			treeNode185->Text = L"10:00 PM - 10:20 PM";
-			treeNode186->Name = L"10:20PM-10:40PM";
-			treeNode186->Text = L"10:20 PM - 10:40 PM";
-			treeNode187->Name = L"10:40PM-11:00PM";
-			treeNode187->Text = L"10:40 PM - 11:00 PM";
-			treeNode188->Name = L"11PM";
-			treeNode188->Text = L"10 PM - 11 PM";
-			treeNode189->Name = L"11:00PM-11:20PM";
-			treeNode189->Text = L"11:00 PM - 11:20 PM";
-			treeNode190->Name = L"11:20PM-11:40PM";
-			treeNode190->Text = L"11:20 PM - 11:40 PM";
-			treeNode191->Name = L"11:40PM-12:00AM";
-			treeNode191->Text = L"11:40 PM - 12:00 AM";
-			treeNode192->Name = L"11PM-12AM";
-			treeNode192->Text = L"11 PM - 12 AM";
-			this->trv12Hr->Nodes->AddRange(gcnew cli::array< System::Windows::Forms::TreeNode^  >(24) {
-				treeNode100, treeNode104, treeNode108,
-					treeNode112, treeNode116, treeNode120, treeNode124, treeNode128, treeNode132, treeNode136, treeNode140, treeNode144, treeNode148,
-					treeNode152, treeNode156, treeNode160, treeNode164, treeNode168, treeNode172, treeNode176, treeNode180, treeNode184, treeNode188,
-					treeNode192
-			});
-			this->trv12Hr->Size = System::Drawing::Size(420, 526);
-			this->trv12Hr->TabIndex = 14;
-			// 
 			// button8
 			// 
 			this->button8->Location = System::Drawing::Point(174, 620);
@@ -2986,5 +3038,1212 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 }
 
 
+};
+=======
+		}
+#pragma endregion
+		//TODO: focus on txtUser on startup
+
+	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
+		grpCreateEvent->Visible = true;
+		grpAdmin->Visible = false;
+	}
+
+	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
+		/*
+		*TODO: Get Calendar date here
+		*/
+
+		//textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
+	}
+
+private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAdmin->Visible = false;
+}
+private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAvailability->Visible = true;
+	grpCreateEvent->Visible = false;
+}
+
+private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAdmin->Visible = true;
+	grpMode->Visible = false;	
+}
+
+private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpLogin->Visible = false;
+	grpMode->Visible = true;
+}
+
+private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+
+	chk500_520AM->Text = "5:00 AM - 5:20 AM";
+	chk520_540AM->Text = "5:20 AM - 5:40 AM";
+	chk540_600AM->Text = "5:40 AM - 6:00 AM";
+
+	chk600_620AM->Text = "6:00 AM - 6:20 AM";
+	chk620_640AM->Text = "6:20 AM - 6:40 AM";
+	chk640_700AM->Text = "6:40 AM - 7:00 AM";
+
+	chk700_720AM->Text = "7:00 AM - 7:20 AM";
+	chk720_740AM->Text = "7:20 AM - 7:40 AM";
+	chk740_800AM->Text = "7:40 AM - 8:00 AM";
+
+	chk800_820AM->Text = "8:00 AM - 8:20 AM";
+	chk820_840AM->Text = "8:20 AM - 8:40 AM";
+	chk840_900AM->Text = "8:40 AM - 9:00 AM";
+
+	chk900_920AM->Text = "9:00 AM - 9:20 AM";
+	chk920_940AM->Text = "9:20 AM - 9:40 AM";
+	chk940_10000AM->Text = "9:40 AM - 10:00 AM";
+
+	chk1000_1020AM->Text = "10:00 AM - 10:20 AM";
+	chk1020_1040AM->Text = "10:20 AM - 10:40 AM";
+	chk1040_1100AM->Text = "10:40 AM - 11:00 AM";
+
+	chk1100_1120AM->Text = "11:00 AM - 11:20 AM";
+	chk1120_1140AM->Text = "11:20 AM - 11:40 AM";
+	chk1140_1200PM->Text = "11:40 AM - 12:00 PM";
+
+	chk100_120PM->Text = "1:00 PM - 1:20 PM";
+	chk120_140PM->Text = "1:20 PM - 1:40 PM";
+	chk140_200PM->Text = "1:40 PM - 2:00 PM";
+
+	chk200_220PM->Text = "2:00 PM - 2:20 PM";
+	chk220_240PM->Text = "2:20 PM - 2:40 PM";
+	chk240_300PM->Text = "2:40 PM - 3:00 PM";
+
+	chk300_320PM->Text = "3:00 PM - 3:20 PM";
+	chk320_340PM->Text = "3:20 PM - 3:40 PM";
+	chk340_400PM->Text = "3:40 PM - 4:00 PM";
+
+	chk400_420PM->Text = "4:00 PM - 4:20 PM";
+	chk420_440PM->Text = "4:20 PM - 4:40 PM";
+	chk440_500PM->Text = "4:40 PM - 5:00 PM";
+
+	chk500_520PM->Text = "5:00 PM - 5:20 PM";
+	chk520_540PM->Text = "5:20 PM - 5:40 PM";
+	chk540_600PM->Text = "5:40 PM - 6:00 PM";
+
+	chk600_620PM->Text = "6:00 PM - 6:20 PM";
+	chk620_640PM->Text = "6:20 PM - 6:40 PM";
+	chk640_700PM->Text = "6:40 PM - 7:00 PM";
+
+	chk700_720PM->Text = "7:00 PM - 7:20 PM";
+	chk720_740PM->Text = "7:20 PM - 7:40 PM";
+	chk740_800PM->Text = "7:40 PM - 8:00 PM";
+
+	chk800_820PM->Text = "8:00 PM - 8:20 PM";
+	chk820_840PM->Text = "8:20 PM - 8:40 PM";
+	chk840_900PM->Text = "8:40 PM - 9:00 PM";
+
+	chk900_920PM->Text = "9:00 PM - 9:20 PM";
+	chk920_940PM->Text = "9:20 PM - 9:40 PM";
+	chk940_1000PM->Text = "9:40 PM - 10:00 PM";
+
+	chk1000_1020PM->Text = "10:00 PM - 10:20 PM";
+	chk1020_1040PM->Text = "10:20 PM - 10:40 PM";
+	chk1040_1100PM->Text = "10:40 PM - 11:00 PM";
+
+	chk1100_1120PM->Text = "11:00 PM - 11:20 PM";
+	chk1120_1140PM->Text = "11:20 PM - 11:40 PM";
+	chk1140_1200AM->Text = "11:40 PM - 12:00 AM";
+
+	if (rbtn5_6AM->Checked)
+	{
+		rbtn05_06->Checked = true;
+	}
+	else if (rbtn6_7AM->Checked)
+	{
+		rbtn06_07->Checked = true;
+	}
+	else if (rbtn7_8AM->Checked)
+	{
+		rbtn07_08->Checked = true;
+	}
+	else if (rbtn8_9AM->Checked)
+	{
+		rbtn08_09->Checked = true;
+	}
+	else if (rbtn9_10AM->Checked)
+	{
+		rbtn09_10->Checked = true;
+	}
+	else if (rbtn10_11AM->Checked)
+	{
+		rbtn10_11->Checked = true;
+	}
+	else if (rbtn11_12PM->Checked)
+	{
+		rbtn11_12->Checked = true;
+	}
+	else if (rbtn1_2PM->Checked)
+	{
+		rbtn13_14->Checked = true;
+	}
+	else if (rbtn2_3PM->Checked)
+	{
+		rbtn14_15->Checked = true;
+	}
+	else if (rbtn3_4PM->Checked)
+	{
+		rbtn15_16->Checked = true;
+	}
+	else if (rbtn4_5PM->Checked)
+	{
+		rbtn16_17->Checked = true;
+	}
+	else if (rbtn5_6PM->Checked)
+	{
+		rbtn17_18->Checked = true;
+	}
+	else if (rbtn6_7PM->Checked)
+	{
+		rbtn18_19->Checked = true;
+	}
+	else if (rbtn7_8PM->Checked)
+	{
+		rbtn19_20->Checked = true;
+	}
+	else if (rbtn8_9PM->Checked)
+	{
+		rbtn20_21->Checked = true;
+	}
+	else if (rbtn9_10PM->Checked)
+	{
+		rbtn21_22->Checked = true;
+	}
+	else if (rbtn10_11PM->Checked)
+	{
+		rbtn22_23->Checked = true;
+	}
+	else if (rbtn11_12AM->Checked)
+	{
+		rbtn23_00->Checked = true;
+	}
+
+	pnl12Hr->BringToFront();
+	pnl24Hr->SendToBack();
+}
+private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	chk500_520AM->Text = "05:00 - 05:20";
+	chk520_540AM->Text = "05:20 - 05:40";
+	chk540_600AM->Text = "05:40 - 06:00";
+
+	chk600_620AM->Text = "06:00 - 06:20";
+	chk620_640AM->Text = "06:20 - 06:40";
+	chk640_700AM->Text = "06:40 - 07:00";
+
+	chk700_720AM->Text = "07:00 - 07:20";
+	chk720_740AM->Text = "07:20 - 07:40";
+	chk740_800AM->Text = "07:40 - 08:00";
+
+	chk800_820AM->Text = "08:00 - 08:20";
+	chk820_840AM->Text = "08:20 - 08:40";
+	chk840_900AM->Text = "08:40 - 09:00";
+
+	chk900_920AM->Text = "09:00 - 09:20";
+	chk920_940AM->Text = "09:20 - 09:40";
+	chk940_10000AM->Text = "09:40 - 10:00";
+
+	chk1000_1020AM->Text = "10:00 - 10:20";
+	chk1020_1040AM->Text = "10:20 - 10:40";
+	chk1040_1100AM->Text = "10:40 - 11:00";
+
+	chk1100_1120AM->Text = "11:00 - 11:20";
+	chk1120_1140AM->Text = "11:20 - 11:40";
+	chk1140_1200PM->Text = "11:40 - 12:00";
+
+	chk100_120PM->Text = "13:00 - 13:20";
+	chk120_140PM->Text = "13:20 - 13:40";
+	chk140_200PM->Text = "13:40 - 14:00";
+
+	chk200_220PM->Text = "14:00 - 14:20";
+	chk220_240PM->Text = "14:20 - 14:40";
+	chk240_300PM->Text = "14:40 - 15:00";
+
+	chk300_320PM->Text = "15:00 - 15:20";
+	chk320_340PM->Text = "15:20 - 15:40";
+	chk340_400PM->Text = "15:40 - 16:00";
+
+	chk400_420PM->Text = "16:00 - 16:20";
+	chk420_440PM->Text = "16:20 - 16:40";
+	chk440_500PM->Text = "16:40 - 17:00";
+
+	chk500_520PM->Text = "17:00 - 17:20";
+	chk520_540PM->Text = "17:20 - 17:40";
+	chk540_600PM->Text = "17:40 - 18:00";
+
+	chk600_620PM->Text = "18:00 - 18:20";
+	chk620_640PM->Text = "18:20 - 18:40";
+	chk640_700PM->Text = "18:40 - 19:00";
+
+	chk700_720PM->Text = "19:00 - 19:20";
+	chk720_740PM->Text = "19:20 - 19:40";
+	chk740_800PM->Text = "19:40 - 20:00";
+
+	chk800_820PM->Text = "20:00 - 20:20";
+	chk820_840PM->Text = "20:20 - 20:40";
+	chk840_900PM->Text = "20:40 - 21:00";
+
+	chk900_920PM->Text = "21:00 - 21:20";
+	chk920_940PM->Text = "21:20 - 21:40";
+	chk940_1000PM->Text = "21:40 - 22:00";
+
+	chk1000_1020PM->Text = "22:00 - 22:20";
+	chk1020_1040PM->Text = "22:20 - 22:40";
+	chk1040_1100PM->Text = "22:40 - 23:00";
+
+	chk1100_1120PM->Text = "23:00 - 23:20";
+	chk1120_1140PM->Text = "23:20 - 23:40";
+	chk1140_1200AM->Text = "23:40 - 00:00";
+
+	if (rbtn05_06->Checked)
+	{
+		rbtn5_6AM->Checked = true;
+	}
+	else if (rbtn06_07->Checked)
+	{
+		rbtn6_7AM->Checked = true;
+	}
+	else if (rbtn07_08->Checked)
+	{
+		rbtn7_8AM->Checked = true;
+	}
+	else if (rbtn08_09->Checked)
+	{
+		rbtn8_9AM->Checked = true;
+	}
+	else if (rbtn09_10->Checked)
+	{
+		rbtn9_10AM->Checked = true;
+	}
+	else if (rbtn10_11->Checked)
+	{
+		rbtn10_11AM->Checked = true;
+	}
+	else if (rbtn11_12->Checked)
+	{
+		rbtn11_12PM->Checked = true;
+	}
+	else if (rbtn13_14->Checked)
+	{
+		rbtn1_2PM->Checked = true;
+	}
+	else if (rbtn14_15->Checked)
+	{
+		rbtn2_3PM->Checked = true;
+	}
+	else if (rbtn15_16->Checked)
+	{
+		rbtn3_4PM->Checked = true;
+	}
+	else if (rbtn16_17->Checked)
+	{
+		rbtn4_5PM->Checked = true;
+	}
+	else if (rbtn17_18->Checked)
+	{
+		rbtn5_6PM->Checked = true;
+	}
+	else if (rbtn18_19->Checked)
+	{
+		rbtn6_7PM->Checked = true;
+	}
+	else if (rbtn19_20->Checked)
+	{
+		rbtn7_8PM->Checked = true;
+	}
+	else if (rbtn20_21->Checked)
+	{
+		rbtn8_9PM->Checked = true;
+	}
+	else if (rbtn21_22->Checked)
+	{
+		rbtn9_10PM->Checked = true;
+	}
+	else if (rbtn22_23->Checked)
+	{
+		rbtn10_11PM->Checked = true;
+	}
+	else if (rbtn23_00->Checked)
+	{
+		rbtn11_12AM->Checked = true;
+	}
+
+	pnl24Hr->BringToFront();
+	pnl12Hr->SendToBack();	
+}
+
+private: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAvailability->Visible = false;
+	grpMode->Visible = true;
+
+	/*
+	* TODO: Call event constructor
+	* OR: Call event constructor at btnSubmitEvent depending on event constructor parameter
+	*/
+}
+
+private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk520_540AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk540_600AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk600_620AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk620_640AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk640_700AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk700_720AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk720_740AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk740_800AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk800_820AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk820_840AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk840_900AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk900_920AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk920_940AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk940_10000AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1000_1020AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1020_1040AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1040_1100AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1100_1120AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1120_1140AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk1140_1200PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk100_120PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = true;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = true;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = true;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn8_9AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = true;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn9_10AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = true;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn10_11AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = true;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn11_12PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = true;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn1_2PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = true;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn2_3PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = true;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn3_4PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = true;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn4_5PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = true;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn5_6PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = true;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn6_7PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = true;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn7_8PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = true;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn8_9PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = true;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn9_10PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = true;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn10_11PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = true;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = true;
+}
+
+private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = true;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = true;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = true;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = true;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+
+}
+private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = true;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = true;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = true;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = true;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = true;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = true;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = true;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = true;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = true;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = true;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = true;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = true;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = true;
+	pnl11_12AM->Visible = false;
+}
+private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	pnl5_6AM->Visible = false;
+	pnl6_7AM->Visible = false;
+	pnl7_8AM->Visible = false;
+	pnl8_9AM->Visible = false;
+	pnl9_10AM->Visible = false;
+	pnl10_11AM->Visible = false;
+	pnl11_12PM->Visible = false;
+	pnl1_2PM->Visible = false;
+	pnl2_3PM->Visible = false;
+	pnl3_4PM->Visible = false;
+	pnl4_5PM->Visible = false;
+	pnl5_6PM->Visible = false;
+	pnl6_7PM->Visible = false;
+	pnl7_8PM->Visible = false;
+	pnl8_9PM->Visible = false;
+	pnl9_10PM->Visible = false;
+	pnl10_11PM->Visible = false;
+	pnl11_12AM->Visible = true;
+}
+private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = true;
+	/*
+	* TODO: search list of events for those with admin = name in txtUser?
+	*/
+	lstYourEvents->Items->Add("test"); //TODO: replace with ADMINS event names
+	grpAdmin->Visible = false;
+	btnViewEventsBack->Visible = true;
+	btnUserBack->Visible = false;
+}
+private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventArgs^  e) {
+	System::String^ eventName = "";
+
+	//TODO Convert all incoming std::string to System::string
+
+	//std::string test = "test";
+	//String^ eventName = gcnew String(test.c_str());
+
+
+
+	if (lstYourEvents->SelectedItems->Count > 0)
+	{
+		eventName = lstYourEvents->SelectedItem->ToString();
+
+		bool isFound =false;
+		
+		/*
+		* TODO: Use eventName to search for a specific even. isFound = true if event is found
+		* Event information and option to modify availability will be displayed on the next page
+		*/
+
+		if (!isFound)
+		{
+			MessageBox::Show("Event Not Found", "Error");
+		}
+		else
+		{
+			grpViewYourEvents->Visible = false;
+			grpEventInfo->Visible = true;
+		}
+	}
+	else
+	{
+		MessageBox::Show("Please select an event","Error");
+	}
+}
+private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpEventInfo->Visible = false;
+	grpAvailability->Visible = true;
+}
+private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpMode->Visible = false;
+	grpViewYourEvents->Visible = true;
+	btnViewEventsBack->Visible = false;
+	btnUserBack->Visible = true;
+	/*
+	* TODO: Add all events to listbox
+	*/
+}
+private: System::Void btnEventInfoBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpEventInfo->Visible = false;
+	grpViewYourEvents->Visible = true;
+}
+private: System::Void btnModeBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpMode->Visible = false;
+	grpLogin->Visible = true;
+
+	//lstYourEvents->ClearSelected(); TODO: clear listbox on logout?
+	txtUser->Clear();
+}
+private: System::Void btnAdminBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAdmin->Visible = false;
+	grpMode->Visible = true;
+}
+private: System::Void btnViewEventsBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = false;
+	grpAdmin->Visible = true;
+	lstYourEvents->Items->Clear();
+}
+private: System::Void btnUserBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = false;
+	grpMode->Visible = true;
+}
+private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpCreateEvent->Visible = false;
+	grpAdmin->Visible = true;
+>>>>>>> origin/UI
+}
 };
 }

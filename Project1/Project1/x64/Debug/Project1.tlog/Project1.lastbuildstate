@@ -3,5 +3,9 @@
 Debug|x64|C:\Users\Anna\Documents\448\Doodle\Project1\|
 =======
 #TargetFrameworkVersion=v4.5.2:PlatformToolSet=v140:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+<<<<<<< HEAD
 Debug|x64|C:\cygwin64\home\Nick\Doodle\Doodle\Project1\|
 >>>>>>> User
+=======
+Debug|x64|C:\Users\Tanner\Documents\GitHub\Doodle\Project1\|
+>>>>>>> origin/UI
