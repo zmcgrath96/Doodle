@@ -11,8 +11,6 @@ namespace Project1 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-
-
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -26,8 +24,6 @@ namespace Project1 {
 			//TODO: Add the constructor code here
 			//
 		}
-
-
 
 	protected:
 		/// <summary>
@@ -43,338 +39,167 @@ namespace Project1 {
 
 	protected:
 
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::GroupBox^  grpAdmin;
-
 	private: System::Windows::Forms::Button^  btnCreateEvent;
-
 	private: System::Windows::Forms::Button^  btnEditEvents;
-
 	private: System::Windows::Forms::Label^  lblAdmin;
-
-
-
-
-
 	private: System::Windows::Forms::GroupBox^  grpCreateEvent;
-
 	private: System::Windows::Forms::Label^  lblDate;
-
 	private: System::Windows::Forms::Label^  lblLocation;
 	private: System::Windows::Forms::Label^  lblNote;
+	private: System::Windows::Forms::Button^  btnSubmitEvent;
 
-
-
-
-	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Label^  lblCreateEvent;
-
 	private: System::Windows::Forms::TextBox^  textBox3;
 	private: System::Windows::Forms::TextBox^  textBox2;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  lblName;
-
-
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar1;
-
-
-
-
 	private: System::Windows::Forms::RadioButton^  rbtn12Hr;
 	private: System::Windows::Forms::RadioButton^  rbtn24Hr;
 	private: System::Windows::Forms::GroupBox^  grpLogin;
-
-
-
 	private: System::Windows::Forms::Label^  lblUser;
-
 	private: System::Windows::Forms::Button^  btnLogin;
-
 	private: System::Windows::Forms::TextBox^  txtUser;
 	private: System::Windows::Forms::GroupBox^  grpMode;
+	private: System::Windows::Forms::Button^  btnAdmin;
+	private: System::Windows::Forms::Button^  btnUser;
 
 
-	private: System::Windows::Forms::Button^  button7;
-	private: System::Windows::Forms::Button^  button5;
 	private: System::Windows::Forms::GroupBox^  grpAvailability;
 	private: System::Windows::Forms::Button^  btnSubmitTimes;
-
-
-
 	private: System::Windows::Forms::Label^  label7;
-
-
-
-
-
-
-
-
-
-
-
-
-private: System::Windows::Forms::Panel^  pnl5_6AM;
-
-private: System::Windows::Forms::CheckBox^  chk540_600AM;
-private: System::Windows::Forms::CheckBox^  chk520_540AM;
-private: System::Windows::Forms::CheckBox^  chk500_520AM;
-private: System::Windows::Forms::Panel^  pnl12Hr;
-
-
-
-
-
-
-
-
-
-
-
-
-
-private: System::Windows::Forms::Panel^  panel5;
-private: System::Windows::Forms::RadioButton^  rbtn6_7AM;
-
-private: System::Windows::Forms::RadioButton^  rbtn5_6AM;
-
-private: System::Windows::Forms::Panel^  pnl6_7AM;
-
-private: System::Windows::Forms::CheckBox^  chk640_700AM;
-private: System::Windows::Forms::CheckBox^  chk620_640AM;
-private: System::Windows::Forms::CheckBox^  chk600_620AM;
-private: System::Windows::Forms::RadioButton^  rbtn7_8AM;
-
-
-
-
-
-
-
-
-
-
-
-
-private: System::Windows::Forms::Panel^  pnl7_8AM;
-
-private: System::Windows::Forms::CheckBox^  chk740_800AM;
-private: System::Windows::Forms::CheckBox^  chk720_740AM;
-private: System::Windows::Forms::CheckBox^  chk700_720AM;
-
-
-
-
-
-
-
-private: System::Windows::Forms::Label^  label2;
-private: System::Windows::Forms::Label^  label3;
-private: System::Windows::Forms::RadioButton^  rbtn11_12AM;
-
-private: System::Windows::Forms::RadioButton^  rbtn10_11PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn9_10PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn8_9PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn7_8PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn6_7PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn5_6PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn4_5PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn3_4PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn2_3PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn1_2PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn11_12PM;
-
-private: System::Windows::Forms::RadioButton^  rbtn10_11AM;
-
-private: System::Windows::Forms::RadioButton^  rbtn9_10AM;
-
-private: System::Windows::Forms::RadioButton^  rbtn8_9AM;
-
-private: System::Windows::Forms::Panel^  pnl8_9AM;
-
-private: System::Windows::Forms::CheckBox^  chk840_900AM;
-
-private: System::Windows::Forms::CheckBox^  chk820_840AM;
-private: System::Windows::Forms::CheckBox^  chk800_820AM;
-
-
-
-
-private: System::Windows::Forms::Panel^  pnl9_10AM;
-private: System::Windows::Forms::CheckBox^  chk940_10000AM;
-private: System::Windows::Forms::CheckBox^  chk920_940AM;
-private: System::Windows::Forms::CheckBox^  chk900_920AM;
-
-
-private: System::Windows::Forms::Panel^  pnl1_2PM;
-private: System::Windows::Forms::Panel^  pnl11_12PM;
-
-
-
-private: System::Windows::Forms::Panel^  pnl10_11AM;
-private: System::Windows::Forms::CheckBox^  chk1040_1100AM;
-private: System::Windows::Forms::CheckBox^  chk1020_1040AM;
-
-
-
-
-private: System::Windows::Forms::CheckBox^  chk1000_1020AM;
-private: System::Windows::Forms::CheckBox^  chk1140_1200PM;
-private: System::Windows::Forms::CheckBox^  chk1120_1140AM;
-
-
-
-
-
-private: System::Windows::Forms::CheckBox^  chk1100_1120AM;
-private: System::Windows::Forms::CheckBox^  chk140_200PM;
-
-
-private: System::Windows::Forms::CheckBox^  chk120_140PM;
-
-private: System::Windows::Forms::CheckBox^  chk100_120PM;
-private: System::Windows::Forms::Panel^  pnl6_7PM;
-private: System::Windows::Forms::CheckBox^  chk640_700PM;
-private: System::Windows::Forms::CheckBox^  chk620_640PM;
-private: System::Windows::Forms::CheckBox^  chk600_620PM;
-private: System::Windows::Forms::Panel^  pnl5_6PM;
-private: System::Windows::Forms::CheckBox^  chk540_600PM;
-private: System::Windows::Forms::CheckBox^  chk520_540PM;
-private: System::Windows::Forms::CheckBox^  chk500_520PM;
-private: System::Windows::Forms::Panel^  pnl4_5PM;
-private: System::Windows::Forms::CheckBox^  chk440_500PM;
-private: System::Windows::Forms::CheckBox^  chk420_440PM;
-private: System::Windows::Forms::CheckBox^  chk400_420PM;
-private: System::Windows::Forms::Panel^  pnl3_4PM;
-private: System::Windows::Forms::CheckBox^  chk340_400PM;
-private: System::Windows::Forms::CheckBox^  chk320_340PM;
-private: System::Windows::Forms::CheckBox^  chk300_320PM;
-private: System::Windows::Forms::Panel^  pnl2_3PM;
-private: System::Windows::Forms::CheckBox^  chk240_300PM;
-private: System::Windows::Forms::CheckBox^  chk220_240PM;
-private: System::Windows::Forms::CheckBox^  chk200_220PM;
-private: System::Windows::Forms::Panel^  pnl7_8PM;
-private: System::Windows::Forms::CheckBox^  chk740_800PM;
-private: System::Windows::Forms::CheckBox^  chk720_740PM;
-private: System::Windows::Forms::CheckBox^  chk700_720PM;
-private: System::Windows::Forms::Panel^  pnl8_9PM;
-private: System::Windows::Forms::CheckBox^  chk840_900PM;
-private: System::Windows::Forms::CheckBox^  chk820_840PM;
-private: System::Windows::Forms::CheckBox^  chk800_820PM;
-private: System::Windows::Forms::Panel^  pnl9_10PM;
-private: System::Windows::Forms::CheckBox^  chk940_1000PM;
-private: System::Windows::Forms::CheckBox^  chk920_940PM;
-private: System::Windows::Forms::CheckBox^  chk900_920PM;
-private: System::Windows::Forms::Panel^  pnl10_11PM;
-private: System::Windows::Forms::CheckBox^  chk1040_1100PM;
-private: System::Windows::Forms::CheckBox^  chk1020_1040PM;
-private: System::Windows::Forms::CheckBox^  chk1000_1020PM;
-private: System::Windows::Forms::Panel^  pnl11_12AM;
-private: System::Windows::Forms::CheckBox^  chk1140_1200AM;
-
-
-private: System::Windows::Forms::CheckBox^  chk1120_1140PM;
-
-private: System::Windows::Forms::CheckBox^  chk1100_1120PM;
-private: System::Windows::Forms::Panel^  pnl24Hr;
-
-private: System::Windows::Forms::RadioButton^  rbtn23_00;
-
-private: System::Windows::Forms::RadioButton^  rbtn22_23;
-
-private: System::Windows::Forms::RadioButton^  rbtn21_22;
-
-private: System::Windows::Forms::RadioButton^  rbtn20_21;
-
-private: System::Windows::Forms::RadioButton^  rbtn19_20;
-
-private: System::Windows::Forms::RadioButton^  rbtn18_19;
-
-private: System::Windows::Forms::RadioButton^  rbtn17_18;
-
-private: System::Windows::Forms::RadioButton^  rbtn16_17;
-
-private: System::Windows::Forms::RadioButton^  rbtn15_16;
-
-private: System::Windows::Forms::RadioButton^  rbtn14_15;
-
-private: System::Windows::Forms::RadioButton^  rbtn13_14;
-
-private: System::Windows::Forms::RadioButton^  rbtn11_12;
-
-private: System::Windows::Forms::RadioButton^  rbtn10_11;
-
-private: System::Windows::Forms::RadioButton^  rbtn09_10;
-
-private: System::Windows::Forms::RadioButton^  rbtn08_09;
-
-private: System::Windows::Forms::RadioButton^  rbtn07_08;
-
-private: System::Windows::Forms::RadioButton^  rbtn06_07;
-
-private: System::Windows::Forms::RadioButton^  rbtn05_06;
-private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
-private: System::Windows::Forms::ListBox^  lstYourEvents;
-private: System::Windows::Forms::Label^  lblViewEvent;
-private: System::Windows::Forms::Button^  button1;
-private: System::Windows::Forms::TextBox^  textBox4;
-private: System::Windows::Forms::GroupBox^  grpEventInfo;
-private: System::Windows::Forms::Label^  lblEventDate;
-private: System::Windows::Forms::Label^  lblEventLocation;
-private: System::Windows::Forms::Button^  btnEditAvailability;
-private: System::Windows::Forms::Label^  lblEventName;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Panel^  pnl5_6AM;
+	private: System::Windows::Forms::CheckBox^  chk540_600AM;
+	private: System::Windows::Forms::CheckBox^  chk520_540AM;
+	private: System::Windows::Forms::CheckBox^  chk500_520AM;
+	private: System::Windows::Forms::Panel^  pnl12Hr;
+	private: System::Windows::Forms::Panel^  panel5;
+	private: System::Windows::Forms::RadioButton^  rbtn6_7AM;
+	private: System::Windows::Forms::RadioButton^  rbtn5_6AM;
+	private: System::Windows::Forms::Panel^  pnl6_7AM;
+	private: System::Windows::Forms::CheckBox^  chk640_700AM;
+	private: System::Windows::Forms::CheckBox^  chk620_640AM;
+	private: System::Windows::Forms::CheckBox^  chk600_620AM;
+	private: System::Windows::Forms::RadioButton^  rbtn7_8AM;
+	private: System::Windows::Forms::Panel^  pnl7_8AM;
+	private: System::Windows::Forms::CheckBox^  chk740_800AM;
+	private: System::Windows::Forms::CheckBox^  chk720_740AM;
+	private: System::Windows::Forms::CheckBox^  chk700_720AM;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12AM;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11PM;
+	private: System::Windows::Forms::RadioButton^  rbtn9_10PM;
+	private: System::Windows::Forms::RadioButton^  rbtn8_9PM;
+	private: System::Windows::Forms::RadioButton^  rbtn7_8PM;
+	private: System::Windows::Forms::RadioButton^  rbtn6_7PM;
+	private: System::Windows::Forms::RadioButton^  rbtn5_6PM;
+	private: System::Windows::Forms::RadioButton^  rbtn4_5PM;
+	private: System::Windows::Forms::RadioButton^  rbtn3_4PM;
+	private: System::Windows::Forms::RadioButton^  rbtn2_3PM;
+	private: System::Windows::Forms::RadioButton^  rbtn1_2PM;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12PM;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11AM;
+	private: System::Windows::Forms::RadioButton^  rbtn9_10AM;
+	private: System::Windows::Forms::RadioButton^  rbtn8_9AM;
+	private: System::Windows::Forms::Panel^  pnl8_9AM;
+	private: System::Windows::Forms::CheckBox^  chk840_900AM;
+	private: System::Windows::Forms::CheckBox^  chk820_840AM;
+	private: System::Windows::Forms::CheckBox^  chk800_820AM;
+	private: System::Windows::Forms::Panel^  pnl9_10AM;
+	private: System::Windows::Forms::CheckBox^  chk940_10000AM;
+	private: System::Windows::Forms::CheckBox^  chk920_940AM;
+	private: System::Windows::Forms::CheckBox^  chk900_920AM;
+	private: System::Windows::Forms::Panel^  pnl1_2PM;
+	private: System::Windows::Forms::Panel^  pnl11_12PM;
+	private: System::Windows::Forms::Panel^  pnl10_11AM;
+	private: System::Windows::Forms::CheckBox^  chk1040_1100AM;
+	private: System::Windows::Forms::CheckBox^  chk1020_1040AM;
+	private: System::Windows::Forms::CheckBox^  chk1000_1020AM;
+	private: System::Windows::Forms::CheckBox^  chk1140_1200PM;
+	private: System::Windows::Forms::CheckBox^  chk1120_1140AM;
+	private: System::Windows::Forms::CheckBox^  chk1100_1120AM;
+	private: System::Windows::Forms::CheckBox^  chk140_200PM;
+	private: System::Windows::Forms::CheckBox^  chk120_140PM;
+	private: System::Windows::Forms::CheckBox^  chk100_120PM;
+	private: System::Windows::Forms::Panel^  pnl6_7PM;
+	private: System::Windows::Forms::CheckBox^  chk640_700PM;
+	private: System::Windows::Forms::CheckBox^  chk620_640PM;
+	private: System::Windows::Forms::CheckBox^  chk600_620PM;
+	private: System::Windows::Forms::Panel^  pnl5_6PM;
+	private: System::Windows::Forms::CheckBox^  chk540_600PM;
+	private: System::Windows::Forms::CheckBox^  chk520_540PM;
+	private: System::Windows::Forms::CheckBox^  chk500_520PM;
+	private: System::Windows::Forms::Panel^  pnl4_5PM;
+	private: System::Windows::Forms::CheckBox^  chk440_500PM;
+	private: System::Windows::Forms::CheckBox^  chk420_440PM;
+	private: System::Windows::Forms::CheckBox^  chk400_420PM;
+	private: System::Windows::Forms::Panel^  pnl3_4PM;
+	private: System::Windows::Forms::CheckBox^  chk340_400PM;
+	private: System::Windows::Forms::CheckBox^  chk320_340PM;
+	private: System::Windows::Forms::CheckBox^  chk300_320PM;
+	private: System::Windows::Forms::Panel^  pnl2_3PM;
+	private: System::Windows::Forms::CheckBox^  chk240_300PM;
+	private: System::Windows::Forms::CheckBox^  chk220_240PM;
+	private: System::Windows::Forms::CheckBox^  chk200_220PM;
+	private: System::Windows::Forms::Panel^  pnl7_8PM;
+	private: System::Windows::Forms::CheckBox^  chk740_800PM;
+	private: System::Windows::Forms::CheckBox^  chk720_740PM;
+	private: System::Windows::Forms::CheckBox^  chk700_720PM;
+	private: System::Windows::Forms::Panel^  pnl8_9PM;
+	private: System::Windows::Forms::CheckBox^  chk840_900PM;
+	private: System::Windows::Forms::CheckBox^  chk820_840PM;
+	private: System::Windows::Forms::CheckBox^  chk800_820PM;
+	private: System::Windows::Forms::Panel^  pnl9_10PM;
+	private: System::Windows::Forms::CheckBox^  chk940_1000PM;
+	private: System::Windows::Forms::CheckBox^  chk920_940PM;
+	private: System::Windows::Forms::CheckBox^  chk900_920PM;
+	private: System::Windows::Forms::Panel^  pnl10_11PM;
+	private: System::Windows::Forms::CheckBox^  chk1040_1100PM;
+	private: System::Windows::Forms::CheckBox^  chk1020_1040PM;
+	private: System::Windows::Forms::CheckBox^  chk1000_1020PM;
+	private: System::Windows::Forms::Panel^  pnl11_12AM;
+	private: System::Windows::Forms::CheckBox^  chk1140_1200AM;
+	private: System::Windows::Forms::CheckBox^  chk1120_1140PM;
+	private: System::Windows::Forms::CheckBox^  chk1100_1120PM;
+	private: System::Windows::Forms::Panel^  pnl24Hr;
+	private: System::Windows::Forms::RadioButton^  rbtn23_00;	
+	private: System::Windows::Forms::RadioButton^  rbtn22_23;
+	private: System::Windows::Forms::RadioButton^  rbtn21_22;
+	private: System::Windows::Forms::RadioButton^  rbtn20_21;
+	private: System::Windows::Forms::RadioButton^  rbtn19_20;
+	private: System::Windows::Forms::RadioButton^  rbtn18_19;
+	private: System::Windows::Forms::RadioButton^  rbtn17_18;
+	private: System::Windows::Forms::RadioButton^  rbtn16_17;
+	private: System::Windows::Forms::RadioButton^  rbtn15_16;
+	private: System::Windows::Forms::RadioButton^  rbtn14_15;
+	private: System::Windows::Forms::RadioButton^  rbtn13_14;
+	private: System::Windows::Forms::RadioButton^  rbtn11_12;
+	private: System::Windows::Forms::RadioButton^  rbtn10_11;
+	private: System::Windows::Forms::RadioButton^  rbtn09_10;
+	private: System::Windows::Forms::RadioButton^  rbtn08_09;
+	private: System::Windows::Forms::RadioButton^  rbtn07_08;
+	private: System::Windows::Forms::RadioButton^  rbtn06_07;
+	private: System::Windows::Forms::RadioButton^  rbtn05_06;
+	private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
+	private: System::Windows::Forms::ListBox^  lstYourEvents;
+	private: System::Windows::Forms::Label^  lblViewEvent;
+private: System::Windows::Forms::Button^  btnViewEvent;
+
+
+	private: System::Windows::Forms::GroupBox^  grpEventInfo;
+	private: System::Windows::Forms::Label^  lblEventDate;
+	private: System::Windows::Forms::Label^  lblEventLocation;
+	private: System::Windows::Forms::Button^  btnEditAvailability;
+	private: System::Windows::Forms::Label^  lblEventName;
+private: System::Windows::Forms::Button^  btnEventInfoBack;
+private: System::Windows::Forms::Button^  btnModeBack;
+private: System::Windows::Forms::Button^  btnAdminBack;
+private: System::Windows::Forms::Button^  btnUserBack;
+private: System::Windows::Forms::Button^  btnViewEventsBack;
+private: System::Windows::Forms::Button^  btnCreateEventBack;
 	private: System::ComponentModel::IContainer^  components;
-
-
-
-
-
-
 
 	protected:
 
@@ -382,7 +207,6 @@ private: System::Windows::Forms::Label^  lblEventName;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -392,6 +216,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 		void InitializeComponent(void)
 		{
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
+			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -400,9 +225,10 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->lblDate = (gcnew System::Windows::Forms::Label());
 			this->lblLocation = (gcnew System::Windows::Forms::Label());
 			this->lblNote = (gcnew System::Windows::Forms::Label());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->btnSubmitEvent = (gcnew System::Windows::Forms::Button());
 			this->lblCreateEvent = (gcnew System::Windows::Forms::Label());
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
+			this->btnAdminBack = (gcnew System::Windows::Forms::Button());
 			this->btnCreateEvent = (gcnew System::Windows::Forms::Button());
 			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
@@ -413,8 +239,9 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->rbtn12Hr = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn24Hr = (gcnew System::Windows::Forms::RadioButton());
 			this->grpMode = (gcnew System::Windows::Forms::GroupBox());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->btnModeBack = (gcnew System::Windows::Forms::Button());
+			this->btnAdmin = (gcnew System::Windows::Forms::Button());
+			this->btnUser = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
 			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
 			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
@@ -532,11 +359,13 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->rbtn06_07 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn05_06 = (gcnew System::Windows::Forms::RadioButton());
 			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnUserBack = (gcnew System::Windows::Forms::Button());
+			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
+			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
 			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
@@ -573,6 +402,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// grpCreateEvent
 			// 
+			this->grpCreateEvent->Controls->Add(this->btnCreateEventBack);
 			this->grpCreateEvent->Controls->Add(this->textBox3);
 			this->grpCreateEvent->Controls->Add(this->monthCalendar1);
 			this->grpCreateEvent->Controls->Add(this->textBox2);
@@ -581,7 +411,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->lblLocation);
 			this->grpCreateEvent->Controls->Add(this->lblNote);
-			this->grpCreateEvent->Controls->Add(this->button6);
+			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
 			this->grpCreateEvent->Location = System::Drawing::Point(54, 82);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
@@ -589,6 +419,16 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
+			// 
+			// btnCreateEventBack
+			// 
+			this->btnCreateEventBack->Location = System::Drawing::Point(191, 414);
+			this->btnCreateEventBack->Name = L"btnCreateEventBack";
+			this->btnCreateEventBack->Size = System::Drawing::Size(103, 23);
+			this->btnCreateEventBack->TabIndex = 10;
+			this->btnCreateEventBack->Text = L"Back";
+			this->btnCreateEventBack->UseVisualStyleBackColor = true;
+			this->btnCreateEventBack->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEventBack_Click);
 			// 
 			// textBox3
 			// 
@@ -656,15 +496,15 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->lblNote->TabIndex = 3;
 			this->lblNote->Text = L"Note:";
 			// 
-			// button6
+			// btnSubmitEvent
 			// 
-			this->button6->Location = System::Drawing::Point(116, 403);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(103, 23);
-			this->button6->TabIndex = 0;
-			this->button6->Text = L"Submit";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			this->btnSubmitEvent->Location = System::Drawing::Point(191, 385);
+			this->btnSubmitEvent->Name = L"btnSubmitEvent";
+			this->btnSubmitEvent->Size = System::Drawing::Size(103, 23);
+			this->btnSubmitEvent->TabIndex = 0;
+			this->btnSubmitEvent->Text = L"Submit";
+			this->btnSubmitEvent->UseVisualStyleBackColor = true;
+			this->btnSubmitEvent->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitEvent_Click);
 			// 
 			// lblCreateEvent
 			// 
@@ -677,6 +517,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// grpAdmin
 			// 
+			this->grpAdmin->Controls->Add(this->btnAdminBack);
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
@@ -686,6 +527,16 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->grpAdmin->TabIndex = 7;
 			this->grpAdmin->TabStop = false;
 			this->grpAdmin->Visible = false;
+			// 
+			// btnAdminBack
+			// 
+			this->btnAdminBack->Location = System::Drawing::Point(50, 137);
+			this->btnAdminBack->Name = L"btnAdminBack";
+			this->btnAdminBack->Size = System::Drawing::Size(103, 23);
+			this->btnAdminBack->TabIndex = 10;
+			this->btnAdminBack->Text = L"Back";
+			this->btnAdminBack->UseVisualStyleBackColor = true;
+			this->btnAdminBack->Click += gcnew System::EventHandler(this, &MyForm::btnAdminBack_Click);
 			// 
 			// btnCreateEvent
 			// 
@@ -744,7 +595,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->btnLogin->TabIndex = 0;
 			this->btnLogin->Text = L"Login";
 			this->btnLogin->UseVisualStyleBackColor = true;
-			this->btnLogin->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			this->btnLogin->Click += gcnew System::EventHandler(this, &MyForm::btnLogin_Click);
 			// 
 			// txtUser
 			// 
@@ -779,8 +630,9 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// grpMode
 			// 
-			this->grpMode->Controls->Add(this->button7);
-			this->grpMode->Controls->Add(this->button5);
+			this->grpMode->Controls->Add(this->btnModeBack);
+			this->grpMode->Controls->Add(this->btnAdmin);
+			this->grpMode->Controls->Add(this->btnUser);
 			this->grpMode->Location = System::Drawing::Point(341, 74);
 			this->grpMode->Name = L"grpMode";
 			this->grpMode->Size = System::Drawing::Size(200, 148);
@@ -788,25 +640,35 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->grpMode->TabStop = false;
 			this->grpMode->Visible = false;
 			// 
-			// button7
+			// btnModeBack
 			// 
-			this->button7->Location = System::Drawing::Point(59, 45);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(75, 23);
-			this->button7->TabIndex = 1;
-			this->button7->Text = L"Admin Mode";
-			this->button7->UseVisualStyleBackColor = true;
-			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			this->btnModeBack->Location = System::Drawing::Point(59, 97);
+			this->btnModeBack->Name = L"btnModeBack";
+			this->btnModeBack->Size = System::Drawing::Size(75, 23);
+			this->btnModeBack->TabIndex = 2;
+			this->btnModeBack->Text = L"Back";
+			this->btnModeBack->UseVisualStyleBackColor = true;
+			this->btnModeBack->Click += gcnew System::EventHandler(this, &MyForm::btnModeBack_Click);
 			// 
-			// button5
+			// btnAdmin
 			// 
-			this->button5->Location = System::Drawing::Point(59, 89);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 23);
-			this->button5->TabIndex = 0;
-			this->button5->Text = L"User Mode";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			this->btnAdmin->Location = System::Drawing::Point(59, 35);
+			this->btnAdmin->Name = L"btnAdmin";
+			this->btnAdmin->Size = System::Drawing::Size(75, 23);
+			this->btnAdmin->TabIndex = 1;
+			this->btnAdmin->Text = L"Admin Mode";
+			this->btnAdmin->UseVisualStyleBackColor = true;
+			this->btnAdmin->Click += gcnew System::EventHandler(this, &MyForm::btnAdmin_Click);
+			// 
+			// btnUser
+			// 
+			this->btnUser->Location = System::Drawing::Point(59, 66);
+			this->btnUser->Name = L"btnUser";
+			this->btnUser->Size = System::Drawing::Size(75, 23);
+			this->btnUser->TabIndex = 0;
+			this->btnUser->Text = L"User Mode";
+			this->btnUser->UseVisualStyleBackColor = true;
+			this->btnUser->Click += gcnew System::EventHandler(this, &MyForm::btnUser_Click);
 			// 
 			// grpAvailability
 			// 
@@ -1111,7 +973,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->btnSubmitTimes->TabIndex = 0;
 			this->btnSubmitTimes->Text = L"Submit";
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
-			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
 			// 
 			// label7
 			// 
@@ -2078,33 +1940,45 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// grpViewYourEvents
 			// 
-			this->grpViewYourEvents->Controls->Add(this->textBox4);
-			this->grpViewYourEvents->Controls->Add(this->button1);
+			this->grpViewYourEvents->Controls->Add(this->btnViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->lstYourEvents);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Location = System::Drawing::Point(968, 96);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
-			this->grpViewYourEvents->Size = System::Drawing::Size(200, 329);
+			this->grpViewYourEvents->Size = System::Drawing::Size(200, 361);
 			this->grpViewYourEvents->TabIndex = 9;
 			this->grpViewYourEvents->TabStop = false;
 			this->grpViewYourEvents->Visible = false;
 			// 
-			// textBox4
+			// btnUserBack
 			// 
-			this->textBox4->Location = System::Drawing::Point(26, 10);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
-			this->textBox4->TabIndex = 5;
+			this->btnUserBack->Location = System::Drawing::Point(1026, 480);
+			this->btnUserBack->Name = L"btnUserBack";
+			this->btnUserBack->Size = System::Drawing::Size(103, 23);
+			this->btnUserBack->TabIndex = 12;
+			this->btnUserBack->Text = L"Back";
+			this->btnUserBack->UseVisualStyleBackColor = true;
+			this->btnUserBack->Click += gcnew System::EventHandler(this, &MyForm::btnUserBack_Click);
 			// 
-			// button1
+			// btnViewEventsBack
 			// 
-			this->button1->Location = System::Drawing::Point(44, 289);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(103, 23);
-			this->button1->TabIndex = 4;
-			this->button1->Text = L"View Event";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->btnViewEventsBack->Location = System::Drawing::Point(898, 480);
+			this->btnViewEventsBack->Name = L"btnViewEventsBack";
+			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->TabIndex = 11;
+			this->btnViewEventsBack->Text = L"Back";
+			this->btnViewEventsBack->UseVisualStyleBackColor = true;
+			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
+			// 
+			// btnViewEvent
+			// 
+			this->btnViewEvent->Location = System::Drawing::Point(44, 289);
+			this->btnViewEvent->Name = L"btnViewEvent";
+			this->btnViewEvent->Size = System::Drawing::Size(103, 23);
+			this->btnViewEvent->TabIndex = 4;
+			this->btnViewEvent->Text = L"View Event";
+			this->btnViewEvent->UseVisualStyleBackColor = true;
+			this->btnViewEvent->Click += gcnew System::EventHandler(this, &MyForm::btnViewEvent_Click);
 			// 
 			// lstYourEvents
 			// 
@@ -2125,6 +1999,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// grpEventInfo
 			// 
+			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
 			this->grpEventInfo->Controls->Add(this->lblEventDate);
 			this->grpEventInfo->Controls->Add(this->lblEventLocation);
 			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
@@ -2135,6 +2010,16 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->grpEventInfo->TabIndex = 9;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
+			// 
+			// btnEventInfoBack
+			// 
+			this->btnEventInfoBack->Location = System::Drawing::Point(44, 169);
+			this->btnEventInfoBack->Name = L"btnEventInfoBack";
+			this->btnEventInfoBack->Size = System::Drawing::Size(103, 23);
+			this->btnEventInfoBack->TabIndex = 9;
+			this->btnEventInfoBack->Text = L"Back";
+			this->btnEventInfoBack->UseVisualStyleBackColor = true;
+			this->btnEventInfoBack->Click += gcnew System::EventHandler(this, &MyForm::btnEventInfoBack_Click);
 			// 
 			// lblEventDate
 			// 
@@ -2156,7 +2041,7 @@ private: System::Windows::Forms::Label^  lblEventName;
 			// 
 			// btnEditAvailability
 			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(43, 152);
+			this->btnEditAvailability->Location = System::Drawing::Point(44, 135);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
 			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
 			this->btnEditAvailability->TabIndex = 6;
@@ -2178,13 +2063,15 @@ private: System::Windows::Forms::Label^  lblEventName;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1604, 881);
-			this->Controls->Add(this->grpAvailability);
-			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->btnViewEventsBack);
+			this->Controls->Add(this->btnUserBack);
 			this->Controls->Add(this->grpViewYourEvents);
-			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpCreateEvent);
+			this->Controls->Add(this->grpAvailability);
+			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpAdmin);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -2226,78 +2113,37 @@ private: System::Windows::Forms::Label^  lblEventName;
 
 		}
 #pragma endregion
-
-		DateTime mPrevDate;
-		bool mBusy;
-
-	private: System::Void dateTimePicker2_ValueChanged(System::Object^ sender, EventArgs^ e)
-	{
-		/*if (!mBusy) {
-			mBusy = true;
-			//DateTime dt = dateTimePicker2->Value;
-			//if ((dt.Minute * 60 + dt.Second) % 300 != 0) {
-			//	TimeSpan diff = dt - mPrevDate;
-			//	if (diff.Ticks < 0)
-			//	{
-					//dateTimePicker2->Value = mPrevDate.AddMinutes(-20);
-			//	}
-				//else dateTimePicker2->Value = mPrevDate.AddMinutes(20);
-			}
-			mBusy = false;
-		//}
-		//mPrevDate = dateTimePicker2->Value;*/
-	}
-
-
-
-	private: System::Void dateTimePicker2_KeyPress(System::Object^ sender, KeyEventArgs^ e)		 
-	{
-		// e->SuppressKeyPress = true;
-		e->SuppressKeyPress = true;
-	}
+		//TODO: focus on txtUser on startup
 
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		grpCreateEvent->Visible = true;
 		grpAdmin->Visible = false;
-		mPrevDate = mPrevDate.AddYears(2000);
-
-
 	}
 
-
-	private: System::Void monthCalendar1_DateChanged_1(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
-	}
 	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
-
-		//DateTime date = DateTime(2018, 6, 10);
-		//monthCalendar1->AddBoldedDate(date);
-
 		/*
-		* Get Calendar date here
+		*TODO: Get Calendar date here
 		*/
-
-
 	}
-
 
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = false;
-	//grpViewSchedule->Visible = true;
 }
-private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = true;
 	grpCreateEvent->Visible = false;
 }
 
-private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = true;
-	grpMode->Visible = false;
-	
+	grpMode->Visible = false;	
 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+
+private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpLogin->Visible = false;
 	grpMode->Visible = true;
 }
+
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 
 	chk500_520AM->Text = "5:00 AM - 5:20 AM";
@@ -2444,16 +2290,9 @@ private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::E
 	{
 		rbtn23_00->Checked = true;
 	}
-	//
-	
-	
-	
-	//pnl12Hr->Visible = true;
-	//pnl24Hr->Visible = false;
 
 	pnl12Hr->BringToFront();
 	pnl24Hr->SendToBack();
-	
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	chk500_520AM->Text = "05:00 - 05:20";
@@ -2600,21 +2439,18 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 	{
 		rbtn11_12AM->Checked = true;
 	}
-	
-	//pnl24Hr->Visible = true;
-	//pnl12Hr->Visible = false;
 
 	pnl24Hr->BringToFront();
-	pnl12Hr->SendToBack();
-	
+	pnl12Hr->SendToBack();	
 }
 
-private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
 
 	/*
-	* TODO: Call event constructor - 
+	* TODO: Call event constructor
+	* OR: Call event constructor at btnSubmitEvent depending on event constructor parameter
 	*/
 }
 
@@ -3392,25 +3228,25 @@ private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::
 }
 private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = true;
-	lstYourEvents->Items->Add("test");
-	grpAdmin->Visible = false;
-}
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	/*
-	* TODO: Add admins events to listbox
+	* TODO: search list of events for those with admin = name in txtUser?
 	*/
-
+	lstYourEvents->Items->Add("test"); //TODO: replace with ADMINS event names
+	grpAdmin->Visible = false;
+	btnViewEventsBack->Visible = true;
+	btnUserBack->Visible = false;
+}
+private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ eventName = "";
 
 	if (lstYourEvents->SelectedItems->Count > 0)
 	{
 		eventName = lstYourEvents->SelectedItem->ToString();
 
-		textBox4->Text = eventName;
-		bool isFound;
+		bool isFound =false;
 		
 		/*
-		* TODO: Use eventName to search for a specific event - isFound = true if event is found
+		* TODO: Use eventName to search for a specific even. isFound = true if event is found
 		* Event information and option to modify availability will be displayed on the next page
 		*/
 
@@ -3433,15 +3269,42 @@ private: System::Void btnEditAvailability_Click(System::Object^  sender, System:
 	grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
 }
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpMode->Visible = false;
 	grpViewYourEvents->Visible = true;
+	btnViewEventsBack->Visible = false;
+	btnUserBack->Visible = true;
 	/*
-	* Add all events to listbox
+	* TODO: Add all events to listbox
 	*/
 }
-};
-
-
+private: System::Void btnEventInfoBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpEventInfo->Visible = false;
+	grpViewYourEvents->Visible = true;
 }
+private: System::Void btnModeBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpMode->Visible = false;
+	grpLogin->Visible = true;
 
+	//lstYourEvents->ClearSelected(); TODO: clear listbox on logout?
+	txtUser->Clear();
+}
+private: System::Void btnAdminBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpAdmin->Visible = false;
+	grpMode->Visible = true;
+}
+private: System::Void btnViewEventsBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = false;
+	grpAdmin->Visible = true;
+	lstYourEvents->Items->Clear();
+}
+private: System::Void btnUserBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpViewYourEvents->Visible = false;
+	grpMode->Visible = true;
+}
+private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	grpCreateEvent->Visible = false;
+	grpAdmin->Visible = true;
+}
+};
+}
