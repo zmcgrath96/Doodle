@@ -5,7 +5,7 @@
 class User
 {
 	public:
-		User(std::string UserName, bool isAdmin);
+		User();
 		~User();
 		void setName(std::string name);
 		void setisAdmin(bool isAdmin);

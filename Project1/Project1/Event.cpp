@@ -1,19 +1,15 @@
 #include <algorithm>
 #include "Event.h"
-Event::Event(std::string eventName, std::string eventDate) 
+Event::Event() 
+{
+}
+void Event::setEventName(std::string eventName)
 {
 	name = eventName;
-	date = eventDate;
 }
-
-void Event::Clean()
+void Event::setEventDate(std::string eventDate)
 {
-	while(users.size()!=0)
-	{
-		users.pop_back();
-	}
-	std::string s = std::to_string(users.size());
-	std::cout<<"Final size: "<<s<<std::endl;
+	date = eventDate;
 }
 std::string Event::getName()
 {

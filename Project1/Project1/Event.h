@@ -8,8 +8,9 @@
 class Event
 {
 	public:
-		Event(std::string eventName, std::string eventDate);
-		void Clean();
+		Event();
+		void setEventName(std::string eventName);
+		void setEventDate(std::string eventDate);
 		std::string getName();
 		std::string getDate();
 		std::string getAvailableTimes();

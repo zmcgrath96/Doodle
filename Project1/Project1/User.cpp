@@ -2,10 +2,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-User::User(string UserName, bool isAdmin)
+User::User()
 {
-	setName(UserName);
-	setisAdmin(isAdmin);
 
 	m_Times = new bool[54];
 	for(int i = 0; i<54; i++)
@@ -57,7 +55,7 @@ void User::getTimes()
 	{
 		if(m_Times[j]==true)
 		{
-			cout<<m_Times[j]<<": "<<m_Strings[j]<<endl;
+			cout<<m_Strings[j]<<endl;
 		}
 	}
 }
