@@ -28,6 +28,17 @@ void Executive::AddAvailabilities(bool availabilities[])
 
 void Executive::checkAvaliabilities()
 {
+	if(getCurrentEvent().users.size() != 0) //if there are users in the event
+	{
+		for(int i = 0; i < getCurrentEvent().users.size(); i++) //run through all the users in the event
+		{
+			if(getCurrentEvent().users[i].getName() == currrentUser.getName()) //if the current user has the same name as a user in the event
+			{
+				currentUser = getCurrentEvent().users[i]; //make the user from the event the current user
+				break; //break out of the loop
+			}
+		}
+	}
 }
 
 void Executive::makeCurrentUser(std::string name)
@@ -74,6 +85,7 @@ Event Executive::getCurrentEvent()
 	}
 
 	return(*it); //returns the event
+}
 =======
 #include <iostream>
 #include <fstream>

@@ -15,10 +15,10 @@ class Event
 		std::string getAvailableTimes();
 		void addUser(User &u);
 		void getUsers();
+		std::vector<User> users;
 	private:
 		std::string name;
 		std::string date;
-		std::vector<User> users;
 };
 #endif 
 
