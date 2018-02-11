@@ -1,6 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "Executive.h"
+#include "Event.h"
+#include "User.h"
+
+Executive exec;
 
 namespace Project1 {
 
@@ -200,8 +205,9 @@ private: System::Windows::Forms::Button^  btnUserBack;
 private: System::Windows::Forms::Button^  btnViewEventsBack;
 private: System::Windows::Forms::Button^  btnCreateEventBack;
 private: System::Windows::Forms::TextBox^  textBox4;
-private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
+
 private: System::Windows::Forms::TextBox^  textBox5;
+private: System::Windows::Forms::Button^  button1;
 	private: System::ComponentModel::IContainer^  components;
 
 	protected:
@@ -218,7 +224,6 @@ private: System::Windows::Forms::TextBox^  textBox5;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
@@ -248,6 +253,7 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->pnl12Hr = (gcnew System::Windows::Forms::Panel());
 			this->rbtn11_12AM = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn10_11PM = (gcnew System::Windows::Forms::RadioButton());
@@ -366,16 +372,15 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
 			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
 			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
-			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
-			this->btnUserBack = (gcnew System::Windows::Forms::Button());
 			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
+			this->btnUserBack = (gcnew System::Windows::Forms::Button());
+			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
-			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
@@ -687,6 +692,7 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			// 
 			// grpAvailability
 			// 
+			this->grpAvailability->Controls->Add(this->button1);
 			this->grpAvailability->Controls->Add(this->pnl12Hr);
 			this->grpAvailability->Controls->Add(this->label2);
 			this->grpAvailability->Controls->Add(this->label3);
@@ -702,6 +708,16 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(30, 385);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(103, 23);
+			this->button1->TabIndex = 45;
+			this->button1->Text = L"Test";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// pnl12Hr
 			// 
@@ -1985,14 +2001,15 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->lstYourEvents->Size = System::Drawing::Size(188, 225);
 			this->lstYourEvents->TabIndex = 3;
 			// 
-			// lblViewEvent
+			// btnViewEventsBack
 			// 
-			this->lblViewEvent->AutoSize = true;
-			this->lblViewEvent->Location = System::Drawing::Point(55, 25);
-			this->lblViewEvent->Name = L"lblViewEvent";
-			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
-			this->lblViewEvent->TabIndex = 2;
-			this->lblViewEvent->Text = L"Select Event:";
+			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
+			this->btnViewEventsBack->Name = L"btnViewEventsBack";
+			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->TabIndex = 11;
+			this->btnViewEventsBack->Text = L"Back";
+			this->btnViewEventsBack->UseVisualStyleBackColor = true;
+			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
 			// 
 			// btnUserBack
 			// 
@@ -2004,15 +2021,14 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->btnUserBack->UseVisualStyleBackColor = true;
 			this->btnUserBack->Click += gcnew System::EventHandler(this, &MyForm::btnUserBack_Click);
 			// 
-			// btnViewEventsBack
+			// lblViewEvent
 			// 
-			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
-			this->btnViewEventsBack->Name = L"btnViewEventsBack";
-			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
-			this->btnViewEventsBack->TabIndex = 11;
-			this->btnViewEventsBack->Text = L"Back";
-			this->btnViewEventsBack->UseVisualStyleBackColor = true;
-			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
+			this->lblViewEvent->AutoSize = true;
+			this->lblViewEvent->Location = System::Drawing::Point(55, 25);
+			this->lblViewEvent->Name = L"lblViewEvent";
+			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
+			this->lblViewEvent->TabIndex = 2;
+			this->lblViewEvent->Text = L"Select Event:";
 			// 
 			// grpEventInfo
 			// 
@@ -2075,11 +2091,6 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->lblEventName->Text = L"EVENTNAME";
 			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// contextMenuStrip1
-			// 
-			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
-			// 
 			// textBox5
 			// 
 			this->textBox5->Location = System::Drawing::Point(441, 3);
@@ -2097,9 +2108,9 @@ private: System::Windows::Forms::TextBox^  textBox5;
 			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpCreateEvent);
-			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpAdmin);
+			this->Controls->Add(this->grpAvailability);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -2154,7 +2165,7 @@ private: System::Windows::Forms::TextBox^  textBox5;
 		*TODO: Get Calendar date here
 		*/
 
-		//textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
+		textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
 	}
 
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2475,7 +2486,7 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 	pnl12Hr->SendToBack();	
 }
 
-private: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
+public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
 
@@ -2483,6 +2494,19 @@ private: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Even
 	* TODO: Call event constructor
 	* OR: Call event constructor at btnSubmitEvent depending on event constructor parameter
 	*/
+
+	Event E;
+	std::string date, name;
+	textBox4->Text = gcnew String(date.c_str());
+	textBox1->Text = gcnew String(name.c_str());
+
+		//String^ eventName = gcnew String(test.c_str());
+
+	E.setEventDate(date);
+	E.setEventName(name);
+
+	exec.AddEvent(E);
+
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -3343,6 +3367,8 @@ private: System::Void btnUserBack_Click(System::Object^  sender, System::EventAr
 private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpCreateEvent->Visible = false;
 	grpAdmin->Visible = true;
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

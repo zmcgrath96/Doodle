@@ -3,23 +3,43 @@
 Event::Event() 
 {
 }
+
+/// <summary>
+/// Returns event name
+/// </summary>
 void Event::setEventName(std::string eventName)
 {
 	name = eventName;
 }
+
+/// <summary>
+/// sets date
+/// <parameter>
+/// </summary>
 void Event::setEventDate(std::string eventDate)
 {
 	date = eventDate;
 }
+
+/// <summary>
+/// Returns name
+/// </summary>
 std::string Event::getName()
 {
 	return name;
 }
 
+/// <summary>
+/// Returns date
+/// </summary>
 std::string Event::getDate() 
 {
 	return date;
 }
+
+/// <summary>
+/// Returns users
+/// </summary>
 void Event::getUsers()
 {
 	std::cout<<"---------------------------------------"<<std::endl;
@@ -32,6 +52,10 @@ void Event::getUsers()
 		std::cout<<std::endl;
 	}
 }
+
+/// <summary>
+/// Returns available times
+/// </summary>
 std::string Event::getAvailableTimes()
 {
 	std::cout<<"---------------------------------------"<<std::endl;
@@ -42,6 +66,10 @@ std::string Event::getAvailableTimes()
 	}
 	return "";
 }
+
+/// <summary>
+/// adds user
+/// </summary>
 void Event::addUser(User &u)
 {
 	users.push_back(u);

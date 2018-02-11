@@ -1,4 +1,9 @@
-﻿  MyForm.cpp
-  MyForm.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)
+﻿  Event.cpp
+Event.cpp(15): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
+  
+  Executive.cpp
+  MyForm.cpp
+  Generating Code...
+  Event.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\DoodleTest\Project1\x64\Debug\Project1.exe
+  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\DoodleTest\Project1\x64\Debug\Project1.pdb (Partial PDB)
