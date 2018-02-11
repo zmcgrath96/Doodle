@@ -199,6 +199,9 @@ private: System::Windows::Forms::Button^  btnAdminBack;
 private: System::Windows::Forms::Button^  btnUserBack;
 private: System::Windows::Forms::Button^  btnViewEventsBack;
 private: System::Windows::Forms::Button^  btnCreateEventBack;
+private: System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
+private: System::Windows::Forms::TextBox^  textBox5;
 	private: System::ComponentModel::IContainer^  components;
 
 	protected:
@@ -215,7 +218,9 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
@@ -359,17 +364,19 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->rbtn06_07 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbtn05_06 = (gcnew System::Windows::Forms::RadioButton());
 			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
-			this->btnUserBack = (gcnew System::Windows::Forms::Button());
-			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
 			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
+			this->btnUserBack = (gcnew System::Windows::Forms::Button());
+			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
@@ -402,6 +409,7 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			// 
 			// grpCreateEvent
 			// 
+			this->grpCreateEvent->Controls->Add(this->textBox4);
 			this->grpCreateEvent->Controls->Add(this->btnCreateEventBack);
 			this->grpCreateEvent->Controls->Add(this->textBox3);
 			this->grpCreateEvent->Controls->Add(this->monthCalendar1);
@@ -419,6 +427,13 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(63, 275);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->TabIndex = 13;
 			// 
 			// btnCreateEventBack
 			// 
@@ -1942,6 +1957,8 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			// 
 			this->grpViewYourEvents->Controls->Add(this->btnViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->lstYourEvents);
+			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
+			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Location = System::Drawing::Point(968, 96);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
@@ -1949,26 +1966,6 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->grpViewYourEvents->TabIndex = 9;
 			this->grpViewYourEvents->TabStop = false;
 			this->grpViewYourEvents->Visible = false;
-			// 
-			// btnUserBack
-			// 
-			this->btnUserBack->Location = System::Drawing::Point(1026, 480);
-			this->btnUserBack->Name = L"btnUserBack";
-			this->btnUserBack->Size = System::Drawing::Size(103, 23);
-			this->btnUserBack->TabIndex = 12;
-			this->btnUserBack->Text = L"Back";
-			this->btnUserBack->UseVisualStyleBackColor = true;
-			this->btnUserBack->Click += gcnew System::EventHandler(this, &MyForm::btnUserBack_Click);
-			// 
-			// btnViewEventsBack
-			// 
-			this->btnViewEventsBack->Location = System::Drawing::Point(898, 480);
-			this->btnViewEventsBack->Name = L"btnViewEventsBack";
-			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
-			this->btnViewEventsBack->TabIndex = 11;
-			this->btnViewEventsBack->Text = L"Back";
-			this->btnViewEventsBack->UseVisualStyleBackColor = true;
-			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
 			// 
 			// btnViewEvent
 			// 
@@ -1996,6 +1993,26 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
 			this->lblViewEvent->TabIndex = 2;
 			this->lblViewEvent->Text = L"Select Event:";
+			// 
+			// btnUserBack
+			// 
+			this->btnUserBack->Location = System::Drawing::Point(44, 318);
+			this->btnUserBack->Name = L"btnUserBack";
+			this->btnUserBack->Size = System::Drawing::Size(103, 23);
+			this->btnUserBack->TabIndex = 12;
+			this->btnUserBack->Text = L"Back";
+			this->btnUserBack->UseVisualStyleBackColor = true;
+			this->btnUserBack->Click += gcnew System::EventHandler(this, &MyForm::btnUserBack_Click);
+			// 
+			// btnViewEventsBack
+			// 
+			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
+			this->btnViewEventsBack->Name = L"btnViewEventsBack";
+			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->TabIndex = 11;
+			this->btnViewEventsBack->Text = L"Back";
+			this->btnViewEventsBack->UseVisualStyleBackColor = true;
+			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
 			// 
 			// grpEventInfo
 			// 
@@ -2058,13 +2075,24 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->lblEventName->Text = L"EVENTNAME";
 			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(441, 3);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->TabIndex = 14;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1604, 881);
-			this->Controls->Add(this->btnViewEventsBack);
-			this->Controls->Add(this->btnUserBack);
+			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpLogin);
@@ -2110,6 +2138,7 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 			this->grpViewYourEvents->PerformLayout();
 			this->grpEventInfo->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -2124,6 +2153,8 @@ private: System::Windows::Forms::Button^  btnCreateEventBack;
 		/*
 		*TODO: Get Calendar date here
 		*/
+
+		//textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
 	}
 
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -3238,6 +3269,13 @@ private: System::Void btnEditEvents_Click(System::Object^  sender, System::Event
 }
 private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ eventName = "";
+
+	//TODO Convert all incoming std::string to System::string
+
+	//std::string test = "test";
+	//String^ eventName = gcnew String(test.c_str());
+
+
 
 	if (lstYourEvents->SelectedItems->Count > 0)
 	{
