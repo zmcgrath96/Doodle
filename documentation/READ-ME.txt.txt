@@ -1,1 +1,0 @@
-To view the HTML documentation, click on any of the HTML files within the HTML folder. All of them will take you to the documentation page which has menu buttons for easy navigation.
