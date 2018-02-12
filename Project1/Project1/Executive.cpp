@@ -21,7 +21,7 @@ void Executive::checkAval(string Name)
 	{
 		if(events[i].getAdmin()==Name)
 		{
-			//cout<<"Availabilities for "<<events[i].getName()<<endl;
+			cout<<"Availabilities for "<<events[i].getName()<<endl;
 			std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
 			events[i].getAvailableTimes();
 		}

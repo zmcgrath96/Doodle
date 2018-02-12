@@ -2,6 +2,11 @@
 #include "Event.h"
 Event::Event() 
 {
+	NumOfUs = new int[54];
+	for(int i = 0; i<54;i++)
+	{
+		NumOfUs[i] = 0;
+	}
 }
 
 Event::Event(std::string eventName, std::string eventDate)
@@ -46,6 +51,14 @@ void Event::setAdmin(std::string Name)
 {
 	admin = Name;
 }
+void Event::setNumOfUs(int index, int num)
+{
+	NumOfUs[index] = num;
+}
+int Event::getNumOfUs(int index)
+{
+	return(NumOfUs[index]);
+}
 std::string Event::getAdmin()
 {
 	return admin;
@@ -54,17 +67,9 @@ std::string Event::getAdmin()
 /// <summary>
 /// Returns available times
 /// </summary>
-std::string Event::getAvailableTimes()
+void Event::getAvailableTimes()
 {
-	std::string s = "";
-	/*
-	std::cout<<"---------------------------------------"<<std::endl;
-	for(int i = 0; i<users.size();i++)
-	{
-		users[i].getUserName();
-		users[i].getTimes();
-	}
-	*/
+	int C = 0;
 	for(int i = 0; i<54; i++)
 	{
 		std::cout<<"Users available at "<<users[0].getStrings(i)<<":"<<std::endl;
@@ -72,15 +77,24 @@ std::string Event::getAvailableTimes()
 		{
 			if(users[j].getTime(i))
 			{
+				C++;
 				std::cout<<users[j].getUserName()<<std::endl;
-				//s+=users[j].getUserName()<<endl;
 			}
 		}
+		//std::cout<<C<<std::endl;
+		setNumOfUs(i,C);
+		std::cout<<getNumOfUs(i)<<std::endl;
+		C=0;
 	}
-
-	return "";
 }
-
+void Event::Print()
+{
+	for(int i = 0; i<54;i++)
+	{
+		std::cout<<"Users available at "<<users[0].getStrings(i)<<":"<<std::endl;
+		std::cout<<getNumOfUs(i)<<std::endl;
+	}
+}
 /// <summary>
 /// adds user
 /// </summary>
@@ -88,3 +102,4 @@ void Event::addUser(User u)
 {
 	users.push_back(u);
 }
+

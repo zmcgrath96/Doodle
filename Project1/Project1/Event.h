@@ -14,15 +14,18 @@ class Event
 		void setEventDate(std::string eventDate);
 		std::string getName();
 		std::string getDate();
-		std::string getAvailableTimes();
+		void getAvailableTimes();
 		void addUser(User u);
 		std::vector<User> users;
 		void setAdmin(std::string Name);
+		void setNumOfUs(int index, int num);
 		std::string getAdmin();
+		int getNumOfUs(int index);
+		void Print();
 	private:
 		std::string name;
 		std::string date;
 		std::string admin;
+		int * NumOfUs;
 };
 #endif 
-
