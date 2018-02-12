@@ -1,4 +1,0 @@
-Event: event
-Date: 2/16/2018
-Admin: admin
-

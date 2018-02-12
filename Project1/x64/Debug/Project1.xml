@@ -23,41 +23,190 @@ Clean up any resources being used.
 Summary for MyForm
 </summary>
         </member>
+        <member name="M:Executive.read">
+Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user
+@param None
+@return None
+
+</member>
         <member name="M:Executive.write">
-            <summary>
-test
-</summary>
-        </member>
+Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions
+@param None
+@return None
+
+</member>
+        <member name="M:Executive.getEventSize">
+Checks the current size of the event vector and returns it
+@param None
+@return The size of the event vector
+
+</member>
+        <member name="M:Executive.getAllEvents">
+Creates a string array and stores the names of all the events currently stored in the vector
+@param None
+@return An array of all the names of the events currently stored in the vector
+
+</member>
         <member name="M:Executive.checkAval(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
-            <summary>
-test
-</summary>
-        </member>
+Returns the name of the events that the given user is admin of
+@param A string representing the name of a user
+@return A vector containing the names of the events that the given user is admin of
+
+</member>
+        <member name="M:Executive.AddEvent(Event)">
+Adds a given event to the vector that stores all the events
+@param An event to be added to the vector
+@return None
+
+</member>
+        <member name="M:Executive.Dispose">
+Does nothing
+@param None
+@return None
+
+</member>
+        <member name="M:Executive.#ctor">
+Creates the object
+@param None
+@return None
+
+</member>
+        <member name="M:Event.Print">
+Prints the number of users avaliable at each time slot
+@param None
+@return None
+
+</member>
+        <member name="M:Event.getNumOfUs(System.Int32)">
+Takes in an index cooresponding to a time slot and returns the number of users avaliable for that time slot
+@param An int representing the index of the time slot desired
+@return An int representing the number of users avaliable at the time slot
+
+</member>
+        <member name="M:Event.getAdmin">
+Returns the name of the admin for the event
+@param None
+@return A string representing the name of the admin for the event
+
+</member>
+        <member name="M:Event.setNumOfUs(System.Int32,System.Int32)">
+Stores the number of users avaliable at a specified time slot
+@param Two ints representing the index of the time slot and the number of users avaliable for that time
+@return None
+
+</member>
+        <member name="M:Event.setAdmin(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Takes in the name of the admin for the event and stores it
+@param A string representing the name of the admin for the event
+@return None
+
+</member>
         <member name="M:Event.addUser(User)">
-            <summary>
+Adds a given user to the event
+@param A user to be added to the event
+@return None
+
+<summary>
 adds user
-</summary>
-        </member>
+</summary></member>
         <member name="M:Event.getAvailableTimes">
-            <summary>
+Prints the number of users avaliable at each time slot while also saving the numbers to NumOfUs
+@param None
+@return None
+
+<summary>
 Returns available times
-</summary>
-        </member>
+</summary></member>
         <member name="M:Event.getDate">
-            <summary>
+Returns the date of the event
+@param None
+@return A string representing the date of the event
+
+<summary>
 Returns date
-</summary>
-        </member>
+</summary></member>
         <member name="M:Event.getName">
-            <summary>
+Returns the name of the event
+@param None
+@return A string representing the name of the event
+
+<summary>
 Returns name
-</summary>
-        </member>
+</summary></member>
+        <member name="M:Event.setEventDate(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Takes in a string representing the date of the event and saves it
+@param A string representing the date of the event
+@return None
+
+</member>
         <member name="M:Event.setEventName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
-            <summary>
+Takes in a string representing the name of the event and saves it
+@param A string representing the name of the event
+@return None
+
+<summary>
 Returns event name
-</summary>
-        </member>
+</summary></member>
+        <member name="M:Event.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Stores the name and date of the event
+@param Two strings that represent the name and date of the event
+@return None
+
+</member>
+        <member name="M:Event.#ctor">
+Creates an int array to store the number of users avaliable at the cooresponding time slot
+@param None
+@return None
+
+</member>
+        <member name="M:User.getTimes">
+Prints the times that the user is avaliable
+@param None
+@return None
+
+</member>
+        <member name="M:User.AddTime(System.Int32)">
+Toggles the bool at the given index
+@param An index representing a bool in m_Times
+@return None
+
+</member>
+        <member name="M:User.getStrings(System.Int32)">
+Returns the string at the index passed in which represents a time slot
+@param An int representing an index in the string array m_Strings
+@return The string at the given index
+
+</member>
+        <member name="M:User.getTime(System.Int32)">
+Returns a bool at the index passed in which represents whether the user is avaliable at that time
+@param An int representing an index in the boolean array m_Times
+@return The boolean stored at the given index
+
+</member>
+        <member name="M:User.getUserName">
+Returns the name of the user
+@param None
+@return The string representing the name of the user
+
+</member>
+        <member name="M:User.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Sets the user's name
+@param String representing the name of the user
+@return None
+
+</member>
+        <member name="M:User.Dispose">
+Does Nothing
+@param None
+@return None
+
+</member>
+        <member name="M:User.#ctor">
+Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
+@param None
+@return None
+
+</member>
         <!-- Discarding badly formed XML document comment for member 'M:Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)'. -->
     </members>
 </doc>
