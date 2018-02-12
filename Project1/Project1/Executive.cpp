@@ -15,8 +15,9 @@ void Executive::AddEvent(Event E)
 /// test
 /// </summary>
 
-std::vector<std::string> Executive::checkAval(string Name)
+std::vector<std::string> Executive::checkAval(std::string Name)
 {
+	EventAdmin.clear();
 	for(int i = 0; i<events.size();i++)
 	{
 		if(events[i].getAdmin()==Name)
