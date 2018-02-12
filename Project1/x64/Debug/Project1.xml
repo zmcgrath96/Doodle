@@ -23,12 +23,7 @@ Clean up any resources being used.
 Summary for MyForm
 </summary>
         </member>
-        <member name="M:Executive.checkAval">
-            <summary>
-test
-</summary>
-        </member>
-        <member name="M:Event.addUser(User*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+        <member name="M:Event.addUser(User)">
             <summary>
 adds user
 </summary>
@@ -36,11 +31,6 @@ adds user
         <member name="M:Event.getAvailableTimes">
             <summary>
 Returns available times
-</summary>
-        </member>
-        <member name="M:Event.getUsers">
-            <summary>
-Returns users
 </summary>
         </member>
         <member name="M:Event.getDate">
@@ -56,6 +46,11 @@ Returns name
         <member name="M:Event.setEventName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
             <summary>
 Returns event name
+</summary>
+        </member>
+        <member name="M:Executive.checkAval">
+            <summary>
+test
 </summary>
         </member>
         <!-- Discarding badly formed XML document comment for member 'M:Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)'. -->

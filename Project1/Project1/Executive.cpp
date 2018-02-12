@@ -24,11 +24,19 @@ void Executive::checkAval()
 	}
 }
 
-void Executive::getAllEvents()
+string* Executive::getAllEvents()
 {
 	cout<<"All events"<<endl;
+	const int eventSize = events.size();
+	string* allEvents = new string[eventSize];
 	for(int i = 0; i<events.size();i++)
 	{
+		allEvents[i] = events[i].getName();
 		//cout<<events[i].getName()<<endl;
 	}
+	return allEvents;
+}
+
+int Executive::getEventSize() {
+	return events.size();
 }

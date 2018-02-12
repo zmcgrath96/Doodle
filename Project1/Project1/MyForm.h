@@ -1,12 +1,10 @@
 #pragma once
-#include "Executive.h"
-#include "Event.h"
-#include "User.h"
 #include <iostream>
-#include <string.h>
+#include <string>
 #include "Executive.h"
 #include "Event.h"
 #include "User.h"
+#include <msclr\marshal_cppstd.h>
 
 Executive exec;
 
@@ -44,8 +42,6 @@ namespace Project1 {
 				delete components;
 			}
 		}
-
-	protected:
 
 	private: System::Windows::Forms::GroupBox^  grpAdmin;
 	private: System::Windows::Forms::Button^  btnCreateEvent;
@@ -2065,6 +2061,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->lblEventDate->TabIndex = 8;
 			this->lblEventDate->Text = L"EVENTDATE";
 			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventDate->Click += gcnew System::EventHandler(this, &MyForm::lblEventDate_Click);
 			// 
 			// lblEventLocation
 			// 
@@ -2074,6 +2071,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->lblEventLocation->TabIndex = 7;
 			this->lblEventLocation->Text = L"EVENTLOCATION";
 			this->lblEventLocation->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventLocation->Click += gcnew System::EventHandler(this, &MyForm::lblEventLocation_Click);
 			// 
 			// btnEditAvailability
 			// 
@@ -2093,6 +2091,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->lblEventName->TabIndex = 2;
 			this->lblEventName->Text = L"EVENTNAME";
 			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventName->Click += gcnew System::EventHandler(this, &MyForm::lblEventName_Click);
 			// 
 			// textBox5
 			// 
@@ -2100,6 +2099,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(100, 20);
 			this->textBox5->TabIndex = 14;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
 			// MyForm
 			// 
@@ -2156,6 +2156,7 @@ private: System::Windows::Forms::Button^  button1;
 
 		}
 #pragma endregion
+#include <string>
 		//TODO: focus on txtUser on startup
 
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2169,19 +2170,39 @@ private: System::Windows::Forms::Button^  button1;
 		*/
 
 		textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
+
+		if (textBox4->Text == "12/25/2018")
+		{
+			MessageBox::Show("Select Another Date");
+			textBox4->Clear();
+		}
 	}
+
+private: bool currentlyAdmin;
 
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = false;
 }
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpAvailability->Visible = true;
-	grpCreateEvent->Visible = false;
+	if (textBox4->Text == "")
+	{
+		MessageBox::Show("Please select a date");
+	}
+	else
+	{
+		grpAvailability->Visible = true;
+		grpCreateEvent->Visible = false;
+		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
+		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
+		Event myEvent(name, date);
+		exec.currentEvent = myEvent;
+	}
 }
 
 private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = true;
-	grpMode->Visible = false;	
+	grpMode->Visible = false;
+	currentlyAdmin = true;
 }
 
 private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2489,27 +2510,37 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 	pnl12Hr->SendToBack();	
 }
 
+
+
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
 
 	/*
-	* TODO: Call event constructor
-	* OR: Call event constructor at btnSubmitEvent depending on event constructor parameter
+	* TODO: Add user to event
 	*/
 
-	Event E;
-	std::string date, name;
-	textBox4->Text = gcnew String(date.c_str());
-	textBox1->Text = gcnew String(name.c_str());
+	//textBox4->Text = gcnew String(date.c_str());
+	//textBox1->Text = gcnew String(name.c_str());
 
-		//String^ eventName = gcnew String(test.c_str());
+	//String^ eventName = gcnew String(test.c_str());
+	
+	User u;
+	u.setName(msclr::interop::marshal_as<std::string>(txtUser->Text));
+	u.setisAdmin(currentlyAdmin);
 
-	E.setEventDate(date);
-	E.setEventName(name);
 
-	exec.AddEvent(E);
+	/*
+	* TODO: Add user availability
+	*/
+	if (currentlyAdmin)
+		exec.AddEvent(exec.currentEvent);
 
+	for (int i = 0; i < exec.getEventSize(); i++) {
+		if(exec.currentEvent.getName() == exec.events[i].getName())
+			exec.events[i].addUser(u);
+	}
+	
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -3289,7 +3320,13 @@ private: System::Void btnEditEvents_Click(System::Object^  sender, System::Event
 	/*
 	* TODO: search list of events for those with admin = name in txtUser?
 	*/
-	lstYourEvents->Items->Add("test"); //TODO: replace with ADMINS event names
+	lstYourEvents->Items->Clear();
+	for (int i = 0; i < exec.getEventSize(); i++) {
+		textBox5->Text = gcnew String(exec.events[i].getAdmin().getName().c_str());
+		if(exec.events[i].getAdmin().getName() == msclr::interop::marshal_as<std::string>(txtUser->Text))
+			lstYourEvents->Items->Add(gcnew String(exec.events[i].getName().c_str()));
+	}
+	//TODO: replace with ADMINS event names
 	grpAdmin->Visible = false;
 	btnViewEventsBack->Visible = true;
 	btnUserBack->Visible = false;
@@ -3307,23 +3344,26 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	if (lstYourEvents->SelectedItems->Count > 0)
 	{
 		eventName = lstYourEvents->SelectedItem->ToString();
-
-		bool isFound =false;
-		
+		textBox5->Text = eventName;
+		Event myEvent;
+		int index = lstYourEvents->SelectedIndex;
+		for (int i = 0; i < exec.getEventSize(); i++) {
+			if (gcnew String(exec.events[i].getName().c_str()) == eventName) {
+				myEvent = exec.events[i];
+				break;
+			}
+		}
 		/*
 		* TODO: Use eventName to search for a specific even. isFound = true if event is found
 		* Event information and option to modify availability will be displayed on the next page
 		*/
+		lblEventName->Text = gcnew String(myEvent.getName().c_str());
+		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
+		lblEventLocation->Text = gcnew String("a location...fight me");
+		grpViewYourEvents->Visible = false;
+		grpEventInfo->Visible = true;
+		lstYourEvents->Items->Clear();
 
-		if (!isFound)
-		{
-			MessageBox::Show("Event Not Found", "Error");
-		}
-		else
-		{
-			grpViewYourEvents->Visible = false;
-			grpEventInfo->Visible = true;
-		}
 	}
 	else
 	{
@@ -3339,6 +3379,12 @@ private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^ 
 	grpViewYourEvents->Visible = true;
 	btnViewEventsBack->Visible = false;
 	btnUserBack->Visible = true;
+	std::string* allEvents = exec.getAllEvents();
+	for (int i = 0; i < exec.getEventSize(); i++) {
+		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
+	}
+	currentlyAdmin = false;
+	
 	/*
 	* TODO: Add all events to listbox
 	*/
@@ -3372,6 +3418,14 @@ private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::
 	grpAdmin->Visible = true;
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void textBox5_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void lblEventName_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void lblEventDate_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void lblEventLocation_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

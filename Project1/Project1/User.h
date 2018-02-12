@@ -13,7 +13,6 @@ class User
 		bool getisAdmin();
 		void Run();
 		void AddTime(int T);
-		bool isAdmin();
 		void getTimes();
 	private:
 		std::string m_Name;

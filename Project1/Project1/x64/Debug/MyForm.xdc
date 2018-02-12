@@ -1,16 +1,16 @@
 <?xml version="1.0"?><doc>
 <members>
-<member name="T:Project1.MyForm" decl="false" source="c:\cygwin64\home\nick\doodle\doodle\doodle\project1\project1\myform.h" line="22">
+<member name="T:Project1.MyForm" decl="false" source="c:\users\dablackdende\documents\github\doodle\project1\project1\myform.h" line="20">
 <summary>
 Summary for MyForm
 </summary>
 </member>
-<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\cygwin64\home\nick\doodle\doodle\doodle\project1\project1\myform.h" line="37">
+<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\users\dablackdende\documents\github\doodle\project1\project1\myform.h" line="35">
 <summary>
 Clean up any resources being used.
 </summary>
 </member>
-<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\cygwin64\home\nick\doodle\doodle\doodle\project1\project1\myform.h" line="219">
+<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\dablackdende\documents\github\doodle\project1\project1\myform.h" line="215">
 <summary>
 Required designer variable.
 </summary>

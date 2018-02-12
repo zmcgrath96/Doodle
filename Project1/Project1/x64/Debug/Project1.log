@@ -1,11 +1,4 @@
-﻿  Event.cpp
-Event.cpp(15): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
-  
-  Executive.cpp
-  MyForm.cpp
-  User.cpp
-  Generating Code...
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+﻿  MyForm.cpp
   Event.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Project1.vcxproj -> C:\cygwin64\home\Nick\Doodle\Doodle\Doodle\Project1\x64\Debug\Project1.exe
-  Project1.vcxproj -> C:\cygwin64\home\Nick\Doodle\Doodle\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)
+  Project1.vcxproj -> C:\Users\DaBlackDende\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
+  Project1.vcxproj -> C:\Users\DaBlackDende\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)

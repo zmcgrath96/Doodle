@@ -14,10 +14,13 @@ class Executive
 		~Executive();
 		void AddEvent(Event E);
 		void checkAval();
-		void getAllEvents();
-	
-	private:
+		std::string* getAllEvents();
+		int getEventSize();
 		std::vector<Event> events;
+		Event currentEvent;
+		User currentUser;
+	private:
+		
 };
 #endif
 
