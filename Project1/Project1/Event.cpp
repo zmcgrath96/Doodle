@@ -42,8 +42,12 @@ std::string Event::getDate()
 {
 	return date;
 }
-
-User Event::getAdmin() {
+void Event::setAdmin(std::string Name)
+{
+	admin = Name;
+}
+std::string Event::getAdmin()
+{
 	return admin;
 }
 
@@ -52,6 +56,7 @@ User Event::getAdmin() {
 /// </summary>
 std::string Event::getAvailableTimes()
 {
+	std::string s = "";
 	/*
 	std::cout<<"---------------------------------------"<<std::endl;
 	for(int i = 0; i<users.size();i++)
@@ -68,7 +73,7 @@ std::string Event::getAvailableTimes()
 			if(users[j].getTime(i))
 			{
 				std::cout<<users[j].getUserName()<<std::endl;
-
+				//s+=users[j].getUserName()<<endl;
 			}
 		}
 	}
@@ -82,6 +87,4 @@ std::string Event::getAvailableTimes()
 void Event::addUser(User u)
 {
 	users.push_back(u);
-	if (u.getisAdmin())
-		admin = u;
 }

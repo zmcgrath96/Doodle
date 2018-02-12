@@ -17,11 +17,12 @@ class Event
 		std::string getAvailableTimes();
 		void addUser(User u);
 		std::vector<User> users;
-		User getAdmin();
+		void setAdmin(std::string Name);
+		std::string getAdmin();
 	private:
 		std::string name;
 		std::string date;
-		User admin;
+		std::string admin;
 };
 #endif 
 

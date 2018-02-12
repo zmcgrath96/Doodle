@@ -15,12 +15,20 @@ void Executive::AddEvent(Event E)
 /// test
 /// </summary>
 
-void Executive::checkAval()
+void Executive::checkAval(string Name)
 {
 	for(int i = 0; i<events.size();i++)
 	{
-		//cout<<"Availabilities for "<<events[i].getName()<<endl;
-		events[i].getAvailableTimes();
+		if(events[i].getAdmin()==Name)
+		{
+			//cout<<"Availabilities for "<<events[i].getName()<<endl;
+			std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
+			events[i].getAvailableTimes();
+		}
+		else
+		{
+			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
+		}
 	}
 }
 

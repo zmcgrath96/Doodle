@@ -19,17 +19,9 @@ void User::setName(string name)
 {
 	m_Name = name;
 }
-void User::setisAdmin(bool isAdmin)
-{
-	m_isAdmin = isAdmin;
-}
 string User::getUserName()
 {
 	return(m_Name);
-}
-bool User::getisAdmin()
-{
-	return(m_isAdmin);
 }
 bool User::getTime(int i)
 {

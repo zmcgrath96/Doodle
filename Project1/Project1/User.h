@@ -8,9 +8,7 @@ class User
 		User();
 		~User();
 		void setName(std::string name);
-		void setisAdmin(bool isAdmin);
 		std::string getUserName();
-		bool getisAdmin();
 		bool getTime(int i);
 		std::string getStrings(int j);
 		void AddTime(int T);
