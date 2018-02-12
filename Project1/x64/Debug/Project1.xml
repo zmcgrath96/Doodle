@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "Project1"
+    </assembly>
+    <members>
+        <member name="M:Project1.MyForm.InitializeComponent">
+            <summary>
+Required designer variable.
+</summary>
+            <summary>
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+</summary>
+        </member>
+        <member name="M:Project1.MyForm.Dispose">
+            <summary>
+Clean up any resources being used.
+</summary>
+        </member>
+        <member name="T:Project1.MyForm">
+            <summary>
+Summary for MyForm
+</summary>
+        </member>
+        <member name="M:Executive.read">
+Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user
+@param None
+@return None
+
+
+Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user
+@param None
+@return None
+
+</member>
+        <member name="M:Executive.write">
+Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions
+@param None
+@return None
+
+
+Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions
+@param None
+@return None
+
+</member>
+        <member name="M:Executive.getEventSize">
+Checks the current size of the event vector and returns it
+@param None
+@return The size of the event vector
+
+
+Checks the current size of the event vector and returns it
+@param None
+@return The size of the event vector
+
+</member>
+        <member name="M:Executive.getAllEvents">
+Creates a string array and stores the names of all the events currently stored in the vector
+@param None
+@return An array of all the names of the events currently stored in the vector
+
+
+Creates a string array and stores the names of all the events currently stored in the vector
+@param None
+@return An array of all the names of the events currently stored in the vector
+
+</member>
+        <member name="M:Executive.checkAval(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Returns the name of the events that the given user is admin of
+@param A string representing the name of a user
+@return A vector containing the names of the events that the given user is admin of
+
+
+Returns the name of the events that the given user is admin of
+@param A string representing the name of a user
+@return A vector containing the names of the events that the given user is admin of
+
+</member>
+        <member name="M:Executive.AddEvent(Event)">
+Adds a given event to the vector that stores all the events
+@param An event to be added to the vector
+@return None
+
+
+Adds a given event to the vector that stores all the events
+@param An event to be added to the vector
+@return None
+
+</member>
+        <member name="M:Executive.Dispose">
+Does nothing
+@param None
+@return None
+
+
+Does nothing
+@param None
+@return None
+
+</member>
+        <member name="M:Executive.#ctor">
+Creates the object
+@param None
+@return None
+
+
+Creates the object
+@param None
+@return None
+
+</member>
+        <member name="M:Event.Print">
+Prints the number of users avaliable at each time slot
+@param None
+@return None
+
+
+Prints the number of users avaliable at each time slot
+@param None
+@return None
+
+</member>
+        <member name="M:Event.getNumOfUs(System.Int32)">
+Takes in an index cooresponding to a time slot and returns the number of users avaliable for that time slot
+@param An int representing the index of the time slot desired
+@return An int representing the number of users avaliable at the time slot
+
+
+Takes in an index cooresponding to a time slot and returns the number of users avaliable for that time slot
+@param An int representing the index of the time slot desired
+@return An int representing the number of users avaliable at the time slot
+
+</member>
+        <member name="M:Event.getAdmin">
+Returns the name of the admin for the event
+@param None
+@return A string representing the name of the admin for the event
+
+
+Returns the name of the admin for the event
+@param None
+@return A string representing the name of the admin for the event
+
+</member>
+        <member name="M:Event.setNumOfUs(System.Int32,System.Int32)">
+Stores the number of users avaliable at a specified time slot
+@param Two ints representing the index of the time slot and the number of users avaliable for that time
+@return None
+
+
+Stores the number of users avaliable at a specified time slot
+@param Two ints representing the index of the time slot and the number of users avaliable for that time
+@return None
+
+</member>
+        <member name="M:Event.setAdmin(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Takes in the name of the admin for the event and stores it
+@param A string representing the name of the admin for the event
+@return None
+
+
+Takes in the name of the admin for the event and stores it
+@param A string representing the name of the admin for the event
+@return None
+
+</member>
+        <member name="M:Event.addUser(User)">
+Adds a given user to the event
+@param A user to be added to the event
+@return None
+
+
+Adds a given user to the event
+@param A user to be added to the event
+@return None
+
+</member>
+        <member name="M:Event.getAvailableTimes">
+Prints the number of users avaliable at each time slot while also saving the numbers to NumOfUs
+@param None
+@return None
+
+
+Prints the number of users avaliable at each time slot while also saving the numbers to NumOfUs
+@param None
+@return None
+
+</member>
+        <member name="M:Event.getDate">
+Returns the date of the event
+@param None
+@return A string representing the date of the event
+
+
+Returns the date of the event
+@param None
+@return A string representing the date of the event
+
+</member>
+        <member name="M:Event.getName">
+Returns the name of the event
+@param None
+@return A string representing the name of the event
+
+
+Returns the name of the event
+@param None
+@return A string representing the name of the event
+
+</member>
+        <member name="M:Event.setEventDate(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Takes in a string representing the date of the event and saves it
+@param A string representing the date of the event
+@return None
+
+
+Takes in a string representing the date of the event and saves it
+@param A string representing the date of the event
+@return None
+
+</member>
+        <member name="M:Event.setEventName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Takes in a string representing the name of the event and saves it
+@param A string representing the name of the event
+@return None
+
+
+Takes in a string representing the name of the event and saves it
+@param A string representing the name of the event
+@return None
+
+</member>
+        <member name="M:Event.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Stores the name and date of the event
+@param Two strings that represent the name and date of the event
+@return None
+
+
+Stores the name and date of the event
+@param Two strings that represent the name and date of the event
+@return None
+
+</member>
+        <member name="M:Event.#ctor">
+Creates an int array to store the number of users avaliable at the cooresponding time slot
+@param None
+@return None
+
+
+Creates an int array to store the number of users avaliable at the cooresponding time slot
+@param None
+@return None
+
+</member>
+        <member name="M:User.getTimes">
+Prints the times that the user is avaliable
+@param None
+@return None
+
+
+Prints the times that the user is avaliable
+@param None
+@return None
+
+</member>
+        <member name="M:User.AddTime(System.Int32)">
+Toggles the bool at the given index
+@param An index representing a bool in m_Times
+@return None
+
+
+Toggles the bool at the given index
+@param An index representing a bool in m_Times
+@return None
+
+</member>
+        <member name="M:User.getStrings(System.Int32)">
+Returns the string at the index passed in which represents a time slot
+@param An int representing an index in the string array m_Strings
+@return The string at the given index
+
+
+Returns the string at the index passed in which represents a time slot
+@param An int representing an index in the string array m_Strings
+@return The string at the given index
+
+</member>
+        <member name="M:User.getTime(System.Int32)">
+Returns a bool at the index passed in which represents whether the user is avaliable at that time
+@param An int representing an index in the boolean array m_Times
+@return The boolean stored at the given index
+
+
+Returns a bool at the index passed in which represents whether the user is avaliable at that time
+@param An int representing an index in the boolean array m_Times
+@return The boolean stored at the given index
+
+</member>
+        <member name="M:User.getUserName">
+Returns the name of the user
+@param None
+@return The string representing the name of the user
+
+
+Returns the name of the user
+@param None
+@return The string representing the name of the user
+
+</member>
+        <member name="M:User.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
+Sets the user's name
+@param String representing the name of the user
+@return None
+
+
+Sets the user's name
+@param String representing the name of the user
+@return None
+
+</member>
+        <member name="M:User.Dispose">
+Does Nothing
+@param None
+@return None
+
+
+Does Nothing
+@param None
+@return None
+
+</member>
+        <member name="M:User.#ctor">
+Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
+@param None
+@return None
+
+
+Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
+@param None
+@return None
+
+</member>
+    </members>
+</doc>
