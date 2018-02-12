@@ -29,6 +29,6 @@ void Executive::getAllEvents()
 	cout<<"All events"<<endl;
 	for(int i = 0; i<events.size();i++)
 	{
-		//cout<<events[i].getName()<<endl;
+		cout<<events[i].getName()<<endl;
 	}
 }

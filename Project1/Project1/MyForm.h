@@ -7,6 +7,7 @@
 #include "Executive.h"
 #include "Event.h"
 #include "User.h"
+#include <msclr\marshal_cppstd.h>
 
 Executive exec;
 
@@ -429,25 +430,29 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpCreateEvent->Controls->Add(this->lblNote);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(54, 82);
+			this->grpCreateEvent->Location = System::Drawing::Point(81, 126);
+			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
-			this->grpCreateEvent->Size = System::Drawing::Size(472, 441);
+			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpCreateEvent->Size = System::Drawing::Size(708, 678);
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(63, 275);
+			this->textBox4->Location = System::Drawing::Point(94, 423);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 20);
+			this->textBox4->Size = System::Drawing::Size(148, 26);
 			this->textBox4->TabIndex = 13;
 			// 
 			// btnCreateEventBack
 			// 
-			this->btnCreateEventBack->Location = System::Drawing::Point(191, 414);
+			this->btnCreateEventBack->Location = System::Drawing::Point(286, 637);
+			this->btnCreateEventBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnCreateEventBack->Name = L"btnCreateEventBack";
-			this->btnCreateEventBack->Size = System::Drawing::Size(103, 23);
+			this->btnCreateEventBack->Size = System::Drawing::Size(154, 35);
 			this->btnCreateEventBack->TabIndex = 10;
 			this->btnCreateEventBack->Text = L"Back";
 			this->btnCreateEventBack->UseVisualStyleBackColor = true;
@@ -455,15 +460,17 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(85, 359);
+			this->textBox3->Location = System::Drawing::Point(128, 552);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(227, 20);
+			this->textBox3->Size = System::Drawing::Size(338, 26);
 			this->textBox3->TabIndex = 12;
 			// 
 			// monthCalendar1
 			// 
-			this->monthCalendar1->Location = System::Drawing::Point(85, 100);
-			this->monthCalendar1->MaximumSize = System::Drawing::Size(500, 500);
+			this->monthCalendar1->Location = System::Drawing::Point(128, 154);
+			this->monthCalendar1->Margin = System::Windows::Forms::Padding(14);
+			this->monthCalendar1->MaximumSize = System::Drawing::Size(750, 769);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
@@ -471,59 +478,67 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(85, 327);
+			this->textBox2->Location = System::Drawing::Point(128, 503);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(227, 20);
+			this->textBox2->Size = System::Drawing::Size(338, 26);
 			this->textBox2->TabIndex = 11;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(85, 60);
+			this->textBox1->Location = System::Drawing::Point(128, 92);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(227, 20);
+			this->textBox1->Size = System::Drawing::Size(338, 26);
 			this->textBox1->TabIndex = 10;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// lblName
 			// 
 			this->lblName->AutoSize = true;
-			this->lblName->Location = System::Drawing::Point(15, 63);
+			this->lblName->Location = System::Drawing::Point(22, 97);
+			this->lblName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblName->Name = L"lblName";
-			this->lblName->Size = System::Drawing::Size(38, 13);
+			this->lblName->Size = System::Drawing::Size(55, 20);
 			this->lblName->TabIndex = 9;
 			this->lblName->Text = L"Name:";
 			// 
 			// lblDate
 			// 
 			this->lblDate->AutoSize = true;
-			this->lblDate->Location = System::Drawing::Point(15, 100);
+			this->lblDate->Location = System::Drawing::Point(22, 154);
+			this->lblDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblDate->Name = L"lblDate";
-			this->lblDate->Size = System::Drawing::Size(33, 13);
+			this->lblDate->Size = System::Drawing::Size(48, 20);
 			this->lblDate->TabIndex = 6;
 			this->lblDate->Text = L"Date:";
 			// 
 			// lblLocation
 			// 
 			this->lblLocation->AutoSize = true;
-			this->lblLocation->Location = System::Drawing::Point(15, 330);
+			this->lblLocation->Location = System::Drawing::Point(22, 508);
+			this->lblLocation->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblLocation->Name = L"lblLocation";
-			this->lblLocation->Size = System::Drawing::Size(51, 13);
+			this->lblLocation->Size = System::Drawing::Size(74, 20);
 			this->lblLocation->TabIndex = 4;
 			this->lblLocation->Text = L"Location:";
 			// 
 			// lblNote
 			// 
 			this->lblNote->AutoSize = true;
-			this->lblNote->Location = System::Drawing::Point(15, 362);
+			this->lblNote->Location = System::Drawing::Point(22, 557);
+			this->lblNote->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblNote->Name = L"lblNote";
-			this->lblNote->Size = System::Drawing::Size(33, 13);
+			this->lblNote->Size = System::Drawing::Size(47, 20);
 			this->lblNote->TabIndex = 3;
 			this->lblNote->Text = L"Note:";
 			// 
 			// btnSubmitEvent
 			// 
-			this->btnSubmitEvent->Location = System::Drawing::Point(191, 385);
+			this->btnSubmitEvent->Location = System::Drawing::Point(286, 592);
+			this->btnSubmitEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnSubmitEvent->Name = L"btnSubmitEvent";
-			this->btnSubmitEvent->Size = System::Drawing::Size(103, 23);
+			this->btnSubmitEvent->Size = System::Drawing::Size(154, 35);
 			this->btnSubmitEvent->TabIndex = 0;
 			this->btnSubmitEvent->Text = L"Submit";
 			this->btnSubmitEvent->UseVisualStyleBackColor = true;
@@ -532,9 +547,10 @@ private: System::Windows::Forms::Button^  button1;
 			// lblCreateEvent
 			// 
 			this->lblCreateEvent->AutoSize = true;
-			this->lblCreateEvent->Location = System::Drawing::Point(131, 26);
+			this->lblCreateEvent->Location = System::Drawing::Point(196, 40);
+			this->lblCreateEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblCreateEvent->Name = L"lblCreateEvent";
-			this->lblCreateEvent->Size = System::Drawing::Size(72, 13);
+			this->lblCreateEvent->Size = System::Drawing::Size(106, 20);
 			this->lblCreateEvent->TabIndex = 2;
 			this->lblCreateEvent->Text = L"Create Event:";
 			// 
@@ -544,18 +560,21 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(762, 85);
+			this->grpAdmin->Location = System::Drawing::Point(1143, 131);
+			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
-			this->grpAdmin->Size = System::Drawing::Size(200, 277);
+			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAdmin->Size = System::Drawing::Size(300, 426);
 			this->grpAdmin->TabIndex = 7;
 			this->grpAdmin->TabStop = false;
 			this->grpAdmin->Visible = false;
 			// 
 			// btnAdminBack
 			// 
-			this->btnAdminBack->Location = System::Drawing::Point(50, 137);
+			this->btnAdminBack->Location = System::Drawing::Point(75, 211);
+			this->btnAdminBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnAdminBack->Name = L"btnAdminBack";
-			this->btnAdminBack->Size = System::Drawing::Size(103, 23);
+			this->btnAdminBack->Size = System::Drawing::Size(154, 35);
 			this->btnAdminBack->TabIndex = 10;
 			this->btnAdminBack->Text = L"Back";
 			this->btnAdminBack->UseVisualStyleBackColor = true;
@@ -563,9 +582,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// btnCreateEvent
 			// 
-			this->btnCreateEvent->Location = System::Drawing::Point(50, 79);
+			this->btnCreateEvent->Location = System::Drawing::Point(75, 122);
+			this->btnCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnCreateEvent->Name = L"btnCreateEvent";
-			this->btnCreateEvent->Size = System::Drawing::Size(103, 23);
+			this->btnCreateEvent->Size = System::Drawing::Size(154, 35);
 			this->btnCreateEvent->TabIndex = 5;
 			this->btnCreateEvent->Text = L"Create Event";
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
@@ -573,9 +593,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// btnEditEvents
 			// 
-			this->btnEditEvents->Location = System::Drawing::Point(50, 108);
+			this->btnEditEvents->Location = System::Drawing::Point(75, 166);
+			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditEvents->Name = L"btnEditEvents";
-			this->btnEditEvents->Size = System::Drawing::Size(103, 23);
+			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
 			this->btnEditEvents->TabIndex = 3;
 			this->btnEditEvents->Text = L"View Your Events";
 			this->btnEditEvents->UseVisualStyleBackColor = true;
@@ -584,9 +605,10 @@ private: System::Windows::Forms::Button^  button1;
 			// lblAdmin
 			// 
 			this->lblAdmin->AutoSize = true;
-			this->lblAdmin->Location = System::Drawing::Point(47, 34);
+			this->lblAdmin->Location = System::Drawing::Point(70, 52);
+			this->lblAdmin->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblAdmin->Name = L"lblAdmin";
-			this->lblAdmin->Size = System::Drawing::Size(93, 13);
+			this->lblAdmin->Size = System::Drawing::Size(135, 20);
 			this->lblAdmin->TabIndex = 2;
 			this->lblAdmin->Text = L"Make a Selection:";
 			// 
@@ -595,26 +617,30 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpLogin->Controls->Add(this->lblUser);
 			this->grpLogin->Controls->Add(this->btnLogin);
 			this->grpLogin->Controls->Add(this->txtUser);
-			this->grpLogin->Location = System::Drawing::Point(341, 74);
+			this->grpLogin->Location = System::Drawing::Point(512, 114);
+			this->grpLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpLogin->Name = L"grpLogin";
-			this->grpLogin->Size = System::Drawing::Size(200, 148);
+			this->grpLogin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpLogin->Size = System::Drawing::Size(300, 228);
 			this->grpLogin->TabIndex = 7;
 			this->grpLogin->TabStop = false;
 			// 
 			// lblUser
 			// 
 			this->lblUser->AutoSize = true;
-			this->lblUser->Location = System::Drawing::Point(59, 39);
+			this->lblUser->Location = System::Drawing::Point(88, 60);
+			this->lblUser->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblUser->Name = L"lblUser";
-			this->lblUser->Size = System::Drawing::Size(91, 13);
+			this->lblUser->Size = System::Drawing::Size(136, 20);
 			this->lblUser->TabIndex = 6;
 			this->lblUser->Text = L"Enter Your Name:";
 			// 
 			// btnLogin
 			// 
-			this->btnLogin->Location = System::Drawing::Point(59, 102);
+			this->btnLogin->Location = System::Drawing::Point(88, 157);
+			this->btnLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnLogin->Name = L"btnLogin";
-			this->btnLogin->Size = System::Drawing::Size(75, 23);
+			this->btnLogin->Size = System::Drawing::Size(112, 35);
 			this->btnLogin->TabIndex = 0;
 			this->btnLogin->Text = L"Login";
 			this->btnLogin->UseVisualStyleBackColor = true;
@@ -622,18 +648,20 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// txtUser
 			// 
-			this->txtUser->Location = System::Drawing::Point(49, 70);
+			this->txtUser->Location = System::Drawing::Point(74, 108);
+			this->txtUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtUser->Name = L"txtUser";
-			this->txtUser->Size = System::Drawing::Size(100, 20);
+			this->txtUser->Size = System::Drawing::Size(148, 26);
 			this->txtUser->TabIndex = 1;
 			// 
 			// rbtn12Hr
 			// 
 			this->rbtn12Hr->AutoSize = true;
 			this->rbtn12Hr->Checked = true;
-			this->rbtn12Hr->Location = System::Drawing::Point(30, 67);
+			this->rbtn12Hr->Location = System::Drawing::Point(45, 103);
+			this->rbtn12Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn12Hr->Name = L"rbtn12Hr";
-			this->rbtn12Hr->Size = System::Drawing::Size(63, 17);
+			this->rbtn12Hr->Size = System::Drawing::Size(91, 24);
 			this->rbtn12Hr->TabIndex = 12;
 			this->rbtn12Hr->TabStop = true;
 			this->rbtn12Hr->Text = L"12 Hour";
@@ -643,9 +671,10 @@ private: System::Windows::Forms::Button^  button1;
 			// rbtn24Hr
 			// 
 			this->rbtn24Hr->AutoSize = true;
-			this->rbtn24Hr->Location = System::Drawing::Point(30, 90);
+			this->rbtn24Hr->Location = System::Drawing::Point(45, 138);
+			this->rbtn24Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn24Hr->Name = L"rbtn24Hr";
-			this->rbtn24Hr->Size = System::Drawing::Size(63, 17);
+			this->rbtn24Hr->Size = System::Drawing::Size(91, 24);
 			this->rbtn24Hr->TabIndex = 13;
 			this->rbtn24Hr->Text = L"24 Hour";
 			this->rbtn24Hr->UseVisualStyleBackColor = true;
@@ -656,18 +685,21 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpMode->Controls->Add(this->btnModeBack);
 			this->grpMode->Controls->Add(this->btnAdmin);
 			this->grpMode->Controls->Add(this->btnUser);
-			this->grpMode->Location = System::Drawing::Point(341, 74);
+			this->grpMode->Location = System::Drawing::Point(512, 114);
+			this->grpMode->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpMode->Name = L"grpMode";
-			this->grpMode->Size = System::Drawing::Size(200, 148);
+			this->grpMode->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpMode->Size = System::Drawing::Size(300, 228);
 			this->grpMode->TabIndex = 8;
 			this->grpMode->TabStop = false;
 			this->grpMode->Visible = false;
 			// 
 			// btnModeBack
 			// 
-			this->btnModeBack->Location = System::Drawing::Point(59, 97);
+			this->btnModeBack->Location = System::Drawing::Point(88, 149);
+			this->btnModeBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnModeBack->Name = L"btnModeBack";
-			this->btnModeBack->Size = System::Drawing::Size(75, 23);
+			this->btnModeBack->Size = System::Drawing::Size(112, 35);
 			this->btnModeBack->TabIndex = 2;
 			this->btnModeBack->Text = L"Back";
 			this->btnModeBack->UseVisualStyleBackColor = true;
@@ -675,9 +707,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// btnAdmin
 			// 
-			this->btnAdmin->Location = System::Drawing::Point(59, 35);
+			this->btnAdmin->Location = System::Drawing::Point(88, 54);
+			this->btnAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnAdmin->Name = L"btnAdmin";
-			this->btnAdmin->Size = System::Drawing::Size(75, 23);
+			this->btnAdmin->Size = System::Drawing::Size(112, 35);
 			this->btnAdmin->TabIndex = 1;
 			this->btnAdmin->Text = L"Admin Mode";
 			this->btnAdmin->UseVisualStyleBackColor = true;
@@ -685,9 +718,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// btnUser
 			// 
-			this->btnUser->Location = System::Drawing::Point(59, 66);
+			this->btnUser->Location = System::Drawing::Point(88, 102);
+			this->btnUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnUser->Name = L"btnUser";
-			this->btnUser->Size = System::Drawing::Size(75, 23);
+			this->btnUser->Size = System::Drawing::Size(112, 35);
 			this->btnUser->TabIndex = 0;
 			this->btnUser->Text = L"User Mode";
 			this->btnUser->UseVisualStyleBackColor = true;
@@ -705,18 +739,21 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpAvailability->Controls->Add(this->rbtn24Hr);
 			this->grpAvailability->Controls->Add(this->pnl24Hr);
 			this->grpAvailability->Controls->Add(this->rbtn12Hr);
-			this->grpAvailability->Location = System::Drawing::Point(18, 29);
+			this->grpAvailability->Location = System::Drawing::Point(27, 45);
+			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
-			this->grpAvailability->Size = System::Drawing::Size(472, 441);
+			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAvailability->Size = System::Drawing::Size(708, 678);
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(30, 385);
+			this->button1->Location = System::Drawing::Point(45, 592);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(103, 23);
+			this->button1->Size = System::Drawing::Size(154, 35);
 			this->button1->TabIndex = 45;
 			this->button1->Text = L"Test";
 			this->button1->UseVisualStyleBackColor = true;
@@ -742,18 +779,20 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl12Hr->Controls->Add(this->rbtn7_8AM);
 			this->pnl12Hr->Controls->Add(this->rbtn6_7AM);
 			this->pnl12Hr->Controls->Add(this->rbtn5_6AM);
-			this->pnl12Hr->Location = System::Drawing::Point(108, 56);
+			this->pnl12Hr->Location = System::Drawing::Point(162, 86);
+			this->pnl12Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl12Hr->Name = L"pnl12Hr";
-			this->pnl12Hr->Size = System::Drawing::Size(136, 310);
+			this->pnl12Hr->Size = System::Drawing::Size(204, 477);
 			this->pnl12Hr->TabIndex = 27;
 			// 
 			// rbtn11_12AM
 			// 
 			this->rbtn11_12AM->AutoSize = true;
 			this->rbtn11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn11_12AM->Location = System::Drawing::Point(0, 289);
+			this->rbtn11_12AM->Location = System::Drawing::Point(0, 408);
+			this->rbtn11_12AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn11_12AM->Name = L"rbtn11_12AM";
-			this->rbtn11_12AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn11_12AM->TabIndex = 43;
 			this->rbtn11_12AM->TabStop = true;
 			this->rbtn11_12AM->Text = L"11:00 PM - 12:00 AM";
@@ -764,9 +803,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn10_11PM->AutoSize = true;
 			this->rbtn10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn10_11PM->Location = System::Drawing::Point(0, 272);
+			this->rbtn10_11PM->Location = System::Drawing::Point(0, 384);
+			this->rbtn10_11PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn10_11PM->Name = L"rbtn10_11PM";
-			this->rbtn10_11PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn10_11PM->TabIndex = 42;
 			this->rbtn10_11PM->TabStop = true;
 			this->rbtn10_11PM->Text = L"10:00 PM - 11:00 PM";
@@ -777,9 +817,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn9_10PM->AutoSize = true;
 			this->rbtn9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn9_10PM->Location = System::Drawing::Point(0, 255);
+			this->rbtn9_10PM->Location = System::Drawing::Point(0, 360);
+			this->rbtn9_10PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn9_10PM->Name = L"rbtn9_10PM";
-			this->rbtn9_10PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn9_10PM->TabIndex = 41;
 			this->rbtn9_10PM->TabStop = true;
 			this->rbtn9_10PM->Text = L"9:00 PM - 10:00 PM";
@@ -790,9 +831,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn8_9PM->AutoSize = true;
 			this->rbtn8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn8_9PM->Location = System::Drawing::Point(0, 238);
+			this->rbtn8_9PM->Location = System::Drawing::Point(0, 336);
+			this->rbtn8_9PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn8_9PM->Name = L"rbtn8_9PM";
-			this->rbtn8_9PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn8_9PM->TabIndex = 40;
 			this->rbtn8_9PM->TabStop = true;
 			this->rbtn8_9PM->Text = L"8:00 PM - 9:00 PM";
@@ -803,9 +845,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn7_8PM->AutoSize = true;
 			this->rbtn7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn7_8PM->Location = System::Drawing::Point(0, 221);
+			this->rbtn7_8PM->Location = System::Drawing::Point(0, 312);
+			this->rbtn7_8PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn7_8PM->Name = L"rbtn7_8PM";
-			this->rbtn7_8PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn7_8PM->TabIndex = 39;
 			this->rbtn7_8PM->TabStop = true;
 			this->rbtn7_8PM->Text = L"7:00 PM - 8:00 PM";
@@ -816,9 +859,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn6_7PM->AutoSize = true;
 			this->rbtn6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn6_7PM->Location = System::Drawing::Point(0, 204);
+			this->rbtn6_7PM->Location = System::Drawing::Point(0, 288);
+			this->rbtn6_7PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn6_7PM->Name = L"rbtn6_7PM";
-			this->rbtn6_7PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn6_7PM->TabIndex = 38;
 			this->rbtn6_7PM->TabStop = true;
 			this->rbtn6_7PM->Text = L"6:00 PM - 7:00 PM";
@@ -829,9 +873,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn5_6PM->AutoSize = true;
 			this->rbtn5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn5_6PM->Location = System::Drawing::Point(0, 187);
+			this->rbtn5_6PM->Location = System::Drawing::Point(0, 264);
+			this->rbtn5_6PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn5_6PM->Name = L"rbtn5_6PM";
-			this->rbtn5_6PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn5_6PM->TabIndex = 37;
 			this->rbtn5_6PM->TabStop = true;
 			this->rbtn5_6PM->Text = L"5:00 PM - 6:00 PM";
@@ -842,9 +887,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn4_5PM->AutoSize = true;
 			this->rbtn4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn4_5PM->Location = System::Drawing::Point(0, 170);
+			this->rbtn4_5PM->Location = System::Drawing::Point(0, 240);
+			this->rbtn4_5PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn4_5PM->Name = L"rbtn4_5PM";
-			this->rbtn4_5PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn4_5PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn4_5PM->TabIndex = 36;
 			this->rbtn4_5PM->TabStop = true;
 			this->rbtn4_5PM->Text = L"4:00 PM - 5:00 PM";
@@ -855,9 +901,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn3_4PM->AutoSize = true;
 			this->rbtn3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn3_4PM->Location = System::Drawing::Point(0, 153);
+			this->rbtn3_4PM->Location = System::Drawing::Point(0, 216);
+			this->rbtn3_4PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn3_4PM->Name = L"rbtn3_4PM";
-			this->rbtn3_4PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn3_4PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn3_4PM->TabIndex = 35;
 			this->rbtn3_4PM->TabStop = true;
 			this->rbtn3_4PM->Text = L"3:00 PM - 4:00 PM";
@@ -868,9 +915,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn2_3PM->AutoSize = true;
 			this->rbtn2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn2_3PM->Location = System::Drawing::Point(0, 136);
+			this->rbtn2_3PM->Location = System::Drawing::Point(0, 192);
+			this->rbtn2_3PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn2_3PM->Name = L"rbtn2_3PM";
-			this->rbtn2_3PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn2_3PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn2_3PM->TabIndex = 34;
 			this->rbtn2_3PM->TabStop = true;
 			this->rbtn2_3PM->Text = L"2:00 PM - 3:00 PM";
@@ -881,9 +929,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn1_2PM->AutoSize = true;
 			this->rbtn1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn1_2PM->Location = System::Drawing::Point(0, 119);
+			this->rbtn1_2PM->Location = System::Drawing::Point(0, 168);
+			this->rbtn1_2PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn1_2PM->Name = L"rbtn1_2PM";
-			this->rbtn1_2PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn1_2PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn1_2PM->TabIndex = 33;
 			this->rbtn1_2PM->TabStop = true;
 			this->rbtn1_2PM->Text = L"1:00 PM - 2:00 PM";
@@ -894,9 +943,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn11_12PM->AutoSize = true;
 			this->rbtn11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn11_12PM->Location = System::Drawing::Point(0, 102);
+			this->rbtn11_12PM->Location = System::Drawing::Point(0, 144);
+			this->rbtn11_12PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn11_12PM->Name = L"rbtn11_12PM";
-			this->rbtn11_12PM->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12PM->Size = System::Drawing::Size(204, 24);
 			this->rbtn11_12PM->TabIndex = 32;
 			this->rbtn11_12PM->TabStop = true;
 			this->rbtn11_12PM->Text = L"11:00 AM - 12:00 PM";
@@ -907,9 +957,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn10_11AM->AutoSize = true;
 			this->rbtn10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn10_11AM->Location = System::Drawing::Point(0, 85);
+			this->rbtn10_11AM->Location = System::Drawing::Point(0, 120);
+			this->rbtn10_11AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn10_11AM->Name = L"rbtn10_11AM";
-			this->rbtn10_11AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn10_11AM->TabIndex = 31;
 			this->rbtn10_11AM->TabStop = true;
 			this->rbtn10_11AM->Text = L"10:00 AM - 11:00 AM";
@@ -920,9 +971,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn9_10AM->AutoSize = true;
 			this->rbtn9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn9_10AM->Location = System::Drawing::Point(0, 68);
+			this->rbtn9_10AM->Location = System::Drawing::Point(0, 96);
+			this->rbtn9_10AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn9_10AM->Name = L"rbtn9_10AM";
-			this->rbtn9_10AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn9_10AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn9_10AM->TabIndex = 30;
 			this->rbtn9_10AM->TabStop = true;
 			this->rbtn9_10AM->Text = L"9:00 AM - 10:00 AM";
@@ -933,9 +985,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn8_9AM->AutoSize = true;
 			this->rbtn8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn8_9AM->Location = System::Drawing::Point(0, 51);
+			this->rbtn8_9AM->Location = System::Drawing::Point(0, 72);
+			this->rbtn8_9AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn8_9AM->Name = L"rbtn8_9AM";
-			this->rbtn8_9AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn8_9AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn8_9AM->TabIndex = 29;
 			this->rbtn8_9AM->TabStop = true;
 			this->rbtn8_9AM->Text = L"8:00 AM - 9:00 AM";
@@ -946,9 +999,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn7_8AM->AutoSize = true;
 			this->rbtn7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn7_8AM->Location = System::Drawing::Point(0, 34);
+			this->rbtn7_8AM->Location = System::Drawing::Point(0, 48);
+			this->rbtn7_8AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn7_8AM->Name = L"rbtn7_8AM";
-			this->rbtn7_8AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn7_8AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn7_8AM->TabIndex = 28;
 			this->rbtn7_8AM->TabStop = true;
 			this->rbtn7_8AM->Text = L"7:00 AM - 8:00 AM";
@@ -959,9 +1013,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn6_7AM->AutoSize = true;
 			this->rbtn6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn6_7AM->Location = System::Drawing::Point(0, 17);
+			this->rbtn6_7AM->Location = System::Drawing::Point(0, 24);
+			this->rbtn6_7AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn6_7AM->Name = L"rbtn6_7AM";
-			this->rbtn6_7AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn6_7AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn6_7AM->TabIndex = 27;
 			this->rbtn6_7AM->TabStop = true;
 			this->rbtn6_7AM->Text = L"6:00 AM - 7:00 AM";
@@ -973,8 +1028,9 @@ private: System::Windows::Forms::Button^  button1;
 			this->rbtn5_6AM->AutoSize = true;
 			this->rbtn5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
 			this->rbtn5_6AM->Location = System::Drawing::Point(0, 0);
+			this->rbtn5_6AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn5_6AM->Name = L"rbtn5_6AM";
-			this->rbtn5_6AM->Size = System::Drawing::Size(136, 17);
+			this->rbtn5_6AM->Size = System::Drawing::Size(204, 24);
 			this->rbtn5_6AM->TabIndex = 26;
 			this->rbtn5_6AM->TabStop = true;
 			this->rbtn5_6AM->Text = L"5:00 AM - 6:00 AM";
@@ -984,26 +1040,29 @@ private: System::Windows::Forms::Button^  button1;
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(281, 123);
+			this->label2->Location = System::Drawing::Point(422, 189);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(117, 13);
+			this->label2->Size = System::Drawing::Size(171, 20);
 			this->label2->TabIndex = 30;
 			this->label2->Text = L"Select Available Times:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(149, 40);
+			this->label3->Location = System::Drawing::Point(224, 62);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(38, 13);
+			this->label3->Size = System::Drawing::Size(56, 20);
 			this->label3->TabIndex = 31;
 			this->label3->Text = L"Hours:";
 			// 
 			// btnSubmitTimes
 			// 
-			this->btnSubmitTimes->Location = System::Drawing::Point(181, 402);
+			this->btnSubmitTimes->Location = System::Drawing::Point(272, 618);
+			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnSubmitTimes->Name = L"btnSubmitTimes";
-			this->btnSubmitTimes->Size = System::Drawing::Size(103, 23);
+			this->btnSubmitTimes->Size = System::Drawing::Size(154, 35);
 			this->btnSubmitTimes->TabIndex = 0;
 			this->btnSubmitTimes->Text = L"Submit";
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
@@ -1012,9 +1071,10 @@ private: System::Windows::Forms::Button^  button1;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(183, 22);
+			this->label7->Location = System::Drawing::Point(274, 34);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(72, 13);
+			this->label7->Size = System::Drawing::Size(106, 20);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Create Event:";
 			// 
@@ -1038,9 +1098,10 @@ private: System::Windows::Forms::Button^  button1;
 			this->panel5->Controls->Add(this->pnl8_9PM);
 			this->panel5->Controls->Add(this->pnl8_9AM);
 			this->panel5->Controls->Add(this->pnl6_7PM);
-			this->panel5->Location = System::Drawing::Point(273, 147);
+			this->panel5->Location = System::Drawing::Point(410, 226);
+			this->panel5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(264, 852);
+			this->panel5->Size = System::Drawing::Size(396, 1311);
 			this->panel5->TabIndex = 28;
 			// 
 			// pnl5_6AM
@@ -1049,35 +1110,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl5_6AM->Controls->Add(this->chk520_540AM);
 			this->pnl5_6AM->Controls->Add(this->chk500_520AM);
 			this->pnl5_6AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl5_6AM->Location = System::Drawing::Point(0, 1292);
+			this->pnl5_6AM->Location = System::Drawing::Point(0, 1989);
+			this->pnl5_6AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl5_6AM->Name = L"pnl5_6AM";
-			this->pnl5_6AM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6AM->Size = System::Drawing::Size(396, 117);
 			this->pnl5_6AM->TabIndex = 25;
 			this->pnl5_6AM->Visible = false;
 			// 
 			// chk540_600AM
 			// 
-			this->chk540_600AM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600AM->Location = System::Drawing::Point(22, 88);
+			this->chk540_600AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk540_600AM->Name = L"chk540_600AM";
-			this->chk540_600AM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600AM->Size = System::Drawing::Size(177, 34);
 			this->chk540_600AM->TabIndex = 22;
 			this->chk540_600AM->Text = L"5:40 AM - 6:00 AM";
 			this->chk540_600AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk540_600AM_CheckedChanged);
 			// 
 			// chk520_540AM
 			// 
-			this->chk520_540AM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540AM->Location = System::Drawing::Point(22, 52);
+			this->chk520_540AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk520_540AM->Name = L"chk520_540AM";
-			this->chk520_540AM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540AM->Size = System::Drawing::Size(177, 34);
 			this->chk520_540AM->TabIndex = 19;
 			this->chk520_540AM->Text = L"5:20 AM - 5:40 AM";
 			this->chk520_540AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk520_540AM_CheckedChanged);
 			// 
 			// chk500_520AM
 			// 
-			this->chk500_520AM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520AM->Location = System::Drawing::Point(22, 18);
+			this->chk500_520AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk500_520AM->Name = L"chk500_520AM";
-			this->chk500_520AM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520AM->Size = System::Drawing::Size(177, 34);
 			this->chk500_520AM->TabIndex = 18;
 			this->chk500_520AM->Text = L"5:00 AM - 5:20 AM";
 			this->chk500_520AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk500_520AM_CheckedChanged);
@@ -1088,35 +1153,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl7_8AM->Controls->Add(this->chk720_740AM);
 			this->pnl7_8AM->Controls->Add(this->chk700_720AM);
 			this->pnl7_8AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl7_8AM->Location = System::Drawing::Point(0, 1216);
+			this->pnl7_8AM->Location = System::Drawing::Point(0, 1872);
+			this->pnl7_8AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl7_8AM->Name = L"pnl7_8AM";
-			this->pnl7_8AM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8AM->Size = System::Drawing::Size(396, 117);
 			this->pnl7_8AM->TabIndex = 30;
 			this->pnl7_8AM->Visible = false;
 			// 
 			// chk740_800AM
 			// 
-			this->chk740_800AM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800AM->Location = System::Drawing::Point(22, 88);
+			this->chk740_800AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk740_800AM->Name = L"chk740_800AM";
-			this->chk740_800AM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800AM->Size = System::Drawing::Size(177, 34);
 			this->chk740_800AM->TabIndex = 22;
 			this->chk740_800AM->Text = L"7:40 AM - 8:00 AM";
 			this->chk740_800AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk740_800AM_CheckedChanged);
 			// 
 			// chk720_740AM
 			// 
-			this->chk720_740AM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740AM->Location = System::Drawing::Point(22, 52);
+			this->chk720_740AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk720_740AM->Name = L"chk720_740AM";
-			this->chk720_740AM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740AM->Size = System::Drawing::Size(177, 34);
 			this->chk720_740AM->TabIndex = 19;
 			this->chk720_740AM->Text = L"7:20 AM - 7:40 AM";
 			this->chk720_740AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk720_740AM_CheckedChanged);
 			// 
 			// chk700_720AM
 			// 
-			this->chk700_720AM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720AM->Location = System::Drawing::Point(22, 18);
+			this->chk700_720AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk700_720AM->Name = L"chk700_720AM";
-			this->chk700_720AM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720AM->Size = System::Drawing::Size(177, 34);
 			this->chk700_720AM->TabIndex = 18;
 			this->chk700_720AM->Text = L"7:00 AM - 7:20 AM";
 			this->chk700_720AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk700_720AM_CheckedChanged);
@@ -1127,33 +1196,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl2_3PM->Controls->Add(this->chk220_240PM);
 			this->pnl2_3PM->Controls->Add(this->chk200_220PM);
 			this->pnl2_3PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl2_3PM->Location = System::Drawing::Point(0, 1140);
+			this->pnl2_3PM->Location = System::Drawing::Point(0, 1755);
+			this->pnl2_3PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl2_3PM->Name = L"pnl2_3PM";
-			this->pnl2_3PM->Size = System::Drawing::Size(264, 76);
+			this->pnl2_3PM->Size = System::Drawing::Size(396, 117);
 			this->pnl2_3PM->TabIndex = 34;
 			this->pnl2_3PM->Visible = false;
 			// 
 			// chk240_300PM
 			// 
-			this->chk240_300PM->Location = System::Drawing::Point(15, 57);
+			this->chk240_300PM->Location = System::Drawing::Point(22, 88);
+			this->chk240_300PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk240_300PM->Name = L"chk240_300PM";
-			this->chk240_300PM->Size = System::Drawing::Size(118, 22);
+			this->chk240_300PM->Size = System::Drawing::Size(177, 34);
 			this->chk240_300PM->TabIndex = 22;
 			this->chk240_300PM->Text = L"2:40 PM - 3:00 PM";
 			// 
 			// chk220_240PM
 			// 
-			this->chk220_240PM->Location = System::Drawing::Point(15, 34);
+			this->chk220_240PM->Location = System::Drawing::Point(22, 52);
+			this->chk220_240PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk220_240PM->Name = L"chk220_240PM";
-			this->chk220_240PM->Size = System::Drawing::Size(118, 22);
+			this->chk220_240PM->Size = System::Drawing::Size(177, 34);
 			this->chk220_240PM->TabIndex = 19;
 			this->chk220_240PM->Text = L"2:20 PM - 2:40 PM";
 			// 
 			// chk200_220PM
 			// 
-			this->chk200_220PM->Location = System::Drawing::Point(15, 12);
+			this->chk200_220PM->Location = System::Drawing::Point(22, 18);
+			this->chk200_220PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk200_220PM->Name = L"chk200_220PM";
-			this->chk200_220PM->Size = System::Drawing::Size(118, 22);
+			this->chk200_220PM->Size = System::Drawing::Size(177, 34);
 			this->chk200_220PM->TabIndex = 18;
 			this->chk200_220PM->Text = L"2:00 PM - 2:20 PM";
 			// 
@@ -1163,33 +1236,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl1_2PM->Controls->Add(this->chk120_140PM);
 			this->pnl1_2PM->Controls->Add(this->chk100_120PM);
 			this->pnl1_2PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl1_2PM->Location = System::Drawing::Point(0, 1064);
+			this->pnl1_2PM->Location = System::Drawing::Point(0, 1638);
+			this->pnl1_2PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl1_2PM->Name = L"pnl1_2PM";
-			this->pnl1_2PM->Size = System::Drawing::Size(264, 76);
+			this->pnl1_2PM->Size = System::Drawing::Size(396, 117);
 			this->pnl1_2PM->TabIndex = 34;
 			this->pnl1_2PM->Visible = false;
 			// 
 			// chk140_200PM
 			// 
-			this->chk140_200PM->Location = System::Drawing::Point(15, 57);
+			this->chk140_200PM->Location = System::Drawing::Point(22, 88);
+			this->chk140_200PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk140_200PM->Name = L"chk140_200PM";
-			this->chk140_200PM->Size = System::Drawing::Size(118, 22);
+			this->chk140_200PM->Size = System::Drawing::Size(177, 34);
 			this->chk140_200PM->TabIndex = 22;
 			this->chk140_200PM->Text = L"1:40 PM - 2:00 PM";
 			// 
 			// chk120_140PM
 			// 
-			this->chk120_140PM->Location = System::Drawing::Point(15, 34);
+			this->chk120_140PM->Location = System::Drawing::Point(22, 52);
+			this->chk120_140PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk120_140PM->Name = L"chk120_140PM";
-			this->chk120_140PM->Size = System::Drawing::Size(118, 22);
+			this->chk120_140PM->Size = System::Drawing::Size(177, 34);
 			this->chk120_140PM->TabIndex = 19;
 			this->chk120_140PM->Text = L"1:20 PM - 1:40 PM";
 			// 
 			// chk100_120PM
 			// 
-			this->chk100_120PM->Location = System::Drawing::Point(15, 12);
+			this->chk100_120PM->Location = System::Drawing::Point(22, 18);
+			this->chk100_120PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk100_120PM->Name = L"chk100_120PM";
-			this->chk100_120PM->Size = System::Drawing::Size(118, 22);
+			this->chk100_120PM->Size = System::Drawing::Size(177, 34);
 			this->chk100_120PM->TabIndex = 18;
 			this->chk100_120PM->Text = L"1:00 PM - 1:20 PM";
 			this->chk100_120PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk100_120PM_CheckedChanged);
@@ -1200,35 +1277,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl9_10AM->Controls->Add(this->chk920_940AM);
 			this->pnl9_10AM->Controls->Add(this->chk900_920AM);
 			this->pnl9_10AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl9_10AM->Location = System::Drawing::Point(0, 988);
+			this->pnl9_10AM->Location = System::Drawing::Point(0, 1521);
+			this->pnl9_10AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl9_10AM->Name = L"pnl9_10AM";
-			this->pnl9_10AM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10AM->Size = System::Drawing::Size(396, 117);
 			this->pnl9_10AM->TabIndex = 34;
 			this->pnl9_10AM->Visible = false;
 			// 
 			// chk940_10000AM
 			// 
-			this->chk940_10000AM->Location = System::Drawing::Point(15, 57);
+			this->chk940_10000AM->Location = System::Drawing::Point(22, 88);
+			this->chk940_10000AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk940_10000AM->Name = L"chk940_10000AM";
-			this->chk940_10000AM->Size = System::Drawing::Size(123, 22);
+			this->chk940_10000AM->Size = System::Drawing::Size(184, 34);
 			this->chk940_10000AM->TabIndex = 22;
 			this->chk940_10000AM->Text = L"9:40 AM - 10:00 AM";
 			this->chk940_10000AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk940_10000AM_CheckedChanged);
 			// 
 			// chk920_940AM
 			// 
-			this->chk920_940AM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940AM->Location = System::Drawing::Point(22, 52);
+			this->chk920_940AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk920_940AM->Name = L"chk920_940AM";
-			this->chk920_940AM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940AM->Size = System::Drawing::Size(177, 34);
 			this->chk920_940AM->TabIndex = 19;
 			this->chk920_940AM->Text = L"9:20 AM - 9:40 AM";
 			this->chk920_940AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk920_940AM_CheckedChanged);
 			// 
 			// chk900_920AM
 			// 
-			this->chk900_920AM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920AM->Location = System::Drawing::Point(22, 18);
+			this->chk900_920AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk900_920AM->Name = L"chk900_920AM";
-			this->chk900_920AM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920AM->Size = System::Drawing::Size(177, 34);
 			this->chk900_920AM->TabIndex = 18;
 			this->chk900_920AM->Text = L"9:00 AM - 9:20 AM";
 			this->chk900_920AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk900_920AM_CheckedChanged);
@@ -1239,33 +1320,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl7_8PM->Controls->Add(this->chk720_740PM);
 			this->pnl7_8PM->Controls->Add(this->chk700_720PM);
 			this->pnl7_8PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl7_8PM->Location = System::Drawing::Point(0, 912);
+			this->pnl7_8PM->Location = System::Drawing::Point(0, 1404);
+			this->pnl7_8PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl7_8PM->Name = L"pnl7_8PM";
-			this->pnl7_8PM->Size = System::Drawing::Size(264, 76);
+			this->pnl7_8PM->Size = System::Drawing::Size(396, 117);
 			this->pnl7_8PM->TabIndex = 39;
 			this->pnl7_8PM->Visible = false;
 			// 
 			// chk740_800PM
 			// 
-			this->chk740_800PM->Location = System::Drawing::Point(15, 57);
+			this->chk740_800PM->Location = System::Drawing::Point(22, 88);
+			this->chk740_800PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk740_800PM->Name = L"chk740_800PM";
-			this->chk740_800PM->Size = System::Drawing::Size(118, 22);
+			this->chk740_800PM->Size = System::Drawing::Size(177, 34);
 			this->chk740_800PM->TabIndex = 22;
 			this->chk740_800PM->Text = L"7:40 PM - 8:00 PM";
 			// 
 			// chk720_740PM
 			// 
-			this->chk720_740PM->Location = System::Drawing::Point(15, 34);
+			this->chk720_740PM->Location = System::Drawing::Point(22, 52);
+			this->chk720_740PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk720_740PM->Name = L"chk720_740PM";
-			this->chk720_740PM->Size = System::Drawing::Size(118, 22);
+			this->chk720_740PM->Size = System::Drawing::Size(177, 34);
 			this->chk720_740PM->TabIndex = 19;
 			this->chk720_740PM->Text = L"7:20 PM - 7:40 PM";
 			// 
 			// chk700_720PM
 			// 
-			this->chk700_720PM->Location = System::Drawing::Point(15, 12);
+			this->chk700_720PM->Location = System::Drawing::Point(22, 18);
+			this->chk700_720PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk700_720PM->Name = L"chk700_720PM";
-			this->chk700_720PM->Size = System::Drawing::Size(118, 22);
+			this->chk700_720PM->Size = System::Drawing::Size(177, 34);
 			this->chk700_720PM->TabIndex = 18;
 			this->chk700_720PM->Text = L"7:00 PM - 7:20 PM";
 			// 
@@ -1275,33 +1360,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl3_4PM->Controls->Add(this->chk320_340PM);
 			this->pnl3_4PM->Controls->Add(this->chk300_320PM);
 			this->pnl3_4PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl3_4PM->Location = System::Drawing::Point(0, 836);
+			this->pnl3_4PM->Location = System::Drawing::Point(0, 1287);
+			this->pnl3_4PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl3_4PM->Name = L"pnl3_4PM";
-			this->pnl3_4PM->Size = System::Drawing::Size(264, 76);
+			this->pnl3_4PM->Size = System::Drawing::Size(396, 117);
 			this->pnl3_4PM->TabIndex = 35;
 			this->pnl3_4PM->Visible = false;
 			// 
 			// chk340_400PM
 			// 
-			this->chk340_400PM->Location = System::Drawing::Point(15, 57);
+			this->chk340_400PM->Location = System::Drawing::Point(22, 88);
+			this->chk340_400PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk340_400PM->Name = L"chk340_400PM";
-			this->chk340_400PM->Size = System::Drawing::Size(118, 22);
+			this->chk340_400PM->Size = System::Drawing::Size(177, 34);
 			this->chk340_400PM->TabIndex = 22;
 			this->chk340_400PM->Text = L"3:40 PM - 4:00 PM";
 			// 
 			// chk320_340PM
 			// 
-			this->chk320_340PM->Location = System::Drawing::Point(15, 34);
+			this->chk320_340PM->Location = System::Drawing::Point(22, 52);
+			this->chk320_340PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk320_340PM->Name = L"chk320_340PM";
-			this->chk320_340PM->Size = System::Drawing::Size(118, 22);
+			this->chk320_340PM->Size = System::Drawing::Size(177, 34);
 			this->chk320_340PM->TabIndex = 19;
 			this->chk320_340PM->Text = L"3:20 PM - 3:40 PM";
 			// 
 			// chk300_320PM
 			// 
-			this->chk300_320PM->Location = System::Drawing::Point(15, 12);
+			this->chk300_320PM->Location = System::Drawing::Point(22, 18);
+			this->chk300_320PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk300_320PM->Name = L"chk300_320PM";
-			this->chk300_320PM->Size = System::Drawing::Size(118, 22);
+			this->chk300_320PM->Size = System::Drawing::Size(177, 34);
 			this->chk300_320PM->TabIndex = 18;
 			this->chk300_320PM->Text = L"3:00 PM - 3:20 PM";
 			// 
@@ -1311,35 +1400,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl11_12PM->Controls->Add(this->chk1120_1140AM);
 			this->pnl11_12PM->Controls->Add(this->chk1100_1120AM);
 			this->pnl11_12PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl11_12PM->Location = System::Drawing::Point(0, 760);
+			this->pnl11_12PM->Location = System::Drawing::Point(0, 1170);
+			this->pnl11_12PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl11_12PM->Name = L"pnl11_12PM";
-			this->pnl11_12PM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12PM->Size = System::Drawing::Size(396, 117);
 			this->pnl11_12PM->TabIndex = 34;
 			this->pnl11_12PM->Visible = false;
 			// 
 			// chk1140_1200PM
 			// 
-			this->chk1140_1200PM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200PM->Location = System::Drawing::Point(22, 88);
+			this->chk1140_1200PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1140_1200PM->Name = L"chk1140_1200PM";
-			this->chk1140_1200PM->Size = System::Drawing::Size(131, 22);
+			this->chk1140_1200PM->Size = System::Drawing::Size(196, 34);
 			this->chk1140_1200PM->TabIndex = 22;
 			this->chk1140_1200PM->Text = L"11:40 AM - 12:00 PM";
 			this->chk1140_1200PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1140_1200PM_CheckedChanged);
 			// 
 			// chk1120_1140AM
 			// 
-			this->chk1120_1140AM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140AM->Location = System::Drawing::Point(22, 52);
+			this->chk1120_1140AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1120_1140AM->Name = L"chk1120_1140AM";
-			this->chk1120_1140AM->Size = System::Drawing::Size(131, 22);
+			this->chk1120_1140AM->Size = System::Drawing::Size(196, 34);
 			this->chk1120_1140AM->TabIndex = 19;
 			this->chk1120_1140AM->Text = L"11:20 AM - 11:40 AM";
 			this->chk1120_1140AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1120_1140AM_CheckedChanged);
 			// 
 			// chk1100_1120AM
 			// 
-			this->chk1100_1120AM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120AM->Location = System::Drawing::Point(22, 18);
+			this->chk1100_1120AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1100_1120AM->Name = L"chk1100_1120AM";
-			this->chk1100_1120AM->Size = System::Drawing::Size(131, 22);
+			this->chk1100_1120AM->Size = System::Drawing::Size(196, 34);
 			this->chk1100_1120AM->TabIndex = 18;
 			this->chk1100_1120AM->Text = L"11:00 AM - 11:20 AM";
 			this->chk1100_1120AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1100_1120AM_CheckedChanged);
@@ -1350,35 +1443,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl6_7AM->Controls->Add(this->chk620_640AM);
 			this->pnl6_7AM->Controls->Add(this->chk600_620AM);
 			this->pnl6_7AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl6_7AM->Location = System::Drawing::Point(0, 684);
+			this->pnl6_7AM->Location = System::Drawing::Point(0, 1053);
+			this->pnl6_7AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl6_7AM->Name = L"pnl6_7AM";
-			this->pnl6_7AM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7AM->Size = System::Drawing::Size(396, 117);
 			this->pnl6_7AM->TabIndex = 30;
 			this->pnl6_7AM->Visible = false;
 			// 
 			// chk640_700AM
 			// 
-			this->chk640_700AM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700AM->Location = System::Drawing::Point(22, 88);
+			this->chk640_700AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk640_700AM->Name = L"chk640_700AM";
-			this->chk640_700AM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700AM->Size = System::Drawing::Size(177, 34);
 			this->chk640_700AM->TabIndex = 22;
 			this->chk640_700AM->Text = L"6:40 AM - 7:00 AM";
 			this->chk640_700AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk640_700AM_CheckedChanged);
 			// 
 			// chk620_640AM
 			// 
-			this->chk620_640AM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640AM->Location = System::Drawing::Point(22, 52);
+			this->chk620_640AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk620_640AM->Name = L"chk620_640AM";
-			this->chk620_640AM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640AM->Size = System::Drawing::Size(177, 34);
 			this->chk620_640AM->TabIndex = 19;
 			this->chk620_640AM->Text = L"6:20 AM - 6:40 AM";
 			this->chk620_640AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk620_640AM_CheckedChanged);
 			// 
 			// chk600_620AM
 			// 
-			this->chk600_620AM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620AM->Location = System::Drawing::Point(22, 18);
+			this->chk600_620AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk600_620AM->Name = L"chk600_620AM";
-			this->chk600_620AM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620AM->Size = System::Drawing::Size(177, 34);
 			this->chk600_620AM->TabIndex = 18;
 			this->chk600_620AM->Text = L"6:00 AM - 6:20 AM";
 			this->chk600_620AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk600_620AM_CheckedChanged);
@@ -1389,33 +1486,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl11_12AM->Controls->Add(this->chk1120_1140PM);
 			this->pnl11_12AM->Controls->Add(this->chk1100_1120PM);
 			this->pnl11_12AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl11_12AM->Location = System::Drawing::Point(0, 608);
+			this->pnl11_12AM->Location = System::Drawing::Point(0, 936);
+			this->pnl11_12AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl11_12AM->Name = L"pnl11_12AM";
-			this->pnl11_12AM->Size = System::Drawing::Size(264, 76);
+			this->pnl11_12AM->Size = System::Drawing::Size(396, 117);
 			this->pnl11_12AM->TabIndex = 33;
 			this->pnl11_12AM->Visible = false;
 			// 
 			// chk1140_1200AM
 			// 
-			this->chk1140_1200AM->Location = System::Drawing::Point(15, 57);
+			this->chk1140_1200AM->Location = System::Drawing::Point(22, 88);
+			this->chk1140_1200AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1140_1200AM->Name = L"chk1140_1200AM";
-			this->chk1140_1200AM->Size = System::Drawing::Size(127, 22);
+			this->chk1140_1200AM->Size = System::Drawing::Size(190, 34);
 			this->chk1140_1200AM->TabIndex = 22;
 			this->chk1140_1200AM->Text = L"11:40 PM - 12:00 AM";
 			// 
 			// chk1120_1140PM
 			// 
-			this->chk1120_1140PM->Location = System::Drawing::Point(15, 34);
+			this->chk1120_1140PM->Location = System::Drawing::Point(22, 52);
+			this->chk1120_1140PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1120_1140PM->Name = L"chk1120_1140PM";
-			this->chk1120_1140PM->Size = System::Drawing::Size(127, 22);
+			this->chk1120_1140PM->Size = System::Drawing::Size(190, 34);
 			this->chk1120_1140PM->TabIndex = 19;
 			this->chk1120_1140PM->Text = L"11:20 PM - 11:40 PM";
 			// 
 			// chk1100_1120PM
 			// 
-			this->chk1100_1120PM->Location = System::Drawing::Point(15, 12);
+			this->chk1100_1120PM->Location = System::Drawing::Point(22, 18);
+			this->chk1100_1120PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1100_1120PM->Name = L"chk1100_1120PM";
-			this->chk1100_1120PM->Size = System::Drawing::Size(127, 22);
+			this->chk1100_1120PM->Size = System::Drawing::Size(190, 34);
 			this->chk1100_1120PM->TabIndex = 18;
 			this->chk1100_1120PM->Text = L"11:00 PM - 11:20 PM";
 			// 
@@ -1425,33 +1526,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl4_5PM->Controls->Add(this->chk420_440PM);
 			this->pnl4_5PM->Controls->Add(this->chk400_420PM);
 			this->pnl4_5PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl4_5PM->Location = System::Drawing::Point(0, 532);
+			this->pnl4_5PM->Location = System::Drawing::Point(0, 819);
+			this->pnl4_5PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl4_5PM->Name = L"pnl4_5PM";
-			this->pnl4_5PM->Size = System::Drawing::Size(264, 76);
+			this->pnl4_5PM->Size = System::Drawing::Size(396, 117);
 			this->pnl4_5PM->TabIndex = 36;
 			this->pnl4_5PM->Visible = false;
 			// 
 			// chk440_500PM
 			// 
-			this->chk440_500PM->Location = System::Drawing::Point(15, 57);
+			this->chk440_500PM->Location = System::Drawing::Point(22, 88);
+			this->chk440_500PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk440_500PM->Name = L"chk440_500PM";
-			this->chk440_500PM->Size = System::Drawing::Size(118, 22);
+			this->chk440_500PM->Size = System::Drawing::Size(177, 34);
 			this->chk440_500PM->TabIndex = 22;
 			this->chk440_500PM->Text = L"4:40 PM - 5:00 PM";
 			// 
 			// chk420_440PM
 			// 
-			this->chk420_440PM->Location = System::Drawing::Point(15, 34);
+			this->chk420_440PM->Location = System::Drawing::Point(22, 52);
+			this->chk420_440PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk420_440PM->Name = L"chk420_440PM";
-			this->chk420_440PM->Size = System::Drawing::Size(118, 22);
+			this->chk420_440PM->Size = System::Drawing::Size(177, 34);
 			this->chk420_440PM->TabIndex = 19;
 			this->chk420_440PM->Text = L"4:20 PM - 4:40 PM";
 			// 
 			// chk400_420PM
 			// 
-			this->chk400_420PM->Location = System::Drawing::Point(15, 12);
+			this->chk400_420PM->Location = System::Drawing::Point(22, 18);
+			this->chk400_420PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk400_420PM->Name = L"chk400_420PM";
-			this->chk400_420PM->Size = System::Drawing::Size(118, 22);
+			this->chk400_420PM->Size = System::Drawing::Size(177, 34);
 			this->chk400_420PM->TabIndex = 18;
 			this->chk400_420PM->Text = L"4:00 PM - 4:20 PM";
 			// 
@@ -1461,33 +1566,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl10_11PM->Controls->Add(this->chk1020_1040PM);
 			this->pnl10_11PM->Controls->Add(this->chk1000_1020PM);
 			this->pnl10_11PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl10_11PM->Location = System::Drawing::Point(0, 456);
+			this->pnl10_11PM->Location = System::Drawing::Point(0, 702);
+			this->pnl10_11PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl10_11PM->Name = L"pnl10_11PM";
-			this->pnl10_11PM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11PM->Size = System::Drawing::Size(396, 117);
 			this->pnl10_11PM->TabIndex = 33;
 			this->pnl10_11PM->Visible = false;
 			// 
 			// chk1040_1100PM
 			// 
-			this->chk1040_1100PM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100PM->Location = System::Drawing::Point(22, 88);
+			this->chk1040_1100PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1040_1100PM->Name = L"chk1040_1100PM";
-			this->chk1040_1100PM->Size = System::Drawing::Size(127, 22);
+			this->chk1040_1100PM->Size = System::Drawing::Size(190, 34);
 			this->chk1040_1100PM->TabIndex = 22;
 			this->chk1040_1100PM->Text = L"10:40 PM - 11:00 PM";
 			// 
 			// chk1020_1040PM
 			// 
-			this->chk1020_1040PM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040PM->Location = System::Drawing::Point(22, 52);
+			this->chk1020_1040PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1020_1040PM->Name = L"chk1020_1040PM";
-			this->chk1020_1040PM->Size = System::Drawing::Size(127, 22);
+			this->chk1020_1040PM->Size = System::Drawing::Size(190, 34);
 			this->chk1020_1040PM->TabIndex = 19;
 			this->chk1020_1040PM->Text = L"10:20 PM - 10:40 PM";
 			// 
 			// chk1000_1020PM
 			// 
-			this->chk1000_1020PM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020PM->Location = System::Drawing::Point(22, 18);
+			this->chk1000_1020PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1000_1020PM->Name = L"chk1000_1020PM";
-			this->chk1000_1020PM->Size = System::Drawing::Size(127, 22);
+			this->chk1000_1020PM->Size = System::Drawing::Size(190, 34);
 			this->chk1000_1020PM->TabIndex = 18;
 			this->chk1000_1020PM->Text = L"10:00 PM - 10:20 PM";
 			// 
@@ -1497,35 +1606,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl10_11AM->Controls->Add(this->chk1020_1040AM);
 			this->pnl10_11AM->Controls->Add(this->chk1000_1020AM);
 			this->pnl10_11AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl10_11AM->Location = System::Drawing::Point(0, 380);
+			this->pnl10_11AM->Location = System::Drawing::Point(0, 585);
+			this->pnl10_11AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl10_11AM->Name = L"pnl10_11AM";
-			this->pnl10_11AM->Size = System::Drawing::Size(264, 76);
+			this->pnl10_11AM->Size = System::Drawing::Size(396, 117);
 			this->pnl10_11AM->TabIndex = 34;
 			this->pnl10_11AM->Visible = false;
 			// 
 			// chk1040_1100AM
 			// 
-			this->chk1040_1100AM->Location = System::Drawing::Point(15, 57);
+			this->chk1040_1100AM->Location = System::Drawing::Point(22, 88);
+			this->chk1040_1100AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1040_1100AM->Name = L"chk1040_1100AM";
-			this->chk1040_1100AM->Size = System::Drawing::Size(131, 22);
+			this->chk1040_1100AM->Size = System::Drawing::Size(196, 34);
 			this->chk1040_1100AM->TabIndex = 22;
 			this->chk1040_1100AM->Text = L"10:40 AM - 11:00 AM";
 			this->chk1040_1100AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1040_1100AM_CheckedChanged);
 			// 
 			// chk1020_1040AM
 			// 
-			this->chk1020_1040AM->Location = System::Drawing::Point(15, 34);
+			this->chk1020_1040AM->Location = System::Drawing::Point(22, 52);
+			this->chk1020_1040AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1020_1040AM->Name = L"chk1020_1040AM";
-			this->chk1020_1040AM->Size = System::Drawing::Size(131, 22);
+			this->chk1020_1040AM->Size = System::Drawing::Size(196, 34);
 			this->chk1020_1040AM->TabIndex = 19;
 			this->chk1020_1040AM->Text = L"10:20 AM - 10:40 AM";
 			this->chk1020_1040AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1020_1040AM_CheckedChanged);
 			// 
 			// chk1000_1020AM
 			// 
-			this->chk1000_1020AM->Location = System::Drawing::Point(15, 12);
+			this->chk1000_1020AM->Location = System::Drawing::Point(22, 18);
+			this->chk1000_1020AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk1000_1020AM->Name = L"chk1000_1020AM";
-			this->chk1000_1020AM->Size = System::Drawing::Size(131, 22);
+			this->chk1000_1020AM->Size = System::Drawing::Size(196, 34);
 			this->chk1000_1020AM->TabIndex = 18;
 			this->chk1000_1020AM->Text = L"10:00 AM - 10:20 AM";
 			this->chk1000_1020AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk1000_1020AM_CheckedChanged);
@@ -1536,33 +1649,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl9_10PM->Controls->Add(this->chk920_940PM);
 			this->pnl9_10PM->Controls->Add(this->chk900_920PM);
 			this->pnl9_10PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl9_10PM->Location = System::Drawing::Point(0, 304);
+			this->pnl9_10PM->Location = System::Drawing::Point(0, 468);
+			this->pnl9_10PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl9_10PM->Name = L"pnl9_10PM";
-			this->pnl9_10PM->Size = System::Drawing::Size(264, 76);
+			this->pnl9_10PM->Size = System::Drawing::Size(396, 117);
 			this->pnl9_10PM->TabIndex = 33;
 			this->pnl9_10PM->Visible = false;
 			// 
 			// chk940_1000PM
 			// 
-			this->chk940_1000PM->Location = System::Drawing::Point(15, 57);
+			this->chk940_1000PM->Location = System::Drawing::Point(22, 88);
+			this->chk940_1000PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk940_1000PM->Name = L"chk940_1000PM";
-			this->chk940_1000PM->Size = System::Drawing::Size(127, 22);
+			this->chk940_1000PM->Size = System::Drawing::Size(190, 34);
 			this->chk940_1000PM->TabIndex = 22;
 			this->chk940_1000PM->Text = L"9:40 PM - 10:00 PM";
 			// 
 			// chk920_940PM
 			// 
-			this->chk920_940PM->Location = System::Drawing::Point(15, 34);
+			this->chk920_940PM->Location = System::Drawing::Point(22, 52);
+			this->chk920_940PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk920_940PM->Name = L"chk920_940PM";
-			this->chk920_940PM->Size = System::Drawing::Size(118, 22);
+			this->chk920_940PM->Size = System::Drawing::Size(177, 34);
 			this->chk920_940PM->TabIndex = 19;
 			this->chk920_940PM->Text = L"9:20 PM - 9:40 PM";
 			// 
 			// chk900_920PM
 			// 
-			this->chk900_920PM->Location = System::Drawing::Point(15, 12);
+			this->chk900_920PM->Location = System::Drawing::Point(22, 18);
+			this->chk900_920PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk900_920PM->Name = L"chk900_920PM";
-			this->chk900_920PM->Size = System::Drawing::Size(118, 22);
+			this->chk900_920PM->Size = System::Drawing::Size(177, 34);
 			this->chk900_920PM->TabIndex = 18;
 			this->chk900_920PM->Text = L"9:00 PM - 9:20 PM";
 			// 
@@ -1572,33 +1689,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl5_6PM->Controls->Add(this->chk520_540PM);
 			this->pnl5_6PM->Controls->Add(this->chk500_520PM);
 			this->pnl5_6PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl5_6PM->Location = System::Drawing::Point(0, 228);
+			this->pnl5_6PM->Location = System::Drawing::Point(0, 351);
+			this->pnl5_6PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl5_6PM->Name = L"pnl5_6PM";
-			this->pnl5_6PM->Size = System::Drawing::Size(264, 76);
+			this->pnl5_6PM->Size = System::Drawing::Size(396, 117);
 			this->pnl5_6PM->TabIndex = 37;
 			this->pnl5_6PM->Visible = false;
 			// 
 			// chk540_600PM
 			// 
-			this->chk540_600PM->Location = System::Drawing::Point(15, 57);
+			this->chk540_600PM->Location = System::Drawing::Point(22, 88);
+			this->chk540_600PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk540_600PM->Name = L"chk540_600PM";
-			this->chk540_600PM->Size = System::Drawing::Size(118, 22);
+			this->chk540_600PM->Size = System::Drawing::Size(177, 34);
 			this->chk540_600PM->TabIndex = 22;
 			this->chk540_600PM->Text = L"5:40 PM - 6:00 PM";
 			// 
 			// chk520_540PM
 			// 
-			this->chk520_540PM->Location = System::Drawing::Point(15, 34);
+			this->chk520_540PM->Location = System::Drawing::Point(22, 52);
+			this->chk520_540PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk520_540PM->Name = L"chk520_540PM";
-			this->chk520_540PM->Size = System::Drawing::Size(118, 22);
+			this->chk520_540PM->Size = System::Drawing::Size(177, 34);
 			this->chk520_540PM->TabIndex = 19;
 			this->chk520_540PM->Text = L"5:20 PM - 5:40 PM";
 			// 
 			// chk500_520PM
 			// 
-			this->chk500_520PM->Location = System::Drawing::Point(15, 12);
+			this->chk500_520PM->Location = System::Drawing::Point(22, 18);
+			this->chk500_520PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk500_520PM->Name = L"chk500_520PM";
-			this->chk500_520PM->Size = System::Drawing::Size(118, 22);
+			this->chk500_520PM->Size = System::Drawing::Size(177, 34);
 			this->chk500_520PM->TabIndex = 18;
 			this->chk500_520PM->Text = L"5:00 PM - 5:20 PM";
 			// 
@@ -1608,33 +1729,37 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl8_9PM->Controls->Add(this->chk820_840PM);
 			this->pnl8_9PM->Controls->Add(this->chk800_820PM);
 			this->pnl8_9PM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl8_9PM->Location = System::Drawing::Point(0, 152);
+			this->pnl8_9PM->Location = System::Drawing::Point(0, 234);
+			this->pnl8_9PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl8_9PM->Name = L"pnl8_9PM";
-			this->pnl8_9PM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9PM->Size = System::Drawing::Size(396, 117);
 			this->pnl8_9PM->TabIndex = 33;
 			this->pnl8_9PM->Visible = false;
 			// 
 			// chk840_900PM
 			// 
-			this->chk840_900PM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900PM->Location = System::Drawing::Point(22, 88);
+			this->chk840_900PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk840_900PM->Name = L"chk840_900PM";
-			this->chk840_900PM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900PM->Size = System::Drawing::Size(177, 34);
 			this->chk840_900PM->TabIndex = 22;
 			this->chk840_900PM->Text = L"8:40 PM - 9:00 PM";
 			// 
 			// chk820_840PM
 			// 
-			this->chk820_840PM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840PM->Location = System::Drawing::Point(22, 52);
+			this->chk820_840PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk820_840PM->Name = L"chk820_840PM";
-			this->chk820_840PM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840PM->Size = System::Drawing::Size(177, 34);
 			this->chk820_840PM->TabIndex = 19;
 			this->chk820_840PM->Text = L"8:20 PM - 8:40 PM";
 			// 
 			// chk800_820PM
 			// 
-			this->chk800_820PM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820PM->Location = System::Drawing::Point(22, 18);
+			this->chk800_820PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk800_820PM->Name = L"chk800_820PM";
-			this->chk800_820PM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820PM->Size = System::Drawing::Size(177, 34);
 			this->chk800_820PM->TabIndex = 18;
 			this->chk800_820PM->Text = L"8:00 PM - 8:20 PM";
 			// 
@@ -1644,35 +1769,39 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl8_9AM->Controls->Add(this->chk820_840AM);
 			this->pnl8_9AM->Controls->Add(this->chk800_820AM);
 			this->pnl8_9AM->Dock = System::Windows::Forms::DockStyle::Top;
-			this->pnl8_9AM->Location = System::Drawing::Point(0, 76);
+			this->pnl8_9AM->Location = System::Drawing::Point(0, 117);
+			this->pnl8_9AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl8_9AM->Name = L"pnl8_9AM";
-			this->pnl8_9AM->Size = System::Drawing::Size(264, 76);
+			this->pnl8_9AM->Size = System::Drawing::Size(396, 117);
 			this->pnl8_9AM->TabIndex = 32;
 			this->pnl8_9AM->Visible = false;
 			// 
 			// chk840_900AM
 			// 
-			this->chk840_900AM->Location = System::Drawing::Point(15, 57);
+			this->chk840_900AM->Location = System::Drawing::Point(22, 88);
+			this->chk840_900AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk840_900AM->Name = L"chk840_900AM";
-			this->chk840_900AM->Size = System::Drawing::Size(118, 22);
+			this->chk840_900AM->Size = System::Drawing::Size(177, 34);
 			this->chk840_900AM->TabIndex = 22;
 			this->chk840_900AM->Text = L"8:40 AM - 9:00 AM";
 			this->chk840_900AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk840_900AM_CheckedChanged);
 			// 
 			// chk820_840AM
 			// 
-			this->chk820_840AM->Location = System::Drawing::Point(15, 34);
+			this->chk820_840AM->Location = System::Drawing::Point(22, 52);
+			this->chk820_840AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk820_840AM->Name = L"chk820_840AM";
-			this->chk820_840AM->Size = System::Drawing::Size(118, 22);
+			this->chk820_840AM->Size = System::Drawing::Size(177, 34);
 			this->chk820_840AM->TabIndex = 19;
 			this->chk820_840AM->Text = L"8:20 AM - 8:40 AM";
 			this->chk820_840AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk820_840AM_CheckedChanged);
 			// 
 			// chk800_820AM
 			// 
-			this->chk800_820AM->Location = System::Drawing::Point(15, 12);
+			this->chk800_820AM->Location = System::Drawing::Point(22, 18);
+			this->chk800_820AM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk800_820AM->Name = L"chk800_820AM";
-			this->chk800_820AM->Size = System::Drawing::Size(118, 22);
+			this->chk800_820AM->Size = System::Drawing::Size(177, 34);
 			this->chk800_820AM->TabIndex = 18;
 			this->chk800_820AM->Text = L"8:00 AM - 8:20 AM";
 			this->chk800_820AM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk800_820AM_CheckedChanged);
@@ -1684,34 +1813,41 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl6_7PM->Controls->Add(this->chk600_620PM);
 			this->pnl6_7PM->Dock = System::Windows::Forms::DockStyle::Top;
 			this->pnl6_7PM->Location = System::Drawing::Point(0, 0);
+			this->pnl6_7PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl6_7PM->Name = L"pnl6_7PM";
-			this->pnl6_7PM->Size = System::Drawing::Size(264, 76);
+			this->pnl6_7PM->Size = System::Drawing::Size(396, 117);
 			this->pnl6_7PM->TabIndex = 38;
 			this->pnl6_7PM->Visible = false;
 			// 
 			// chk640_700PM
 			// 
-			this->chk640_700PM->Location = System::Drawing::Point(15, 57);
+			this->chk640_700PM->Location = System::Drawing::Point(22, 88);
+			this->chk640_700PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk640_700PM->Name = L"chk640_700PM";
-			this->chk640_700PM->Size = System::Drawing::Size(118, 22);
+			this->chk640_700PM->Size = System::Drawing::Size(177, 34);
 			this->chk640_700PM->TabIndex = 22;
 			this->chk640_700PM->Text = L"6:40 PM - 7:00 PM";
+			this->chk640_700PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk640_700PM_CheckedChanged);
 			// 
 			// chk620_640PM
 			// 
-			this->chk620_640PM->Location = System::Drawing::Point(15, 34);
+			this->chk620_640PM->Location = System::Drawing::Point(22, 52);
+			this->chk620_640PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk620_640PM->Name = L"chk620_640PM";
-			this->chk620_640PM->Size = System::Drawing::Size(118, 22);
+			this->chk620_640PM->Size = System::Drawing::Size(177, 34);
 			this->chk620_640PM->TabIndex = 19;
 			this->chk620_640PM->Text = L"6:20 PM - 6:40 PM";
+			this->chk620_640PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk620_640PM_CheckedChanged);
 			// 
 			// chk600_620PM
 			// 
-			this->chk600_620PM->Location = System::Drawing::Point(15, 12);
+			this->chk600_620PM->Location = System::Drawing::Point(22, 18);
+			this->chk600_620PM->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->chk600_620PM->Name = L"chk600_620PM";
-			this->chk600_620PM->Size = System::Drawing::Size(118, 22);
+			this->chk600_620PM->Size = System::Drawing::Size(177, 34);
 			this->chk600_620PM->TabIndex = 18;
 			this->chk600_620PM->Text = L"6:00 PM - 6:20 PM";
+			this->chk600_620PM->CheckedChanged += gcnew System::EventHandler(this, &MyForm::chk600_620PM_CheckedChanged);
 			// 
 			// pnl24Hr
 			// 
@@ -1733,18 +1869,20 @@ private: System::Windows::Forms::Button^  button1;
 			this->pnl24Hr->Controls->Add(this->rbtn07_08);
 			this->pnl24Hr->Controls->Add(this->rbtn06_07);
 			this->pnl24Hr->Controls->Add(this->rbtn05_06);
-			this->pnl24Hr->Location = System::Drawing::Point(108, 56);
+			this->pnl24Hr->Location = System::Drawing::Point(162, 86);
+			this->pnl24Hr->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->pnl24Hr->Name = L"pnl24Hr";
-			this->pnl24Hr->Size = System::Drawing::Size(136, 310);
+			this->pnl24Hr->Size = System::Drawing::Size(204, 477);
 			this->pnl24Hr->TabIndex = 44;
 			// 
 			// rbtn23_00
 			// 
 			this->rbtn23_00->AutoSize = true;
 			this->rbtn23_00->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn23_00->Location = System::Drawing::Point(0, 289);
+			this->rbtn23_00->Location = System::Drawing::Point(0, 408);
+			this->rbtn23_00->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn23_00->Name = L"rbtn23_00";
-			this->rbtn23_00->Size = System::Drawing::Size(136, 17);
+			this->rbtn23_00->Size = System::Drawing::Size(204, 24);
 			this->rbtn23_00->TabIndex = 43;
 			this->rbtn23_00->TabStop = true;
 			this->rbtn23_00->Text = L"23:00 - 00:00";
@@ -1755,9 +1893,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn22_23->AutoSize = true;
 			this->rbtn22_23->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn22_23->Location = System::Drawing::Point(0, 272);
+			this->rbtn22_23->Location = System::Drawing::Point(0, 384);
+			this->rbtn22_23->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn22_23->Name = L"rbtn22_23";
-			this->rbtn22_23->Size = System::Drawing::Size(136, 17);
+			this->rbtn22_23->Size = System::Drawing::Size(204, 24);
 			this->rbtn22_23->TabIndex = 42;
 			this->rbtn22_23->TabStop = true;
 			this->rbtn22_23->Text = L"22:00 - 23:00";
@@ -1768,9 +1907,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn21_22->AutoSize = true;
 			this->rbtn21_22->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn21_22->Location = System::Drawing::Point(0, 255);
+			this->rbtn21_22->Location = System::Drawing::Point(0, 360);
+			this->rbtn21_22->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn21_22->Name = L"rbtn21_22";
-			this->rbtn21_22->Size = System::Drawing::Size(136, 17);
+			this->rbtn21_22->Size = System::Drawing::Size(204, 24);
 			this->rbtn21_22->TabIndex = 41;
 			this->rbtn21_22->TabStop = true;
 			this->rbtn21_22->Text = L"21:00 - 22:00";
@@ -1781,9 +1921,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn20_21->AutoSize = true;
 			this->rbtn20_21->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn20_21->Location = System::Drawing::Point(0, 238);
+			this->rbtn20_21->Location = System::Drawing::Point(0, 336);
+			this->rbtn20_21->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn20_21->Name = L"rbtn20_21";
-			this->rbtn20_21->Size = System::Drawing::Size(136, 17);
+			this->rbtn20_21->Size = System::Drawing::Size(204, 24);
 			this->rbtn20_21->TabIndex = 40;
 			this->rbtn20_21->TabStop = true;
 			this->rbtn20_21->Text = L"20:00 - 21:00";
@@ -1794,9 +1935,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn19_20->AutoSize = true;
 			this->rbtn19_20->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn19_20->Location = System::Drawing::Point(0, 221);
+			this->rbtn19_20->Location = System::Drawing::Point(0, 312);
+			this->rbtn19_20->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn19_20->Name = L"rbtn19_20";
-			this->rbtn19_20->Size = System::Drawing::Size(136, 17);
+			this->rbtn19_20->Size = System::Drawing::Size(204, 24);
 			this->rbtn19_20->TabIndex = 39;
 			this->rbtn19_20->TabStop = true;
 			this->rbtn19_20->Text = L"19:00 - 20:00";
@@ -1807,9 +1949,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn18_19->AutoSize = true;
 			this->rbtn18_19->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn18_19->Location = System::Drawing::Point(0, 204);
+			this->rbtn18_19->Location = System::Drawing::Point(0, 288);
+			this->rbtn18_19->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn18_19->Name = L"rbtn18_19";
-			this->rbtn18_19->Size = System::Drawing::Size(136, 17);
+			this->rbtn18_19->Size = System::Drawing::Size(204, 24);
 			this->rbtn18_19->TabIndex = 38;
 			this->rbtn18_19->TabStop = true;
 			this->rbtn18_19->Text = L"18:00 - 19:00";
@@ -1820,9 +1963,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn17_18->AutoSize = true;
 			this->rbtn17_18->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn17_18->Location = System::Drawing::Point(0, 187);
+			this->rbtn17_18->Location = System::Drawing::Point(0, 264);
+			this->rbtn17_18->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn17_18->Name = L"rbtn17_18";
-			this->rbtn17_18->Size = System::Drawing::Size(136, 17);
+			this->rbtn17_18->Size = System::Drawing::Size(204, 24);
 			this->rbtn17_18->TabIndex = 37;
 			this->rbtn17_18->TabStop = true;
 			this->rbtn17_18->Text = L"17:00 - 18:00";
@@ -1833,9 +1977,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn16_17->AutoSize = true;
 			this->rbtn16_17->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn16_17->Location = System::Drawing::Point(0, 170);
+			this->rbtn16_17->Location = System::Drawing::Point(0, 240);
+			this->rbtn16_17->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn16_17->Name = L"rbtn16_17";
-			this->rbtn16_17->Size = System::Drawing::Size(136, 17);
+			this->rbtn16_17->Size = System::Drawing::Size(204, 24);
 			this->rbtn16_17->TabIndex = 36;
 			this->rbtn16_17->TabStop = true;
 			this->rbtn16_17->Text = L"16:00 - 17:00";
@@ -1846,9 +1991,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn15_16->AutoSize = true;
 			this->rbtn15_16->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn15_16->Location = System::Drawing::Point(0, 153);
+			this->rbtn15_16->Location = System::Drawing::Point(0, 216);
+			this->rbtn15_16->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn15_16->Name = L"rbtn15_16";
-			this->rbtn15_16->Size = System::Drawing::Size(136, 17);
+			this->rbtn15_16->Size = System::Drawing::Size(204, 24);
 			this->rbtn15_16->TabIndex = 35;
 			this->rbtn15_16->TabStop = true;
 			this->rbtn15_16->Text = L"15:00 - 16:00";
@@ -1859,9 +2005,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn14_15->AutoSize = true;
 			this->rbtn14_15->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn14_15->Location = System::Drawing::Point(0, 136);
+			this->rbtn14_15->Location = System::Drawing::Point(0, 192);
+			this->rbtn14_15->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn14_15->Name = L"rbtn14_15";
-			this->rbtn14_15->Size = System::Drawing::Size(136, 17);
+			this->rbtn14_15->Size = System::Drawing::Size(204, 24);
 			this->rbtn14_15->TabIndex = 34;
 			this->rbtn14_15->TabStop = true;
 			this->rbtn14_15->Text = L"14:00 - 15:00";
@@ -1872,9 +2019,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn13_14->AutoSize = true;
 			this->rbtn13_14->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn13_14->Location = System::Drawing::Point(0, 119);
+			this->rbtn13_14->Location = System::Drawing::Point(0, 168);
+			this->rbtn13_14->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn13_14->Name = L"rbtn13_14";
-			this->rbtn13_14->Size = System::Drawing::Size(136, 17);
+			this->rbtn13_14->Size = System::Drawing::Size(204, 24);
 			this->rbtn13_14->TabIndex = 33;
 			this->rbtn13_14->TabStop = true;
 			this->rbtn13_14->Text = L"13:00 - 14:00";
@@ -1885,9 +2033,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn11_12->AutoSize = true;
 			this->rbtn11_12->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn11_12->Location = System::Drawing::Point(0, 102);
+			this->rbtn11_12->Location = System::Drawing::Point(0, 144);
+			this->rbtn11_12->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn11_12->Name = L"rbtn11_12";
-			this->rbtn11_12->Size = System::Drawing::Size(136, 17);
+			this->rbtn11_12->Size = System::Drawing::Size(204, 24);
 			this->rbtn11_12->TabIndex = 32;
 			this->rbtn11_12->TabStop = true;
 			this->rbtn11_12->Text = L"11:00 - 12:00";
@@ -1898,9 +2047,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn10_11->AutoSize = true;
 			this->rbtn10_11->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn10_11->Location = System::Drawing::Point(0, 85);
+			this->rbtn10_11->Location = System::Drawing::Point(0, 120);
+			this->rbtn10_11->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn10_11->Name = L"rbtn10_11";
-			this->rbtn10_11->Size = System::Drawing::Size(136, 17);
+			this->rbtn10_11->Size = System::Drawing::Size(204, 24);
 			this->rbtn10_11->TabIndex = 31;
 			this->rbtn10_11->TabStop = true;
 			this->rbtn10_11->Text = L"10:00 - 11:00";
@@ -1911,9 +2061,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn09_10->AutoSize = true;
 			this->rbtn09_10->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn09_10->Location = System::Drawing::Point(0, 68);
+			this->rbtn09_10->Location = System::Drawing::Point(0, 96);
+			this->rbtn09_10->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn09_10->Name = L"rbtn09_10";
-			this->rbtn09_10->Size = System::Drawing::Size(136, 17);
+			this->rbtn09_10->Size = System::Drawing::Size(204, 24);
 			this->rbtn09_10->TabIndex = 30;
 			this->rbtn09_10->TabStop = true;
 			this->rbtn09_10->Text = L"09:00 - 10:00";
@@ -1924,9 +2075,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn08_09->AutoSize = true;
 			this->rbtn08_09->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn08_09->Location = System::Drawing::Point(0, 51);
+			this->rbtn08_09->Location = System::Drawing::Point(0, 72);
+			this->rbtn08_09->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn08_09->Name = L"rbtn08_09";
-			this->rbtn08_09->Size = System::Drawing::Size(136, 17);
+			this->rbtn08_09->Size = System::Drawing::Size(204, 24);
 			this->rbtn08_09->TabIndex = 29;
 			this->rbtn08_09->TabStop = true;
 			this->rbtn08_09->Text = L"08:00 - 09:00";
@@ -1937,9 +2089,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn07_08->AutoSize = true;
 			this->rbtn07_08->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn07_08->Location = System::Drawing::Point(0, 34);
+			this->rbtn07_08->Location = System::Drawing::Point(0, 48);
+			this->rbtn07_08->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn07_08->Name = L"rbtn07_08";
-			this->rbtn07_08->Size = System::Drawing::Size(136, 17);
+			this->rbtn07_08->Size = System::Drawing::Size(204, 24);
 			this->rbtn07_08->TabIndex = 28;
 			this->rbtn07_08->TabStop = true;
 			this->rbtn07_08->Text = L"07:00 - 08:00";
@@ -1950,9 +2103,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rbtn06_07->AutoSize = true;
 			this->rbtn06_07->Dock = System::Windows::Forms::DockStyle::Top;
-			this->rbtn06_07->Location = System::Drawing::Point(0, 17);
+			this->rbtn06_07->Location = System::Drawing::Point(0, 24);
+			this->rbtn06_07->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn06_07->Name = L"rbtn06_07";
-			this->rbtn06_07->Size = System::Drawing::Size(136, 17);
+			this->rbtn06_07->Size = System::Drawing::Size(204, 24);
 			this->rbtn06_07->TabIndex = 27;
 			this->rbtn06_07->TabStop = true;
 			this->rbtn06_07->Text = L"06:00 - 07:00";
@@ -1964,8 +2118,9 @@ private: System::Windows::Forms::Button^  button1;
 			this->rbtn05_06->AutoSize = true;
 			this->rbtn05_06->Dock = System::Windows::Forms::DockStyle::Top;
 			this->rbtn05_06->Location = System::Drawing::Point(0, 0);
+			this->rbtn05_06->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->rbtn05_06->Name = L"rbtn05_06";
-			this->rbtn05_06->Size = System::Drawing::Size(136, 17);
+			this->rbtn05_06->Size = System::Drawing::Size(204, 24);
 			this->rbtn05_06->TabIndex = 26;
 			this->rbtn05_06->TabStop = true;
 			this->rbtn05_06->Text = L"05:00 - 06:00";
@@ -1979,18 +2134,21 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
 			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
-			this->grpViewYourEvents->Location = System::Drawing::Point(968, 96);
+			this->grpViewYourEvents->Location = System::Drawing::Point(1452, 148);
+			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
-			this->grpViewYourEvents->Size = System::Drawing::Size(200, 361);
+			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpViewYourEvents->Size = System::Drawing::Size(300, 555);
 			this->grpViewYourEvents->TabIndex = 9;
 			this->grpViewYourEvents->TabStop = false;
 			this->grpViewYourEvents->Visible = false;
 			// 
 			// btnViewEvent
 			// 
-			this->btnViewEvent->Location = System::Drawing::Point(44, 289);
+			this->btnViewEvent->Location = System::Drawing::Point(66, 445);
+			this->btnViewEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnViewEvent->Name = L"btnViewEvent";
-			this->btnViewEvent->Size = System::Drawing::Size(103, 23);
+			this->btnViewEvent->Size = System::Drawing::Size(154, 35);
 			this->btnViewEvent->TabIndex = 4;
 			this->btnViewEvent->Text = L"View Event";
 			this->btnViewEvent->UseVisualStyleBackColor = true;
@@ -1999,16 +2157,19 @@ private: System::Windows::Forms::Button^  button1;
 			// lstYourEvents
 			// 
 			this->lstYourEvents->FormattingEnabled = true;
-			this->lstYourEvents->Location = System::Drawing::Point(6, 46);
+			this->lstYourEvents->ItemHeight = 20;
+			this->lstYourEvents->Location = System::Drawing::Point(9, 71);
+			this->lstYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->lstYourEvents->Name = L"lstYourEvents";
-			this->lstYourEvents->Size = System::Drawing::Size(188, 225);
+			this->lstYourEvents->Size = System::Drawing::Size(280, 344);
 			this->lstYourEvents->TabIndex = 3;
 			// 
 			// btnViewEventsBack
 			// 
-			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
+			this->btnViewEventsBack->Location = System::Drawing::Point(66, 489);
+			this->btnViewEventsBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnViewEventsBack->Name = L"btnViewEventsBack";
-			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->Size = System::Drawing::Size(154, 35);
 			this->btnViewEventsBack->TabIndex = 11;
 			this->btnViewEventsBack->Text = L"Back";
 			this->btnViewEventsBack->UseVisualStyleBackColor = true;
@@ -2016,9 +2177,10 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// btnUserBack
 			// 
-			this->btnUserBack->Location = System::Drawing::Point(44, 318);
+			this->btnUserBack->Location = System::Drawing::Point(66, 489);
+			this->btnUserBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnUserBack->Name = L"btnUserBack";
-			this->btnUserBack->Size = System::Drawing::Size(103, 23);
+			this->btnUserBack->Size = System::Drawing::Size(154, 35);
 			this->btnUserBack->TabIndex = 12;
 			this->btnUserBack->Text = L"Back";
 			this->btnUserBack->UseVisualStyleBackColor = true;
@@ -2027,9 +2189,10 @@ private: System::Windows::Forms::Button^  button1;
 			// lblViewEvent
 			// 
 			this->lblViewEvent->AutoSize = true;
-			this->lblViewEvent->Location = System::Drawing::Point(55, 25);
+			this->lblViewEvent->Location = System::Drawing::Point(82, 38);
+			this->lblViewEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblViewEvent->Name = L"lblViewEvent";
-			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
+			this->lblViewEvent->Size = System::Drawing::Size(103, 20);
 			this->lblViewEvent->TabIndex = 2;
 			this->lblViewEvent->Text = L"Select Event:";
 			// 
@@ -2040,18 +2203,21 @@ private: System::Windows::Forms::Button^  button1;
 			this->grpEventInfo->Controls->Add(this->lblEventLocation);
 			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
 			this->grpEventInfo->Controls->Add(this->lblEventName);
-			this->grpEventInfo->Location = System::Drawing::Point(578, 12);
+			this->grpEventInfo->Location = System::Drawing::Point(867, 18);
+			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpEventInfo->Name = L"grpEventInfo";
-			this->grpEventInfo->Size = System::Drawing::Size(200, 204);
+			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpEventInfo->Size = System::Drawing::Size(300, 314);
 			this->grpEventInfo->TabIndex = 9;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
 			// 
 			// btnEventInfoBack
 			// 
-			this->btnEventInfoBack->Location = System::Drawing::Point(44, 169);
+			this->btnEventInfoBack->Location = System::Drawing::Point(66, 260);
+			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEventInfoBack->Name = L"btnEventInfoBack";
-			this->btnEventInfoBack->Size = System::Drawing::Size(103, 23);
+			this->btnEventInfoBack->Size = System::Drawing::Size(154, 35);
 			this->btnEventInfoBack->TabIndex = 9;
 			this->btnEventInfoBack->Text = L"Back";
 			this->btnEventInfoBack->UseVisualStyleBackColor = true;
@@ -2059,27 +2225,30 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// lblEventDate
 			// 
-			this->lblEventDate->Location = System::Drawing::Point(0, 57);
+			this->lblEventDate->Location = System::Drawing::Point(0, 88);
+			this->lblEventDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventDate->Name = L"lblEventDate";
-			this->lblEventDate->Size = System::Drawing::Size(200, 13);
+			this->lblEventDate->Size = System::Drawing::Size(300, 20);
 			this->lblEventDate->TabIndex = 8;
 			this->lblEventDate->Text = L"EVENTDATE";
 			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// lblEventLocation
 			// 
-			this->lblEventLocation->Location = System::Drawing::Point(0, 96);
+			this->lblEventLocation->Location = System::Drawing::Point(0, 148);
+			this->lblEventLocation->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventLocation->Name = L"lblEventLocation";
-			this->lblEventLocation->Size = System::Drawing::Size(200, 13);
+			this->lblEventLocation->Size = System::Drawing::Size(300, 20);
 			this->lblEventLocation->TabIndex = 7;
 			this->lblEventLocation->Text = L"EVENTLOCATION";
 			this->lblEventLocation->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// btnEditAvailability
 			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(44, 135);
+			this->btnEditAvailability->Location = System::Drawing::Point(66, 208);
+			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
-			this->btnEditAvailability->Size = System::Drawing::Size(103, 23);
+			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
 			this->btnEditAvailability->TabIndex = 6;
 			this->btnEditAvailability->Text = L"Edit Availability";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
@@ -2087,33 +2256,36 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			// lblEventName
 			// 
-			this->lblEventName->Location = System::Drawing::Point(1, 17);
+			this->lblEventName->Location = System::Drawing::Point(2, 26);
+			this->lblEventName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventName->Name = L"lblEventName";
-			this->lblEventName->Size = System::Drawing::Size(199, 17);
+			this->lblEventName->Size = System::Drawing::Size(298, 26);
 			this->lblEventName->TabIndex = 2;
 			this->lblEventName->Text = L"EVENTNAME";
 			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(441, 3);
+			this->textBox5->Location = System::Drawing::Point(662, 5);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 20);
+			this->textBox5->Size = System::Drawing::Size(148, 26);
 			this->textBox5->TabIndex = 14;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1604, 881);
+			this->ClientSize = System::Drawing::Size(1924, 1050);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpLogin);
-			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpAvailability);
+			this->Controls->Add(this->grpCreateEvent);
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -2175,6 +2347,7 @@ private: System::Void btnViewSchedule_Click(System::Object^  sender, System::Eve
 	grpAdmin->Visible = false;
 }
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
+
 	grpAvailability->Visible = true;
 	grpCreateEvent->Visible = false;
 }
@@ -2490,6 +2663,209 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 }
 
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (chk600_620AM->Checked)
+	{
+
+	}
+	if (chk620_640AM->Checked)
+	{
+
+	}
+	if (chk640_700AM->Checked)
+	{
+
+	}
+	if (chk700_720AM->Checked)
+	{
+
+	}
+	if (chk720_740AM->Checked)
+	{
+
+	}
+	if (chk740_800AM->Checked)
+	{
+
+	}
+	if (chk800_820AM->Checked)
+	{
+
+	}
+	if (chk820_840AM->Checked)
+	{
+
+	}
+	if (chk840_900AM->Checked)
+	{
+
+	}
+	if (chk900_920AM->Checked)
+	{
+
+	}
+	if (chk920_940AM->Checked)
+	{
+
+	}
+	if (chk940_10000AM->Checked)
+	{
+
+	}
+	if (chk1000_1020AM->Checked)
+	{
+
+	}
+	if (chk1020_1040AM->Checked)
+	{
+
+	}
+	if (chk1040_1100AM->Checked)
+	{
+
+	}
+	if (chk1100_1120AM->Checked)
+	{
+
+	}
+	if (chk1120_1140AM->Checked)
+	{
+
+	}
+	if (chk1140_1200AM->Checked)
+	{
+
+	}
+	if (chk100_120PM->Checked)
+	{
+
+	}
+	if (chk120_140PM->Checked)
+	{
+
+	}
+	if (chk140_200PM->Checked)
+	{
+
+	}
+	if (chk200_220PM->Checked)
+	{
+
+	}
+	if (chk220_240PM->Checked)
+	{
+
+	}
+	if (chk240_300PM->Checked)
+	{
+
+	}
+	if (chk300_320PM->Checked)
+	{
+
+	}
+	if (chk320_340PM->Checked)
+	{
+
+	}
+	if (chk340_400PM->Checked)
+	{
+
+	}
+	if (chk400_420PM->Checked)
+	{
+
+	}
+	if (chk420_440PM->Checked)
+	{
+
+	}
+	if (chk440_500PM->Checked)
+	{
+
+	}
+	if(chk500_520AM->Checked)
+	{
+
+	}
+	if (chk520_540AM->Checked)
+	{
+
+	}
+	if (chk540_600AM->Checked)
+	{
+
+	}
+	if (chk600_620AM->Checked)
+	{
+
+	}
+	if (chk620_640AM->Checked)
+	{
+
+	}
+	if (chk640_700AM->Checked)
+	{
+
+	}
+	if (chk700_720AM->Checked)
+	{
+
+	}
+	if (chk720_740AM->Checked)
+	{
+
+	}
+	if (chk740_800AM->Checked)
+	{
+
+	}
+	if (chk800_820AM->Checked)
+	{
+
+	}
+	if (chk820_840AM->Checked)
+	{
+
+	}
+	if (chk840_900AM->Checked)
+	{
+
+	}
+	if (chk900_920AM->Checked)
+	{
+
+	}
+	if (chk920_940AM->Checked)
+	{
+
+	}
+	if (chk940_1000PM->Checked)
+	{
+
+	}
+	if (chk1000_1020PM->Checked)
+	{
+	}
+	if (chk1020_1040PM->Checked)
+	{
+
+	}
+	if (chk1040_1100PM->Checked)
+	{
+
+	}
+	if (chk1100_1120PM->Checked)
+	{
+
+	}
+	if (chk1120_1140PM->Checked)
+	{
+
+	}
+	if (chk1140_1200PM)
+	{
+
+	}
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
 
@@ -2500,19 +2876,20 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 
 	Event E;
 	std::string date, name;
-	textBox4->Text = gcnew String(date.c_str());
-	textBox1->Text = gcnew String(name.c_str());
-
-		//String^ eventName = gcnew String(test.c_str());
+	msclr::interop::marshal_context context;
+	date = context.marshal_as<std::string>(textBox4->Text);
+	name = context.marshal_as<std::string>(textBox1->Text);
 
 	E.setEventDate(date);
 	E.setEventName(name);
 
 	exec.AddEvent(E);
+	exec.getAllEvents();
 
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+
 }
 private: System::Void chk520_540AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
@@ -3372,6 +3749,14 @@ private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::
 	grpAdmin->Visible = true;
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk600_620PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk620_640PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void chk640_700PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
