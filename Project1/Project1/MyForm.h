@@ -49,13 +49,13 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^  lblAdmin;
 	private: System::Windows::Forms::GroupBox^  grpCreateEvent;
 	private: System::Windows::Forms::Label^  lblDate;
-	private: System::Windows::Forms::Label^  lblLocation;
-	private: System::Windows::Forms::Label^  lblNote;
+
+
 	private: System::Windows::Forms::Button^  btnSubmitEvent;
 
 	private: System::Windows::Forms::Label^  lblCreateEvent;
-	private: System::Windows::Forms::TextBox^  textBox3;
-	private: System::Windows::Forms::TextBox^  textBox2;
+
+
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  lblName;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar1;
@@ -194,7 +194,7 @@ private: System::Windows::Forms::Button^  btnViewEvent;
 
 	private: System::Windows::Forms::GroupBox^  grpEventInfo;
 	private: System::Windows::Forms::Label^  lblEventDate;
-	private: System::Windows::Forms::Label^  lblEventLocation;
+
 	private: System::Windows::Forms::Button^  btnEditAvailability;
 	private: System::Windows::Forms::Label^  lblEventName;
 private: System::Windows::Forms::Button^  btnEventInfoBack;
@@ -283,14 +283,10 @@ private: System::Windows::Forms::Button^  button2;
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->lblName = (gcnew System::Windows::Forms::Label());
 			this->lblDate = (gcnew System::Windows::Forms::Label());
-			this->lblLocation = (gcnew System::Windows::Forms::Label());
-			this->lblNote = (gcnew System::Windows::Forms::Label());
 			this->btnSubmitEvent = (gcnew System::Windows::Forms::Button());
 			this->lblCreateEvent = (gcnew System::Windows::Forms::Label());
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
@@ -490,7 +486,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->btnAttendees = (gcnew System::Windows::Forms::Button());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
-			this->lblEventLocation = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
@@ -528,14 +523,10 @@ private: System::Windows::Forms::Button^  button2;
 			// 
 			this->grpCreateEvent->Controls->Add(this->textBox4);
 			this->grpCreateEvent->Controls->Add(this->btnCreateEventBack);
-			this->grpCreateEvent->Controls->Add(this->textBox3);
 			this->grpCreateEvent->Controls->Add(this->monthCalendar1);
-			this->grpCreateEvent->Controls->Add(this->textBox2);
 			this->grpCreateEvent->Controls->Add(this->textBox1);
 			this->grpCreateEvent->Controls->Add(this->lblName);
 			this->grpCreateEvent->Controls->Add(this->lblDate);
-			this->grpCreateEvent->Controls->Add(this->lblLocation);
-			this->grpCreateEvent->Controls->Add(this->lblNote);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
 			this->grpCreateEvent->Location = System::Drawing::Point(54, 82);
@@ -551,6 +542,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(100, 20);
 			this->textBox4->TabIndex = 13;
+			this->textBox4->Visible = false;
 			// 
 			// btnCreateEventBack
 			// 
@@ -562,13 +554,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->btnCreateEventBack->UseVisualStyleBackColor = true;
 			this->btnCreateEventBack->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEventBack_Click);
 			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(85, 359);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(227, 20);
-			this->textBox3->TabIndex = 12;
-			// 
 			// monthCalendar1
 			// 
 			this->monthCalendar1->Location = System::Drawing::Point(85, 100);
@@ -577,13 +562,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
 			this->monthCalendar1->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar1_DateChanged);
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(85, 327);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(227, 20);
-			this->textBox2->TabIndex = 11;
 			// 
 			// textBox1
 			// 
@@ -609,24 +587,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->lblDate->Size = System::Drawing::Size(33, 13);
 			this->lblDate->TabIndex = 6;
 			this->lblDate->Text = L"Date:";
-			// 
-			// lblLocation
-			// 
-			this->lblLocation->AutoSize = true;
-			this->lblLocation->Location = System::Drawing::Point(15, 330);
-			this->lblLocation->Name = L"lblLocation";
-			this->lblLocation->Size = System::Drawing::Size(51, 13);
-			this->lblLocation->TabIndex = 4;
-			this->lblLocation->Text = L"Location:";
-			// 
-			// lblNote
-			// 
-			this->lblNote->AutoSize = true;
-			this->lblNote->Location = System::Drawing::Point(15, 362);
-			this->lblNote->Name = L"lblNote";
-			this->lblNote->Size = System::Drawing::Size(33, 13);
-			this->lblNote->TabIndex = 3;
-			this->lblNote->Text = L"Note:";
 			// 
 			// btnSubmitEvent
 			// 
@@ -1411,6 +1371,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl300_320PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl300_320PMQuantity->TabIndex = 62;
 			this->lbl300_320PMQuantity->Text = L"label1";
+			this->lbl300_320PMQuantity->Visible = false;
 			// 
 			// lbl840_900AMQuantity
 			// 
@@ -1430,6 +1391,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl1120_1140AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl1120_1140AMQuantity->TabIndex = 58;
 			this->lbl1120_1140AMQuantity->Text = L"label1";
+			this->lbl1120_1140AMQuantity->Visible = false;
 			// 
 			// pnl5_6AM
 			// 
@@ -1480,6 +1442,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl500_520AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl500_520AMQuantity->TabIndex = 64;
 			this->lbl500_520AMQuantity->Text = L"label1";
+			this->lbl500_520AMQuantity->Visible = false;
 			// 
 			// lbl520_540AMQuantity
 			// 
@@ -1489,6 +1452,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl520_540AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl520_540AMQuantity->TabIndex = 63;
 			this->lbl520_540AMQuantity->Text = L"label1";
+			this->lbl520_540AMQuantity->Visible = false;
 			// 
 			// lbl540_600AMQuantity
 			// 
@@ -1498,6 +1462,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl540_600AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl540_600AMQuantity->TabIndex = 66;
 			this->lbl540_600AMQuantity->Text = L"label1";
+			this->lbl540_600AMQuantity->Visible = false;
 			// 
 			// pnl7_8AM
 			// 
@@ -1548,6 +1513,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl700_720AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl700_720AMQuantity->TabIndex = 65;
 			this->lbl700_720AMQuantity->Text = L"label1";
+			this->lbl700_720AMQuantity->Visible = false;
 			// 
 			// lbl740_800AMQuantity
 			// 
@@ -1557,6 +1523,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl740_800AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl740_800AMQuantity->TabIndex = 68;
 			this->lbl740_800AMQuantity->Text = L"label1";
+			this->lbl740_800AMQuantity->Visible = false;
 			// 
 			// lbl720_740AMQuantity
 			// 
@@ -1566,6 +1533,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl720_740AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl720_740AMQuantity->TabIndex = 54;
 			this->lbl720_740AMQuantity->Text = L"label1";
+			this->lbl720_740AMQuantity->Visible = false;
 			// 
 			// pnl2_3PM
 			// 
@@ -1589,6 +1557,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl240_300PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl240_300PMQuantity->TabIndex = 72;
 			this->lbl240_300PMQuantity->Text = L"label1";
+			this->lbl240_300PMQuantity->Visible = false;
 			// 
 			// lbl200_220PMQuantity
 			// 
@@ -1598,6 +1567,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl200_220PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl200_220PMQuantity->TabIndex = 77;
 			this->lbl200_220PMQuantity->Text = L"label1";
+			this->lbl200_220PMQuantity->Visible = false;
 			// 
 			// chk240_300PM
 			// 
@@ -1631,6 +1601,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl220_240PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl220_240PMQuantity->TabIndex = 73;
 			this->lbl220_240PMQuantity->Text = L"label1";
+			this->lbl220_240PMQuantity->Visible = false;
 			// 
 			// pnl1_2PM
 			// 
@@ -1662,6 +1633,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl100_120PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl100_120PMQuantity->TabIndex = 78;
 			this->lbl100_120PMQuantity->Text = L"label1";
+			this->lbl100_120PMQuantity->Visible = false;
 			// 
 			// chk120_140PM
 			// 
@@ -1688,6 +1660,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl120_140PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl120_140PMQuantity->TabIndex = 74;
 			this->lbl120_140PMQuantity->Text = L"label1";
+			this->lbl120_140PMQuantity->Visible = false;
 			// 
 			// lbl140_200PMQuantity
 			// 
@@ -1697,6 +1670,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl140_200PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl140_200PMQuantity->TabIndex = 70;
 			this->lbl140_200PMQuantity->Text = L"label1";
+			this->lbl140_200PMQuantity->Visible = false;
 			// 
 			// pnl9_10AM
 			// 
@@ -1747,6 +1721,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl900_920AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl900_920AMQuantity->TabIndex = 80;
 			this->lbl900_920AMQuantity->Text = L"label1";
+			this->lbl900_920AMQuantity->Visible = false;
 			// 
 			// lbl940_1000AM7Quantity
 			// 
@@ -1756,6 +1731,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl940_1000AM7Quantity->Size = System::Drawing::Size(35, 13);
 			this->lbl940_1000AM7Quantity->TabIndex = 69;
 			this->lbl940_1000AM7Quantity->Text = L"label1";
+			this->lbl940_1000AM7Quantity->Visible = false;
 			// 
 			// lbl920_940AMQuantity
 			// 
@@ -1765,6 +1741,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl920_940AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl920_940AMQuantity->TabIndex = 76;
 			this->lbl920_940AMQuantity->Text = L"label1";
+			this->lbl920_940AMQuantity->Visible = false;
 			// 
 			// pnl7_8PM
 			// 
@@ -1804,6 +1781,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl700_720PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl700_720PMQuantity->TabIndex = 79;
 			this->lbl700_720PMQuantity->Text = L"label1";
+			this->lbl700_720PMQuantity->Visible = false;
 			// 
 			// chk700_720PM
 			// 
@@ -1821,6 +1799,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl720_740PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl720_740PMQuantity->TabIndex = 75;
 			this->lbl720_740PMQuantity->Text = L"label1";
+			this->lbl720_740PMQuantity->Visible = false;
 			// 
 			// lbl740_800PMQuantity
 			// 
@@ -1830,6 +1809,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl740_800PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl740_800PMQuantity->TabIndex = 71;
 			this->lbl740_800PMQuantity->Text = L"label1";
+			this->lbl740_800PMQuantity->Visible = false;
 			// 
 			// pnl3_4PM
 			// 
@@ -1877,6 +1857,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl320_340PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl320_340PMQuantity->TabIndex = 61;
 			this->lbl320_340PMQuantity->Text = L"label1";
+			this->lbl320_340PMQuantity->Visible = false;
 			// 
 			// lbl340_400PMQuantity
 			// 
@@ -1886,6 +1867,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl340_400PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl340_400PMQuantity->TabIndex = 60;
 			this->lbl340_400PMQuantity->Text = L"label1";
+			this->lbl340_400PMQuantity->Visible = false;
 			// 
 			// pnl11_12PM
 			// 
@@ -1927,6 +1909,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl1140_1200PMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl1140_1200PMQuantity->TabIndex = 57;
 			this->lbl1140_1200PMQuantity->Text = L"label1";
+			this->lbl1140_1200PMQuantity->Visible = false;
 			// 
 			// chk1100_1120AM
 			// 
@@ -1945,6 +1928,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->lbl1100_1120AMQuantity->Size = System::Drawing::Size(35, 13);
 			this->lbl1100_1120AMQuantity->TabIndex = 59;
 			this->lbl1100_1120AMQuantity->Text = L"label1";
+			this->lbl1100_1120AMQuantity->Visible = false;
 			// 
 			// pnl6_7AM
 			// 
@@ -1954,7 +1938,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->pnl6_7AM->Controls->Add(this->chk620_640AM);
 			this->pnl6_7AM->Controls->Add(this->lbl600_620AMQuantity);
 			this->pnl6_7AM->Controls->Add(this->chk600_620AM);
-			this->pnl6_7AM->Location = System::Drawing::Point(1093, 768);
+			this->pnl6_7AM->Location = System::Drawing::Point(1377, 768);
 			this->pnl6_7AM->Name = L"pnl6_7AM";
 			this->pnl6_7AM->Size = System::Drawing::Size(264, 76);
 			this->pnl6_7AM->TabIndex = 30;
@@ -2025,7 +2009,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->pnl11_12AM->Controls->Add(this->chk1100_1120PM);
 			this->pnl11_12AM->Controls->Add(this->lbl1100_1120PMQuantity);
 			this->pnl11_12AM->Controls->Add(this->lbl1120_1140PMQuantity);
-			this->pnl11_12AM->Location = System::Drawing::Point(1093, 686);
+			this->pnl11_12AM->Location = System::Drawing::Point(1377, 686);
 			this->pnl11_12AM->Name = L"pnl11_12AM";
 			this->pnl11_12AM->Size = System::Drawing::Size(264, 76);
 			this->pnl11_12AM->TabIndex = 33;
@@ -2691,7 +2675,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->grpEventInfo->Controls->Add(this->btnAttendees);
 			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
 			this->grpEventInfo->Controls->Add(this->lblEventDate);
-			this->grpEventInfo->Controls->Add(this->lblEventLocation);
 			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
 			this->grpEventInfo->Controls->Add(this->lblEventName);
 			this->grpEventInfo->Location = System::Drawing::Point(547, 12);
@@ -2732,16 +2715,6 @@ private: System::Windows::Forms::Button^  button2;
 			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->lblEventDate->Click += gcnew System::EventHandler(this, &MyForm::lblEventDate_Click);
 			// 
-			// lblEventLocation
-			// 
-			this->lblEventLocation->Location = System::Drawing::Point(0, 96);
-			this->lblEventLocation->Name = L"lblEventLocation";
-			this->lblEventLocation->Size = System::Drawing::Size(200, 13);
-			this->lblEventLocation->TabIndex = 7;
-			this->lblEventLocation->Text = L"EVENTLOCATION";
-			this->lblEventLocation->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventLocation->Click += gcnew System::EventHandler(this, &MyForm::lblEventLocation_Click);
-			// 
 			// btnEditAvailability
 			// 
 			this->btnEditAvailability->Location = System::Drawing::Point(51, 148);
@@ -2768,6 +2741,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(100, 20);
 			this->textBox5->TabIndex = 14;
+			this->textBox5->Visible = false;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
 			// textBox6
@@ -2776,6 +2750,7 @@ private: System::Windows::Forms::Button^  button2;
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(100, 20);
 			this->textBox6->TabIndex = 40;
+			this->textBox6->Visible = false;
 			// 
 			// MyForm
 			// 
@@ -2805,11 +2780,11 @@ private: System::Windows::Forms::Button^  button2;
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpAdmin);
-			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpLogin);
+			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpAvailability);
-			this->Controls->Add(this->grpMode);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -2941,6 +2916,155 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		exec.AddEvent(myEvent);
 	}
 	textBox1->Clear();
+
+	lbl500_520AMQuantity->Visible = false;
+	lbl520_540AMQuantity->Visible = false;
+	lbl540_600AMQuantity->Visible = false;
+
+	lbl600_620AMQuantity->Visible = false;
+	lbl620_640AMQuantity->Visible = false;
+	lbl640_700AMQuantity->Visible = false;
+
+	lbl700_720AMQuantity->Visible = false;
+	lbl720_740AMQuantity->Visible = false;
+	lbl740_800AMQuantity->Visible = false;
+
+	lbl800_820AMQuantity->Visible = false;
+	lbl820_840AMQuantity->Visible = false;
+	lbl840_900AMQuantity->Visible = false;
+
+	lbl900_920AMQuantity->Visible = false;
+	lbl920_940AMQuantity->Visible = false;
+	lbl940_1000AM7Quantity->Visible = false;
+
+	lbl1000_1020AMQuantity->Visible = false;
+	lbl1020_1040AMQuantity->Visible = false;
+	lbl1040_1100AMQuantity->Visible = false;
+
+	lbl1100_1120AMQuantity->Visible = false;
+	lbl1120_1140AMQuantity->Visible = false;
+	lbl1140_1200PMQuantity->Visible = false;
+
+	lbl100_120PMQuantity->Visible = false;
+	lbl120_140PMQuantity->Visible = false;
+	lbl140_200PMQuantity->Visible = false;
+
+	lbl200_220PMQuantity->Visible = false;
+	lbl220_240PMQuantity->Visible = false;
+	lbl240_300PMQuantity->Visible = false;
+
+	lbl300_320PMQuantity->Visible = false;
+	lbl320_340PMQuantity->Visible = false;
+	lbl340_400PMQuantity->Visible = false;
+
+	lbl400_420PMQuantity->Visible = false;
+	lbl420_440PMQuantity->Visible = false;
+	lbl440_500PMQuantity->Visible = false;
+
+	lbl500_520PMQuantity->Visible = false;
+	lbl520_540PMQuantity->Visible = false;
+	lbl540_600PMQuantity->Visible = false;
+
+	lbl600_620PMQuantity->Visible = false;
+	lbl620_640PMQuantity->Visible = false;
+	lbl640_700PMQuantity->Visible = false;
+
+	lbl700_720PMQuantity->Visible = false;
+	lbl720_740PMQuantity->Visible = false;
+	lbl740_800PMQuantity->Visible = false;
+
+	lbl800_820PMQuantity->Visible = false;
+	lbl820_840PMQuantity->Visible = false;
+	lbl840_900PMQuantity->Visible = false;
+
+	lbl900_920PMQuantity->Visible = false;
+	lbl920_940PMQuantity->Visible = false;
+	lbl940_1000PMQuantity->Visible = false;
+
+	lbl1000_1020PMQuantity->Visible = false;
+	lbl1020_1040PMQuantity->Visible = false;
+	lbl1040_1100PMQuantity->Visible = false;
+
+	lbl1100_1120PMQuantity->Visible = false;
+	lbl1120_1140PMQuantity->Visible = false;
+	lbl1140_1200AMQuantity->Visible = false;
+
+
+	///
+	///
+	///
+	chk500_520AM->Visible = true;
+	chk520_540AM->Visible = true;
+	chk540_600AM->Visible = true;
+
+	chk600_620AM->Visible = true;
+	chk620_640AM->Visible = true;
+	chk640_700AM->Visible = true;
+
+	chk700_720AM->Visible = true;
+	chk720_740AM->Visible = true;
+	chk740_800AM->Visible = true;
+
+	chk800_820AM->Visible = true;
+	chk820_840AM->Visible = true;
+	chk840_900AM->Visible = true;
+
+	chk900_920AM->Visible = true;
+	chk920_940AM->Visible = true;
+	chk940_10000AM->Visible = true;
+
+	chk1000_1020AM->Visible = true;
+	chk1020_1040AM->Visible = true;
+	chk1040_1100AM->Visible = true;
+
+	chk1100_1120AM->Visible = true;
+	chk1120_1140AM->Visible = true;
+	chk1140_1200PM->Visible = true;
+
+	chk100_120PM->Visible = true;
+	chk120_140PM->Visible = true;
+	chk140_200PM->Visible = true;
+
+	chk200_220PM->Visible = true;
+	chk220_240PM->Visible = true;
+	chk240_300PM->Visible = true;
+
+	chk300_320PM->Visible = true;
+	chk320_340PM->Visible = true;
+	chk340_400PM->Visible = true;
+
+	chk400_420PM->Visible = true;
+	chk420_440PM->Visible = true;
+	chk440_500PM->Visible = true;
+
+	chk500_520PM->Visible = true;
+	chk520_540PM->Visible = true;
+	chk540_600PM->Visible = true;
+
+	chk600_620PM->Visible = true;
+	chk620_640PM->Visible = true;
+	chk640_700PM->Visible = true;
+
+	chk700_720PM->Visible = true;
+	chk720_740PM->Visible = true;
+	chk740_800PM->Visible = true;
+
+	chk800_820PM->Visible = true;
+	chk820_840PM->Visible = true;
+	chk840_900PM->Visible = true;
+
+	chk900_920PM->Visible = true;
+	chk920_940PM->Visible = true;
+	chk940_1000PM->Visible = true;
+
+	chk1000_1020PM->Visible = true;
+	chk1020_1040PM->Visible = true;
+	chk1040_1100PM->Visible = true;
+
+	chk1100_1120PM->Visible = true;
+	chk1120_1140PM->Visible = true;
+	chk1140_1200AM->Visible = true;
+
 }
 
 private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -3365,8 +3489,27 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	if(chk1120_1140PM->Checked){ u.AddTime(52); }
 	if(chk1140_1200AM->Checked){ u.AddTime(53); }
 
-	int newestEvent = exec.getEventSize()-1;
-	exec.events[newestEvent].addUser(u);
+	//int newestEvent = exec.getEventSize()-1;
+
+	std::string* eventList = exec.getAllEvents();
+	System::String^ tempString = textBox1->Text;//lstYourEvents->SelectedItem->ToString();
+	std::string eventName = msclr::interop::marshal_as<std::string>(tempString);
+	//search eventlist for eventname
+	int index = 0;
+	bool run = true;
+	while (run)
+	{
+		for (int i = 0; i < exec.events.size(); i++)
+		{
+			if (eventName == eventList[i])
+			{
+				index = i;
+			}
+			//break;
+			run = false;
+		}
+	}
+	exec.events[index].addUser(u);
 	//
 	//
 	//
@@ -4262,11 +4405,11 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	//String^ eventName = gcnew String(test.c_str());
 
 
-
 	if (lstYourEvents->SelectedItems->Count > 0)
 	{
 		eventName = lstYourEvents->SelectedItem->ToString();
 		textBox5->Text = eventName;
+		textBox1->Text = eventName;
 		Event myEvent;
 		int index = lstYourEvents->SelectedIndex;
 		for (int i = 0; i < exec.getEventSize(); i++) {
@@ -4281,7 +4424,6 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		*/
 		lblEventName->Text = gcnew String(myEvent.getName().c_str());
 		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
-		lblEventLocation->Text = gcnew String("a location...fight me");
 		grpViewYourEvents->Visible = false;
 		grpEventInfo->Visible = true;
 		lstYourEvents->Items->Clear();
@@ -4295,6 +4437,154 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
+
+	lbl500_520AMQuantity->Visible = false;
+	lbl520_540AMQuantity->Visible = false;
+	lbl540_600AMQuantity->Visible = false;
+
+	lbl600_620AMQuantity->Visible = false;
+	lbl620_640AMQuantity->Visible = false;
+	lbl640_700AMQuantity->Visible = false;
+
+	lbl700_720AMQuantity->Visible = false;
+	lbl720_740AMQuantity->Visible = false;
+	lbl740_800AMQuantity->Visible = false;
+
+	lbl800_820AMQuantity->Visible = false;
+	lbl820_840AMQuantity->Visible = false;
+	lbl840_900AMQuantity->Visible = false;
+
+	lbl900_920AMQuantity->Visible = false;
+	lbl920_940AMQuantity->Visible = false;
+	lbl940_1000AM7Quantity->Visible = false;
+
+	lbl1000_1020AMQuantity->Visible = false;
+	lbl1020_1040AMQuantity->Visible = false;
+	lbl1040_1100AMQuantity->Visible = false;
+
+	lbl1100_1120AMQuantity->Visible = false;
+	lbl1120_1140AMQuantity->Visible = false;
+	lbl1140_1200PMQuantity->Visible = false;
+
+	lbl100_120PMQuantity->Visible = false;
+	lbl120_140PMQuantity->Visible = false;
+	lbl140_200PMQuantity->Visible = false;
+
+	lbl200_220PMQuantity->Visible = false;
+	lbl220_240PMQuantity->Visible = false;
+	lbl240_300PMQuantity->Visible = false;
+
+	lbl300_320PMQuantity->Visible = false;
+	lbl320_340PMQuantity->Visible = false;
+	lbl340_400PMQuantity->Visible = false;
+
+	lbl400_420PMQuantity->Visible = false;
+	lbl420_440PMQuantity->Visible = false;
+	lbl440_500PMQuantity->Visible = false;
+
+	lbl500_520PMQuantity->Visible = false;
+	lbl520_540PMQuantity->Visible = false;
+	lbl540_600PMQuantity->Visible = false;
+
+	lbl600_620PMQuantity->Visible = false;
+	lbl620_640PMQuantity->Visible = false;
+	lbl640_700PMQuantity->Visible = false;
+
+	lbl700_720PMQuantity->Visible = false;
+	lbl720_740PMQuantity->Visible = false;
+	lbl740_800PMQuantity->Visible = false;
+
+	lbl800_820PMQuantity->Visible = false;
+	lbl820_840PMQuantity->Visible = false;
+	lbl840_900PMQuantity->Visible = false;
+
+	lbl900_920PMQuantity->Visible = false;
+	lbl920_940PMQuantity->Visible = false;
+	lbl940_1000PMQuantity->Visible = false;
+
+	lbl1000_1020PMQuantity->Visible = false;
+	lbl1020_1040PMQuantity->Visible = false;
+	lbl1040_1100PMQuantity->Visible = false;
+
+	lbl1100_1120PMQuantity->Visible = false;
+	lbl1120_1140PMQuantity->Visible = false;
+	lbl1140_1200AMQuantity->Visible = false;
+
+
+	///
+	///
+	///
+	chk500_520AM->Visible = true;
+	chk520_540AM->Visible = true;
+	chk540_600AM->Visible = true;
+
+	chk600_620AM->Visible = true;
+	chk620_640AM->Visible = true;
+	chk640_700AM->Visible = true;
+
+	chk700_720AM->Visible = true;
+	chk720_740AM->Visible = true;
+	chk740_800AM->Visible = true;
+
+	chk800_820AM->Visible = true;
+	chk820_840AM->Visible = true;
+	chk840_900AM->Visible = true;
+
+	chk900_920AM->Visible = true;
+	chk920_940AM->Visible = true;
+	chk940_10000AM->Visible = true;
+
+	chk1000_1020AM->Visible = true;
+	chk1020_1040AM->Visible = true;
+	chk1040_1100AM->Visible = true;
+
+	chk1100_1120AM->Visible = true;
+	chk1120_1140AM->Visible = true;
+	chk1140_1200PM->Visible = true;
+
+	chk100_120PM->Visible = true;
+	chk120_140PM->Visible = true;
+	chk140_200PM->Visible = true;
+
+	chk200_220PM->Visible = true;
+	chk220_240PM->Visible = true;
+	chk240_300PM->Visible = true;
+
+	chk300_320PM->Visible = true;
+	chk320_340PM->Visible = true;
+	chk340_400PM->Visible = true;
+
+	chk400_420PM->Visible = true;
+	chk420_440PM->Visible = true;
+	chk440_500PM->Visible = true;
+
+	chk500_520PM->Visible = true;
+	chk520_540PM->Visible = true;
+	chk540_600PM->Visible = true;
+
+	chk600_620PM->Visible = true;
+	chk620_640PM->Visible = true;
+	chk640_700PM->Visible = true;
+
+	chk700_720PM->Visible = true;
+	chk720_740PM->Visible = true;
+	chk740_800PM->Visible = true;
+
+	chk800_820PM->Visible = true;
+	chk820_840PM->Visible = true;
+	chk840_900PM->Visible = true;
+
+	chk900_920PM->Visible = true;
+	chk920_940PM->Visible = true;
+	chk940_1000PM->Visible = true;
+
+	chk1000_1020PM->Visible = true;
+	chk1020_1040PM->Visible = true;
+	chk1040_1100PM->Visible = true;
+
+	chk1100_1120PM->Visible = true;
+	chk1120_1140PM->Visible = true;
+	chk1140_1200AM->Visible = true;
 }
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpMode->Visible = false;
@@ -4334,6 +4624,7 @@ private: System::Void btnViewEventsBack_Click(System::Object^  sender, System::E
 private: System::Void btnUserBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = false;
 	grpMode->Visible = true;
+	lstYourEvents->Items->Clear();
 }
 private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpCreateEvent->Visible = false;
@@ -4365,9 +4656,85 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 
 	 //Event[].getNumOfUs();
 	
-	grpViewYourEvents->Visible = false;
+	grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
 
+	lbl500_520AMQuantity->Visible = true;
+	lbl520_540AMQuantity->Visible = true;
+	lbl540_600AMQuantity->Visible = true;
+
+	lbl600_620AMQuantity->Visible = true;
+	lbl620_640AMQuantity->Visible = true;
+	lbl640_700AMQuantity->Visible = true;
+
+	lbl700_720AMQuantity->Visible = true;
+	lbl720_740AMQuantity->Visible = true;
+	lbl740_800AMQuantity->Visible = true;
+
+	lbl800_820AMQuantity->Visible = true;
+	lbl820_840AMQuantity->Visible = true;
+	lbl840_900AMQuantity->Visible = true;
+
+	lbl900_920AMQuantity->Visible = true;
+	lbl920_940AMQuantity->Visible = true;
+	lbl940_1000AM7Quantity->Visible = true;
+
+	lbl1000_1020AMQuantity->Visible = true;
+	lbl1020_1040AMQuantity->Visible = true;
+	lbl1040_1100AMQuantity->Visible = true;
+
+	lbl1100_1120AMQuantity->Visible = true;
+	lbl1120_1140AMQuantity->Visible = true;
+	lbl1140_1200PMQuantity->Visible = true;
+
+	lbl100_120PMQuantity->Visible = true;
+	lbl120_140PMQuantity->Visible = true;
+	lbl140_200PMQuantity->Visible = true;
+
+	lbl200_220PMQuantity->Visible = true;
+	lbl220_240PMQuantity->Visible = true;
+	lbl240_300PMQuantity->Visible = true;
+
+	lbl300_320PMQuantity->Visible = true;
+	lbl320_340PMQuantity->Visible = true;
+	lbl340_400PMQuantity->Visible = true;
+
+	lbl400_420PMQuantity->Visible = true;
+	lbl420_440PMQuantity->Visible = true;
+	lbl440_500PMQuantity->Visible = true;
+
+	lbl500_520PMQuantity->Visible = true;
+	lbl520_540PMQuantity->Visible = true;
+	lbl540_600PMQuantity->Visible = true;
+
+	lbl600_620PMQuantity->Visible = true;
+	lbl620_640PMQuantity->Visible = true;
+	lbl640_700PMQuantity->Visible = true;
+
+	lbl700_720PMQuantity->Visible = true;
+	lbl720_740PMQuantity->Visible = true;
+	lbl740_800PMQuantity->Visible = true;
+
+	lbl800_820PMQuantity->Visible = true;
+	lbl820_840PMQuantity->Visible = true;
+	lbl840_900PMQuantity->Visible = true;
+
+	lbl900_920PMQuantity->Visible = true;
+	lbl920_940PMQuantity->Visible = true;
+	lbl940_1000PMQuantity->Visible = true;
+
+	lbl1000_1020PMQuantity->Visible = true;
+	lbl1020_1040PMQuantity->Visible = true;
+	lbl1040_1100PMQuantity->Visible = true;
+
+	lbl1100_1120PMQuantity->Visible = true;
+	lbl1120_1140PMQuantity->Visible = true;
+	lbl1140_1200AMQuantity->Visible = true;
+
+
+	///
+	///
+	///
 	chk500_520AM->Visible = false;
 	chk520_540AM->Visible = false;
 	chk540_600AM->Visible = false;
@@ -4521,8 +4888,7 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 	exec.write();
-	
-	return;
+	//return;
 }
 };
 }

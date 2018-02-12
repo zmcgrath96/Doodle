@@ -77,18 +77,22 @@ void Executive::write() {
 	}
 	else
 	{
+
 		ofstream writeStream("events.txt");
 		if (writeStream.is_open()) {
 			for (int i = 0; i < events.size();i++) {
-				writeStream << "Event: " << events[i].getName();
-				writeStream << "Date: " << events[i].getDate();
-				writeStream << "Admin: " << events[i].getAdmin();
+				events[i].getAvailableTimes();
+				writeStream << "Event: " << events[i].getName() << endl;
+				writeStream << "Date: " << events[i].getDate() << endl;
+				writeStream << "Admin: " << events[i].getAdmin() << endl;
 				for (int j = 0; j < events[i].users.size(); j++) {
 					if (events[i].users[j].getUserName() != events[i].getAdmin()) {
-						writeStream << "User: " << events[i].users[j].getUserName();
+						writeStream << "User: " << events[i].users[j].getUserName() << endl;
 						for (int k = 0; k < 54; k++) {
-							if (events[i].users[k].getTime(k))
-								writeStream << "Times: " << events[i].users[k].getStrings(k);
+							if (events[i].users[j].getTime(k)) {
+								writeStream << "Times: " << events[i].users[j].getStrings(k) << endl;
+								writeStream << "Amount of available users: " << events[i].getNumOfUs(k) << endl;
+							}
 						}
 					}
 					
