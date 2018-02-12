@@ -15,34 +15,21 @@ Event::Event(std::string eventName, std::string eventDate)
 	date = eventDate;
 }
 
-/// <summary>
-/// Returns event name
-/// </summary>
 void Event::setEventName(std::string eventName)
 {
 	name = eventName;
 }
 
-/// <summary>
-/// sets date
-/// <parameter>
-/// </summary>
 void Event::setEventDate(std::string eventDate)
 {
 	date = eventDate;
 }
 
-/// <summary>
-/// Returns name
-/// </summary>
 std::string Event::getName()
 {
 	return name;
 }
 
-/// <summary>
-/// Returns date
-/// </summary>
 std::string Event::getDate() 
 {
 	return date;
@@ -64,9 +51,6 @@ std::string Event::getAdmin()
 	return admin;
 }
 
-/// <summary>
-/// Returns available times
-/// </summary>
 void Event::getAvailableTimes()
 {
 	int C = 0;
@@ -95,9 +79,6 @@ void Event::Print()
 		std::cout<<getNumOfUs(i)<<std::endl;
 	}
 }
-/// <summary>
-/// adds user
-/// </summary>
 void Event::addUser(User u)
 {
 	users.push_back(u);
