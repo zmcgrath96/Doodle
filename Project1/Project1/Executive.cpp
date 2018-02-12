@@ -15,14 +15,16 @@ void Executive::AddEvent(Event E)
 /// test
 /// </summary>
 
-void Executive::checkAval(string Name)
+std::vector<std::string> Executive::checkAval(string Name)
 {
 	for(int i = 0; i<events.size();i++)
 	{
 		if(events[i].getAdmin()==Name)
 		{
 			cout<<"Availabilities for "<<events[i].getName()<<endl;
-			std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
+			//std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
+			EventAdmin.push_back(events[i].getName());
+			cout<<Name<<" is an admin of the event: "<<EventAdmin[i]<<endl;
 			events[i].getAvailableTimes();
 		}
 		else
@@ -30,6 +32,7 @@ void Executive::checkAval(string Name)
 			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
 		}
 	}
+	return(EventAdmin);
 }
 
 string* Executive::getAllEvents()
