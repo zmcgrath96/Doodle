@@ -52,12 +52,27 @@ User Event::getAdmin() {
 /// </summary>
 std::string Event::getAvailableTimes()
 {
+	/*
 	std::cout<<"---------------------------------------"<<std::endl;
 	for(int i = 0; i<users.size();i++)
 	{
-		users[i].getName();
+		users[i].getUserName();
 		users[i].getTimes();
 	}
+	*/
+	for(int i = 0; i<54; i++)
+	{
+		std::cout<<"Users available at "<<users[0].getStrings(i)<<":"<<std::endl;
+		for(int j = 0; j<users.size();j++)
+		{
+			if(users[j].getTime(i))
+			{
+				std::cout<<users[j].getUserName()<<std::endl;
+
+			}
+		}
+	}
+
 	return "";
 }
 

@@ -23,7 +23,7 @@ void User::setisAdmin(bool isAdmin)
 {
 	m_isAdmin = isAdmin;
 }
-string User::getName()
+string User::getUserName()
 {
 	return(m_Name);
 }
@@ -31,8 +31,13 @@ bool User::getisAdmin()
 {
 	return(m_isAdmin);
 }
-void User::Run()
+bool User::getTime(int i)
 {
+	return(m_Times[i]);
+}
+string User::getStrings(int j)
+{
+	return(m_Strings[j]);
 }
 void User::AddTime(int T)
 {
@@ -50,7 +55,7 @@ void User::AddTime(int T)
 }
 void User::getTimes()
 {
-	cout<<getName()<<" is avalaible at the times: "<<endl;
+	cout<<getUserName()<<" is avalaible at the times: "<<endl;
 	for(int j = 0; j<54; j++)
 	{
 		if(m_Times[j]==true)

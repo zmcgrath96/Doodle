@@ -21,8 +21,8 @@ int main(int argc, char * argv[])
 	A.AddTime(1);
 	A.AddTime(2);
 
-	B.AddTime(3);
-	B.AddTime(4);
+	B.AddTime(1);
+	B.AddTime(2);
 
 	C.AddTime(5);
 	C.AddTime(6);

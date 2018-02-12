@@ -9,9 +9,10 @@ class User
 		~User();
 		void setName(std::string name);
 		void setisAdmin(bool isAdmin);
-		std::string getName();
+		std::string getUserName();
 		bool getisAdmin();
-		void Run();
+		bool getTime(int i);
+		std::string getStrings(int j);
 		void AddTime(int T);
 		void getTimes();
 	private:
