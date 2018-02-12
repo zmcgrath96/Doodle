@@ -19,6 +19,8 @@ class Executive
 		std::vector<Event> events;
 		Event currentEvent;
 		User currentUser;
+		void write();
+		void read();
 	private:
 		std::vector<std::string> EventAdmin;
 };

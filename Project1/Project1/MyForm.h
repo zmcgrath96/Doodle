@@ -263,6 +263,7 @@ private: System::Windows::Forms::Label^  lbl640_700PMQuantity;
 private: System::Windows::Forms::Label^  lbl640_700AMQuantity;
 private: System::Windows::Forms::Button^  btnAttendees;
 private: System::Windows::Forms::TextBox^  textBox6;
+private: System::Windows::Forms::Button^  button2;
 	private: System::ComponentModel::IContainer^  components;
 
 	protected:
@@ -298,6 +299,7 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
 			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->lblUser = (gcnew System::Windows::Forms::Label());
 			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->txtUser = (gcnew System::Windows::Forms::TextBox());
@@ -481,9 +483,9 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
 			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
 			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
-			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->btnUserBack = (gcnew System::Windows::Forms::Button());
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
+			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
 			this->btnAttendees = (gcnew System::Windows::Forms::Button());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
@@ -699,6 +701,7 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			// 
 			// grpLogin
 			// 
+			this->grpLogin->Controls->Add(this->button2);
 			this->grpLogin->Controls->Add(this->lblUser);
 			this->grpLogin->Controls->Add(this->btnLogin);
 			this->grpLogin->Controls->Add(this->txtUser);
@@ -707,6 +710,16 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->grpLogin->Size = System::Drawing::Size(200, 148);
 			this->grpLogin->TabIndex = 7;
 			this->grpLogin->TabStop = false;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(59, 119);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 7;
+			this->button2->Text = L"Save/Exit";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// lblUser
 			// 
@@ -719,7 +732,7 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			// 
 			// btnLogin
 			// 
-			this->btnLogin->Location = System::Drawing::Point(59, 102);
+			this->btnLogin->Location = System::Drawing::Point(59, 94);
 			this->btnLogin->Name = L"btnLogin";
 			this->btnLogin->Size = System::Drawing::Size(75, 23);
 			this->btnLogin->TabIndex = 0;
@@ -2644,16 +2657,6 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->lstYourEvents->Size = System::Drawing::Size(188, 225);
 			this->lstYourEvents->TabIndex = 3;
 			// 
-			// btnViewEventsBack
-			// 
-			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
-			this->btnViewEventsBack->Name = L"btnViewEventsBack";
-			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
-			this->btnViewEventsBack->TabIndex = 11;
-			this->btnViewEventsBack->Text = L"Back";
-			this->btnViewEventsBack->UseVisualStyleBackColor = true;
-			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
-			// 
 			// btnUserBack
 			// 
 			this->btnUserBack->Location = System::Drawing::Point(44, 318);
@@ -2672,6 +2675,16 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->lblViewEvent->Size = System::Drawing::Size(71, 13);
 			this->lblViewEvent->TabIndex = 2;
 			this->lblViewEvent->Text = L"Select Event:";
+			// 
+			// btnViewEventsBack
+			// 
+			this->btnViewEventsBack->Location = System::Drawing::Point(44, 318);
+			this->btnViewEventsBack->Name = L"btnViewEventsBack";
+			this->btnViewEventsBack->Size = System::Drawing::Size(103, 23);
+			this->btnViewEventsBack->TabIndex = 11;
+			this->btnViewEventsBack->Text = L"Back";
+			this->btnViewEventsBack->UseVisualStyleBackColor = true;
+			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
 			// 
 			// grpEventInfo
 			// 
@@ -2769,9 +2782,7 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1604, 881);
-			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->pnl11_12PM);
 			this->Controls->Add(this->pnl7_8AM);
 			this->Controls->Add(this->pnl7_8PM);
@@ -2793,10 +2804,12 @@ private: System::Windows::Forms::TextBox^  textBox6;
 			this->Controls->Add(this->pnl6_7PM);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpViewYourEvents);
-			this->Controls->Add(this->grpMode);
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpCreateEvent);
+			this->Controls->Add(this->grpAvailability);
+			this->Controls->Add(this->grpMode);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle";
 			this->grpCreateEvent->ResumeLayout(false);
@@ -4433,78 +4446,83 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	myEvent.getNumOfUs(0);
 	//std::string attendees = time + #ofPeople.ToString();
 
-	lbl500_520AMQuantity->Text = myEvent.getNumOfUs(0).ToString();
-	lbl520_540AMQuantity->Text = myEvent.getNumOfUs(1).ToString();
-	lbl540_600AMQuantity->Text = myEvent.getNumOfUs(2).ToString();
+	lbl500_520AMQuantity->Text = "5:00 AM - 5:20 AM:  " + myEvent.getNumOfUs(0).ToString();
+	lbl520_540AMQuantity->Text = "5:20 AM - 5:40 AM:  " + myEvent.getNumOfUs(1).ToString();
+	lbl540_600AMQuantity->Text = "5:40 AM - 6:00 AM:  " + myEvent.getNumOfUs(2).ToString();
 
-	lbl600_620AMQuantity->Text = myEvent.getNumOfUs(3).ToString();
-	lbl620_640AMQuantity->Text = myEvent.getNumOfUs(4).ToString();
-	lbl640_700AMQuantity->Text = myEvent.getNumOfUs(5).ToString();
+	lbl600_620AMQuantity->Text = "6:00 AM - 6:20 AM:  " + myEvent.getNumOfUs(3).ToString();
+	lbl620_640AMQuantity->Text = "6:20 AM - 6:40 AM:  " + myEvent.getNumOfUs(4).ToString();
+	lbl640_700AMQuantity->Text = "7:40 AM - 7:00 AM:  " + myEvent.getNumOfUs(5).ToString();
 
-	lbl700_720AMQuantity->Text = "";
-	lbl720_740AMQuantity->Text = "";
-	lbl740_800AMQuantity->Text = "";
+	lbl700_720AMQuantity->Text = "7:00 AM - 7:20 AM:  " + myEvent.getNumOfUs(6).ToString();
+	lbl720_740AMQuantity->Text = "7:20 AM - 7:40 AM:  " + myEvent.getNumOfUs(7).ToString();
+	lbl740_800AMQuantity->Text = "7:40 AM - 8:00 AM:  " + myEvent.getNumOfUs(8).ToString();
 
-	lbl800_820AMQuantity->Text = "";
-	lbl820_840AMQuantity->Text = "";
-	lbl840_900AMQuantity->Text = "";
+	lbl800_820AMQuantity->Text = "8:00 AM - 8:20 AM:  " + myEvent.getNumOfUs(9).ToString();
+	lbl820_840AMQuantity->Text = "8:20 AM - 8:40 AM:  " + myEvent.getNumOfUs(10).ToString();
+	lbl840_900AMQuantity->Text = "8:40 AM - 9:00 AM:  " + myEvent.getNumOfUs(11).ToString();
 
-	lbl900_920AMQuantity->Text = "";
-	lbl920_940AMQuantity->Text = "";
-	lbl940_1000AM7Quantity->Text = "";
+	lbl900_920AMQuantity->Text = "9:00 AM - 9:20 AM:  " + myEvent.getNumOfUs(12).ToString();
+	lbl920_940AMQuantity->Text = "9:20 AM - 9:40 AM:  " + myEvent.getNumOfUs(13).ToString();
+	lbl940_1000AM7Quantity->Text = "9:40 AM - 10:00 AM:  " + myEvent.getNumOfUs(14).ToString();
 
-	lbl1000_1020AMQuantity->Text = "";
-	lbl1020_1040AMQuantity->Text = "";
-	lbl1040_1100AMQuantity->Text = "";
+	lbl1000_1020AMQuantity->Text = "10:00 AM - 10:20 AM:  " + myEvent.getNumOfUs(15).ToString();
+	lbl1020_1040AMQuantity->Text = "10:20 AM - 10:40 AM:  " + myEvent.getNumOfUs(16).ToString();
+	lbl1040_1100AMQuantity->Text = "10:40 AM - 11:00 AM:  " + myEvent.getNumOfUs(17).ToString();
 
-	lbl1100_1120AMQuantity->Text = "";
-	lbl1120_1140AMQuantity->Text = "";
-	lbl1140_1200PMQuantity->Text = "";
+	lbl1100_1120AMQuantity->Text = "11:00 AM - 11:20 AM:  " + myEvent.getNumOfUs(18).ToString();
+	lbl1120_1140AMQuantity->Text = "11:20 AM - 11:40 AM:  " + myEvent.getNumOfUs(19).ToString();
+	lbl1140_1200PMQuantity->Text = "11:40 AM - 12:00 PM:  " + myEvent.getNumOfUs(20).ToString();
 
-	lbl100_120PMQuantity->Text = "";
-	lbl120_140PMQuantity->Text = "";
-	lbl140_200PMQuantity->Text = "";
+	lbl100_120PMQuantity->Text = "1:00 PM - 1:20 PM:  " + myEvent.getNumOfUs(21).ToString();
+	lbl120_140PMQuantity->Text = "1:20 PM - 1:40 PM:  " + myEvent.getNumOfUs(22).ToString();
+	lbl140_200PMQuantity->Text = "1:40 PM - 2:00 PM:  " + myEvent.getNumOfUs(23).ToString();
 
-	lbl200_220PMQuantity->Text = "";
-	lbl220_240PMQuantity->Text = "";
-	lbl240_300PMQuantity->Text = "";
+	lbl200_220PMQuantity->Text = "2:00 PM - 2:20 PM:  " + myEvent.getNumOfUs(24).ToString();
+	lbl220_240PMQuantity->Text = "2:20 PM - 2:40 PM:  " + myEvent.getNumOfUs(25).ToString();
+	lbl240_300PMQuantity->Text = "2:40 PM - 3:00 PM:  " + myEvent.getNumOfUs(26).ToString();
 
-	lbl300_320PMQuantity->Text = "";
-	lbl320_340PMQuantity->Text = "";
-	lbl340_400PMQuantity->Text = "";
+	lbl300_320PMQuantity->Text = "3:00 PM - 3:20 PM:  " + myEvent.getNumOfUs(27).ToString();
+	lbl320_340PMQuantity->Text = "3:20 PM - 3:40 PM:  " + myEvent.getNumOfUs(28).ToString();
+	lbl340_400PMQuantity->Text = "3:40 PM - 4:00 PM:  " + myEvent.getNumOfUs(29).ToString();
 
-	lbl400_420PMQuantity->Text = "";
-	lbl420_440PMQuantity->Text = "";
-	lbl440_500PMQuantity->Text = "";
+	lbl400_420PMQuantity->Text = "4:00 PM - 4:20 PM:  " + myEvent.getNumOfUs(30).ToString();
+	lbl420_440PMQuantity->Text = "4:20 PM - 4:40 PM:  " + myEvent.getNumOfUs(31).ToString();
+	lbl440_500PMQuantity->Text = "4:40 PM - 5:00 PM:  " + myEvent.getNumOfUs(32).ToString();
 
-	lbl500_520PMQuantity->Text = "";
-	lbl520_540PMQuantity->Text = "";
-	lbl540_600PMQuantity->Text = "";
+	lbl500_520PMQuantity->Text = "5:00 PM - 5:20 PM:  " + myEvent.getNumOfUs(33).ToString();
+	lbl520_540PMQuantity->Text = "5:20 PM - 5:40 PM:  " + myEvent.getNumOfUs(34).ToString();
+	lbl540_600PMQuantity->Text = "5:40 PM - 6:00 PM:  " + myEvent.getNumOfUs(35).ToString();
 
-	lbl600_620PMQuantity->Text = "";
-	lbl620_640PMQuantity->Text = "";
-	lbl640_700PMQuantity->Text = "";
+	lbl600_620PMQuantity->Text = "6:00 PM - 6:20 PM:  " + myEvent.getNumOfUs(36).ToString();
+	lbl620_640PMQuantity->Text = "6:20 PM - 6:40 PM:  " + myEvent.getNumOfUs(37).ToString();
+	lbl640_700PMQuantity->Text = "6:40 PM - 7:00 PM:  " + myEvent.getNumOfUs(38).ToString();
 
-	lbl700_720PMQuantity->Text = "";
-	lbl720_740PMQuantity->Text = "";
-	lbl740_800PMQuantity->Text = "";
+	lbl700_720PMQuantity->Text = "7:00 PM - 7:20 PM:  " + myEvent.getNumOfUs(39).ToString();
+	lbl720_740PMQuantity->Text = "7:20 PM - 7:40 PM:  " + myEvent.getNumOfUs(40).ToString();
+	lbl740_800PMQuantity->Text = "7:40 PM - 8:00 PM:  " + myEvent.getNumOfUs(41).ToString();
 	
-	lbl800_820PMQuantity->Text = "";
-	lbl820_840PMQuantity->Text = "";
-	lbl840_900PMQuantity->Text = "";
+	lbl800_820PMQuantity->Text = "8:00 PM - 8:20 PM:  " + myEvent.getNumOfUs(42).ToString();
+	lbl820_840PMQuantity->Text = "8:20 PM - 8:40 PM:  " + myEvent.getNumOfUs(43).ToString();
+	lbl840_900PMQuantity->Text = "8:40 PM - 9:00 PM:  " + myEvent.getNumOfUs(44).ToString();
 
-	lbl900_920PMQuantity->Text = "";
-	lbl920_940PMQuantity->Text = "";
-	lbl940_1000PMQuantity->Text = "";
+	lbl900_920PMQuantity->Text = "9:00 PM - 9:20 PM:  " + myEvent.getNumOfUs(45).ToString();
+	lbl920_940PMQuantity->Text = "9:20 PM - 9:40 PM:  " + myEvent.getNumOfUs(46).ToString();
+	lbl940_1000PMQuantity->Text = "9:40 PM - 10:00 PM:  " + myEvent.getNumOfUs(47).ToString();
 
-	lbl1000_1020PMQuantity->Text = "";
-	lbl1020_1040PMQuantity->Text = "";
-	lbl1040_1100PMQuantity->Text = "";
+	lbl1000_1020PMQuantity->Text = "10:00 PM - 10:20 PM:  " + myEvent.getNumOfUs(48).ToString();
+	lbl1020_1040PMQuantity->Text = "10:20 PM - 10:40 PM:  " + myEvent.getNumOfUs(49).ToString();
+	lbl1040_1100PMQuantity->Text = "10:40 PM - 11:00 PM:  " + myEvent.getNumOfUs(50).ToString();
 
-	lbl1100_1120PMQuantity->Text = "";
-	lbl1120_1140PMQuantity->Text = "";
-	lbl1140_1200AMQuantity->Text = "";
+	lbl1100_1120PMQuantity->Text = "11:00 PM - 11:20 PM:  " + myEvent.getNumOfUs(51).ToString();
+	lbl1120_1140PMQuantity->Text = "11:20 PM - 11:40 PM:  " + myEvent.getNumOfUs(52).ToString();
+	lbl1140_1200AMQuantity->Text = "11:40 PM - 12:00 AM:  " + myEvent.getNumOfUs(53).ToString();
 
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	exec.write();
+	
+	return;
 }
 };
 }

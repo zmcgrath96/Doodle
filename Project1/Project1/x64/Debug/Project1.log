@@ -1,4 +1,7 @@
-﻿  MyForm.cpp
+﻿  Executive.cpp
+Executive.cpp(49): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+Executive.cpp(49): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+Executive.cpp(60): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Event.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
   Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)
