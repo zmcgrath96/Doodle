@@ -16,18 +16,15 @@ Executive::~Executive()
 }
 void Executive::AddEvent(Event E)
 {
-	events.push_back(E); 
+	events.push_back(E);  //takes in an event and adds it to the back of the event vector
 }
-/// <summary>
-/// test
-/// </summary>
 
 std::vector<std::string> Executive::checkAval(std::string Name)
 {
 	EventAdmin.clear();
-	for(int i = 0; i<events.size();i++)
+	for(int i = 0; i<events.size();i++) //runs through the list of events
 	{
-		if(events[i].getAdmin()==Name)
+		if(events[i].getAdmin()==Name) //checks if the name passed in is the admin of the event
 		{
 			cout<<"Availabilities for "<<events[i].getName()<<endl;
 			//std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
@@ -35,7 +32,7 @@ std::vector<std::string> Executive::checkAval(std::string Name)
 			cout<<Name<<" is an admin of the event: "<<EventAdmin[i]<<endl;
 			events[i].getAvailableTimes();
 		}
-		else
+		else //if the name passed in is not the admin of the event
 		{
 			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
 		}
@@ -60,16 +57,6 @@ int Executive::getEventSize() {
 	return events.size();
 }
 
-/// <summary>
-/// test
-/// </summary>
-//
-//
-//
-//
-//
-
-
 void Executive::write() {
 	using namespace std;
 	if (events.empty()) {
@@ -77,22 +64,18 @@ void Executive::write() {
 	}
 	else
 	{
-
 		ofstream writeStream("events.txt");
 		if (writeStream.is_open()) {
 			for (int i = 0; i < events.size();i++) {
-				events[i].getAvailableTimes();
-				writeStream << "Event: " << events[i].getName() << endl;
-				writeStream << "Date: " << events[i].getDate() << endl;
-				writeStream << "Admin: " << events[i].getAdmin() << endl;
+				writeStream << "Event: " << events[i].getName();
+				writeStream << "Date: " << events[i].getDate();
+				writeStream << "Admin: " << events[i].getAdmin();
 				for (int j = 0; j < events[i].users.size(); j++) {
 					if (events[i].users[j].getUserName() != events[i].getAdmin()) {
-						writeStream << "User: " << events[i].users[j].getUserName() << endl;
+						writeStream << "User: " << events[i].users[j].getUserName();
 						for (int k = 0; k < 54; k++) {
-							if (events[i].users[j].getTime(k)) {
-								writeStream << "Times: " << events[i].users[j].getStrings(k) << endl;
-								writeStream << "Amount of available users: " << events[i].getNumOfUs(k) << endl;
-							}
+							if (events[i].users[k].getTime(k))
+								writeStream << "Times: " << events[i].users[k].getStrings(k);
 						}
 					}
 					
