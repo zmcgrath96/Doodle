@@ -1,6 +1,7 @@
 #include <algorithm>
 #include "Event.h"
-Event::Event() 
+//testing something
+Event::Event()
 {
 	NumOfUs = new int[54];
 	for(int i = 0; i<54;i++)
@@ -30,7 +31,7 @@ std::string Event::getName()
 	return name;
 }
 
-std::string Event::getDate() 
+std::string Event::getDate()
 {
 	return date;
 }
@@ -83,4 +84,3 @@ void Event::addUser(User u)
 {
 	users.push_back(u);
 }
-
