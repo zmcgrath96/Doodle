@@ -21,6 +21,34 @@ class Day {
 		*/
     Day(int eventMonth, int eventDay, int eventYear, int eventTime);
 
+	/**
+	*	Constructor
+	*	@param ints
+	*	@return None
+	*/
+	int getMonth();
+
+	/**
+	*	Constructor
+	*	@param ints
+	*	@return None
+	*/
+	int getDay();
+
+	/**
+	*	Constructor
+	*	@param ints
+	*	@return None
+	*/
+	int getYear();
+
+	/**
+	*	Constructor
+	*	@param ints
+	*	@return None
+	*/
+	int getTime();
+
 
     private:
         int m_month; // Integer that keeps track of month
