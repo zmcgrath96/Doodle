@@ -7,9 +7,9 @@ Day::Day() {
 }
 
 Day::Day(int eventMonth, int eventDay, int eventYear, int eventTime) {
-    month = eventMonth;
-    day = eventDay;
-    year = eventYear;
-    time = eventTime;
+    m_month = eventMonth;
+    m_day = eventDay;
+    m_year = eventYear;
+    m_time = eventTime;
 }
 

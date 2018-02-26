@@ -24,18 +24,16 @@ public:
 
 	std::string getTaskName();
 
-	void setTaskName(std::string taskName);
-
 	std::string getMaster();
 
 	void setMaster(std::string masterName);
 
-	bool checkMaster();
+	bool hasMaster();
 
 
 private:
-	std::string taskName;
-	std::string taskMaster;
+	std::string m_taskName;
+	std::string m_taskMaster;
 
 };
 #endif
