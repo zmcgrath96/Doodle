@@ -2872,6 +2872,8 @@ private: System::Windows::Forms::Button^  button2;
 		//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
 		Label2.Text = "Date Selected :" + MonthCalendar1.SelectionRange.Start;
 
+		OutputDebugString(Label1.text);
+
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//std::string newstr = gcnew String(date.c_str());
 
