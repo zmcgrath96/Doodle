@@ -72,7 +72,6 @@ std::vector<Task>& Event::getTasks(){
 
 int Event::getNumTasks(){
 	return m_numTasks;
-<<<<<<< HEAD
 }
 
 std::vector<User>& Event::getUsers() {
@@ -83,6 +82,3 @@ int Event::getNumUsers() {
 	return m_numUsers;
 }
 
-=======
-}
->>>>>>> parent of bdf2f04... Updated Executive for write

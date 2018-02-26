@@ -135,19 +135,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Day.cpp" />
     <ClCompile Include="Event.cpp">
       <GenerateXMLDocumentationFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <ClCompile Include="Executive.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Task.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Day.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="Executive.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Task.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
