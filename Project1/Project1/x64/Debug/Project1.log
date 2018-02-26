@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Event.cpp
 Event.cpp(26): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
   
@@ -12,3 +13,17 @@ Executive.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', p
   Event.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
   Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)
+=======
+﻿  Event.cpp
+Event.cpp(26): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
+  
+  Executive.cpp
+Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+Executive.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  MyForm.cpp
+  User.cpp
+  Generating Code...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  Project1.vcxproj -> C:\Users\Zach\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
+>>>>>>> FinalUI
