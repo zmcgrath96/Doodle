@@ -7,6 +7,16 @@
 class Task
 {
 public:
+
+
+	/**
+	*	Creates the object
+	*	@param none
+	*	@return
+	*/
+	Task();
+
+
 	/**
 	*	Creates the object
 	*	@param
