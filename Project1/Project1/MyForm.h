@@ -2862,10 +2862,6 @@ private: System::Windows::Forms::Button^  button2;
 	}
 
 	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
-		/*
-		*TODO: Get Calendar date here
-		*/
-
 		textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
 		//System::String^ date = textBox4->Text;
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
@@ -2887,6 +2883,8 @@ private: System::Windows::Forms::Button^  button2;
 			}
 		}
 
+		//TODO create a check that wont let you create a date in the past
+
 		//std::string christmas "12/25";
 		textBox5->Text = gcnew String(newDate.c_str());
 		if (newDate == "12/25" || newDate == "7/4" || newDate == "1/1")
@@ -2904,7 +2902,7 @@ private: System::Void btnViewSchedule_Click(System::Object^  sender, System::Eve
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (textBox4->Text == "")
 	{
-		MessageBox::Show("Please select a date");
+		MessageBox::Show("Please enter an event name");
 	}
 	else
 	{
