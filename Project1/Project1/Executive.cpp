@@ -8,52 +8,7 @@
 
 using namespace std;
 Executive::Executive()
-{
-
-	//Start by writing masterEvent file
-	std::ofstream ofile;
-	ofile.open("masterEvent.txt");
-	std::string line = "";
-	
-	//Iterate through the vector "events" and find all to write
-	for (int i = 0; i < events.size(); i++) {
-		line = events.at(i).getName() + "@" + events.at(i).getAdmin().getUserName();
-		ofile << line + "\n";
-	}
-
-	ofile.close;
-
-	// Iterate through list of events and write a file for each event
-	std::string fName = "";
-	Event tempEvent;
-	for (int i = 0; i < events.size; i++) {
-		tempEvent = events.at(i);
-		//Open file
-		fName = tempEvent.getName() + ".txt";
-		ofile.open(fName);
-
-		// Get start day and end day
-		line = tempEvent.getStartDay().getMonth() + "/" + tempEvent.getStartDay().getDay() + "/" + tempEvent.getStartDay().getYear();
-		ofile << line + "\n";
-		line = tempEvent.getStartDay().getTime();
-		ofile << line + "\n";
-		line = tempEvent.getEndDay().getMonth() + "/" + tempEvent.getEndDay().getDay() + "/" + tempEvent.getEndDay().getYear();
-		ofile << line + "\n";
-		line = tempEvent.getEndDay().getTime();
-		ofile << line + "\n";
-
-		Task* temp = events.at(i).getTasks();
-		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
-			
-		}
-
-
-
-		// Close the output file
-		ofile.close();
-	}
-
-}
+{}
 
 Executive::~Executive()
 {
@@ -63,26 +18,26 @@ void Executive::AddEvent(Event E)
 	events.push_back(E);  //takes in an event and adds it to the back of the event vector
 }
 
-std::vector<std::string> Executive::checkAval(std::string Name)
-{
-	EventAdmin.clear();
-	for(int i = 0; i<events.size();i++) //runs through the list of events
-	{
-		if(events[i].getAdmin()==Name) //checks if the name passed in is the admin of the event
-		{
-			cout<<"Availabilities for "<<events[i].getName()<<endl;
-			//std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
-			EventAdmin.push_back(events[i].getName());
-			cout<<Name<<" is an admin of the event: "<<EventAdmin[i]<<endl;
-			events[i].getAvailableTimes();
-		}
-		else //if the name passed in is not the admin of the event
-		{
-			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
-		}
-	}
-	return(EventAdmin);
-}
+////std::vector<std::string> executive::checkaval(std::string name)
+////{
+////	eventadmin.clear();
+////	for(int i = 0; i<events.size();i++) //runs through the list of events
+////	{
+////		if(events[i].getadmin()==name) //checks if the name passed in is the admin of the event
+////		{
+////			cout<<"availabilities for "<<events[i].getname()<<endl;
+////			//std::cout<<name<<"=="<<events[i].getadmin()<<std::endl;
+////			eventadmin.push_back(events[i].getname());
+////			cout<<name<<" is an admin of the event: "<<eventadmin[i]<<endl;
+////			events[i].getavailabletimes();
+////		}
+////		else //if the name passed in is not the admin of the event
+////		{
+////			std::cout<<name<<"!="<<events[i].getadmin()<<std::endl;
+////		}
+////	}
+////	return(eventadmin);
+////}
 
 string* Executive::getAllEvents()
 {
@@ -103,7 +58,48 @@ int Executive::getEventSize() {
 
 void Executive::write() {
 
+	//Start by writing masterEvent file
+	std::ofstream ofile;
+	ofile.open("masterEvent.txt");
+	std::string line = "";
 
+	//Iterate through the vector "events" and find all to write
+	for (int i = 0; i < events.size(); i++) {
+		line = events.at(i).getName() + "@" + events.at(i).getAdmin().getUserName();
+		ofile << line + "\n";
+	}
+
+	ofile.close;
+	line = "";
+	// Iterate through list of events and write a file for each event
+	std::string fName = "";
+	Event tempEvent;
+	for (int i = 0; i < events.size; i++) {
+		tempEvent = events.at(i);
+		//Open file
+		fName = tempEvent.getName() + ".txt";
+		ofile.open(fName);
+
+		// Get start day and end day
+		line = tempEvent.getStartDay().getMonth() + "/" + tempEvent.getStartDay().getDay(); +"/" + tempEvent.getStartDay().getYear();
+		ofile << line + "\n";
+		line = tempEvent.getStartDay().getTime();
+		ofile << line + "\n";
+		line = tempEvent.getEndDay().getMonth() + "/" + tempEvent.getEndDay().getDay() + "/" + tempEvent.getEndDay().getYear();
+		ofile << line + "\n";
+		line = tempEvent.getEndDay().getTime();
+		ofile << line + "\n";
+
+		std::vector<Task> tempTask = events.at(i).getTasks();
+		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
+
+		}
+
+
+
+		// Close the output file
+		ofile.close();
+	}
 	
 }
 
