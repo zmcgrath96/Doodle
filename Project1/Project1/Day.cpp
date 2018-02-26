@@ -13,18 +13,18 @@ Day::Day(int eventMonth, int eventDay, int eventYear, int eventTime) {
     m_time = eventTime;
 }
 
-Day::getMonth() {
+int Day::getMonth() {
 	return(m_month);
 }
 
-Day::getDay() {
+int Day::getDay() {
 	return(m_day);
 }
 
-Day::getYear() {
+int Day::getYear() {
 	return(m_year);
 }
 
-Day::getTime() {
+int Day::getTime() {
 	return(m_time);
 }
