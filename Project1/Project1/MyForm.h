@@ -2873,6 +2873,7 @@ private: System::Windows::Forms::Button^  button2;
 		Label2.Text = "Date Selected :" + MonthCalendar1.SelectionRange.Start;
 
 		OutputDebugString(Label1.text);
+		OutputDebugString("HERE");
 
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//std::string newstr = gcnew String(date.c_str());
