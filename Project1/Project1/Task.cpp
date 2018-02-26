@@ -11,19 +11,19 @@ Task::~Task()
 {
 }
 
-std::string Task::getTaskName() {
+std::string getTaskName() {
 	return(m_taskName);
 }
 
-std::string Task::getMaster() {
+std::string getMaster() {
 	return(m_taskMaster);
 }
 
-void Task::setMaster(std::string masterName) {
+void setMaster(std::string masterName) {
 	m_taskMaster = masterName;
 }
 
-bool Task::hasMaster() {
+bool hasMaster() {
 	if (m_taskMaster != "") {
 		return(true);
 	}
