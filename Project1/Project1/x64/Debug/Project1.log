@@ -1,29 +1,185 @@
-<<<<<<< HEAD
-﻿  Event.cpp
-Event.cpp(26): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
-  
-  Executive.cpp
-Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-Executive.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  Day.cpp
   MyForm.cpp
-  User.cpp
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2065: 'Label1': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.Text' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2065: 'MonthCalendar1': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.SelectionRange' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.Start' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.End' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2867): error C2065: 'Label1': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2867): error C2228: left of '.text' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2867): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): error C2065: 'Label2': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.Text' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): error C2065: 'MonthCalendar1': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.SelectionRange' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.Start' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2875): error C2065: 'Label1': undeclared identifier
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2875): error C2228: left of '.text' must have class/struct/union
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2875): note: type is 'unknown-type'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2876): error C2664: 'void OutputDebugStringW(LPCWSTR)': cannot convert argument 1 from 'const char [5]' to 'LPCWSTR'
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2876): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2927): error C2039: 'setEventName': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2928): error C2039: 'setEventDate': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2931): error C2039: 'setAdmin': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2933): error C2039: 'c_str': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2933): error C2512: 'System::String::String': no appropriate default constructor available
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3437): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3439): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3440): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3442): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3443): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3444): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3446): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3447): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3448): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3450): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3451): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3452): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3454): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3455): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3456): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3458): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3459): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3460): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3462): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3463): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3464): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3466): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3467): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3468): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3470): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3471): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3472): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3474): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3475): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3476): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3478): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3479): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3480): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3482): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3483): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3484): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3486): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3487): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3488): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3490): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3491): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3492): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3494): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3495): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3496): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3498): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3499): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3500): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3502): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3503): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3504): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3506): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3507): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3508): error C2039: 'AddTime': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3530): error C2039: 'addUser': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4444): error C2039: 'getDate': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4444): error C2228: left of '.c_str' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4444): error C2512: 'System::String::String': no appropriate default constructor available
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4833): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4836): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4836): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4837): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4837): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4838): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4838): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4840): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4840): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4841): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4841): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4842): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4842): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4844): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4844): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4845): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4845): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4846): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4846): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4848): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4848): error C2228: left of '.ToString' must have class/struct/union
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4849): error C2039: 'getNumOfUs': is not a member of 'Event'
+  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4849): fatal error C1003: error count exceeds 100; stopping compilation
+  Task.cpp
   Generating Code...
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  Event.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
-  Project1.vcxproj -> C:\Users\Tanner\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.pdb (Partial PDB)
-=======
-﻿  Event.cpp
-Event.cpp(26): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
-  
-  Executive.cpp
-Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-Executive.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  MyForm.cpp
-  User.cpp
-  Generating Code...
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  Project1.vcxproj -> C:\Users\Zach\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
->>>>>>> FinalUI

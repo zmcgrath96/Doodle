@@ -74,6 +74,7 @@ int Event::getNumTasks(){
 	return m_numTasks;
 }
 
+<<<<<<< HEAD
 std::vector<User>& Event::getUsers() {
 	return m_user;
 }
@@ -81,3 +82,6 @@ std::vector<User>& Event::getUsers() {
 int Event::getNumUsers() {
 	return m_numUsers;
 }
+=======
+
+>>>>>>> bdf2f042fd730d0ab15d20c44ec21dd07cb6b85b

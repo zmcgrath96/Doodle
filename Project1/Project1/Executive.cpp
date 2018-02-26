@@ -9,6 +9,50 @@
 using namespace std;
 Executive::Executive()
 {
+
+	//Start by writing masterEvent file
+	std::ofstream ofile;
+	ofile.open("masterEvent.txt");
+	std::string line = "";
+	
+	//Iterate through the vector "events" and find all to write
+	for (int i = 0; i < events.size(); i++) {
+		line = events.at(i).getName() + "@" + events.at(i).getAdmin().getUserName();
+		ofile << line + "\n";
+	}
+
+	ofile.close;
+
+	// Iterate through list of events and write a file for each event
+	std::string fName = "";
+	Event tempEvent;
+	for (int i = 0; i < events.size; i++) {
+		tempEvent = events.at(i);
+		//Open file
+		fName = tempEvent.getName() + ".txt";
+		ofile.open(fName);
+
+		// Get start day and end day
+		line = tempEvent.getStartDay().getMonth() + "/" + tempEvent.getStartDay().getDay() + "/" + tempEvent.getStartDay().getYear();
+		ofile << line + "\n";
+		line = tempEvent.getStartDay().getTime();
+		ofile << line + "\n";
+		line = tempEvent.getEndDay().getMonth() + "/" + tempEvent.getEndDay().getDay() + "/" + tempEvent.getEndDay().getYear();
+		ofile << line + "\n";
+		line = tempEvent.getEndDay().getTime();
+		ofile << line + "\n";
+
+		Task* temp = events.at(i).getTasks();
+		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
+			
+		}
+
+
+
+		// Close the output file
+		ofile.close();
+	}
+
 }
 
 Executive::~Executive()
@@ -58,46 +102,10 @@ int Executive::getEventSize() {
 }
 
 void Executive::write() {
-	using namespace std;
-	if (events.empty()) {
-		return;
-	}
-	else
-	{
-		ofstream writeStream("events.txt");
-		if (writeStream.is_open()) {
-			for (int i = 0; i < events.size();i++) {
-				writeStream << "Event: " << events[i].getName();
-				writeStream << "Date: " << events[i].getDate();
-				writeStream << "Admin: " << events[i].getAdmin();
-				for (int j = 0; j < events[i].users.size(); j++) {
-					if (events[i].users[j].getUserName() != events[i].getAdmin()) {
-						writeStream << "User: " << events[i].users[j].getUserName();
-						for (int k = 0; k < 54; k++) {
-							if (events[i].users[k].getTime(k))
-								writeStream << "Times: " << events[i].users[k].getStrings(k);
-						}
-					}
-					
-		//		for (User u : e.users) {
-			//		if (u.getisAdmin()) {
-				//		writeStream << "Admin: " << u.getName();
-					//}
-					//uh
-				//	string t;
-				//	for (std::time_t t : events[i].getAvailableTimes()) { //was u.availabilities
-				//		writeStream << "Times: " << t;
-				//	}
-				}
-			
-					//uh
-					
-					}
-				}
-		writeStream << "\n";
-		writeStream.close();
-			}
-		}
+
+
+	
+}
 
 /*void Executive::read() {
 	using namespace std;
