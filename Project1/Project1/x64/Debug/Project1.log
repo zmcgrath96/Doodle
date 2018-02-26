@@ -1,4 +1,12 @@
-﻿  MyForm.cpp
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1): error C2014: preprocessor command must start as first nonwhite space
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\sal.h(2361): error C2144: syntax error: 'int' should be preceded by ';'
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\sal.h(2361): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+﻿  Event.cpp
+Event.cpp(26): warning C4635: XML document comment applied to 'Event.setEventDate(std.basic_string<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator<System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte>>)': badly-formed XML: End tag 'summary' does not match the start tag 'parameter'.
+  
+  Executive.cpp
+Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+Executive.cpp(46): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+Executive.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  MyForm.cpp
+  User.cpp
+  Generating Code...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  Project1.vcxproj -> C:\Users\Zach\Documents\GitHub\Doodle\Project1\x64\Debug\Project1.exe
