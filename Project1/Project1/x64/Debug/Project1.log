@@ -1,4 +1,59 @@
 ﻿  Day.cpp
+  Event.cpp
+  Executive.cpp
+Executive.cpp(45): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+Executive.cpp(45): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+Executive.cpp(56): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+Executive.cpp(72): error C3867: 'std::basic_ofstream<char,std::char_traits<char>>::close': non-standard syntax; use '&' to create a pointer to member
+Executive.cpp(77): error C3867: 'std::vector<Event,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=Event
+          ]
+Executive.cpp(77): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<Event,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=Event
+          ]
+  Executive.cpp(77): note: There is no context in which this conversion is possible
+Executive.cpp(84): error C2679: binary '=': no operator found which takes a right-hand operand of type 'System::String ^' (or there is no acceptable conversion)
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2270): note: could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2265): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2236): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2197): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2067): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept'
+  Executive.cpp(84): note: while trying to match the argument list '(std::string, System::String ^)'
+Executive.cpp(88): error C2679: binary '=': no operator found which takes a right-hand operand of type 'System::String ^' (or there is no acceptable conversion)
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2270): note: could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2265): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2236): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2197): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.12.25827\include\xstring(2067): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept'
+  Executive.cpp(88): note: while trying to match the argument list '(std::string, System::String ^)'
   MyForm.cpp
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2065: 'Label1': undeclared identifier
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.Text' must have class/struct/union
@@ -32,6 +87,8 @@ c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2931): error C2
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2933): error C2039: 'c_str': is not a member of 'User'
   c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(2933): error C2512: 'System::String::String': no appropriate default constructor available
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3415): error C2039: 'setName': is not a member of 'User'
+  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3437): error C2039: 'AddTime': is not a member of 'User'
   c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3439): error C2039: 'AddTime': is not a member of 'User'
@@ -140,8 +197,8 @@ c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3507): error C2
   c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3508): error C2039: 'AddTime': is not a member of 'User'
   c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3530): error C2039: 'addUser': is not a member of 'Event'
-  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3530): error C2664: 'bool Event::addUser(std::string)': cannot convert argument 1 from 'User' to 'std::string'
+  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(3530): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4444): error C2039: 'getDate': is not a member of 'Event'
   c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4444): error C2228: left of '.c_str' must have class/struct/union
@@ -178,8 +235,7 @@ c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4846): error C2
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4848): error C2039: 'getNumOfUs': is not a member of 'Event'
   c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
 c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4848): error C2228: left of '.ToString' must have class/struct/union
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4849): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4849): fatal error C1003: error count exceeds 100; stopping compilation
+c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(4848): fatal error C1003: error count exceeds 100; stopping compilation
   Task.cpp
+  User.cpp
   Generating Code...

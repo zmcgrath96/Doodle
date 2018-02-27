@@ -5,12 +5,13 @@
 class User
 {
 	public:
+		User();
 		/**
 		*	Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
 		*	@param None
 		*	@return None
 		*/
-		User();
+		User(std::string name);
 
 		/**
 		*	Does Nothing
@@ -18,13 +19,6 @@ class User
 		*	@return None
 		*/
 		~User();
-
-		/**
-		*	Sets the user's name
-		*	@param String representing the name of the user
-		*	@return None
-		*/
-		void setName(std::string name);
 
 		/**
 		*	Returns the name of the user
