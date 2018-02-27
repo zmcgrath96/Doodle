@@ -53,6 +53,7 @@ class Executive
 
 		/**
 		*	Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions
+		*	Called on save/exit
 		*	@param None
 		*	@return None
 		*/
@@ -60,6 +61,7 @@ class Executive
 
 		/**
 		*	Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user
+		*	Called on startup
 		*	@param None
 		*	@return None
 		*/

@@ -71,6 +71,7 @@ void Executive::write() {
 
 	ofile.close;
 	line = "";
+
 	// Iterate through list of events and write a file for each event
 	std::string fName = "";
 	Event tempEvent;
@@ -81,28 +82,37 @@ void Executive::write() {
 		ofile.open(fName);
 
 		// Get start day and end day
-		line = tempEvent.getStartDay().getMonth() + "/" + tempEvent.getStartDay().getDay(); +"/" + tempEvent.getStartDay().getYear();
+		line = to_string(tempEvent.getStartDay().getMonth()) + "/" + to_string(tempEvent.getStartDay().getDay()) + "/" + to_string(tempEvent.getStartDay().getYear());
 		ofile << line + "\n";
 		line = tempEvent.getStartDay().getTime();
 		ofile << line + "\n";
-		line = tempEvent.getEndDay().getMonth() + "/" + tempEvent.getEndDay().getDay() + "/" + tempEvent.getEndDay().getYear();
+		line = to_string(tempEvent.getEndDay().getMonth()) + "/" + to_string(tempEvent.getEndDay().getDay()) + "/" + to_string(tempEvent.getEndDay().getYear());
 		ofile << line + "\n";
 		line = tempEvent.getEndDay().getTime();
 		ofile << line + "\n";
 
+		line = "";
+		// Go through the list of tasks and write them all to one line
 		std::vector<Task> tempTask = events.at(i).getTasks();
 		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
-
+			line += tempTask.at(j).getTaskName() + "@" + tempTask.at(j).getMaster() + "|";
+			
 		}
+		ofile << line + "\n";
 
-
+		line = "";
+		// Go throught the list of attendees and write them to file
+		std::vector<User> tempUser = events.at(i).getUsers();
+		for (int j = 0; j < tempEvent.getNumUsers(); j++){
+			line += tempUser.at(j).getUserName() + "|";
+		}
+		ofile << line + "\n";
 
 		// Close the output file
 		ofile.close();
-	}
-<<<<<<< HEAD
+	} // Close for loop on event list
 
-}
+}// close write
 
 Executive::~Executive()
 {
@@ -112,51 +122,33 @@ void Executive::AddEvent(Event E)
 	events.push_back(E);  //takes in an event and adds it to the back of the event vector
 }
 
-std::vector<std::string> Executive::checkAval(std::string Name)
-{
-	EventAdmin.clear();
-	for(int i = 0; i<events.size();i++) //runs through the list of events
-	{
-		if(events[i].getAdmin()==Name) //checks if the name passed in is the admin of the event
-		{
-			cout<<"Availabilities for "<<events[i].getName()<<endl;
-			//std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
-			EventAdmin.push_back(events[i].getName());
-			cout<<Name<<" is an admin of the event: "<<EventAdmin[i]<<endl;
-			events[i].getAvailableTimes();
-		}
-		else //if the name passed in is not the admin of the event
-		{
-			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
-		}
-	}
-	return(EventAdmin);
-}
+// std::vector<std::string> Executive::checkAval(std::string Name)
+// {
+// 	EventAdmin.clear();
+// 	for(int i = 0; i<events.size();i++) //runs through the list of events
+// 	{
+// 		if(events[i].getAdmin()==Name) //checks if the name passed in is the admin of the event
+// 		{
+// 			cout<<"Availabilities for "<<events[i].getName()<<endl;
+// 			//std::cout<<Name<<"=="<<events[i].getAdmin()<<std::endl;
+// 			EventAdmin.push_back(events[i].getName());
+// 			cout<<Name<<" is an admin of the event: "<<EventAdmin[i]<<endl;
+// 			events[i].getAvailableTimes();
+// 		}
+// 		else //if the name passed in is not the admin of the event
+// 		{
+// 			std::cout<<Name<<"!="<<events[i].getAdmin()<<std::endl;
+// 		}
+// 	}
+// 	return(EventAdmin);
+// }
 
-string* Executive::getAllEvents()
-{
-	cout<<"All events"<<endl;
-	const int eventSize = events.size();
-	string* allEvents = new string[eventSize];
-	for(int i = 0; i<events.size();i++)
-	{
-		allEvents[i] = events[i].getName();
-		//cout<<events[i].getName()<<endl;
-	}
-	return allEvents;
-}
+// string* Executive::getAllEvents()
+// {
+// 	cout<<"All events"<<endl;
+// 	const int eventSize = events.size();
+// 	string* allEvents = new string[eventSize];
 
-int Executive::getEventSize() {
-	return events.size();
-}
-
-void Executive::write() {
-
-
-=======
->>>>>>> 881f3137f1a5d2b9c68e66f829fca9388cf6602a
-	
-}
 
 /*void Executive::read() {
 	using namespace std;
