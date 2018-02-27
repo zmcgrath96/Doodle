@@ -42,12 +42,6 @@ class Event
 		*/
 	bool addTask(string tName);
 
-	/**
-	*	addUser
-	*	@param string name
-	*	@return true
-	*/
-	bool addUser(string uName);
 
 	/**
 		*	getStartDay
@@ -83,7 +77,7 @@ class Event
 		*	@param none
 		*	@return Task pointer to array
 		*/
-	std::vector<Task>& getTasks();
+	Task* getTasks();
 
 	/**
 		*	getNumTaks
@@ -92,30 +86,14 @@ class Event
 		*/
 	int getNumTasks();
 
-	/**
-	*	getUsers
-	*	@param none
-	*	@return Task pointer to array
-	*/
-	std::vector<User>& getUsers();
-
-	/**
-	*	getNumUsers
-	*	@param none
-	*	@return Integer
-	*/
-	int getNumUsers();
-
 
 	private:
 		Day m_startDay;
 		Day m_endDay;
 		string m_name;
 		User m_admin;
-		std::vector<Task> m_task;
+		Task* m_task;
 		int m_numTasks;
-		std::vector<User> m_user;
-		int m_numUsers;
 
 
 };

@@ -6,38 +6,36 @@ using namespace std;
 Event::Event(){}
 
 Event::~Event(){
-	
+	delete m_task;
 }
 
 
-Event::Event(Day startDay, Day endDay, string name, User admin)
-	
-{
+Event::Event(Day startDay, Day endDay, string name, User admin){
 	m_startDay = startDay;
 	m_endDay = endDay;
 	m_name = name;
 	m_admin = admin;
+	m_task = new Task[5];
 	m_numTasks = 0;
-	m_numUsers = 0;
-	std::vector<Task> m_task(1, Task());
-	std::vector<User> m_user(1, User());
 }
 
 
 
 bool Event::addTask(string tName){
 	Task temp = Task(tName);
-	m_task.push_back(temp);
-	// If we have hit size of array, double it
-	m_numTasks++;
-	return true;
-}
 
-bool Event::addUser(string uName) {
-	User temp = User(uName);
-	m_user.push_back(temp);
 	// If we have hit size of array, double it
-	m_numUsers++;
+	if (m_numTasks >= m_task.size()){
+		Task* temp2 = new Task[m_task.size()*2];
+		for (int i = 0; i < m_task.size(); i++){
+			temp2[i] = m_task[i];
+		}
+		delete m_task;
+		m_task = temp2;
+	}
+	
+	m_task[numTasks] = temp;
+	m_numTasks++;
 	return true;
 }
 
@@ -66,7 +64,7 @@ User Event::getAdmin(){
 	return m_admin;
 }
 
-std::vector<Task>& Event::getTasks(){
+Task* Event::getTasks(){
 	return m_task;
 }
 
@@ -74,11 +72,4 @@ int Event::getNumTasks(){
 	return m_numTasks;
 }
 
-std::vector<User>& Event::getUsers() {
-	return m_user;
-}
-
-int Event::getNumUsers() {
-	return m_numUsers;
-}
 

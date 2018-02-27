@@ -23,29 +23,29 @@ class Day {
 
 	/**
 	*	Constructor
-	*	@param none
-	*	@return int
+	*	@param ints
+	*	@return None
 	*/
 	int getMonth();
 
 	/**
 	*	Constructor
-	*	@param none
-	*	@return int
+	*	@param ints
+	*	@return None
 	*/
 	int getDay();
 
 	/**
 	*	Constructor
-	*	@param none
-	*	@return int
+	*	@param ints
+	*	@return None
 	*/
 	int getYear();
 
 	/**
 	*	Constructor
-	*	@param none
-	*	@return int
+	*	@param ints
+	*	@return None
 	*/
 	int getTime();
 
