@@ -2,15 +2,13 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-User::User()
+User::User() {}
+User::User(std::string name)
 {
+	m_Name = name;
 }
 User::~User()
 {
-}
-void User::setName(string name)
-{
-	m_Name = name; //sets the user's name to the name passed in
 }
 string User::getUserName()
 {
