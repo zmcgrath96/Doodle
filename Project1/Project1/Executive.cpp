@@ -92,6 +92,7 @@ string* Executive::getAllEvents()
 	for(int i = 0; i<events.size();i++)
 	{
 		allEvents[i] = events[i].getName();
+		//cout<<events[i].getName()<<endl;
 	}
 	return allEvents;
 }
