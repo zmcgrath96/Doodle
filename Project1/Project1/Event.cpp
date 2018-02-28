@@ -82,3 +82,20 @@ int Event::getNumUsers() {
 	return m_numUsers;
 }
 
+
+void Event::setAdmin(User admin) {
+	m_admin = admin;
+}
+
+
+void Event::setEndDay(Day end) {
+	m_endDay = end;
+}
+
+void Event::setName(string name) {
+	m_name = name;
+}
+
+void Event::setStartDay(Day start) {
+	m_startDay = start;
+}
