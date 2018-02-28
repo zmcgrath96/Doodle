@@ -106,6 +106,35 @@ class Event
 	*/
 	int getNumUsers();
 
+	/**
+	 * setStartDay
+	 * @param Day start
+	 */
+	void setStartDay(Day start);
+
+	/**
+	 * setEndDay
+	 * @param Day end
+	 */
+	void setEndDay(Day end);
+
+	/**
+	 * setAdmin
+	 * @param User admin
+	 */
+	void setAdmin(User admin);
+
+	/**
+	 * setName
+	 * @param String name
+	 */
+	void setName(string name);
+
+
+
+
+
+
 
 	private:
 		Day m_startDay;
