@@ -107,6 +107,8 @@ void Executive::read(){
 	std::ifstream ifile;
 	std::string line;
 	int lineNum = 0;
+	std::string eventName;
+	std::string adminName;
 
 	// Start by reading in the masterEvent.txt and populate event vector
 	//-------------------------------------------------------------------------------------
@@ -120,17 +122,44 @@ void Executive::read(){
 
 	// If we have made it here, we need to parse masterEvent.txt
 	Event tempEvent;
-	std::string eventName;
-	std::string adminName;
 	
 	while(getline(ifile, eventName, '@'))
 	{
 		getline(ifile, adminName);
+		tempEvent.setName(eventName);
+		User tempUser(adminName);
+		AddEvent(tempEvent);
 	}
-
-	
+	ifile.close();
 	//------------------------------------------------------------------------------------
-	// End reading of masterEvent.txt
+	// End reading of masterEvent.
+	
+
+	// Go through the list of events and read each file of each event and add data to that event
+	//------------------------------------------------------------------------------------
+
+	// Iterate through the list of events
+	for (int i = 0; i < events.size(); i++){
+
+		// Get event name
+		eventName = events.at(i).getName();
+
+		// Open file of event name
+		ifile.open(eventName);
+
+		if(ifile){
+
+			lineNum = 1;
+			
+
+		}
+
+
+		// Close file name
+		ifile.close();
+
+	}
+	//------------------------------------------------------------------------------------
 
 }
 
