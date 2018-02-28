@@ -120,6 +120,10 @@ void Executive::read(){
 	int tempYear; 
 	int tempTime;
 
+	// Variables for task
+	std::string tempTaskName;
+	std::string tempTaskUser;
+
 	// Start by reading in the masterEvent.txt and populate event vector
 	//-------------------------------------------------------------------------------------
 	
@@ -167,18 +171,54 @@ void Executive::read(){
 			while(getline(ifile, line)){
 				ss << line;
 
-				//Grab the start day
+				//Grab the day
 				if (lineNum == (1 || 3)){
 					
-					getline(ifile, line, '/');
+					getline(ss, line, '/');
 					tempMonth = stoi(line);
-					getline(ifile, line, '/');
+					getline(ss, line, '/');
 					tempDay = stoi(line);
-					getline(ifile, line);
+					getline(ss, line);
 					tempYear = stoi(line);
 
 				}
 
+				// Grab the time
+				else if (lineNum == (2 || 4)){
+
+					getline(ss, line);
+					tempTime = stoi(line);
+					Day tempDay(tempMonth, tempDay, tempYear, tempTime);
+
+					if (lineNum == 2){
+						events.at(i).setStartDay(tempDay);
+					}
+					else{
+						events.at(i).setEndDay(tempDay);
+					}
+				}
+
+				// Grab the tasks and the users
+				else if (lineNum == 5){
+					
+					while(getline(ss, line, '@')){
+						
+						tempTaskName = line;
+						getline(ss, line, ('|' || '\n'));
+						tempTaskUser = line;
+
+						Task tempTask(tempTaskName);
+						tempTask.setMaster(tempTaskUser);
+						events.at(i).addTask(tempTask);
+					}
+				}
+
+				// Grab the users and add it to the list of attendees
+				else{
+					while(getline(ss, line, ('|' || '\n'))){
+						events.at(i).addUser(line);
+					}
+				}
 
 
 				lineNum++;

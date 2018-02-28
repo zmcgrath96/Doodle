@@ -150,22 +150,38 @@ getNumUsers
 @return Integer
 
 </member>
+<<<<<<< HEAD
 <member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="109">
+=======
+<member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="109">
+>>>>>>> 0b3bae15bf1c717f8e570b7fe2fc0a155792bdb2
 setStartDay
 @param Day start
 
 </member>
+<<<<<<< HEAD
 <member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="115">
+=======
+<member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="115">
+>>>>>>> 0b3bae15bf1c717f8e570b7fe2fc0a155792bdb2
 setEndDay
 @param Day end
 
 </member>
+<<<<<<< HEAD
 <member name="M:Event.setAdmin(User)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="121">
+=======
+<member name="M:Event.setAdmin(User)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="121">
+>>>>>>> 0b3bae15bf1c717f8e570b7fe2fc0a155792bdb2
 setAdmin
 @param User admin
 
 </member>
+<<<<<<< HEAD
 <member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="127">
+=======
+<member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="127">
+>>>>>>> 0b3bae15bf1c717f8e570b7fe2fc0a155792bdb2
 setName
 @param String name
 

@@ -40,7 +40,7 @@ class Event
 		*	@param string name
 		*	@return true
 		*/
-	bool addTask(string tName);
+	bool addTask(Task task);
 
 	/**
 	*	addUser
