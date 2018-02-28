@@ -104,8 +104,13 @@ void Executive::write() {
 
 void Executive::read(){
 
-	// Start by reading in the masterEvent.txt and populate event vector
 	std::ifstream ifile;
+	std::string line;
+	int lineNum = 0;
+
+	// Start by reading in the masterEvent.txt and populate event vector
+	//-------------------------------------------------------------------------------------
+	
 	ifile.open("masterEvent.txt");
 
 	// If file does not exist, return
@@ -115,6 +120,17 @@ void Executive::read(){
 
 	// If we have made it here, we need to parse masterEvent.txt
 	Event tempEvent;
+	std::string eventName;
+	std::string adminName;
+	
+	while(getline(ifile, eventName, '@'))
+	{
+		getline(ifile, adminName);
+	}
+
+	
+	//------------------------------------------------------------------------------------
+	// End reading of masterEvent.txt
 
 }
 
