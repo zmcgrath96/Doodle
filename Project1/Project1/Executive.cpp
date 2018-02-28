@@ -7,6 +7,8 @@
 #include <list>
 
 using namespace std;
+
+
 Executive::Executive()
 {}
 
@@ -18,26 +20,6 @@ void Executive::AddEvent(Event E)
 	events.push_back(E);  //takes in an event and adds it to the back of the event vector
 }
 
-////std::vector<std::string> executive::checkaval(std::string name)
-////{
-////	eventadmin.clear();
-////	for(int i = 0; i<events.size();i++) //runs through the list of events
-////	{
-////		if(events[i].getadmin()==name) //checks if the name passed in is the admin of the event
-////		{
-////			cout<<"availabilities for "<<events[i].getname()<<endl;
-////			//std::cout<<name<<"=="<<events[i].getadmin()<<std::endl;
-////			eventadmin.push_back(events[i].getname());
-////			cout<<name<<" is an admin of the event: "<<eventadmin[i]<<endl;
-////			events[i].getavailabletimes();
-////		}
-////		else //if the name passed in is not the admin of the event
-////		{
-////			std::cout<<name<<"!="<<events[i].getadmin()<<std::endl;
-////		}
-////	}
-////	return(eventadmin);
-////}
 
 string* Executive::getAllEvents()
 {
@@ -52,9 +34,13 @@ string* Executive::getAllEvents()
 	return allEvents;
 }
 
+
+
 int Executive::getEventSize() {
 	return events.size();
 }
+
+
 
 void Executive::write() {
 
@@ -114,13 +100,49 @@ void Executive::write() {
 
 }// close write
 
-Executive::~Executive()
-{
+
+
+void Executive::read(){
+
+	// Start by reading in the masterEvent.txt and populate event vector
+	std::ifstream ifile;
+	ifile.open("masterEvent.txt");
+
+	// If file does not exist, return
+	if (!ifile){
+		return;
+	}
+
+	// If we have made it here, we need to parse masterEvent.txt
+	Event tempEvent;
+
 }
-void Executive::AddEvent(Event E)
-{
-	events.push_back(E);  //takes in an event and adds it to the back of the event vector
-}
+
+
+
+////std::vector<std::string> executive::checkaval(std::string name)
+////{
+////	eventadmin.clear();
+////	for(int i = 0; i<events.size();i++) //runs through the list of events
+////	{
+////		if(events[i].getadmin()==name) //checks if the name passed in is the admin of the event
+////		{
+////			cout<<"availabilities for "<<events[i].getname()<<endl;
+////			//std::cout<<name<<"=="<<events[i].getadmin()<<std::endl;
+////			eventadmin.push_back(events[i].getname());
+////			cout<<name<<" is an admin of the event: "<<eventadmin[i]<<endl;
+////			events[i].getavailabletimes();
+////		}
+////		else //if the name passed in is not the admin of the event
+////		{
+////			std::cout<<name<<"!="<<events[i].getadmin()<<std::endl;
+////		}
+////	}
+////	return(eventadmin);
+////}
+
+
+
 
 // std::vector<std::string> Executive::checkAval(std::string Name)
 // {
