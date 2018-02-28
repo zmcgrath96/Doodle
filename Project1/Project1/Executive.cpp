@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <sstream>
 
 using namespace std;
 
@@ -110,6 +111,12 @@ void Executive::read(){
 	std::string eventName;
 	std::string adminName;
 
+	// Ints for temp month, day, year, time
+	int tempMonth;
+	int tempDay;
+	int tempYear; 
+	int tempTime;
+
 	// Start by reading in the masterEvent.txt and populate event vector
 	//-------------------------------------------------------------------------------------
 	
@@ -138,6 +145,9 @@ void Executive::read(){
 	// Go through the list of events and read each file of each event and add data to that event
 	//------------------------------------------------------------------------------------
 
+	// Create a stringstream
+	std::stringstream ss;
+
 	// Iterate through the list of events
 	for (int i = 0; i < events.size(); i++){
 
@@ -151,17 +161,38 @@ void Executive::read(){
 
 			lineNum = 1;
 			
+			while(getline(ifile, line)){
+				ss << line;
 
-		}
+				//Grab the start day
+				if (lineNum == (1 || 3)){
+					
+					getline(ifile, line, '/');
+					tempMonth = stoi(line);
+					getline(ifile, line, '/');
+					tempDay = stoi(line);
+					getline(ifile, line);
+					tempYear = stoi(line);
+
+				}
+
+
+
+				lineNum++;
+			} // end while
+		
+
+		} // end if ifile
+
+	} // end loop on list of events
 
 
 		// Close file name
 		ifile.close();
 
-	}
+}
 	//------------------------------------------------------------------------------------
 
-}
 
 
 
