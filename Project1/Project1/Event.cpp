@@ -25,9 +25,8 @@ Event::Event(Day startDay, Day endDay, string name, User admin)
 
 
 
-bool Event::addTask(string tName){
-	Task temp = Task(tName);
-	m_task.push_back(temp);
+bool Event::addTask(Task task){
+	m_task.push_back(task);
 	// If we have hit size of array, double it
 	m_numTasks++;
 	return true;
