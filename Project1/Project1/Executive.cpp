@@ -18,7 +18,9 @@ Executive::~Executive()
 }
 void Executive::AddEvent(Event E)
 {
-	events.push_back(E);  //takes in an event and adds it to the back of the event vector
+	if (E.getName() != "") {
+		events.push_back(E);  //takes in an event and adds it to the back of the event vector
+	}
 }
 
 
@@ -62,7 +64,8 @@ void Executive::write() {
 	// Iterate through list of events and write a file for each event
 	std::string fName = "";
 	Event tempEvent;
-	for (int i = 0; i < events.size; i++) {
+	int eventSize = events.size();
+	for (int i = 0; i < eventSize; i++) {
 		tempEvent = events.at(i);
 		//Open file
 		fName = tempEvent.getName() + ".txt";
