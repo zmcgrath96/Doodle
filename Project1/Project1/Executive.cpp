@@ -204,7 +204,7 @@ void Executive::read(){
 					while(getline(ss, line, '@')){
 						
 						tempTaskName = line;
-						getline(ss, line, ('|' || '\n'));
+						getline(ss, line, '|');
 						tempTaskUser = line;
 
 						Task tempTask(tempTaskName);
@@ -215,7 +215,7 @@ void Executive::read(){
 
 				// Grab the users and add it to the list of attendees
 				else{
-					while(getline(ss, line, ('|' || '\n'))){
+					while(getline(ss, line, '|')){
 						events.at(i).addUser(line);
 					}
 				}
