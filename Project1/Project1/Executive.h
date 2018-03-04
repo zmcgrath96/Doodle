@@ -35,7 +35,7 @@ class Executive
 		*	@param A string representing the name of a user
 		*	@return A vector containing the names of the events that the given user is admin of
 		*/
-		std::vector<std::string> checkAval(std::string Name);
+		//std::vector<std::string> checkAval(std::string Name);
 
 		/**
 		*	Creates a string array and stores the names of all the events currently stored in the vector

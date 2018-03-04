@@ -74,118 +74,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  btnSubmitTimes;
 	private: System::Windows::Forms::Label^  label7;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
 	private: System::Windows::Forms::ListBox^  lstYourEvents;
 	private: System::Windows::Forms::Label^  lblViewEvent;
@@ -553,7 +441,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpMode->Controls->Add(this->btnModeBack);
 			this->grpMode->Controls->Add(this->btnAdmin);
 			this->grpMode->Controls->Add(this->btnUser);
-			this->grpMode->Location = System::Drawing::Point(196, 91);
+			this->grpMode->Location = System::Drawing::Point(223, 98);
 			this->grpMode->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpMode->Name = L"grpMode";
 			this->grpMode->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -599,11 +487,11 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			this->grpAvailability->Controls->Add(this->label2);
 			this->grpAvailability->Controls->Add(this->dateTimePicker2);
-			this->grpAvailability->Controls->Add(this->grpMode);
 			this->grpAvailability->Controls->Add(this->label1);
 			this->grpAvailability->Controls->Add(this->dateTimePicker1);
 			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
 			this->grpAvailability->Controls->Add(this->label7);
+			this->grpAvailability->Controls->Add(this->grpMode);
 			this->grpAvailability->Location = System::Drawing::Point(152, 111);
 			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
@@ -840,6 +728,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
@@ -849,6 +738,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpLogin);
+			this->Controls->Add(this->grpMode);
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle Scheduler";
@@ -859,6 +749,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpLogin->ResumeLayout(false);
 			this->grpLogin->PerformLayout();
 			this->grpMode->ResumeLayout(false);
+
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
 			this->grpViewYourEvents->ResumeLayout(false);
@@ -928,7 +819,7 @@ private: System::Void btnViewSchedule_Click(System::Object^  sender, System::Eve
 	grpAdmin->Visible = false;
 }
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (textBox4->Text == "")
+	if (textBox1->Text == "")
 	{
 		MessageBox::Show("Please enter an event name");
 	}
@@ -1109,8 +1000,14 @@ private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^
 }
 
 private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpLogin->Visible = false;
-	grpMode->Visible = true;
+
+	if (txtUser->Text == ""){
+		MessageBox::Show("Please enter a valid name");
+	}
+	else {
+		grpMode->Visible = true;
+		grpLogin->Visible = false;
+	}
 }
 
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -2408,13 +2305,13 @@ private: System::Void btnEditEvents_Click(System::Object^  sender, System::Event
 	//add each event to listbox
 
 	textBox6->Text = exec.events.size().ToString();
-	std::vector<std::string> temp = exec.checkAval(name);
+//	std::vector<std::string> temp = exec.checkAval(name);
 
-	textBox5->Text = temp.size().ToString();
+	/*textBox5->Text = temp.size().ToString();
 	for (int i = 0; i < temp.size(); i++)
 	{
 		lstYourEvents->Items->Add(gcnew String(temp[i].c_str()));
-	}
+	}*/
 
 
 	/*

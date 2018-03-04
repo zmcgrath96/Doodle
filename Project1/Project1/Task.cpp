@@ -11,6 +11,8 @@ Task::~Task()
 {
 }
 
+Task::Task() {}
+
 std::string Task::getTaskName() {
 	return(m_taskName);
 }

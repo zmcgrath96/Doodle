@@ -24,18 +24,18 @@ void Executive::AddEvent(Event E)
 }
 
 
-//std::vector<Event> Executive::getAllEvents()
-//{
-//	cout<<"All events"<<endl;
-//	const int eventSize = events.size();
-//	std::vector<Event> allEvents(eventSize, Event());
-//	for(int i = 0; i<events.size();i++)
-//	{
-//		allEvents[i] = events[i];
-//		//cout<<events[i].getName()<<endl;
-//	}
-//	return allEvents;
-//}
+std::string* Executive::getAllEvents()
+{
+	cout<<"All events"<<endl;
+	int eventSize = events.size();
+	std::string* allEvents = new string[eventSize];
+	for(int i = 0; i<events.size();i++)
+	{
+		allEvents[i] = events[i].getName();
+		//cout<<events[i].getName()<<endl;
+	}
+	return allEvents;
+}
 
 
 
@@ -239,28 +239,6 @@ void Executive::read(){
 
 
 
-////std::vector<std::string> executive::checkaval(std::string name)
-////{
-////	eventadmin.clear();
-////	for(int i = 0; i<events.size();i++) //runs through the list of events
-////	{
-////		if(events[i].getadmin()==name) //checks if the name passed in is the admin of the event
-////		{
-////			cout<<"availabilities for "<<events[i].getname()<<endl;
-////			//std::cout<<name<<"=="<<events[i].getadmin()<<std::endl;
-////			eventadmin.push_back(events[i].getname());
-////			cout<<name<<" is an admin of the event: "<<eventadmin[i]<<endl;
-////			events[i].getavailabletimes();
-////		}
-////		else //if the name passed in is not the admin of the event
-////		{
-////			std::cout<<name<<"!="<<events[i].getadmin()<<std::endl;
-////		}
-////	}
-////	return(eventadmin);
-////}
-
-
 
 
 // std::vector<std::string> Executive::checkAval(std::string Name)
@@ -291,105 +269,3 @@ void Executive::read(){
 // 	string* allEvents = new string[eventSize];
 
 
-/*void Executive::read() {
-	using namespace std;
-	ifstream readStream("events.txt", ifstream::in);
-	readStream.open("events.txt");
-	if (readStream.is_open()) {
-		while (!readStream.eof()) {
-			// read and discard until "Event: "
-			string line;
-			while (getline(readStream, line) && line.find("Event: ") != 0)
-			{
-				string temp;
-				while ((readStream.peek() != '\n')) { //reads in until next line character is found
-					readStream >> temp;
-					line = line + temp + " ";
-				}
-				if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-				{
-					line.erase(line.length() - 1);
-				}
-				string str = str.substr(7, line.size() - 7);//ignores the first 7 characters, takes the next line.size-7 characters
-				Event newEvent = Event(); //TODO***send string to thing that should hold it
-				newEvent.setEventName(str);
-				while (getline(readStream, line) && line.find("Date: ") != 0) {
-					string temp;
-					while ((readStream.peek() != '\n')) { //reads in until next line character is found
-						readStream >> temp;
-						line = line + temp + " ";
-					}
-					if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-					{
-						line.erase(line.length() - 1);
-					}
-					string str = str.substr(6, line.size() - 6);//ignores the first 6 characters, takes the next line.size-6 characters
-					newEvent.setEventDate(str); //TODO***store string in list
-					while (getline(readStream, line) && line.find("Admin: ")) {
-						string temp;
-						while ((readStream.peek() != '\n')) { //reads in until next line character is found
-							readStream >> temp;
-							line = line + temp + " ";
-						}
-						if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-						{
-							line.erase(line.length() - 1);
-						}
-						string str = str.substr(7, line.size() - 7);//ignores the first 7 characters, takes the next line.size-7 characters
-						User newUser = User();
-						newUser.setName(str);
-						newUser.setisAdmin(true);
-						while (getline(readStream, line) && line.find("Times: ")) {
-							string temp;
-							while ((readStream.peek() != '\n')) { //reads in until next line character is found
-								readStream >> temp;
-								line = line + temp + " ";
-							}
-							if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-							{
-								line.erase(line.length() - 1);
-							}
-							string str = str.substr(6, line.size() - 6);//ignores the first 6 characters, takes the next line.size-6 characters
-							int time = stoi(str, nullptr);
-							newUser.AddTime(time);
-						}
-					}
-					while (getline(readStream, line) && line.find("User: ")) {
-						string temp;
-						while ((readStream.peek() != '\n')) { //reads in until next line character is found
-							readStream >> temp;
-							line = line + temp + " ";
-						}
-						if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-						{
-							line.erase(line.length() - 1);
-						}
-						string str = str.substr(6, line.size() - 6);//ignores the first 6 characters, takes the next line.size-6 characters
-						User newUser = User();
-						newUser.setName(str);
-						while (getline(readStream, line) && line.find("Times: ")) {
-							string temp;
-							while ((readStream.peek() != '\n')) { //reads in until next line character is found
-								readStream >> temp;
-								line = line + temp + " ";
-							}
-							if (line.at(line.length() - 1) == ' ') //gets rid of extra " " at end
-							{
-								line.erase(line.length() - 1);
-							}
-							string str = str.substr(6, line.size() - 6);//ignores the first 6 characters, takes the next line.size-6 characters
-							int time = stoi(str, nullptr);
-							newUser.AddTime(time);
-						}
-					}
-				}
-			}
-		}
-	}
-	else
-	{
-		cout << "failed opening file" << endl;
-		return;
-	}
-	readStream.close();
-}​*/
