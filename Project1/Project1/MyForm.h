@@ -4,6 +4,7 @@
 #include "Executive.h"
 #include "Event.h"
 #include "User.h"
+#include <ctime>
 #include <msclr\marshal_cppstd.h>
 
 Executive exec;
@@ -779,8 +780,14 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		
 		// Pull the current date
-		DateTime localDate = DateTime::Now;
-		std::string prevPast = msclr::interop::marshal_as<std::string>(localDate.ToShortDateString());
+		time_t now = time(0);
+		tm *ltm = localtime(&now);
+		int cmonth = 1 + ltm->tm_mon;
+		int cday = ltm->tm_mday;
+		int cyear = 1970 + ltm->tm_year;
+
+		//DateTime localDate = DateTime::Now;
+		//std::string prevPast = msclr::interop::marshal_as<std::string>(localDate.ToShortDateString());
 
 		std::string newDate;// = date.substr(0, 4);
 		
@@ -800,9 +807,9 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 
 		//TODO create a check that wont let you create a date in the past
 		// The following are true if selected date is larger than current (All must be true to proceed)
-		bool yComp = (stoi(date.substr(6,4)) > stoi(prevPast.substr(6,4)));
-		bool mComp = (stoi(date.substr(0,2)) > stoi(prevPast.substr(0,2)));;
-		bool dComp = (stoi(date.substr(3,2)) > stoi(prevPast.substr(3,2)));;
+		bool yComp = (stoi(date.substr(6,4)) > cyear);
+		bool mComp = (stoi(date.substr(0,2)) > cmonth);
+		bool dComp = (stoi(date.substr(3,2)) > cday);
 
 		//std::string christmas "12/25";
 		textBox5->Text = gcnew String(newDate.c_str());
