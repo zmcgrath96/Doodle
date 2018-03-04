@@ -218,17 +218,17 @@ Called on startup
 @return None
 
 </member>
-<member name="T:Project1.MyForm" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="20">
+<member name="T:Project1.MyForm" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="27">
 <summary>
 Summary for MyForm
 </summary>
 </member>
-<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="35">
+<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="42">
 <summary>
 Clean up any resources being used.
 </summary>
 </member>
-<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="165">
+<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="124">
 <summary>
 Required designer variable.
 </summary>

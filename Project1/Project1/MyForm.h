@@ -4,6 +4,7 @@
 #include "Executive.h"
 #include "Event.h"
 #include "User.h"
+#include <time.h>
 #include <ctime>
 #include <msclr\marshal_cppstd.h>
 #include <windows.h>
@@ -774,9 +775,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 		// Pull the current date
 		time_t now = time(0);
 		tm *ltm = localtime(&now);
-		int cmonth = 1 + ltm->tm_mon;
-		int cday = ltm->tm_mday;
-		int cyear = 1970 + ltm->tm_year;
+		char nowDate[11];
+		strftime(nowDate, 11, "%D", ltm);
+
+		std::string strDate(nowDate);
 
 		//DateTime localDate = DateTime::Now;
 		//std::string prevPast = msclr::interop::marshal_as<std::string>(localDate.ToShortDateString());
@@ -799,9 +801,9 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 
 		//TODO create a check that wont let you create a date in the past
 		// The following are true if selected date is larger than current (All must be true to proceed)
-		bool yComp = (stoi(date.substr(6,4)) > cyear);
-		bool mComp = (stoi(date.substr(0,2)) > cmonth);
-		bool dComp = (stoi(date.substr(3,2)) > cday);
+		bool yComp = (atoi(date.substr(6,4).c_str()) > atoi(strDate.substr(6,4).c_str()));
+		bool mComp = (atoi(date.substr(0,2).c_str()) > atoi(strDate.substr(0, 2).c_str()));
+		bool dComp = (atoi(date.substr(3,2).c_str()) > atoi(strDate.substr(3, 2).c_str()));
 
 		//std::string christmas "12/25";
 		textBox5->Text = gcnew String(newDate.c_str());
@@ -810,10 +812,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			MessageBox::Show("You may not schedule an event on this date.");
 			textBox4->Clear();
 		}
-		else if (!(yComp && mComp && dComp)) {
+		/*else if (!(yComp && mComp && dComp)) {
 			MessageBox::Show("You cannot schedule an event in the past.");
 			textBox4->Clear();
-		}
+		}*/
 	}
 
 private: bool currentlyAdmin;
