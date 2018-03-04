@@ -1,362 +1,161 @@
 ﻿  Executive.cpp
-<<<<<<< HEAD
 Executive.cpp(30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 Executive.cpp(30): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
 Executive.cpp(43): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(61): error C3867: 'std::basic_ofstream<char,std::char_traits<char>>::close': non-standard syntax; use '&' to create a pointer to member
 Executive.cpp(67): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(171): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+Executive.cpp(175): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+Executive.cpp(187): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
   MyForm.cpp
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2065: 'Label1': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.Text' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2065: 'MonthCalendar1': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.SelectionRange' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.Start' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2866): error C2228: left of '.End' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2867): error C2065: 'Label1': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2867): error C2228: left of '.text' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2867): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): error C2065: 'Label2': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.Text' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): error C2065: 'MonthCalendar1': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.SelectionRange' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2873): error C2228: left of '.Start' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2875): error C2065: 'Label1': undeclared identifier
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2875): error C2228: left of '.text' must have class/struct/union
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2875): note: type is 'unknown-type'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2876): error C2664: 'void OutputDebugStringW(LPCWSTR)': cannot convert argument 1 from 'const char [5]' to 'LPCWSTR'
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2876): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2927): error C2039: 'setEventName': is not a member of 'Event'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2065: 'Label1': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.Text' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2065: 'MonthCalendar1': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.SelectionRange' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.Start' must have class/struct/union
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.End' must have class/struct/union
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(884): error C2065: 'Label1': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(884): error C2228: left of '.text' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(884): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): error C2065: 'Label2': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.Text' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): error C2065: 'MonthCalendar1': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.SelectionRange' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.Start' must have class/struct/union
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(892): error C2065: 'Label1': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(892): error C2228: left of '.text' must have class/struct/union
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(892): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(893): error C2664: 'void OutputDebugStringW(LPCWSTR)': cannot convert argument 1 from 'const char [5]' to 'LPCWSTR'
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(893): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(944): error C2039: 'setEventName': is not a member of 'Event'
   c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2928): error C2039: 'setEventDate': is not a member of 'Event'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(945): error C2039: 'setEventDate': is not a member of 'Event'
   c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2933): error C2039: 'c_str': is not a member of 'User'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(950): error C2039: 'c_str': is not a member of 'User'
   c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(2933): error C2512: 'System::String::String': no appropriate default constructor available
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3415): error C2039: 'setName': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3437): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3439): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3440): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3442): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3443): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3444): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3446): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3447): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3448): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3450): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3451): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3452): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3454): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3455): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3456): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3458): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3459): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3460): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3462): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3463): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3464): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3466): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3467): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3468): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3470): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3471): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3472): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3474): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3475): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3476): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3478): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3479): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3480): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3482): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3483): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3484): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3486): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3487): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3488): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3490): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3491): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3492): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3494): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3495): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3496): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3498): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3499): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3500): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3502): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3503): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3504): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3506): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3507): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3508): error C2039: 'AddTime': is not a member of 'User'
-  c:\users\matthew\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3530): error C2664: 'bool Event::addUser(std::string)': cannot convert argument 1 from 'User' to 'std::string'
-  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(3530): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4444): error C2039: 'getDate': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4444): error C2228: left of '.c_str' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4444): error C2512: 'System::String::String': no appropriate default constructor available
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4833): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4836): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4836): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4837): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4837): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4838): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4838): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4840): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4840): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4841): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4841): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4842): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4842): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4844): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4844): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4845): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4845): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4846): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4846): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4848): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4848): error C2228: left of '.ToString' must have class/struct/union
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4849): error C2039: 'getNumOfUs': is not a member of 'Event'
-  c:\users\matthew\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(4849): fatal error C1003: error count exceeds 100; stopping compilation
-=======
-Executive.cpp(28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(28): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-Executive.cpp(41): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-Executive.cpp(59): error C3867: 'std::basic_ofstream<char,std::char_traits<char>>::close': non-standard syntax; use '&' to create a pointer to member
-Executive.cpp(65): error C3867: 'std::vector<Event,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
-          with
-          [
-              _Ty=Event
-          ]
-Executive.cpp(65): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<Event,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
-          with
-          [
-              _Ty=Event
-          ]
-  Executive.cpp(65): note: There is no context in which this conversion is possible
-Executive.cpp(168): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
-  MyForm.cpp
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2065: 'Label1': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.Text' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2065: 'MonthCalendar1': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.SelectionRange' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.Start' must have class/struct/union
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(883): error C2228: left of '.End' must have class/struct/union
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(884): error C2065: 'Label1': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(884): error C2228: left of '.text' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(884): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): error C2065: 'Label2': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.Text' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): error C2065: 'MonthCalendar1': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.SelectionRange' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(890): error C2228: left of '.Start' must have class/struct/union
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(892): error C2065: 'Label1': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(892): error C2228: left of '.text' must have class/struct/union
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(892): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(893): error C2664: 'void OutputDebugStringW(LPCWSTR)': cannot convert argument 1 from 'const char [5]' to 'LPCWSTR'
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(893): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(944): error C2039: 'setEventName': is not a member of 'Event'
-  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(945): error C2039: 'setEventDate': is not a member of 'Event'
-  c:\users\zach\documents\github\doodle\project1\project1\Event.h(14): note: see declaration of 'Event'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(950): error C2039: 'c_str': is not a member of 'User'
-  c:\users\zach\documents\github\doodle\project1\project1\User.h(6): note: see declaration of 'User'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(950): error C2512: 'System::String::String': no appropriate default constructor available
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(955): error C2065: 'lbl500_520AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(955): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(955): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(956): error C2065: 'lbl520_540AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(956): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(956): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(957): error C2065: 'lbl540_600AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(957): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(957): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(959): error C2065: 'lbl600_620AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(959): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(959): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(960): error C2065: 'lbl620_640AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(960): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(960): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(961): error C2065: 'lbl640_700AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(961): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(961): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(963): error C2065: 'lbl700_720AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(963): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(963): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(964): error C2065: 'lbl720_740AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(964): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(964): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(965): error C2065: 'lbl740_800AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(965): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(965): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(967): error C2065: 'lbl800_820AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(967): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(967): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(968): error C2065: 'lbl820_840AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(968): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(968): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(969): error C2065: 'lbl840_900AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(969): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(969): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(971): error C2065: 'lbl900_920AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(971): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(971): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(972): error C2065: 'lbl920_940AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(972): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(972): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(973): error C2065: 'lbl940_1000AM7Quantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(973): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(973): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(975): error C2065: 'lbl1000_1020AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(975): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(975): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(976): error C2065: 'lbl1020_1040AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(976): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(976): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(977): error C2065: 'lbl1040_1100AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(977): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(977): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(979): error C2065: 'lbl1100_1120AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(979): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(979): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(980): error C2065: 'lbl1120_1140AMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(980): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(980): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(981): error C2065: 'lbl1140_1200PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(981): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(981): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(983): error C2065: 'lbl100_120PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(983): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(983): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(984): error C2065: 'lbl120_140PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(984): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(984): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(985): error C2065: 'lbl140_200PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(985): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(985): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(987): error C2065: 'lbl200_220PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(987): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(987): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(988): error C2065: 'lbl220_240PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(988): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(988): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(989): error C2065: 'lbl240_300PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(989): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(989): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(991): error C2065: 'lbl300_320PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(991): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(991): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(992): error C2065: 'lbl320_340PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(992): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(992): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(993): error C2065: 'lbl340_400PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(993): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(993): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(995): error C2065: 'lbl400_420PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(995): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(995): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(996): error C2065: 'lbl420_440PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(996): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(996): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(997): error C2065: 'lbl440_500PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(997): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(997): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(999): error C2065: 'lbl500_520PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(999): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(999): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1000): error C2065: 'lbl520_540PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1000): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1000): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1001): error C2065: 'lbl540_600PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1001): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1001): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1003): error C2065: 'lbl600_620PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1003): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1003): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1004): error C2065: 'lbl620_640PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1004): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1004): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1005): error C2065: 'lbl640_700PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1005): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1005): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1007): error C2065: 'lbl700_720PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1007): error C2227: left of '->Visible' must point to class/struct/union/generic type
-  c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1007): note: type is 'unknown-type'
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1008): error C2065: 'lbl720_740PMQuantity': undeclared identifier
-c:\users\zach\documents\github\doodle\project1\project1\MyForm.h(1008): fatal error C1003: error count exceeds 100; stopping compilation
->>>>>>> 0b3bae15bf1c717f8e570b7fe2fc0a155792bdb2
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(950): error C2512: 'System::String::String': no appropriate default constructor available
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(955): error C2065: 'lbl500_520AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(955): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(955): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(956): error C2065: 'lbl520_540AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(956): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(956): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(957): error C2065: 'lbl540_600AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(957): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(957): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(959): error C2065: 'lbl600_620AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(959): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(959): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(960): error C2065: 'lbl620_640AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(960): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(960): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(961): error C2065: 'lbl640_700AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(961): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(961): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(963): error C2065: 'lbl700_720AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(963): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(963): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(964): error C2065: 'lbl720_740AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(964): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(964): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(965): error C2065: 'lbl740_800AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(965): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(965): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(967): error C2065: 'lbl800_820AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(967): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(967): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(968): error C2065: 'lbl820_840AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(968): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(968): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(969): error C2065: 'lbl840_900AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(969): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(969): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(971): error C2065: 'lbl900_920AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(971): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(971): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(972): error C2065: 'lbl920_940AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(972): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(972): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(973): error C2065: 'lbl940_1000AM7Quantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(973): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(973): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(975): error C2065: 'lbl1000_1020AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(975): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(975): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(976): error C2065: 'lbl1020_1040AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(976): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(976): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(977): error C2065: 'lbl1040_1100AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(977): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(977): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(979): error C2065: 'lbl1100_1120AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(979): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(979): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(980): error C2065: 'lbl1120_1140AMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(980): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(980): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(981): error C2065: 'lbl1140_1200PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(981): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(981): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(983): error C2065: 'lbl100_120PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(983): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(983): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(984): error C2065: 'lbl120_140PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(984): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(984): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(985): error C2065: 'lbl140_200PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(985): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(985): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(987): error C2065: 'lbl200_220PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(987): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(987): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(988): error C2065: 'lbl220_240PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(988): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(988): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(989): error C2065: 'lbl240_300PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(989): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(989): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(991): error C2065: 'lbl300_320PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(991): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(991): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(992): error C2065: 'lbl320_340PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(992): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(992): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(993): error C2065: 'lbl340_400PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(993): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(993): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(995): error C2065: 'lbl400_420PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(995): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(995): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(996): error C2065: 'lbl420_440PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(996): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(996): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(997): error C2065: 'lbl440_500PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(997): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(997): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(999): error C2065: 'lbl500_520PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(999): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(999): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1000): error C2065: 'lbl520_540PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1000): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1000): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1001): error C2065: 'lbl540_600PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1001): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1001): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1003): error C2065: 'lbl600_620PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1003): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1003): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1004): error C2065: 'lbl620_640PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1004): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1004): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1005): error C2065: 'lbl640_700PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1005): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1005): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1007): error C2065: 'lbl700_720PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1007): error C2227: left of '->Visible' must point to class/struct/union/generic type
+  c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1007): note: type is 'unknown-type'
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1008): error C2065: 'lbl720_740PMQuantity': undeclared identifier
+c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1008): fatal error C1003: error count exceeds 100; stopping compilation
   Generating Code...

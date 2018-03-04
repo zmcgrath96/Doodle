@@ -24,18 +24,18 @@ void Executive::AddEvent(Event E)
 }
 
 
-string* Executive::getAllEvents()
-{
-	cout<<"All events"<<endl;
-	const int eventSize = events.size();
-	string* allEvents = new string[eventSize];
-	for(int i = 0; i<events.size();i++)
-	{
-		allEvents[i] = events[i].getName();
-		//cout<<events[i].getName()<<endl;
-	}
-	return allEvents;
-}
+//std::vector<Event> Executive::getAllEvents()
+//{
+//	cout<<"All events"<<endl;
+//	const int eventSize = events.size();
+//	std::vector<Event> allEvents(eventSize, Event());
+//	for(int i = 0; i<events.size();i++)
+//	{
+//		allEvents[i] = events[i];
+//		//cout<<events[i].getName()<<endl;
+//	}
+//	return allEvents;
+//}
 
 
 
@@ -58,7 +58,7 @@ void Executive::write() {
 		ofile << line + "\n";
 	}
 
-	ofile.close;
+	ofile.close();
 	line = "";
 
 	// Iterate through list of events and write a file for each event

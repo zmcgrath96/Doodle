@@ -5,6 +5,7 @@ using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
 void Main(array<String^>^ args) {
+	exec.read();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	Project1::MyForm form;
