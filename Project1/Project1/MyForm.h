@@ -242,7 +242,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
-			this->monthCalendar1->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar1_DateChanged);
+			this->monthCalendar1->DateSelected += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar1_DateSelected);
 			// 
 			// textBox1
 			// 
@@ -805,26 +805,18 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 		label2->Text = "Select Available Times:";
 	}
 
-	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
-		//Display the dates for selected range
-
-		//To display single selected of date
-
-		//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
-		textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
-		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
+	private: System::Void monthCalendar1_DateSelected(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
 		
-		// Pull the current date
-		time_t now = time(0);
-		tm *ltm = localtime(&now);
-		char nowDate[11];
-		strftime(nowDate, 11, "%D", ltm);
+		//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
+		textBox4->Text = monthCalendar1->SelectionRange->Start.ToString("d");
+		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 
-		std::string strDate(nowDate);
-
-		//DateTime localDate = DateTime::Now;
-		//std::string prevPast = msclr::interop::marshal_as<std::string>(localDate.ToShortDateString());
-
+		// Pull Todays Date
+		System::DateTime todayDate = this->monthCalendar1->TodayDate;
+		// Pull the event date
+		System::DateTime eventDate = this->monthCalendar1->SelectionRange->Start;
+		
+			
 		std::string newDate;// = date.substr(0, 4);
 		
 		int count = 0;
@@ -841,12 +833,6 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			}
 		}
 
-		//TODO create a check that wont let you create a date in the past
-		// The following are true if selected date is larger than current (All must be true to proceed)
-		bool yComp = (atoi(date.substr(6,4).c_str()) > atoi(strDate.substr(6,4).c_str()));
-		bool mComp = (atoi(date.substr(0,2).c_str()) > atoi(strDate.substr(0, 2).c_str()));
-		bool dComp = (atoi(date.substr(3,2).c_str()) > atoi(strDate.substr(3, 2).c_str()));
-
 		//std::string christmas "12/25";
 		textBox5->Text = gcnew String(newDate.c_str());
 		if (newDate == "12/25" || newDate == "7/4" || newDate == "1/1")
@@ -854,10 +840,12 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			MessageBox::Show("You may not schedule an event on this date.");
 			textBox4->Clear();
 		}
-		/*else if (!(yComp && mComp && dComp)) {
-			MessageBox::Show("You cannot schedule an event in the past.");
-			textBox4->Clear();
-		}*/
+	
+		// Check if the event date is before the current day
+		if (eventDate < todayDate) {
+			MessageBox::Show("You cannot schedule an event in the past");
+		}
+			
 	}
 
 private: bool currentlyAdmin;
