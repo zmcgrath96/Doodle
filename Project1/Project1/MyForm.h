@@ -6,6 +6,11 @@
 #include "User.h"
 #include <ctime>
 #include <msclr\marshal_cppstd.h>
+#include <windows.h>
+
+#using <System.DLL>
+#using <System.Drawing.DLL>
+#using <System.Windows.Forms.DLL>
 
 Executive exec;
 
@@ -2853,6 +2858,28 @@ private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, Syst
 private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void dateTimePicker2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+		 //// If close button is pressed ////
+private: System::Void MyForm_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e)
+{
+	System::Windows::Forms::DialogResult result = MessageBox::Show(
+		L"Do you want to save before exiting?",
+		L"Form Not Saved",
+		MessageBoxButtons::YesNoCancel,
+		MessageBoxIcon::Exclamation
+	);
+
+	//// Yes ////
+	if (result == System::Windows::Forms::DialogResult::Yes)
+	{
+		exec.write();
+	}
+
+	//// Cancel ////
+	else if (result == System::Windows::Forms::DialogResult::Cancel)
+	{
+		e->Cancel = true;
+	}
 }
 };
 }
