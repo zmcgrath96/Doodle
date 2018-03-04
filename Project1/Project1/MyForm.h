@@ -880,17 +880,17 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 
 	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
 		//Display the dates for selected range
-		Label1.Text = "Dates Selected from :" + (MonthCalendar1.SelectionRange.Start() + " to " + MonthCalendar1.SelectionRange.End());
-		std::cout>>Label1.text;
+		label1->Text = "Dates Selected from :";// + (MonthCalendar1.SelectionRange.Start() + " to " + MonthCalendar1.SelectionRange.End());
+		//std::cout>>label1.text;
 
 		//To display single selected of date
 		//MonthCalendar1.MaxSelectionCount = 1;
 
 		//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
-		Label2.Text = "Date Selected :" + MonthCalendar1.SelectionRange.Start;
+		label2->Text = "Date Selected :";// +MonthCalendar1.SelectionRange.Start;
 
-		OutputDebugString(Label1.text);
-		OutputDebugString("HERE");
+		//OutputDebugString(Label1.text);
+		//OutputDebugString("HERE");
 
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//std::string newstr = gcnew String(date.c_str());
@@ -941,18 +941,18 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		//Event myEvent(name, date);
 		//exec.currentEvent = myEvent;
 		Event myEvent;
-		myEvent.setEventName(name);
-		myEvent.setEventDate(date);
+		myEvent.setName(name);
+		//myEvent.setEventDate(date);
 
 		std::string adminName = msclr::interop::marshal_as<std::string>(txtUser->Text);
 		myEvent.setAdmin(adminName);
 
-		textBox6->Text = gcnew String(myEvent.getAdmin().c_str());
+		textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 		exec.AddEvent(myEvent);
 	}
 	textBox1->Clear();
 
-	lbl500_520AMQuantity->Visible = false;
+	/*lbl500_520AMQuantity->Visible = false;
 	lbl520_540AMQuantity->Visible = false;
 	lbl540_600AMQuantity->Visible = false;
 
@@ -1099,7 +1099,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 	chk1100_1120PM->Visible = true;
 	chk1120_1140PM->Visible = true;
 	chk1140_1200AM->Visible = true;
-
+*/
 }
 
 private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1115,7 +1115,7 @@ private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^
 
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 
-	chk500_520AM->Text = "5:00 AM - 5:20 AM";
+	/*chk500_520AM->Text = "5:00 AM - 5:20 AM";
 	chk520_540AM->Text = "5:20 AM - 5:40 AM";
 	chk540_600AM->Text = "5:40 AM - 6:00 AM";
 
@@ -1261,10 +1261,10 @@ private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::E
 	}
 
 	pnl12Hr->BringToFront();
-	pnl24Hr->SendToBack();
+	pnl24Hr->SendToBack();*/
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	chk500_520AM->Text = "05:00 - 05:20";
+	/*chk500_520AM->Text = "05:00 - 05:20";
 	chk520_540AM->Text = "05:20 - 05:40";
 	chk540_600AM->Text = "05:40 - 06:00";
 
@@ -1410,7 +1410,7 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 	}
 
 	pnl24Hr->BringToFront();
-	pnl12Hr->SendToBack();	
+	pnl12Hr->SendToBack();*/	
 }
 
 
@@ -1428,8 +1428,8 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 
 	//String^ eventName = gcnew String(test.c_str());
 	
-	User u;
-	u.setName(msclr::interop::marshal_as<std::string>(txtUser->Text));
+	User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
+	//u.setName(msclr::interop::marshal_as<std::string>(txtUser->Text));
 //	u.setisAdmin(currentlyAdmin);
 
 
@@ -1449,7 +1449,7 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	
 	
 
-	if (chk500_520AM->Checked) 
+	/*if (chk500_520AM->Checked) 
 	{ 
 		u.AddTime(0); 
 	}
@@ -1523,7 +1523,7 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	if(chk1100_1120PM->Checked){ u.AddTime(51); }
 	if(chk1120_1140PM->Checked){ u.AddTime(52); }
 	if(chk1140_1200AM->Checked){ u.AddTime(53); }
-
+*/
 	//int newestEvent = exec.getEventSize()-1;
 
 	std::string* eventList = exec.getAllEvents();
@@ -1544,11 +1544,11 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 			run = false;
 		}
 	}
-	exec.events[index].addUser(u);
+	exec.events[index].addUser(u.getUserName());
 	//
 	//
 	//
-	chk500_520AM->Checked = false;
+	/*chk500_520AM->Checked = false;
 	chk520_540AM->Checked = false;
 	chk540_600AM->Checked = false;
 
@@ -1619,7 +1619,7 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	chk1100_1120PM->Checked = false;
 	chk1120_1140PM->Checked = false;
 	chk1140_1200AM->Checked = false;
-	
+	*/
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -1667,7 +1667,7 @@ private: System::Void chk1140_1200PM_CheckedChanged(System::Object^  sender, Sys
 private: System::Void chk100_120PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = true;
+	/*pnl5_6AM->Visible = true;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1685,10 +1685,10 @@ private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
 	pnl11_12AM->Visible = false;
-
+*/
 }
 private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = true;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1705,11 +1705,11 @@ private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = true;
 	pnl8_9AM->Visible = false;
@@ -1726,31 +1726,31 @@ private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn8_9AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = true;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	//pnl5_6AM->Visible = false;
+	//pnl6_7AM->Visible = false;
+	//pnl7_8AM->Visible = false;
+	//pnl8_9AM->Visible = true;
+	//pnl9_10AM->Visible = false;
+	//pnl10_11AM->Visible = false;
+	//pnl11_12PM->Visible = false;
+	//pnl1_2PM->Visible = false;
+	//pnl2_3PM->Visible = false;
+	//pnl3_4PM->Visible = false;
+	//pnl4_5PM->Visible = false;
+	//pnl5_6PM->Visible = false;
+	//pnl6_7PM->Visible = false;
+	//pnl7_8PM->Visible = false;
+	//pnl8_9PM->Visible = false;
+	//pnl9_10PM->Visible = false;
+	//pnl10_11PM->Visible = false;
+	//pnl11_12AM->Visible = false;
 }
 private: System::Void rbtn9_10AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1767,10 +1767,10 @@ private: System::Void rbtn9_10AM_CheckedChanged(System::Object^  sender, System:
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn10_11AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1787,10 +1787,10 @@ private: System::Void rbtn10_11AM_CheckedChanged(System::Object^  sender, System
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn11_12PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1807,10 +1807,10 @@ private: System::Void rbtn11_12PM_CheckedChanged(System::Object^  sender, System
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn1_2PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1827,10 +1827,10 @@ private: System::Void rbtn1_2PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn2_3PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1847,10 +1847,10 @@ private: System::Void rbtn2_3PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn3_4PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1867,10 +1867,10 @@ private: System::Void rbtn3_4PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn4_5PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1887,10 +1887,10 @@ private: System::Void rbtn4_5PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn5_6PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1907,10 +1907,10 @@ private: System::Void rbtn5_6PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn6_7PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1927,10 +1927,10 @@ private: System::Void rbtn6_7PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn7_8PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1947,10 +1947,10 @@ private: System::Void rbtn7_8PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn8_9PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1967,10 +1967,10 @@ private: System::Void rbtn8_9PM_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = true;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn9_10PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -1987,10 +1987,10 @@ private: System::Void rbtn9_10PM_CheckedChanged(System::Object^  sender, System:
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = true;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn10_11PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2007,10 +2007,10 @@ private: System::Void rbtn10_11PM_CheckedChanged(System::Object^  sender, System
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = true;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2027,11 +2027,11 @@ private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = true;
+	pnl11_12AM->Visible = true;*/
 }
 
 private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = true;
+	/*pnl5_6AM->Visible = true;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2048,11 +2048,11 @@ private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = true;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2069,11 +2069,11 @@ private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = true;
 	pnl8_9AM->Visible = false;
@@ -2090,11 +2090,11 @@ private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = true;
@@ -2111,11 +2111,11 @@ private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 
 }
 private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2132,10 +2132,10 @@ private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2152,10 +2152,10 @@ private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2172,30 +2172,30 @@ private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = true;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	///*pnl5_6AM->Visible = false;
+	//pnl6_7AM->Visible = false;
+	//pnl7_8AM->Visible = false;
+	//pnl8_9AM->Visible = false;
+	//pnl9_10AM->Visible = false;
+	//pnl10_11AM->Visible = false;
+	//pnl11_12PM->Visible = false;
+	//pnl1_2PM->Visible = true;
+	//pnl2_3PM->Visible = false;
+	//pnl3_4PM->Visible = false;
+	//pnl4_5PM->Visible = false;
+	//pnl5_6PM->Visible = false;
+	//pnl6_7PM->Visible = false;
+	//pnl7_8PM->Visible = false;
+	//pnl8_9PM->Visible = false;
+	//pnl9_10PM->Visible = false;
+	//pnl10_11PM->Visible = false;
+	//pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2212,10 +2212,10 @@ private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2232,10 +2232,10 @@ private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2252,10 +2252,10 @@ private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2272,10 +2272,10 @@ private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2292,10 +2292,10 @@ private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2312,10 +2312,10 @@ private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2332,10 +2332,10 @@ private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = true;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2352,10 +2352,10 @@ private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = true;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2372,10 +2372,10 @@ private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = true;
-	pnl11_12AM->Visible = false;
+	pnl11_12AM->Visible = false;*/
 }
 private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	pnl5_6AM->Visible = false;
+	/*pnl5_6AM->Visible = false;
 	pnl6_7AM->Visible = false;
 	pnl7_8AM->Visible = false;
 	pnl8_9AM->Visible = false;
@@ -2392,7 +2392,7 @@ private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::
 	pnl8_9PM->Visible = false;
 	pnl9_10PM->Visible = false;
 	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = true;
+	pnl11_12AM->Visible = true;*/
 }
 private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = true;
@@ -2458,16 +2458,15 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		* Event information and option to modify availability will be displayed on the next page
 		*/
 		lblEventName->Text = gcnew String(myEvent.getName().c_str());
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		std::string date = std::to_string(myEvent.getStartDay().getMonth()) + "/" + std::to_string(myEvent.getStartDay().getDay()) + "/" + std::to_string(myEvent.getStartDay().getYear());
 		lblEventDate->Text = gcnew String(date.c_str());
-=======
-		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
->>>>>>> parent of c8f42a8... Tried fixing myForm.h
-=======
-		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
->>>>>>> parent of c8f42a8... Tried fixing myForm.h
+
+		//lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
+
+
+		//lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
+
 		grpViewYourEvents->Visible = false;
 		grpEventInfo->Visible = true;
 		lstYourEvents->Items->Clear();
@@ -2479,7 +2478,7 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	}
 }
 private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpEventInfo->Visible = false;
+	/*grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
 	label2->Text = "Select Available Times:";
 
@@ -2629,7 +2628,7 @@ private: System::Void btnEditAvailability_Click(System::Object^  sender, System:
 
 	chk1100_1120PM->Visible = true;
 	chk1120_1140PM->Visible = true;
-	chk1140_1200AM->Visible = true;
+	chk1140_1200AM->Visible = true;*/
 }
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpMode->Visible = false;
@@ -2705,231 +2704,231 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
 
-	lbl500_520AMQuantity->Visible = true;
-	lbl520_540AMQuantity->Visible = true;
-	lbl540_600AMQuantity->Visible = true;
+	//lbl500_520AMQuantity->Visible = true;
+	//lbl520_540AMQuantity->Visible = true;
+	//lbl540_600AMQuantity->Visible = true;
 
-	lbl600_620AMQuantity->Visible = true;
-	lbl620_640AMQuantity->Visible = true;
-	lbl640_700AMQuantity->Visible = true;
+	//lbl600_620AMQuantity->Visible = true;
+	//lbl620_640AMQuantity->Visible = true;
+	//lbl640_700AMQuantity->Visible = true;
 
-	lbl700_720AMQuantity->Visible = true;
-	lbl720_740AMQuantity->Visible = true;
-	lbl740_800AMQuantity->Visible = true;
+	//lbl700_720AMQuantity->Visible = true;
+	//lbl720_740AMQuantity->Visible = true;
+	//lbl740_800AMQuantity->Visible = true;
 
-	lbl800_820AMQuantity->Visible = true;
-	lbl820_840AMQuantity->Visible = true;
-	lbl840_900AMQuantity->Visible = true;
+	//lbl800_820AMQuantity->Visible = true;
+	//lbl820_840AMQuantity->Visible = true;
+	//lbl840_900AMQuantity->Visible = true;
 
-	lbl900_920AMQuantity->Visible = true;
-	lbl920_940AMQuantity->Visible = true;
-	lbl940_1000AM7Quantity->Visible = true;
+	//lbl900_920AMQuantity->Visible = true;
+	//lbl920_940AMQuantity->Visible = true;
+	//lbl940_1000AM7Quantity->Visible = true;
 
-	lbl1000_1020AMQuantity->Visible = true;
-	lbl1020_1040AMQuantity->Visible = true;
-	lbl1040_1100AMQuantity->Visible = true;
+	//lbl1000_1020AMQuantity->Visible = true;
+	//lbl1020_1040AMQuantity->Visible = true;
+	//lbl1040_1100AMQuantity->Visible = true;
 
-	lbl1100_1120AMQuantity->Visible = true;
-	lbl1120_1140AMQuantity->Visible = true;
-	lbl1140_1200PMQuantity->Visible = true;
+	//lbl1100_1120AMQuantity->Visible = true;
+	//lbl1120_1140AMQuantity->Visible = true;
+	//lbl1140_1200PMQuantity->Visible = true;
 
-	lbl100_120PMQuantity->Visible = true;
-	lbl120_140PMQuantity->Visible = true;
-	lbl140_200PMQuantity->Visible = true;
+	//lbl100_120PMQuantity->Visible = true;
+	//lbl120_140PMQuantity->Visible = true;
+	//lbl140_200PMQuantity->Visible = true;
 
-	lbl200_220PMQuantity->Visible = true;
-	lbl220_240PMQuantity->Visible = true;
-	lbl240_300PMQuantity->Visible = true;
+	//lbl200_220PMQuantity->Visible = true;
+	//lbl220_240PMQuantity->Visible = true;
+	//lbl240_300PMQuantity->Visible = true;
 
-	lbl300_320PMQuantity->Visible = true;
-	lbl320_340PMQuantity->Visible = true;
-	lbl340_400PMQuantity->Visible = true;
+	//lbl300_320PMQuantity->Visible = true;
+	//lbl320_340PMQuantity->Visible = true;
+	//lbl340_400PMQuantity->Visible = true;
 
-	lbl400_420PMQuantity->Visible = true;
-	lbl420_440PMQuantity->Visible = true;
-	lbl440_500PMQuantity->Visible = true;
+	//lbl400_420PMQuantity->Visible = true;
+	//lbl420_440PMQuantity->Visible = true;
+	//lbl440_500PMQuantity->Visible = true;
 
-	lbl500_520PMQuantity->Visible = true;
-	lbl520_540PMQuantity->Visible = true;
-	lbl540_600PMQuantity->Visible = true;
+	//lbl500_520PMQuantity->Visible = true;
+	//lbl520_540PMQuantity->Visible = true;
+	//lbl540_600PMQuantity->Visible = true;
 
-	lbl600_620PMQuantity->Visible = true;
-	lbl620_640PMQuantity->Visible = true;
-	lbl640_700PMQuantity->Visible = true;
+	//lbl600_620PMQuantity->Visible = true;
+	//lbl620_640PMQuantity->Visible = true;
+	//lbl640_700PMQuantity->Visible = true;
 
-	lbl700_720PMQuantity->Visible = true;
-	lbl720_740PMQuantity->Visible = true;
-	lbl740_800PMQuantity->Visible = true;
+	//lbl700_720PMQuantity->Visible = true;
+	//lbl720_740PMQuantity->Visible = true;
+	//lbl740_800PMQuantity->Visible = true;
 
-	lbl800_820PMQuantity->Visible = true;
-	lbl820_840PMQuantity->Visible = true;
-	lbl840_900PMQuantity->Visible = true;
+	//lbl800_820PMQuantity->Visible = true;
+	//lbl820_840PMQuantity->Visible = true;
+	//lbl840_900PMQuantity->Visible = true;
 
-	lbl900_920PMQuantity->Visible = true;
-	lbl920_940PMQuantity->Visible = true;
-	lbl940_1000PMQuantity->Visible = true;
+	//lbl900_920PMQuantity->Visible = true;
+	//lbl920_940PMQuantity->Visible = true;
+	//lbl940_1000PMQuantity->Visible = true;
 
-	lbl1000_1020PMQuantity->Visible = true;
-	lbl1020_1040PMQuantity->Visible = true;
-	lbl1040_1100PMQuantity->Visible = true;
+	//lbl1000_1020PMQuantity->Visible = true;
+	//lbl1020_1040PMQuantity->Visible = true;
+	//lbl1040_1100PMQuantity->Visible = true;
 
-	lbl1100_1120PMQuantity->Visible = true;
-	lbl1120_1140PMQuantity->Visible = true;
-	lbl1140_1200AMQuantity->Visible = true;
+	//lbl1100_1120PMQuantity->Visible = true;
+	//lbl1120_1140PMQuantity->Visible = true;
+	//lbl1140_1200AMQuantity->Visible = true;
 
 
-	///
-	///
-	///
-	chk500_520AM->Visible = false;
-	chk520_540AM->Visible = false;
-	chk540_600AM->Visible = false;
-	
-	chk600_620AM->Visible = false;
-	chk620_640AM->Visible = false;
-	chk640_700AM->Visible = false;
-	
-	chk700_720AM->Visible = false;
-	chk720_740AM->Visible = false;
-	chk740_800AM->Visible = false;
+	/////
+	/////
+	/////
+	//chk500_520AM->Visible = false;
+	//chk520_540AM->Visible = false;
+	//chk540_600AM->Visible = false;
+	//
+	//chk600_620AM->Visible = false;
+	//chk620_640AM->Visible = false;
+	//chk640_700AM->Visible = false;
+	//
+	//chk700_720AM->Visible = false;
+	//chk720_740AM->Visible = false;
+	//chk740_800AM->Visible = false;
 
-	chk800_820AM->Visible = false;
-	chk820_840AM->Visible = false;
-	chk840_900AM->Visible = false;
+	//chk800_820AM->Visible = false;
+	//chk820_840AM->Visible = false;
+	//chk840_900AM->Visible = false;
 
-	chk900_920AM->Visible = false;
-	chk920_940AM->Visible = false;
-	chk940_10000AM->Visible = false;
+	//chk900_920AM->Visible = false;
+	//chk920_940AM->Visible = false;
+	//chk940_10000AM->Visible = false;
 
-	chk1000_1020AM->Visible = false;
-	chk1020_1040AM->Visible = false;
-	chk1040_1100AM->Visible = false;
+	//chk1000_1020AM->Visible = false;
+	//chk1020_1040AM->Visible = false;
+	//chk1040_1100AM->Visible = false;
 
-	chk1100_1120AM->Visible = false;
-	chk1120_1140AM->Visible = false;
-	chk1140_1200PM->Visible = false;
+	//chk1100_1120AM->Visible = false;
+	//chk1120_1140AM->Visible = false;
+	//chk1140_1200PM->Visible = false;
 
-	chk100_120PM->Visible = false;
-	chk120_140PM->Visible = false;
-	chk140_200PM->Visible = false;
+	//chk100_120PM->Visible = false;
+	//chk120_140PM->Visible = false;
+	//chk140_200PM->Visible = false;
 
-	chk200_220PM->Visible = false;
-	chk220_240PM->Visible = false;
-	chk240_300PM->Visible = false;
+	//chk200_220PM->Visible = false;
+	//chk220_240PM->Visible = false;
+	//chk240_300PM->Visible = false;
 
-	chk300_320PM->Visible = false;
-	chk320_340PM->Visible = false;
-	chk340_400PM->Visible = false;
+	//chk300_320PM->Visible = false;
+	//chk320_340PM->Visible = false;
+	//chk340_400PM->Visible = false;
 
-	chk400_420PM->Visible = false;
-	chk420_440PM->Visible = false;
-	chk440_500PM->Visible = false;
+	//chk400_420PM->Visible = false;
+	//chk420_440PM->Visible = false;
+	//chk440_500PM->Visible = false;
 
-	chk500_520PM->Visible = false;
-	chk520_540PM->Visible = false;
-	chk540_600PM->Visible = false;
+	//chk500_520PM->Visible = false;
+	//chk520_540PM->Visible = false;
+	//chk540_600PM->Visible = false;
 
-	chk600_620PM->Visible = false;
-	chk620_640PM->Visible = false;
-	chk640_700PM->Visible = false;
+	//chk600_620PM->Visible = false;
+	//chk620_640PM->Visible = false;
+	//chk640_700PM->Visible = false;
 
-	chk700_720PM->Visible = false;
-	chk720_740PM->Visible = false;
-	chk740_800PM->Visible = false;
+	//chk700_720PM->Visible = false;
+	//chk720_740PM->Visible = false;
+	//chk740_800PM->Visible = false;
 
-	chk800_820PM->Visible = false;
-	chk820_840PM->Visible = false;
-	chk840_900PM->Visible = false;
+	//chk800_820PM->Visible = false;
+	//chk820_840PM->Visible = false;
+	//chk840_900PM->Visible = false;
 
-	chk900_920PM->Visible = false;
-	chk920_940PM->Visible = false;
-	chk940_1000PM->Visible = false;
+	//chk900_920PM->Visible = false;
+	//chk920_940PM->Visible = false;
+	//chk940_1000PM->Visible = false;
 
-	chk1000_1020PM->Visible = false;
-	chk1020_1040PM->Visible = false;
-	chk1040_1100PM->Visible = false;
+	//chk1000_1020PM->Visible = false;
+	//chk1020_1040PM->Visible = false;
+	//chk1040_1100PM->Visible = false;
 
-	chk1100_1120PM->Visible = false;
-	chk1120_1140PM->Visible = false;
-	chk1140_1200AM->Visible = false;
+	//chk1100_1120PM->Visible = false;
+	//chk1120_1140PM->Visible = false;
+	//chk1140_1200AM->Visible = false;
 
-	std::string time = "5:00 AM - 5:20 AM:";
-	//exec.checkAval();
-	//count # of people
-	myEvent.getNumOfUs(0);
-	//std::string attendees = time + #ofPeople.ToString();
+	//std::string time = "5:00 AM - 5:20 AM:";
+	////exec.checkAval();
+	////count # of people
+	//myEvent.getNumOfUs(0);
+	////std::string attendees = time + #ofPeople.ToString();
 
-	lbl500_520AMQuantity->Text = "5:00 AM - 5:20 AM:  " + myEvent.getNumOfUs(0).ToString();
-	lbl520_540AMQuantity->Text = "5:20 AM - 5:40 AM:  " + myEvent.getNumOfUs(1).ToString();
-	lbl540_600AMQuantity->Text = "5:40 AM - 6:00 AM:  " + myEvent.getNumOfUs(2).ToString();
+	//lbl500_520AMQuantity->Text = "5:00 AM - 5:20 AM:  " + myEvent.getNumOfUs(0).ToString();
+	//lbl520_540AMQuantity->Text = "5:20 AM - 5:40 AM:  " + myEvent.getNumOfUs(1).ToString();
+	//lbl540_600AMQuantity->Text = "5:40 AM - 6:00 AM:  " + myEvent.getNumOfUs(2).ToString();
 
-	lbl600_620AMQuantity->Text = "6:00 AM - 6:20 AM:  " + myEvent.getNumOfUs(3).ToString();
-	lbl620_640AMQuantity->Text = "6:20 AM - 6:40 AM:  " + myEvent.getNumOfUs(4).ToString();
-	lbl640_700AMQuantity->Text = "7:40 AM - 7:00 AM:  " + myEvent.getNumOfUs(5).ToString();
+	//lbl600_620AMQuantity->Text = "6:00 AM - 6:20 AM:  " + myEvent.getNumOfUs(3).ToString();
+	//lbl620_640AMQuantity->Text = "6:20 AM - 6:40 AM:  " + myEvent.getNumOfUs(4).ToString();
+	//lbl640_700AMQuantity->Text = "7:40 AM - 7:00 AM:  " + myEvent.getNumOfUs(5).ToString();
 
-	lbl700_720AMQuantity->Text = "7:00 AM - 7:20 AM:  " + myEvent.getNumOfUs(6).ToString();
-	lbl720_740AMQuantity->Text = "7:20 AM - 7:40 AM:  " + myEvent.getNumOfUs(7).ToString();
-	lbl740_800AMQuantity->Text = "7:40 AM - 8:00 AM:  " + myEvent.getNumOfUs(8).ToString();
+	//lbl700_720AMQuantity->Text = "7:00 AM - 7:20 AM:  " + myEvent.getNumOfUs(6).ToString();
+	//lbl720_740AMQuantity->Text = "7:20 AM - 7:40 AM:  " + myEvent.getNumOfUs(7).ToString();
+	//lbl740_800AMQuantity->Text = "7:40 AM - 8:00 AM:  " + myEvent.getNumOfUs(8).ToString();
 
-	lbl800_820AMQuantity->Text = "8:00 AM - 8:20 AM:  " + myEvent.getNumOfUs(9).ToString();
-	lbl820_840AMQuantity->Text = "8:20 AM - 8:40 AM:  " + myEvent.getNumOfUs(10).ToString();
-	lbl840_900AMQuantity->Text = "8:40 AM - 9:00 AM:  " + myEvent.getNumOfUs(11).ToString();
+	//lbl800_820AMQuantity->Text = "8:00 AM - 8:20 AM:  " + myEvent.getNumOfUs(9).ToString();
+	//lbl820_840AMQuantity->Text = "8:20 AM - 8:40 AM:  " + myEvent.getNumOfUs(10).ToString();
+	//lbl840_900AMQuantity->Text = "8:40 AM - 9:00 AM:  " + myEvent.getNumOfUs(11).ToString();
 
-	lbl900_920AMQuantity->Text = "9:00 AM - 9:20 AM:  " + myEvent.getNumOfUs(12).ToString();
-	lbl920_940AMQuantity->Text = "9:20 AM - 9:40 AM:  " + myEvent.getNumOfUs(13).ToString();
-	lbl940_1000AM7Quantity->Text = "9:40 AM - 10:00 AM:  " + myEvent.getNumOfUs(14).ToString();
+	//lbl900_920AMQuantity->Text = "9:00 AM - 9:20 AM:  " + myEvent.getNumOfUs(12).ToString();
+	//lbl920_940AMQuantity->Text = "9:20 AM - 9:40 AM:  " + myEvent.getNumOfUs(13).ToString();
+	//lbl940_1000AM7Quantity->Text = "9:40 AM - 10:00 AM:  " + myEvent.getNumOfUs(14).ToString();
 
-	lbl1000_1020AMQuantity->Text = "10:00 AM - 10:20 AM:  " + myEvent.getNumOfUs(15).ToString();
-	lbl1020_1040AMQuantity->Text = "10:20 AM - 10:40 AM:  " + myEvent.getNumOfUs(16).ToString();
-	lbl1040_1100AMQuantity->Text = "10:40 AM - 11:00 AM:  " + myEvent.getNumOfUs(17).ToString();
+	//lbl1000_1020AMQuantity->Text = "10:00 AM - 10:20 AM:  " + myEvent.getNumOfUs(15).ToString();
+	//lbl1020_1040AMQuantity->Text = "10:20 AM - 10:40 AM:  " + myEvent.getNumOfUs(16).ToString();
+	//lbl1040_1100AMQuantity->Text = "10:40 AM - 11:00 AM:  " + myEvent.getNumOfUs(17).ToString();
 
-	lbl1100_1120AMQuantity->Text = "11:00 AM - 11:20 AM:  " + myEvent.getNumOfUs(18).ToString();
-	lbl1120_1140AMQuantity->Text = "11:20 AM - 11:40 AM:  " + myEvent.getNumOfUs(19).ToString();
-	lbl1140_1200PMQuantity->Text = "11:40 AM - 12:00 PM:  " + myEvent.getNumOfUs(20).ToString();
+	//lbl1100_1120AMQuantity->Text = "11:00 AM - 11:20 AM:  " + myEvent.getNumOfUs(18).ToString();
+	//lbl1120_1140AMQuantity->Text = "11:20 AM - 11:40 AM:  " + myEvent.getNumOfUs(19).ToString();
+	//lbl1140_1200PMQuantity->Text = "11:40 AM - 12:00 PM:  " + myEvent.getNumOfUs(20).ToString();
 
-	lbl100_120PMQuantity->Text = "1:00 PM - 1:20 PM:  " + myEvent.getNumOfUs(21).ToString();
-	lbl120_140PMQuantity->Text = "1:20 PM - 1:40 PM:  " + myEvent.getNumOfUs(22).ToString();
-	lbl140_200PMQuantity->Text = "1:40 PM - 2:00 PM:  " + myEvent.getNumOfUs(23).ToString();
+	//lbl100_120PMQuantity->Text = "1:00 PM - 1:20 PM:  " + myEvent.getNumOfUs(21).ToString();
+	//lbl120_140PMQuantity->Text = "1:20 PM - 1:40 PM:  " + myEvent.getNumOfUs(22).ToString();
+	//lbl140_200PMQuantity->Text = "1:40 PM - 2:00 PM:  " + myEvent.getNumOfUs(23).ToString();
 
-	lbl200_220PMQuantity->Text = "2:00 PM - 2:20 PM:  " + myEvent.getNumOfUs(24).ToString();
-	lbl220_240PMQuantity->Text = "2:20 PM - 2:40 PM:  " + myEvent.getNumOfUs(25).ToString();
-	lbl240_300PMQuantity->Text = "2:40 PM - 3:00 PM:  " + myEvent.getNumOfUs(26).ToString();
+	//lbl200_220PMQuantity->Text = "2:00 PM - 2:20 PM:  " + myEvent.getNumOfUs(24).ToString();
+	//lbl220_240PMQuantity->Text = "2:20 PM - 2:40 PM:  " + myEvent.getNumOfUs(25).ToString();
+	//lbl240_300PMQuantity->Text = "2:40 PM - 3:00 PM:  " + myEvent.getNumOfUs(26).ToString();
 
-	lbl300_320PMQuantity->Text = "3:00 PM - 3:20 PM:  " + myEvent.getNumOfUs(27).ToString();
-	lbl320_340PMQuantity->Text = "3:20 PM - 3:40 PM:  " + myEvent.getNumOfUs(28).ToString();
-	lbl340_400PMQuantity->Text = "3:40 PM - 4:00 PM:  " + myEvent.getNumOfUs(29).ToString();
+	//lbl300_320PMQuantity->Text = "3:00 PM - 3:20 PM:  " + myEvent.getNumOfUs(27).ToString();
+	//lbl320_340PMQuantity->Text = "3:20 PM - 3:40 PM:  " + myEvent.getNumOfUs(28).ToString();
+	//lbl340_400PMQuantity->Text = "3:40 PM - 4:00 PM:  " + myEvent.getNumOfUs(29).ToString();
 
-	lbl400_420PMQuantity->Text = "4:00 PM - 4:20 PM:  " + myEvent.getNumOfUs(30).ToString();
-	lbl420_440PMQuantity->Text = "4:20 PM - 4:40 PM:  " + myEvent.getNumOfUs(31).ToString();
-	lbl440_500PMQuantity->Text = "4:40 PM - 5:00 PM:  " + myEvent.getNumOfUs(32).ToString();
+	//lbl400_420PMQuantity->Text = "4:00 PM - 4:20 PM:  " + myEvent.getNumOfUs(30).ToString();
+	//lbl420_440PMQuantity->Text = "4:20 PM - 4:40 PM:  " + myEvent.getNumOfUs(31).ToString();
+	//lbl440_500PMQuantity->Text = "4:40 PM - 5:00 PM:  " + myEvent.getNumOfUs(32).ToString();
 
-	lbl500_520PMQuantity->Text = "5:00 PM - 5:20 PM:  " + myEvent.getNumOfUs(33).ToString();
-	lbl520_540PMQuantity->Text = "5:20 PM - 5:40 PM:  " + myEvent.getNumOfUs(34).ToString();
-	lbl540_600PMQuantity->Text = "5:40 PM - 6:00 PM:  " + myEvent.getNumOfUs(35).ToString();
+	//lbl500_520PMQuantity->Text = "5:00 PM - 5:20 PM:  " + myEvent.getNumOfUs(33).ToString();
+	//lbl520_540PMQuantity->Text = "5:20 PM - 5:40 PM:  " + myEvent.getNumOfUs(34).ToString();
+	//lbl540_600PMQuantity->Text = "5:40 PM - 6:00 PM:  " + myEvent.getNumOfUs(35).ToString();
 
-	lbl600_620PMQuantity->Text = "6:00 PM - 6:20 PM:  " + myEvent.getNumOfUs(36).ToString();
-	lbl620_640PMQuantity->Text = "6:20 PM - 6:40 PM:  " + myEvent.getNumOfUs(37).ToString();
-	lbl640_700PMQuantity->Text = "6:40 PM - 7:00 PM:  " + myEvent.getNumOfUs(38).ToString();
+	//lbl600_620PMQuantity->Text = "6:00 PM - 6:20 PM:  " + myEvent.getNumOfUs(36).ToString();
+	//lbl620_640PMQuantity->Text = "6:20 PM - 6:40 PM:  " + myEvent.getNumOfUs(37).ToString();
+	//lbl640_700PMQuantity->Text = "6:40 PM - 7:00 PM:  " + myEvent.getNumOfUs(38).ToString();
 
-	lbl700_720PMQuantity->Text = "7:00 PM - 7:20 PM:  " + myEvent.getNumOfUs(39).ToString();
-	lbl720_740PMQuantity->Text = "7:20 PM - 7:40 PM:  " + myEvent.getNumOfUs(40).ToString();
-	lbl740_800PMQuantity->Text = "7:40 PM - 8:00 PM:  " + myEvent.getNumOfUs(41).ToString();
-	
-	lbl800_820PMQuantity->Text = "8:00 PM - 8:20 PM:  " + myEvent.getNumOfUs(42).ToString();
-	lbl820_840PMQuantity->Text = "8:20 PM - 8:40 PM:  " + myEvent.getNumOfUs(43).ToString();
-	lbl840_900PMQuantity->Text = "8:40 PM - 9:00 PM:  " + myEvent.getNumOfUs(44).ToString();
+	//lbl700_720PMQuantity->Text = "7:00 PM - 7:20 PM:  " + myEvent.getNumOfUs(39).ToString();
+	//lbl720_740PMQuantity->Text = "7:20 PM - 7:40 PM:  " + myEvent.getNumOfUs(40).ToString();
+	//lbl740_800PMQuantity->Text = "7:40 PM - 8:00 PM:  " + myEvent.getNumOfUs(41).ToString();
+	//
+	//lbl800_820PMQuantity->Text = "8:00 PM - 8:20 PM:  " + myEvent.getNumOfUs(42).ToString();
+	//lbl820_840PMQuantity->Text = "8:20 PM - 8:40 PM:  " + myEvent.getNumOfUs(43).ToString();
+	//lbl840_900PMQuantity->Text = "8:40 PM - 9:00 PM:  " + myEvent.getNumOfUs(44).ToString();
 
-	lbl900_920PMQuantity->Text = "9:00 PM - 9:20 PM:  " + myEvent.getNumOfUs(45).ToString();
-	lbl920_940PMQuantity->Text = "9:20 PM - 9:40 PM:  " + myEvent.getNumOfUs(46).ToString();
-	lbl940_1000PMQuantity->Text = "9:40 PM - 10:00 PM:  " + myEvent.getNumOfUs(47).ToString();
+	//lbl900_920PMQuantity->Text = "9:00 PM - 9:20 PM:  " + myEvent.getNumOfUs(45).ToString();
+	//lbl920_940PMQuantity->Text = "9:20 PM - 9:40 PM:  " + myEvent.getNumOfUs(46).ToString();
+	//lbl940_1000PMQuantity->Text = "9:40 PM - 10:00 PM:  " + myEvent.getNumOfUs(47).ToString();
 
-	lbl1000_1020PMQuantity->Text = "10:00 PM - 10:20 PM:  " + myEvent.getNumOfUs(48).ToString();
-	lbl1020_1040PMQuantity->Text = "10:20 PM - 10:40 PM:  " + myEvent.getNumOfUs(49).ToString();
-	lbl1040_1100PMQuantity->Text = "10:40 PM - 11:00 PM:  " + myEvent.getNumOfUs(50).ToString();
+	//lbl1000_1020PMQuantity->Text = "10:00 PM - 10:20 PM:  " + myEvent.getNumOfUs(48).ToString();
+	//lbl1020_1040PMQuantity->Text = "10:20 PM - 10:40 PM:  " + myEvent.getNumOfUs(49).ToString();
+	//lbl1040_1100PMQuantity->Text = "10:40 PM - 11:00 PM:  " + myEvent.getNumOfUs(50).ToString();
 
-	lbl1100_1120PMQuantity->Text = "11:00 PM - 11:20 PM:  " + myEvent.getNumOfUs(51).ToString();
-	lbl1120_1140PMQuantity->Text = "11:20 PM - 11:40 PM:  " + myEvent.getNumOfUs(52).ToString();
-	lbl1140_1200AMQuantity->Text = "11:40 PM - 12:00 AM:  " + myEvent.getNumOfUs(53).ToString();
+	//lbl1100_1120PMQuantity->Text = "11:00 PM - 11:20 PM:  " + myEvent.getNumOfUs(51).ToString();
+	//lbl1120_1140PMQuantity->Text = "11:20 PM - 11:40 PM:  " + myEvent.getNumOfUs(52).ToString();
+	//lbl1140_1200AMQuantity->Text = "11:40 PM - 12:00 AM:  " + myEvent.getNumOfUs(53).ToString();
 
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
