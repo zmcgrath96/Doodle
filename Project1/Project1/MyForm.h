@@ -114,6 +114,9 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 	private: System::Windows::Forms::Button^  btnMultiDay;
 	private: System::Windows::Forms::GroupBox^  grpMultiDay;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar2;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Button^  submitMultiDay;
+	private: System::Windows::Forms::Button^  cancelMultiDay;
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -178,6 +181,9 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->grpMultiDay = (gcnew System::Windows::Forms::GroupBox());
+			this->cancelMultiDay = (gcnew System::Windows::Forms::Button());
+			this->submitMultiDay = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->monthCalendar2 = (gcnew System::Windows::Forms::MonthCalendar());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
@@ -701,20 +707,55 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// grpMultiDay
 			// 
+			this->grpMultiDay->Controls->Add(this->cancelMultiDay);
+			this->grpMultiDay->Controls->Add(this->submitMultiDay);
+			this->grpMultiDay->Controls->Add(this->label3);
 			this->grpMultiDay->Controls->Add(this->monthCalendar2);
 			this->grpMultiDay->Location = System::Drawing::Point(492, 79);
 			this->grpMultiDay->Name = L"grpMultiDay";
 			this->grpMultiDay->Size = System::Drawing::Size(432, 488);
 			this->grpMultiDay->TabIndex = 41;
 			this->grpMultiDay->TabStop = false;
-			this->grpMultiDay->Enter += gcnew System::EventHandler(this, &MyForm::grpMultiDay_Enter);
 			this->grpMultiDay->Visible = false;
+			this->grpMultiDay->Enter += gcnew System::EventHandler(this, &MyForm::grpMultiDay_Enter);
+			// 
+			// cancelMultiDay
+			// 
+			this->cancelMultiDay->Location = System::Drawing::Point(246, 414);
+			this->cancelMultiDay->Name = L"cancelMultiDay";
+			this->cancelMultiDay->Size = System::Drawing::Size(84, 32);
+			this->cancelMultiDay->TabIndex = 3;
+			this->cancelMultiDay->Text = L"Cancel";
+			this->cancelMultiDay->UseVisualStyleBackColor = true;
+			this->cancelMultiDay->Click += gcnew System::EventHandler(this, &MyForm::cancelMultiDay_Click);
+			// 
+			// submitMultiDay
+			// 
+			this->submitMultiDay->Location = System::Drawing::Point(103, 414);
+			this->submitMultiDay->Name = L"submitMultiDay";
+			this->submitMultiDay->Size = System::Drawing::Size(90, 32);
+			this->submitMultiDay->TabIndex = 2;
+			this->submitMultiDay->Text = L"Submit";
+			this->submitMultiDay->UseVisualStyleBackColor = true;
+			this->submitMultiDay->Click += gcnew System::EventHandler(this, &MyForm::submitMultiDay_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(142, 29);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(149, 17);
+			this->label3->TabIndex = 1;
+			this->label3->Text = L"Select Additional Days";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
 			// monthCalendar2
 			// 
 			this->monthCalendar2->Location = System::Drawing::Point(85, 136);
+			this->monthCalendar2->MaxSelectionCount = 21;
 			this->monthCalendar2->Name = L"monthCalendar2";
 			this->monthCalendar2->TabIndex = 0;
+			this->monthCalendar2->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar2_DateChanged);
 			// 
 			// MyForm
 			// 
@@ -749,6 +790,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpViewYourEvents->PerformLayout();
 			this->grpEventInfo->ResumeLayout(false);
 			this->grpMultiDay->ResumeLayout(false);
+			this->grpMultiDay->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -2609,75 +2651,75 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	//lbl500_520AMQuantity->Visible = true;
 	//lbl520_540AMQuantity->Visible = true;
 	//lbl540_600AMQuantity->Visible = true;
-
+	//
 	//lbl600_620AMQuantity->Visible = true;
 	//lbl620_640AMQuantity->Visible = true;
 	//lbl640_700AMQuantity->Visible = true;
-
+	//
 	//lbl700_720AMQuantity->Visible = true;
 	//lbl720_740AMQuantity->Visible = true;
 	//lbl740_800AMQuantity->Visible = true;
-
+	//
 	//lbl800_820AMQuantity->Visible = true;
 	//lbl820_840AMQuantity->Visible = true;
 	//lbl840_900AMQuantity->Visible = true;
-
+	//
 	//lbl900_920AMQuantity->Visible = true;
 	//lbl920_940AMQuantity->Visible = true;
 	//lbl940_1000AM7Quantity->Visible = true;
-
+	//
 	//lbl1000_1020AMQuantity->Visible = true;
 	//lbl1020_1040AMQuantity->Visible = true;
 	//lbl1040_1100AMQuantity->Visible = true;
-
+	//
 	//lbl1100_1120AMQuantity->Visible = true;
 	//lbl1120_1140AMQuantity->Visible = true;
 	//lbl1140_1200PMQuantity->Visible = true;
-
+	//
 	//lbl100_120PMQuantity->Visible = true;
 	//lbl120_140PMQuantity->Visible = true;
 	//lbl140_200PMQuantity->Visible = true;
-
+	//
 	//lbl200_220PMQuantity->Visible = true;
 	//lbl220_240PMQuantity->Visible = true;
 	//lbl240_300PMQuantity->Visible = true;
-
+	//
 	//lbl300_320PMQuantity->Visible = true;
 	//lbl320_340PMQuantity->Visible = true;
 	//lbl340_400PMQuantity->Visible = true;
-
+	//
 	//lbl400_420PMQuantity->Visible = true;
 	//lbl420_440PMQuantity->Visible = true;
 	//lbl440_500PMQuantity->Visible = true;
-
+	//
 	//lbl500_520PMQuantity->Visible = true;
 	//lbl520_540PMQuantity->Visible = true;
 	//lbl540_600PMQuantity->Visible = true;
-
+	//
 	//lbl600_620PMQuantity->Visible = true;
 	//lbl620_640PMQuantity->Visible = true;
 	//lbl640_700PMQuantity->Visible = true;
-
+	//
 	//lbl700_720PMQuantity->Visible = true;
 	//lbl720_740PMQuantity->Visible = true;
 	//lbl740_800PMQuantity->Visible = true;
-
+	//
 	//lbl800_820PMQuantity->Visible = true;
 	//lbl820_840PMQuantity->Visible = true;
 	//lbl840_900PMQuantity->Visible = true;
-
+	//
 	//lbl900_920PMQuantity->Visible = true;
 	//lbl920_940PMQuantity->Visible = true;
 	//lbl940_1000PMQuantity->Visible = true;
-
+	//
 	//lbl1000_1020PMQuantity->Visible = true;
 	//lbl1020_1040PMQuantity->Visible = true;
 	//lbl1040_1100PMQuantity->Visible = true;
-
+	//
 	//lbl1100_1120PMQuantity->Visible = true;
 	//lbl1120_1140PMQuantity->Visible = true;
 	//lbl1140_1200AMQuantity->Visible = true;
-
+	
 
 	/////
 	/////
@@ -2693,63 +2735,63 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	//chk700_720AM->Visible = false;
 	//chk720_740AM->Visible = false;
 	//chk740_800AM->Visible = false;
-
+	//
 	//chk800_820AM->Visible = false;
 	//chk820_840AM->Visible = false;
 	//chk840_900AM->Visible = false;
-
+	//
 	//chk900_920AM->Visible = false;
 	//chk920_940AM->Visible = false;
 	//chk940_10000AM->Visible = false;
-
+	//
 	//chk1000_1020AM->Visible = false;
 	//chk1020_1040AM->Visible = false;
 	//chk1040_1100AM->Visible = false;
-
+	//
 	//chk1100_1120AM->Visible = false;
 	//chk1120_1140AM->Visible = false;
 	//chk1140_1200PM->Visible = false;
-
+	//
 	//chk100_120PM->Visible = false;
 	//chk120_140PM->Visible = false;
 	//chk140_200PM->Visible = false;
-
+	//
 	//chk200_220PM->Visible = false;
 	//chk220_240PM->Visible = false;
 	//chk240_300PM->Visible = false;
-
+	//
 	//chk300_320PM->Visible = false;
 	//chk320_340PM->Visible = false;
 	//chk340_400PM->Visible = false;
-
+	//
 	//chk400_420PM->Visible = false;
 	//chk420_440PM->Visible = false;
 	//chk440_500PM->Visible = false;
-
+	//
 	//chk500_520PM->Visible = false;
 	//chk520_540PM->Visible = false;
 	//chk540_600PM->Visible = false;
-
+	//
 	//chk600_620PM->Visible = false;
 	//chk620_640PM->Visible = false;
 	//chk640_700PM->Visible = false;
-
+	//
 	//chk700_720PM->Visible = false;
 	//chk720_740PM->Visible = false;
 	//chk740_800PM->Visible = false;
-
+	//
 	//chk800_820PM->Visible = false;
 	//chk820_840PM->Visible = false;
 	//chk840_900PM->Visible = false;
-
+	//
 	//chk900_920PM->Visible = false;
 	//chk920_940PM->Visible = false;
 	//chk940_1000PM->Visible = false;
-
+	//
 	//chk1000_1020PM->Visible = false;
 	//chk1020_1040PM->Visible = false;
 	//chk1040_1100PM->Visible = false;
-
+	//
 	//chk1100_1120PM->Visible = false;
 	//chk1120_1140PM->Visible = false;
 	//chk1140_1200AM->Visible = false;
@@ -2759,59 +2801,59 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	////count # of people
 	//myEvent.getNumOfUs(0);
 	////std::string attendees = time + #ofPeople.ToString();
-
+	
 	//lbl500_520AMQuantity->Text = "5:00 AM - 5:20 AM:  " + myEvent.getNumOfUs(0).ToString();
 	//lbl520_540AMQuantity->Text = "5:20 AM - 5:40 AM:  " + myEvent.getNumOfUs(1).ToString();
 	//lbl540_600AMQuantity->Text = "5:40 AM - 6:00 AM:  " + myEvent.getNumOfUs(2).ToString();
-
+	//
 	//lbl600_620AMQuantity->Text = "6:00 AM - 6:20 AM:  " + myEvent.getNumOfUs(3).ToString();
 	//lbl620_640AMQuantity->Text = "6:20 AM - 6:40 AM:  " + myEvent.getNumOfUs(4).ToString();
 	//lbl640_700AMQuantity->Text = "7:40 AM - 7:00 AM:  " + myEvent.getNumOfUs(5).ToString();
-
+	//
 	//lbl700_720AMQuantity->Text = "7:00 AM - 7:20 AM:  " + myEvent.getNumOfUs(6).ToString();
 	//lbl720_740AMQuantity->Text = "7:20 AM - 7:40 AM:  " + myEvent.getNumOfUs(7).ToString();
 	//lbl740_800AMQuantity->Text = "7:40 AM - 8:00 AM:  " + myEvent.getNumOfUs(8).ToString();
-
+	//
 	//lbl800_820AMQuantity->Text = "8:00 AM - 8:20 AM:  " + myEvent.getNumOfUs(9).ToString();
 	//lbl820_840AMQuantity->Text = "8:20 AM - 8:40 AM:  " + myEvent.getNumOfUs(10).ToString();
 	//lbl840_900AMQuantity->Text = "8:40 AM - 9:00 AM:  " + myEvent.getNumOfUs(11).ToString();
-
+	//
 	//lbl900_920AMQuantity->Text = "9:00 AM - 9:20 AM:  " + myEvent.getNumOfUs(12).ToString();
 	//lbl920_940AMQuantity->Text = "9:20 AM - 9:40 AM:  " + myEvent.getNumOfUs(13).ToString();
 	//lbl940_1000AM7Quantity->Text = "9:40 AM - 10:00 AM:  " + myEvent.getNumOfUs(14).ToString();
-
+	//
 	//lbl1000_1020AMQuantity->Text = "10:00 AM - 10:20 AM:  " + myEvent.getNumOfUs(15).ToString();
 	//lbl1020_1040AMQuantity->Text = "10:20 AM - 10:40 AM:  " + myEvent.getNumOfUs(16).ToString();
 	//lbl1040_1100AMQuantity->Text = "10:40 AM - 11:00 AM:  " + myEvent.getNumOfUs(17).ToString();
-
+	//
 	//lbl1100_1120AMQuantity->Text = "11:00 AM - 11:20 AM:  " + myEvent.getNumOfUs(18).ToString();
 	//lbl1120_1140AMQuantity->Text = "11:20 AM - 11:40 AM:  " + myEvent.getNumOfUs(19).ToString();
 	//lbl1140_1200PMQuantity->Text = "11:40 AM - 12:00 PM:  " + myEvent.getNumOfUs(20).ToString();
-
+	//
 	//lbl100_120PMQuantity->Text = "1:00 PM - 1:20 PM:  " + myEvent.getNumOfUs(21).ToString();
 	//lbl120_140PMQuantity->Text = "1:20 PM - 1:40 PM:  " + myEvent.getNumOfUs(22).ToString();
 	//lbl140_200PMQuantity->Text = "1:40 PM - 2:00 PM:  " + myEvent.getNumOfUs(23).ToString();
-
+	//
 	//lbl200_220PMQuantity->Text = "2:00 PM - 2:20 PM:  " + myEvent.getNumOfUs(24).ToString();
 	//lbl220_240PMQuantity->Text = "2:20 PM - 2:40 PM:  " + myEvent.getNumOfUs(25).ToString();
 	//lbl240_300PMQuantity->Text = "2:40 PM - 3:00 PM:  " + myEvent.getNumOfUs(26).ToString();
-
+	//
 	//lbl300_320PMQuantity->Text = "3:00 PM - 3:20 PM:  " + myEvent.getNumOfUs(27).ToString();
 	//lbl320_340PMQuantity->Text = "3:20 PM - 3:40 PM:  " + myEvent.getNumOfUs(28).ToString();
 	//lbl340_400PMQuantity->Text = "3:40 PM - 4:00 PM:  " + myEvent.getNumOfUs(29).ToString();
-
+	//
 	//lbl400_420PMQuantity->Text = "4:00 PM - 4:20 PM:  " + myEvent.getNumOfUs(30).ToString();
 	//lbl420_440PMQuantity->Text = "4:20 PM - 4:40 PM:  " + myEvent.getNumOfUs(31).ToString();
 	//lbl440_500PMQuantity->Text = "4:40 PM - 5:00 PM:  " + myEvent.getNumOfUs(32).ToString();
-
+	//
 	//lbl500_520PMQuantity->Text = "5:00 PM - 5:20 PM:  " + myEvent.getNumOfUs(33).ToString();
 	//lbl520_540PMQuantity->Text = "5:20 PM - 5:40 PM:  " + myEvent.getNumOfUs(34).ToString();
 	//lbl540_600PMQuantity->Text = "5:40 PM - 6:00 PM:  " + myEvent.getNumOfUs(35).ToString();
-
+	//
 	//lbl600_620PMQuantity->Text = "6:00 PM - 6:20 PM:  " + myEvent.getNumOfUs(36).ToString();
 	//lbl620_640PMQuantity->Text = "6:20 PM - 6:40 PM:  " + myEvent.getNumOfUs(37).ToString();
 	//lbl640_700PMQuantity->Text = "6:40 PM - 7:00 PM:  " + myEvent.getNumOfUs(38).ToString();
-
+	//
 	//lbl700_720PMQuantity->Text = "7:00 PM - 7:20 PM:  " + myEvent.getNumOfUs(39).ToString();
 	//lbl720_740PMQuantity->Text = "7:20 PM - 7:40 PM:  " + myEvent.getNumOfUs(40).ToString();
 	//lbl740_800PMQuantity->Text = "7:40 PM - 8:00 PM:  " + myEvent.getNumOfUs(41).ToString();
@@ -2819,15 +2861,15 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	//lbl800_820PMQuantity->Text = "8:00 PM - 8:20 PM:  " + myEvent.getNumOfUs(42).ToString();
 	//lbl820_840PMQuantity->Text = "8:20 PM - 8:40 PM:  " + myEvent.getNumOfUs(43).ToString();
 	//lbl840_900PMQuantity->Text = "8:40 PM - 9:00 PM:  " + myEvent.getNumOfUs(44).ToString();
-
+	//
 	//lbl900_920PMQuantity->Text = "9:00 PM - 9:20 PM:  " + myEvent.getNumOfUs(45).ToString();
 	//lbl920_940PMQuantity->Text = "9:20 PM - 9:40 PM:  " + myEvent.getNumOfUs(46).ToString();
 	//lbl940_1000PMQuantity->Text = "9:40 PM - 10:00 PM:  " + myEvent.getNumOfUs(47).ToString();
-
+	//
 	//lbl1000_1020PMQuantity->Text = "10:00 PM - 10:20 PM:  " + myEvent.getNumOfUs(48).ToString();
 	//lbl1020_1040PMQuantity->Text = "10:20 PM - 10:40 PM:  " + myEvent.getNumOfUs(49).ToString();
 	//lbl1040_1100PMQuantity->Text = "10:40 PM - 11:00 PM:  " + myEvent.getNumOfUs(50).ToString();
-
+	//
 	//lbl1100_1120PMQuantity->Text = "11:00 PM - 11:20 PM:  " + myEvent.getNumOfUs(51).ToString();
 	//lbl1120_1140PMQuantity->Text = "11:20 PM - 11:40 PM:  " + myEvent.getNumOfUs(52).ToString();
 	//lbl1140_1200AMQuantity->Text = "11:40 PM - 12:00 AM:  " + myEvent.getNumOfUs(53).ToString();
@@ -2848,7 +2890,9 @@ private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, Syst
 }
 private: System::Void dateTimePicker2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 }
+		 //
 		 //// If close button is pressed ////
+		 //
 private: System::Void MyForm_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e)
 {
 	System::Windows::Forms::DialogResult result = MessageBox::Show(
@@ -2870,7 +2914,9 @@ private: System::Void MyForm_FormClosing(System::Object^  sender, System::Window
 		e->Cancel = true;
 	}
 }
+		 //
 		 //// Multiple Days Button ////
+		 //
 private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
 	grpAvailability->Visible = false;
@@ -2879,7 +2925,38 @@ private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventAr
 		 //// Schedule Multiple Days Group ////
 private: System::Void grpMultiDay_Enter(System::Object^  sender, System::EventArgs^  e)
 {
-
 }
+private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+		 //
+		 //// Calendar for Multiple Days ////
+		 //
+private: System::Void monthCalendar2_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e)
+{
+	//
+	// TODO : Have calendar grey out initial day chosen and allow user to select multiple days
+	//
+	
+}
+		 //
+		 //// Submit Multiple Days ////
+		 //
+private: System::Void submitMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	grpMode->Visible = true;
+
+	//
+	// TODO : Submit days selected with previous times chosen
+	//
+}
+		 //
+		 //// Cancel Multiple Days ////
+		 //
+private: System::Void cancelMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	grpAvailability->Visible = true;
+	grpMultiDay->Visible = false;
+}
+
 };
 }
