@@ -1,7 +1,6 @@
 #include <algorithm>
 #include "Event.h"
 
-using namespace std;
 
 Event::Event(){}
 
@@ -10,7 +9,7 @@ Event::~Event(){
 }
 
 
-Event::Event(Day startDay, Day endDay, string name, User admin)
+Event::Event(Day startDay, Day endDay, std::string name, User admin)
 	
 {
 	m_startDay = startDay;
@@ -32,7 +31,7 @@ bool Event::addTask(Task task){
 	return true;
 }
 
-bool Event::addUser(string uName) {
+bool Event::addUser(std::string uName) {
 	User temp = User(uName);
 	m_user.push_back(temp);
 	// If we have hit size of array, double it
@@ -57,7 +56,7 @@ Day Event::getEndDay(){
 	return m_endDay;
 }
 
-string Event::getName(){
+std::string Event::getName(){
 	return m_name;
 }
 
@@ -91,7 +90,7 @@ void Event::setEndDay(Day end) {
 	m_endDay = end;
 }
 
-void Event::setName(string name) {
+void Event::setName(std::string name) {
 	m_name = name;
 }
 

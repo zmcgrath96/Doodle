@@ -8,7 +8,6 @@
 #include "Day.h"
 #include "Task.h"
 
-using namespace std;
 
 class Event
 {
@@ -33,7 +32,7 @@ class Event
 		*	@param Day object, Day object, string, User object
 		*	@return None
 		*/
-	Event(Day startDay, Day endDay, string name, User admin);
+	Event(Day startDay, Day endDay, std::string name, User admin);
 
 	/**
 		*	addTask
@@ -47,7 +46,7 @@ class Event
 	*	@param string name
 	*	@return true
 	*/
-	bool addUser(string uName);
+	bool addUser(std::string uName);
 
 	/**
 		*	getStartDay
@@ -69,7 +68,7 @@ class Event
 		*	@param none
 		*	@return String
 		*/
-	string getName();
+	std::string getName();
 
 	/**
 		*	getAdmin
@@ -128,7 +127,7 @@ class Event
 	 * setName
 	 * @param String name
 	 */
-	void setName(string name);
+	void setName(std::string name);
 
 
 
@@ -139,7 +138,7 @@ class Event
 	private:
 		Day m_startDay;
 		Day m_endDay;
-		string m_name;
+		std::string m_name;
 		User m_admin;
 		std::vector<Task> m_task;
 		int m_numTasks;

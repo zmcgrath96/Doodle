@@ -1102,7 +1102,7 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		* Event information and option to modify availability will be displayed on the next page
 		*/
 		lblEventName->Text = gcnew String(myEvent.getName().c_str());
-		std::string date = to_string(myEvent.getStartDay().getMonth()) + "/" + to_string(myEvent.getStartDay().getDay()) + "/" + to_string(myEvent.getStartDay().getYear());
+		std::string date = std::to_string(myEvent.getStartDay().getMonth()) + "/" + std::to_string(myEvent.getStartDay().getDay()) + "/" + std::to_string(myEvent.getStartDay().getYear());
 		lblEventDate->Text = gcnew String(date.c_str());
 		grpViewYourEvents->Visible = false;
 		grpEventInfo->Visible = true;
