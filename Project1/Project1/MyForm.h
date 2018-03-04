@@ -771,20 +771,16 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 
 	private: System::Void monthCalendar1_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
 		//Display the dates for selected range
-		label1->Text = "Dates Selected from :";// + (MonthCalendar1.SelectionRange.Start() + " to " + MonthCalendar1.SelectionRange.End());
-		//std::cout>>label1.text;
 
 		//To display single selected of date
-		//MonthCalendar1.MaxSelectionCount = 1;
 
 		//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
-		label2->Text = "Date Selected :";// +MonthCalendar1.SelectionRange.Start;
-
-		//OutputDebugString(Label1.text);
-		//OutputDebugString("HERE");
-
+		textBox4->Text = monthCalendar1->SelectionRange->Start.ToShortDateString();
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
-		//std::string newstr = gcnew String(date.c_str());
+		
+		// Pull the current date
+		DateTime localDate = DateTime::Now;
+		std::string prevPast = msclr::interop::marshal_as<std::string>(localDate.ToShortDateString());
 
 		std::string newDate;// = date.substr(0, 4);
 		
@@ -803,12 +799,20 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 		}
 
 		//TODO create a check that wont let you create a date in the past
+		// The following are true if selected date is larger than current (All must be true to proceed)
+		bool yComp = (stoi(date.substr(6,4)) > stoi(prevPast.substr(6,4)));
+		bool mComp = (stoi(date.substr(0,2)) > stoi(prevPast.substr(0,2)));;
+		bool dComp = (stoi(date.substr(3,2)) > stoi(prevPast.substr(3,2)));;
 
 		//std::string christmas "12/25";
 		textBox5->Text = gcnew String(newDate.c_str());
 		if (newDate == "12/25" || newDate == "7/4" || newDate == "1/1")
 		{
 			MessageBox::Show("You may not schedule an event on this date.");
+			textBox4->Clear();
+		}
+		else if (!(yComp && mComp && dComp)) {
+			MessageBox::Show("You cannot schedule an event in the past.");
 			textBox4->Clear();
 		}
 	}
