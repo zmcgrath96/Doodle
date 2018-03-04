@@ -19,7 +19,11 @@ Returns the name of the user
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="8">
+=======
+<member name="M:Day.#ctor" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="10">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.#ctor" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="10">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -29,7 +33,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="15">
+=======
+<member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="17">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="17">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -39,7 +47,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.getMonth" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="22">
+=======
+<member name="M:Day.getMonth" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="24">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.getMonth" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="24">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -49,7 +61,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.getDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="29">
+=======
+<member name="M:Day.getDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="31">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.getDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="31">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -59,7 +75,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.getYear" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="36">
+=======
+<member name="M:Day.getYear" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="38">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.getYear" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="38">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -69,7 +89,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Day.getTime" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="43">
+=======
+<member name="M:Day.getTime" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="45">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Day.getTime" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\day.h" line="45">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -97,7 +121,11 @@ Does nothing
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="15">
+=======
+<member name="M:Event.#ctor" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="16">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.#ctor" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="16">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -107,7 +135,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.Dispose" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="23">
+=======
+<member name="M:Event.Dispose" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="24">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.Dispose" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="24">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -117,7 +149,11 @@ Destroys the Event
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.#ctor(Day,Day,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,User)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="30">
+=======
+<member name="M:Event.#ctor(Day,Day,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,User)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="31">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.#ctor(Day,Day,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,User)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="31">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -127,7 +163,11 @@ Constructor
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.addTask(Task)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="37">
+=======
+<member name="M:Event.addTask(Task)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="38">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.addTask(Task)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="38">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -137,7 +177,11 @@ addTask
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.addUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="44">
+=======
+<member name="M:Event.addUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="45">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.addUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="45">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -147,7 +191,11 @@ addUser
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getStartDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="51">
+=======
+<member name="M:Event.getStartDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="52">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getStartDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="52">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -157,7 +205,11 @@ getStartDay
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getEndDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="58">
+=======
+<member name="M:Event.getEndDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="59">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getEndDay" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="59">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -167,7 +219,11 @@ getEndDay
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getName" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="66">
+=======
+<member name="M:Event.getName" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="67">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getName" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="67">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -177,7 +233,11 @@ getName
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getAdmin" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="73">
+=======
+<member name="M:Event.getAdmin" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="74">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getAdmin" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="74">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -187,7 +247,11 @@ getAdmin
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getTasks" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="80">
+=======
+<member name="M:Event.getTasks" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="81">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getTasks" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="81">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -197,7 +261,11 @@ getTasks
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getNumTasks" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="87">
+=======
+<member name="M:Event.getNumTasks" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="88">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getNumTasks" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="88">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -207,7 +275,11 @@ getNumTaks
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getUsers" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="94">
+=======
+<member name="M:Event.getUsers" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="95">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getUsers" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="95">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -217,7 +289,11 @@ getUsers
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.getNumUsers" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="101">
+=======
+<member name="M:Event.getNumUsers" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="102">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.getNumUsers" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="102">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -227,7 +303,11 @@ getNumUsers
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="108">
+=======
+<member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="109">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="109">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -236,7 +316,11 @@ setStartDay
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="114">
+=======
+<member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="115">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="115">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -245,7 +329,11 @@ setEndDay
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.setAdmin(User)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="120">
+=======
+<member name="M:Event.setAdmin(User)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="121">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.setAdmin(User)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="121">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
@@ -254,7 +342,11 @@ setAdmin
 
 </member>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="126">
+=======
+<member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="127">
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 <member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\matthew\documents\github\doodle\project1\project1\event.h" line="127">
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h

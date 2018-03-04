@@ -2459,8 +2459,12 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		*/
 		lblEventName->Text = gcnew String(myEvent.getName().c_str());
 <<<<<<< HEAD
+<<<<<<< HEAD
 		std::string date = std::to_string(myEvent.getStartDay().getMonth()) + "/" + std::to_string(myEvent.getStartDay().getDay()) + "/" + std::to_string(myEvent.getStartDay().getYear());
 		lblEventDate->Text = gcnew String(date.c_str());
+=======
+		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 =======
 		lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h

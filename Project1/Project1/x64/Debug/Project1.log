@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿  MyForm.cpp
 Event.obj : error LNK2028: unresolved token (0A0004B4) "public: __cdecl Task::Task(void)" (??0Task@@$$FQEAA@XZ) referenced in function "public: __cdecl Event::Event(class Day,class Day,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class User)" (??0Event@@$$FQEAA@VDay@@0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@VUser@@@Z)
 MyForm.obj : error LNK2028: unresolved token (0A0005B1) "public: class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > __cdecl Executive::checkAval(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?checkAval@Executive@@$$FQEAA?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z) referenced in function "private: void __clrcall Project1::MyForm::btnEditEvents_Click(class System::Object ^,class System::EventArgs ^)" (?btnEditEvents_Click@MyForm@Project1@@$$FAE$AAMXPE$AAVObject@System@@PE$AAVEventArgs@4@@Z)
@@ -8,6 +9,8 @@ MyForm.obj : error LNK2019: unresolved external symbol "public: class std::basic
 MyForm.obj : error LNK2019: unresolved external symbol "public: class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > __cdecl Executive::checkAval(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?checkAval@Executive@@$$FQEAA?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z) referenced in function "private: void __clrcall Project1::MyForm::btnEditEvents_Click(class System::Object ^,class System::EventArgs ^)" (?btnEditEvents_Click@MyForm@Project1@@$$FAE$AAMXPE$AAVObject@System@@PE$AAVEventArgs@4@@Z)
 C:\Users\Zach\Documents\GitHub\Doodle\Project1\Project1\x64\Debug\Project1.exe : fatal error LNK1120: 6 unresolved externals
 =======
+=======
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
 ﻿  Executive.cpp
 Executive.cpp(30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 Executive.cpp(30): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
@@ -169,4 +172,7 @@ c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1007): error
 c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1008): error C2065: 'lbl720_740PMQuantity': undeclared identifier
 c:\users\matthew\documents\github\doodle\project1\project1\MyForm.h(1008): fatal error C1003: error count exceeds 100; stopping compilation
   Generating Code...
+<<<<<<< HEAD
+>>>>>>> parent of c8f42a8... Tried fixing myForm.h
+=======
 >>>>>>> parent of c8f42a8... Tried fixing myForm.h
