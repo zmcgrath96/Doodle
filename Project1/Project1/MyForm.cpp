@@ -4,7 +4,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
-void Main(cli::array<System::String ^> ^args) {
+void Main(array<String^>^ args) {
 	exec.read();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
