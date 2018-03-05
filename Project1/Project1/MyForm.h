@@ -16,6 +16,7 @@
 
 Executive exec;
 
+
 namespace Project1 {
 
 	using namespace System;
@@ -507,9 +508,9 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
 				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
-					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
-					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
-					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
+					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
+					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
 			this->comboBox2->Location = System::Drawing::Point(84, 296);
 			this->comboBox2->Name = L"comboBox2";
@@ -531,9 +532,9 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
 				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
-					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
-					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
-					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
+					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
+					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
 			this->comboBox1->Location = System::Drawing::Point(82, 122);
 			this->comboBox1->Name = L"comboBox1";
@@ -842,9 +843,6 @@ private: System::Windows::Forms::Label^  label2;
 #include <string>
 	
 	// On form load, read in events
-	void System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e){
-		exec.read();
-	}
 
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		grpCreateEvent->Visible = true;
@@ -976,6 +974,8 @@ private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^
 
 private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
 
+	exec.read();
+
 	if (txtUser->Text == ""){
 		MessageBox::Show("Please enter a valid name");
 	}
@@ -999,10 +999,10 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	grpAvailability->Visible = false;
 	grpViewYourEvents->Visible = true;
 	
-
 	
-	std::string timeOne = comboBox1.Value.Text;
-	std::string timeTwo = comboBox2.Value.Text;
+	
+	std::string timeOne = msclr::interop::marshal_as<std::string>(this->comboBox1->Text);
+	std::string timeTwo = msclr::interop::marshal_as<std::string>(this->comboBox2->Text);
 
 	//Date formatted as hh:mm
 	int startHour = atoi(timeOne.substr(0,2).c_str());
@@ -1057,165 +1057,7 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 
 }
 
-private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk520_540AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk540_600AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk600_620AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk620_640AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk640_700AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk700_720AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk720_740AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk740_800AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk800_820AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk820_840AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk840_900AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk900_920AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk920_940AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk940_10000AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1000_1020AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1020_1040AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1040_1100AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1100_1120AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1120_1140AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk1140_1200PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void chk100_120PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
 
-}
-private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-
-}
-private: System::Void rbtn8_9AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn9_10AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn10_11AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-
-}
-private: System::Void rbtn11_12PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn1_2PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn2_3PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn3_4PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn4_5PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn5_6PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn6_7PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn7_8PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn8_9PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn9_10PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn10_11PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-
-private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-
-}
-private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-
-}
-private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-
-}
-private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-
-}
-private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
-private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	
-}
 private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = true;
 	/*
