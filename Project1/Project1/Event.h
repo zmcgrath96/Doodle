@@ -36,15 +36,15 @@ class Event
 
 	/**
 		*	addTask
-		*	@param string name
-		*	@return true
+		*	@param Task object
+		*	@return bool
 		*/
 	bool addTask(Task task);
 
 	/**
 	*	addUser
 	*	@param string name
-	*	@return true
+	*	@return bool
 	*/
 	bool addUser(std::string uName);
 
@@ -80,7 +80,7 @@ class Event
 	/**
 		*	getTasks
 		*	@param none
-		*	@return Task pointer to array
+		*	@return Task vector
 		*/
 	std::vector<Task>& getTasks();
 
@@ -94,7 +94,7 @@ class Event
 	/**
 	*	getUsers
 	*	@param none
-	*	@return Task pointer to array
+	*	@return User vector
 	*/
 	std::vector<User>& getUsers();
 
@@ -108,24 +108,28 @@ class Event
 	/**
 	 * setStartDay
 	 * @param Day start
+	 * @return none
 	 */
 	void setStartDay(Day start);
 
 	/**
 	 * setEndDay
 	 * @param Day end
+	 * @return none
 	 */
 	void setEndDay(Day end);
 
 	/**
 	 * setAdmin
 	 * @param User admin
+	 * @return none
 	 */
 	void setAdmin(User admin);
 
 	/**
 	 * setName
 	 * @param String name
+	 * @return none
 	 */
 	void setName(std::string name);
 

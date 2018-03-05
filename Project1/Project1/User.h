@@ -5,6 +5,11 @@
 class User
 {
 	public:
+		/**
+		* constructor
+		* @param None
+		* @return None
+		*/
 		User();
 		/**
 		*	Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
