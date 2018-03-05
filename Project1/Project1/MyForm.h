@@ -132,6 +132,11 @@ private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::GroupBox^  grpTimes;
 private: System::Windows::Forms::Button^  btnSubmitTimes;
+private: System::Windows::Forms::ComboBox^  endTime24;
+
+private: System::Windows::Forms::ComboBox^  startTime24;
+private: System::Windows::Forms::CheckBox^  checkBox24;
+
 
 
 
@@ -167,6 +172,7 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
 			this->btnAdminBack = (gcnew System::Windows::Forms::Button());
 			this->btnCreateEvent = (gcnew System::Windows::Forms::Button());
+			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
 			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -205,8 +211,10 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->grpTimes = (gcnew System::Windows::Forms::GroupBox());
-			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
+			this->startTime24 = (gcnew System::Windows::Forms::ComboBox());
+			this->endTime24 = (gcnew System::Windows::Forms::ComboBox());
+			this->checkBox24 = (gcnew System::Windows::Forms::CheckBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
@@ -352,6 +360,17 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->btnCreateEvent->Text = L"Create Event";
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
 			this->btnCreateEvent->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEvent_Click);
+			// 
+			// btnEditEvents
+			// 
+			this->btnEditEvents->Location = System::Drawing::Point(45, 142);
+			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnEditEvents->Name = L"btnEditEvents";
+			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
+			this->btnEditEvents->TabIndex = 3;
+			this->btnEditEvents->Text = L"View Your Events";
+			this->btnEditEvents->UseVisualStyleBackColor = true;
+			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
 			// 
 			// lblAdmin
 			// 
@@ -750,6 +769,7 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->comboBox2->Size = System::Drawing::Size(251, 28);
 			this->comboBox2->TabIndex = 42;
 			this->comboBox2->SelectedIndex = 0;
+
 			// 
 			// grpTask
 			// 
@@ -773,6 +793,9 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			// 
 			// grpTimes
 			// 
+			this->grpTimes->Controls->Add(this->checkBox24);
+			this->grpTimes->Controls->Add(this->endTime24);
+			this->grpTimes->Controls->Add(this->startTime24);
 			this->grpTimes->Controls->Add(this->grpTask);
 			this->grpTimes->Controls->Add(this->comboBox2);
 			this->grpTimes->Controls->Add(this->textBox6);
@@ -792,17 +815,6 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->grpTimes->Visible = false;
 			this->grpTimes->Enter += gcnew System::EventHandler(this, &MyForm::grpTimes_Enter);
 			// 
-			// btnEditEvents
-			// 
-			this->btnEditEvents->Location = System::Drawing::Point(45, 142);
-			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnEditEvents->Name = L"btnEditEvents";
-			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
-			this->btnEditEvents->TabIndex = 3;
-			this->btnEditEvents->Text = L"View Your Events";
-			this->btnEditEvents->UseVisualStyleBackColor = true;
-			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
-			// 
 			// btnSubmitTimes
 			// 
 			this->btnSubmitTimes->Location = System::Drawing::Point(88, 509);
@@ -813,6 +825,52 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 			this->btnSubmitTimes->Text = L"Submit";
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
 			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
+			// 
+			// startTime24
+			// 
+			this->startTime24->FormattingEnabled = true;
+			this->startTime24->Items->AddRange(gcnew cli::array< System::Object^  >(55) {
+				L" 5:00 ", L" 5:20 ", L" 5:40 ", L" 6:00 ", L" 6:20 ",
+					L" 6:40 ", L" 7:00 ", L" 7:20 ", L" 7:40 ", L" 8:00 ", L" 8:20 ", L" 8:40 ", L" 9:00 ", L" 9:20 ", L" 9:40 ", L"10:00", L"10:20 ",
+					L"10:40 ", L"11:00 ", L"11:20 ", L"11:40 ", L"12:00 ", L"13:00", L"13:20", L"13:40", L"14:00", L"14:20", L"14:40", L"15:00",
+					L"15:20", L"15:40", L"16:00", L"16:20", L"16:40", L"17:00", L"17:20", L"17:40", L"18:00", L"18:20", L"18:40", L"19:00", L"19:20",
+					L"19:40", L"20:00", L"20:20", L"20:40", L"21:00", L"21:20", L"21:40", L"22:00", L"22:20", L"22:40", L"23:00", L"23:20", L"23:40"
+			});
+			this->startTime24->Location = System::Drawing::Point(82, 122);
+			this->startTime24->Name = L"startTime24";
+			this->startTime24->Size = System::Drawing::Size(251, 28);
+			this->startTime24->TabIndex = 44;
+			this->startTime24->SelectedIndex = 0;
+
+			// 
+			// endTime24
+			// 
+			this->endTime24->FormattingEnabled = true;
+			this->endTime24->Items->AddRange(gcnew cli::array< System::Object^  >(55) {
+				L" 5:00 ", L" 5:20 ", L" 5:40 ", L" 6:00 ", L" 6:20 ",
+					L" 6:40 ", L" 7:00 ", L" 7:20 ", L" 7:40 ", L" 8:00 ", L" 8:20 ", L" 8:40 ", L" 9:00 ", L" 9:20 ", L" 9:40 ", L"10:00", L"10:20 ",
+					L"10:40 ", L"11:00 ", L"11:20 ", L"11:40 ", L"12:00 ", L"13:00", L"13:20", L"13:40", L"14:00", L"14:20", L"14:40", L"15:00",
+					L"15:20", L"15:40", L"16:00", L"16:20", L"16:40", L"17:00", L"17:20", L"17:40", L"18:00", L"18:20", L"18:40", L"19:00", L"19:20",
+					L"19:40", L"20:00", L"20:20", L"20:40", L"21:00", L"21:20", L"21:40", L"22:00", L"22:20", L"22:40", L"23:00", L"23:20", L"23:40"
+			});
+			this->endTime24->Location = System::Drawing::Point(84, 296);
+			this->endTime24->Name = L"endTime24";
+			this->endTime24->Size = System::Drawing::Size(251, 28);
+			this->endTime24->TabIndex = 45;
+			this->endTime24->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox3_SelectedIndexChanged);
+			this->endTime24->SelectedIndex = 0;
+
+			// 
+			// checkBox24
+			// 
+			this->checkBox24->AutoSize = true;
+			this->checkBox24->Location = System::Drawing::Point(389, 126);
+			this->checkBox24->Name = L"checkBox24";
+			this->checkBox24->Size = System::Drawing::Size(103, 24);
+			this->checkBox24->TabIndex = 46;
+			this->checkBox24->Text = L"12hr";
+			this->checkBox24->UseVisualStyleBackColor = true;
+			this->checkBox24->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
 			// 
 			// MyForm
 			// 
@@ -918,6 +976,7 @@ private: System::Windows::Forms::Button^  btnSubmitTimes;
 	}
 
 private: bool currentlyAdmin;
+private: bool is12 = false; // True means it is 12 hour mode
 
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = false;
@@ -1009,13 +1068,20 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 
 
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpTimes->Visible = false;
-	grpViewYourEvents->Visible = true;
 	
-	
-	
-	std::string timeOne = msclr::interop::marshal_as<std::string>(this->comboBox1->Text);
-	std::string timeTwo = msclr::interop::marshal_as<std::string>(this->comboBox2->Text);
+	std::string timeOne;
+	std::string timeTwo;
+	bool amStart = true;
+	bool amEnd = true;
+	if (is12) {
+		timeOne = msclr::interop::marshal_as<std::string>(this->comboBox1->Text);
+		timeTwo = msclr::interop::marshal_as<std::string>(this->comboBox2->Text);
+	}
+	else {
+		timeOne = msclr::interop::marshal_as<std::string>(this->startTime24->Text);
+		timeTwo = msclr::interop::marshal_as<std::string>(this->endTime24->Text);
+	}
+
 
 	//Date formatted as hh:mm
 	int startHour = atoi(timeOne.substr(0,2).c_str());
@@ -1024,11 +1090,59 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	int endHour = atoi(timeTwo.substr(0,2).c_str());
 	int endMin = atoi(timeTwo.substr(3,2).c_str());
 
+	if (is12) {
+		if (timeOne.substr(6, 2) == "am") {
+			amStart = true;
+		}
+		else {
+			amStart = false;
+		}
+		if (timeTwo.substr(6, 2) == "am") {
+			amEnd = true;
+		}
+		else {
+			amEnd = false;
+		}
+	}
+
 
 	// TODO check if AM or PM
+	int startTime;
+	int endTime;
+	if (is12) {
+		if (amStart) {
+			startTime = startHour*60+startMin;
+		}
+		else {
+			if (startHour == 12)
+			{
+				startTime = (startHour * 60) + startMin;
+			}
+			else {
+				startTime = (startHour + 12) * 60 + startMin;
+			}
+		}
+		if (amEnd) {
+			endTime = endHour * 60 + endMin;
+		}
+		else {
+			if (endHour == 12) {
+				endTime = endHour * 60 + endMin;
+			}
+			else {
+				endTime = (endHour + 12) * 60 + endMin;
+			}
+		}
 
-	int startTime = startHour*60 + startMin;
-	int endTime = endHour*60 + endMin;
+	}
+	else {
+		startTime = startHour * 60 + startMin;
+		endTime = endHour * 60 + endMin;
+	}
+
+	MessageBox::Show("Start time: " + startTime + "     End Time is: " + endTime);
+	
+	
 
 	// Check if end time is before start time
 	if (endTime <= startTime){
@@ -1036,17 +1150,22 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	}
 	// Check if the time spans the lunch hour
 	else if ((startTime <= 12*60 ) && (endTime >= 13*60)){
-		MessageBox::Show("An event cannot span lunch time");
+		MessageBox::Show("An event cannot span over lunch time");
 	}
 	else{
 		exec.currentEvent->getStartDay().setTime(startTime);
 		exec.currentEvent->getEndDay().setTime(endTime);
+		grpTimes->Visible = false;
+		grpViewYourEvents->Visible = true;
+
+		// Populate the next screen
+		std::string* allEvents = exec.getAllEvents();
+		for (int i = 0; i < exec.getEventSize(); i++) {
+			lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
+		}
 	}
 
-	std::string* allEvents = exec.getAllEvents();
-	for (int i = 0; i < exec.getEventSize(); i++) {
-		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
-	}
+	
 	
 	//User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
 
@@ -1247,6 +1366,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void grpTimes_Enter(System::Object^  sender, System::EventArgs^  e) {
+	
 }
 
 private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -1321,6 +1441,23 @@ private: System::Void cancelMultiDay_Click(System::Object^  sender, System::Even
 }
 
 private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	if (!is12) {
+		this->startTime24->Visible = false;
+		this->endTime24->Visible = false;
+		this->comboBox1->Visible = true;
+		this->comboBox2->Visible = true;
+	}
+	else {
+		this->startTime24->Visible = true;
+		this->endTime24->Visible = true;
+		this->comboBox1->Visible = false;
+		this->comboBox2->Visible = false;
+	}
+	is12 = !is12;
 }
 };
 }

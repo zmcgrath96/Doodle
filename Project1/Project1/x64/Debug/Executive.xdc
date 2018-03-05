@@ -1,18 +1,24 @@
 <?xml version="1.0"?><doc>
 <members>
-<member name="M:User.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="9">
+<member name="M:User.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="8">
+constructor
+@param None
+@return None
+
+</member>
+<member name="M:User.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="14">
 Creates the bool array m_Times and sets it to false. Creates the m_Strings array and populates it with the possible time slots.
 @param None
 @return None
 
 </member>
-<member name="M:User.Dispose" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="16">
+<member name="M:User.Dispose" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="21">
 Does Nothing
 @param None
 @return None
 
 </member>
-<member name="M:User.getUserName" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="23">
+<member name="M:User.getUserName" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\user.h" line="28">
 Returns the name of the user
 @param None
 @return The string representing the name of the user
@@ -73,7 +79,7 @@ setYear
 
 </member>
 <member name="M:Day.setTime(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="70">
-setMonth
+setTime
 @param int
 @return none
 
@@ -81,19 +87,43 @@ setMonth
 <member name="M:Task.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="12">
 Creates the object
 @param none
-@return
+@return none
 
 </member>
 <member name="M:Task.#ctor(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="20">
 Creates the object
-@param
-@return
+@param string name
+@return none
 
 </member>
 <member name="M:Task.Dispose" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="28">
 Does nothing
 @param None
 @return None
+
+</member>
+<member name="M:Task.getTaskName" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="35">
+getTaskName
+@param None
+@return string
+
+</member>
+<member name="M:Task.getMaster" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="42">
+getMaster
+@param None
+@return string
+
+</member>
+<member name="M:Task.setMaster(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="49">
+setMaster
+@param string name
+@return None
+
+</member>
+<member name="M:Task.hasMaster" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="56">
+hasMaster
+@param None
+@return bool
 
 </member>
 <member name="M:Event.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="15">
@@ -116,14 +146,14 @@ Constructor
 </member>
 <member name="M:Event.addTask(Task)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="37">
 addTask
-@param string name
-@return true
+@param Task object
+@return bool
 
 </member>
 <member name="M:Event.addUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="44">
 addUser
 @param string name
-@return true
+@return bool
 
 </member>
 <member name="M:Event.getStartDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="51">
@@ -153,7 +183,7 @@ getAdmin
 <member name="M:Event.getTasks" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="80">
 getTasks
 @param none
-@return Task pointer to array
+@return Task vector
 
 </member>
 <member name="M:Event.getNumTasks" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="87">
@@ -165,7 +195,7 @@ getNumTaks
 <member name="M:Event.getUsers" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="94">
 getUsers
 @param none
-@return Task pointer to array
+@return User vector
 
 </member>
 <member name="M:Event.getNumUsers" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="101">
@@ -177,21 +207,25 @@ getNumUsers
 <member name="M:Event.setStartDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="108">
 setStartDay
 @param Day start
+@return none
 
 </member>
-<member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="114">
+<member name="M:Event.setEndDay(Day)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="115">
 setEndDay
 @param Day end
+@return none
 
 </member>
-<member name="M:Event.setAdmin(User)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="120">
+<member name="M:Event.setAdmin(User)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="122">
 setAdmin
 @param User admin
+@return none
 
 </member>
-<member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="126">
+<member name="M:Event.setName(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\event.h" line="129">
 setName
 @param String name
+@return none
 
 </member>
 <member name="M:Executive.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\executive.h" line="12">
@@ -208,7 +242,7 @@ Does nothing
 </member>
 <member name="M:Executive.AddEvent(Event)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\executive.h" line="26">
 Adds a given event to the vector that stores all the events
-@param An event to be added to the vector
+@param An event object to be added to the vector
 @return None
 
 </member>

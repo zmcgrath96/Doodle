@@ -55,7 +55,7 @@ setYear
 
 </member>
 <member name="M:Day.setTime(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="70">
-setMonth
+setTime
 @param int
 @return none
 
