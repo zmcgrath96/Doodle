@@ -1312,7 +1312,7 @@ private: System::Void btnAdminBack_Click(System::Object^  sender, System::EventA
 private: System::Void btnViewEventsBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = false;
 	grpAdmin->Visible = true;
-	lstYourEvents->Items->Clear();
+	
 }
 private: System::Void btnUserBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = false;
