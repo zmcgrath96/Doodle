@@ -109,15 +109,18 @@ private: System::Windows::Forms::Button^  btnAttendees;
 private: System::Windows::Forms::TextBox^  textBox6;
 private: System::Windows::Forms::Button^  button2;
 private: System::Windows::Forms::Label^  label1;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+
 private: System::Windows::Forms::Label^  label2;
-private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
+
 	private: System::Windows::Forms::Button^  btnMultiDay;
 	private: System::Windows::Forms::GroupBox^  grpMultiDay;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Button^  submitMultiDay;
 	private: System::Windows::Forms::Button^  cancelMultiDay;
+	private: System::Windows::Forms::ComboBox^  comboBox2;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::GroupBox^  groupBox1;
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -160,13 +163,19 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->btnMultiDay = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->grpMultiDay = (gcnew System::Windows::Forms::GroupBox());
+			this->cancelMultiDay = (gcnew System::Windows::Forms::Button());
+			this->submitMultiDay = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->monthCalendar2 = (gcnew System::Windows::Forms::MonthCalendar());
 			this->grpViewYourEvents = (gcnew System::Windows::Forms::GroupBox());
 			this->btnViewEvent = (gcnew System::Windows::Forms::Button());
 			this->lstYourEvents = (gcnew System::Windows::Forms::ListBox());
@@ -180,20 +189,15 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->grpMultiDay = (gcnew System::Windows::Forms::GroupBox());
-			this->cancelMultiDay = (gcnew System::Windows::Forms::Button());
-			this->submitMultiDay = (gcnew System::Windows::Forms::Button());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->monthCalendar2 = (gcnew System::Windows::Forms::MonthCalendar());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->grpMode->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
+			this->grpMultiDay->SuspendLayout();
 			this->grpViewYourEvents->SuspendLayout();
 			this->grpEventInfo->SuspendLayout();
-			this->grpMultiDay->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// grpCreateEvent
@@ -206,7 +210,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(236, 111);
+			this->grpCreateEvent->Location = System::Drawing::Point(243, 55);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -455,15 +459,16 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// grpAvailability
 			// 
-			this->grpAvailability->Controls->Add(this->grpMultiDay);
+			this->grpAvailability->Controls->Add(this->groupBox1);
+			this->grpAvailability->Controls->Add(this->comboBox2);
+			this->grpAvailability->Controls->Add(this->textBox6);
+			this->grpAvailability->Controls->Add(this->comboBox1);
 			this->grpAvailability->Controls->Add(this->btnMultiDay);
 			this->grpAvailability->Controls->Add(this->label2);
-			this->grpAvailability->Controls->Add(this->dateTimePicker2);
 			this->grpAvailability->Controls->Add(this->label1);
-			this->grpAvailability->Controls->Add(this->dateTimePicker1);
 			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
 			this->grpAvailability->Controls->Add(this->label7);
-			this->grpAvailability->Location = System::Drawing::Point(152, 46);
+			this->grpAvailability->Location = System::Drawing::Point(181, 14);
 			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
 			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -472,6 +477,43 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
 			this->grpAvailability->Enter += gcnew System::EventHandler(this, &MyForm::grpAvailability_Enter);
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
+				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
+					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
+					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+			});
+			this->comboBox2->Location = System::Drawing::Point(84, 296);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(251, 28);
+			this->comboBox2->TabIndex = 42;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(276, 0);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(148, 26);
+			this->textBox6->TabIndex = 40;
+			this->textBox6->Visible = false;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
+				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
+					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
+					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+			});
+			this->comboBox1->Location = System::Drawing::Point(82, 122);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(251, 28);
+			this->comboBox1->TabIndex = 4;
 			// 
 			// btnMultiDay
 			// 
@@ -493,17 +535,6 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"End Time";
 			// 
-			// dateTimePicker2
-			// 
-			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->dateTimePicker2->Location = System::Drawing::Point(84, 292);
-			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->ShowUpDown = true;
-			this->dateTimePicker2->Size = System::Drawing::Size(517, 26);
-			this->dateTimePicker2->TabIndex = 5;
-			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker2_ValueChanged);
-			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
@@ -513,19 +544,6 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Start Time";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->AllowDrop = true;
-			this->dateTimePicker1->CustomFormat = L"";
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->dateTimePicker1->Location = System::Drawing::Point(84, 120);
-			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->ShowUpDown = true;
-			this->dateTimePicker1->Size = System::Drawing::Size(517, 26);
-			this->dateTimePicker1->TabIndex = 3;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker1_ValueChanged);
 			// 
 			// btnSubmitTimes
 			// 
@@ -547,6 +565,63 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->label7->Size = System::Drawing::Size(106, 20);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Create Event:";
+			// 
+			// grpMultiDay
+			// 
+			this->grpMultiDay->Controls->Add(this->cancelMultiDay);
+			this->grpMultiDay->Controls->Add(this->submitMultiDay);
+			this->grpMultiDay->Controls->Add(this->label3);
+			this->grpMultiDay->Controls->Add(this->monthCalendar2);
+			this->grpMultiDay->Location = System::Drawing::Point(292, 5);
+			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->grpMultiDay->Name = L"grpMultiDay";
+			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->grpMultiDay->Size = System::Drawing::Size(486, 610);
+			this->grpMultiDay->TabIndex = 41;
+			this->grpMultiDay->TabStop = false;
+			this->grpMultiDay->Visible = false;
+			this->grpMultiDay->Enter += gcnew System::EventHandler(this, &MyForm::grpMultiDay_Enter);
+			// 
+			// cancelMultiDay
+			// 
+			this->cancelMultiDay->Location = System::Drawing::Point(277, 518);
+			this->cancelMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->cancelMultiDay->Name = L"cancelMultiDay";
+			this->cancelMultiDay->Size = System::Drawing::Size(94, 40);
+			this->cancelMultiDay->TabIndex = 3;
+			this->cancelMultiDay->Text = L"Cancel";
+			this->cancelMultiDay->UseVisualStyleBackColor = true;
+			this->cancelMultiDay->Click += gcnew System::EventHandler(this, &MyForm::cancelMultiDay_Click);
+			// 
+			// submitMultiDay
+			// 
+			this->submitMultiDay->Location = System::Drawing::Point(116, 518);
+			this->submitMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->submitMultiDay->Name = L"submitMultiDay";
+			this->submitMultiDay->Size = System::Drawing::Size(101, 40);
+			this->submitMultiDay->TabIndex = 2;
+			this->submitMultiDay->Text = L"Submit";
+			this->submitMultiDay->UseVisualStyleBackColor = true;
+			this->submitMultiDay->Click += gcnew System::EventHandler(this, &MyForm::submitMultiDay_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(160, 36);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(168, 20);
+			this->label3->TabIndex = 1;
+			this->label3->Text = L"Select Additional Days";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
+			// 
+			// monthCalendar2
+			// 
+			this->monthCalendar2->Location = System::Drawing::Point(96, 170);
+			this->monthCalendar2->Margin = System::Windows::Forms::Padding(10, 11, 10, 11);
+			this->monthCalendar2->MaxSelectionCount = 21;
+			this->monthCalendar2->Name = L"monthCalendar2";
+			this->monthCalendar2->TabIndex = 0;
+			this->monthCalendar2->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar2_DateChanged);
 			// 
 			// grpViewYourEvents
 			// 
@@ -699,71 +774,15 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->textBox5->Visible = false;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
-			// textBox6
+			// groupBox1
 			// 
-			this->textBox6->Location = System::Drawing::Point(428, 46);
-			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(148, 26);
-			this->textBox6->TabIndex = 40;
-			this->textBox6->Visible = false;
-			// 
-			// grpMultiDay
-			// 
-			this->grpMultiDay->Controls->Add(this->cancelMultiDay);
-			this->grpMultiDay->Controls->Add(this->submitMultiDay);
-			this->grpMultiDay->Controls->Add(this->label3);
-			this->grpMultiDay->Controls->Add(this->monthCalendar2);
-			this->grpMultiDay->Location = System::Drawing::Point(608, 23);
-			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->grpMultiDay->Name = L"grpMultiDay";
-			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->grpMultiDay->Size = System::Drawing::Size(486, 610);
-			this->grpMultiDay->TabIndex = 41;
-			this->grpMultiDay->TabStop = false;
-			this->grpMultiDay->Visible = false;
-			this->grpMultiDay->Enter += gcnew System::EventHandler(this, &MyForm::grpMultiDay_Enter);
-			// 
-			// cancelMultiDay
-			// 
-			this->cancelMultiDay->Location = System::Drawing::Point(277, 518);
-			this->cancelMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->cancelMultiDay->Name = L"cancelMultiDay";
-			this->cancelMultiDay->Size = System::Drawing::Size(94, 40);
-			this->cancelMultiDay->TabIndex = 3;
-			this->cancelMultiDay->Text = L"Cancel";
-			this->cancelMultiDay->UseVisualStyleBackColor = true;
-			this->cancelMultiDay->Click += gcnew System::EventHandler(this, &MyForm::cancelMultiDay_Click);
-			// 
-			// submitMultiDay
-			// 
-			this->submitMultiDay->Location = System::Drawing::Point(116, 518);
-			this->submitMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->submitMultiDay->Name = L"submitMultiDay";
-			this->submitMultiDay->Size = System::Drawing::Size(101, 40);
-			this->submitMultiDay->TabIndex = 2;
-			this->submitMultiDay->Text = L"Submit";
-			this->submitMultiDay->UseVisualStyleBackColor = true;
-			this->submitMultiDay->Click += gcnew System::EventHandler(this, &MyForm::submitMultiDay_Click);
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(160, 36);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(168, 20);
-			this->label3->TabIndex = 1;
-			this->label3->Text = L"Select Additional Days";
-			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
-			// 
-			// monthCalendar2
-			// 
-			this->monthCalendar2->Location = System::Drawing::Point(96, 170);
-			this->monthCalendar2->Margin = System::Windows::Forms::Padding(10, 11, 10, 11);
-			this->monthCalendar2->MaxSelectionCount = 21;
-			this->monthCalendar2->Name = L"monthCalendar2";
-			this->monthCalendar2->TabIndex = 0;
-			this->monthCalendar2->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar2_DateChanged);
+			this->groupBox1->Location = System::Drawing::Point(4, 24);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(697, 654);
+			this->groupBox1->TabIndex = 43;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"s";
+			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
 			// 
 			// MyForm
 			// 
@@ -771,10 +790,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
-			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->grpCreateEvent);
+			this->Controls->Add(this->grpMultiDay);
 			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpEventInfo);
@@ -793,11 +812,11 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpMode->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
+			this->grpMultiDay->ResumeLayout(false);
+			this->grpMultiDay->PerformLayout();
 			this->grpViewYourEvents->ResumeLayout(false);
 			this->grpViewYourEvents->PerformLayout();
 			this->grpEventInfo->ResumeLayout(false);
-			this->grpMultiDay->ResumeLayout(false);
-			this->grpMultiDay->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -809,7 +828,6 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		grpCreateEvent->Visible = true;
 		grpAdmin->Visible = false;
-		label2->Text = "Select Available Times:";
 	}
 
 	private: System::Void monthCalendar1_DateSelected(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e) {
@@ -873,17 +891,9 @@ private: System::Void btnViewSchedule_Click(System::Object^  sender, System::Eve
 	grpAdmin->Visible = false;
 }
 
-private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-	DateTime temp = dateTimePicker1->Value;
-	int sTime = temp.Hour * 60 + temp.Minute;
-	exec.currentEvent->getStartDay().setTime(sTime);
-}
+ 
 
- private: System::Void dateTimePicker2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-	 DateTime temp = dateTimePicker2->Value;
-	 int eTime = temp.Hour*60 + temp.Minute;
-	 exec.currentEvent->getEndDay().setTime(eTime);
-}
+
 
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (textBox1->Text == "")
@@ -930,7 +940,6 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		eDay.setYear(eventDate.Year);
 		exec.currentEvent->setStartDay(sDay);
 		exec.currentEvent->setEndDay(eDay);
-		MessageBox::Show("current event time  " + exec.currentEvent->getStartDay().getTime());
 
 
 	}
@@ -3002,5 +3011,7 @@ private: System::Void cancelMultiDay_Click(System::Object^  sender, System::Even
 	grpMultiDay->Visible = false;
 }
 
+private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }
