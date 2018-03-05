@@ -4,6 +4,7 @@
 #include "Executive.h"
 #include "Event.h"
 #include "User.h"
+#include "Day.h"
 #include <time.h>
 #include <ctime>
 #include <msclr\marshal_cppstd.h>
@@ -205,30 +206,30 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(210, 89);
-			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4);
+			this->grpCreateEvent->Location = System::Drawing::Point(236, 111);
+			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
-			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4);
-			this->grpCreateEvent->Size = System::Drawing::Size(482, 470);
+			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpCreateEvent->Size = System::Drawing::Size(542, 588);
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(84, 338);
-			this->textBox4->Margin = System::Windows::Forms::Padding(4);
+			this->textBox4->Location = System::Drawing::Point(94, 422);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(132, 22);
+			this->textBox4->Size = System::Drawing::Size(148, 26);
 			this->textBox4->TabIndex = 13;
 			this->textBox4->Visible = false;
 			// 
 			// btnCreateEventBack
 			// 
-			this->btnCreateEventBack->Location = System::Drawing::Point(200, 406);
-			this->btnCreateEventBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnCreateEventBack->Location = System::Drawing::Point(225, 508);
+			this->btnCreateEventBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnCreateEventBack->Name = L"btnCreateEventBack";
-			this->btnCreateEventBack->Size = System::Drawing::Size(137, 28);
+			this->btnCreateEventBack->Size = System::Drawing::Size(154, 35);
 			this->btnCreateEventBack->TabIndex = 10;
 			this->btnCreateEventBack->Text = L"Back";
 			this->btnCreateEventBack->UseVisualStyleBackColor = true;
@@ -236,9 +237,9 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// monthCalendar1
 			// 
-			this->monthCalendar1->Location = System::Drawing::Point(114, 123);
-			this->monthCalendar1->Margin = System::Windows::Forms::Padding(12, 11, 12, 11);
-			this->monthCalendar1->MaximumSize = System::Drawing::Size(667, 615);
+			this->monthCalendar1->Location = System::Drawing::Point(128, 154);
+			this->monthCalendar1->Margin = System::Windows::Forms::Padding(14);
+			this->monthCalendar1->MaximumSize = System::Drawing::Size(750, 769);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 11;
@@ -246,38 +247,38 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(114, 74);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Location = System::Drawing::Point(128, 92);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(301, 22);
+			this->textBox1->Size = System::Drawing::Size(338, 26);
 			this->textBox1->TabIndex = 10;
 			// 
 			// lblName
 			// 
 			this->lblName->AutoSize = true;
-			this->lblName->Location = System::Drawing::Point(20, 78);
+			this->lblName->Location = System::Drawing::Point(22, 98);
 			this->lblName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblName->Name = L"lblName";
-			this->lblName->Size = System::Drawing::Size(49, 17);
+			this->lblName->Size = System::Drawing::Size(55, 20);
 			this->lblName->TabIndex = 9;
 			this->lblName->Text = L"Name:";
 			// 
 			// lblDate
 			// 
 			this->lblDate->AutoSize = true;
-			this->lblDate->Location = System::Drawing::Point(20, 123);
+			this->lblDate->Location = System::Drawing::Point(22, 154);
 			this->lblDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblDate->Name = L"lblDate";
-			this->lblDate->Size = System::Drawing::Size(42, 17);
+			this->lblDate->Size = System::Drawing::Size(48, 20);
 			this->lblDate->TabIndex = 6;
 			this->lblDate->Text = L"Date:";
 			// 
 			// btnSubmitEvent
 			// 
-			this->btnSubmitEvent->Location = System::Drawing::Point(200, 370);
-			this->btnSubmitEvent->Margin = System::Windows::Forms::Padding(4);
+			this->btnSubmitEvent->Location = System::Drawing::Point(225, 462);
+			this->btnSubmitEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnSubmitEvent->Name = L"btnSubmitEvent";
-			this->btnSubmitEvent->Size = System::Drawing::Size(137, 28);
+			this->btnSubmitEvent->Size = System::Drawing::Size(154, 35);
 			this->btnSubmitEvent->TabIndex = 0;
 			this->btnSubmitEvent->Text = L"Submit";
 			this->btnSubmitEvent->UseVisualStyleBackColor = true;
@@ -286,10 +287,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// lblCreateEvent
 			// 
 			this->lblCreateEvent->AutoSize = true;
-			this->lblCreateEvent->Location = System::Drawing::Point(174, 32);
+			this->lblCreateEvent->Location = System::Drawing::Point(196, 40);
 			this->lblCreateEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblCreateEvent->Name = L"lblCreateEvent";
-			this->lblCreateEvent->Size = System::Drawing::Size(94, 17);
+			this->lblCreateEvent->Size = System::Drawing::Size(106, 20);
 			this->lblCreateEvent->TabIndex = 2;
 			this->lblCreateEvent->Text = L"Create Event:";
 			// 
@@ -299,21 +300,21 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(344, 89);
-			this->grpAdmin->Margin = System::Windows::Forms::Padding(4);
+			this->grpAdmin->Location = System::Drawing::Point(387, 111);
+			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
-			this->grpAdmin->Padding = System::Windows::Forms::Padding(4);
-			this->grpAdmin->Size = System::Drawing::Size(211, 202);
+			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAdmin->Size = System::Drawing::Size(237, 252);
 			this->grpAdmin->TabIndex = 7;
 			this->grpAdmin->TabStop = false;
 			this->grpAdmin->Visible = false;
 			// 
 			// btnAdminBack
 			// 
-			this->btnAdminBack->Location = System::Drawing::Point(40, 150);
-			this->btnAdminBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnAdminBack->Location = System::Drawing::Point(45, 188);
+			this->btnAdminBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnAdminBack->Name = L"btnAdminBack";
-			this->btnAdminBack->Size = System::Drawing::Size(137, 28);
+			this->btnAdminBack->Size = System::Drawing::Size(154, 35);
 			this->btnAdminBack->TabIndex = 10;
 			this->btnAdminBack->Text = L"Back";
 			this->btnAdminBack->UseVisualStyleBackColor = true;
@@ -321,10 +322,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnCreateEvent
 			// 
-			this->btnCreateEvent->Location = System::Drawing::Point(40, 78);
-			this->btnCreateEvent->Margin = System::Windows::Forms::Padding(4);
+			this->btnCreateEvent->Location = System::Drawing::Point(45, 98);
+			this->btnCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnCreateEvent->Name = L"btnCreateEvent";
-			this->btnCreateEvent->Size = System::Drawing::Size(137, 28);
+			this->btnCreateEvent->Size = System::Drawing::Size(154, 35);
 			this->btnCreateEvent->TabIndex = 5;
 			this->btnCreateEvent->Text = L"Create Event";
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
@@ -332,10 +333,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnEditEvents
 			// 
-			this->btnEditEvents->Location = System::Drawing::Point(40, 114);
-			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4);
+			this->btnEditEvents->Location = System::Drawing::Point(45, 142);
+			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditEvents->Name = L"btnEditEvents";
-			this->btnEditEvents->Size = System::Drawing::Size(137, 28);
+			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
 			this->btnEditEvents->TabIndex = 3;
 			this->btnEditEvents->Text = L"View Your Events";
 			this->btnEditEvents->UseVisualStyleBackColor = true;
@@ -344,10 +345,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// lblAdmin
 			// 
 			this->lblAdmin->AutoSize = true;
-			this->lblAdmin->Location = System::Drawing::Point(45, 39);
+			this->lblAdmin->Location = System::Drawing::Point(51, 49);
 			this->lblAdmin->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblAdmin->Name = L"lblAdmin";
-			this->lblAdmin->Size = System::Drawing::Size(120, 17);
+			this->lblAdmin->Size = System::Drawing::Size(135, 20);
 			this->lblAdmin->TabIndex = 2;
 			this->lblAdmin->Text = L"Make a Selection:";
 			// 
@@ -357,20 +358,20 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpLogin->Controls->Add(this->lblUser);
 			this->grpLogin->Controls->Add(this->btnLogin);
 			this->grpLogin->Controls->Add(this->txtUser);
-			this->grpLogin->Location = System::Drawing::Point(316, 89);
-			this->grpLogin->Margin = System::Windows::Forms::Padding(4);
+			this->grpLogin->Location = System::Drawing::Point(356, 111);
+			this->grpLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpLogin->Name = L"grpLogin";
-			this->grpLogin->Padding = System::Windows::Forms::Padding(4);
-			this->grpLogin->Size = System::Drawing::Size(267, 182);
+			this->grpLogin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpLogin->Size = System::Drawing::Size(300, 228);
 			this->grpLogin->TabIndex = 7;
 			this->grpLogin->TabStop = false;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(78, 146);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(88, 182);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
+			this->button2->Size = System::Drawing::Size(112, 35);
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"Save/Exit";
 			this->button2->UseVisualStyleBackColor = true;
@@ -379,19 +380,19 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// lblUser
 			// 
 			this->lblUser->AutoSize = true;
-			this->lblUser->Location = System::Drawing::Point(78, 48);
+			this->lblUser->Location = System::Drawing::Point(88, 60);
 			this->lblUser->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblUser->Name = L"lblUser";
-			this->lblUser->Size = System::Drawing::Size(121, 17);
+			this->lblUser->Size = System::Drawing::Size(136, 20);
 			this->lblUser->TabIndex = 6;
 			this->lblUser->Text = L"Enter Your Name:";
 			// 
 			// btnLogin
 			// 
-			this->btnLogin->Location = System::Drawing::Point(78, 116);
-			this->btnLogin->Margin = System::Windows::Forms::Padding(4);
+			this->btnLogin->Location = System::Drawing::Point(88, 145);
+			this->btnLogin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnLogin->Name = L"btnLogin";
-			this->btnLogin->Size = System::Drawing::Size(100, 28);
+			this->btnLogin->Size = System::Drawing::Size(112, 35);
 			this->btnLogin->TabIndex = 0;
 			this->btnLogin->Text = L"Login";
 			this->btnLogin->UseVisualStyleBackColor = true;
@@ -399,10 +400,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// txtUser
 			// 
-			this->txtUser->Location = System::Drawing::Point(66, 86);
-			this->txtUser->Margin = System::Windows::Forms::Padding(4);
+			this->txtUser->Location = System::Drawing::Point(74, 108);
+			this->txtUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txtUser->Name = L"txtUser";
-			this->txtUser->Size = System::Drawing::Size(132, 22);
+			this->txtUser->Size = System::Drawing::Size(148, 26);
 			this->txtUser->TabIndex = 1;
 			// 
 			// grpMode
@@ -410,21 +411,21 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpMode->Controls->Add(this->btnModeBack);
 			this->grpMode->Controls->Add(this->btnAdmin);
 			this->grpMode->Controls->Add(this->btnUser);
-			this->grpMode->Location = System::Drawing::Point(198, 78);
-			this->grpMode->Margin = System::Windows::Forms::Padding(4);
+			this->grpMode->Location = System::Drawing::Point(223, 98);
+			this->grpMode->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpMode->Name = L"grpMode";
-			this->grpMode->Padding = System::Windows::Forms::Padding(4);
-			this->grpMode->Size = System::Drawing::Size(267, 182);
+			this->grpMode->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpMode->Size = System::Drawing::Size(300, 228);
 			this->grpMode->TabIndex = 8;
 			this->grpMode->TabStop = false;
 			this->grpMode->Visible = false;
 			// 
 			// btnModeBack
 			// 
-			this->btnModeBack->Location = System::Drawing::Point(78, 128);
-			this->btnModeBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnModeBack->Location = System::Drawing::Point(88, 160);
+			this->btnModeBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnModeBack->Name = L"btnModeBack";
-			this->btnModeBack->Size = System::Drawing::Size(100, 28);
+			this->btnModeBack->Size = System::Drawing::Size(112, 35);
 			this->btnModeBack->TabIndex = 2;
 			this->btnModeBack->Text = L"Logout";
 			this->btnModeBack->UseVisualStyleBackColor = true;
@@ -432,10 +433,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnAdmin
 			// 
-			this->btnAdmin->Location = System::Drawing::Point(78, 43);
-			this->btnAdmin->Margin = System::Windows::Forms::Padding(4);
+			this->btnAdmin->Location = System::Drawing::Point(88, 54);
+			this->btnAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnAdmin->Name = L"btnAdmin";
-			this->btnAdmin->Size = System::Drawing::Size(100, 28);
+			this->btnAdmin->Size = System::Drawing::Size(112, 35);
 			this->btnAdmin->TabIndex = 1;
 			this->btnAdmin->Text = L"Admin Mode";
 			this->btnAdmin->UseVisualStyleBackColor = true;
@@ -443,10 +444,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnUser
 			// 
-			this->btnUser->Location = System::Drawing::Point(78, 82);
-			this->btnUser->Margin = System::Windows::Forms::Padding(4);
+			this->btnUser->Location = System::Drawing::Point(88, 102);
+			this->btnUser->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnUser->Name = L"btnUser";
-			this->btnUser->Size = System::Drawing::Size(100, 28);
+			this->btnUser->Size = System::Drawing::Size(112, 35);
 			this->btnUser->TabIndex = 0;
 			this->btnUser->Text = L"User Mode";
 			this->btnUser->UseVisualStyleBackColor = true;
@@ -454,6 +455,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// grpAvailability
 			// 
+			this->grpAvailability->Controls->Add(this->grpMultiDay);
 			this->grpAvailability->Controls->Add(this->btnMultiDay);
 			this->grpAvailability->Controls->Add(this->label2);
 			this->grpAvailability->Controls->Add(this->dateTimePicker2);
@@ -461,11 +463,11 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpAvailability->Controls->Add(this->dateTimePicker1);
 			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
 			this->grpAvailability->Controls->Add(this->label7);
-			this->grpAvailability->Location = System::Drawing::Point(135, 89);
-			this->grpAvailability->Margin = System::Windows::Forms::Padding(4);
+			this->grpAvailability->Location = System::Drawing::Point(152, 46);
+			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
-			this->grpAvailability->Padding = System::Windows::Forms::Padding(4);
-			this->grpAvailability->Size = System::Drawing::Size(629, 542);
+			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpAvailability->Size = System::Drawing::Size(708, 678);
 			this->grpAvailability->TabIndex = 13;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
@@ -473,9 +475,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnMultiDay
 			// 
-			this->btnMultiDay->Location = System::Drawing::Point(414, 410);
+			this->btnMultiDay->Location = System::Drawing::Point(466, 512);
+			this->btnMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btnMultiDay->Name = L"btnMultiDay";
-			this->btnMultiDay->Size = System::Drawing::Size(121, 27);
+			this->btnMultiDay->Size = System::Drawing::Size(136, 34);
 			this->btnMultiDay->TabIndex = 7;
 			this->btnMultiDay->Text = L"Multiple Days";
 			this->btnMultiDay->UseVisualStyleBackColor = true;
@@ -484,29 +487,29 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(75, 203);
+			this->label2->Location = System::Drawing::Point(84, 254);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(68, 17);
+			this->label2->Size = System::Drawing::Size(76, 20);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"End Time";
 			// 
 			// dateTimePicker2
 			// 
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->dateTimePicker2->Location = System::Drawing::Point(75, 234);
+			this->dateTimePicker2->Location = System::Drawing::Point(84, 292);
 			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
 			this->dateTimePicker2->ShowUpDown = true;
-			this->dateTimePicker2->Size = System::Drawing::Size(460, 22);
+			this->dateTimePicker2->Size = System::Drawing::Size(517, 26);
 			this->dateTimePicker2->TabIndex = 5;
 			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker2_ValueChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(69, 70);
+			this->label1->Location = System::Drawing::Point(78, 88);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(73, 17);
+			this->label1->Size = System::Drawing::Size(82, 20);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Start Time";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
@@ -516,20 +519,20 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->dateTimePicker1->AllowDrop = true;
 			this->dateTimePicker1->CustomFormat = L"";
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Time;
-			this->dateTimePicker1->Location = System::Drawing::Point(75, 96);
+			this->dateTimePicker1->Location = System::Drawing::Point(84, 120);
 			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->ShowUpDown = true;
-			this->dateTimePicker1->Size = System::Drawing::Size(460, 22);
+			this->dateTimePicker1->Size = System::Drawing::Size(517, 26);
 			this->dateTimePicker1->TabIndex = 3;
 			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker1_ValueChanged);
 			// 
 			// btnSubmitTimes
 			// 
-			this->btnSubmitTimes->Location = System::Drawing::Point(252, 478);
-			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4);
+			this->btnSubmitTimes->Location = System::Drawing::Point(204, 512);
+			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnSubmitTimes->Name = L"btnSubmitTimes";
-			this->btnSubmitTimes->Size = System::Drawing::Size(137, 28);
+			this->btnSubmitTimes->Size = System::Drawing::Size(154, 35);
 			this->btnSubmitTimes->TabIndex = 0;
 			this->btnSubmitTimes->Text = L"Submit";
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
@@ -538,10 +541,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(244, 27);
+			this->label7->Location = System::Drawing::Point(274, 34);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(94, 17);
+			this->label7->Size = System::Drawing::Size(106, 20);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Create Event:";
 			// 
@@ -552,21 +555,21 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
-			this->grpViewYourEvents->Location = System::Drawing::Point(316, 89);
-			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4);
+			this->grpViewYourEvents->Location = System::Drawing::Point(356, 111);
+			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
-			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4);
-			this->grpViewYourEvents->Size = System::Drawing::Size(267, 444);
+			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpViewYourEvents->Size = System::Drawing::Size(300, 555);
 			this->grpViewYourEvents->TabIndex = 9;
 			this->grpViewYourEvents->TabStop = false;
 			this->grpViewYourEvents->Visible = false;
 			// 
 			// btnViewEvent
 			// 
-			this->btnViewEvent->Location = System::Drawing::Point(59, 356);
-			this->btnViewEvent->Margin = System::Windows::Forms::Padding(4);
+			this->btnViewEvent->Location = System::Drawing::Point(66, 445);
+			this->btnViewEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnViewEvent->Name = L"btnViewEvent";
-			this->btnViewEvent->Size = System::Drawing::Size(137, 28);
+			this->btnViewEvent->Size = System::Drawing::Size(154, 35);
 			this->btnViewEvent->TabIndex = 4;
 			this->btnViewEvent->Text = L"View Event";
 			this->btnViewEvent->UseVisualStyleBackColor = true;
@@ -575,19 +578,19 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// lstYourEvents
 			// 
 			this->lstYourEvents->FormattingEnabled = true;
-			this->lstYourEvents->ItemHeight = 16;
-			this->lstYourEvents->Location = System::Drawing::Point(8, 57);
-			this->lstYourEvents->Margin = System::Windows::Forms::Padding(4);
+			this->lstYourEvents->ItemHeight = 20;
+			this->lstYourEvents->Location = System::Drawing::Point(9, 71);
+			this->lstYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->lstYourEvents->Name = L"lstYourEvents";
-			this->lstYourEvents->Size = System::Drawing::Size(249, 276);
+			this->lstYourEvents->Size = System::Drawing::Size(280, 344);
 			this->lstYourEvents->TabIndex = 3;
 			// 
 			// btnUserBack
 			// 
-			this->btnUserBack->Location = System::Drawing::Point(59, 391);
-			this->btnUserBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnUserBack->Location = System::Drawing::Point(66, 489);
+			this->btnUserBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnUserBack->Name = L"btnUserBack";
-			this->btnUserBack->Size = System::Drawing::Size(137, 28);
+			this->btnUserBack->Size = System::Drawing::Size(154, 35);
 			this->btnUserBack->TabIndex = 12;
 			this->btnUserBack->Text = L"Back";
 			this->btnUserBack->UseVisualStyleBackColor = true;
@@ -596,19 +599,19 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// lblViewEvent
 			// 
 			this->lblViewEvent->AutoSize = true;
-			this->lblViewEvent->Location = System::Drawing::Point(73, 30);
+			this->lblViewEvent->Location = System::Drawing::Point(82, 38);
 			this->lblViewEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblViewEvent->Name = L"lblViewEvent";
-			this->lblViewEvent->Size = System::Drawing::Size(91, 17);
+			this->lblViewEvent->Size = System::Drawing::Size(103, 20);
 			this->lblViewEvent->TabIndex = 2;
 			this->lblViewEvent->Text = L"Select Event:";
 			// 
 			// btnViewEventsBack
 			// 
-			this->btnViewEventsBack->Location = System::Drawing::Point(59, 391);
-			this->btnViewEventsBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnViewEventsBack->Location = System::Drawing::Point(66, 489);
+			this->btnViewEventsBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnViewEventsBack->Name = L"btnViewEventsBack";
-			this->btnViewEventsBack->Size = System::Drawing::Size(137, 28);
+			this->btnViewEventsBack->Size = System::Drawing::Size(154, 35);
 			this->btnViewEventsBack->TabIndex = 11;
 			this->btnViewEventsBack->Text = L"Back";
 			this->btnViewEventsBack->UseVisualStyleBackColor = true;
@@ -621,21 +624,21 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpEventInfo->Controls->Add(this->lblEventDate);
 			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
 			this->grpEventInfo->Controls->Add(this->lblEventName);
-			this->grpEventInfo->Location = System::Drawing::Point(316, 89);
-			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4);
+			this->grpEventInfo->Location = System::Drawing::Point(356, 111);
+			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpEventInfo->Name = L"grpEventInfo";
-			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4);
-			this->grpEventInfo->Size = System::Drawing::Size(267, 228);
+			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpEventInfo->Size = System::Drawing::Size(300, 285);
 			this->grpEventInfo->TabIndex = 9;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
 			// 
 			// btnAttendees
 			// 
-			this->btnAttendees->Location = System::Drawing::Point(68, 112);
-			this->btnAttendees->Margin = System::Windows::Forms::Padding(4);
+			this->btnAttendees->Location = System::Drawing::Point(76, 140);
+			this->btnAttendees->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnAttendees->Name = L"btnAttendees";
-			this->btnAttendees->Size = System::Drawing::Size(137, 28);
+			this->btnAttendees->Size = System::Drawing::Size(154, 35);
 			this->btnAttendees->TabIndex = 10;
 			this->btnAttendees->Text = L"View Attendees";
 			this->btnAttendees->UseVisualStyleBackColor = true;
@@ -644,10 +647,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnEventInfoBack
 			// 
-			this->btnEventInfoBack->Location = System::Drawing::Point(68, 178);
-			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnEventInfoBack->Location = System::Drawing::Point(76, 222);
+			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEventInfoBack->Name = L"btnEventInfoBack";
-			this->btnEventInfoBack->Size = System::Drawing::Size(137, 28);
+			this->btnEventInfoBack->Size = System::Drawing::Size(154, 35);
 			this->btnEventInfoBack->TabIndex = 9;
 			this->btnEventInfoBack->Text = L"Back";
 			this->btnEventInfoBack->UseVisualStyleBackColor = true;
@@ -655,10 +658,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// lblEventDate
 			// 
-			this->lblEventDate->Location = System::Drawing::Point(0, 70);
+			this->lblEventDate->Location = System::Drawing::Point(0, 88);
 			this->lblEventDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventDate->Name = L"lblEventDate";
-			this->lblEventDate->Size = System::Drawing::Size(267, 16);
+			this->lblEventDate->Size = System::Drawing::Size(300, 20);
 			this->lblEventDate->TabIndex = 8;
 			this->lblEventDate->Text = L"EVENTDATE";
 			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -666,10 +669,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// btnEditAvailability
 			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(68, 146);
-			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4);
+			this->btnEditAvailability->Location = System::Drawing::Point(76, 182);
+			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
-			this->btnEditAvailability->Size = System::Drawing::Size(137, 28);
+			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
 			this->btnEditAvailability->TabIndex = 6;
 			this->btnEditAvailability->Text = L"Edit Availability";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
@@ -677,10 +680,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// lblEventName
 			// 
-			this->lblEventName->Location = System::Drawing::Point(2, 21);
+			this->lblEventName->Location = System::Drawing::Point(2, 26);
 			this->lblEventName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventName->Name = L"lblEventName";
-			this->lblEventName->Size = System::Drawing::Size(265, 21);
+			this->lblEventName->Size = System::Drawing::Size(298, 26);
 			this->lblEventName->TabIndex = 2;
 			this->lblEventName->Text = L"EVENTNAME";
 			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -688,20 +691,20 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(588, 4);
-			this->textBox5->Margin = System::Windows::Forms::Padding(4);
+			this->textBox5->Location = System::Drawing::Point(662, 5);
+			this->textBox5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(132, 22);
+			this->textBox5->Size = System::Drawing::Size(148, 26);
 			this->textBox5->TabIndex = 14;
 			this->textBox5->Visible = false;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(380, 37);
-			this->textBox6->Margin = System::Windows::Forms::Padding(4);
+			this->textBox6->Location = System::Drawing::Point(428, 46);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(132, 22);
+			this->textBox6->Size = System::Drawing::Size(148, 26);
 			this->textBox6->TabIndex = 40;
 			this->textBox6->Visible = false;
 			// 
@@ -711,9 +714,11 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->grpMultiDay->Controls->Add(this->submitMultiDay);
 			this->grpMultiDay->Controls->Add(this->label3);
 			this->grpMultiDay->Controls->Add(this->monthCalendar2);
-			this->grpMultiDay->Location = System::Drawing::Point(492, 79);
+			this->grpMultiDay->Location = System::Drawing::Point(608, 23);
+			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->grpMultiDay->Name = L"grpMultiDay";
-			this->grpMultiDay->Size = System::Drawing::Size(432, 488);
+			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->grpMultiDay->Size = System::Drawing::Size(486, 610);
 			this->grpMultiDay->TabIndex = 41;
 			this->grpMultiDay->TabStop = false;
 			this->grpMultiDay->Visible = false;
@@ -721,9 +726,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// cancelMultiDay
 			// 
-			this->cancelMultiDay->Location = System::Drawing::Point(246, 414);
+			this->cancelMultiDay->Location = System::Drawing::Point(277, 518);
+			this->cancelMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->cancelMultiDay->Name = L"cancelMultiDay";
-			this->cancelMultiDay->Size = System::Drawing::Size(84, 32);
+			this->cancelMultiDay->Size = System::Drawing::Size(94, 40);
 			this->cancelMultiDay->TabIndex = 3;
 			this->cancelMultiDay->Text = L"Cancel";
 			this->cancelMultiDay->UseVisualStyleBackColor = true;
@@ -731,9 +737,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// submitMultiDay
 			// 
-			this->submitMultiDay->Location = System::Drawing::Point(103, 414);
+			this->submitMultiDay->Location = System::Drawing::Point(116, 518);
+			this->submitMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->submitMultiDay->Name = L"submitMultiDay";
-			this->submitMultiDay->Size = System::Drawing::Size(90, 32);
+			this->submitMultiDay->Size = System::Drawing::Size(101, 40);
 			this->submitMultiDay->TabIndex = 2;
 			this->submitMultiDay->Text = L"Submit";
 			this->submitMultiDay->UseVisualStyleBackColor = true;
@@ -742,16 +749,17 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(142, 29);
+			this->label3->Location = System::Drawing::Point(160, 36);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(149, 17);
+			this->label3->Size = System::Drawing::Size(168, 20);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Select Additional Days";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
 			// monthCalendar2
 			// 
-			this->monthCalendar2->Location = System::Drawing::Point(85, 136);
+			this->monthCalendar2->Location = System::Drawing::Point(96, 170);
+			this->monthCalendar2->Margin = System::Windows::Forms::Padding(10, 11, 10, 11);
 			this->monthCalendar2->MaxSelectionCount = 21;
 			this->monthCalendar2->Name = L"monthCalendar2";
 			this->monthCalendar2->TabIndex = 0;
@@ -759,11 +767,10 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->CausesValidation = false;
-			this->ClientSize = System::Drawing::Size(933, 693);
-			this->Controls->Add(this->grpMultiDay);
+			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpAvailability);
@@ -773,7 +780,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpMode);
-			this->Margin = System::Windows::Forms::Padding(4);
+			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle Scheduler";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MyForm::MyForm_FormClosing);
@@ -845,7 +852,19 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 		if (eventDate < todayDate) {
 			MessageBox::Show("You cannot schedule an event in the past");
 		}
-			
+		
+		else {
+			class::Day sDay;
+			class::Day eDay;
+			sDay.setMonth(eventDate.Month);
+			sDay.setDay(eventDate.Day);
+			sDay.setYear(eventDate.Year);
+			eDay.setMonth(eventDate.Month);
+			eDay.setDay(eventDate.Day);
+			eDay.setYear(eventDate.Year);
+			exec.currentEvent->setStartDay(sDay);
+			exec.currentEvent->setEndDay(eDay);
+		}
 	}
 
 private: bool currentlyAdmin;
@@ -853,6 +872,19 @@ private: bool currentlyAdmin;
 private: System::Void btnViewSchedule_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAdmin->Visible = false;
 }
+
+private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+	DateTime temp = dateTimePicker1->Value;
+	int sTime = temp.Hour * 60 + temp.Minute;
+	exec.currentEvent->getStartDay().setTime(sTime);
+}
+
+ private: System::Void dateTimePicker2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+	 DateTime temp = dateTimePicker2->Value;
+	 int eTime = temp.Hour*60 + temp.Minute;
+	 exec.currentEvent->getEndDay().setTime(eTime);
+}
+
 private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (textBox1->Text == "")
 	{
@@ -865,7 +897,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//Event myEvent(name, date);
-		//exec.currentEvent = myEvent;
+	
 		Event myEvent;
 		myEvent.setName(name);
 		//myEvent.setEventDate(date);
@@ -875,6 +907,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 
 		textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 		exec.AddEvent(myEvent);
+
 	}
 	textBox1->Clear();
 
@@ -1350,10 +1383,10 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
+	
+	
+	
 
-	/*
-	* TODO: Add user to event
-	*/
 
 	//textBox4->Text = gcnew String(date.c_str());
 	//textBox1->Text = gcnew String(name.c_str());
@@ -2872,12 +2905,10 @@ private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  
 }
 private: System::Void grpAvailability_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
-private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-}
+
 private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 }
-private: System::Void dateTimePicker2_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-}
+
 		 //
 		 //// If close button is pressed ////
 		 //

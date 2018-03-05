@@ -68,7 +68,7 @@ class Executive
 		void read();
 
 		std::vector<Event> events; //a vector storing all the current events
-		Event currentEvent; //the event currently being accessed
+		Event* currentEvent; //the event currently being accessed
 		User currentUser; //the user currently using the program
 	private:
 		std::vector<std::string> EventAdmin; //a vector containing the names of events the current user is the admin of

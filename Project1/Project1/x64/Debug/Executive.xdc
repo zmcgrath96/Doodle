@@ -31,27 +31,51 @@ Constructor
 
 </member>
 <member name="M:Day.getMonth" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="22">
-Constructor
+getMonth
 @param none
 @return int
 
 </member>
 <member name="M:Day.getDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="29">
-Constructor
+getDay
 @param none
 @return int
 
 </member>
 <member name="M:Day.getYear" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="36">
-Constructor
+getYear
 @param none
 @return int
 
 </member>
 <member name="M:Day.getTime" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="43">
-Constructor
+getTime
 @param none
 @return int
+
+</member>
+<member name="M:Day.setMonth(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="50">
+setMonth
+@param int
+@return none
+
+</member>
+<member name="M:Day.setDay(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="57">
+setDay
+@param int
+@return none
+
+</member>
+<member name="M:Day.setYear(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="64">
+setYear
+@param int
+@return none
+
+</member>
+<member name="M:Day.setTime(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="70">
+setMonth
+@param int
+@return none
 
 </member>
 <member name="M:Task.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="12">

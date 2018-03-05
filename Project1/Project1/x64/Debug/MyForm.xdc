@@ -31,27 +31,51 @@ Constructor
 
 </member>
 <member name="M:Day.getMonth" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="22">
-Constructor
+getMonth
 @param none
 @return int
 
 </member>
 <member name="M:Day.getDay" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="29">
-Constructor
+getDay
 @param none
 @return int
 
 </member>
 <member name="M:Day.getYear" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="36">
-Constructor
+getYear
 @param none
 @return int
 
 </member>
 <member name="M:Day.getTime" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="43">
-Constructor
+getTime
 @param none
 @return int
+
+</member>
+<member name="M:Day.setMonth(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="50">
+setMonth
+@param int
+@return none
+
+</member>
+<member name="M:Day.setDay(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="57">
+setDay
+@param int
+@return none
+
+</member>
+<member name="M:Day.setYear(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="64">
+setYear
+@param int
+@return none
+
+</member>
+<member name="M:Day.setTime(System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="70">
+setMonth
+@param int
+@return none
 
 </member>
 <member name="M:Task.#ctor" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\task.h" line="12">
@@ -218,17 +242,17 @@ Called on startup
 @return None
 
 </member>
-<member name="T:Project1.MyForm" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="27">
+<member name="T:Project1.MyForm" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="28">
 <summary>
 Summary for MyForm
 </summary>
 </member>
-<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="42">
+<member name="M:Project1.MyForm.Dispose" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="43">
 <summary>
 Clean up any resources being used.
 </summary>
 </member>
-<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="127">
+<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="128">
 <summary>
 Required designer variable.
 </summary>

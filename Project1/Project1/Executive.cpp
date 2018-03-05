@@ -11,7 +11,8 @@ using namespace std;
 
 
 Executive::Executive()
-{}
+{
+}
 
 Executive::~Executive()
 {

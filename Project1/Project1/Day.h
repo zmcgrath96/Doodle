@@ -20,39 +20,66 @@ class Day {
     Day(int eventMonth, int eventDay, int eventYear, int eventTime);
 
 	/**
-	*	Constructor
+	*	getMonth
 	*	@param none
 	*	@return int
 	*/
 	int getMonth();
 
 	/**
-	*	Constructor
+	*	getDay
 	*	@param none
 	*	@return int
 	*/
 	int getDay();
 
 	/**
-	*	Constructor
+	*	getYear
 	*	@param none
 	*	@return int
 	*/
 	int getYear();
 
 	/**
-	*	Constructor
+	*	getTime
 	*	@param none
 	*	@return int
 	*/
 	int getTime();
+
+	/**
+	*	setMonth
+	*	@param int
+	*	@return none
+	*/
+	void setMonth(int tMonth);
+
+	/**
+	*	setDay
+	*	@param int
+	*	@return none
+	*/
+	void setDay(int tDay);
+
+	/**
+	*	setYear
+	*	@param int
+	*	@return none
+	*/
+	void setYear(int tYear);
+	/**
+	*	setMonth
+	*	@param int
+	*	@return none
+	*/
+	void setTime(int tTime);
 
 
     private:
         int m_month; // Integer that keeps track of month
         int m_day; // Integer that keeps track of day
         int m_year; // Integer that keeps track of year
-        int m_time;  // time is in seconds from the beggining of the day.
+        int m_time;  // time is in minutes from the beggining of the day.
 
 };
 #endif

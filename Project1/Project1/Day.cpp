@@ -27,3 +27,19 @@ int Day::getYear() {
 int Day::getTime() {
 	return(m_time);
 }
+
+void Day::setMonth(int tMonth) {
+	m_month = tMonth;
+}
+
+void Day::setDay(int tDay) {
+	m_day = tDay;
+}
+
+void Day::setYear(int tYear) {
+	m_year = tYear;
+}
+
+void Day::setTime(int tTime) {
+	m_time = tTime;
+}
