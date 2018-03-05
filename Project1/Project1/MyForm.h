@@ -531,15 +531,6 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->label3->Text = L"Select Additional Days";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
-			// monthCalendar2
-			// 
-			this->monthCalendar2->Location = System::Drawing::Point(96, 170);
-			this->monthCalendar2->Margin = System::Windows::Forms::Padding(10, 11, 10, 11);
-			this->monthCalendar2->MaxSelectionCount = 21;
-			this->monthCalendar2->Name = L"monthCalendar2";
-			this->monthCalendar2->TabIndex = 0;
-			this->monthCalendar2->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MyForm::monthCalendar2_DateChanged);
-			// 
 			// grpViewYourEvents
 			// 
 			this->grpViewYourEvents->Controls->Add(this->btnViewEvent);
@@ -555,6 +546,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpViewYourEvents->TabIndex = 9;
 			this->grpViewYourEvents->TabStop = false;
 			this->grpViewYourEvents->Visible = false;
+			this->grpViewYourEvents->VisibleChanged += gcnew System::EventHandler(this, &MyForm::grpViewYourEvents_VisibleChanged);
 			// 
 			// btnViewEvent
 			// 
@@ -727,7 +719,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->btnMultiDay->Name = L"btnMultiDay";
 			this->btnMultiDay->Size = System::Drawing::Size(136, 34);
 			this->btnMultiDay->TabIndex = 7;
-			this->btnMultiDay->Text = L"Multiple Days";
+			this->btnMultiDay->Text = L"Copy event";
 			this->btnMultiDay->UseVisualStyleBackColor = true;
 			this->btnMultiDay->Click += gcnew System::EventHandler(this, &MyForm::btnMultiDay_Click);
 			// 
@@ -1148,11 +1140,7 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 		grpTimes->Visible = false;
 		grpViewYourEvents->Visible = true;
 
-		// Populate the next screen
-		std::string* allEvents = exec.getAllEvents();
-		for (int i = 0; i < exec.getEventSize(); i++) {
-			lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
-		}
+		
 	}
 
 	
@@ -1274,10 +1262,7 @@ private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^ 
 	grpViewYourEvents->Visible = true;
 	btnViewEventsBack->Visible = false;
 	btnUserBack->Visible = true;
-	std::string* allEvents = exec.getAllEvents();
-	for (int i = 0; i < exec.getEventSize(); i++) {
-		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
-	}
+	
 	currentlyAdmin = false;
 	
 	/*
@@ -1477,12 +1462,6 @@ private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventAr
 		exec.currentEvent->getEndDay().setTime(endTime);
 		grpTimes->Visible = false;
 		grpMultiDay->Visible = true;
-
-		// Populate the next screen
-		std::string* allEvents = exec.getAllEvents();
-		for (int i = 0; i < exec.getEventSize(); i++) {
-			lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
-		}
 	}
 
 
@@ -1499,21 +1478,114 @@ private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  
 		 //
 private: System::Void monthCalendar2_DateChanged(System::Object^  sender, System::Windows::Forms::DateRangeEventArgs^  e)
 {
-	//
-	// TODO : Have calendar grey out initial day chosen and allow user to select multiple days
-	//
-	
+	//To display single selected of date use MonthCalendar1.SelectionRange.Start/ MonthCalendarSelectionRange.End
+	textBox4->Text = monthCalendar2->SelectionRange->Start.ToString("d");
+	std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
+
+	// Pull Todays Date
+	System::DateTime todayDate = this->monthCalendar2->TodayDate;
+	// Pull the event date
+	System::DateTime eventDate = this->monthCalendar2->SelectionRange->Start;
+
+
+	std::string newDate;// = date.substr(0, 4);
+
+	int count = 0;
+	for (int i = 1; i < 6; i++)
+	{
+		if (date[i] == '/')
+		{
+			count++;
+		}
+		if (count == 2)
+		{
+			newDate = date.substr(0, i);
+			i = 5;
+		}
+	}
+
+	//std::string christmas "12/25";
+	textBox5->Text = gcnew String(newDate.c_str());
+	if (newDate == "12/25" || newDate == "7/4" || newDate == "1/1")
+	{
+		MessageBox::Show("You may not schedule an event on this date.");
+		textBox4->Clear();
+	}
+
+	// Check if the event date is before the current day
+	if (eventDate < todayDate) {
+		MessageBox::Show("You cannot schedule an event in the past");
+	}
+
+	/*else {
+	class::Day sDay;
+	class::Day eDay;
+	sDay.setMonth(eventDate.Month);
+	sDay.setDay(eventDate.Day);
+	sDay.setYear(eventDate.Year);
+	eDay.setMonth(eventDate.Month);
+	eDay.setDay(eventDate.Day);
+	eDay.setYear(eventDate.Year);
+	exec.currentEvent->setStartDay(sDay);
+	exec.currentEvent->setEndDay(eDay);
+	}*/
 }
+
+
+
+
+
+
 		 //
 		 //// Submit Multiple Days ////
 		 //
 private: System::Void submitMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	grpMode->Visible = true;
+	
+	// Pull Todays Date
+	System::DateTime todayDate = this->monthCalendar2->TodayDate;
+	// Pull the event date
+	System::DateTime eventDate = this->monthCalendar2->SelectionRange->Start;
 
-	//
-	// TODO : Submit days selected with previous times chosen
-	//
+	grpViewYourEvents->Visible = true;
+	grpCreateEvent->Visible = false;
+	std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
+	std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
+	//Event myEvent(name, date);
+
+	// Find the OG event with the name and pull its start and end days
+	Event myEvent;
+	int startTime = exec.currentEvent->getStartDay().getTime();
+	int endTime = exec.currentEvent->getEndDay().getTime();
+	
+
+	//myEvent.setEventDate(date);
+
+	std::string adminName = msclr::interop::marshal_as<std::string>(txtUser->Text);
+	myEvent.setAdmin(adminName);
+
+	textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
+	exec.AddEvent(myEvent);
+
+	for (int i = 0; i < exec.events.size(); i++) {
+		if (exec.events.at(i).getName() == myEvent.getName()) {
+			exec.currentEvent = &exec.events.at(i);
+			break;
+		}
+	}
+
+	class::Day sDay;
+	class::Day eDay;
+	sDay.setMonth(eventDate.Month);
+	sDay.setDay(eventDate.Day);
+	sDay.setYear(eventDate.Year);
+	eDay.setMonth(eventDate.Month);
+	eDay.setDay(eventDate.Day);
+	eDay.setYear(eventDate.Year);
+	exec.currentEvent->setStartDay(sDay);
+	exec.currentEvent->setEndDay(eDay);
+
+	
 }
 		 //
 		 //// Cancel Multiple Days ////
@@ -1528,6 +1600,15 @@ private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs
 }
 private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 }
+
+private: System::Void grpViewYourEvents_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+	// Populate the next screen
+	std::string* allEvents = exec.getAllEvents();
+	for (int i = 0; i < exec.getEventSize(); i++) {
+		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
+	}
+}
+
 private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	if (!is12) {
 		this->startTime24->Visible = false;
