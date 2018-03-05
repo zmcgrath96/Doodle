@@ -904,6 +904,7 @@ private: System::Windows::Forms::ListBox^  listTasks;
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(251, 28);
 			this->comboBox1->TabIndex = 4;
+			this->comboBox1->SelectedIndex = 0;
 			// 
 			// textBox6
 			// 
@@ -927,6 +928,7 @@ private: System::Windows::Forms::ListBox^  listTasks;
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(251, 28);
 			this->comboBox2->TabIndex = 42;
+			this->comboBox2->SelectedIndex = 0;
 			// 
 			// grpTask
 			// 
@@ -1008,6 +1010,7 @@ private: System::Windows::Forms::ListBox^  listTasks;
 			this->endTime24->Size = System::Drawing::Size(251, 28);
 			this->endTime24->TabIndex = 45;
 			this->endTime24->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox3_SelectedIndexChanged);
+			this->endTime24->SelectedIndex = 0;
 			// 
 			// startTime24
 			// 
@@ -1023,6 +1026,7 @@ private: System::Windows::Forms::ListBox^  listTasks;
 			this->startTime24->Name = L"startTime24";
 			this->startTime24->Size = System::Drawing::Size(251, 28);
 			this->startTime24->TabIndex = 44;
+			this->startTime24->SelectedIndex = 0;
 			// 
 			// btnSubmitTimes
 			// 
@@ -1224,7 +1228,7 @@ private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^
 
 private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	exec.read();
+	
 
 	if (txtUser->Text == ""){
 		MessageBox::Show("Please enter a valid name");
@@ -1417,8 +1421,8 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	if (lstYourEvents->SelectedItems->Count > 0)
 	{
 		eventName = lstYourEvents->SelectedItem->ToString();
-		textBox5->Text = eventName;
-		textBox1->Text = eventName;
+		//textBox5->Text = eventName;
+		//textBox1->Text = eventName;
 		Event* myEvent;
 		int index = lstYourEvents->SelectedIndex;
 
@@ -1876,10 +1880,11 @@ private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, Sy
 
 private: System::Void grpViewYourEvents_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
 	// Populate the next screen
+
 	lstYourEvents->Items->Clear();
 	std::string* allEvents;
 	allEvents = exec.getAllEvents();
-	for (int i = 0; i < exec.getEventSize(); i++) {
+	for (int i = 0; i < exec.events->size(); i++) {
 		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
 	}
 
@@ -1915,6 +1920,8 @@ private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::
 	is12 = !is12;
 }
 private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+	exec.read();
+	lstYourEvents->Items->Clear();
 }
 private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
 }
