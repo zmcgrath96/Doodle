@@ -1319,8 +1319,6 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	}
 }
 private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
-	std::string name = currentUser->getName();
-	currentEvent->addUser(name);
 }
 
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
