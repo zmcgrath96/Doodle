@@ -482,8 +482,8 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
-					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
 					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
 					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
@@ -491,6 +491,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(251, 28);
 			this->comboBox2->TabIndex = 42;
+			this->comboBox2->SelectedIndex = 0;
 			// 
 			// textBox6
 			// 
@@ -505,8 +506,8 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
-					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
 					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
 					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
@@ -514,6 +515,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(251, 28);
 			this->comboBox1->TabIndex = 4;
+			this->comboBox1->SelectedIndex = 0;
 			// 
 			// btnMultiDay
 			// 
@@ -1418,14 +1420,36 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	grpAvailability->Visible = false;
 	grpMode->Visible = true;
 	
-	
-	
+	std::string timeOne = comboBox1.Value.Text;
+	std::string timeTwo = comboBox2.Value.Text;
+
+	//Date formatted as hh:mm
+	int startHour = atoi(timeOne.substr(0,2).c_str());
+	int startMin= atoi(timeOne.substr(3,2).c_str());
+
+	int endHour = atoi(timeTwo.substr(0,2).c_str());
+	int endMin = atoi(timeTwo.substr(3,2).c_str());
 
 
-	//textBox4->Text = gcnew String(date.c_str());
-	//textBox1->Text = gcnew String(name.c_str());
+	// TODO check if AM or PM
 
-	//String^ eventName = gcnew String(test.c_str());
+	int startTime = startHour*60 + startMin;
+	int endTime = endHour*60 + endMin;
+
+	// Check if end time is before start time
+	if (endTime <= startTime){
+		MessageBox::Show("An event cannot end before it starts");
+	}
+	// Check if the time spans the lunch hour
+	else if ((startTime <= 12*60 ) && (endTime >= 13*60)){
+		MessageBox::Show("An event cannot span lunch time");
+	}
+	else{
+		exec.currentEvent->getStartDay().setTime(startTime);
+		exec.currentEvent->getEndDay().setTime(endTime);
+	}
+
+
 	
 	User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
 	//u.setName(msclr::interop::marshal_as<std::string>(txtUser->Text));
