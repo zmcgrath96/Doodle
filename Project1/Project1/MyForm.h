@@ -236,7 +236,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(268, 5);
+			this->grpCreateEvent->Location = System::Drawing::Point(292, 41);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -531,6 +531,12 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->label3->Text = L"Select Additional Days";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
+			// monthCalendar2
+			// 
+			this->monthCalendar2->Location = System::Drawing::Point(104, 144);
+			this->monthCalendar2->Name = L"monthCalendar2";
+			this->monthCalendar2->TabIndex = 4;
+			// 
 			// grpViewYourEvents
 			// 
 			this->grpViewYourEvents->Controls->Add(this->btnViewEvent);
@@ -794,7 +800,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpTimes->Controls->Add(this->label1);
 			this->grpTimes->Controls->Add(this->btnSubmitTimes);
 			this->grpTimes->Controls->Add(this->label7);
-			this->grpTimes->Location = System::Drawing::Point(197, 5);
+			this->grpTimes->Location = System::Drawing::Point(231, 66);
 			this->grpTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpTimes->Name = L"grpTimes";
 			this->grpTimes->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -988,6 +994,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//Event myEvent(name, date);
+		name = name + " " + std::to_string(eventDate.Month) + "/" + std::to_string(eventDate.Day);
 	
 		Event myEvent;
 		myEvent.setName(name);
@@ -1547,9 +1554,7 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	// Pull the event date
 	System::DateTime eventDate = this->monthCalendar2->SelectionRange->Start;
 
-	grpViewYourEvents->Visible = true;
-	grpCreateEvent->Visible = false;
-	std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
+
 	std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 	//Event myEvent(name, date);
 
@@ -1557,12 +1562,15 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	Event myEvent;
 	int startTime = exec.currentEvent->getStartDay().getTime();
 	int endTime = exec.currentEvent->getEndDay().getTime();
+	std::string name = exec.currentEvent->getName() + " " + std::to_string(eventDate.Month) + "/" + std::to_string(eventDate.Day);
+	
 	
 
 	//myEvent.setEventDate(date);
 
 	std::string adminName = msclr::interop::marshal_as<std::string>(txtUser->Text);
 	myEvent.setAdmin(adminName);
+	myEvent.setName(name);
 
 	textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 	exec.AddEvent(myEvent);
@@ -1583,8 +1591,12 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	eDay.setDay(eventDate.Day);
 	eDay.setYear(eventDate.Year);
 	exec.currentEvent->setStartDay(sDay);
+	exec.currentEvent->getStartDay().setTime(startTime);
 	exec.currentEvent->setEndDay(eDay);
+	exec.currentEvent->getEndDay().setTime(endTime);
 
+	grpViewYourEvents->Visible = true;
+	grpMultiDay->Visible = false;
 	
 }
 		 //
