@@ -129,6 +129,8 @@ private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::TextBox^  textBox6;
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::GroupBox^  grpTask;
+	private: System::Windows::Forms::TextBox^  txtTask;
+
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::GroupBox^  grpTimes;
 private: System::Windows::Forms::Button^  btnSubmitTimes;
@@ -140,6 +142,7 @@ private: System::Windows::Forms::Label^  lblEventTasks;
 
 private: System::Windows::Forms::Label^  lblEventTime;
 private: System::Windows::Forms::Label^  lblEventAtt;
+private: System::Windows::Forms::Button^  btnAddTask;
 
 
 
@@ -200,7 +203,11 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnUserBack = (gcnew System::Windows::Forms::Button());
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
+			this->btnAddTask = (gcnew System::Windows::Forms::Button());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->lblEventTasks = (gcnew System::Windows::Forms::Label());
+			this->lblEventTime = (gcnew System::Windows::Forms::Label());
+			this->lblEventAtt = (gcnew System::Windows::Forms::Label());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
@@ -215,14 +222,12 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->txtTask = (gcnew System::Windows::Forms::TextBox());
 			this->grpTimes = (gcnew System::Windows::Forms::GroupBox());
 			this->checkBox24 = (gcnew System::Windows::Forms::CheckBox());
 			this->endTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->startTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
-			this->lblEventAtt = (gcnew System::Windows::Forms::Label());
-			this->lblEventTime = (gcnew System::Windows::Forms::Label());
-			this->lblEventTasks = (gcnew System::Windows::Forms::Label());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
@@ -580,7 +585,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->lstYourEvents->Location = System::Drawing::Point(9, 71);
 			this->lstYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->lstYourEvents->Name = L"lstYourEvents";
-			this->lstYourEvents->Size = System::Drawing::Size(280, 344);
+			this->lstYourEvents->Size = System::Drawing::Size(280, 304);
 			this->lstYourEvents->TabIndex = 3;
 			// 
 			// btnUserBack
@@ -615,8 +620,19 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnViewEventsBack->UseVisualStyleBackColor = true;
 			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
 			// 
+			// btnAddTask
+			// 
+			this->btnAddTask->Location = System::Drawing::Point(109, 270);
+			this->btnAddTask->Name = L"btnAddTask";
+			this->btnAddTask->Size = System::Drawing::Size(154, 34);
+			this->btnAddTask->TabIndex = 13;
+			this->btnAddTask->Text = L"Add Task";
+			this->btnAddTask->UseVisualStyleBackColor = true;
+			this->btnAddTask->Click += gcnew System::EventHandler(this, &MyForm::btnAddTask_Click);
+			// 
 			// grpEventInfo
 			// 
+			this->grpEventInfo->Controls->Add(this->btnAddTask);
 			this->grpEventInfo->Controls->Add(this->lblEventTasks);
 			this->grpEventInfo->Controls->Add(this->lblEventTime);
 			this->grpEventInfo->Controls->Add(this->lblEventAtt);
@@ -632,6 +648,38 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpEventInfo->TabIndex = 9;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
+			// 
+			// lblEventTasks
+			// 
+			this->lblEventTasks->Location = System::Drawing::Point(59, 182);
+			this->lblEventTasks->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTasks->Name = L"lblEventTasks";
+			this->lblEventTasks->Size = System::Drawing::Size(298, 26);
+			this->lblEventTasks->TabIndex = 12;
+			this->lblEventTasks->Text = L"EVENTTASKS";
+			this->lblEventTasks->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventTasks->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
+			// 
+			// lblEventTime
+			// 
+			this->lblEventTime->Location = System::Drawing::Point(59, 89);
+			this->lblEventTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTime->Name = L"lblEventTime";
+			this->lblEventTime->Size = System::Drawing::Size(298, 26);
+			this->lblEventTime->TabIndex = 11;
+			this->lblEventTime->Text = L"EVENTTIME";
+			this->lblEventTime->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// lblEventAtt
+			// 
+			this->lblEventAtt->Location = System::Drawing::Point(59, 125);
+			this->lblEventAtt->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventAtt->Name = L"lblEventAtt";
+			this->lblEventAtt->Size = System::Drawing::Size(298, 26);
+			this->lblEventAtt->TabIndex = 10;
+			this->lblEventAtt->Text = L"EVENTATT";
+			this->lblEventAtt->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventAtt->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// btnEventInfoBack
 			// 
@@ -662,7 +710,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnEditAvailability->Name = L"btnEditAvailability";
 			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
 			this->btnEditAvailability->TabIndex = 6;
-			this->btnEditAvailability->Text = L"Edit Availability";
+			this->btnEditAvailability->Text = L"Click to Attend";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
 			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
 			// 
@@ -767,12 +815,14 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			// grpTask
 			// 
 			this->grpTask->Controls->Add(this->button1);
-			this->grpTask->Location = System::Drawing::Point(632, 27);
+			this->grpTask->Controls->Add(this->txtTask);
+			this->grpTask->Location = System::Drawing::Point(139, 19);
 			this->grpTask->Name = L"grpTask";
 			this->grpTask->Size = System::Drawing::Size(716, 680);
 			this->grpTask->TabIndex = 43;
 			this->grpTask->TabStop = false;
 			this->grpTask->Text = L"s";
+			this->grpTask->Visible = false;
 			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
 			// 
 			// button1
@@ -781,15 +831,23 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(114, 33);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Create Task";
+			this->button1->Text = L"Submit";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// txtTask
+			// 
+			this->txtTask->Location = System::Drawing::Point(74, 108);
+			this->txtTask->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txtTask->Name = L"txtTask";
+			this->txtTask->Size = System::Drawing::Size(148, 26);
+			this->txtTask->TabIndex = 1;
 			// 
 			// grpTimes
 			// 
 			this->grpTimes->Controls->Add(this->checkBox24);
 			this->grpTimes->Controls->Add(this->endTime24);
 			this->grpTimes->Controls->Add(this->startTime24);
-			this->grpTimes->Controls->Add(this->grpTask);
 			this->grpTimes->Controls->Add(this->comboBox2);
 			this->grpTimes->Controls->Add(this->textBox6);
 			this->grpTimes->Controls->Add(this->comboBox1);
@@ -861,49 +919,18 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
 			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
 			// 
-			// lblEventAtt
-			// 
-			this->lblEventAtt->Location = System::Drawing::Point(59, 125);
-			this->lblEventAtt->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventAtt->Name = L"lblEventAtt";
-			this->lblEventAtt->Size = System::Drawing::Size(298, 26);
-			this->lblEventAtt->TabIndex = 10;
-			this->lblEventAtt->Text = L"EVENTATT";
-			this->lblEventAtt->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventAtt->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
-			// 
-			// lblEventTime
-			// 
-			this->lblEventTime->Location = System::Drawing::Point(59, 89);
-			this->lblEventTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventTime->Name = L"lblEventTime";
-			this->lblEventTime->Size = System::Drawing::Size(298, 26);
-			this->lblEventTime->TabIndex = 11;
-			this->lblEventTime->Text = L"EVENTTIME";
-			this->lblEventTime->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// lblEventTasks
-			// 
-			this->lblEventTasks->Location = System::Drawing::Point(59, 182);
-			this->lblEventTasks->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventTasks->Name = L"lblEventTasks";
-			this->lblEventTasks->Size = System::Drawing::Size(298, 26);
-			this->lblEventTasks->TabIndex = 12;
-			this->lblEventTasks->Text = L"EVENTTASKS";
-			this->lblEventTasks->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventTasks->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
+			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->grpTimes);
+			this->Controls->Add(this->grpTask);
 			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpMultiDay);
-			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpLogin);
@@ -926,6 +953,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpViewYourEvents->PerformLayout();
 			this->grpEventInfo->ResumeLayout(false);
 			this->grpTask->ResumeLayout(false);
+			this->grpTask->PerformLayout();
 			this->grpTimes->ResumeLayout(false);
 			this->grpTimes->PerformLayout();
 			this->ResumeLayout(false);
@@ -1049,6 +1077,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		sDay.setDay(eventDate.Day);
 		sDay.setYear(eventDate.Year);
 		exec.currentEvent->setEventDay(sDay);
+		exec.currentEvent->addUser(adminName);
 
 
 	}
@@ -1259,12 +1288,14 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		textBox1->Text = eventName;
 		Event* myEvent;
 		int index = lstYourEvents->SelectedIndex;
-		for (int i = 0; i < exec.getEventSize(); i++) {
+
+		myEvent = &exec.events->at(index);
+		/*for (int i = 0; i < exec.getEventSize(); i++) {
 			if (gcnew String(exec.events->at(i).getName().c_str()) == eventName) {
 				myEvent = &exec.events->at(i);
 				break;
 			}
-		}
+		}*/
 		/*
 		* TODO: Use eventName to search for a specific even. isFound = true if event is found
 		* Event information and option to modify availability will be displayed on the next page
@@ -1282,27 +1313,26 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		lblEventTime->Text = gcnew String(time.c_str());
 
 
-		/*std::string eventTask = "Task:\n";
-		if (myEvent->getNumTasks() <= 0) {
+		std::string eventTask = "Task:\n";
+		if (myEvent->getTasks().size()<= 0) {
 		}
 		else {
-			std::vector<Task> tempTask = myEvent->getTasks();
-			for (int i = 0; i < myEvent->getNumTasks(); i++) {
-				eventTask += tempTask.at(i).getTaskName() + "/" + tempTask.at(i).getMaster() + ", ";
+			for (int i = 0; i < myEvent->getTasks().size(); i++) {
+				eventTask += myEvent->getTasks().at(i).getTaskName() + "/" + myEvent->getTasks().at(i).getMaster() + ", ";
 			}
 		}
-		lblEventTasks->Text = gcnew String(eventTask.c_str());*/
+		lblEventTasks->Text = gcnew String(eventTask.c_str());
 
-		/*std::string eventAtt = "Attending:\n";
-		if (myEvent->getNumUsers() <= 0) {
+		std::string eventAtt = "Attending:\n";
+		if (myEvent->getUsers().size() <= 0) {
 		}
 		else{
 			std::vector<User> tempAtt = myEvent->getUsers();
-			for (int i = 0; i < myEvent->getNumUsers(); i++) {
+			for (int i = 0; i < myEvent->getUsers().size(); i++) {
 				eventAtt += tempAtt.at(i).getUserName() + ", ";
 			}
 		}
-		lblEventAtt->Text = gcnew String(eventAtt.c_str());*/
+		lblEventAtt->Text = gcnew String(eventAtt.c_str());
 		//lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
 
 
@@ -1310,6 +1340,15 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 
 		grpViewYourEvents->Visible = false;
 		grpEventInfo->Visible = true;
+		if (currentlyAdmin) {
+			btnAddTask->Visible = true;
+			btnEditAvailability->Visible = false;
+		}
+		else {
+			btnEditAvailability->Visible = true;
+			btnAddTask->Visible = false;
+		}
+
 		lstYourEvents->Items->Clear();
 
 	}
@@ -1319,6 +1358,9 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	}
 }
 private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
+	std::string name = exec.currentUser.getUserName();
+	exec.currentEvent->addUser(name);
+	btnEditAvailability->Visible = false;
 }
 
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1363,8 +1405,7 @@ private: System::Void btnCreateEventBack_Click(System::Object^  sender, System::
 	grpAdmin->Visible = true;
 	lstYourEvents->Items->Clear();
 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-}
+
 private: System::Void textBox5_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void lblEventName_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1647,6 +1688,7 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	exec.currentEvent->setEventDay(sDay);
 	exec.currentEvent->setStartTime(startTime);
 	exec.currentEvent->setEndTime(endTime);
+	exec.currentEvent->addUser(adminName);
 
 
 	grpViewYourEvents->Visible = true;
@@ -1669,10 +1711,13 @@ private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, Sy
 
 private: System::Void grpViewYourEvents_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
 	// Populate the next screen
-	std::string* allEvents = exec.getAllEvents();
+	lstYourEvents->Items->Clear();
+	std::string* allEvents;
+	allEvents = exec.getAllEvents();
 	for (int i = 0; i < exec.getEventSize(); i++) {
 		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
 	}
+
 }
 
 private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -1695,6 +1740,22 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (txtTask->Text == "") {
+		MessageBox::Show("Task must have a name");
+	}
+	else {
+		std::string taskName = msclr::interop::marshal_as<std::string>(txtTask->Text);
+		Task temp(taskName);
+		exec.currentEvent->addTask(temp);
+		grpTask->Visible = false;
+		grpViewYourEvents->Visible = true;
+	}
+}
+private: System::Void btnAddTask_Click(System::Object^ sender, System::EventArgs^ e) {
+	grpEventInfo->Visible = false;
+	grpTask->Visible = true;
 }
 };
 }

@@ -89,19 +89,31 @@ void Executive::write() {
 
 		line = "";
 		// Go through the list of tasks and write them all to one line
-		std::vector<Task> tempTask = events->at(i).getTasks();
-		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
-			line += tempTask.at(j).getTaskName() + "@" + tempTask.at(j).getMaster() + "|";
-			
+		if (events->at(i).getTasks().size() <= 0) {
+
 		}
+		else {
+			std::vector<Task> tempTask = events->at(i).getTasks();
+			for (int j = 0; j < tempEvent.getNumTasks(); j++) {
+				line += tempTask.at(j).getTaskName() + "@" + tempTask.at(j).getMaster() + "|";
+
+			}
+		}
+		
 		ofile << line + "\n";
 
 		line = "";
+
+
 		// Go throught the list of attendees and write them to file
-		std::vector<User> tempUser = events->at(i).getUsers();
-		for (int j = 0; j < tempEvent.getNumUsers(); j++){
-			line += tempUser.at(j).getUserName() + "|";
+		if (events->at(i).getUsers().size() <= 0){}
+		else {
+			std::vector<User> tempUser = events->at(i).getUsers();
+			for (int j = 0; j < tempEvent.getNumUsers(); j++) {
+				line += tempUser.at(j).getUserName() + "|";
+			}
 		}
+		
 		ofile << line + "\n";
 
 		// Close the output file
