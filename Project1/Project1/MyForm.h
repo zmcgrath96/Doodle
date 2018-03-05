@@ -120,7 +120,9 @@ private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Button^  cancelMultiDay;
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::GroupBox^  groupBox1;
+	private: System::Windows::Forms::GroupBox^  grpTask;
+	private: System::Windows::Forms::Button^  button1;
+
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -163,6 +165,8 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
 			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
+			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
@@ -189,12 +193,12 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->grpMode->SuspendLayout();
 			this->grpAvailability->SuspendLayout();
+			this->grpTask->SuspendLayout();
 			this->grpMultiDay->SuspendLayout();
 			this->grpViewYourEvents->SuspendLayout();
 			this->grpEventInfo->SuspendLayout();
@@ -210,7 +214,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(243, 55);
+			this->grpCreateEvent->Location = System::Drawing::Point(268, 5);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -459,7 +463,7 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			// grpAvailability
 			// 
-			this->grpAvailability->Controls->Add(this->groupBox1);
+			this->grpAvailability->Controls->Add(this->grpTask);
 			this->grpAvailability->Controls->Add(this->comboBox2);
 			this->grpAvailability->Controls->Add(this->textBox6);
 			this->grpAvailability->Controls->Add(this->comboBox1);
@@ -468,7 +472,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpAvailability->Controls->Add(this->label1);
 			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
 			this->grpAvailability->Controls->Add(this->label7);
-			this->grpAvailability->Location = System::Drawing::Point(181, 14);
+			this->grpAvailability->Location = System::Drawing::Point(197, 5);
 			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAvailability->Name = L"grpAvailability";
 			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -477,6 +481,26 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpAvailability->TabStop = false;
 			this->grpAvailability->Visible = false;
 			this->grpAvailability->Enter += gcnew System::EventHandler(this, &MyForm::grpAvailability_Enter);
+			// 
+			// grpTask
+			// 
+			this->grpTask->Controls->Add(this->button1);
+			this->grpTask->Location = System::Drawing::Point(632, 27);
+			this->grpTask->Name = L"grpTask";
+			this->grpTask->Size = System::Drawing::Size(716, 680);
+			this->grpTask->TabIndex = 43;
+			this->grpTask->TabStop = false;
+			this->grpTask->Text = L"s";
+			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(280, 133);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(114, 33);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Create Task";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// comboBox2
 			// 
@@ -547,7 +571,7 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			// btnSubmitTimes
 			// 
-			this->btnSubmitTimes->Location = System::Drawing::Point(204, 512);
+			this->btnSubmitTimes->Location = System::Drawing::Point(88, 509);
 			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnSubmitTimes->Name = L"btnSubmitTimes";
 			this->btnSubmitTimes->Size = System::Drawing::Size(154, 35);
@@ -774,16 +798,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->textBox5->Visible = false;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
-			// groupBox1
-			// 
-			this->groupBox1->Location = System::Drawing::Point(4, 24);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(697, 654);
-			this->groupBox1->TabIndex = 43;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"s";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -812,6 +826,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpMode->ResumeLayout(false);
 			this->grpAvailability->ResumeLayout(false);
 			this->grpAvailability->PerformLayout();
+			this->grpTask->ResumeLayout(false);
 			this->grpMultiDay->ResumeLayout(false);
 			this->grpMultiDay->PerformLayout();
 			this->grpViewYourEvents->ResumeLayout(false);
@@ -1416,7 +1431,9 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpAvailability->Visible = false;
-	grpMode->Visible = true;
+	grpViewYourEvents->Visible = true;
+	
+
 	
 	
 	
@@ -2629,6 +2646,7 @@ private: System::Void btnEditAvailability_Click(System::Object^  sender, System:
 	chk1120_1140PM->Visible = true;
 	chk1140_1200AM->Visible = true;*/
 }
+
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpMode->Visible = false;
 	grpViewYourEvents->Visible = true;
