@@ -1049,7 +1049,6 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		sDay.setDay(eventDate.Day);
 		sDay.setYear(eventDate.Year);
 		exec.currentEvent->setEventDay(sDay);
-		exec.currentEvent->addUser(adminName);
 
 
 	}
@@ -1650,7 +1649,6 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	exec.currentEvent->setEventDay(sDay);
 	exec.currentEvent->setStartTime(startTime);
 	exec.currentEvent->setEndTime(endTime);
-	exec.currentEvent->addUser(adminName);
 
 
 	grpViewYourEvents->Visible = true;
