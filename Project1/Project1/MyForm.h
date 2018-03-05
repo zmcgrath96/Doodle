@@ -853,7 +853,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			MessageBox::Show("You cannot schedule an event in the past");
 		}
 		
-		else {
+		/*else {
 			class::Day sDay;
 			class::Day eDay;
 			sDay.setMonth(eventDate.Month);
@@ -864,7 +864,7 @@ private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 			eDay.setYear(eventDate.Year);
 			exec.currentEvent->setStartDay(sDay);
 			exec.currentEvent->setEndDay(eDay);
-		}
+		}*/
 	}
 
 private: bool currentlyAdmin;
@@ -892,6 +892,11 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 	}
 	else
 	{
+		// Pull Todays Date
+		System::DateTime todayDate = this->monthCalendar1->TodayDate;
+		// Pull the event date
+		System::DateTime eventDate = this->monthCalendar1->SelectionRange->Start;
+
 		grpAvailability->Visible = true;
 		grpCreateEvent->Visible = false;
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
@@ -907,6 +912,26 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 
 		textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 		exec.AddEvent(myEvent);
+
+		for (int i = 0; i < exec.events.size(); i++) {
+			if (exec.events.at(i).getName() == myEvent.getName()) {
+				exec.currentEvent = &exec.events.at(i);
+				break;
+			}
+		}
+	
+		class::Day sDay;
+		class::Day eDay;
+		sDay.setMonth(eventDate.Month);
+		sDay.setDay(eventDate.Day);
+		sDay.setYear(eventDate.Year);
+		eDay.setMonth(eventDate.Month);
+		eDay.setDay(eventDate.Day);
+		eDay.setYear(eventDate.Year);
+		exec.currentEvent->setStartDay(sDay);
+		exec.currentEvent->setEndDay(eDay);
+		MessageBox::Show("current event time  " + exec.currentEvent->getStartDay().getTime());
+
 
 	}
 	textBox1->Clear();
