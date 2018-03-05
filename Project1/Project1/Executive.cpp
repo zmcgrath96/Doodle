@@ -48,6 +48,11 @@ int Executive::getEventSize() {
 
 void Executive::write() {
 
+	// Check if theres anything in the events
+	if (events.size() ==  0){
+		return;
+	}
+
 	//Start by writing masterEvent file
 	std::ofstream ofile;
 	ofile.open("masterEvent.txt");
@@ -189,13 +194,13 @@ void Executive::read(){
 
 					getline(ss, line);
 					tempTime = stoi(line);
-					Day tempDay(tempMonth, tempDay, tempYear, tempTime);
+					Day tempday(tempMonth, tempDay, tempYear, tempTime);
 
 					if (lineNum == 2){
-						events.at(i).setStartDay(tempDay);
+						events.at(i).setStartDay(tempday);
 					}
 					else{
-						events.at(i).setEndDay(tempDay);
+						events.at(i).setEndDay(tempday);
 					}
 				}
 

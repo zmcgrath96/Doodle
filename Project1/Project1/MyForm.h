@@ -506,8 +506,8 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
-					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
 					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
 					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
@@ -515,6 +515,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(251, 28);
 			this->comboBox2->TabIndex = 42;
+			this->comboBox2->SelectedIndex = 0;
 			// 
 			// textBox6
 			// 
@@ -529,8 +530,8 @@ private: System::Windows::Forms::Label^  label2;
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L"5:00 am", L"5:20 am", L"5:40 am", L"6:00 am",
-					L"6:20 am", L"6:40 am", L"7:00 am", L"7:20 am", L"7:40 am", L"8:00 am", L"8:20 am", L"8:40 am", L"9:00 am", L"9:20 am", L"9:40 am",
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am", L" 9:40 am",
 					L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm", L"1:40 pm",
 					L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
 			});
@@ -538,6 +539,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(251, 28);
 			this->comboBox1->TabIndex = 4;
+			this->comboBox1->SelectedIndex = 0;
 			// 
 			// btnMultiDay
 			// 
@@ -838,7 +840,11 @@ private: System::Windows::Forms::Label^  label2;
 		}
 #pragma endregion
 #include <string>
-		//TODO: focus on txtUser on startup
+	
+	// On form load, read in events
+	void System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e){
+		exec.read();
+	}
 
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 		grpCreateEvent->Visible = true;
@@ -959,155 +965,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 
 	}
 	textBox1->Clear();
-
-	/*lbl500_520AMQuantity->Visible = false;
-	lbl520_540AMQuantity->Visible = false;
-	lbl540_600AMQuantity->Visible = false;
-
-	lbl600_620AMQuantity->Visible = false;
-	lbl620_640AMQuantity->Visible = false;
-	lbl640_700AMQuantity->Visible = false;
-
-	lbl700_720AMQuantity->Visible = false;
-	lbl720_740AMQuantity->Visible = false;
-	lbl740_800AMQuantity->Visible = false;
-
-	lbl800_820AMQuantity->Visible = false;
-	lbl820_840AMQuantity->Visible = false;
-	lbl840_900AMQuantity->Visible = false;
-
-	lbl900_920AMQuantity->Visible = false;
-	lbl920_940AMQuantity->Visible = false;
-	lbl940_1000AM7Quantity->Visible = false;
-
-	lbl1000_1020AMQuantity->Visible = false;
-	lbl1020_1040AMQuantity->Visible = false;
-	lbl1040_1100AMQuantity->Visible = false;
-
-	lbl1100_1120AMQuantity->Visible = false;
-	lbl1120_1140AMQuantity->Visible = false;
-	lbl1140_1200PMQuantity->Visible = false;
-
-	lbl100_120PMQuantity->Visible = false;
-	lbl120_140PMQuantity->Visible = false;
-	lbl140_200PMQuantity->Visible = false;
-
-	lbl200_220PMQuantity->Visible = false;
-	lbl220_240PMQuantity->Visible = false;
-	lbl240_300PMQuantity->Visible = false;
-
-	lbl300_320PMQuantity->Visible = false;
-	lbl320_340PMQuantity->Visible = false;
-	lbl340_400PMQuantity->Visible = false;
-
-	lbl400_420PMQuantity->Visible = false;
-	lbl420_440PMQuantity->Visible = false;
-	lbl440_500PMQuantity->Visible = false;
-
-	lbl500_520PMQuantity->Visible = false;
-	lbl520_540PMQuantity->Visible = false;
-	lbl540_600PMQuantity->Visible = false;
-
-	lbl600_620PMQuantity->Visible = false;
-	lbl620_640PMQuantity->Visible = false;
-	lbl640_700PMQuantity->Visible = false;
-
-	lbl700_720PMQuantity->Visible = false;
-	lbl720_740PMQuantity->Visible = false;
-	lbl740_800PMQuantity->Visible = false;
-
-	lbl800_820PMQuantity->Visible = false;
-	lbl820_840PMQuantity->Visible = false;
-	lbl840_900PMQuantity->Visible = false;
-
-	lbl900_920PMQuantity->Visible = false;
-	lbl920_940PMQuantity->Visible = false;
-	lbl940_1000PMQuantity->Visible = false;
-
-	lbl1000_1020PMQuantity->Visible = false;
-	lbl1020_1040PMQuantity->Visible = false;
-	lbl1040_1100PMQuantity->Visible = false;
-
-	lbl1100_1120PMQuantity->Visible = false;
-	lbl1120_1140PMQuantity->Visible = false;
-	lbl1140_1200AMQuantity->Visible = false;
-
-
-	///
-	///
-	///
-	chk500_520AM->Visible = true;
-	chk520_540AM->Visible = true;
-	chk540_600AM->Visible = true;
-
-	chk600_620AM->Visible = true;
-	chk620_640AM->Visible = true;
-	chk640_700AM->Visible = true;
-
-	chk700_720AM->Visible = true;
-	chk720_740AM->Visible = true;
-	chk740_800AM->Visible = true;
-
-	chk800_820AM->Visible = true;
-	chk820_840AM->Visible = true;
-	chk840_900AM->Visible = true;
-
-	chk900_920AM->Visible = true;
-	chk920_940AM->Visible = true;
-	chk940_10000AM->Visible = true;
-
-	chk1000_1020AM->Visible = true;
-	chk1020_1040AM->Visible = true;
-	chk1040_1100AM->Visible = true;
-
-	chk1100_1120AM->Visible = true;
-	chk1120_1140AM->Visible = true;
-	chk1140_1200PM->Visible = true;
-
-	chk100_120PM->Visible = true;
-	chk120_140PM->Visible = true;
-	chk140_200PM->Visible = true;
-
-	chk200_220PM->Visible = true;
-	chk220_240PM->Visible = true;
-	chk240_300PM->Visible = true;
-
-	chk300_320PM->Visible = true;
-	chk320_340PM->Visible = true;
-	chk340_400PM->Visible = true;
-
-	chk400_420PM->Visible = true;
-	chk420_440PM->Visible = true;
-	chk440_500PM->Visible = true;
-
-	chk500_520PM->Visible = true;
-	chk520_540PM->Visible = true;
-	chk540_600PM->Visible = true;
-
-	chk600_620PM->Visible = true;
-	chk620_640PM->Visible = true;
-	chk640_700PM->Visible = true;
-
-	chk700_720PM->Visible = true;
-	chk720_740PM->Visible = true;
-	chk740_800PM->Visible = true;
-
-	chk800_820PM->Visible = true;
-	chk820_840PM->Visible = true;
-	chk840_900PM->Visible = true;
-
-	chk900_920PM->Visible = true;
-	chk920_940PM->Visible = true;
-	chk940_1000PM->Visible = true;
-
-	chk1000_1020PM->Visible = true;
-	chk1020_1040PM->Visible = true;
-	chk1040_1100PM->Visible = true;
-
-	chk1100_1120PM->Visible = true;
-	chk1120_1140PM->Visible = true;
-	chk1140_1200AM->Visible = true;
-*/
+	
 }
 
 private: System::Void btnAdmin_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1129,302 +987,10 @@ private: System::Void btnLogin_Click(System::Object^  sender, System::EventArgs^
 
 private: System::Void rbtn12Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 
-	/*chk500_520AM->Text = "5:00 AM - 5:20 AM";
-	chk520_540AM->Text = "5:20 AM - 5:40 AM";
-	chk540_600AM->Text = "5:40 AM - 6:00 AM";
 
-	chk600_620AM->Text = "6:00 AM - 6:20 AM";
-	chk620_640AM->Text = "6:20 AM - 6:40 AM";
-	chk640_700AM->Text = "6:40 AM - 7:00 AM";
-
-	chk700_720AM->Text = "7:00 AM - 7:20 AM";
-	chk720_740AM->Text = "7:20 AM - 7:40 AM";
-	chk740_800AM->Text = "7:40 AM - 8:00 AM";
-
-	chk800_820AM->Text = "8:00 AM - 8:20 AM";
-	chk820_840AM->Text = "8:20 AM - 8:40 AM";
-	chk840_900AM->Text = "8:40 AM - 9:00 AM";
-
-	chk900_920AM->Text = "9:00 AM - 9:20 AM";
-	chk920_940AM->Text = "9:20 AM - 9:40 AM";
-	chk940_10000AM->Text = "9:40 AM - 10:00 AM";
-
-	chk1000_1020AM->Text = "10:00 AM - 10:20 AM";
-	chk1020_1040AM->Text = "10:20 AM - 10:40 AM";
-	chk1040_1100AM->Text = "10:40 AM - 11:00 AM";
-
-	chk1100_1120AM->Text = "11:00 AM - 11:20 AM";
-	chk1120_1140AM->Text = "11:20 AM - 11:40 AM";
-	chk1140_1200PM->Text = "11:40 AM - 12:00 PM";
-
-	chk100_120PM->Text = "1:00 PM - 1:20 PM";
-	chk120_140PM->Text = "1:20 PM - 1:40 PM";
-	chk140_200PM->Text = "1:40 PM - 2:00 PM";
-
-	chk200_220PM->Text = "2:00 PM - 2:20 PM";
-	chk220_240PM->Text = "2:20 PM - 2:40 PM";
-	chk240_300PM->Text = "2:40 PM - 3:00 PM";
-
-	chk300_320PM->Text = "3:00 PM - 3:20 PM";
-	chk320_340PM->Text = "3:20 PM - 3:40 PM";
-	chk340_400PM->Text = "3:40 PM - 4:00 PM";
-
-	chk400_420PM->Text = "4:00 PM - 4:20 PM";
-	chk420_440PM->Text = "4:20 PM - 4:40 PM";
-	chk440_500PM->Text = "4:40 PM - 5:00 PM";
-
-	chk500_520PM->Text = "5:00 PM - 5:20 PM";
-	chk520_540PM->Text = "5:20 PM - 5:40 PM";
-	chk540_600PM->Text = "5:40 PM - 6:00 PM";
-
-	chk600_620PM->Text = "6:00 PM - 6:20 PM";
-	chk620_640PM->Text = "6:20 PM - 6:40 PM";
-	chk640_700PM->Text = "6:40 PM - 7:00 PM";
-
-	chk700_720PM->Text = "7:00 PM - 7:20 PM";
-	chk720_740PM->Text = "7:20 PM - 7:40 PM";
-	chk740_800PM->Text = "7:40 PM - 8:00 PM";
-
-	chk800_820PM->Text = "8:00 PM - 8:20 PM";
-	chk820_840PM->Text = "8:20 PM - 8:40 PM";
-	chk840_900PM->Text = "8:40 PM - 9:00 PM";
-
-	chk900_920PM->Text = "9:00 PM - 9:20 PM";
-	chk920_940PM->Text = "9:20 PM - 9:40 PM";
-	chk940_1000PM->Text = "9:40 PM - 10:00 PM";
-
-	chk1000_1020PM->Text = "10:00 PM - 10:20 PM";
-	chk1020_1040PM->Text = "10:20 PM - 10:40 PM";
-	chk1040_1100PM->Text = "10:40 PM - 11:00 PM";
-
-	chk1100_1120PM->Text = "11:00 PM - 11:20 PM";
-	chk1120_1140PM->Text = "11:20 PM - 11:40 PM";
-	chk1140_1200AM->Text = "11:40 PM - 12:00 AM";
-
-	if (rbtn5_6AM->Checked)
-	{
-		rbtn05_06->Checked = true;
-	}
-	else if (rbtn6_7AM->Checked)
-	{
-		rbtn06_07->Checked = true;
-	}
-	else if (rbtn7_8AM->Checked)
-	{
-		rbtn07_08->Checked = true;
-	}
-	else if (rbtn8_9AM->Checked)
-	{
-		rbtn08_09->Checked = true;
-	}
-	else if (rbtn9_10AM->Checked)
-	{
-		rbtn09_10->Checked = true;
-	}
-	else if (rbtn10_11AM->Checked)
-	{
-		rbtn10_11->Checked = true;
-	}
-	else if (rbtn11_12PM->Checked)
-	{
-		rbtn11_12->Checked = true;
-	}
-	else if (rbtn1_2PM->Checked)
-	{
-		rbtn13_14->Checked = true;
-	}
-	else if (rbtn2_3PM->Checked)
-	{
-		rbtn14_15->Checked = true;
-	}
-	else if (rbtn3_4PM->Checked)
-	{
-		rbtn15_16->Checked = true;
-	}
-	else if (rbtn4_5PM->Checked)
-	{
-		rbtn16_17->Checked = true;
-	}
-	else if (rbtn5_6PM->Checked)
-	{
-		rbtn17_18->Checked = true;
-	}
-	else if (rbtn6_7PM->Checked)
-	{
-		rbtn18_19->Checked = true;
-	}
-	else if (rbtn7_8PM->Checked)
-	{
-		rbtn19_20->Checked = true;
-	}
-	else if (rbtn8_9PM->Checked)
-	{
-		rbtn20_21->Checked = true;
-	}
-	else if (rbtn9_10PM->Checked)
-	{
-		rbtn21_22->Checked = true;
-	}
-	else if (rbtn10_11PM->Checked)
-	{
-		rbtn22_23->Checked = true;
-	}
-	else if (rbtn11_12AM->Checked)
-	{
-		rbtn23_00->Checked = true;
-	}
-
-	pnl12Hr->BringToFront();
-	pnl24Hr->SendToBack();*/
 }
 private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*chk500_520AM->Text = "05:00 - 05:20";
-	chk520_540AM->Text = "05:20 - 05:40";
-	chk540_600AM->Text = "05:40 - 06:00";
-
-	chk600_620AM->Text = "06:00 - 06:20";
-	chk620_640AM->Text = "06:20 - 06:40";
-	chk640_700AM->Text = "06:40 - 07:00";
-
-	chk700_720AM->Text = "07:00 - 07:20";
-	chk720_740AM->Text = "07:20 - 07:40";
-	chk740_800AM->Text = "07:40 - 08:00";
-
-	chk800_820AM->Text = "08:00 - 08:20";
-	chk820_840AM->Text = "08:20 - 08:40";
-	chk840_900AM->Text = "08:40 - 09:00";
-
-	chk900_920AM->Text = "09:00 - 09:20";
-	chk920_940AM->Text = "09:20 - 09:40";
-	chk940_10000AM->Text = "09:40 - 10:00";
-
-	chk1000_1020AM->Text = "10:00 - 10:20";
-	chk1020_1040AM->Text = "10:20 - 10:40";
-	chk1040_1100AM->Text = "10:40 - 11:00";
-
-	chk1100_1120AM->Text = "11:00 - 11:20";
-	chk1120_1140AM->Text = "11:20 - 11:40";
-	chk1140_1200PM->Text = "11:40 - 12:00";
-
-	chk100_120PM->Text = "13:00 - 13:20";
-	chk120_140PM->Text = "13:20 - 13:40";
-	chk140_200PM->Text = "13:40 - 14:00";
-
-	chk200_220PM->Text = "14:00 - 14:20";
-	chk220_240PM->Text = "14:20 - 14:40";
-	chk240_300PM->Text = "14:40 - 15:00";
-
-	chk300_320PM->Text = "15:00 - 15:20";
-	chk320_340PM->Text = "15:20 - 15:40";
-	chk340_400PM->Text = "15:40 - 16:00";
-
-	chk400_420PM->Text = "16:00 - 16:20";
-	chk420_440PM->Text = "16:20 - 16:40";
-	chk440_500PM->Text = "16:40 - 17:00";
-
-	chk500_520PM->Text = "17:00 - 17:20";
-	chk520_540PM->Text = "17:20 - 17:40";
-	chk540_600PM->Text = "17:40 - 18:00";
-
-	chk600_620PM->Text = "18:00 - 18:20";
-	chk620_640PM->Text = "18:20 - 18:40";
-	chk640_700PM->Text = "18:40 - 19:00";
-
-	chk700_720PM->Text = "19:00 - 19:20";
-	chk720_740PM->Text = "19:20 - 19:40";
-	chk740_800PM->Text = "19:40 - 20:00";
-
-	chk800_820PM->Text = "20:00 - 20:20";
-	chk820_840PM->Text = "20:20 - 20:40";
-	chk840_900PM->Text = "20:40 - 21:00";
-
-	chk900_920PM->Text = "21:00 - 21:20";
-	chk920_940PM->Text = "21:20 - 21:40";
-	chk940_1000PM->Text = "21:40 - 22:00";
-
-	chk1000_1020PM->Text = "22:00 - 22:20";
-	chk1020_1040PM->Text = "22:20 - 22:40";
-	chk1040_1100PM->Text = "22:40 - 23:00";
-
-	chk1100_1120PM->Text = "23:00 - 23:20";
-	chk1120_1140PM->Text = "23:20 - 23:40";
-	chk1140_1200AM->Text = "23:40 - 00:00";
-
-	if (rbtn05_06->Checked)
-	{
-		rbtn5_6AM->Checked = true;
-	}
-	else if (rbtn06_07->Checked)
-	{
-		rbtn6_7AM->Checked = true;
-	}
-	else if (rbtn07_08->Checked)
-	{
-		rbtn7_8AM->Checked = true;
-	}
-	else if (rbtn08_09->Checked)
-	{
-		rbtn8_9AM->Checked = true;
-	}
-	else if (rbtn09_10->Checked)
-	{
-		rbtn9_10AM->Checked = true;
-	}
-	else if (rbtn10_11->Checked)
-	{
-		rbtn10_11AM->Checked = true;
-	}
-	else if (rbtn11_12->Checked)
-	{
-		rbtn11_12PM->Checked = true;
-	}
-	else if (rbtn13_14->Checked)
-	{
-		rbtn1_2PM->Checked = true;
-	}
-	else if (rbtn14_15->Checked)
-	{
-		rbtn2_3PM->Checked = true;
-	}
-	else if (rbtn15_16->Checked)
-	{
-		rbtn3_4PM->Checked = true;
-	}
-	else if (rbtn16_17->Checked)
-	{
-		rbtn4_5PM->Checked = true;
-	}
-	else if (rbtn17_18->Checked)
-	{
-		rbtn5_6PM->Checked = true;
-	}
-	else if (rbtn18_19->Checked)
-	{
-		rbtn6_7PM->Checked = true;
-	}
-	else if (rbtn19_20->Checked)
-	{
-		rbtn7_8PM->Checked = true;
-	}
-	else if (rbtn20_21->Checked)
-	{
-		rbtn8_9PM->Checked = true;
-	}
-	else if (rbtn21_22->Checked)
-	{
-		rbtn9_10PM->Checked = true;
-	}
-	else if (rbtn22_23->Checked)
-	{
-		rbtn10_11PM->Checked = true;
-	}
-	else if (rbtn23_00->Checked)
-	{
-		rbtn11_12AM->Checked = true;
-	}
-
-	pnl24Hr->BringToFront();
-	pnl12Hr->SendToBack();*/	
+	
 }
 
 
@@ -1435,112 +1001,38 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 	
 
 	
-	
-	
+	std::string timeOne = comboBox1.Value.Text;
+	std::string timeTwo = comboBox2.Value.Text;
+
+	//Date formatted as hh:mm
+	int startHour = atoi(timeOne.substr(0,2).c_str());
+	int startMin= atoi(timeOne.substr(3,2).c_str());
+
+	int endHour = atoi(timeTwo.substr(0,2).c_str());
+	int endMin = atoi(timeTwo.substr(3,2).c_str());
 
 
-	//textBox4->Text = gcnew String(date.c_str());
-	//textBox1->Text = gcnew String(name.c_str());
+	// TODO check if AM or PM
 
-	//String^ eventName = gcnew String(test.c_str());
+	int startTime = startHour*60 + startMin;
+	int endTime = endHour*60 + endMin;
+
+	// Check if end time is before start time
+	if (endTime <= startTime){
+		MessageBox::Show("An event cannot end before it starts");
+	}
+	// Check if the time spans the lunch hour
+	else if ((startTime <= 12*60 ) && (endTime >= 13*60)){
+		MessageBox::Show("An event cannot span lunch time");
+	}
+	else{
+		exec.currentEvent->getStartDay().setTime(startTime);
+		exec.currentEvent->getEndDay().setTime(endTime);
+	}
+
+
 	
 	User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
-	//u.setName(msclr::interop::marshal_as<std::string>(txtUser->Text));
-//	u.setisAdmin(currentlyAdmin);
-
-
-	/*
-	* TODO: Add user availability
-	*/
-	/*if (currentlyAdmin)
-		exec.AddEvent(exec.currentEvent);
-
-	for (int i = 0; i < exec.getEventSize(); i++) {
-		if(exec.currentEvent.getName() == exec.events[i].getName())
-			exec.events[i].addUser(u);
-	}*/
-	//
-	//
-	//
-	
-	
-
-	/*if (chk500_520AM->Checked) 
-	{ 
-		u.AddTime(0); 
-	}
-	if(chk520_540AM->Checked){ u.AddTime(1); }
-	if(chk540_600AM->Checked){ u.AddTime(2); }
-
-	if(chk600_620AM->Checked){ u.AddTime(3); }
-	if(chk620_640AM->Checked){ u.AddTime(4); }
-	if(chk640_700AM->Checked){ u.AddTime(5); }
-
-	if(chk700_720AM->Checked){ u.AddTime(6); }
-	if(chk720_740AM->Checked){ u.AddTime(7); }
-	if(chk740_800AM->Checked){ u.AddTime(8); }
-
-	if(chk800_820AM->Checked){ u.AddTime(9); }
-	if(chk820_840AM->Checked){ u.AddTime(10); }
-	if(chk840_900AM->Checked){ u.AddTime(11); }
-
-	if(chk900_920AM->Checked){ u.AddTime(12); }
-	if(chk920_940AM->Checked){ u.AddTime(13); }
-	if(chk940_10000AM->Checked){ u.AddTime(14); }
-
-	if(chk1000_1020AM->Checked){ u.AddTime(15); }
-	if(chk1020_1040AM->Checked){ u.AddTime(16); }
-	if(chk1040_1100AM->Checked){ u.AddTime(17); }
-
-	if(chk1100_1120AM->Checked){ u.AddTime(18); }
-	if(chk1120_1140AM->Checked){ u.AddTime(19); }
-	if(chk1140_1200PM->Checked){ u.AddTime(20); }
-
-	if(chk100_120PM->Checked){ u.AddTime(21); }
-	if(chk120_140PM->Checked){ u.AddTime(22); }
-	if(chk140_200PM->Checked){ u.AddTime(23); }
-
-	if(chk200_220PM->Checked){ u.AddTime(24); }
-	if(chk220_240PM->Checked){ u.AddTime(25); }
-	if(chk240_300PM->Checked){ u.AddTime(26); }
-
-	if(chk300_320PM->Checked){ u.AddTime(27); }
-	if(chk320_340PM->Checked){ u.AddTime(28); }
-	if(chk340_400PM->Checked){ u.AddTime(29); }
-
-	if(chk400_420PM->Checked){ u.AddTime(30); }
-	if(chk420_440PM->Checked){ u.AddTime(31); }
-	if(chk440_500PM->Checked){ u.AddTime(32); }
-
-	if(chk500_520PM->Checked){ u.AddTime(33); }
-	if(chk520_540PM->Checked){ u.AddTime(34); }
-	if(chk540_600PM->Checked){ u.AddTime(35); }
-
-	if(chk600_620PM->Checked){ u.AddTime(36); }
-	if(chk620_640PM->Checked){ u.AddTime(37); }
-	if(chk640_700PM->Checked){ u.AddTime(38); }
-
-	if(chk700_720PM->Checked){ u.AddTime(39); }
-	if(chk720_740PM->Checked){ u.AddTime(40); }
-	if(chk740_800PM->Checked){ u.AddTime(41); }
-
-	if(chk800_820PM->Checked){ u.AddTime(42); }
-	if(chk820_840PM->Checked){ u.AddTime(43); }
-	if(chk840_900PM->Checked){ u.AddTime(44); }
-
-	if(chk900_920PM->Checked){ u.AddTime(45); }
-	if(chk920_940PM->Checked){ u.AddTime(46); }
-	if(chk940_1000PM->Checked){ u.AddTime(47); }
-
-	if(chk1000_1020PM->Checked){ u.AddTime(48); }
-	if(chk1020_1040PM->Checked){ u.AddTime(49); }
-	if(chk1040_1100PM->Checked){ u.AddTime(50); }
-
-	if(chk1100_1120PM->Checked){ u.AddTime(51); }
-	if(chk1120_1140PM->Checked){ u.AddTime(52); }
-	if(chk1140_1200AM->Checked){ u.AddTime(53); }
-*/
-	//int newestEvent = exec.getEventSize()-1;
 
 	std::string* eventList = exec.getAllEvents();
 	System::String^ tempString = textBox1->Text;//lstYourEvents->SelectedItem->ToString();
@@ -1561,81 +1053,8 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 		}
 	}
 	exec.events[index].addUser(u.getUserName());
-	//
-	//
-	//
-	/*chk500_520AM->Checked = false;
-	chk520_540AM->Checked = false;
-	chk540_600AM->Checked = false;
+	
 
-	chk600_620AM->Checked = false;
-	chk620_640AM->Checked = false;
-	chk640_700AM->Checked = false;
-
-	chk700_720AM->Checked = false;
-	chk720_740AM->Checked = false;
-	chk740_800AM->Checked = false;
-
-	chk800_820AM->Checked = false;
-	chk820_840AM->Checked = false;
-	chk840_900AM->Checked = false;
-
-	chk900_920AM->Checked = false;
-	chk920_940AM->Checked = false;
-	chk940_10000AM->Checked = false;
-
-	chk1000_1020AM->Checked = false;
-	chk1020_1040AM->Checked = false;
-	chk1040_1100AM->Checked = false;
-
-	chk1100_1120AM->Checked = false;
-	chk1120_1140AM->Checked = false;
-	chk1140_1200PM->Checked = false;
-
-	chk100_120PM->Checked = false;
-	chk120_140PM->Checked = false;
-	chk140_200PM->Checked = false;
-
-	chk200_220PM->Checked = false;
-	chk220_240PM->Checked = false;
-	chk240_300PM->Checked = false;
-
-	chk300_320PM->Checked = false;
-	chk320_340PM->Checked = false;
-	chk340_400PM->Checked = false;
-
-	chk400_420PM->Checked = false;
-	chk420_440PM->Checked = false;
-	chk440_500PM->Checked = false;
-
-	chk500_520PM->Checked = false;
-	chk520_540PM->Checked = false;
-	chk540_600PM->Checked = false;
-
-	chk600_620PM->Checked = false;
-	chk620_640PM->Checked = false;
-	chk640_700PM->Checked = false;
-
-	chk700_720PM->Checked = false;
-	chk720_740PM->Checked = false;
-	chk740_800PM->Checked = false;
-
-	chk800_820PM->Checked = false;
-	chk820_840PM->Checked = false;
-	chk840_900PM->Checked = false;
-
-	chk900_920PM->Checked = false;
-	chk920_940PM->Checked = false;
-	chk940_1000PM->Checked = false;
-
-	chk1000_1020PM->Checked = false;
-	chk1020_1040PM->Checked = false;
-	chk1040_1100PM->Checked = false;
-
-	chk1100_1120PM->Checked = false;
-	chk1120_1140PM->Checked = false;
-	chk1140_1200AM->Checked = false;
-	*/
 }
 
 private: System::Void chk500_520AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -1683,732 +1102,119 @@ private: System::Void chk1140_1200PM_CheckedChanged(System::Object^  sender, Sys
 private: System::Void chk100_120PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void rbtn5_6AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = true;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;
-*/
+	
 }
 private: System::Void rbtn6_7AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = true;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn7_8AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = true;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn8_9AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	//pnl5_6AM->Visible = false;
-	//pnl6_7AM->Visible = false;
-	//pnl7_8AM->Visible = false;
-	//pnl8_9AM->Visible = true;
-	//pnl9_10AM->Visible = false;
-	//pnl10_11AM->Visible = false;
-	//pnl11_12PM->Visible = false;
-	//pnl1_2PM->Visible = false;
-	//pnl2_3PM->Visible = false;
-	//pnl3_4PM->Visible = false;
-	//pnl4_5PM->Visible = false;
-	//pnl5_6PM->Visible = false;
-	//pnl6_7PM->Visible = false;
-	//pnl7_8PM->Visible = false;
-	//pnl8_9PM->Visible = false;
-	//pnl9_10PM->Visible = false;
-	//pnl10_11PM->Visible = false;
-	//pnl11_12AM->Visible = false;
+	
 }
 private: System::Void rbtn9_10AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = true;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn10_11AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = true;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+
 }
 private: System::Void rbtn11_12PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = true;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn1_2PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = true;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn2_3PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = true;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn3_4PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = true;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn4_5PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = true;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn5_6PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = true;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn6_7PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = true;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn7_8PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = true;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn8_9PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = true;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn9_10PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = true;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn10_11PM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = true;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn11_12AM_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = true;*/
+	
 }
 
 private: System::Void rbtn05_06_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = true;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn06_07_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = true;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn07_08_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = true;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn08_09_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = true;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 
 }
 private: System::Void rbtn09_10_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = true;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn10_11_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = true;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn11_12_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = true;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn13_14_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	///*pnl5_6AM->Visible = false;
-	//pnl6_7AM->Visible = false;
-	//pnl7_8AM->Visible = false;
-	//pnl8_9AM->Visible = false;
-	//pnl9_10AM->Visible = false;
-	//pnl10_11AM->Visible = false;
-	//pnl11_12PM->Visible = false;
-	//pnl1_2PM->Visible = true;
-	//pnl2_3PM->Visible = false;
-	//pnl3_4PM->Visible = false;
-	//pnl4_5PM->Visible = false;
-	//pnl5_6PM->Visible = false;
-	//pnl6_7PM->Visible = false;
-	//pnl7_8PM->Visible = false;
-	//pnl8_9PM->Visible = false;
-	//pnl9_10PM->Visible = false;
-	//pnl10_11PM->Visible = false;
-	//pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn14_15_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = true;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn15_16_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = true;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn16_17_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = true;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn17_18_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = true;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn18_19_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = true;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn19_20_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = true;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn20_21_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = true;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn21_22_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = true;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn22_23_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = true;
-	pnl11_12AM->Visible = false;*/
+	
 }
 private: System::Void rbtn23_00_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	/*pnl5_6AM->Visible = false;
-	pnl6_7AM->Visible = false;
-	pnl7_8AM->Visible = false;
-	pnl8_9AM->Visible = false;
-	pnl9_10AM->Visible = false;
-	pnl10_11AM->Visible = false;
-	pnl11_12PM->Visible = false;
-	pnl1_2PM->Visible = false;
-	pnl2_3PM->Visible = false;
-	pnl3_4PM->Visible = false;
-	pnl4_5PM->Visible = false;
-	pnl5_6PM->Visible = false;
-	pnl6_7PM->Visible = false;
-	pnl7_8PM->Visible = false;
-	pnl8_9PM->Visible = false;
-	pnl9_10PM->Visible = false;
-	pnl10_11PM->Visible = false;
-	pnl11_12AM->Visible = true;*/
+	
 }
 private: System::Void btnEditEvents_Click(System::Object^  sender, System::EventArgs^  e) {
 	grpViewYourEvents->Visible = true;
@@ -2494,157 +1300,6 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 	}
 }
 private: System::Void btnEditAvailability_Click(System::Object^  sender, System::EventArgs^  e) {
-	/*grpEventInfo->Visible = false;
-	grpAvailability->Visible = true;
-	label2->Text = "Select Available Times:";
-
-	lbl500_520AMQuantity->Visible = false;
-	lbl520_540AMQuantity->Visible = false;
-	lbl540_600AMQuantity->Visible = false;
-
-	lbl600_620AMQuantity->Visible = false;
-	lbl620_640AMQuantity->Visible = false;
-	lbl640_700AMQuantity->Visible = false;
-
-	lbl700_720AMQuantity->Visible = false;
-	lbl720_740AMQuantity->Visible = false;
-	lbl740_800AMQuantity->Visible = false;
-
-	lbl800_820AMQuantity->Visible = false;
-	lbl820_840AMQuantity->Visible = false;
-	lbl840_900AMQuantity->Visible = false;
-
-	lbl900_920AMQuantity->Visible = false;
-	lbl920_940AMQuantity->Visible = false;
-	lbl940_1000AM7Quantity->Visible = false;
-
-	lbl1000_1020AMQuantity->Visible = false;
-	lbl1020_1040AMQuantity->Visible = false;
-	lbl1040_1100AMQuantity->Visible = false;
-
-	lbl1100_1120AMQuantity->Visible = false;
-	lbl1120_1140AMQuantity->Visible = false;
-	lbl1140_1200PMQuantity->Visible = false;
-
-	lbl100_120PMQuantity->Visible = false;
-	lbl120_140PMQuantity->Visible = false;
-	lbl140_200PMQuantity->Visible = false;
-
-	lbl200_220PMQuantity->Visible = false;
-	lbl220_240PMQuantity->Visible = false;
-	lbl240_300PMQuantity->Visible = false;
-
-	lbl300_320PMQuantity->Visible = false;
-	lbl320_340PMQuantity->Visible = false;
-	lbl340_400PMQuantity->Visible = false;
-
-	lbl400_420PMQuantity->Visible = false;
-	lbl420_440PMQuantity->Visible = false;
-	lbl440_500PMQuantity->Visible = false;
-
-	lbl500_520PMQuantity->Visible = false;
-	lbl520_540PMQuantity->Visible = false;
-	lbl540_600PMQuantity->Visible = false;
-
-	lbl600_620PMQuantity->Visible = false;
-	lbl620_640PMQuantity->Visible = false;
-	lbl640_700PMQuantity->Visible = false;
-
-	lbl700_720PMQuantity->Visible = false;
-	lbl720_740PMQuantity->Visible = false;
-	lbl740_800PMQuantity->Visible = false;
-
-	lbl800_820PMQuantity->Visible = false;
-	lbl820_840PMQuantity->Visible = false;
-	lbl840_900PMQuantity->Visible = false;
-
-	lbl900_920PMQuantity->Visible = false;
-	lbl920_940PMQuantity->Visible = false;
-	lbl940_1000PMQuantity->Visible = false;
-
-	lbl1000_1020PMQuantity->Visible = false;
-	lbl1020_1040PMQuantity->Visible = false;
-	lbl1040_1100PMQuantity->Visible = false;
-
-	lbl1100_1120PMQuantity->Visible = false;
-	lbl1120_1140PMQuantity->Visible = false;
-	lbl1140_1200AMQuantity->Visible = false;
-
-
-	///
-	///
-	///
-	chk500_520AM->Visible = true;
-	chk520_540AM->Visible = true;
-	chk540_600AM->Visible = true;
-
-	chk600_620AM->Visible = true;
-	chk620_640AM->Visible = true;
-	chk640_700AM->Visible = true;
-
-	chk700_720AM->Visible = true;
-	chk720_740AM->Visible = true;
-	chk740_800AM->Visible = true;
-
-	chk800_820AM->Visible = true;
-	chk820_840AM->Visible = true;
-	chk840_900AM->Visible = true;
-
-	chk900_920AM->Visible = true;
-	chk920_940AM->Visible = true;
-	chk940_10000AM->Visible = true;
-
-	chk1000_1020AM->Visible = true;
-	chk1020_1040AM->Visible = true;
-	chk1040_1100AM->Visible = true;
-
-	chk1100_1120AM->Visible = true;
-	chk1120_1140AM->Visible = true;
-	chk1140_1200PM->Visible = true;
-
-	chk100_120PM->Visible = true;
-	chk120_140PM->Visible = true;
-	chk140_200PM->Visible = true;
-
-	chk200_220PM->Visible = true;
-	chk220_240PM->Visible = true;
-	chk240_300PM->Visible = true;
-
-	chk300_320PM->Visible = true;
-	chk320_340PM->Visible = true;
-	chk340_400PM->Visible = true;
-
-	chk400_420PM->Visible = true;
-	chk420_440PM->Visible = true;
-	chk440_500PM->Visible = true;
-
-	chk500_520PM->Visible = true;
-	chk520_540PM->Visible = true;
-	chk540_600PM->Visible = true;
-
-	chk600_620PM->Visible = true;
-	chk620_640PM->Visible = true;
-	chk640_700PM->Visible = true;
-
-	chk700_720PM->Visible = true;
-	chk720_740PM->Visible = true;
-	chk740_800PM->Visible = true;
-
-	chk800_820PM->Visible = true;
-	chk820_840PM->Visible = true;
-	chk840_900PM->Visible = true;
-
-	chk900_920PM->Visible = true;
-	chk920_940PM->Visible = true;
-	chk940_1000PM->Visible = true;
-
-	chk1000_1020PM->Visible = true;
-	chk1020_1040PM->Visible = true;
-	chk1040_1100PM->Visible = true;
-
-	chk1100_1120PM->Visible = true;
-	chk1120_1140PM->Visible = true;
-	chk1140_1200AM->Visible = true;*/
 }
 
 private: System::Void btnUser_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2721,231 +1376,9 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	grpEventInfo->Visible = false;
 	grpAvailability->Visible = true;
 
-	//lbl500_520AMQuantity->Visible = true;
-	//lbl520_540AMQuantity->Visible = true;
-	//lbl540_600AMQuantity->Visible = true;
-	//
-	//lbl600_620AMQuantity->Visible = true;
-	//lbl620_640AMQuantity->Visible = true;
-	//lbl640_700AMQuantity->Visible = true;
-	//
-	//lbl700_720AMQuantity->Visible = true;
-	//lbl720_740AMQuantity->Visible = true;
-	//lbl740_800AMQuantity->Visible = true;
-	//
-	//lbl800_820AMQuantity->Visible = true;
-	//lbl820_840AMQuantity->Visible = true;
-	//lbl840_900AMQuantity->Visible = true;
-	//
-	//lbl900_920AMQuantity->Visible = true;
-	//lbl920_940AMQuantity->Visible = true;
-	//lbl940_1000AM7Quantity->Visible = true;
-	//
-	//lbl1000_1020AMQuantity->Visible = true;
-	//lbl1020_1040AMQuantity->Visible = true;
-	//lbl1040_1100AMQuantity->Visible = true;
-	//
-	//lbl1100_1120AMQuantity->Visible = true;
-	//lbl1120_1140AMQuantity->Visible = true;
-	//lbl1140_1200PMQuantity->Visible = true;
-	//
-	//lbl100_120PMQuantity->Visible = true;
-	//lbl120_140PMQuantity->Visible = true;
-	//lbl140_200PMQuantity->Visible = true;
-	//
-	//lbl200_220PMQuantity->Visible = true;
-	//lbl220_240PMQuantity->Visible = true;
-	//lbl240_300PMQuantity->Visible = true;
-	//
-	//lbl300_320PMQuantity->Visible = true;
-	//lbl320_340PMQuantity->Visible = true;
-	//lbl340_400PMQuantity->Visible = true;
-	//
-	//lbl400_420PMQuantity->Visible = true;
-	//lbl420_440PMQuantity->Visible = true;
-	//lbl440_500PMQuantity->Visible = true;
-	//
-	//lbl500_520PMQuantity->Visible = true;
-	//lbl520_540PMQuantity->Visible = true;
-	//lbl540_600PMQuantity->Visible = true;
-	//
-	//lbl600_620PMQuantity->Visible = true;
-	//lbl620_640PMQuantity->Visible = true;
-	//lbl640_700PMQuantity->Visible = true;
-	//
-	//lbl700_720PMQuantity->Visible = true;
-	//lbl720_740PMQuantity->Visible = true;
-	//lbl740_800PMQuantity->Visible = true;
-	//
-	//lbl800_820PMQuantity->Visible = true;
-	//lbl820_840PMQuantity->Visible = true;
-	//lbl840_900PMQuantity->Visible = true;
-	//
-	//lbl900_920PMQuantity->Visible = true;
-	//lbl920_940PMQuantity->Visible = true;
-	//lbl940_1000PMQuantity->Visible = true;
-	//
-	//lbl1000_1020PMQuantity->Visible = true;
-	//lbl1020_1040PMQuantity->Visible = true;
-	//lbl1040_1100PMQuantity->Visible = true;
-	//
-	//lbl1100_1120PMQuantity->Visible = true;
-	//lbl1120_1140PMQuantity->Visible = true;
-	//lbl1140_1200AMQuantity->Visible = true;
-	
 
-	/////
-	/////
-	/////
-	//chk500_520AM->Visible = false;
-	//chk520_540AM->Visible = false;
-	//chk540_600AM->Visible = false;
-	//
-	//chk600_620AM->Visible = false;
-	//chk620_640AM->Visible = false;
-	//chk640_700AM->Visible = false;
-	//
-	//chk700_720AM->Visible = false;
-	//chk720_740AM->Visible = false;
-	//chk740_800AM->Visible = false;
-	//
-	//chk800_820AM->Visible = false;
-	//chk820_840AM->Visible = false;
-	//chk840_900AM->Visible = false;
-	//
-	//chk900_920AM->Visible = false;
-	//chk920_940AM->Visible = false;
-	//chk940_10000AM->Visible = false;
-	//
-	//chk1000_1020AM->Visible = false;
-	//chk1020_1040AM->Visible = false;
-	//chk1040_1100AM->Visible = false;
-	//
-	//chk1100_1120AM->Visible = false;
-	//chk1120_1140AM->Visible = false;
-	//chk1140_1200PM->Visible = false;
-	//
-	//chk100_120PM->Visible = false;
-	//chk120_140PM->Visible = false;
-	//chk140_200PM->Visible = false;
-	//
-	//chk200_220PM->Visible = false;
-	//chk220_240PM->Visible = false;
-	//chk240_300PM->Visible = false;
-	//
-	//chk300_320PM->Visible = false;
-	//chk320_340PM->Visible = false;
-	//chk340_400PM->Visible = false;
-	//
-	//chk400_420PM->Visible = false;
-	//chk420_440PM->Visible = false;
-	//chk440_500PM->Visible = false;
-	//
-	//chk500_520PM->Visible = false;
-	//chk520_540PM->Visible = false;
-	//chk540_600PM->Visible = false;
-	//
-	//chk600_620PM->Visible = false;
-	//chk620_640PM->Visible = false;
-	//chk640_700PM->Visible = false;
-	//
-	//chk700_720PM->Visible = false;
-	//chk720_740PM->Visible = false;
-	//chk740_800PM->Visible = false;
-	//
-	//chk800_820PM->Visible = false;
-	//chk820_840PM->Visible = false;
-	//chk840_900PM->Visible = false;
-	//
-	//chk900_920PM->Visible = false;
-	//chk920_940PM->Visible = false;
-	//chk940_1000PM->Visible = false;
-	//
-	//chk1000_1020PM->Visible = false;
-	//chk1020_1040PM->Visible = false;
-	//chk1040_1100PM->Visible = false;
-	//
-	//chk1100_1120PM->Visible = false;
-	//chk1120_1140PM->Visible = false;
-	//chk1140_1200AM->Visible = false;
-
-	//std::string time = "5:00 AM - 5:20 AM:";
-	////exec.checkAval();
-	////count # of people
-	//myEvent.getNumOfUs(0);
-	////std::string attendees = time + #ofPeople.ToString();
 	
-	//lbl500_520AMQuantity->Text = "5:00 AM - 5:20 AM:  " + myEvent.getNumOfUs(0).ToString();
-	//lbl520_540AMQuantity->Text = "5:20 AM - 5:40 AM:  " + myEvent.getNumOfUs(1).ToString();
-	//lbl540_600AMQuantity->Text = "5:40 AM - 6:00 AM:  " + myEvent.getNumOfUs(2).ToString();
-	//
-	//lbl600_620AMQuantity->Text = "6:00 AM - 6:20 AM:  " + myEvent.getNumOfUs(3).ToString();
-	//lbl620_640AMQuantity->Text = "6:20 AM - 6:40 AM:  " + myEvent.getNumOfUs(4).ToString();
-	//lbl640_700AMQuantity->Text = "7:40 AM - 7:00 AM:  " + myEvent.getNumOfUs(5).ToString();
-	//
-	//lbl700_720AMQuantity->Text = "7:00 AM - 7:20 AM:  " + myEvent.getNumOfUs(6).ToString();
-	//lbl720_740AMQuantity->Text = "7:20 AM - 7:40 AM:  " + myEvent.getNumOfUs(7).ToString();
-	//lbl740_800AMQuantity->Text = "7:40 AM - 8:00 AM:  " + myEvent.getNumOfUs(8).ToString();
-	//
-	//lbl800_820AMQuantity->Text = "8:00 AM - 8:20 AM:  " + myEvent.getNumOfUs(9).ToString();
-	//lbl820_840AMQuantity->Text = "8:20 AM - 8:40 AM:  " + myEvent.getNumOfUs(10).ToString();
-	//lbl840_900AMQuantity->Text = "8:40 AM - 9:00 AM:  " + myEvent.getNumOfUs(11).ToString();
-	//
-	//lbl900_920AMQuantity->Text = "9:00 AM - 9:20 AM:  " + myEvent.getNumOfUs(12).ToString();
-	//lbl920_940AMQuantity->Text = "9:20 AM - 9:40 AM:  " + myEvent.getNumOfUs(13).ToString();
-	//lbl940_1000AM7Quantity->Text = "9:40 AM - 10:00 AM:  " + myEvent.getNumOfUs(14).ToString();
-	//
-	//lbl1000_1020AMQuantity->Text = "10:00 AM - 10:20 AM:  " + myEvent.getNumOfUs(15).ToString();
-	//lbl1020_1040AMQuantity->Text = "10:20 AM - 10:40 AM:  " + myEvent.getNumOfUs(16).ToString();
-	//lbl1040_1100AMQuantity->Text = "10:40 AM - 11:00 AM:  " + myEvent.getNumOfUs(17).ToString();
-	//
-	//lbl1100_1120AMQuantity->Text = "11:00 AM - 11:20 AM:  " + myEvent.getNumOfUs(18).ToString();
-	//lbl1120_1140AMQuantity->Text = "11:20 AM - 11:40 AM:  " + myEvent.getNumOfUs(19).ToString();
-	//lbl1140_1200PMQuantity->Text = "11:40 AM - 12:00 PM:  " + myEvent.getNumOfUs(20).ToString();
-	//
-	//lbl100_120PMQuantity->Text = "1:00 PM - 1:20 PM:  " + myEvent.getNumOfUs(21).ToString();
-	//lbl120_140PMQuantity->Text = "1:20 PM - 1:40 PM:  " + myEvent.getNumOfUs(22).ToString();
-	//lbl140_200PMQuantity->Text = "1:40 PM - 2:00 PM:  " + myEvent.getNumOfUs(23).ToString();
-	//
-	//lbl200_220PMQuantity->Text = "2:00 PM - 2:20 PM:  " + myEvent.getNumOfUs(24).ToString();
-	//lbl220_240PMQuantity->Text = "2:20 PM - 2:40 PM:  " + myEvent.getNumOfUs(25).ToString();
-	//lbl240_300PMQuantity->Text = "2:40 PM - 3:00 PM:  " + myEvent.getNumOfUs(26).ToString();
-	//
-	//lbl300_320PMQuantity->Text = "3:00 PM - 3:20 PM:  " + myEvent.getNumOfUs(27).ToString();
-	//lbl320_340PMQuantity->Text = "3:20 PM - 3:40 PM:  " + myEvent.getNumOfUs(28).ToString();
-	//lbl340_400PMQuantity->Text = "3:40 PM - 4:00 PM:  " + myEvent.getNumOfUs(29).ToString();
-	//
-	//lbl400_420PMQuantity->Text = "4:00 PM - 4:20 PM:  " + myEvent.getNumOfUs(30).ToString();
-	//lbl420_440PMQuantity->Text = "4:20 PM - 4:40 PM:  " + myEvent.getNumOfUs(31).ToString();
-	//lbl440_500PMQuantity->Text = "4:40 PM - 5:00 PM:  " + myEvent.getNumOfUs(32).ToString();
-	//
-	//lbl500_520PMQuantity->Text = "5:00 PM - 5:20 PM:  " + myEvent.getNumOfUs(33).ToString();
-	//lbl520_540PMQuantity->Text = "5:20 PM - 5:40 PM:  " + myEvent.getNumOfUs(34).ToString();
-	//lbl540_600PMQuantity->Text = "5:40 PM - 6:00 PM:  " + myEvent.getNumOfUs(35).ToString();
-	//
-	//lbl600_620PMQuantity->Text = "6:00 PM - 6:20 PM:  " + myEvent.getNumOfUs(36).ToString();
-	//lbl620_640PMQuantity->Text = "6:20 PM - 6:40 PM:  " + myEvent.getNumOfUs(37).ToString();
-	//lbl640_700PMQuantity->Text = "6:40 PM - 7:00 PM:  " + myEvent.getNumOfUs(38).ToString();
-	//
-	//lbl700_720PMQuantity->Text = "7:00 PM - 7:20 PM:  " + myEvent.getNumOfUs(39).ToString();
-	//lbl720_740PMQuantity->Text = "7:20 PM - 7:40 PM:  " + myEvent.getNumOfUs(40).ToString();
-	//lbl740_800PMQuantity->Text = "7:40 PM - 8:00 PM:  " + myEvent.getNumOfUs(41).ToString();
-	//
-	//lbl800_820PMQuantity->Text = "8:00 PM - 8:20 PM:  " + myEvent.getNumOfUs(42).ToString();
-	//lbl820_840PMQuantity->Text = "8:20 PM - 8:40 PM:  " + myEvent.getNumOfUs(43).ToString();
-	//lbl840_900PMQuantity->Text = "8:40 PM - 9:00 PM:  " + myEvent.getNumOfUs(44).ToString();
-	//
-	//lbl900_920PMQuantity->Text = "9:00 PM - 9:20 PM:  " + myEvent.getNumOfUs(45).ToString();
-	//lbl920_940PMQuantity->Text = "9:20 PM - 9:40 PM:  " + myEvent.getNumOfUs(46).ToString();
-	//lbl940_1000PMQuantity->Text = "9:40 PM - 10:00 PM:  " + myEvent.getNumOfUs(47).ToString();
-	//
-	//lbl1000_1020PMQuantity->Text = "10:00 PM - 10:20 PM:  " + myEvent.getNumOfUs(48).ToString();
-	//lbl1020_1040PMQuantity->Text = "10:20 PM - 10:40 PM:  " + myEvent.getNumOfUs(49).ToString();
-	//lbl1040_1100PMQuantity->Text = "10:40 PM - 11:00 PM:  " + myEvent.getNumOfUs(50).ToString();
-	//
-	//lbl1100_1120PMQuantity->Text = "11:00 PM - 11:20 PM:  " + myEvent.getNumOfUs(51).ToString();
-	//lbl1120_1140PMQuantity->Text = "11:20 PM - 11:40 PM:  " + myEvent.getNumOfUs(52).ToString();
-	//lbl1140_1200AMQuantity->Text = "11:40 PM - 12:00 AM:  " + myEvent.getNumOfUs(53).ToString();
+	
 
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
