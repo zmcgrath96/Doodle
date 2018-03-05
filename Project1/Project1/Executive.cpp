@@ -30,9 +30,9 @@ std::string* Executive::getAllEvents()
 	cout<<"All events"<<endl;
 	int eventSize = events.size();
 	std::string* allEvents = new string[eventSize];
-	for(int i = 0; i<events.size();i++)
+	for(int i = 0; i<eventSize; i++)
 	{
-		allEvents[i] = events[i].getName();
+		allEvents[i] = events.at(i).getName();
 		//cout<<events[i].getName()<<endl;
 	}
 	return allEvents;

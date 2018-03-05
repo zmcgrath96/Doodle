@@ -54,7 +54,7 @@ namespace Project1 {
 
 	private: System::Windows::Forms::GroupBox^  grpAdmin;
 	private: System::Windows::Forms::Button^  btnCreateEvent;
-	private: System::Windows::Forms::Button^  btnEditEvents;
+
 	private: System::Windows::Forms::Label^  lblAdmin;
 	private: System::Windows::Forms::GroupBox^  grpCreateEvent;
 	private: System::Windows::Forms::Label^  lblDate;
@@ -79,9 +79,10 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  btnUser;
 
 
-	private: System::Windows::Forms::GroupBox^  grpAvailability;
-	private: System::Windows::Forms::Button^  btnSubmitTimes;
-	private: System::Windows::Forms::Label^  label7;
+
+
+
+
 
 	private: System::Windows::Forms::GroupBox^  grpViewYourEvents;
 	private: System::Windows::Forms::ListBox^  lstYourEvents;
@@ -107,22 +108,34 @@ private: System::Windows::Forms::TextBox^  textBox5;
 
 
 private: System::Windows::Forms::Button^  btnAttendees;
-private: System::Windows::Forms::TextBox^  textBox6;
+
 private: System::Windows::Forms::Button^  button2;
-private: System::Windows::Forms::Label^  label1;
 
-private: System::Windows::Forms::Label^  label2;
 
-	private: System::Windows::Forms::Button^  btnMultiDay;
+
+
+
 	private: System::Windows::Forms::GroupBox^  grpMultiDay;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendar2;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Button^  submitMultiDay;
 	private: System::Windows::Forms::Button^  cancelMultiDay;
-	private: System::Windows::Forms::ComboBox^  comboBox2;
+	private: System::Windows::Forms::Button^  btnEditEvents;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Button^  btnMultiDay;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::GroupBox^  grpTask;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::GroupBox^  grpTimes;
+private: System::Windows::Forms::Button^  btnSubmitTimes;
+
+
+
+
 
 
 
@@ -154,7 +167,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpAdmin = (gcnew System::Windows::Forms::GroupBox());
 			this->btnAdminBack = (gcnew System::Windows::Forms::Button());
 			this->btnCreateEvent = (gcnew System::Windows::Forms::Button());
-			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
 			this->lblAdmin = (gcnew System::Windows::Forms::Label());
 			this->grpLogin = (gcnew System::Windows::Forms::GroupBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -165,17 +177,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnModeBack = (gcnew System::Windows::Forms::Button());
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
-			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
-			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->btnMultiDay = (gcnew System::Windows::Forms::Button());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->grpMultiDay = (gcnew System::Windows::Forms::GroupBox());
 			this->cancelMultiDay = (gcnew System::Windows::Forms::Button());
 			this->submitMultiDay = (gcnew System::Windows::Forms::Button());
@@ -194,15 +195,27 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
 			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->btnMultiDay = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->grpTimes = (gcnew System::Windows::Forms::GroupBox());
+			this->btnEditEvents = (gcnew System::Windows::Forms::Button());
+			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->grpMode->SuspendLayout();
-			this->grpAvailability->SuspendLayout();
-			this->grpTask->SuspendLayout();
 			this->grpMultiDay->SuspendLayout();
 			this->grpViewYourEvents->SuspendLayout();
 			this->grpEventInfo->SuspendLayout();
+			this->grpTask->SuspendLayout();
+			this->grpTimes->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// grpCreateEvent
@@ -340,17 +353,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnCreateEvent->UseVisualStyleBackColor = true;
 			this->btnCreateEvent->Click += gcnew System::EventHandler(this, &MyForm::btnCreateEvent_Click);
 			// 
-			// btnEditEvents
-			// 
-			this->btnEditEvents->Location = System::Drawing::Point(45, 142);
-			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnEditEvents->Name = L"btnEditEvents";
-			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
-			this->btnEditEvents->TabIndex = 3;
-			this->btnEditEvents->Text = L"View Your Events";
-			this->btnEditEvents->UseVisualStyleBackColor = true;
-			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
-			// 
 			// lblAdmin
 			// 
 			this->lblAdmin->AutoSize = true;
@@ -461,137 +463,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnUser->Text = L"User Mode";
 			this->btnUser->UseVisualStyleBackColor = true;
 			this->btnUser->Click += gcnew System::EventHandler(this, &MyForm::btnUser_Click);
-			// 
-			// grpAvailability
-			// 
-			this->grpAvailability->Controls->Add(this->grpTask);
-			this->grpAvailability->Controls->Add(this->comboBox2);
-			this->grpAvailability->Controls->Add(this->textBox6);
-			this->grpAvailability->Controls->Add(this->comboBox1);
-			this->grpAvailability->Controls->Add(this->btnMultiDay);
-			this->grpAvailability->Controls->Add(this->label2);
-			this->grpAvailability->Controls->Add(this->label1);
-			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
-			this->grpAvailability->Controls->Add(this->label7);
-			this->grpAvailability->Location = System::Drawing::Point(197, 5);
-			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpAvailability->Name = L"grpAvailability";
-			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpAvailability->Size = System::Drawing::Size(708, 678);
-			this->grpAvailability->TabIndex = 13;
-			this->grpAvailability->TabStop = false;
-			this->grpAvailability->Visible = false;
-			this->grpAvailability->Enter += gcnew System::EventHandler(this, &MyForm::grpAvailability_Enter);
-			// 
-			// grpTask
-			// 
-			this->grpTask->Controls->Add(this->button1);
-			this->grpTask->Location = System::Drawing::Point(632, 27);
-			this->grpTask->Name = L"grpTask";
-			this->grpTask->Size = System::Drawing::Size(716, 680);
-			this->grpTask->TabIndex = 43;
-			this->grpTask->TabStop = false;
-			this->grpTask->Text = L"s";
-			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(280, 133);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(114, 33);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Create Task";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// comboBox2
-			// 
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
-					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
-					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
-					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
-			});
-			this->comboBox2->Location = System::Drawing::Point(84, 296);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(251, 28);
-			this->comboBox2->TabIndex = 42;
-			this->comboBox2->SelectedIndex = 0;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(276, 0);
-			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(148, 26);
-			this->textBox6->TabIndex = 40;
-			this->textBox6->Visible = false;
-			// 
-			// comboBox1
-			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
-				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
-					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
-					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
-					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
-			});
-			this->comboBox1->Location = System::Drawing::Point(82, 122);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(251, 28);
-			this->comboBox1->TabIndex = 4;
-			this->comboBox1->SelectedIndex = 0;
-			// 
-			// btnMultiDay
-			// 
-			this->btnMultiDay->Location = System::Drawing::Point(466, 512);
-			this->btnMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->btnMultiDay->Name = L"btnMultiDay";
-			this->btnMultiDay->Size = System::Drawing::Size(136, 34);
-			this->btnMultiDay->TabIndex = 7;
-			this->btnMultiDay->Text = L"Multiple Days";
-			this->btnMultiDay->UseVisualStyleBackColor = true;
-			this->btnMultiDay->Click += gcnew System::EventHandler(this, &MyForm::btnMultiDay_Click);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(84, 254);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(76, 20);
-			this->label2->TabIndex = 6;
-			this->label2->Text = L"End Time";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(78, 88);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(82, 20);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"Start Time";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
-			// 
-			// btnSubmitTimes
-			// 
-			this->btnSubmitTimes->Location = System::Drawing::Point(88, 509);
-			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnSubmitTimes->Name = L"btnSubmitTimes";
-			this->btnSubmitTimes->Size = System::Drawing::Size(154, 35);
-			this->btnSubmitTimes->TabIndex = 0;
-			this->btnSubmitTimes->Text = L"Submit";
-			this->btnSubmitTimes->UseVisualStyleBackColor = true;
-			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(274, 34);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(106, 20);
-			this->label7->TabIndex = 2;
-			this->label7->Text = L"Create Event:";
 			// 
 			// grpMultiDay
 			// 
@@ -801,6 +672,148 @@ private: System::Windows::Forms::Label^  label2;
 			this->textBox5->Visible = false;
 			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(274, 34);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(106, 20);
+			this->label7->TabIndex = 2;
+			this->label7->Text = L"Create Event:";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(78, 88);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(82, 20);
+			this->label1->TabIndex = 4;
+			this->label1->Text = L"Start Time";
+			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(84, 254);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(76, 20);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"End Time";
+			// 
+			// btnMultiDay
+			// 
+			this->btnMultiDay->Location = System::Drawing::Point(466, 512);
+			this->btnMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->btnMultiDay->Name = L"btnMultiDay";
+			this->btnMultiDay->Size = System::Drawing::Size(136, 34);
+			this->btnMultiDay->TabIndex = 7;
+			this->btnMultiDay->Text = L"Multiple Days";
+			this->btnMultiDay->UseVisualStyleBackColor = true;
+			this->btnMultiDay->Click += gcnew System::EventHandler(this, &MyForm::btnMultiDay_Click);
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
+					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
+					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+			});
+			this->comboBox1->Location = System::Drawing::Point(82, 122);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(251, 28);
+			this->comboBox1->TabIndex = 4;
+			this->comboBox1->SelectedIndex = 0;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(276, 0);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(148, 26);
+			this->textBox6->TabIndex = 40;
+			this->textBox6->Visible = false;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(35) {
+				L" 5:00 am", L" 5:20 am", L" 5:40 am", L" 6:00 am",
+					L" 6:20 am", L" 6:40 am", L" 7:00 am", L" 7:20 am", L" 7:40 am", L" 8:00 am", L" 8:20 am", L" 8:40 am", L" 9:00 am", L" 9:20 am",
+					L" 9:40 am", L"10:00 am", L"10:20 am", L"10:40 am", L"11:00 am", L"11:20 am", L"11:40 am", L"12:00 pm", L"1:00 pm", L"1:20 pm",
+					L"1:40 pm", L"2:00 pm", L"2:20 pm", L"2:40 pm", L"3:00 pm", L"3:20 pm", L"3:40 pm", L"4:00 pm", L"4:20 pm", L"4:40 pm", L"5:00 pm"
+			});
+			this->comboBox2->Location = System::Drawing::Point(84, 296);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(251, 28);
+			this->comboBox2->TabIndex = 42;
+			this->comboBox2->SelectedIndex = 0;
+			// 
+			// grpTask
+			// 
+			this->grpTask->Controls->Add(this->button1);
+			this->grpTask->Location = System::Drawing::Point(632, 27);
+			this->grpTask->Name = L"grpTask";
+			this->grpTask->Size = System::Drawing::Size(716, 680);
+			this->grpTask->TabIndex = 43;
+			this->grpTask->TabStop = false;
+			this->grpTask->Text = L"s";
+			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(280, 133);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(114, 33);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Create Task";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// grpTimes
+			// 
+			this->grpTimes->Controls->Add(this->grpTask);
+			this->grpTimes->Controls->Add(this->comboBox2);
+			this->grpTimes->Controls->Add(this->textBox6);
+			this->grpTimes->Controls->Add(this->comboBox1);
+			this->grpTimes->Controls->Add(this->btnMultiDay);
+			this->grpTimes->Controls->Add(this->label2);
+			this->grpTimes->Controls->Add(this->label1);
+			this->grpTimes->Controls->Add(this->btnSubmitTimes);
+			this->grpTimes->Controls->Add(this->label7);
+			this->grpTimes->Location = System::Drawing::Point(197, 5);
+			this->grpTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpTimes->Name = L"grpTimes";
+			this->grpTimes->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpTimes->Size = System::Drawing::Size(708, 678);
+			this->grpTimes->TabIndex = 13;
+			this->grpTimes->TabStop = false;
+			this->grpTimes->Visible = false;
+			this->grpTimes->Enter += gcnew System::EventHandler(this, &MyForm::grpTimes_Enter);
+			// 
+			// btnEditEvents
+			// 
+			this->btnEditEvents->Location = System::Drawing::Point(45, 142);
+			this->btnEditEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnEditEvents->Name = L"btnEditEvents";
+			this->btnEditEvents->Size = System::Drawing::Size(154, 35);
+			this->btnEditEvents->TabIndex = 3;
+			this->btnEditEvents->Text = L"View Your Events";
+			this->btnEditEvents->UseVisualStyleBackColor = true;
+			this->btnEditEvents->Click += gcnew System::EventHandler(this, &MyForm::btnEditEvents_Click);
+			// 
+			// btnSubmitTimes
+			// 
+			this->btnSubmitTimes->Location = System::Drawing::Point(88, 509);
+			this->btnSubmitTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnSubmitTimes->Name = L"btnSubmitTimes";
+			this->btnSubmitTimes->Size = System::Drawing::Size(154, 35);
+			this->btnSubmitTimes->TabIndex = 0;
+			this->btnSubmitTimes->Text = L"Submit";
+			this->btnSubmitTimes->UseVisualStyleBackColor = true;
+			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -808,7 +821,7 @@ private: System::Windows::Forms::Label^  label2;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->grpAvailability);
+			this->Controls->Add(this->grpTimes);
 			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpMultiDay);
 			this->Controls->Add(this->grpViewYourEvents);
@@ -827,14 +840,14 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpLogin->ResumeLayout(false);
 			this->grpLogin->PerformLayout();
 			this->grpMode->ResumeLayout(false);
-			this->grpAvailability->ResumeLayout(false);
-			this->grpAvailability->PerformLayout();
-			this->grpTask->ResumeLayout(false);
 			this->grpMultiDay->ResumeLayout(false);
 			this->grpMultiDay->PerformLayout();
 			this->grpViewYourEvents->ResumeLayout(false);
 			this->grpViewYourEvents->PerformLayout();
 			this->grpEventInfo->ResumeLayout(false);
+			this->grpTask->ResumeLayout(false);
+			this->grpTimes->ResumeLayout(false);
+			this->grpTimes->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -926,7 +939,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		// Pull the event date
 		System::DateTime eventDate = this->monthCalendar1->SelectionRange->Start;
 
-		grpViewYourEvents->Visible = true;
+		grpTimes->Visible = true;
 		grpCreateEvent->Visible = false;
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
@@ -996,7 +1009,7 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 
 
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpAvailability->Visible = false;
+	grpTimes->Visible = false;
 	grpViewYourEvents->Visible = true;
 	
 	
@@ -1030,29 +1043,32 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 		exec.currentEvent->getEndDay().setTime(endTime);
 	}
 
-
-	
-	User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
-
-	std::string* eventList = exec.getAllEvents();
-	System::String^ tempString = textBox1->Text;//lstYourEvents->SelectedItem->ToString();
-	std::string eventName = msclr::interop::marshal_as<std::string>(tempString);
-	//search eventlist for eventname
-	int index = 0;
-	bool run = true;
-	while (run)
-	{
-		for (int i = 0; i < exec.events.size(); i++)
-		{
-			if (eventName == eventList[i])
-			{
-				index = i;
-			}
-			//break;
-			run = false;
-		}
+	std::string* allEvents = exec.getAllEvents();
+	for (int i = 0; i < exec.getEventSize(); i++) {
+		lstYourEvents->Items->Add(gcnew String(allEvents[i].c_str()));
 	}
-	exec.events[index].addUser(u.getUserName());
+	
+	//User u(msclr::interop::marshal_as<std::string>(txtUser->Text));
+
+	//std::string* eventList = exec.getAllEvents();
+	//System::String^ tempString = textBox1->Text;//lstYourEvents->SelectedItem->ToString();
+	//std::string eventName = msclr::interop::marshal_as<std::string>(tempString);
+	////search eventlist for eventname
+	//int index = 0;
+	//bool run = true;
+	//while (run)
+	//{
+	//	for (int i = 0; i < exec.events.size(); i++)
+	//	{
+	//		if (eventName == eventList[i])
+	//		{
+	//			index = i;
+	//		}
+	//		//break;
+	//		run = false;
+	//	}
+	//}
+	//exec.events[index].addUser(u.getUserName());
 	
 
 }
@@ -1216,7 +1232,7 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	 //Event[].getNumOfUs();
 	
 	grpEventInfo->Visible = false;
-	grpAttendees->Visible = true;
+	//grpAttendees->Visible = true;
 
 
 	
@@ -1230,7 +1246,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
-private: System::Void grpAvailability_Enter(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void grpTimes_Enter(System::Object^  sender, System::EventArgs^  e) {
 }
 
 private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -1265,7 +1281,7 @@ private: System::Void MyForm_FormClosing(System::Object^  sender, System::Window
 		 //
 private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	grpAvailability->Visible = false;
+	grpTimes->Visible = false;
 	grpMultiDay->Visible = true;
 }
 		 //// Schedule Multiple Days Group ////
@@ -1300,7 +1316,7 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 		 //
 private: System::Void cancelMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	grpAvailability->Visible = true;
+	grpTimes->Visible = true;
 	grpMultiDay->Visible = false;
 }
 

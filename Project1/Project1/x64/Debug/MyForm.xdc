@@ -252,7 +252,7 @@ Summary for MyForm
 Clean up any resources being used.
 </summary>
 </member>
-<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="134">
+<member name="M:Project1.MyForm.InitializeComponent" decl="false" source="c:\users\zach\documents\github\doodle\project1\project1\myform.h" line="147">
 <summary>
 Required designer variable.
 </summary>
