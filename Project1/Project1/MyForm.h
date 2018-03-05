@@ -129,17 +129,13 @@ private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::TextBox^  textBox6;
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::GroupBox^  grpTask;
-
+	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::GroupBox^  grpTimes;
 private: System::Windows::Forms::Button^  btnSubmitTimes;
 private: System::Windows::Forms::ComboBox^  endTime24;
 
 private: System::Windows::Forms::ComboBox^  startTime24;
 private: System::Windows::Forms::CheckBox^  checkBox24;
-private: System::Windows::Forms::Button^  btnAddTask;
-private: System::Windows::Forms::TextBox^  textTaskName;
-private: System::Windows::Forms::Button^  btnSubmitTask;
-
 
 
 
@@ -165,9 +161,6 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 		void InitializeComponent(void)
 		{
 			this->grpCreateEvent = (gcnew System::Windows::Forms::GroupBox());
-			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
-			this->btnSubmitTask = (gcnew System::Windows::Forms::Button());
-			this->textTaskName = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->btnCreateEventBack = (gcnew System::Windows::Forms::Button());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
@@ -190,13 +183,6 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->btnModeBack = (gcnew System::Windows::Forms::Button());
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
-			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
-			this->btnAddTask = (gcnew System::Windows::Forms::Button());
-			this->btnAttendees = (gcnew System::Windows::Forms::Button());
-			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
-			this->lblEventDate = (gcnew System::Windows::Forms::Label());
-			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
-			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->grpMultiDay = (gcnew System::Windows::Forms::GroupBox());
 			this->cancelMultiDay = (gcnew System::Windows::Forms::Button());
 			this->submitMultiDay = (gcnew System::Windows::Forms::Button());
@@ -208,6 +194,12 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->btnUserBack = (gcnew System::Windows::Forms::Button());
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
+			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->btnAttendees = (gcnew System::Windows::Forms::Button());
+			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
+			this->lblEventDate = (gcnew System::Windows::Forms::Label());
+			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
+			this->lblEventName = (gcnew System::Windows::Forms::Label());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -216,25 +208,26 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->grpTimes = (gcnew System::Windows::Forms::GroupBox());
 			this->checkBox24 = (gcnew System::Windows::Forms::CheckBox());
 			this->endTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->startTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
 			this->grpCreateEvent->SuspendLayout();
-			this->grpTask->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->grpMode->SuspendLayout();
-			this->grpEventInfo->SuspendLayout();
 			this->grpMultiDay->SuspendLayout();
 			this->grpViewYourEvents->SuspendLayout();
+			this->grpEventInfo->SuspendLayout();
+			this->grpTask->SuspendLayout();
 			this->grpTimes->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// grpCreateEvent
 			// 
-			this->grpCreateEvent->Controls->Add(this->grpTask);
 			this->grpCreateEvent->Controls->Add(this->textBox4);
 			this->grpCreateEvent->Controls->Add(this->btnCreateEventBack);
 			this->grpCreateEvent->Controls->Add(this->monthCalendar1);
@@ -243,7 +236,7 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(60, 51);
+			this->grpCreateEvent->Location = System::Drawing::Point(268, 5);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -251,35 +244,6 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpCreateEvent->TabIndex = 8;
 			this->grpCreateEvent->TabStop = false;
 			this->grpCreateEvent->Visible = false;
-			// 
-			// grpTask
-			// 
-			this->grpTask->Controls->Add(this->btnSubmitTask);
-			this->grpTask->Controls->Add(this->textTaskName);
-			this->grpTask->Location = System::Drawing::Point(77, 120);
-			this->grpTask->Name = L"grpTask";
-			this->grpTask->Size = System::Drawing::Size(420, 81);
-			this->grpTask->TabIndex = 43;
-			this->grpTask->TabStop = false;
-			this->grpTask->Text = L"Enter Task Name:";
-			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
-			// 
-			// btnSubmitTask
-			// 
-			this->btnSubmitTask->Location = System::Drawing::Point(116, 38);
-			this->btnSubmitTask->Name = L"btnSubmitTask";
-			this->btnSubmitTask->Size = System::Drawing::Size(75, 29);
-			this->btnSubmitTask->TabIndex = 1;
-			this->btnSubmitTask->Text = L"Submit";
-			this->btnSubmitTask->UseVisualStyleBackColor = true;
-			this->btnSubmitTask->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTask_Click);
-			// 
-			// textTaskName
-			// 
-			this->textTaskName->Location = System::Drawing::Point(158, 0);
-			this->textTaskName->Name = L"textTaskName";
-			this->textTaskName->Size = System::Drawing::Size(230, 26);
-			this->textTaskName->TabIndex = 0;
 			// 
 			// textBox4
 			// 
@@ -366,7 +330,7 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(38, 13);
+			this->grpAdmin->Location = System::Drawing::Point(387, 111);
 			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
 			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -477,8 +441,7 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpMode->Controls->Add(this->btnModeBack);
 			this->grpMode->Controls->Add(this->btnAdmin);
 			this->grpMode->Controls->Add(this->btnUser);
-			this->grpMode->Controls->Add(this->grpEventInfo);
-			this->grpMode->Location = System::Drawing::Point(356, 118);
+			this->grpMode->Location = System::Drawing::Point(223, 98);
 			this->grpMode->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpMode->Name = L"grpMode";
 			this->grpMode->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -520,97 +483,13 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->btnUser->UseVisualStyleBackColor = true;
 			this->btnUser->Click += gcnew System::EventHandler(this, &MyForm::btnUser_Click);
 			// 
-			// grpEventInfo
-			// 
-			this->grpEventInfo->Controls->Add(this->btnAddTask);
-			this->grpEventInfo->Controls->Add(this->btnAttendees);
-			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
-			this->grpEventInfo->Controls->Add(this->lblEventDate);
-			this->grpEventInfo->Controls->Add(this->grpAdmin);
-			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
-			this->grpEventInfo->Controls->Add(this->lblEventName);
-			this->grpEventInfo->Location = System::Drawing::Point(0, 0);
-			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpEventInfo->Name = L"grpEventInfo";
-			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpEventInfo->Size = System::Drawing::Size(300, 337);
-			this->grpEventInfo->TabIndex = 9;
-			this->grpEventInfo->TabStop = false;
-			this->grpEventInfo->Visible = false;
-			// 
-			// btnAddTask
-			// 
-			this->btnAddTask->Location = System::Drawing::Point(72, 150);
-			this->btnAddTask->Name = L"btnAddTask";
-			this->btnAddTask->Size = System::Drawing::Size(154, 33);
-			this->btnAddTask->TabIndex = 11;
-			this->btnAddTask->Text = L"Add Task";
-			this->btnAddTask->UseVisualStyleBackColor = true;
-			this->btnAddTask->Click += gcnew System::EventHandler(this, &MyForm::btnAddTask_Click);
-			// 
-			// btnAttendees
-			// 
-			this->btnAttendees->Location = System::Drawing::Point(72, 191);
-			this->btnAttendees->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnAttendees->Name = L"btnAttendees";
-			this->btnAttendees->Size = System::Drawing::Size(154, 35);
-			this->btnAttendees->TabIndex = 10;
-			this->btnAttendees->Text = L"View Attendees";
-			this->btnAttendees->UseVisualStyleBackColor = true;
-			this->btnAttendees->Visible = false;
-			this->btnAttendees->Click += gcnew System::EventHandler(this, &MyForm::btnAttendees_Click);
-			// 
-			// btnEventInfoBack
-			// 
-			this->btnEventInfoBack->Location = System::Drawing::Point(72, 281);
-			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnEventInfoBack->Name = L"btnEventInfoBack";
-			this->btnEventInfoBack->Size = System::Drawing::Size(154, 35);
-			this->btnEventInfoBack->TabIndex = 9;
-			this->btnEventInfoBack->Text = L"Back";
-			this->btnEventInfoBack->UseVisualStyleBackColor = true;
-			this->btnEventInfoBack->Click += gcnew System::EventHandler(this, &MyForm::btnEventInfoBack_Click);
-			// 
-			// lblEventDate
-			// 
-			this->lblEventDate->Location = System::Drawing::Point(0, 88);
-			this->lblEventDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventDate->Name = L"lblEventDate";
-			this->lblEventDate->Size = System::Drawing::Size(300, 20);
-			this->lblEventDate->TabIndex = 8;
-			this->lblEventDate->Text = L"EVENTDATE";
-			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventDate->Click += gcnew System::EventHandler(this, &MyForm::lblEventDate_Click);
-			// 
-			// btnEditAvailability
-			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(72, 236);
-			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnEditAvailability->Name = L"btnEditAvailability";
-			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
-			this->btnEditAvailability->TabIndex = 6;
-			this->btnEditAvailability->Text = L"Edit Availability";
-			this->btnEditAvailability->UseVisualStyleBackColor = true;
-			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
-			// 
-			// lblEventName
-			// 
-			this->lblEventName->Location = System::Drawing::Point(2, 26);
-			this->lblEventName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventName->Name = L"lblEventName";
-			this->lblEventName->Size = System::Drawing::Size(298, 26);
-			this->lblEventName->TabIndex = 2;
-			this->lblEventName->Text = L"EVENTNAME";
-			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventName->Click += gcnew System::EventHandler(this, &MyForm::lblEventName_Click);
-			// 
 			// grpMultiDay
 			// 
 			this->grpMultiDay->Controls->Add(this->cancelMultiDay);
 			this->grpMultiDay->Controls->Add(this->submitMultiDay);
 			this->grpMultiDay->Controls->Add(this->label3);
 			this->grpMultiDay->Controls->Add(this->monthCalendar2);
-			this->grpMultiDay->Location = System::Drawing::Point(285, 59);
+			this->grpMultiDay->Location = System::Drawing::Point(292, 5);
 			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->grpMultiDay->Name = L"grpMultiDay";
 			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
@@ -659,7 +538,7 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
-			this->grpViewYourEvents->Location = System::Drawing::Point(364, 60);
+			this->grpViewYourEvents->Location = System::Drawing::Point(356, 111);
 			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
 			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -721,6 +600,78 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->btnViewEventsBack->Text = L"Back";
 			this->btnViewEventsBack->UseVisualStyleBackColor = true;
 			this->btnViewEventsBack->Click += gcnew System::EventHandler(this, &MyForm::btnViewEventsBack_Click);
+			// 
+			// grpEventInfo
+			// 
+			this->grpEventInfo->Controls->Add(this->btnAttendees);
+			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
+			this->grpEventInfo->Controls->Add(this->lblEventDate);
+			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
+			this->grpEventInfo->Controls->Add(this->lblEventName);
+			this->grpEventInfo->Location = System::Drawing::Point(356, 111);
+			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpEventInfo->Name = L"grpEventInfo";
+			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->grpEventInfo->Size = System::Drawing::Size(300, 285);
+			this->grpEventInfo->TabIndex = 9;
+			this->grpEventInfo->TabStop = false;
+			this->grpEventInfo->Visible = false;
+			// 
+			// btnAttendees
+			// 
+			this->btnAttendees->Location = System::Drawing::Point(76, 140);
+			this->btnAttendees->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnAttendees->Name = L"btnAttendees";
+			this->btnAttendees->Size = System::Drawing::Size(154, 35);
+			this->btnAttendees->TabIndex = 10;
+			this->btnAttendees->Text = L"View Attendees";
+			this->btnAttendees->UseVisualStyleBackColor = true;
+			this->btnAttendees->Visible = false;
+			this->btnAttendees->Click += gcnew System::EventHandler(this, &MyForm::btnAttendees_Click);
+			// 
+			// btnEventInfoBack
+			// 
+			this->btnEventInfoBack->Location = System::Drawing::Point(76, 222);
+			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnEventInfoBack->Name = L"btnEventInfoBack";
+			this->btnEventInfoBack->Size = System::Drawing::Size(154, 35);
+			this->btnEventInfoBack->TabIndex = 9;
+			this->btnEventInfoBack->Text = L"Back";
+			this->btnEventInfoBack->UseVisualStyleBackColor = true;
+			this->btnEventInfoBack->Click += gcnew System::EventHandler(this, &MyForm::btnEventInfoBack_Click);
+			// 
+			// lblEventDate
+			// 
+			this->lblEventDate->Location = System::Drawing::Point(0, 88);
+			this->lblEventDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventDate->Name = L"lblEventDate";
+			this->lblEventDate->Size = System::Drawing::Size(300, 20);
+			this->lblEventDate->TabIndex = 8;
+			this->lblEventDate->Text = L"EVENTDATE";
+			this->lblEventDate->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventDate->Click += gcnew System::EventHandler(this, &MyForm::lblEventDate_Click);
+			// 
+			// btnEditAvailability
+			// 
+			this->btnEditAvailability->Location = System::Drawing::Point(76, 182);
+			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btnEditAvailability->Name = L"btnEditAvailability";
+			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
+			this->btnEditAvailability->TabIndex = 6;
+			this->btnEditAvailability->Text = L"Edit Availability";
+			this->btnEditAvailability->UseVisualStyleBackColor = true;
+			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
+			// 
+			// lblEventName
+			// 
+			this->lblEventName->Location = System::Drawing::Point(2, 26);
+			this->lblEventName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventName->Name = L"lblEventName";
+			this->lblEventName->Size = System::Drawing::Size(298, 26);
+			this->lblEventName->TabIndex = 2;
+			this->lblEventName->Text = L"EVENTNAME";
+			this->lblEventName->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventName->Click += gcnew System::EventHandler(this, &MyForm::lblEventName_Click);
 			// 
 			// textBox5
 			// 
@@ -809,12 +760,32 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->comboBox2->Size = System::Drawing::Size(251, 28);
 			this->comboBox2->TabIndex = 42;
 			// 
+			// grpTask
+			// 
+			this->grpTask->Controls->Add(this->button1);
+			this->grpTask->Location = System::Drawing::Point(632, 27);
+			this->grpTask->Name = L"grpTask";
+			this->grpTask->Size = System::Drawing::Size(716, 680);
+			this->grpTask->TabIndex = 43;
+			this->grpTask->TabStop = false;
+			this->grpTask->Text = L"s";
+			this->grpTask->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(280, 133);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(114, 33);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Create Task";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
 			// grpTimes
 			// 
 			this->grpTimes->Controls->Add(this->checkBox24);
 			this->grpTimes->Controls->Add(this->endTime24);
-			this->grpTimes->Controls->Add(this->grpCreateEvent);
 			this->grpTimes->Controls->Add(this->startTime24);
+			this->grpTimes->Controls->Add(this->grpTask);
 			this->grpTimes->Controls->Add(this->comboBox2);
 			this->grpTimes->Controls->Add(this->textBox6);
 			this->grpTimes->Controls->Add(this->comboBox1);
@@ -823,7 +794,7 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->grpTimes->Controls->Add(this->label1);
 			this->grpTimes->Controls->Add(this->btnSubmitTimes);
 			this->grpTimes->Controls->Add(this->label7);
-			this->grpTimes->Location = System::Drawing::Point(166, 59);
+			this->grpTimes->Location = System::Drawing::Point(197, 5);
 			this->grpTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpTimes->Name = L"grpTimes";
 			this->grpTimes->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -893,30 +864,31 @@ private: System::Windows::Forms::Button^  btnSubmitTask;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->grpMode);
-			this->Controls->Add(this->grpLogin);
 			this->Controls->Add(this->grpTimes);
+			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpMultiDay);
 			this->Controls->Add(this->grpViewYourEvents);
+			this->Controls->Add(this->grpAdmin);
+			this->Controls->Add(this->grpEventInfo);
+			this->Controls->Add(this->grpLogin);
+			this->Controls->Add(this->grpMode);
 			this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->Name = L"MyForm";
 			this->Text = L"Doodle Scheduler";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MyForm::MyForm_FormClosing);
-			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->grpCreateEvent->ResumeLayout(false);
 			this->grpCreateEvent->PerformLayout();
-			this->grpTask->ResumeLayout(false);
-			this->grpTask->PerformLayout();
 			this->grpAdmin->ResumeLayout(false);
 			this->grpAdmin->PerformLayout();
 			this->grpLogin->ResumeLayout(false);
 			this->grpLogin->PerformLayout();
 			this->grpMode->ResumeLayout(false);
-			this->grpEventInfo->ResumeLayout(false);
 			this->grpMultiDay->ResumeLayout(false);
 			this->grpMultiDay->PerformLayout();
 			this->grpViewYourEvents->ResumeLayout(false);
 			this->grpViewYourEvents->PerformLayout();
+			this->grpEventInfo->ResumeLayout(false);
+			this->grpTask->ResumeLayout(false);
 			this->grpTimes->ResumeLayout(false);
 			this->grpTimes->PerformLayout();
 			this->ResumeLayout(false);
@@ -1651,16 +1623,6 @@ private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::
 		this->comboBox2->Visible = false;
 	}
 	is12 = !is12;
-}
-private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpViewYourEvents->Visible = false;
-	grpTask->Visible = true;
-}
-private: System::Void btnSubmitTask_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpViewYourEvents->Visible = true;
-	grpTask->Visible = false;
-}
-private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
