@@ -5,34 +5,11 @@
 \item 
 \mbox{\hyperlink{class_user_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
 \item 
+\mbox{\hyperlink{class_user_af9e5f33114c8330be7b91276b7377e6d}{User}} (std\+::string name)
+\item 
 \mbox{\hyperlink{class_user_ac00b72ad64eb4149f7b21b9f5468c2b2}{$\sim$\+User}} ()
 \item 
-void \mbox{\hyperlink{class_user_a93c208c3a71df99ca19a1782f6d32c34}{set\+Name}} (std\+::string name)
-\item 
 std\+::string \mbox{\hyperlink{class_user_a3fcf5814ba0a2415862c892746585a46}{get\+User\+Name}} ()
-\item 
-bool \mbox{\hyperlink{class_user_ab4ba945b0431a19fef9710b16aac4bb5}{get\+Time}} (int i)
-\item 
-std\+::string \mbox{\hyperlink{class_user_a3b0b9cf712efbb632f920a4cc5f18925}{get\+Strings}} (int j)
-\item 
-void \mbox{\hyperlink{class_user_a3a637aa0a7a7b37885f2cd7dc77ecd99}{Add\+Time}} (int T)
-\item 
-void \mbox{\hyperlink{class_user_a70486059b5ee29b656c8331583cdd5b5}{get\+Times}} ()
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_user_acc74e1ba1db43cacac9c488594067060}\label{class_user_acc74e1ba1db43cacac9c488594067060}} 
-std\+::string {\bfseries m\+\_\+\+Name}
-\item 
-\mbox{\Hypertarget{class_user_ab4a12ecb24141692e886d0d869a2ecea}\label{class_user_ab4a12ecb24141692e886d0d869a2ecea}} 
-std\+::string $\ast$ {\bfseries m\+\_\+\+Strings}
-\item 
-\mbox{\Hypertarget{class_user_adc7849fb91c414d2ccf836e8284fd058}\label{class_user_adc7849fb91c414d2ccf836e8284fd058}} 
-bool $\ast$ {\bfseries m\+\_\+\+Times}
-\item 
-\mbox{\Hypertarget{class_user_a2d7c25a76f9479275b46c45a3e15f300}\label{class_user_a2d7c25a76f9479275b46c45a3e15f300}} 
-bool {\bfseries m\+\_\+is\+Admin}
 \end{DoxyCompactItemize}
 
 
@@ -40,8 +17,22 @@ bool {\bfseries m\+\_\+is\+Admin}
 \mbox{\Hypertarget{class_user_a4a0137053e591fbb79d9057dd7d2283d}\label{class_user_a4a0137053e591fbb79d9057dd7d2283d}} 
 \index{User@{User}!User@{User}}
 \index{User@{User}!User@{User}}
-\subsubsection{\texorpdfstring{User()}{User()}}
+\subsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+constructor 
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_af9e5f33114c8330be7b91276b7377e6d}\label{class_user_af9e5f33114c8330be7b91276b7377e6d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\subsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
 Creates the bool array m\+\_\+\+Times and sets it to false. Creates the m\+\_\+\+Strings array and populates it with the possible time slots. 
 \begin{DoxyParams}{Parameters}
@@ -68,62 +59,6 @@ None
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_user_a3a637aa0a7a7b37885f2cd7dc77ecd99}\label{class_user_a3a637aa0a7a7b37885f2cd7dc77ecd99}} 
-\index{User@{User}!Add\+Time@{Add\+Time}}
-\index{Add\+Time@{Add\+Time}!User@{User}}
-\subsubsection{\texorpdfstring{Add\+Time()}{AddTime()}}
-{\footnotesize\ttfamily void User\+::\+Add\+Time (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption})}
-
-Toggles the bool at the given index 
-\begin{DoxyParams}{Parameters}
-{\em An} & index representing a bool in m\+\_\+\+Times \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_user_a3b0b9cf712efbb632f920a4cc5f18925}\label{class_user_a3b0b9cf712efbb632f920a4cc5f18925}} 
-\index{User@{User}!get\+Strings@{get\+Strings}}
-\index{get\+Strings@{get\+Strings}!User@{User}}
-\subsubsection{\texorpdfstring{get\+Strings()}{getStrings()}}
-{\footnotesize\ttfamily string User\+::get\+Strings (\begin{DoxyParamCaption}\item[{int}]{j }\end{DoxyParamCaption})}
-
-Returns the string at the index passed in which represents a time slot 
-\begin{DoxyParams}{Parameters}
-{\em An} & int representing an index in the string array m\+\_\+\+Strings \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The string at the given index 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_user_ab4ba945b0431a19fef9710b16aac4bb5}\label{class_user_ab4ba945b0431a19fef9710b16aac4bb5}} 
-\index{User@{User}!get\+Time@{get\+Time}}
-\index{get\+Time@{get\+Time}!User@{User}}
-\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
-{\footnotesize\ttfamily bool User\+::get\+Time (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
-
-Returns a bool at the index passed in which represents whether the user is avaliable at that time 
-\begin{DoxyParams}{Parameters}
-{\em An} & int representing an index in the boolean array m\+\_\+\+Times \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The boolean stored at the given index 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_user_a70486059b5ee29b656c8331583cdd5b5}\label{class_user_a70486059b5ee29b656c8331583cdd5b5}} 
-\index{User@{User}!get\+Times@{get\+Times}}
-\index{get\+Times@{get\+Times}!User@{User}}
-\subsubsection{\texorpdfstring{get\+Times()}{getTimes()}}
-{\footnotesize\ttfamily void User\+::get\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Prints the times that the user is avaliable 
-\begin{DoxyParams}{Parameters}
-{\em None} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_user_a3fcf5814ba0a2415862c892746585a46}\label{class_user_a3fcf5814ba0a2415862c892746585a46}} 
 \index{User@{User}!get\+User\+Name@{get\+User\+Name}}
 \index{get\+User\+Name@{get\+User\+Name}!User@{User}}
@@ -138,23 +73,9 @@ Returns the name of the user
 \begin{DoxyReturn}{Returns}
 The string representing the name of the user 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_user_a93c208c3a71df99ca19a1782f6d32c34}\label{class_user_a93c208c3a71df99ca19a1782f6d32c34}} 
-\index{User@{User}!set\+Name@{set\+Name}}
-\index{set\+Name@{set\+Name}!User@{User}}
-\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
-{\footnotesize\ttfamily void User\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
-
-Sets the user\textquotesingle{}s name 
-\begin{DoxyParams}{Parameters}
-{\em String} & representing the name of the user \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/User.\+h\item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/User.\+cpp\end{DoxyCompactItemize}
+User.\+h\item 
+User.\+cpp\end{DoxyCompactItemize}
