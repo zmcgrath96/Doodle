@@ -201,6 +201,9 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
+			this->lblEventTasks = (gcnew System::Windows::Forms::Label());
+			this->lblEventTime = (gcnew System::Windows::Forms::Label());
+			this->lblEventAtt = (gcnew System::Windows::Forms::Label());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
@@ -220,9 +223,6 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->endTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->startTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
-			this->lblEventAtt = (gcnew System::Windows::Forms::Label());
-			this->lblEventTime = (gcnew System::Windows::Forms::Label());
-			this->lblEventTasks = (gcnew System::Windows::Forms::Label());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
@@ -244,7 +244,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(239, 119);
+			this->grpCreateEvent->Location = System::Drawing::Point(-15, -30);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -335,9 +335,13 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			// grpAdmin
 			// 
 			this->grpAdmin->Controls->Add(this->btnAdminBack);
+			this->grpAdmin->Controls->Add(this->grpTimes);
+			this->grpAdmin->Controls->Add(this->grpCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
+			this->grpAdmin->Controls->Add(this->grpMultiDay);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
+			this->grpAdmin->Controls->Add(this->grpViewYourEvents);
 			this->grpAdmin->Location = System::Drawing::Point(199, 41);
 			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
@@ -497,7 +501,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpMultiDay->Controls->Add(this->submitMultiDay);
 			this->grpMultiDay->Controls->Add(this->label3);
 			this->grpMultiDay->Controls->Add(this->monthCalendar2);
-			this->grpMultiDay->Location = System::Drawing::Point(219, 97);
+			this->grpMultiDay->Location = System::Drawing::Point(-35, -61);
 			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->grpMultiDay->Name = L"grpMultiDay";
 			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
@@ -552,7 +556,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
-			this->grpViewYourEvents->Location = System::Drawing::Point(204, 73);
+			this->grpViewYourEvents->Location = System::Drawing::Point(165, 12);
 			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
 			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -597,7 +601,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			// lblViewEvent
 			// 
 			this->lblViewEvent->AutoSize = true;
-			this->lblViewEvent->Location = System::Drawing::Point(82, 38);
+			this->lblViewEvent->Location = System::Drawing::Point(103, 37);
 			this->lblViewEvent->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblViewEvent->Name = L"lblViewEvent";
 			this->lblViewEvent->Size = System::Drawing::Size(103, 20);
@@ -633,6 +637,38 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
 			// 
+			// lblEventTasks
+			// 
+			this->lblEventTasks->Location = System::Drawing::Point(59, 182);
+			this->lblEventTasks->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTasks->Name = L"lblEventTasks";
+			this->lblEventTasks->Size = System::Drawing::Size(298, 26);
+			this->lblEventTasks->TabIndex = 12;
+			this->lblEventTasks->Text = L"EVENTTASKS";
+			this->lblEventTasks->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventTasks->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
+			// 
+			// lblEventTime
+			// 
+			this->lblEventTime->Location = System::Drawing::Point(59, 89);
+			this->lblEventTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTime->Name = L"lblEventTime";
+			this->lblEventTime->Size = System::Drawing::Size(298, 26);
+			this->lblEventTime->TabIndex = 11;
+			this->lblEventTime->Text = L"EVENTTIME";
+			this->lblEventTime->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// lblEventAtt
+			// 
+			this->lblEventAtt->Location = System::Drawing::Point(59, 125);
+			this->lblEventAtt->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventAtt->Name = L"lblEventAtt";
+			this->lblEventAtt->Size = System::Drawing::Size(298, 26);
+			this->lblEventAtt->TabIndex = 10;
+			this->lblEventAtt->Text = L"EVENTATT";
+			this->lblEventAtt->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventAtt->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
+			// 
 			// btnEventInfoBack
 			// 
 			this->btnEventInfoBack->Location = System::Drawing::Point(109, 324);
@@ -662,7 +698,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnEditAvailability->Name = L"btnEditAvailability";
 			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
 			this->btnEditAvailability->TabIndex = 6;
-			this->btnEditAvailability->Text = L"Edit Availability";
+			this->btnEditAvailability->Text = L"Click to Attend";
 			this->btnEditAvailability->UseVisualStyleBackColor = true;
 			this->btnEditAvailability->Click += gcnew System::EventHandler(this, &MyForm::btnEditAvailability_Click);
 			// 
@@ -798,7 +834,7 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->grpTimes->Controls->Add(this->label1);
 			this->grpTimes->Controls->Add(this->btnSubmitTimes);
 			this->grpTimes->Controls->Add(this->label7);
-			this->grpTimes->Location = System::Drawing::Point(253, 151);
+			this->grpTimes->Location = System::Drawing::Point(8, 12);
 			this->grpTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpTimes->Name = L"grpTimes";
 			this->grpTimes->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -861,38 +897,6 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
 			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
 			// 
-			// lblEventAtt
-			// 
-			this->lblEventAtt->Location = System::Drawing::Point(59, 125);
-			this->lblEventAtt->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventAtt->Name = L"lblEventAtt";
-			this->lblEventAtt->Size = System::Drawing::Size(298, 26);
-			this->lblEventAtt->TabIndex = 10;
-			this->lblEventAtt->Text = L"EVENTATT";
-			this->lblEventAtt->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventAtt->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
-			// 
-			// lblEventTime
-			// 
-			this->lblEventTime->Location = System::Drawing::Point(59, 89);
-			this->lblEventTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventTime->Name = L"lblEventTime";
-			this->lblEventTime->Size = System::Drawing::Size(298, 26);
-			this->lblEventTime->TabIndex = 11;
-			this->lblEventTime->Text = L"EVENTTIME";
-			this->lblEventTime->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// lblEventTasks
-			// 
-			this->lblEventTasks->Location = System::Drawing::Point(59, 182);
-			this->lblEventTasks->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lblEventTasks->Name = L"lblEventTasks";
-			this->lblEventTasks->Size = System::Drawing::Size(298, 26);
-			this->lblEventTasks->TabIndex = 12;
-			this->lblEventTasks->Text = L"EVENTTASKS";
-			this->lblEventTasks->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lblEventTasks->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -900,10 +904,6 @@ private: System::Windows::Forms::Label^  lblEventAtt;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->grpTimes);
-			this->Controls->Add(this->grpCreateEvent);
-			this->Controls->Add(this->grpMultiDay);
-			this->Controls->Add(this->grpViewYourEvents);
 			this->Controls->Add(this->grpAdmin);
 			this->Controls->Add(this->grpEventInfo);
 			this->Controls->Add(this->grpLogin);
