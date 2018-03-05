@@ -9,11 +9,10 @@ Event::~Event(){
 }
 
 
-Event::Event(Day startDay, Day endDay, std::string name, User admin)
+Event::Event(Day eventDay, std::string name, User admin)
 	
 {
-	m_startDay = startDay;
-	m_endDay = endDay;
+	m_eventDay = eventDay;
 	m_name = name;
 	m_admin = admin;
 	m_numTasks = 0;
@@ -48,13 +47,11 @@ bool Event::addUser(std::string uName) {
 //---------------------------------------------------
 
 
-Day Event::getStartDay(){
-	return m_startDay;
+Day Event::getEventDay(){
+	return m_eventDay;
 }
 
-Day Event::getEndDay(){
-	return m_endDay;
-}
+
 
 std::string Event::getName(){
 	return m_name;
@@ -86,14 +83,26 @@ void Event::setAdmin(User admin) {
 }
 
 
-void Event::setEndDay(Day end) {
-	m_endDay = end;
+void Event::setEventDay(Day eventDay) {
+	m_eventDay = eventDay;
 }
 
 void Event::setName(std::string name) {
 	m_name = name;
 }
 
-void Event::setStartDay(Day start) {
-	m_startDay = start;
+int Event::getStartTime() {
+	return m_startTime;
+}
+
+int Event::getEndTime() {
+	return m_endTime;
+}
+
+void Event::setStartTime(int T) {
+	m_startTime = T;
+}
+
+void Event::setEndTime(int T) {
+	m_endTime = T;
 }

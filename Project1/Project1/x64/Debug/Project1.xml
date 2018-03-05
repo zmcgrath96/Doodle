@@ -83,18 +83,6 @@ setAdmin
 @return none
 
 </member>
-        <member name="M:Event.setEndDay(Day)">
-setEndDay
-@param Day end
-@return none
-
-</member>
-        <member name="M:Event.setStartDay(Day)">
-setStartDay
-@param Day start
-@return none
-
-</member>
         <member name="M:Event.getNumUsers">
 getNumUsers
 @param none
@@ -131,18 +119,6 @@ getName
 @return String
 
 </member>
-        <member name="M:Event.getEndDay">
-getEndDay
-@param none
-@return Day object
-
-</member>
-        <member name="M:Event.getStartDay">
-getStartDay
-@param none
-@return Day object
-
-</member>
         <member name="M:Event.addUser(std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;)">
 addUser
 @param string name
@@ -155,7 +131,7 @@ addTask
 @return bool
 
 </member>
-        <member name="M:Event.#ctor(Day,Day,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,User)">
+        <member name="M:Event.#ctor(Day,std.basic_string&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte,std.char_traits{System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte},std.allocator&lt;System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte&gt;&gt;,User)">
 Constructor
 @param Day object, Day object, string, User object
 @return None
@@ -287,7 +263,7 @@ getMonth
 @return int
 
 </member>
-        <member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32)">
 Constructor
 @param ints
 @return None

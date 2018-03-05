@@ -17,7 +17,7 @@ class Day {
 		*	@param ints
 		*	@return None
 		*/
-    Day(int eventMonth, int eventDay, int eventYear, int eventTime);
+    Day(int eventMonth, int eventDay, int eventYear);
 
 	/**
 	*	getMonth

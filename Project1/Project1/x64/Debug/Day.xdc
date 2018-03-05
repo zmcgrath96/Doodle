@@ -6,7 +6,7 @@ Constructor
 @return None
 
 </member>
-<member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="15">
+<member name="M:Day.#ctor(System.Int32,System.Int32,System.Int32)" decl="true" source="c:\users\zach\documents\github\doodle\project1\project1\day.h" line="15">
 Constructor
 @param ints
 @return None

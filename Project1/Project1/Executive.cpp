@@ -12,15 +12,17 @@ using namespace std;
 
 Executive::Executive()
 {
+	events = new std::vector<Event>;
 }
 
 Executive::~Executive()
 {
+	delete events;
 }
 void Executive::AddEvent(Event E)
 {
 	if (E.getName() != "") {
-		events.push_back(E);  //takes in an event and adds it to the back of the event vector
+		events->push_back(E);  //takes in an event and adds it to the back of the event vector
 	}
 }
 
@@ -28,11 +30,11 @@ void Executive::AddEvent(Event E)
 std::string* Executive::getAllEvents()
 {
 	cout<<"All events"<<endl;
-	int eventSize = events.size();
+	int eventSize = events->size();
 	std::string* allEvents = new string[eventSize];
 	for(int i = 0; i<eventSize; i++)
 	{
-		allEvents[i] = events.at(i).getName();
+		allEvents[i] = events->at(i).getName();
 		//cout<<events[i].getName()<<endl;
 	}
 	return allEvents;
@@ -41,7 +43,7 @@ std::string* Executive::getAllEvents()
 
 
 int Executive::getEventSize() {
-	return events.size();
+	return events->size();
 }
 
 
@@ -49,7 +51,7 @@ int Executive::getEventSize() {
 void Executive::write() {
 
 	// Check if theres anything in the events
-	if (events.size() ==  0){
+	if (events->size() ==  0){
 		return;
 	}
 
@@ -59,8 +61,8 @@ void Executive::write() {
 	std::string line = "";
 
 	//Iterate through the vector "events" and find all to write
-	for (int i = 0; i < events.size(); i++) {
-		line = events.at(i).getName() + "@" + events.at(i).getAdmin().getUserName();
+	for (int i = 0; i < events->size(); i++) {
+		line = events->at(i).getName() + "@" + events->at(i).getAdmin().getUserName();
 		ofile << line + "\n";
 	}
 
@@ -70,26 +72,24 @@ void Executive::write() {
 	// Iterate through list of events and write a file for each event
 	std::string fName = "";
 	Event tempEvent;
-	int eventSize = events.size();
+	int eventSize = events->size();
 	for (int i = 0; i < eventSize; i++) {
-		tempEvent = events.at(i);
+		tempEvent = events->at(i);
 		//Open file
 		fName = tempEvent.getName() + ".txt";
 		ofile.open(fName);
 
 		// Get start day and end day
-		line = to_string(tempEvent.getStartDay().getMonth()) + "/" + to_string(tempEvent.getStartDay().getDay()) + "/" + to_string(tempEvent.getStartDay().getYear());
+		line = to_string(tempEvent.getEventDay().getMonth()) + "/" + to_string(tempEvent.getEventDay().getDay()) + "/" + to_string(tempEvent.getEventDay().getYear());
 		ofile << line + "\n";
-		line = tempEvent.getStartDay().getTime();
+		line = tempEvent.getStartTime();
 		ofile << line + "\n";
-		line = to_string(tempEvent.getEndDay().getMonth()) + "/" + to_string(tempEvent.getEndDay().getDay()) + "/" + to_string(tempEvent.getEndDay().getYear());
-		ofile << line + "\n";
-		line = tempEvent.getEndDay().getTime();
+		line = tempEvent.getEndTime();
 		ofile << line + "\n";
 
 		line = "";
 		// Go through the list of tasks and write them all to one line
-		std::vector<Task> tempTask = events.at(i).getTasks();
+		std::vector<Task> tempTask = events->at(i).getTasks();
 		for (int j = 0; j < tempEvent.getNumTasks(); j++) {
 			line += tempTask.at(j).getTaskName() + "@" + tempTask.at(j).getMaster() + "|";
 			
@@ -98,7 +98,7 @@ void Executive::write() {
 
 		line = "";
 		// Go throught the list of attendees and write them to file
-		std::vector<User> tempUser = events.at(i).getUsers();
+		std::vector<User> tempUser = events->at(i).getUsers();
 		for (int j = 0; j < tempEvent.getNumUsers(); j++){
 			line += tempUser.at(j).getUserName() + "|";
 		}
@@ -124,7 +124,8 @@ void Executive::read(){
 	int tempMonth;
 	int tempDay;
 	int tempYear; 
-	int tempTime;
+	int tempsTime;
+	int tempeTime;
 
 	// Variables for task
 	std::string tempTaskName;
@@ -162,10 +163,10 @@ void Executive::read(){
 	std::stringstream ss;
 
 	// Iterate through the list of events
-	for (int i = 0; i < events.size(); i++){
+	for (int i = 0; i < events->size(); i++){
 
 		// Get event name
-		eventName = events.at(i).getName();
+		eventName = events->at(i).getName();
 
 		// Open file of event name
 		ifile.open(eventName);
@@ -178,7 +179,7 @@ void Executive::read(){
 				ss << line;
 
 				//Grab the day
-				if (lineNum == (1 || 3)){
+				if (lineNum == (1)){
 					
 					getline(ss, line, '/');
 					tempMonth = stoi(line);
@@ -186,26 +187,28 @@ void Executive::read(){
 					tempDay = stoi(line);
 					getline(ss, line);
 					tempYear = stoi(line);
+				
 
 				}
 
 				// Grab the time
-				else if (lineNum == (2 || 4)){
+				else if (lineNum == (2)){
 
 					getline(ss, line);
-					tempTime = stoi(line);
-					Day tempday(tempMonth, tempDay, tempYear, tempTime);
-
-					if (lineNum == 2){
-						events.at(i).setStartDay(tempday);
-					}
-					else{
-						events.at(i).setEndDay(tempday);
-					}
+					tempsTime = stoi(line);
+					events->at(i).setStartTime(tempsTime);
+					
 				}
 
+				else if (lineNum == 3) {
+					getline(ss, line);
+					tempeTime = stoi(line);
+					events->at(i).setEndTime(tempeTime);
+				}
+
+
 				// Grab the tasks and the users
-				else if (lineNum == 5){
+				else if (lineNum == 4){
 					
 					while(getline(ss, line, '@')){
 						
@@ -215,14 +218,14 @@ void Executive::read(){
 
 						Task tempTask(tempTaskName);
 						tempTask.setMaster(tempTaskUser);
-						events.at(i).addTask(tempTask);
+						events->at(i).addTask(tempTask);
 					}
 				}
 
 				// Grab the users and add it to the list of attendees
 				else{
 					while(getline(ss, line, '|')){
-						events.at(i).addUser(line);
+						events->at(i).addUser(line);
 					}
 				}
 

@@ -32,7 +32,7 @@ class Event
 		*	@param Day object, Day object, string, User object
 		*	@return None
 		*/
-	Event(Day startDay, Day endDay, std::string name, User admin);
+	Event(Day eventDay, std::string name, User admin);
 
 	/**
 		*	addTask
@@ -48,19 +48,7 @@ class Event
 	*/
 	bool addUser(std::string uName);
 
-	/**
-		*	getStartDay
-		*	@param none
-		*	@return Day object
-		*/
-	Day getStartDay();
-
-	/**
-		*	getEndDay
-		*	@param none
-		*	@return Day object
-		*/
-	Day getEndDay();
+	Day getEventDay();
 
 
 	/**
@@ -105,19 +93,7 @@ class Event
 	*/
 	int getNumUsers();
 
-	/**
-	 * setStartDay
-	 * @param Day start
-	 * @return none
-	 */
-	void setStartDay(Day start);
-
-	/**
-	 * setEndDay
-	 * @param Day end
-	 * @return none
-	 */
-	void setEndDay(Day end);
+	void setEventDay(Day eventDay);
 
 	/**
 	 * setAdmin
@@ -133,21 +109,28 @@ class Event
 	 */
 	void setName(std::string name);
 
+	int getStartTime();
 
+	int getEndTime();
+
+	void setStartTime(int T);
+
+	void setEndTime(int T);
 
 
 
 
 
 	private:
-		Day m_startDay;
-		Day m_endDay;
+		Day m_eventDay;
 		std::string m_name;
 		User m_admin;
 		std::vector<Task> m_task;
 		int m_numTasks;
 		std::vector<User> m_user;
 		int m_numUsers;
+		int m_startTime;
+		int m_endTime;
 
 
 };

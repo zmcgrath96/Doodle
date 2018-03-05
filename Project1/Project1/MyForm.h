@@ -107,7 +107,7 @@ private: System::Windows::Forms::TextBox^  textBox5;
 
 
 
-private: System::Windows::Forms::Button^  btnAttendees;
+
 
 private: System::Windows::Forms::Button^  button2;
 
@@ -136,6 +136,12 @@ private: System::Windows::Forms::ComboBox^  endTime24;
 
 private: System::Windows::Forms::ComboBox^  startTime24;
 private: System::Windows::Forms::CheckBox^  checkBox24;
+private: System::Windows::Forms::Label^  lblEventTasks;
+
+private: System::Windows::Forms::Label^  lblEventTime;
+private: System::Windows::Forms::Label^  lblEventAtt;
+
+
 
 
 
@@ -195,7 +201,6 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->lblViewEvent = (gcnew System::Windows::Forms::Label());
 			this->btnViewEventsBack = (gcnew System::Windows::Forms::Button());
 			this->grpEventInfo = (gcnew System::Windows::Forms::GroupBox());
-			this->btnAttendees = (gcnew System::Windows::Forms::Button());
 			this->btnEventInfoBack = (gcnew System::Windows::Forms::Button());
 			this->lblEventDate = (gcnew System::Windows::Forms::Label());
 			this->btnEditAvailability = (gcnew System::Windows::Forms::Button());
@@ -215,6 +220,9 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->endTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->startTime24 = (gcnew System::Windows::Forms::ComboBox());
 			this->btnSubmitTimes = (gcnew System::Windows::Forms::Button());
+			this->lblEventAtt = (gcnew System::Windows::Forms::Label());
+			this->lblEventTime = (gcnew System::Windows::Forms::Label());
+			this->lblEventTasks = (gcnew System::Windows::Forms::Label());
 			this->grpCreateEvent->SuspendLayout();
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
@@ -236,7 +244,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpCreateEvent->Controls->Add(this->lblDate);
 			this->grpCreateEvent->Controls->Add(this->btnSubmitEvent);
 			this->grpCreateEvent->Controls->Add(this->lblCreateEvent);
-			this->grpCreateEvent->Location = System::Drawing::Point(292, 41);
+			this->grpCreateEvent->Location = System::Drawing::Point(239, 119);
 			this->grpCreateEvent->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpCreateEvent->Name = L"grpCreateEvent";
 			this->grpCreateEvent->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -330,7 +338,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpAdmin->Controls->Add(this->btnCreateEvent);
 			this->grpAdmin->Controls->Add(this->btnEditEvents);
 			this->grpAdmin->Controls->Add(this->lblAdmin);
-			this->grpAdmin->Location = System::Drawing::Point(387, 111);
+			this->grpAdmin->Location = System::Drawing::Point(199, 41);
 			this->grpAdmin->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpAdmin->Name = L"grpAdmin";
 			this->grpAdmin->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -489,7 +497,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpMultiDay->Controls->Add(this->submitMultiDay);
 			this->grpMultiDay->Controls->Add(this->label3);
 			this->grpMultiDay->Controls->Add(this->monthCalendar2);
-			this->grpMultiDay->Location = System::Drawing::Point(292, 5);
+			this->grpMultiDay->Location = System::Drawing::Point(219, 97);
 			this->grpMultiDay->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->grpMultiDay->Name = L"grpMultiDay";
 			this->grpMultiDay->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
@@ -544,7 +552,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpViewYourEvents->Controls->Add(this->btnUserBack);
 			this->grpViewYourEvents->Controls->Add(this->lblViewEvent);
 			this->grpViewYourEvents->Controls->Add(this->btnViewEventsBack);
-			this->grpViewYourEvents->Location = System::Drawing::Point(356, 111);
+			this->grpViewYourEvents->Location = System::Drawing::Point(204, 73);
 			this->grpViewYourEvents->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpViewYourEvents->Name = L"grpViewYourEvents";
 			this->grpViewYourEvents->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -609,7 +617,9 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			// 
 			// grpEventInfo
 			// 
-			this->grpEventInfo->Controls->Add(this->btnAttendees);
+			this->grpEventInfo->Controls->Add(this->lblEventTasks);
+			this->grpEventInfo->Controls->Add(this->lblEventTime);
+			this->grpEventInfo->Controls->Add(this->lblEventAtt);
 			this->grpEventInfo->Controls->Add(this->btnEventInfoBack);
 			this->grpEventInfo->Controls->Add(this->lblEventDate);
 			this->grpEventInfo->Controls->Add(this->btnEditAvailability);
@@ -618,26 +628,14 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpEventInfo->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpEventInfo->Name = L"grpEventInfo";
 			this->grpEventInfo->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpEventInfo->Size = System::Drawing::Size(300, 285);
+			this->grpEventInfo->Size = System::Drawing::Size(414, 394);
 			this->grpEventInfo->TabIndex = 9;
 			this->grpEventInfo->TabStop = false;
 			this->grpEventInfo->Visible = false;
 			// 
-			// btnAttendees
-			// 
-			this->btnAttendees->Location = System::Drawing::Point(76, 140);
-			this->btnAttendees->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->btnAttendees->Name = L"btnAttendees";
-			this->btnAttendees->Size = System::Drawing::Size(154, 35);
-			this->btnAttendees->TabIndex = 10;
-			this->btnAttendees->Text = L"View Attendees";
-			this->btnAttendees->UseVisualStyleBackColor = true;
-			this->btnAttendees->Visible = false;
-			this->btnAttendees->Click += gcnew System::EventHandler(this, &MyForm::btnAttendees_Click);
-			// 
 			// btnEventInfoBack
 			// 
-			this->btnEventInfoBack->Location = System::Drawing::Point(76, 222);
+			this->btnEventInfoBack->Location = System::Drawing::Point(109, 324);
 			this->btnEventInfoBack->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEventInfoBack->Name = L"btnEventInfoBack";
 			this->btnEventInfoBack->Size = System::Drawing::Size(154, 35);
@@ -648,7 +646,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			// 
 			// lblEventDate
 			// 
-			this->lblEventDate->Location = System::Drawing::Point(0, 88);
+			this->lblEventDate->Location = System::Drawing::Point(59, 56);
 			this->lblEventDate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventDate->Name = L"lblEventDate";
 			this->lblEventDate->Size = System::Drawing::Size(300, 20);
@@ -659,7 +657,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			// 
 			// btnEditAvailability
 			// 
-			this->btnEditAvailability->Location = System::Drawing::Point(76, 182);
+			this->btnEditAvailability->Location = System::Drawing::Point(109, 270);
 			this->btnEditAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btnEditAvailability->Name = L"btnEditAvailability";
 			this->btnEditAvailability->Size = System::Drawing::Size(154, 35);
@@ -670,7 +668,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			// 
 			// lblEventName
 			// 
-			this->lblEventName->Location = System::Drawing::Point(2, 26);
+			this->lblEventName->Location = System::Drawing::Point(61, 24);
 			this->lblEventName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEventName->Name = L"lblEventName";
 			this->lblEventName->Size = System::Drawing::Size(298, 26);
@@ -800,11 +798,11 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->grpTimes->Controls->Add(this->label1);
 			this->grpTimes->Controls->Add(this->btnSubmitTimes);
 			this->grpTimes->Controls->Add(this->label7);
-			this->grpTimes->Location = System::Drawing::Point(231, 66);
+			this->grpTimes->Location = System::Drawing::Point(253, 151);
 			this->grpTimes->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->grpTimes->Name = L"grpTimes";
 			this->grpTimes->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpTimes->Size = System::Drawing::Size(708, 678);
+			this->grpTimes->Size = System::Drawing::Size(708, 659);
 			this->grpTimes->TabIndex = 13;
 			this->grpTimes->TabStop = false;
 			this->grpTimes->Visible = false;
@@ -863,6 +861,38 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->btnSubmitTimes->UseVisualStyleBackColor = true;
 			this->btnSubmitTimes->Click += gcnew System::EventHandler(this, &MyForm::btnSubmitTimes_Click);
 			// 
+			// lblEventAtt
+			// 
+			this->lblEventAtt->Location = System::Drawing::Point(59, 125);
+			this->lblEventAtt->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventAtt->Name = L"lblEventAtt";
+			this->lblEventAtt->Size = System::Drawing::Size(298, 26);
+			this->lblEventAtt->TabIndex = 10;
+			this->lblEventAtt->Text = L"EVENTATT";
+			this->lblEventAtt->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventAtt->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
+			// 
+			// lblEventTime
+			// 
+			this->lblEventTime->Location = System::Drawing::Point(59, 89);
+			this->lblEventTime->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTime->Name = L"lblEventTime";
+			this->lblEventTime->Size = System::Drawing::Size(298, 26);
+			this->lblEventTime->TabIndex = 11;
+			this->lblEventTime->Text = L"EVENTTIME";
+			this->lblEventTime->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// lblEventTasks
+			// 
+			this->lblEventTasks->Location = System::Drawing::Point(59, 182);
+			this->lblEventTasks->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEventTasks->Name = L"lblEventTasks";
+			this->lblEventTasks->Size = System::Drawing::Size(298, 26);
+			this->lblEventTasks->TabIndex = 12;
+			this->lblEventTasks->Text = L"EVENTTASKS";
+			this->lblEventTasks->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblEventTasks->Click += gcnew System::EventHandler(this, &MyForm::label6_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -882,6 +912,7 @@ private: System::Windows::Forms::CheckBox^  checkBox24;
 			this->Name = L"MyForm";
 			this->Text = L"Doodle Scheduler";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MyForm::MyForm_FormClosing);
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->grpCreateEvent->ResumeLayout(false);
 			this->grpCreateEvent->PerformLayout();
 			this->grpAdmin->ResumeLayout(false);
@@ -994,35 +1025,30 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
 		//Event myEvent(name, date);
-		name = name + " " + std::to_string(eventDate.Month) + "/" + std::to_string(eventDate.Day);
 	
 		Event myEvent;
 		myEvent.setName(name);
 		//myEvent.setEventDate(date);
 
 		std::string adminName = msclr::interop::marshal_as<std::string>(txtUser->Text);
-		myEvent.setAdmin(adminName);
+		User temp(adminName);
+		myEvent.setAdmin(temp);
 
 		textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 		exec.AddEvent(myEvent);
 
-		for (int i = 0; i < exec.events.size(); i++) {
-			if (exec.events.at(i).getName() == myEvent.getName()) {
-				exec.currentEvent = &exec.events.at(i);
+		for (int i = 0; i < exec.events->size(); i++) {
+			if (exec.events->at(i).getName() == myEvent.getName()) {
+				exec.currentEvent = &exec.events->at(i);
 				break;
 			}
 		}
 	
 		class::Day sDay;
-		class::Day eDay;
 		sDay.setMonth(eventDate.Month);
 		sDay.setDay(eventDate.Day);
 		sDay.setYear(eventDate.Year);
-		eDay.setMonth(eventDate.Month);
-		eDay.setDay(eventDate.Day);
-		eDay.setYear(eventDate.Year);
-		exec.currentEvent->setStartDay(sDay);
-		exec.currentEvent->setEndDay(eDay);
+		exec.currentEvent->setEventDay(sDay);
 
 
 	}
@@ -1081,6 +1107,8 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 
 	int endHour = atoi(timeTwo.substr(0,2).c_str());
 	int endMin = atoi(timeTwo.substr(3,2).c_str());
+
+	
 
 	if (is12) {
 		if (timeOne.substr(6, 2) == "am") {
@@ -1142,10 +1170,11 @@ public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::Event
 		MessageBox::Show("An event cannot span over lunch time");
 	}
 	else{
-		exec.currentEvent->getStartDay().setTime(startTime);
-		exec.currentEvent->getEndDay().setTime(endTime);
+		exec.currentEvent->setStartTime(startTime);
+		exec.currentEvent->setEndTime(endTime);
 		grpTimes->Visible = false;
 		grpViewYourEvents->Visible = true;
+		MessageBox::Show("" + startTime + "    " + endTime);
 
 		
 	}
@@ -1191,7 +1220,7 @@ private: System::Void btnEditEvents_Click(System::Object^  sender, System::Event
 	//Get vector of event names
 	//add each event to listbox
 
-	textBox6->Text = exec.events.size().ToString();
+	textBox6->Text = exec.events->size().ToString();
 //	std::vector<std::string> temp = exec.checkAval(name);
 
 	/*textBox5->Text = temp.size().ToString();
@@ -1213,7 +1242,6 @@ private: System::Void btnEditEvents_Click(System::Object^  sender, System::Event
 	grpAdmin->Visible = false;
 	btnViewEventsBack->Visible = true;
 	btnUserBack->Visible = false;
-	btnAttendees->Visible = true;
 }
 private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventArgs^  e) {
 	System::String^ eventName = "";
@@ -1229,11 +1257,11 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		eventName = lstYourEvents->SelectedItem->ToString();
 		textBox5->Text = eventName;
 		textBox1->Text = eventName;
-		Event myEvent;
+		Event* myEvent;
 		int index = lstYourEvents->SelectedIndex;
 		for (int i = 0; i < exec.getEventSize(); i++) {
-			if (gcnew String(exec.events[i].getName().c_str()) == eventName) {
-				myEvent = exec.events[i];
+			if (gcnew String(exec.events->at(i).getName().c_str()) == eventName) {
+				myEvent = &exec.events->at(i);
 				break;
 			}
 		}
@@ -1241,11 +1269,40 @@ private: System::Void btnViewEvent_Click(System::Object^  sender, System::EventA
 		* TODO: Use eventName to search for a specific even. isFound = true if event is found
 		* Event information and option to modify availability will be displayed on the next page
 		*/
-		lblEventName->Text = gcnew String(myEvent.getName().c_str());
+		lblEventName->Text = gcnew String(myEvent->getName().c_str());
 
-		std::string date = std::to_string(myEvent.getStartDay().getMonth()) + "/" + std::to_string(myEvent.getStartDay().getDay()) + "/" + std::to_string(myEvent.getStartDay().getYear());
+		//MessageBox::Show(""+exec.currentEvent->getStartDay().getTime()+"    " + exec.currentEvent->getEndDay().getTime());
+
+		std::string date = std::to_string(myEvent->getEventDay().getMonth()) + "/" + std::to_string(myEvent->getEventDay().getDay()) + "/" + std::to_string(myEvent->getEventDay().getYear());
 		lblEventDate->Text = gcnew String(date.c_str());
 
+		int startTime = myEvent->getStartTime();
+		int endTime = myEvent->getEndTime();
+		std::string time = std::to_string((int)(startTime / 60)) + ":" + std::to_string((int)(startTime % 60)) + " - " + std::to_string((int)(endTime / 60)) + ":" + std::to_string((int)(endTime % 60));
+		lblEventTime->Text = gcnew String(time.c_str());
+
+
+		/*std::string eventTask = "Task:\n";
+		if (myEvent->getNumTasks() <= 0) {
+		}
+		else {
+			std::vector<Task> tempTask = myEvent->getTasks();
+			for (int i = 0; i < myEvent->getNumTasks(); i++) {
+				eventTask += tempTask.at(i).getTaskName() + "/" + tempTask.at(i).getMaster() + ", ";
+			}
+		}
+		lblEventTasks->Text = gcnew String(eventTask.c_str());*/
+
+		/*std::string eventAtt = "Attending:\n";
+		if (myEvent->getNumUsers() <= 0) {
+		}
+		else{
+			std::vector<User> tempAtt = myEvent->getUsers();
+			for (int i = 0; i < myEvent->getNumUsers(); i++) {
+				eventAtt += tempAtt.at(i).getUserName() + ", ";
+			}
+		}
+		lblEventAtt->Text = gcnew String(eventAtt.c_str());*/
 		//lblEventDate->Text = gcnew String(myEvent.getDate().c_str());
 
 
@@ -1324,8 +1381,8 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	System::String^ eventName = lblEventName->Text;
 	Event myEvent;
 	for (int i = 0; i < exec.getEventSize(); i++) {
-		if (gcnew String(exec.events[i].getName().c_str()) == eventName) {
-			myEvent = exec.events[i];
+		if (gcnew String(exec.events->at(i).getName().c_str()) == eventName) {
+			myEvent = exec.events->at(i);
 			break;
 		}
 	}
@@ -1465,10 +1522,11 @@ private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventAr
 		MessageBox::Show("An event cannot span over lunch time");
 	}
 	else {
-		exec.currentEvent->getStartDay().setTime(startTime);
-		exec.currentEvent->getEndDay().setTime(endTime);
+		exec.currentEvent->setStartTime(startTime);
+		exec.currentEvent->setEndTime(endTime);
 		grpTimes->Visible = false;
 		grpMultiDay->Visible = true;
+		MessageBox::Show("" + startTime + "    " + endTime);
 	}
 
 
@@ -1560,9 +1618,9 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 
 	// Find the OG event with the name and pull its start and end days
 	Event myEvent;
-	int startTime = exec.currentEvent->getStartDay().getTime();
-	int endTime = exec.currentEvent->getEndDay().getTime();
-	std::string name = exec.currentEvent->getName() + " " + std::to_string(eventDate.Month) + "/" + std::to_string(eventDate.Day);
+	int startTime = exec.currentEvent->getStartTime();
+	int endTime = exec.currentEvent->getEndTime();
+	std::string name = exec.currentEvent->getName() + "_" + std::to_string(eventDate.Month) + "-" + std::to_string(eventDate.Day);
 	
 	
 
@@ -1575,25 +1633,21 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 	textBox6->Text = gcnew String(myEvent.getAdmin().getUserName().c_str());
 	exec.AddEvent(myEvent);
 
-	for (int i = 0; i < exec.events.size(); i++) {
-		if (exec.events.at(i).getName() == myEvent.getName()) {
-			exec.currentEvent = &exec.events.at(i);
+	for (int i = 0; i < exec.events->size(); i++) {
+		if (exec.events->at(i).getName() == myEvent.getName()) {
+			exec.currentEvent = &exec.events->at(i);
 			break;
 		}
 	}
 
 	class::Day sDay;
-	class::Day eDay;
 	sDay.setMonth(eventDate.Month);
 	sDay.setDay(eventDate.Day);
 	sDay.setYear(eventDate.Year);
-	eDay.setMonth(eventDate.Month);
-	eDay.setDay(eventDate.Day);
-	eDay.setYear(eventDate.Year);
-	exec.currentEvent->setStartDay(sDay);
-	exec.currentEvent->getStartDay().setTime(startTime);
-	exec.currentEvent->setEndDay(eDay);
-	exec.currentEvent->getEndDay().setTime(endTime);
+	exec.currentEvent->setEventDay(sDay);
+	exec.currentEvent->setStartTime(startTime);
+	exec.currentEvent->setEndTime(endTime);
+
 
 	grpViewYourEvents->Visible = true;
 	grpMultiDay->Visible = false;
@@ -1635,6 +1689,12 @@ private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::
 		this->comboBox2->Visible = false;
 	}
 	is12 = !is12;
+}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
