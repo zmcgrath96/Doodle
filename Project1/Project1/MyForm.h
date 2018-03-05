@@ -78,7 +78,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  btnUser;
 
 
-	private: System::Windows::Forms::GroupBox^  grpAvailability;
 	private: System::Windows::Forms::Button^  btnSubmitTimes;
 	private: System::Windows::Forms::Label^  label7;
 
@@ -164,7 +163,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnModeBack = (gcnew System::Windows::Forms::Button());
 			this->btnAdmin = (gcnew System::Windows::Forms::Button());
 			this->btnUser = (gcnew System::Windows::Forms::Button());
-			this->grpAvailability = (gcnew System::Windows::Forms::GroupBox());
 			this->grpTask = (gcnew System::Windows::Forms::GroupBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
@@ -197,7 +195,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpAdmin->SuspendLayout();
 			this->grpLogin->SuspendLayout();
 			this->grpMode->SuspendLayout();
-			this->grpAvailability->SuspendLayout();
 			this->grpTask->SuspendLayout();
 			this->grpMultiDay->SuspendLayout();
 			this->grpViewYourEvents->SuspendLayout();
@@ -460,27 +457,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->btnUser->Text = L"User Mode";
 			this->btnUser->UseVisualStyleBackColor = true;
 			this->btnUser->Click += gcnew System::EventHandler(this, &MyForm::btnUser_Click);
-			// 
-			// grpAvailability
-			// 
-			this->grpAvailability->Controls->Add(this->grpTask);
-			this->grpAvailability->Controls->Add(this->comboBox2);
-			this->grpAvailability->Controls->Add(this->textBox6);
-			this->grpAvailability->Controls->Add(this->comboBox1);
-			this->grpAvailability->Controls->Add(this->btnMultiDay);
-			this->grpAvailability->Controls->Add(this->label2);
-			this->grpAvailability->Controls->Add(this->label1);
-			this->grpAvailability->Controls->Add(this->btnSubmitTimes);
-			this->grpAvailability->Controls->Add(this->label7);
-			this->grpAvailability->Location = System::Drawing::Point(197, 5);
-			this->grpAvailability->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpAvailability->Name = L"grpAvailability";
-			this->grpAvailability->Padding = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->grpAvailability->Size = System::Drawing::Size(708, 678);
-			this->grpAvailability->TabIndex = 13;
-			this->grpAvailability->TabStop = false;
-			this->grpAvailability->Visible = false;
-			this->grpAvailability->Enter += gcnew System::EventHandler(this, &MyForm::grpAvailability_Enter);
 			// 
 			// grpTask
 			// 
@@ -807,7 +783,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->CausesValidation = false;
 			this->ClientSize = System::Drawing::Size(1050, 866);
 			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->grpAvailability);
 			this->Controls->Add(this->grpCreateEvent);
 			this->Controls->Add(this->grpMultiDay);
 			this->Controls->Add(this->grpViewYourEvents);
@@ -826,8 +801,6 @@ private: System::Windows::Forms::Label^  label2;
 			this->grpLogin->ResumeLayout(false);
 			this->grpLogin->PerformLayout();
 			this->grpMode->ResumeLayout(false);
-			this->grpAvailability->ResumeLayout(false);
-			this->grpAvailability->PerformLayout();
 			this->grpTask->ResumeLayout(false);
 			this->grpMultiDay->ResumeLayout(false);
 			this->grpMultiDay->PerformLayout();
@@ -996,7 +969,6 @@ private: System::Void rbtn24Hr_CheckedChanged(System::Object^  sender, System::E
 
 
 public: System::Void btnSubmitTimes_Click(System::Object^  sender, System::EventArgs^  e) {
-	grpAvailability->Visible = false;
 	grpViewYourEvents->Visible = true;
 	
 
@@ -1388,8 +1360,6 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
-private: System::Void grpAvailability_Enter(System::Object^  sender, System::EventArgs^  e) {
-}
 
 private: System::Void dateTimePicker3_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 }
@@ -1423,7 +1393,6 @@ private: System::Void MyForm_FormClosing(System::Object^  sender, System::Window
 		 //
 private: System::Void btnMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	grpAvailability->Visible = false;
 	grpMultiDay->Visible = true;
 }
 		 //// Schedule Multiple Days Group ////
@@ -1458,7 +1427,6 @@ private: System::Void submitMultiDay_Click(System::Object^  sender, System::Even
 		 //
 private: System::Void cancelMultiDay_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	grpAvailability->Visible = true;
 	grpMultiDay->Visible = false;
 }
 
