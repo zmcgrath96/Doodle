@@ -828,7 +828,7 @@ private: System::Windows::Forms::Label^  label2;
 	
 	// On form load, read in events
 	void System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e){
-		
+		exec.read();
 	}
 
 	private: System::Void btnCreateEvent_Click(System::Object^  sender, System::EventArgs^  e) {
