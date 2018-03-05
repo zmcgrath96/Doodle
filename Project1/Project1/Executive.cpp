@@ -13,6 +13,7 @@ using namespace std;
 Executive::Executive()
 {
 	events = new std::vector<Event>;
+	currentEvent;
 }
 
 Executive::~Executive()
@@ -90,12 +91,11 @@ void Executive::write() {
 		line = "";
 		// Go through the list of tasks and write them all to one line
 		if (events->at(i).getTasks().size() <= 0) {
-
 		}
 		else {
 			std::vector<Task> tempTask = events->at(i).getTasks();
-			for (int j = 0; j < tempEvent.getNumTasks(); j++) {
-				line += tempTask.at(j).getTaskName() + "@" + tempTask.at(j).getMaster() + "|";
+			for (int j = 0; j < events->at(i).getTasks().size(); j++) {
+				line += events->at(i).getTasks().at(j).getTaskName() + "@" + events->at(i).getTasks().at(j).getMaster() + "|";
 
 			}
 		}
@@ -109,8 +109,8 @@ void Executive::write() {
 		if (events->at(i).getUsers().size() <= 0){}
 		else {
 			std::vector<User> tempUser = events->at(i).getUsers();
-			for (int j = 0; j < tempEvent.getNumUsers(); j++) {
-				line += tempUser.at(j).getUserName() + "|";
+			for (int j = 0; j < events->at(i).getUsers().size(); j++) {
+				line += events->at(i).getUsers().at(j).getUserName() + "|";
 			}
 		}
 		
