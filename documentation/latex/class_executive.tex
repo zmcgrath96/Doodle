@@ -9,9 +9,7 @@
 \item 
 void \mbox{\hyperlink{class_executive_aa6ef4869740ffb4ad00da8e03524b757}{Add\+Event}} (\mbox{\hyperlink{class_event}{Event}} E)
 \item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_executive_a4099c9d7fba8038ef79df8daddf60f1e}{check\+Aval}} (std\+::string Name)
-\item 
-std\+::string $\ast$ \mbox{\hyperlink{class_executive_ada44e998fdc559eba9db2f4edeef0978}{get\+All\+Events}} ()
+std\+::string $\ast$ \mbox{\hyperlink{class_executive_a55055e17ac87cc21a81ce4e15fe7cf50}{get\+All\+Events}} ()
 \item 
 int \mbox{\hyperlink{class_executive_a325d611b8cd579647ee657c69560f28a}{get\+Event\+Size}} ()
 \item 
@@ -22,20 +20,14 @@ void \mbox{\hyperlink{class_executive_a222ab3a86234f7476e769a285bf566a4}{read}} 
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_executive_a63df728eed3bdfd798e943d41d052f2d}\label{class_executive_a63df728eed3bdfd798e943d41d052f2d}} 
-std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} $>$ {\bfseries events}
+\mbox{\Hypertarget{class_executive_a663f90e8caaf940c1dd3b6fdb6efef29}\label{class_executive_a663f90e8caaf940c1dd3b6fdb6efef29}} 
+std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} $>$ $\ast$ {\bfseries events}
 \item 
-\mbox{\Hypertarget{class_executive_afc5d32a44263c70d0795765fc238b343}\label{class_executive_afc5d32a44263c70d0795765fc238b343}} 
-\mbox{\hyperlink{class_event}{Event}} {\bfseries current\+Event}
+\mbox{\Hypertarget{class_executive_ad46173bff2dd82dd8fdb173d3a42135d}\label{class_executive_ad46173bff2dd82dd8fdb173d3a42135d}} 
+\mbox{\hyperlink{class_event}{Event}} $\ast$ {\bfseries current\+Event}
 \item 
 \mbox{\Hypertarget{class_executive_a6396a22945149d9e698ac1e5d8312d93}\label{class_executive_a6396a22945149d9e698ac1e5d8312d93}} 
 \mbox{\hyperlink{class_user}{User}} {\bfseries current\+User}
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_executive_af8e82d8709a378e4409bb8f74e17bebb}\label{class_executive_af8e82d8709a378e4409bb8f74e17bebb}} 
-std\+::vector$<$ std\+::string $>$ {\bfseries Event\+Admin}
 \end{DoxyCompactItemize}
 
 
@@ -79,17 +71,17 @@ None
 
 Adds a given event to the vector that stores all the events 
 \begin{DoxyParams}{Parameters}
-{\em An} & event to be added to the vector \\
+{\em An} & event object to be added to the vector \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_executive_a4099c9d7fba8038ef79df8daddf60f1e}\label{class_executive_a4099c9d7fba8038ef79df8daddf60f1e}} 
-\index{Executive@{Executive}!check\+Aval@{check\+Aval}}
-\index{check\+Aval@{check\+Aval}!Executive@{Executive}}
-\subsubsection{\texorpdfstring{check\+Aval()}{checkAval()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Executive\+::check\+Aval (\begin{DoxyParamCaption}\item[{std\+::string}]{Name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_executive_a55055e17ac87cc21a81ce4e15fe7cf50}\label{class_executive_a55055e17ac87cc21a81ce4e15fe7cf50}} 
+\index{Executive@{Executive}!get\+All\+Events@{get\+All\+Events}}
+\index{get\+All\+Events@{get\+All\+Events}!Executive@{Executive}}
+\subsubsection{\texorpdfstring{get\+All\+Events()}{getAllEvents()}}
+{\footnotesize\ttfamily std\+::string $\ast$ Executive\+::get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Returns the name of the events that the given user is admin of 
 \begin{DoxyParams}{Parameters}
@@ -97,15 +89,9 @@ Returns the name of the events that the given user is admin of
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A vector containing the names of the events that the given user is admin of 
+A vector containing the names of the events that the given user is admin of Creates a string array and stores the names of all the events currently stored in the vector 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_executive_ada44e998fdc559eba9db2f4edeef0978}\label{class_executive_ada44e998fdc559eba9db2f4edeef0978}} 
-\index{Executive@{Executive}!get\+All\+Events@{get\+All\+Events}}
-\index{get\+All\+Events@{get\+All\+Events}!Executive@{Executive}}
-\subsubsection{\texorpdfstring{get\+All\+Events()}{getAllEvents()}}
-{\footnotesize\ttfamily string $\ast$ Executive\+::get\+All\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Creates a string array and stores the names of all the events currently stored in the vector 
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
@@ -133,7 +119,7 @@ The size of the event vector
 \subsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily void Executive\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user 
+Reads the information stored in the save file and populates the events list, the users within each event, and the avaliabilites of each user Called on startup 
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
@@ -147,7 +133,7 @@ None
 \subsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily void Executive\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions 
+Stores the events list, the users, and their avaliabilities in a file so that the information is saved between program executions Called on save/exit 
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
@@ -159,5 +145,5 @@ None
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/Executive.\+h\item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/Executive.\+cpp\end{DoxyCompactItemize}
+Executive.\+h\item 
+Executive.\+cpp\end{DoxyCompactItemize}

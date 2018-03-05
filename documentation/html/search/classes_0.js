@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['event',['Event',['../class_event.html',1,'']]],
-  ['executive',['Executive',['../class_executive.html',1,'']]]
+  ['day',['Day',['../class_day.html',1,'']]]
 ];

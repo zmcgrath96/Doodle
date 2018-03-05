@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read',['read',['../class_executive.html#a222ab3a86234f7476e769a285bf566a4',1,'Executive']]]
+  ['task',['Task',['../class_task.html#a0ca53354bdc006762a0fda68c64f7608',1,'Task::Task()'],['../class_task.html#a919462cb02c369ec510acee9783f383d',1,'Task::Task(std::string taskName)']]]
 ];

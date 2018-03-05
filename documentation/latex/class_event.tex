@@ -5,50 +5,47 @@
 \item 
 \mbox{\hyperlink{class_event_a5a40dd4708297f7031e29b39e039ae10}{Event}} ()
 \item 
-\mbox{\hyperlink{class_event_adcbdd318d0c3237e2e829549fd426d70}{Event}} (std\+::string event\+Name, std\+::string event\+Date)
+\mbox{\hyperlink{class_event_a7704ec01ce91e673885792054214b3d2}{$\sim$\+Event}} ()
 \item 
-void \mbox{\hyperlink{class_event_a4c6829c10c6c865759221d57a0f4a64f}{set\+Event\+Name}} (std\+::string event\+Name)
+\mbox{\hyperlink{class_event_a7ce079bddd0e846a77933ba8d061e6a3}{Event}} (\mbox{\hyperlink{class_day}{Day}} event\+Day, std\+::string name, \mbox{\hyperlink{class_user}{User}} admin)
 \item 
-void \mbox{\hyperlink{class_event_a0fbbd58ef1341dfacea38de7795d3667}{set\+Event\+Date}} (std\+::string event\+Date)
+bool \mbox{\hyperlink{class_event_a919b26c4329be742b3effe58aa30ab02}{add\+Task}} (\mbox{\hyperlink{class_task}{Task}} task)
+\item 
+bool \mbox{\hyperlink{class_event_ab1df9a3359b6c36e5b20fe2427815301}{add\+User}} (std\+::string u\+Name)
+\item 
+\mbox{\Hypertarget{class_event_a68b230ed9891e612526b5743d1b3e12b}\label{class_event_a68b230ed9891e612526b5743d1b3e12b}} 
+\mbox{\hyperlink{class_day}{Day}} {\bfseries get\+Event\+Day} ()
 \item 
 std\+::string \mbox{\hyperlink{class_event_adf0f3e50061123d6f24200661eeb66eb}{get\+Name}} ()
 \item 
-std\+::string \mbox{\hyperlink{class_event_a1fb318a969eaf352d3f507b8097bd810}{get\+Date}} ()
+\mbox{\hyperlink{class_user}{User}} \mbox{\hyperlink{class_event_adabdcb711ca198d3fe079986f218b1cc}{get\+Admin}} ()
 \item 
-void \mbox{\hyperlink{class_event_a099c123993ee717521ec411838d0f719}{get\+Available\+Times}} ()
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ \& \mbox{\hyperlink{class_event_a91a803183d3ab50bc824c445ef0824b5}{get\+Tasks}} ()
 \item 
-void \mbox{\hyperlink{class_event_a6cf708e6ba961e2392716dd2c53d7938}{add\+User}} (\mbox{\hyperlink{class_user}{User}} u)
+int \mbox{\hyperlink{class_event_a3e2c6782aa72b2c0663a499d23c57f12}{get\+Num\+Tasks}} ()
 \item 
-void \mbox{\hyperlink{class_event_aec0fa6f68332424cdfb15855765cadf3}{set\+Admin}} (std\+::string Name)
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \& \mbox{\hyperlink{class_event_a254ee56527f75c441b5eee8c078f3c04}{get\+Users}} ()
 \item 
-void \mbox{\hyperlink{class_event_ab573b9da583f00cd5d60934fb594e1ac}{set\+Num\+Of\+Us}} (int index, int num)
+int \mbox{\hyperlink{class_event_a4b5a29e8ea8ff1199e31cf7d3cf1301b}{get\+Num\+Users}} ()
 \item 
-std\+::string \mbox{\hyperlink{class_event_a61903b21fd660d7ddaa126dab671a756}{get\+Admin}} ()
+\mbox{\Hypertarget{class_event_a02b714b10375e6adfdab538992b29cca}\label{class_event_a02b714b10375e6adfdab538992b29cca}} 
+void {\bfseries set\+Event\+Day} (\mbox{\hyperlink{class_day}{Day}} event\+Day)
 \item 
-int \mbox{\hyperlink{class_event_a00e5f70b33801f1081ccc434a276aca5}{get\+Num\+Of\+Us}} (int index)
+void \mbox{\hyperlink{class_event_ae64a2062b6e4f673d81efbc6bc98c210}{set\+Admin}} (\mbox{\hyperlink{class_user}{User}} admin)
 \item 
-void \mbox{\hyperlink{class_event_a8087f742c473db50d2dda834de64ad1f}{Print}} ()
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
+void \mbox{\hyperlink{class_event_a25fc700fb24ac3f0560732a183b9782c}{set\+Name}} (std\+::string name)
 \item 
-\mbox{\Hypertarget{class_event_a78deb5cb4ee864c9ef6a90db2ad4eeab}\label{class_event_a78deb5cb4ee864c9ef6a90db2ad4eeab}} 
-std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ {\bfseries users}
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
+\mbox{\Hypertarget{class_event_a3283554ea0739c5c1916269f1a498bb7}\label{class_event_a3283554ea0739c5c1916269f1a498bb7}} 
+int {\bfseries get\+Start\+Time} ()
 \item 
-\mbox{\Hypertarget{class_event_ae116bf76fb01a92e000579a5a0d6f35c}\label{class_event_ae116bf76fb01a92e000579a5a0d6f35c}} 
-std\+::string {\bfseries name}
+\mbox{\Hypertarget{class_event_a15cc6c49faa82aea991deec2f6230c64}\label{class_event_a15cc6c49faa82aea991deec2f6230c64}} 
+int {\bfseries get\+End\+Time} ()
 \item 
-\mbox{\Hypertarget{class_event_a9a93c9d38211f84cd6e347690e177f11}\label{class_event_a9a93c9d38211f84cd6e347690e177f11}} 
-std\+::string {\bfseries date}
+\mbox{\Hypertarget{class_event_a302828084520c9b6c041cf79ef743b4f}\label{class_event_a302828084520c9b6c041cf79ef743b4f}} 
+void {\bfseries set\+Start\+Time} (int T)
 \item 
-\mbox{\Hypertarget{class_event_a1c05237981f4681c77d268bb4f37183a}\label{class_event_a1c05237981f4681c77d268bb4f37183a}} 
-std\+::string {\bfseries admin}
-\item 
-\mbox{\Hypertarget{class_event_a182ae5c5d2a1e4f5a5989a8f9f5e84b5}\label{class_event_a182ae5c5d2a1e4f5a5989a8f9f5e84b5}} 
-int $\ast$ {\bfseries Num\+Of\+Us}
+\mbox{\Hypertarget{class_event_a3934cd101a64b445e52c90f7847a166d}\label{class_event_a3934cd101a64b445e52c90f7847a166d}} 
+void {\bfseries set\+End\+Time} (int T)
 \end{DoxyCompactItemize}
 
 
@@ -59,7 +56,7 @@ int $\ast$ {\bfseries Num\+Of\+Us}
 \subsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Creates an int array to store the number of users avaliable at the cooresponding time slot 
+Constructor 
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
@@ -67,15 +64,26 @@ Creates an int array to store the number of users avaliable at the cooresponding
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_adcbdd318d0c3237e2e829549fd426d70}\label{class_event_adcbdd318d0c3237e2e829549fd426d70}} 
+\mbox{\Hypertarget{class_event_a7704ec01ce91e673885792054214b3d2}\label{class_event_a7704ec01ce91e673885792054214b3d2}} 
+\index{Event@{Event}!````~Event@{$\sim$\+Event}}
+\index{````~Event@{$\sim$\+Event}!Event@{Event}}
+\subsubsection{\texorpdfstring{$\sim$\+Event()}{~Event()}}
+{\footnotesize\ttfamily Event\+::$\sim$\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the \mbox{\hyperlink{class_event}{Event}} 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_event_a7ce079bddd0e846a77933ba8d061e6a3}\label{class_event_a7ce079bddd0e846a77933ba8d061e6a3}} 
 \index{Event@{Event}!Event@{Event}}
 \index{Event@{Event}!Event@{Event}}
 \subsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}\item[{std\+::string}]{event\+Name,  }\item[{std\+::string}]{event\+Date }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_day}{Day}}}]{event\+Day,  }\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{class_user}{User}}}]{admin }\end{DoxyParamCaption})}
 
-Stores the name and date of the event 
+Constructor 
 \begin{DoxyParams}{Parameters}
-{\em Two} & strings that represent the name and date of the event \\
+{\em \mbox{\hyperlink{class_day}{Day}}} & object, \mbox{\hyperlink{class_day}{Day}} object, string, \mbox{\hyperlink{class_user}{User}} object \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -84,61 +92,47 @@ None
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_event_a6cf708e6ba961e2392716dd2c53d7938}\label{class_event_a6cf708e6ba961e2392716dd2c53d7938}} 
+\mbox{\Hypertarget{class_event_a919b26c4329be742b3effe58aa30ab02}\label{class_event_a919b26c4329be742b3effe58aa30ab02}} 
+\index{Event@{Event}!add\+Task@{add\+Task}}
+\index{add\+Task@{add\+Task}!Event@{Event}}
+\subsubsection{\texorpdfstring{add\+Task()}{addTask()}}
+{\footnotesize\ttfamily bool Event\+::add\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}}}]{task }\end{DoxyParamCaption})}
+
+add\+Task 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_task}{Task}}} & object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_ab1df9a3359b6c36e5b20fe2427815301}\label{class_event_ab1df9a3359b6c36e5b20fe2427815301}} 
 \index{Event@{Event}!add\+User@{add\+User}}
 \index{add\+User@{add\+User}!Event@{Event}}
 \subsubsection{\texorpdfstring{add\+User()}{addUser()}}
-{\footnotesize\ttfamily void Event\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{u }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Event\+::add\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{u\+Name }\end{DoxyParamCaption})}
 
-Adds a given user to the event 
+add\+User 
 \begin{DoxyParams}{Parameters}
-{\em A} & user to be added to the event \\
+{\em string} & name \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-None 
+bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a61903b21fd660d7ddaa126dab671a756}\label{class_event_a61903b21fd660d7ddaa126dab671a756}} 
+\mbox{\Hypertarget{class_event_adabdcb711ca198d3fe079986f218b1cc}\label{class_event_adabdcb711ca198d3fe079986f218b1cc}} 
 \index{Event@{Event}!get\+Admin@{get\+Admin}}
 \index{get\+Admin@{get\+Admin}!Event@{Event}}
 \subsubsection{\texorpdfstring{get\+Admin()}{getAdmin()}}
-{\footnotesize\ttfamily std\+::string Event\+::get\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}} Event\+::get\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns the name of the admin for the event 
+get\+Admin 
 \begin{DoxyParams}{Parameters}
-{\em None} & \\
+{\em none} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A string representing the name of the admin for the event 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a099c123993ee717521ec411838d0f719}\label{class_event_a099c123993ee717521ec411838d0f719}} 
-\index{Event@{Event}!get\+Available\+Times@{get\+Available\+Times}}
-\index{get\+Available\+Times@{get\+Available\+Times}!Event@{Event}}
-\subsubsection{\texorpdfstring{get\+Available\+Times()}{getAvailableTimes()}}
-{\footnotesize\ttfamily void Event\+::get\+Available\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Prints the number of users avaliable at each time slot while also saving the numbers to Num\+Of\+Us 
-\begin{DoxyParams}{Parameters}
-{\em None} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a1fb318a969eaf352d3f507b8097bd810}\label{class_event_a1fb318a969eaf352d3f507b8097bd810}} 
-\index{Event@{Event}!get\+Date@{get\+Date}}
-\index{get\+Date@{get\+Date}!Event@{Event}}
-\subsubsection{\texorpdfstring{get\+Date()}{getDate()}}
-{\footnotesize\ttfamily std\+::string Event\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Returns the date of the event 
-\begin{DoxyParams}{Parameters}
-{\em None} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A string representing the date of the event 
+\mbox{\hyperlink{class_user}{User}} object 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_event_adf0f3e50061123d6f24200661eeb66eb}\label{class_event_adf0f3e50061123d6f24200661eeb66eb}} 
 \index{Event@{Event}!get\+Name@{get\+Name}}
@@ -146,101 +140,101 @@ A string representing the date of the event
 \subsubsection{\texorpdfstring{get\+Name()}{getName()}}
 {\footnotesize\ttfamily std\+::string Event\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns the name of the event 
+get\+Name 
 \begin{DoxyParams}{Parameters}
-{\em None} & \\
+{\em none} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A string representing the name of the event 
+String 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a00e5f70b33801f1081ccc434a276aca5}\label{class_event_a00e5f70b33801f1081ccc434a276aca5}} 
-\index{Event@{Event}!get\+Num\+Of\+Us@{get\+Num\+Of\+Us}}
-\index{get\+Num\+Of\+Us@{get\+Num\+Of\+Us}!Event@{Event}}
-\subsubsection{\texorpdfstring{get\+Num\+Of\+Us()}{getNumOfUs()}}
-{\footnotesize\ttfamily int Event\+::get\+Num\+Of\+Us (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_event_a3e2c6782aa72b2c0663a499d23c57f12}\label{class_event_a3e2c6782aa72b2c0663a499d23c57f12}} 
+\index{Event@{Event}!get\+Num\+Tasks@{get\+Num\+Tasks}}
+\index{get\+Num\+Tasks@{get\+Num\+Tasks}!Event@{Event}}
+\subsubsection{\texorpdfstring{get\+Num\+Tasks()}{getNumTasks()}}
+{\footnotesize\ttfamily int Event\+::get\+Num\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Takes in an index cooresponding to a time slot and returns the number of users avaliable for that time slot 
+get\+Num\+Taks 
 \begin{DoxyParams}{Parameters}
-{\em An} & int representing the index of the time slot desired \\
+{\em none} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-An int representing the number of users avaliable at the time slot 
+Integer 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a8087f742c473db50d2dda834de64ad1f}\label{class_event_a8087f742c473db50d2dda834de64ad1f}} 
-\index{Event@{Event}!Print@{Print}}
-\index{Print@{Print}!Event@{Event}}
-\subsubsection{\texorpdfstring{Print()}{Print()}}
-{\footnotesize\ttfamily void Event\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_event_a4b5a29e8ea8ff1199e31cf7d3cf1301b}\label{class_event_a4b5a29e8ea8ff1199e31cf7d3cf1301b}} 
+\index{Event@{Event}!get\+Num\+Users@{get\+Num\+Users}}
+\index{get\+Num\+Users@{get\+Num\+Users}!Event@{Event}}
+\subsubsection{\texorpdfstring{get\+Num\+Users()}{getNumUsers()}}
+{\footnotesize\ttfamily int Event\+::get\+Num\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Prints the number of users avaliable at each time slot 
+get\+Num\+Users 
 \begin{DoxyParams}{Parameters}
-{\em None} & \\
+{\em none} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-None 
+Integer 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_aec0fa6f68332424cdfb15855765cadf3}\label{class_event_aec0fa6f68332424cdfb15855765cadf3}} 
+\mbox{\Hypertarget{class_event_a91a803183d3ab50bc824c445ef0824b5}\label{class_event_a91a803183d3ab50bc824c445ef0824b5}} 
+\index{Event@{Event}!get\+Tasks@{get\+Tasks}}
+\index{get\+Tasks@{get\+Tasks}!Event@{Event}}
+\subsubsection{\texorpdfstring{get\+Tasks()}{getTasks()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ \& Event\+::get\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Tasks 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_task}{Task}} vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_a254ee56527f75c441b5eee8c078f3c04}\label{class_event_a254ee56527f75c441b5eee8c078f3c04}} 
+\index{Event@{Event}!get\+Users@{get\+Users}}
+\index{get\+Users@{get\+Users}!Event@{Event}}
+\subsubsection{\texorpdfstring{get\+Users()}{getUsers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} $>$ \& Event\+::get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get\+Users 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_user}{User}} vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_ae64a2062b6e4f673d81efbc6bc98c210}\label{class_event_ae64a2062b6e4f673d81efbc6bc98c210}} 
 \index{Event@{Event}!set\+Admin@{set\+Admin}}
 \index{set\+Admin@{set\+Admin}!Event@{Event}}
 \subsubsection{\texorpdfstring{set\+Admin()}{setAdmin()}}
-{\footnotesize\ttfamily void Event\+::set\+Admin (\begin{DoxyParamCaption}\item[{std\+::string}]{Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Event\+::set\+Admin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}}}]{admin }\end{DoxyParamCaption})}
 
-Takes in the name of the admin for the event and stores it 
+set\+Admin 
 \begin{DoxyParams}{Parameters}
-{\em A} & string representing the name of the admin for the event \\
+{\em \mbox{\hyperlink{class_user}{User}}} & admin \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-None 
+none 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a0fbbd58ef1341dfacea38de7795d3667}\label{class_event_a0fbbd58ef1341dfacea38de7795d3667}} 
-\index{Event@{Event}!set\+Event\+Date@{set\+Event\+Date}}
-\index{set\+Event\+Date@{set\+Event\+Date}!Event@{Event}}
-\subsubsection{\texorpdfstring{set\+Event\+Date()}{setEventDate()}}
-{\footnotesize\ttfamily void Event\+::set\+Event\+Date (\begin{DoxyParamCaption}\item[{std\+::string}]{event\+Date }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_event_a25fc700fb24ac3f0560732a183b9782c}\label{class_event_a25fc700fb24ac3f0560732a183b9782c}} 
+\index{Event@{Event}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Event@{Event}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Event\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
 
-Takes in a string representing the date of the event and saves it 
+set\+Name 
 \begin{DoxyParams}{Parameters}
-{\em A} & string representing the date of the event \\
+{\em String} & name \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_event_a4c6829c10c6c865759221d57a0f4a64f}\label{class_event_a4c6829c10c6c865759221d57a0f4a64f}} 
-\index{Event@{Event}!set\+Event\+Name@{set\+Event\+Name}}
-\index{set\+Event\+Name@{set\+Event\+Name}!Event@{Event}}
-\subsubsection{\texorpdfstring{set\+Event\+Name()}{setEventName()}}
-{\footnotesize\ttfamily void Event\+::set\+Event\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{event\+Name }\end{DoxyParamCaption})}
-
-Takes in a string representing the name of the event and saves it 
-\begin{DoxyParams}{Parameters}
-{\em A} & string representing the name of the event \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_event_ab573b9da583f00cd5d60934fb594e1ac}\label{class_event_ab573b9da583f00cd5d60934fb594e1ac}} 
-\index{Event@{Event}!set\+Num\+Of\+Us@{set\+Num\+Of\+Us}}
-\index{set\+Num\+Of\+Us@{set\+Num\+Of\+Us}!Event@{Event}}
-\subsubsection{\texorpdfstring{set\+Num\+Of\+Us()}{setNumOfUs()}}
-{\footnotesize\ttfamily void Event\+::set\+Num\+Of\+Us (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{num }\end{DoxyParamCaption})}
-
-Stores the number of users avaliable at a specified time slot 
-\begin{DoxyParams}{Parameters}
-{\em Two} & ints representing the index of the time slot and the number of users avaliable for that time \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-None 
+none 
 \end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/Event.\+h\item 
-C\+:/\+Users/\+Andrew/\+Documents/\+Git\+Hub/\+Doodle/\+Project1/\+Project1/Event.\+cpp\end{DoxyCompactItemize}
+Event.\+h\item 
+Event.\+cpp\end{DoxyCompactItemize}
