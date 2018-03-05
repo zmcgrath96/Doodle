@@ -913,7 +913,7 @@ private: System::Void btnSubmitEvent_Click(System::Object^  sender, System::Even
 		// Pull the event date
 		System::DateTime eventDate = this->monthCalendar1->SelectionRange->Start;
 
-		grpAvailability->Visible = true;
+		grpViewYourEvents->Visible = true;
 		grpCreateEvent->Visible = false;
 		std::string name = msclr::interop::marshal_as<std::string>(textBox1->Text);
 		std::string date = msclr::interop::marshal_as<std::string>(textBox4->Text);
@@ -1356,7 +1356,7 @@ private: System::Void btnAttendees_Click(System::Object^  sender, System::EventA
 	 //Event[].getNumOfUs();
 	
 	grpEventInfo->Visible = false;
-	grpAvailability->Visible = true;
+	grpAttendees->Visible = true;
 
 
 	
