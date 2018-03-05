@@ -25,7 +25,7 @@ class Executive
 
 		/**
 		*	Adds a given event to the vector that stores all the events
-		*	@param An event to be added to the vector
+		*	@param An event object to be added to the vector
 		*	@return None
 		*/
 		void AddEvent(Event E);

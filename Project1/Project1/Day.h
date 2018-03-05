@@ -68,7 +68,7 @@ class Day {
 	*/
 	void setYear(int tYear);
 	/**
-	*	setMonth
+	*	setTime
 	*	@param int
 	*	@return none
 	*/

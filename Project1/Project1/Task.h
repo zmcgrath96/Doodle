@@ -12,15 +12,15 @@ public:
 	/**
 	*	Creates the object
 	*	@param none
-	*	@return
+	*	@return none
 	*/
 	Task();
 
 
 	/**
 	*	Creates the object
-	*	@param
-	*	@return
+	*	@param string name
+	*	@return none
 	*/
 
 	Task(std::string taskName);
@@ -32,12 +32,32 @@ public:
 	*/
 	~Task();
 
+	/**
+	* getTaskName
+	* @param None
+	* @return string
+	*/
 	std::string getTaskName();
 
+	/**
+	* getMaster
+	* @param None
+	* @return string
+	*/
 	std::string getMaster();
 
+	/**
+	* setMaster
+	* @param string name
+	* @return None
+	*/
 	void setMaster(std::string masterName);
 
+	/**
+	* hasMaster
+	* @param None
+	* @return bool
+	*/
 	bool hasMaster();
 
 
